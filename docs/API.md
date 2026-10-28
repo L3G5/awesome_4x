@@ -243,3 +243,32 @@ Commands use the ordinary `command(state,action)` entry point and optional `fact
 Continue returns `{ok,outcome,message,jumpsCompleted,ordersSpent,movesSpent,combatReports:[]}`. `jumpsCompleted` counts successful physical jumps; `movesSpent` includes an intercepted jump attempt that withdrew to its origin. `combatReports` combines all reports from the actual jump. Outcomes are `arrived`, `moves-exhausted`, `orders-exhausted`, `blocked`, `intercepted`, `combat`, `destroyed`, `first-contact`, `discovery`, `campaign-ended`, or `paused`. A blocked first step returns `ok:false` with zero costs and leaves the entire state unchanged. Successful partial travel returns `ok:true` and its stopping reason. Every ship type stops before an observed hostile fleet; use a deliberate ordinary move to engage. Unknown opposition uses the ordinary paid interception/combat rules. Combat or destruction, first contact, and a newly surveyed unresolved anomaly or restored discovery site stop the sequence immediately. Discovery checks use the observer-safe view after arrival, including opening, maturing and ready phases. Routine surveys and remembered unresolved anomalies allow continued travel. Ordinary moves that fought also return `combatOccurred:true`; AI-only fights still produce no player reports.
 
 Optional version-1 storage is `fleet.route={destinationId,path:[currentSystem,...destination]}`. Paths contain 2–42 unique charted nodes linked by existing lanes, start at the fleet's current system and end at the destination. The save validator rejects extra route fields, loops, unknown nodes, stale origins and disconnected steps. Current border access is not a save-validity requirement: a route may become blocked without disappearing. Explicit replotting may find a new path. Ordinary successful movement advances a matching next step and clears a deviating route; interception and rejected movement keep it. Arrival clears the route. Merging preserves only the selected surviving fleet's route. Treaty withdrawal clears relocated fleets' routes, and successful game commands reconcile any other invalidated origins. Tests cover hidden-state noninterference, atomic rejection, exact movement costs, stops, administrative relocation, strict optional saves and twenty deterministic reload cycles without automatic travel.
+
+## Public affairs
+
+`src/public-affairs.js` provides immutable, observer-aware views, also exported by `game.js`:
+
+```js
+getPublicRelationships(state, observerId = 'player') // foreign pairs, excluding observer
+// [{key: 'khar:veyr' | null,
+//   participants: [{id,name,shortName,color}, {id,name,shortName,color}],
+//   status: 'war' | 'trade' | 'truce' | 'peace',
+//   sinceTurn: number | null, truceUntil: number | null, tradeEndsAt: number | null}]
+
+getPublicDispatches(state, observerId = 'player') // newest first, at most 64
+// [{id,turn,kind,text,participants,targetId,systemId?,systemName?,untilTurn?}]
+
+getKnownTransfers(state, observerId = 'player', maxAge = 5) // ages 0–4
+// [{id,turn,systemId,systemName,from:{id,name,shortName,color},to:{...}}]
+// Pass Infinity to include the whole retained transfer ledger (at most 32).
+```
+
+With both governments contacted, the current relationship view names both. With one contacted government, it shows only an active public commitment and represents the other as `{id:null,name:'Uncontacted civilization',shortName:'Uncontacted',color:null}`; the relationship key is null. With neither contacted, it returns no row. Normal peace is not evidence of an unidentified civilization. Current war/truce dates are public facts; legacy trade/default-peace dates remain null because older saves did not record a reliable agreement date. First contact updates current facts without manufacturing previously received dispatches.
+
+Diplomatic dispatch kinds are `war`, `peace`, `trade`, `trade-notice`, and `trade-ended`. Only completed public mutations generate them. Peace offers, gifts, private grievances, withdrawal counts, treasury, tactical information and raw AI reasons are excluded. Peace and cancellation notices include their published `untilTurn`. Participants already receive ordinary bilateral reports and receive no duplicate public dispatch.
+
+Successful capture snapshots which observers had charted the world before ownership changes. Those observers identify its new sovereign through contact alone, without surveying the world, charting neighbors or obtaining sensors. They receive a dated transfer record; uninvolved observers also receive a `sovereignty` dispatch. A location learned only through a resulting beacon broadcast does not retroactively reveal its capture. Player-involved captures retain ordinary battle reports and a map transfer marker without a duplicate public dispatch.
+
+Received text and participant names are frozen at receipt, including anonymous identities. They never acquire later knowledge. Player dispatches append ordinary logs with `publicAffairId`, safe `targetId` and optional `systemId`; these feed the normal cycle briefing. The log reference may outlive the retained dispatch but remains below that observer's issued-ID counter. The optional `state.publicAffairs={version:1,observers:{...}}` ledger remains compatible with older version-1 saves. Validation checks exact fields, bounded storage, issued IDs, chronology, known identities, published deadlines and generated text; unexpected private payload fields are rejected.
+
+The UI uses these views for foreign relationships, received announcements, five-cycle map markers, world records, and the cause of a stored course's closed border. It never derives an unobserved battle from a transfer. Route execution and costs remain unchanged.

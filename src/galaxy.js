@@ -4,6 +4,7 @@ import { getVisibleFleets } from './intelligence.js';
 import { getPublicRaces } from './victory.js';
 import { getRoutePreview, getRouteStatus } from './navigation.js';
 import { getDiscoveryView } from './discoveries.js';
+import { getKnownTransfers } from './public-affairs.js';
 import './galaxy.css';
 
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -320,6 +321,8 @@ export class GalaxyView {
     this.systemsById = new Map(state.systems.map(s => [s.id, s]));
     this.publicBeaconIds = new Set(getPublicRaces(state).flatMap(race => race.sites.map(site => site.id)));
     this.discoverySignals = new Set(state.systems.filter(system => ['opening', 'maturing', 'ready'].includes(getDiscoveryView(state, system.id)?.phase)).map(system => system.id));
+    this.recentTransfers = new Map();
+    for (const transfer of getKnownTransfers(state)) if (!this.recentTransfers.has(transfer.systemId)) this.recentTransfers.set(transfer.systemId, transfer);
     if (galaxyChanged) this.setBounds(state);
     this.clearGroup(this.dynamicGroup);
     this.labelLayer.replaceChildren();
@@ -520,11 +523,19 @@ export class GalaxyView {
     const routePoint = this.routePoints.get(system.id);
     if (routePoint) element.classList.add(`is-route-${routePoint.kind}`);
     element.append(status);
+    const transfer = this.recentTransfers.get(system.id);
+    if (transfer) {
+      const marker = document.createElement('small');
+      marker.className = 'galaxy-transfer-marker';
+      marker.textContent = `↳ TRANSFER · ${transfer.turn}`;
+      element.title = `Cycle ${transfer.turn}: ${transfer.to.name} took control from ${transfer.from.name}.`;
+      element.append(marker);
+    }
     element.setAttribute('aria-label', `${system.name}, ${status.textContent.toLowerCase()}${reachable ? ', adjacent to selected fleet' : ''}${routePoint ? `, ${routePoint.kind === 'committed' ? 'plotted course' : 'route preview'} jump ${routePoint.number} of ${routePoint.jumps}${routePoint.destination ? ', destination' : ''}${routePoint.stopReason ? `, ${routePoint.stopReason}` : ''}` : ''}`);
     element.addEventListener('click', event => { event.stopPropagation(); this.onSelect(system.id); });
     element.addEventListener('dblclick', event => { event.stopPropagation(); this.focus(system.id); });
     this.labelLayer.append(element);
-    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : routePoint ? 84 : system.owner === 'player' ? 80 : 40 });
+    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : routePoint ? 84 : transfer ? 82 : system.owner === 'player' ? 80 : 40 });
   }
 
   buildFleetLabels(state) {

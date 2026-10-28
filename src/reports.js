@@ -67,6 +67,7 @@ export function validateReportState(state) {
       && (entry.systemId === undefined || systems.has(entry.systemId))
       && (entry.techId === undefined || hasContent(TECHS, entry.techId))
       && (entry.targetId === undefined || factions.has(entry.targetId))
+      && (entry.publicAffairId === undefined || positiveInt(entry.publicAffairId) && entry.publicAffairId < state.publicAffairs?.observers?.player?.nextId)
       && (entry.itemId === undefined || hasContent(BUILDINGS, entry.itemId) || hasContent(SHIPS, entry.itemId))
       && (entry.reportId === undefined || validReportId(entry.reportId));
     if (!state.log.every(validEntry)) return false;

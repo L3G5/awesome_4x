@@ -487,6 +487,56 @@ function emergencyConstruction(state, faction, threats, act) {
   }
 }
 
+/**
+ * Losing frontier sensors must not make a known war disappear from budgeting.
+ * A small replacement navy comes before the next optional beacon, without
+ * estimating unseen opposition or spending an ongoing alignment payment.
+ */
+function rebuildWartimeReadiness(state, faction, colonies, roles, act) {
+  if (!Object.entries(faction.relations).some(([otherId, relation]) => {
+    const opponent = factionOf(state, otherId);
+    return relation.status === 'war' && opponent && !opponent.eliminated;
+  })) return;
+  const frigatePower = fleetPower(state, { owner: faction.id, type: 'frigate', ships: 1 });
+  const minimum = frigatePower * Math.min(6, 2 + Math.ceil(colonies.length / 2));
+  const queuedShips = () => colonies.filter(system => system.queue?.kind === 'ship').map(system => system.queue.itemId);
+  const committedPower = () => ownFleets(state, faction).filter(military).reduce((power, fleet) => power + strength(state, fleet), 0)
+    + queuedShips().filter(id => SHIPS[id].attack > 3).reduce((power, type) => power + fleetPower(state, { owner: faction.id, type, ships: 1 }), 0);
+  if (committedPower() >= minimum) return;
+  const stats = getEmpireStats(state, faction.id);
+  const alignmentPayment = faction.alignment?.active || stats.beacons >= ALIGNMENT_RULES.sites ? ALIGNMENT_RULES.cost : 0;
+  const affordable = (cost, upkeep = SHIPS.frigate.upkeep) => canPay(faction, cost)
+    && faction.credits - (cost.credits || 0) >= alignmentPayment
+    && stats.creditIncome - queuedShips().reduce((total, id) => total + SHIPS[id].upkeep, 0) - upkeep >= Math.max(4, alignmentPayment);
+  const threatened = new Set(threatsToColonies(state, faction).map(threat => threat.colony.id));
+  const borderCount = system => getNeighbors(state, system.id).map(id => systemOf(state, id)).filter(neighbor => neighbor.knownBy.includes(faction.id) && war(faction, neighbor.owner)).length;
+  const safe = colonies.filter(system => !threatened.has(system.id)).sort((a, b) => borderCount(a) - borderCount(b) || getSystemYield(state, b).production - getSystemYield(state, a).production || a.id.localeCompare(b.id));
+
+  // If all yards have been lost, restore one paid rear yard. Existing and
+  // queued yards are sufficient; never cancel a beacon or discovery project.
+  if (!colonies.some(system => system.buildings.includes('shipyard') || system.queue?.itemId === 'shipyard')) {
+    for (const system of safe.filter(system => !system.queue)) {
+      const replacements = getInfrastructure(state, system).available ? [null] : replacementCandidates(state, faction, system, 'shipyard', roles.get(system.id));
+      for (const replaceBuildingId of replacements) {
+        const option = getBuildOptions(state, system.id, faction.id, replaceBuildingId).find(option => option.id === 'shipyard');
+        if (!option?.enabled || !affordable(option.cost)) continue;
+        if (act({ type: 'build', systemId: system.id, itemId: 'shipyard', ...(replaceBuildingId ? { replaceBuildingId } : {}) }).ok) return;
+      }
+    }
+    return;
+  }
+
+  let commissioned = 0;
+  for (const system of safe.filter(system => !system.queue && system.buildings.includes('shipyard'))) {
+    if (faction.orders < 1 || state.winner || commissioned >= 2 || committedPower() >= minimum) break;
+    // Frigates restore a sensor-bearing fighting force quickly at a bounded
+    // price. Existing cruisers and queued hulls count at their actual power.
+    const option = getBuildOptions(state, system.id, faction.id).find(option => option.id === 'frigate');
+    if (!option?.enabled || !affordable(option.cost)) continue;
+    if (act({ type: 'build', systemId: system.id, itemId: 'frigate' }).ok) commissioned++;
+  }
+}
+
 /** Roles use owned survey data and charted borders; hidden fleets never influence them. */
 function colonyRoles(state, faction, colonies) {
   const roles = new Map(colonies.filter(system => system.charter).map(system => [system.id, system.charter.type]));
@@ -551,6 +601,7 @@ function recoverAlignmentIncome(state, faction, system, role, act) {
 function economicTurn(state, faction, act) {
   const colonies = state.systems.filter(system => system.owner === faction.id);
   const roles = colonyRoles(state, faction, colonies);
+  rebuildWartimeReadiness(state, faction, colonies, roles, act);
   beaconConstruction(state, faction, colonies, roles, act);
   const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
   const expansion = getVisibleSystems(state, faction.id).some(system => !system.owner && surveyed(system, faction) && system.habitability >= minimum);

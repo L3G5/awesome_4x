@@ -35,9 +35,9 @@ export function renderBriefing(state) {
   const briefing = state.lastBriefing;
   if (!briefing) return '<h2 id="modal-title">Your first mandate</h2><p class="modal-lead">Complete a cycle to receive a briefing from your colonies and fleet commanders.</p>';
   const categories = [
-    ['Threats & diplomacy', entry => ['combat','war','warning','diplomacy','victory','alignment'].includes(entry.type)],
+    ['Threats & diplomacy', entry => ['combat','war','warning','diplomacy','sovereignty','victory','alignment'].includes(entry.type)],
     ['Completed projects', entry => ['construction','research'].includes(entry.type)],
-    ['Across the frontier', entry => !['combat','war','warning','diplomacy','victory','alignment','construction','research'].includes(entry.type)],
+    ['Across the frontier', entry => !['combat','war','warning','diplomacy','sovereignty','victory','alignment','construction','research'].includes(entry.type)],
   ];
   let html = `<div class="eyebrow">THE SPEAKER'S BRIEFING</div><h2 id="modal-title">A new cycle. A changing Reach.</h2><p class="modal-lead">Cycle ${briefing.turn} · ${briefing.entries.length} ${briefing.entries.length === 1 ? 'dispatch' : 'dispatches'} from the latest turn. This report remains available from the top bar.</p>`;
   for (const [label, predicate] of categories) {

@@ -1,0 +1,1619 @@
+{
+  "generatedAt": "2026-10-28T19:29:43.739Z",
+  "elapsedSeconds": 22.867,
+  "runtime": "v22.23.1",
+  "comparison": "AI-only: both variants run the same immutable engine snapshot, including public-affairs contact hooks and collapse-log privacy rules; only src/ai.js differs.",
+  "supersedes": "The earlier temporary readiness comparison used different game.js and diplomacy.js versions as well as ai.js. Its combined-stage results must not be attributed solely to the readiness policy.",
+  "provenance": {
+    "engineSelection": "working-tree snapshot",
+    "engineRevision": null,
+    "headAtStart": "af9d817ff1c12dc4e08133f02400b7e00548542c",
+    "engineFilesChangedSinceHead": [
+      "src/ai.js",
+      "src/diplomacy.js",
+      "src/game.js",
+      "src/public-affairs.js",
+      "src/reports.js"
+    ],
+    "beforeAIRevision": "af9d817ff1c12dc4e08133f02400b7e00548542c",
+    "scriptSha256": "8913b9a31f2cefdbec0cb27640acf463fc8b1dd8f8ced6c9eb85029eb0528a49",
+    "differingFiles": [
+      "src/ai.js"
+    ]
+  },
+  "sources": {
+    "before": {
+      "src/ai.js": "50528c2586d0ec39214e2d60927472ee2e3dc2273101f3a33f5b75d4e4a9bd4e",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/development.js": "79797a6f535a9bcc84d14f2f915cedf32f4b367358adba57199999df7bd22231",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/game.js": "d77232b5b5111e1dd125251853b87e78761bdff822986cf9a9927dc8d5d1caa2",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+    },
+    "after": {
+      "src/ai.js": "3ef12265af9ad274d5ee80a27db3d65aef4472e5185e389c159aad9d1dee3c59",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/development.js": "79797a6f535a9bcc84d14f2f915cedf32f4b367358adba57199999df7bd22231",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/game.js": "d77232b5b5111e1dd125251853b87e78761bdff822986cf9a9927dc8d5d1caa2",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+    }
+  },
+  "reproduction": {
+    "current": "node scripts/readiness-benchmark.mjs docs/results/stage6-readiness.json",
+    "historical": "node scripts/readiness-benchmark.mjs --engine-ref <release-containing-recorded-engine-hashes> --baseline-ref af9d817ff1c12dc4e08133f02400b7e00548542c /tmp/readiness.json",
+    "engineNote": "Source files are copied before loading either variant. --engine-ref reads the engine and after AI from that revision. The baseline contributes only ai.js. Temporary modules are removed after measurement; no saved games or private external files are required."
+  },
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7"
+  ],
+  "policies": {
+    "passive": "Player issues no commands. All three rivals use the selected AI variant.",
+    "balanced": {
+      "description": "Player follows the listed research order and then uses the selected AI variant for all remaining commands. All three rivals also use that variant; the comparison therefore measures a shared policy change, not a fixed human opponent.",
+      "researchPriority": [
+        "logistics",
+        "ecology",
+        "physics",
+        "industry",
+        "diplomacy",
+        "weapons",
+        "computing",
+        "shields",
+        "singularity",
+        "command",
+        "cruisers",
+        "terraforming"
+      ]
+    }
+  },
+  "metricDefinitions": {
+    "sampling": "One observation per non-eliminated faction after each completed endTurn, including the final winning cycle. All four factions are eligible, including the passive player. The same seed is paired between variants, but military losses and war duration can change observation denominators.",
+    "livingEmpire": "All eligible faction-cycle observations.",
+    "wartimeEmpire": "Eligible observations where that faction has at least one relation with status war against a non-eliminated opponent. Retained war relations with fallen empires do not count.",
+    "fleetlessWar": "Wartime observations with zero owned military hulls. Military means SHIPS[type].attack > 3; scouts and Arks do not count.",
+    "uncommittedFleetlessWar": "Fleetless wartime observations with no military ship currently queued at an owned colony. This is not a direct count of budget deadlocks: poverty, unavailable shipyards, losses later in the turn, and deliberate sustainable-income limits can also qualify.",
+    "uncommittedPerWartimeObservation": "uncommittedFleetlessWar divided by wartimeEmpire; null if no wartime observations.",
+    "newMilitaryHullsObserved": "Sum of hulls in newly observed military fleet IDs after each cycle, excluding starting fleets. Includes recovered anomaly escorts; not a pure construction counter or fleet power estimate.",
+    "activeAncientSitesAtFinish": "Number of worlds whose entitled ancient building remains built at campaign end, regardless of its current owner. Does not count removed sites or unfinished construction.",
+    "threeBeaconTurn": "First observed turn owning at least three completed beacons, per faction per game. Eligible includes all four factions. Timing distribution is conditional on reaching the milestone; reached/eligible are explicit.",
+    "finishTurn": "Winning turn, with one observation per completed campaign. Even-sample median averages the two central values.",
+    "validation": "Initial state and every completed cycle validate through validateSave and finite nonnegative credits, minerals, science and orders. A paired replay is JSON-serialized/reloaded every cycle; serialized JSON strings must then match exactly. Any failed check aborts instead of writing a success artifact."
+  },
+  "limitations": [
+    "Eight fixed seeds per policy and variant: 32 campaigns, each with one deterministic replay. This is a small paired policy experiment, not a human win-rate or difficulty estimate.",
+    "Different AI choices can change wars, captures, campaign length and winners; compare observation counts alongside their denominators.",
+    "The focused scenario preserves the reported failure conditions but is generated from the selected engine; it is not the original saved campaign.",
+    "The readiness exception targets a small credible force. It does not promise recovery from unaffordable upkeep, occupied shipyards or continued overwhelming military losses."
+  ],
+  "summary": {
+    "before": {
+      "passive": {
+        "campaigns": 8,
+        "checkedCycles": 558,
+        "finishTurn": {
+          "reached": 8,
+          "eligible": 8,
+          "min": 60,
+          "median": 70.5,
+          "max": 82
+        },
+        "outcomes": {
+          "choir": 5,
+          "veyr": 2,
+          "khar": 1
+        },
+        "observations": {
+          "livingEmpire": 2232,
+          "wartimeEmpire": 286,
+          "fleetlessWar": 46,
+          "uncommittedFleetlessWar": 36
+        },
+        "uncommittedPerWartimeObservation": 0.1258741258741259,
+        "newMilitaryHullsObserved": 155,
+        "threeBeaconTurn": {
+          "reached": 18,
+          "eligible": 32,
+          "min": 51,
+          "median": 63,
+          "max": 73
+        },
+        "activeAncientSitesAtFinish": 1
+      },
+      "balanced": {
+        "campaigns": 8,
+        "checkedCycles": 560,
+        "finishTurn": {
+          "reached": 8,
+          "eligible": 8,
+          "min": 60,
+          "median": 72,
+          "max": 75
+        },
+        "outcomes": {
+          "khar": 3,
+          "choir": 2,
+          "veyr": 1,
+          "player": 2
+        },
+        "observations": {
+          "livingEmpire": 2240,
+          "wartimeEmpire": 431,
+          "fleetlessWar": 66,
+          "uncommittedFleetlessWar": 60
+        },
+        "uncommittedPerWartimeObservation": 0.13921113689095127,
+        "newMilitaryHullsObserved": 234,
+        "threeBeaconTurn": {
+          "reached": 24,
+          "eligible": 32,
+          "min": 51,
+          "median": 64.5,
+          "max": 72
+        },
+        "activeAncientSitesAtFinish": 3
+      }
+    },
+    "after": {
+      "passive": {
+        "campaigns": 8,
+        "checkedCycles": 556,
+        "finishTurn": {
+          "reached": 8,
+          "eligible": 8,
+          "min": 60,
+          "median": 70.5,
+          "max": 80
+        },
+        "outcomes": {
+          "choir": 5,
+          "veyr": 3
+        },
+        "observations": {
+          "livingEmpire": 2224,
+          "wartimeEmpire": 284,
+          "fleetlessWar": 12,
+          "uncommittedFleetlessWar": 5
+        },
+        "uncommittedPerWartimeObservation": 0.017605633802816902,
+        "newMilitaryHullsObserved": 196,
+        "threeBeaconTurn": {
+          "reached": 18,
+          "eligible": 32,
+          "min": 51,
+          "median": 62.5,
+          "max": 72
+        },
+        "activeAncientSitesAtFinish": 1
+      },
+      "balanced": {
+        "campaigns": 8,
+        "checkedCycles": 561,
+        "finishTurn": {
+          "reached": 8,
+          "eligible": 8,
+          "min": 60,
+          "median": 72,
+          "max": 76
+        },
+        "outcomes": {
+          "khar": 2,
+          "veyr": 3,
+          "player": 2,
+          "choir": 1
+        },
+        "observations": {
+          "livingEmpire": 2244,
+          "wartimeEmpire": 443,
+          "fleetlessWar": 55,
+          "uncommittedFleetlessWar": 40
+        },
+        "uncommittedPerWartimeObservation": 0.09029345372460497,
+        "newMilitaryHullsObserved": 279,
+        "threeBeaconTurn": {
+          "reached": 24,
+          "eligible": 32,
+          "min": 51,
+          "median": 64,
+          "max": 72
+        },
+        "activeAncientSitesAtFinish": 3
+      }
+    }
+  },
+  "focusedScenario": [
+    {
+      "variant": "before",
+      "source": "Generated six-colony, fleetless Veyr fixture at turn 55; war with Khar; isolated lanes; two paid beacons under construction; one idle home shipyard; 5452 credits, 179 minerals and 17 orders. This preserves the reported failure conditions without depending on an external save.",
+      "immediateQueue": null,
+      "immediatePaid": {
+        "credits": 0,
+        "minerals": 0,
+        "orders": 0
+      },
+      "firstReplacementTurn": null,
+      "observationWindowCycles": 8,
+      "observedThroughTurn": 63,
+      "validSaves": true,
+      "nonnegativeResources": true
+    },
+    {
+      "variant": "after",
+      "source": "Generated six-colony, fleetless Veyr fixture at turn 55; war with Khar; isolated lanes; two paid beacons under construction; one idle home shipyard; 5452 credits, 179 minerals and 17 orders. This preserves the reported failure conditions without depending on an external save.",
+      "immediateQueue": "frigate",
+      "immediatePaid": {
+        "credits": 25,
+        "minerals": 35,
+        "orders": 1
+      },
+      "firstReplacementTurn": 58,
+      "observationWindowCycles": 8,
+      "observedThroughTurn": 63,
+      "validSaves": true,
+      "nonnegativeResources": true
+    }
+  ],
+  "runs": [
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 67,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 268,
+        "wartimeEmpire": 46,
+        "fleetlessWar": 10,
+        "uncommittedFleetlessWar": 10
+      },
+      "newMilitaryHullsObserved": 19,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 47,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 52,
+          "threeBeacons": 63,
+          "alignment": 63
+        },
+        "choir": {
+          "protocol": 40,
+          "threeBeacons": 59,
+          "alignment": 59
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 70,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 276,
+        "wartimeEmpire": 37,
+        "fleetlessWar": 8,
+        "uncommittedFleetlessWar": 6
+      },
+      "newMilitaryHullsObserved": 17,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 48,
+          "threeBeacons": 63,
+          "alignment": 63
+        },
+        "khar": {
+          "protocol": 51,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 61,
+          "alignment": 61
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 73,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 72,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 288,
+        "wartimeEmpire": 24,
+        "fleetlessWar": 6,
+        "uncommittedFleetlessWar": 6
+      },
+      "newMilitaryHullsObserved": 19,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 52,
+          "threeBeacons": 66,
+          "alignment": 66
+        },
+        "khar": {
+          "protocol": 47,
+          "threeBeacons": 68,
+          "alignment": 68
+        },
+        "choir": {
+          "protocol": 42,
+          "threeBeacons": 64,
+          "alignment": 64
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 70,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 276,
+        "wartimeEmpire": 26,
+        "fleetlessWar": 4,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 18,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 48,
+          "threeBeacons": 61,
+          "alignment": 61
+        },
+        "khar": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 57,
+          "alignment": 57
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 18,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 12,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 49,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "khar": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 40,
+          "threeBeacons": 60,
+          "alignment": 60
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 71,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 284,
+        "wartimeEmpire": 24,
+        "fleetlessWar": 7,
+        "uncommittedFleetlessWar": 7
+      },
+      "newMilitaryHullsObserved": 24,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 55,
+          "threeBeacons": 69,
+          "alignment": 69
+        },
+        "khar": {
+          "protocol": 52,
+          "threeBeacons": 69,
+          "alignment": 69
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 63,
+          "alignment": 63
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 60,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 59,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 236,
+        "wartimeEmpire": 25,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 14,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 46,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 33,
+          "threeBeacons": 51,
+          "alignment": 51
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 82,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 81,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 324,
+        "wartimeEmpire": 86,
+        "fleetlessWar": 11,
+        "uncommittedFleetlessWar": 7
+      },
+      "newMilitaryHullsObserved": 32,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 55,
+          "threeBeacons": 71,
+          "alignment": 71
+        },
+        "khar": {
+          "protocol": 54,
+          "threeBeacons": 73,
+          "alignment": 73
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 60,
+          "alignment": 60
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 73,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 72,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 288,
+        "wartimeEmpire": 71,
+        "fleetlessWar": 11,
+        "uncommittedFleetlessWar": 11
+      },
+      "newMilitaryHullsObserved": 32,
+      "milestones": {
+        "player": {
+          "protocol": 49,
+          "threeBeacons": 65,
+          "alignment": 65
+        },
+        "veyr": {
+          "protocol": 47,
+          "threeBeacons": 65,
+          "alignment": 65
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": 64,
+          "alignment": 64
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 62,
+          "alignment": 62
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 75,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 74,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 296,
+        "wartimeEmpire": 63,
+        "fleetlessWar": 14,
+        "uncommittedFleetlessWar": 14
+      },
+      "newMilitaryHullsObserved": 29,
+      "milestones": {
+        "player": {
+          "protocol": 45,
+          "threeBeacons": 61,
+          "alignment": 61
+        },
+        "veyr": {
+          "protocol": 52,
+          "threeBeacons": 67,
+          "alignment": 67
+        },
+        "khar": {
+          "protocol": 50,
+          "threeBeacons": 69,
+          "alignment": 69
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 66,
+          "alignment": 66
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 71,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 51,
+        "fleetlessWar": 9,
+        "uncommittedFleetlessWar": 8
+      },
+      "newMilitaryHullsObserved": 31,
+      "milestones": {
+        "player": {
+          "protocol": 53,
+          "threeBeacons": 66,
+          "alignment": 66
+        },
+        "veyr": {
+          "protocol": 50,
+          "threeBeacons": 70,
+          "alignment": 70
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "choir": {
+          "protocol": 42,
+          "threeBeacons": null,
+          "alignment": null
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 74,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 73,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 292,
+        "wartimeEmpire": 52,
+        "fleetlessWar": 11,
+        "uncommittedFleetlessWar": 7
+      },
+      "newMilitaryHullsObserved": 32,
+      "milestones": {
+        "player": {
+          "protocol": 54,
+          "threeBeacons": 68,
+          "alignment": 68
+        },
+        "veyr": {
+          "protocol": 50,
+          "threeBeacons": 65,
+          "alignment": 65
+        },
+        "khar": {
+          "protocol": 70,
+          "threeBeacons": 72,
+          "alignment": 72
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 57,
+          "alignment": 57
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 48,
+        "fleetlessWar": 16,
+        "uncommittedFleetlessWar": 16
+      },
+      "newMilitaryHullsObserved": 27,
+      "milestones": {
+        "player": {
+          "protocol": 60,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 49,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "choir": {
+          "protocol": 40,
+          "threeBeacons": null,
+          "alignment": null
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 73,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 72,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 288,
+        "wartimeEmpire": 46,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 31,
+      "milestones": {
+        "player": {
+          "protocol": 49,
+          "threeBeacons": 64,
+          "alignment": 64
+        },
+        "veyr": {
+          "protocol": 66,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 49,
+          "threeBeacons": 61,
+          "alignment": 61
+        },
+        "choir": {
+          "protocol": 43,
+          "threeBeacons": 66,
+          "alignment": 66
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 60,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 59,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 236,
+        "wartimeEmpire": 32,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 21,
+      "milestones": {
+        "player": {
+          "protocol": 51,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 47,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 33,
+          "threeBeacons": 51,
+          "alignment": 51
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 68,
+        "fleetlessWar": 5,
+        "uncommittedFleetlessWar": 4
+      },
+      "newMilitaryHullsObserved": 31,
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "veyr": {
+          "protocol": 57,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 60,
+          "threeBeacons": 68,
+          "alignment": 68
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 64,
+          "alignment": null
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 67,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 268,
+        "wartimeEmpire": 48,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 26,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 47,
+          "threeBeacons": 67,
+          "alignment": 67
+        },
+        "khar": {
+          "protocol": 52,
+          "threeBeacons": 64,
+          "alignment": 64
+        },
+        "choir": {
+          "protocol": 40,
+          "threeBeacons": 59,
+          "alignment": 59
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 70,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 276,
+        "wartimeEmpire": 37,
+        "fleetlessWar": 2,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 25,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 48,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "khar": {
+          "protocol": 51,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 61,
+          "alignment": 61
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 73,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 72,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 288,
+        "wartimeEmpire": 24,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 31,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 52,
+          "threeBeacons": 70,
+          "alignment": 70
+        },
+        "khar": {
+          "protocol": 47,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 42,
+          "threeBeacons": 64,
+          "alignment": 64
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 70,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 276,
+        "wartimeEmpire": 26,
+        "fleetlessWar": 1,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 20,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 48,
+          "threeBeacons": 61,
+          "alignment": 61
+        },
+        "khar": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 57,
+          "alignment": 57
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 18,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 13,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 49,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "khar": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 40,
+          "threeBeacons": 60,
+          "alignment": 60
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 71,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 284,
+        "wartimeEmpire": 24,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 30,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 55,
+          "threeBeacons": 67,
+          "alignment": 67
+        },
+        "khar": {
+          "protocol": 52,
+          "threeBeacons": 72,
+          "alignment": 72
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 63,
+          "alignment": 63
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 60,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 59,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 236,
+        "wartimeEmpire": 25,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 15,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 46,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 33,
+          "threeBeacons": 51,
+          "alignment": 51
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 80,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 79,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 316,
+        "wartimeEmpire": 82,
+        "fleetlessWar": 9,
+        "uncommittedFleetlessWar": 5
+      },
+      "newMilitaryHullsObserved": 36,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 55,
+          "threeBeacons": 71,
+          "alignment": 71
+        },
+        "khar": {
+          "protocol": 54,
+          "threeBeacons": 72,
+          "alignment": 72
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 60,
+          "alignment": 60
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 73,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 72,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 288,
+        "wartimeEmpire": 64,
+        "fleetlessWar": 9,
+        "uncommittedFleetlessWar": 5
+      },
+      "newMilitaryHullsObserved": 41,
+      "milestones": {
+        "player": {
+          "protocol": 49,
+          "threeBeacons": 65,
+          "alignment": 65
+        },
+        "veyr": {
+          "protocol": 47,
+          "threeBeacons": 63,
+          "alignment": 63
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": 64,
+          "alignment": 64
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 62,
+          "alignment": 62
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 76,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 75,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 300,
+        "wartimeEmpire": 78,
+        "fleetlessWar": 9,
+        "uncommittedFleetlessWar": 7
+      },
+      "newMilitaryHullsObserved": 39,
+      "milestones": {
+        "player": {
+          "protocol": 45,
+          "threeBeacons": 61,
+          "alignment": 61
+        },
+        "veyr": {
+          "protocol": 52,
+          "threeBeacons": 67,
+          "alignment": 67
+        },
+        "khar": {
+          "protocol": 50,
+          "threeBeacons": 70,
+          "alignment": 70
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 67,
+          "alignment": 67
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 71,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 51,
+        "fleetlessWar": 8,
+        "uncommittedFleetlessWar": 7
+      },
+      "newMilitaryHullsObserved": 34,
+      "milestones": {
+        "player": {
+          "protocol": 53,
+          "threeBeacons": 66,
+          "alignment": 66
+        },
+        "veyr": {
+          "protocol": 50,
+          "threeBeacons": 70,
+          "alignment": 70
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "choir": {
+          "protocol": 42,
+          "threeBeacons": null,
+          "alignment": null
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 74,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 73,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 292,
+        "wartimeEmpire": 52,
+        "fleetlessWar": 5,
+        "uncommittedFleetlessWar": 2
+      },
+      "newMilitaryHullsObserved": 35,
+      "milestones": {
+        "player": {
+          "protocol": 54,
+          "threeBeacons": 68,
+          "alignment": 68
+        },
+        "veyr": {
+          "protocol": 50,
+          "threeBeacons": 65,
+          "alignment": 65
+        },
+        "khar": {
+          "protocol": 70,
+          "threeBeacons": 72,
+          "alignment": 72
+        },
+        "choir": {
+          "protocol": 38,
+          "threeBeacons": 57,
+          "alignment": 57
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 47,
+        "fleetlessWar": 14,
+        "uncommittedFleetlessWar": 14
+      },
+      "newMilitaryHullsObserved": 33,
+      "milestones": {
+        "player": {
+          "protocol": 60,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 49,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "choir": {
+          "protocol": 40,
+          "threeBeacons": null,
+          "alignment": null
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 73,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 72,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 288,
+        "wartimeEmpire": 48,
+        "fleetlessWar": 1,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 35,
+      "milestones": {
+        "player": {
+          "protocol": 49,
+          "threeBeacons": 64,
+          "alignment": 64
+        },
+        "veyr": {
+          "protocol": 66,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 49,
+          "threeBeacons": 61,
+          "alignment": 61
+        },
+        "choir": {
+          "protocol": 43,
+          "threeBeacons": 66,
+          "alignment": 66
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 60,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 59,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 236,
+        "wartimeEmpire": 32,
+        "fleetlessWar": 0,
+        "uncommittedFleetlessWar": 0
+      },
+      "newMilitaryHullsObserved": 22,
+      "milestones": {
+        "player": {
+          "protocol": 51,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "veyr": {
+          "protocol": 47,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 53,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "choir": {
+          "protocol": 33,
+          "threeBeacons": 51,
+          "alignment": 51
+        }
+      },
+      "activeAncientSitesAtFinish": 0
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "validSaves": true,
+      "nonnegativeResources": true,
+      "exactReloadReplay": true,
+      "observations": {
+        "livingEmpire": 280,
+        "wartimeEmpire": 71,
+        "fleetlessWar": 9,
+        "uncommittedFleetlessWar": 5
+      },
+      "newMilitaryHullsObserved": 40,
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "threeBeacons": 62,
+          "alignment": 62
+        },
+        "veyr": {
+          "protocol": 61,
+          "threeBeacons": null,
+          "alignment": null
+        },
+        "khar": {
+          "protocol": 58,
+          "threeBeacons": 70,
+          "alignment": 70
+        },
+        "choir": {
+          "protocol": 41,
+          "threeBeacons": 64,
+          "alignment": 64
+        }
+      },
+      "activeAncientSitesAtFinish": 1
+    }
+  ]
+}

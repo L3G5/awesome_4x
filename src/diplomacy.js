@@ -1,5 +1,6 @@
 import { FACTIONS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
+import { recordPublicDiplomacy } from './public-affairs.js';
 
 export const DIPLOMACY_RULES = Object.freeze({ peaceCost: 60, tradeCost: 30, giftCost: 35, minimumWarTurns: 5, truceTurns: 5, offerTurns: 3, tradeNoticeTurns: 3 });
 const STANCES = ['war', 'peace', 'trade', 'gift', 'endTrade', 'acceptPeace', 'declinePeace'];
@@ -127,6 +128,7 @@ function settlePeace(state, first, second) {
   for (const offer of state.diplomacyOffers || []) if (offer.status === 'pending' && [first, second].includes(offer.from) && [first, second].includes(offer.to)) resolveOffer(state, offer, 'expired');
   const withdrawal = withdrawFleets(state, first, second);
   record(state, first, second, `Peace agreed between ${a.name} and ${b.name}. The truce forbids war until turn ${state.turn + DIPLOMACY_RULES.truceTurns}. ${withdrawal.moved} fleet${withdrawal.moved === 1 ? '' : 's'} withdrew.${withdrawal.stranded ? ` ${withdrawal.stranded} fleet${withdrawal.stranded === 1 ? ' has' : 's have'} no owned colony or charted neutral withdrawal point and remain in place.` : ''}`);
+  recordPublicDiplomacy(state, { kind: 'peace', firstId: first, secondId: second, untilTurn: state.turn + DIPLOMACY_RULES.truceTurns });
   return withdrawal;
 }
 
@@ -156,6 +158,7 @@ export function executeDiplomacy(state, action = {}) {
     reverse.grievance = clamp((reverse.grievance || 0) + (betrayal ? 35 : 20));
     message = `${faction.name} declared war on ${target.name}.${betrayal ? ' The active trade treaty was broken; the betrayal deepens their grievance.' : ''}`;
     record(state, factionId, targetId, message, 'war');
+    recordPublicDiplomacy(state, { kind: 'war', firstId: factionId, secondId: targetId });
   } else if (stance === 'peace' && forecast.peace.mode === 'offer') {
     faction.credits -= DIPLOMACY_RULES.peaceCost;
     state.diplomacyOffers ||= [];
@@ -184,6 +187,7 @@ export function executeDiplomacy(state, action = {}) {
     for (const r of [relation, reverse]) { r.trade = true; r.tradeEndsAt = 0; r.trust = trust(r.trust + 10); }
     message = `Trade established between ${faction.name} and ${target.name}. Borders are open; existing grievances remain.`;
     record(state, factionId, targetId, message);
+    recordPublicDiplomacy(state, { kind: 'trade', firstId: factionId, secondId: targetId });
   } else if (stance === 'gift') {
     faction.credits -= DIPLOMACY_RULES.giftCost; target.credits += DIPLOMACY_RULES.giftCost;
     for (const r of [relation, reverse]) r.trust = trust(r.trust + 20);
@@ -194,6 +198,7 @@ export function executeDiplomacy(state, action = {}) {
     reverse.grievance = clamp((reverse.grievance || 0) + 5);
     message = `${faction.name} gave notice to end trade with ${target.name}. Income and open borders continue until turn ${relation.tradeEndsAt}, when visiting fleets withdraw.`;
     record(state, factionId, targetId, message); outcome = 'tradeNotice';
+    recordPublicDiplomacy(state, { kind: 'trade-notice', firstId: factionId, secondId: targetId, untilTurn: relation.tradeEndsAt });
   }
   faction.orders--;
   return { ok: true, message, outcome, ...extra };
@@ -217,6 +222,7 @@ export function advanceDiplomacy(state) {
       for (const r of [relation, reverse]) { r.trade = false; r.tradeEndsAt = 0; }
       const withdrawal = withdrawFleets(state, first.id, second.id);
       record(state, first.id, second.id, `Trade between ${first.name} and ${second.name} has ended. Trade income and open borders cease; ${withdrawal.moved} visiting fleet${withdrawal.moved === 1 ? '' : 's'} withdrew.`);
+      recordPublicDiplomacy(state, { kind: 'trade-ended', firstId: first.id, secondId: second.id });
       treatiesEnded++;
     }
     for (const [observer, other, r] of [[first, second, relation], [second, first, reverse]]) {

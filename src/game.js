@@ -7,10 +7,12 @@ import { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, 
 import { getAlignmentStatus, advanceAlignment, revealPublicBeacons, validateAlignmentState } from './victory.js';
 import { getRoutePreview, continuePlannedRoute, updateRouteAfterMove, reconcileRoutes, validateNavigationState } from './navigation.js';
 import { placeDiscoveries, observeDiscovery, observeDiscoveries, getDiscoveryBuildReason, recordDiscoveryConstruction, executeDiscovery, mergeDiscoveryHeritage, advanceDiscoveries, validateDiscoveryState } from './discoveries.js';
+import { recordSovereigntyTransfer, validatePublicAffairsState } from './public-affairs.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject } from './development.js';
 export { getRoutePreview, getRouteStatus } from './navigation.js';
+export { getPublicRelationships, getPublicDispatches, getKnownTransfers } from './public-affairs.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -450,8 +452,13 @@ export function command(state, action) {
       const defenseAfter = getSystemYield(state, system).defense;
       const captured = defenseAfter <= 0 && fleet.hp > 0;
       if (captured) {
+        const observersBefore = [...system.knownBy];
         system.owner = factionId; system.population = Math.max(1, system.population - 1); system.defenseDamage = 0; system.queue = null;
+        // A charted sovereign identifies its government, just as on initial
+        // charting. This opens contact only, never surveys or local sensors.
+        for (const observerId of observersBefore) meet(state, observerId, factionId);
         survey(state, system.id, factionId);
+        recordSovereigntyTransfer(state, { systemId: system.id, fromId: ownerBefore, toId: factionId, observerIds: observersBefore });
       }
       const participant = finishParticipant(before, fleet);
       const invasion = { ownerBefore, ownerAfter: system.owner, defenseBefore: defense, defenseAfter, damage: round(defense - defenseAfter), damageRoll: Math.round(attack), retaliation: round(before.hullBefore - fleet.hp), captured };
@@ -508,7 +515,7 @@ function checkVictory(state) {
       faction.eliminated = true;
       state.fleets = state.fleets.filter(f => f.owner !== faction.id);
       for (const other of state.factions.filter(f => f.id !== faction.id)) { other.relations[faction.id].trade = false; other.relations[faction.id].tradeEndsAt = 0; faction.relations[other.id].trade = false; faction.relations[other.id].tradeEndsAt = 0; }
-      record(state, `${faction.name} has collapsed.`, 'war', null, { targetId: faction.id });
+      if (faction.id === 'player' || factionOf(state, 'player').contacts.includes(faction.id)) record(state, `${faction.name} has collapsed.`, 'war', null, { targetId: faction.id });
     }
     if (colonies.length && !colonies.some(s => s.id === faction.capitalId)) faction.capitalId = colonies[0].id;
     const beacons = colonies.filter(s => s.buildings.includes('beacon')).length;
@@ -623,5 +630,6 @@ function isValidSave(value) {
   if (!validateAlignmentState(value)) return false;
   if (!validateNavigationState(value)) return false;
   if (!validateDiscoveryState(value)) return false;
+  if (!validatePublicAffairsState(value)) return false;
   return true;
 }

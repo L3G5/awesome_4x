@@ -73,7 +73,7 @@ const policies = {
  military: { subject: 'Player empire; 20 observations per milestone.', description: 'Prioritizes military research and affordable warships. At 75 military power, may declare war on a contacted empire if own power exceeds 1.4 times visible enemy power. Does not cap simultaneous wars. Uses shared AI for remaining actions.', researchPriority: techPriority.military },
  balanced: { subject: 'Player empire; 20 observations per milestone.', description: 'Uses a mixed research order and the shared AI for exploration, expansion, military control, economic specialization and beacon commitments.', researchPriority: techPriority.balanced },
 };
-const sourceFiles = ['src/ai.js', 'src/game.js', 'src/development.js', 'src/victory.js', 'src/content.js', 'src/intelligence.js', 'src/diplomacy.js', 'src/reports.js', 'src/discoveries.js', 'src/navigation.js', 'scripts/campaign-benchmark.mjs'];
+const sourceFiles = ['src/ai.js', 'src/game.js', 'src/development.js', 'src/victory.js', 'src/content.js', 'src/intelligence.js', 'src/diplomacy.js', 'src/reports.js', 'src/discoveries.js', 'src/navigation.js', 'src/public-affairs.js', 'scripts/campaign-benchmark.mjs'];
 const sources = Object.fromEntries(sourceFiles.map(name => [name, crypto.createHash('sha256').update(fs.readFileSync(resolve(root, name))).digest('hex')]));
 const started=Date.now(),runs=[];
 for(const mode of modes)for(const seed of seeds){

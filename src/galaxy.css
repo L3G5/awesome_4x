@@ -52,3 +52,4 @@
 @media (max-width: 720px) { .galaxy-system-name { font-size: 10px; } .galaxy-system-status { font-size: 7px; } .galaxy-sector-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .galaxy-system-label, .galaxy-fleet { transition: none; } }
 .galaxy-system-label.is-beacon .galaxy-system-status{color:#e1c38a}.galaxy-system-label.is-beacon .galaxy-system-name{color:#eddfbf}
+.galaxy-transfer-marker{display:block;color:#e6ad92;font:500 7px/1.6 'DM Sans Variable',sans-serif;letter-spacing:.08em}
