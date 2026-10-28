@@ -192,6 +192,19 @@ Optional relation fields include `truceUntil`, `tradeEndsAt`, `grievance`, `warS
 
 Fleet outcomes are `attacker-destroyed`, `defender-destroyed`, `mutual-destruction`, or `contested`. Participants are ordered attacker then defender. A move/attack may engage several opposing fleets, producing several reports; each successive attacker snapshot begins where the previous engagement ended.
 
+Future player-involved fleet reports optionally include `rounds`, an ordered array of one to four entries. Old reports remain without this field. Each entry has `{number,attacker,defender}`; `number` starts at 1 and each side records:
+
+```js
+{
+  shipsBefore, hullBefore, shipsAfter, hullAfter,
+  firepower, rawHit, weaponsFactor, factionFactor, shieldFactor
+}
+```
+
+`firepower` is the actual nominal fleet power before that round’s random variance, including the frozen weapons/faction multipliers. `rawHit` is this side’s outgoing volley before the opposing shield factor and remaining-hull cap. `shieldFactor` applies to incoming fire on this side. Both outgoing rolls are captured before either fleet takes damage. No new random call is introduced. The current modifiers are weapons ×1.25, Khar ×1.15 and incoming shields ×0.8; their battle-time values are saved, never reconstructed from present research. Zero incoming fire preserves exact hull and explicit ship count, including valid fractional legacy hull; positive fire keeps ordinary shield, one-decimal hull rounding and surviving ship-count behavior.
+
+Round snapshots chain exactly and match the participant endpoints. Validation bounds the array, numbers, factors, variance and damage semantics without consulting present faction technology. A round cannot follow a destroyed participant. A contested four-round engagement can precede another defender in the same command. Snapshots are deeply frozen when created and remain unchanged through JSON save/reload, repairs, renames and research. Only player-involved fleet duels allocate round records: invasions and AI-only battles do not acquire them. The 50-report limit bounds this history at 200 rounds.
+
 An invasion report has `kind:'invasion'`, one attacker participant, outcome `captured`, `repelled`, or `bombardment`, and:
 
 ```js

@@ -3,6 +3,7 @@ import './workspace.css';
 import './fleet-operations.css';
 import './command-clarity.css';
 import './defense.css';
+import './combat-rounds.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
@@ -393,7 +394,7 @@ document.addEventListener('click',event=>{
 document.addEventListener('keydown',event=>{
   if (modalType) {
     if (event.key==='Escape'){event.preventDefault();closeModal();}
-    if(event.key==='Tab'){const focusable=[...document.querySelectorAll('.modal button:not(:disabled),.modal a[href],.modal input:not(:disabled),.modal select:not(:disabled),.modal textarea:not(:disabled),.modal [tabindex]')].filter(el=>el.tabIndex>=0&&el.getClientRects().length&&!el.matches(':disabled'));const first=focusable[0],last=focusable.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}}
+    if(event.key==='Tab'){const focusable=[...document.querySelectorAll('.modal button:not(:disabled),.modal a[href],.modal input:not(:disabled),.modal select:not(:disabled),.modal textarea:not(:disabled),.modal summary,.modal [tabindex]')].filter(el=>el.tabIndex>=0&&el.getClientRects().length&&!el.matches(':disabled'));const first=focusable[0],last=focusable.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}}
     return;
   }
   if (event.target.matches('input,textarea,select')||event.ctrlKey||event.metaKey||event.altKey) return;

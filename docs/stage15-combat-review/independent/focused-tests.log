@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: all thirteen ordinary command and complete next-cycle outcomes match the archived pre-trace engine
+ok 1 - all thirteen ordinary command and complete next-cycle outcomes match the archived pre-trace engine
+  ---
+  duration_ms: 162.297235
+  type: 'test'
+  ...
+# Subtest: simultaneous last shots are recorded even when both formations die in the first round
+ok 2 - simultaneous last shots are recorded even when both formations die in the first round
+  ---
+  duration_ms: 5.787981
+  type: 'test'
+  ...
+# Subtest: a contested exchange records exactly four paired rounds and declining firepower after casualties
+ok 3 - a contested exchange records exactly four paired rounds and declining firepower after casualties
+  ---
+  duration_ms: 6.471816
+  type: 'test'
+  ...
+# Subtest: actual weapons, faction and incoming shield factors are frozen with outgoing rolls
+ok 4 - actual weapons, faction and incoming shield factors are frozen with outgoing rolls
+  ---
+  duration_ms: 5.084339
+  type: 'test'
+  ...
+# Subtest: raw outgoing overkill remains distinct from shield reduction and clamped actual hull loss
+ok 5 - raw outgoing overkill remains distinct from shield reduction and clamped actual hull loss
+  ---
+  duration_ms: 5.367798
+  type: 'test'
+  ...
+# Subtest: zero-fire rounds preserve minimum fractional hull and legacy explicit ship counts exactly
+ok 6 - zero-fire rounds preserve minimum fractional hull and legacy explicit ship counts exactly
+  ---
+  duration_ms: 26.525794
+  type: 'test'
+  ...
+# Subtest: a surviving lead and later Ark have distinct traces chained through the actual attacker
+ok 7 - a surviving lead and later Ark have distinct traces chained through the actual attacker
+  ---
+  duration_ms: 4.410362
+  type: 'test'
+  ...
+# Subtest: future snapshots stay deeply immutable through repair, renaming, new research and JSON replay
+ok 8 - future snapshots stay deeply immutable through repair, renaming, new research and JSON replay
+  ---
+  duration_ms: 14.404105
+  type: 'test'
+  ...
+# Subtest: traces remain absent from AI-only duels and invasions, without revealing hidden forces
+ok 9 - traces remain absent from AI-only duels and invasions, without revealing hidden forces
+  ---
+  duration_ms: 9.23598
+  type: 'test'
+  ...
+# Subtest: optional missing traces preserve old v1 reports and cannot be fabricated on invasion reports
+ok 10 - optional missing traces preserve old v1 reports and cannot be fabricated on invasion reports
+  ---
+  duration_ms: 12.774988
+  type: 'test'
+  ...
+# Subtest: malformed, unbounded, discontinuous or arithmetically inconsistent traces are rejected
+ok 11 - malformed, unbounded, discontinuous or arithmetically inconsistent traces are rejected
+  ---
+  duration_ms: 15.761145
+  type: 'test'
+  ...
+# Subtest: report retention bounds round storage to fifty reports and two hundred exchanges
+ok 12 - report retention bounds round storage to fifty reports and two hundred exchanges
+  ---
+  duration_ms: 6.508976
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 363.774636

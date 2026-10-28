@@ -20,6 +20,8 @@ The simulation in `src/game.js` is independent of rendering. Authored content, r
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
+The [recorded combat exchange review](docs/stage15-combat-review/index.html) explains the optional round viewer, unchanged combat outcomes, old-report compatibility and reproducible baseline comparisons.
+
 Browser tests require Chromium (`npx playwright install chromium`). They cover the opening campaign, diplomacy, public wars and border changes, sensor boundaries, combat reports, cycle briefings, colony replacement and specialization, discounted ship construction, interrupting/restoring an alignment race, persistent routes, ancient-site restoration and fleet heritage. Set `PLAYWRIGHT_BASE_URL` to run them against a deployed build.
 
 The [campaign benchmark report](docs/campaign-benchmark.html) records 80 deterministic automated campaigns for version 0.4.0 (commit `554612e`) and their limits. Use that revision to reproduce its exact source fingerprints; running the script on a later revision measures the current rules. Reproduce the measurements with `node scripts/campaign-benchmark.mjs`; the command writes detailed results under `/tmp` unless given another output path. These policies measure system behavior, not human difficulty or win rates.

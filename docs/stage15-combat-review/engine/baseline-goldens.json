@@ -1,0 +1,226 @@
+{
+  "revision": "a9c61ffd2e68e2a16ef5b3bec4b6a933cf513d8b",
+  "rows": [
+    {
+      "options": {
+        "name": "ordinary",
+        "aShips": 3,
+        "dShips": 2,
+        "shields": false
+      },
+      "initial": "4c24bea745b0510fe9809a17b29ccc3b103216fa4a9c3a12360b9be140b659ed",
+      "result": "1a821c5c1a344e96d38708a76103a4a4eded743c866f1df7575805e6851d2f41",
+      "state": "81ff05e1c78b8263262ca7d30845f02d2fd83c9bd71a4487cfb8dab7d36cd25a",
+      "rng": 3567772730,
+      "outcomes": [
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "2b6a10617236ea8b11f016d8f89a844fa69a458a74e603ee28847ebf78362ce3"
+    },
+    {
+      "options": {
+        "name": "weapons-shields-khar",
+        "aOwner": "khar",
+        "dOwner": "player",
+        "aShips": 3,
+        "dShips": 2,
+        "weapons": true
+      },
+      "initial": "52d6f97b6645b129164159fe42e72a522edd796496535778025c7d0dccacea2f",
+      "result": "02e6267516a104910c988af53f744b126fd2bcad84b4f4a7420582074bda160a",
+      "state": "09498b2268e23863a4fed86d7f754310cd9237d2160b6a38d67e20eb27b26cc0",
+      "rng": 3567772730,
+      "outcomes": [
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "ffe128f3775180ecbfdf9f5d0b646bbb20102d6360ec182a84e0fc4327fa88ee"
+    },
+    {
+      "options": {
+        "name": "mutual-last-shots",
+        "aShips": 1,
+        "dShips": 1,
+        "aHull": 1,
+        "dHull": 1
+      },
+      "initial": "65ca616484a7f21dcf62a17cf34702f18dd9eb86ebe3366619d5fafa5b5bbc49",
+      "result": "44d4c6c8582c6f75d4e9d9893d810bef29fc6535a4cfb667946f760488d664cc",
+      "state": "105f146c340f694e0cc23cdcbeee96c8cb8bca2d8f9d57bc83a3392be77f38ab",
+      "rng": 1405878216,
+      "outcomes": [
+        "mutual-destruction"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "f5e72b4b7aad475818a43db875cca678f56acb40d8f787f8b40df16d25b38b3a"
+    },
+    {
+      "options": {
+        "name": "four-round-contested"
+      },
+      "initial": "6f0804298547e8423bf6715d5a032dacc816075638a9d67835c52bda8cff6947",
+      "result": "cc1b26bf462c02c645a827cec7175fc649697e33ef59cf894c0160309f73596f",
+      "state": "6c87eebc1dd1255667dae5e6d53f28e8a3588a0a78bb2fbcf2a8751ce8d59dc5",
+      "rng": 2255220238,
+      "outcomes": [
+        "contested"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "9f6060c0ecabb81ce13256ff6db50fa6308a00e915f37cbcf0ca1a346e4be9f6"
+    },
+    {
+      "options": {
+        "name": "sequential-opponents",
+        "ark": true
+      },
+      "initial": "a36c1c04915ef3118235f342ff3a616fd2f7df376f21767481528bb61bc3440e",
+      "result": "cdfc1063bf4833c1ba56a04a3bd80403c25c491d5c17250de01aae30c465c298",
+      "state": "634ed5cbd9b9ec5df9274f1c8466a2ee54be51fbe15ebc80583b35fb76b5b785",
+      "rng": 1063615140,
+      "outcomes": [
+        "contested",
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "324248e53302c171c5b80b587d8e5058273be567b0733bb15df762f30b5d8c59"
+    },
+    {
+      "options": {
+        "name": "arrival-sequence",
+        "ark": true,
+        "arrival": true
+      },
+      "initial": "2dd67be00fc80a47ef0ea14ddd1230783b244804aeaf1605730173411c714780",
+      "result": "dc71f44787c071797b285d2ba7f36ca70296c1d5cd872e0eefe750140729fcd0",
+      "state": "7edb971e1b459e5969ba3e57c8f008ef31a7d27d0bbc6ce6d29fd3d14e5d0891",
+      "rng": 1063615140,
+      "outcomes": [
+        "contested",
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "9f1517985822514bfe42af0bd2aff17d385146582add8adc0cf29872576984a4"
+    },
+    {
+      "options": {
+        "name": "lead-sequence",
+        "ark": true,
+        "lead": true
+      },
+      "initial": "2b6f91ec876514e02e254452ec412e9d5f3ecb0d4ebfd30914a524e8dc4b307a",
+      "result": "d57a03aef284cc9496624d9c44d20c74a07624336a215f7778725d05f6f70d43",
+      "state": "d165b9d2da3c35a034ef0d2a740d1c4134b3aea7ff973cd81b71dcaa6782197c",
+      "rng": 1063615140,
+      "outcomes": [
+        "contested",
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "46290b158f25373c884a3ff9bc4da4f9ff2d1b377a7208ad049bd64dac54ff06"
+    },
+    {
+      "options": {
+        "name": "overkill",
+        "aShips": 12,
+        "dShips": 1,
+        "dHull": 1,
+        "dType": "scout",
+        "shields": false
+      },
+      "initial": "a257900a8055fff076076b4d793125a0e3f4e088ef1e1bab22a036eefbdcae39",
+      "result": "8a8262ccd0a89f08996132857928cac3cb0480d96fb65827968843318dcf095c",
+      "state": "755bcf7c68d277140ea83771d41074c87e8dba81ca2d53f5a10d28cc4e4e463d",
+      "rng": 1405878216,
+      "outcomes": [
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "a89f38ad52dc7f77179f7c114bbfdd751cb063c21860420c4643437a063db081"
+    },
+    {
+      "options": {
+        "name": "fractional-hull",
+        "aShips": 3,
+        "aHull": 83.06,
+        "dShips": 2,
+        "dHull": 68
+      },
+      "initial": "2a8e1912f83b7975804d9fdd6295189fc7bfbb985302fc6da071158b123a2e1e",
+      "result": "1426fe48e5306285cf5dcfa3288091d6533ba086d79002be401082a6e787fd0d",
+      "state": "d677ac135df19df0f877f4956ae6d9e2053e8da5afdeb2aa8948a2a50d5b6cd6",
+      "rng": 2255220238,
+      "outcomes": [
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "752af7a90d1de5558931b74e1cc42815e227a4efe63a8e2b733bd36181a84fb4"
+    },
+    {
+      "options": {
+        "name": "zero-fire-legacy-count",
+        "aShips": 12,
+        "aHull": 0.01,
+        "dShips": 1,
+        "dType": "colony"
+      },
+      "initial": "b8006d22ca6c3647b0d98a390d6adf026b9a98f178c49144f7d249e8c93bd17f",
+      "result": "2eab724be8d20af54b31264dd5253c7ec0770bc40385ce66439a7034477f60ee",
+      "state": "aaacfbda977f383ffb628568d6502af33430c57bc81ab593dd75ad73d55f4685",
+      "rng": 1405878216,
+      "outcomes": [
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "d21fdd2c987ef8e4fef0c892a9fe354a7e8b0458a10ecaf3d2b151f4781de1ae"
+    },
+    {
+      "options": {
+        "name": "zero-fire-minimum-hull",
+        "aShips": 12,
+        "aHull": 5e-324,
+        "dShips": 1,
+        "dType": "colony"
+      },
+      "initial": "f778cd884d8f8f39ce610551411594c9f529a8cc98f3668b429b4ed1d96fb8a8",
+      "result": "eabd62de563e35a1fe34c186ccad46d126630cbd7628d869db5acf41dbb0d459",
+      "state": "8ca01183bce4dd4828d1ad3f81b438b8d75b119f910dea8a1edacf29ef08a295",
+      "rng": 1405878216,
+      "outcomes": [
+        "defender-destroyed"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "cdd452a00963caa707def50e4dfe60ab0d285decd3b262aedd22ecc781723338"
+    },
+    {
+      "options": {
+        "name": "private-ai-combat",
+        "aOwner": "veyr",
+        "dOwner": "khar"
+      },
+      "initial": "990b0ff43d34eac581a5b0c626409dd72207f536c79d22b3513fed1f1e78358c",
+      "result": "2fe2e50841ebf77518d9c2d90a16dd3d064b4e2b4bbb64b77d9ac8621ac20f89",
+      "state": "83b27f32bc52726a2d39c54481e7646a6848efd3dc44185436ed4bf697c96c59",
+      "rng": 2255220238,
+      "outcomes": [],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "fe84640616bb39aea94a276549ac04adccff9c830bb36213238848fd5346d0e2"
+    },
+    {
+      "options": {
+        "name": "invasion",
+        "invasion": true,
+        "aShips": 6
+      },
+      "initial": "89cb255d1b05a2891535d8b31d2f0d043344761140c259558918074400a14928",
+      "result": "474a989b4a6cdd8b2b6e481357b56656ffb9b6cebf4f37347eff578e049d650c",
+      "state": "d2a97c3de76879a367d562ca1faede31028e96160168fd1aedcc686e785ed833",
+      "rng": 12494029,
+      "outcomes": [
+        "captured"
+      ],
+      "nextResult": "d086a24dca4c5e9f269977e48591aa1d3b3b7866921d8822f568e6b5246c46f6",
+      "nextState": "9fcb61594d53e4f2ff871eacb1a16e5b667eec40135952c2ba1b44cee42b0b6a"
+    }
+  ]
+}

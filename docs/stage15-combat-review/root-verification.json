@@ -1,0 +1,24 @@
+{
+  "exactBaselineFixtures": 13,
+  "pinnedEngineFingerprints": 28,
+  "independentArchiveFiles": 42,
+  "reviewedSourceHashes": 6,
+  "buildInfo": {
+    "version": "0.15.0",
+    "commit": "080f4f553bd5f92c855e3947f04d4192ed3ee3d0",
+    "builtAt": "2026-10-28T23:37:29.120Z"
+  },
+  "compiledAssets": {
+    "assets/index-CTopk0Pt.js": "18aa053bd48c583c48dbe95791dbb321b4fd810900b6c7142215407cfedd8cb3",
+    "assets/index-CUXhng6j.css": "3b0c42be09a37aed1a1aa7862ecc6f219bb05241e73203dfabf4df44d8555b3b"
+  },
+  "note": "Root replay reproduces the same13 baseline fixtures, not additional outcome samples. Frozen production includes reviewed root UI sources as pinned by the independent manifest.",
+  "validation": {
+    "rulesPassed": 325,
+    "productionBrowserScenariosPassed": 44,
+    "productionBrowserDuration": "3.5 minutes",
+    "initialNewBrowserScenariosPassed": 3,
+    "initialNewBrowserDuration": "14.2 seconds",
+    "javascriptGzipKB": 236.49
+  }
+}

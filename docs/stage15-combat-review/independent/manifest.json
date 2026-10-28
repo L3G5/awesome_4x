@@ -1,0 +1,46 @@
+{
+  "result": "Pass; no blocker found",
+  "engineRevision": "080f4f553bd5f92c855e3947f04d4192ed3ee3d0",
+  "baselineRevision": "a9c61ffd2e68e2a16ef5b3bec4b6a933cf513d8b",
+  "focusedRoundTests": 12,
+  "independentOrdinaryCommandComparisons": 14,
+  "malformedTraceRejections": 8,
+  "browserCases": 4,
+  "campaignCohortsRun": 0,
+  "sourceHashes": {
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/combat-rounds-ui.js": "23c454f2372f4c7b0e708fcf3bb90d3aa841f02c1970c9ce51ee6f4979988a2a",
+    "src/combat-rounds.css": "4bca8497314aea0377332a472a08d7bb21372ae9dc1b79b15193246a6793acfc",
+    "src/report-ui.js": "83a8d715bed50745a693629b2668e71d413745dbdd2ea5317dff9916967e6093",
+    "src/main.js": "8a303e92e24a582163a471a5e272a544d829c9c6be3f47fee319fad86185e890"
+  },
+  "evidenceHashes": {
+    "engine-results.json": "5a3e1c760f5a2b97a6bcb270816011d557b179b649804bb9a80d1df4031dc4c1",
+    "ui-results.json": "ba16fe32e24ca04af62849dae77e43166e98dd02ededad7647ca34dd0a23a2bf",
+    "engine-review.mjs": "6fa88bcfb5b442319529d39550c2e18375c5fdf38a5ccf241ab8ab1f674e3538",
+    "ui-review.mjs": "12f430547ffc97c3e8a5f224e5d6660fc5f74af245d39fd643334c4247188bed",
+    "focused-tests.log": "911377fdd0c5db92a518896f8dee58b3ce0af1ff52b28737f046373057859434",
+    "generated-stage14-report.json": "604a8c480d65e44cfa60d7922d9bbbfdefc0ae98ef4f8dbf3b475de74374047a",
+    "expanded-rounds-1280.png": "f5352211c4ce230f876b9330ea26b35e255da6d552e450bc0a16696b0f3846ef",
+    "expanded-rounds-390.png": "f215f06b2b9cc6304315e356cec1c9a69f6699670811db2a7628bc752ae9d80f",
+    "README.md": "3f08d4204af34e645cc395d939effe8317e29462740601c904bad7c42374cc72"
+  },
+  "engineSourceHashes": {
+    "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+  },
+  "frozenAt": "2026-10-28T23:39:04.208Z"
+}

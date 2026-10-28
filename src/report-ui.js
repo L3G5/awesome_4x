@@ -1,5 +1,6 @@
 import { FACTIONS, SHIPS } from './content.js';
 import { renderShipPortrait } from './ship-ui.js';
+import { renderCombatRounds } from './combat-rounds-ui.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const amount = n => n>0&&Math.round(n*10)===0 ? '&lt;0.1' : Number.isInteger(n) ? n : n.toFixed(1);
 
@@ -17,7 +18,7 @@ export function renderCombatReports(state, reports) {
       const invasion = report.invasion;
       html += `<article class="combat-side colony-combat" style="--side-color:${FACTIONS[invasion.ownerBefore].color}"><div class="eyebrow">${escape(FACTIONS[invasion.ownerBefore].shortName)} · Planetary defense</div><h3>${escape(state.systems.find(s => s.id === report.systemId).name)}</h3><div class="combat-numbers"><div><strong>${amount(invasion.defenseBefore)} <span>→</span> ${amount(invasion.defenseAfter)}</strong><small>Colony defenses</small></div><div><strong>${amount(invasion.retaliation)}</strong><small>Retaliation damage</small></div></div><p class="capture-outcome">${invasion.captured ? 'Colony captured. A new administration takes control.' : report.outcome === 'repelled' ? 'The invasion was repelled.' : 'Defenses remain. Further bombardment is required.'}</p></article>`;
     }
-    html += '</div></section>';
+    html += `</div>${renderCombatRounds(report)}</section>`;
   }
   const survivors = reports.flatMap(report => report.participants).filter((p, i, all) => p.owner === 'player' && all.findIndex(other => other.fleetId === p.fleetId) === i && state.fleets.some(f => f.id === p.fleetId));
   const opponent = reports.flatMap(r => r.participants).find(p => p.owner !== 'player')?.owner || first.invasion?.ownerBefore;

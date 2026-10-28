@@ -1,0 +1,164 @@
+{
+  "method": "14 bounded synthetic ordinary-command comparisons against pinned Stage14 a9c61ff; not a campaign cohort. Only optional rounds stripped for full-state/result equality. Eight malformed trace checks and a genuine baseline-engine-generated outcome-only report import.",
+  "baseline": "a9c61ffd2e68e2a16ef5b3bec4b6a933cf513d8b",
+  "sourceHashes": {
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821"
+  },
+  "rows": [
+    {
+      "attacker": "player",
+      "defender": "veyr",
+      "arrival": false,
+      "shields": false,
+      "rng": 1762414949,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "player",
+      "defender": "veyr",
+      "arrival": false,
+      "shields": true,
+      "rng": 1919561586,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "player",
+      "defender": "veyr",
+      "arrival": true,
+      "shields": false,
+      "rng": 4068715466,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "player",
+      "defender": "veyr",
+      "arrival": true,
+      "shields": true,
+      "rng": 3196587943,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "khar",
+      "defender": "player",
+      "arrival": false,
+      "shields": false,
+      "rng": 2073188057,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "khar",
+      "defender": "player",
+      "arrival": false,
+      "shields": true,
+      "rng": 1776426718,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "khar",
+      "defender": "player",
+      "arrival": true,
+      "shields": false,
+      "rng": 3670910886,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "khar",
+      "defender": "player",
+      "arrival": true,
+      "shields": true,
+      "rng": 3600621787,
+      "reports": 1,
+      "roundCounts": [
+        2
+      ],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "veyr",
+      "defender": "khar",
+      "arrival": false,
+      "shields": false,
+      "rng": 2532728910,
+      "reports": 0,
+      "roundCounts": [],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "veyr",
+      "defender": "khar",
+      "arrival": false,
+      "shields": true,
+      "rng": 3327539363,
+      "reports": 0,
+      "roundCounts": [],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "veyr",
+      "defender": "khar",
+      "arrival": true,
+      "shields": false,
+      "rng": 574293707,
+      "reports": 0,
+      "roundCounts": [],
+      "exactBaselineMatch": true
+    },
+    {
+      "attacker": "veyr",
+      "defender": "khar",
+      "arrival": true,
+      "shields": true,
+      "rng": 1389210242,
+      "reports": 0,
+      "roundCounts": [],
+      "exactBaselineMatch": true
+    },
+    {
+      "zeroFire": true,
+      "legacyCount": false,
+      "exactBaselineMatch": true,
+      "shipsAfter": 3,
+      "hullAfter": 0.06
+    },
+    {
+      "zeroFire": true,
+      "legacyCount": true,
+      "exactBaselineMatch": true,
+      "shipsAfter": 12,
+      "hullAfter": 0.06
+    }
+  ],
+  "malformedRejected": 8,
+  "historyInvariant": true,
+  "oldReportImport": true,
+  "passed": true
+}
