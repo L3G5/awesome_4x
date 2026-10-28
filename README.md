@@ -36,6 +36,8 @@ The [alignment intervention audit](docs/intervention-audit/index.html) reconstru
 
 The [expedition comparison](docs/results/expedition-comparison.json) measures the subsequent AI correction over 32 campaigns, changing only the AI within a fixed complete engine. Run `node scripts/expedition-benchmark.mjs`; `--engine-ref` selects a historical release. The report distinguishes declarations, arrivals, survival and cycles with confirmed blockade declines, and includes replay and instrumentation checks.
 
+The [shared repair comparison](docs/results/stage10-repair.json) changes only passive recovery within one committed engine and measures 32 campaigns with replay checks. Reproduce with `node scripts/repair-benchmark.mjs --engine-ref 60fd9f8`; omit the revision to measure the current committed engine. The automated policies do not deliberately split fleets, so the report distinguishes ordinary recovery balance from the separate anti-fragmentation command tests.
+
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.

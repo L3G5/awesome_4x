@@ -1,0 +1,3796 @@
+{
+  "generatedAt": "2026-10-28T21:01:20.044Z",
+  "runtime": "v22.23.1",
+  "elapsedSeconds": 23.998,
+  "sources": {
+    "engineRevision": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+    "legacyFormulaRevision": "feb7894e96c2f87631428fbdf1cfa8facd3debad",
+    "legacyGameSha256": "883cdc5c540ebaae8ee2958bec0a2f61e4c3b3f0e4b32b79f7ca395fa27aface",
+    "aiMatchesStage9": true,
+    "engine": {
+      "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+      "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+      "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+      "src/game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+    },
+    "variants": {
+      "perFleet": {
+        "rawGameSha256": "2c887db83ae488b4875f6cd1b3f6e7584170adcb70f5abb9070c5892e0b9fd1f",
+        "observedGameSha256": "680541ec16071054e849b73176401083831c298f457fb79f946c5019bbcfbe38"
+      },
+      "colonyPool": {
+        "rawGameSha256": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+        "observedGameSha256": "9ca61a521b0e3aedd55b92a7a1e13d4f604acf388a8f6c0070f698d5531e6993"
+      }
+    },
+    "benchmarkScriptSha256": "5fd92cf6af919297b7b08de8c33761f7b4f2d5c1c5337bf5ec2e7168b3660a61"
+  },
+  "method": {
+    "design": "Repair-policy-only comparison: 8 paired seeds × 2 player policies × 2 repair rules = 32 campaigns. Every dependency and the current AI are identical. The perFleet variant substitutes only the automatic repair block with the exact Stage9 feb7894 formula. Both variants retain the split command; neither automated policy issues split commands. This is not a full Stage9-vs-Stage10 comparison.",
+    "repairs": "perFleet grants each friendly fleet 4 hull, or 8 at a shipyard, plus Forge repair. colonyPool shares that same capacity at each owned unblocked colony in proportion to missing hull. Blockade rules and paid emergency repair are unchanged.",
+    "observer": "Identical optional read-only observers sample hull immediately before and after only the passive-repair phase, after AI, income, construction and discovery processing. Observer results are never supplied to an AI. At cycles20/40/60, an instrumented step is compared with an unmodified engine step, and JSON-reloaded versus uninterrupted steps are compared byte-for-byte after serialization.",
+    "validity": "Every initial state and every attempted completed round checks validateSave and finite nonnegative credits/minerals/science/orders for all four factions. checkedCycles counts successful turn increments; a campaign may finish during AI actions before incrementing or reaching repair.",
+    "denominators": "Outcomes/finish distributions have8 campaigns per policy/repair variant. Passive technology/beacon/alignment timing has24 candidate rival empires per variant; balanced timing has8 candidate player empires. Timing medians include only achieved milestones and report their counts. An even median is the mean of the middle pair.",
+    "repairMetrics": "hull sums actual positive fleet HP gains solely during passive repair; fleetCycles counts fleets receiving positive repair in a phase; colonyCycles counts owned colonies repairing at least one fleet in a phase. meanHullPerRepairingColonyCycle divides hull by colonyCycles. colonyCyclesAboveNewPool counts phases exceeding that colony’s shared4/8+Forge capacity by more than1e-9; hullAboveNewPool sums that excess. peakColocatedDamagedFleets counts damaged friendly fleets at one owned colony before passive repair, including blockaded colonies.",
+    "limitations": "Eight fixed seeds and scripted policies are a regression/balance probe, not estimates of human win rates. The balanced player uses the same AI as rivals. Neither policy deliberately fragments fleets; the split/remerge anti-healing invariant is covered separately by unit and independent numerical tests. Outcomes can diverge after any combat/RNG consequence of the repair change; total repaired hull also depends on how much damage occurs and how long each campaign lasts."
+  },
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7"
+  ],
+  "policies": {
+    "passive": {
+      "description": "The player issues no commands; three rival empires use the unchanged current AI."
+    },
+    "balanced": {
+      "description": "The player selects the first available technology in the stated mixed priority when idle, then uses the same current AI for expansion, economy, fleet control and alignment. Ordinary costs/orders apply; no grants.",
+      "researchPriority": [
+        "logistics",
+        "ecology",
+        "physics",
+        "industry",
+        "diplomacy",
+        "weapons",
+        "computing",
+        "shields",
+        "singularity",
+        "command",
+        "cruisers",
+        "terraforming"
+      ]
+    }
+  },
+  "checks": {
+    "campaigns": 32,
+    "checkedCycles": 2282,
+    "checkedStates": 2314,
+    "reloadChecks": 96,
+    "observerChecks": 96,
+    "invalidStates": 0,
+    "negativeBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "summary": {
+    "perFleet": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 67,
+          "median": 70,
+          "max": 85
+        },
+        "firstWar": {
+          "count": 8,
+          "min": 27,
+          "median": 44.5,
+          "max": 60
+        },
+        "outcomes": {
+          "khar:Transcendence": 4,
+          "veyr:Transcendence": 2,
+          "choir:Transcendence": 2
+        },
+        "milestones": {
+          "candidateEmpires": 24,
+          "protocol": {
+            "count": 22,
+            "min": 33,
+            "median": 45.5,
+            "max": 69
+          },
+          "firstBeacon": {
+            "count": 23,
+            "min": 41,
+            "median": 53,
+            "max": 71
+          },
+          "alignmentStart": {
+            "count": 20,
+            "min": 44,
+            "median": 59.5,
+            "max": 76
+          }
+        },
+        "repairs": {
+          "hull": 645.3,
+          "meanHullPerCampaign": 80.6625,
+          "fleetCycles": 162,
+          "colonyCycles": 157,
+          "meanHullPerRepairingColonyCycle": 4.110191082802547,
+          "colonyCyclesAboveNewPool": 5,
+          "hullAboveNewPool": 13.90000000000002,
+          "peakColocatedDamagedFleets": 2
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 65,
+          "median": 71,
+          "max": 86
+        },
+        "firstWar": {
+          "count": 8,
+          "min": 27,
+          "median": 46,
+          "max": 57
+        },
+        "outcomes": {
+          "player:Transcendence": 3,
+          "choir:Transcendence": 2,
+          "veyr:Transcendence": 2,
+          "khar:Transcendence": 1
+        },
+        "milestones": {
+          "candidateEmpires": 8,
+          "protocol": {
+            "count": 8,
+            "min": 42,
+            "median": 47,
+            "max": 55
+          },
+          "firstBeacon": {
+            "count": 8,
+            "min": 50,
+            "median": 54.5,
+            "max": 63
+          },
+          "alignmentStart": {
+            "count": 8,
+            "min": 54,
+            "median": 59,
+            "max": 71
+          }
+        },
+        "repairs": {
+          "hull": 942.4000000000001,
+          "meanHullPerCampaign": 117.80000000000001,
+          "fleetCycles": 212,
+          "colonyCycles": 207,
+          "meanHullPerRepairingColonyCycle": 4.552657004830919,
+          "colonyCyclesAboveNewPool": 5,
+          "hullAboveNewPool": 18.49999999999997,
+          "peakColocatedDamagedFleets": 2
+        }
+      }
+    },
+    "colonyPool": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 67,
+          "median": 70,
+          "max": 85
+        },
+        "firstWar": {
+          "count": 8,
+          "min": 27,
+          "median": 44.5,
+          "max": 60
+        },
+        "outcomes": {
+          "khar:Transcendence": 4,
+          "veyr:Transcendence": 2,
+          "choir:Transcendence": 2
+        },
+        "milestones": {
+          "candidateEmpires": 24,
+          "protocol": {
+            "count": 22,
+            "min": 33,
+            "median": 45.5,
+            "max": 69
+          },
+          "firstBeacon": {
+            "count": 23,
+            "min": 41,
+            "median": 53,
+            "max": 71
+          },
+          "alignmentStart": {
+            "count": 20,
+            "min": 44,
+            "median": 59.5,
+            "max": 76
+          }
+        },
+        "repairs": {
+          "hull": 631,
+          "meanHullPerCampaign": 78.875,
+          "fleetCycles": 165,
+          "colonyCycles": 158,
+          "meanHullPerRepairingColonyCycle": 3.9936708860759493,
+          "colonyCyclesAboveNewPool": 0,
+          "hullAboveNewPool": 0,
+          "peakColocatedDamagedFleets": 2
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 65,
+          "median": 71,
+          "max": 86
+        },
+        "firstWar": {
+          "count": 8,
+          "min": 27,
+          "median": 46,
+          "max": 57
+        },
+        "outcomes": {
+          "player:Transcendence": 3,
+          "choir:Transcendence": 2,
+          "veyr:Transcendence": 2,
+          "khar:Transcendence": 1
+        },
+        "milestones": {
+          "candidateEmpires": 8,
+          "protocol": {
+            "count": 8,
+            "min": 42,
+            "median": 47,
+            "max": 55
+          },
+          "firstBeacon": {
+            "count": 8,
+            "min": 50,
+            "median": 54.5,
+            "max": 63
+          },
+          "alignmentStart": {
+            "count": 8,
+            "min": 54,
+            "median": 59,
+            "max": 71
+          }
+        },
+        "repairs": {
+          "hull": 924.9000000000001,
+          "meanHullPerCampaign": 115.61250000000001,
+          "fleetCycles": 214,
+          "colonyCycles": 207,
+          "meanHullPerRepairingColonyCycle": 4.4681159420289855,
+          "colonyCyclesAboveNewPool": 0,
+          "hullAboveNewPool": 0,
+          "peakColocatedDamagedFleets": 2
+        }
+      }
+    }
+  },
+  "paired": {
+    "passive": {
+      "pairs": 8,
+      "changedWinners": 0,
+      "finishDelta": {
+        "count": 8,
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "passiveHullDelta": {
+        "count": 8,
+        "min": -9.900000000000034,
+        "median": -1.4210854715202004e-14,
+        "max": 0
+      },
+      "rows": [
+        {
+          "seed": "ASTERION",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-1",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-2",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -2.842170943040401e-14
+        },
+        {
+          "seed": "stage4-audit-3",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -9.900000000000034
+        },
+        {
+          "seed": "stage4-audit-4",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -4.299999999999997
+        },
+        {
+          "seed": "stage4-audit-5",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-6",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -0.09999999999999432
+        },
+        {
+          "seed": "stage4-audit-7",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        }
+      ]
+    },
+    "balanced": {
+      "pairs": 8,
+      "changedWinners": 0,
+      "finishDelta": {
+        "count": 8,
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "passiveHullDelta": {
+        "count": 8,
+        "min": -15.799999999999997,
+        "median": -7.105427357601002e-15,
+        "max": 0
+      },
+      "rows": [
+        {
+          "seed": "ASTERION",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -1.4210854715202004e-14
+        },
+        {
+          "seed": "stage4-audit-1",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-2",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-3",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -15.799999999999997
+        },
+        {
+          "seed": "stage4-audit-4",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-5",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": 0
+        },
+        {
+          "seed": "stage4-audit-6",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -2.842170943040401e-14
+        },
+        {
+          "seed": "stage4-audit-7",
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "passiveHullDelta": -1.6999999999999886
+        }
+      ]
+    }
+  },
+  "runs": [
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 69,
+      "firstWar": 38,
+      "repairs": {
+        "phases": 69,
+        "hull": 91.80000000000001,
+        "fleetCycles": 22,
+        "colonyCycles": 22,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 12,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          },
+          "khar": {
+            "hull": 79.80000000000001,
+            "fleetCycles": 19,
+            "colonyCycles": 19
+          },
+          "choir": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstBeacon": 53,
+          "alignmentStart": 68
+        },
+        "khar": {
+          "protocol": 51,
+          "firstBeacon": 58,
+          "alignmentStart": 61
+        },
+        "choir": {
+          "protocol": 38,
+          "firstBeacon": 46,
+          "alignmentStart": 56
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 3
+        },
+        {
+          "factionId": "khar",
+          "colonies": 17,
+          "ships": 12,
+          "hull": 893.7,
+          "military": 467.2,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 7,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 71,
+      "firstWar": 43,
+      "repairs": {
+        "phases": 71,
+        "hull": 96.69999999999999,
+        "fleetCycles": 26,
+        "colonyCycles": 26,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 40.19999999999999,
+            "fleetCycles": 11,
+            "colonyCycles": 11
+          },
+          "khar": {
+            "hull": 6.100000000000001,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "choir": {
+            "hull": 50.400000000000006,
+            "fleetCycles": 13,
+            "colonyCycles": 13
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 47,
+          "firstBeacon": 56,
+          "alignmentStart": 63
+        },
+        "khar": {
+          "protocol": 52,
+          "firstBeacon": 59,
+          "alignmentStart": 66
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 49,
+          "alignmentStart": 56
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 12,
+          "ships": 5,
+          "hull": 214.1,
+          "military": 98.8,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 17.3,
+          "technologies": 11,
+          "beacons": 3,
+          "alignment": 5
+        },
+        {
+          "factionId": "choir",
+          "colonies": 12,
+          "ships": 11,
+          "hull": 496.7,
+          "military": 225,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 67,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 67,
+        "hull": 68.00000000000001,
+        "fleetCycles": 17,
+        "colonyCycles": 17,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 39.60000000000002,
+            "fleetCycles": 10,
+            "colonyCycles": 10
+          },
+          "khar": {
+            "hull": 5.399999999999999,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          },
+          "choir": {
+            "hull": 23,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 51,
+          "firstBeacon": 58,
+          "alignmentStart": 63
+        },
+        "khar": {
+          "protocol": 46,
+          "firstBeacon": 54,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 41,
+          "firstBeacon": 50,
+          "alignmentStart": 55
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 12,
+          "ships": 5,
+          "hull": 221,
+          "military": 98.8,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 6
+        },
+        {
+          "factionId": "khar",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 17.3,
+          "technologies": 12,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 8,
+          "ships": 4,
+          "hull": 187,
+          "military": 83.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 85,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 84,
+      "firstWar": 57,
+      "repairs": {
+        "phases": 84,
+        "hull": 159,
+        "fleetCycles": 40,
+        "colonyCycles": 38,
+        "colonyCyclesAboveNewPool": 2,
+        "hullAboveNewPool": 6.000000000000014,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 49,
+            "fleetCycles": 14,
+            "colonyCycles": 14
+          },
+          "khar": {
+            "hull": 84.80000000000001,
+            "fleetCycles": 18,
+            "colonyCycles": 17
+          },
+          "choir": {
+            "hull": 25.200000000000003,
+            "fleetCycles": 8,
+            "colonyCycles": 7
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstBeacon": 53,
+          "alignmentStart": 59
+        },
+        "khar": {
+          "protocol": 69,
+          "firstBeacon": 62,
+          "alignmentStart": 76
+        },
+        "choir": {
+          "protocol": 37,
+          "firstBeacon": 46,
+          "alignmentStart": 54
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 13,
+          "ships": 11,
+          "hull": 552,
+          "military": 233.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 13,
+          "ships": 14,
+          "hull": 779.6999999999999,
+          "military": 442.8,
+          "technologies": 12,
+          "beacons": 5,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 6,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 7
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 80,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 79,
+      "firstWar": 60,
+      "repairs": {
+        "phases": 79,
+        "hull": 57.599999999999994,
+        "fleetCycles": 11,
+        "colonyCycles": 10,
+        "colonyCyclesAboveNewPool": 1,
+        "hullAboveNewPool": 4.299999999999997,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 3.700000000000003,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          },
+          "khar": {
+            "hull": 40.3,
+            "fleetCycles": 6,
+            "colonyCycles": 5
+          },
+          "choir": {
+            "hull": 13.599999999999994,
+            "fleetCycles": 4,
+            "colonyCycles": 4
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 57
+        },
+        "khar": {
+          "protocol": null,
+          "firstBeacon": 71,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 50,
+          "alignmentStart": 59
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 11,
+          "ships": 3,
+          "hull": 102,
+          "military": 45,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 6,
+          "ships": 8,
+          "hull": 484.6,
+          "military": 227.1,
+          "technologies": 8,
+          "beacons": 1,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 11,
+          "ships": 5,
+          "hull": 195,
+          "military": 72.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 69,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 68,
+      "firstWar": 31,
+      "repairs": {
+        "phases": 68,
+        "hull": 34.80000000000001,
+        "fleetCycles": 9,
+        "colonyCycles": 9,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 8,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 23.200000000000017,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          },
+          "choir": {
+            "hull": 3.5999999999999943,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstBeacon": 57,
+          "alignmentStart": 60
+        },
+        "khar": {
+          "protocol": 48,
+          "firstBeacon": 56,
+          "alignmentStart": 60
+        },
+        "choir": {
+          "protocol": 34,
+          "firstBeacon": 56,
+          "alignmentStart": null
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 10,
+          "ships": 11,
+          "hull": 501,
+          "military": 210,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 11,
+          "ships": 7,
+          "hull": 463.8,
+          "military": 257.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        },
+        {
+          "factionId": "choir",
+          "colonies": 5,
+          "ships": 3,
+          "hull": 86,
+          "military": 33.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 67,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 66,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 66,
+        "hull": 64.10000000000001,
+        "fleetCycles": 18,
+        "colonyCycles": 16,
+        "colonyCyclesAboveNewPool": 2,
+        "hullAboveNewPool": 3.6000000000000085,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 6.799999999999997,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 57.30000000000001,
+            "fleetCycles": 16,
+            "colonyCycles": 14
+          },
+          "choir": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstBeacon": 52,
+          "alignmentStart": 60
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 51,
+          "alignmentStart": 58
+        },
+        "choir": {
+          "protocol": 33,
+          "firstBeacon": 41,
+          "alignmentStart": 44
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 11,
+          "ships": 12,
+          "hull": 494,
+          "military": 216.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        },
+        {
+          "factionId": "khar",
+          "colonies": 12,
+          "ships": 8,
+          "hull": 550.9,
+          "military": 301.9,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 9,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 4
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 69,
+      "firstWar": 27,
+      "repairs": {
+        "phases": 69,
+        "hull": 73.29999999999998,
+        "fleetCycles": 19,
+        "colonyCycles": 19,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 4.199999999999989,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 57.599999999999994,
+            "fleetCycles": 14,
+            "colonyCycles": 14
+          },
+          "choir": {
+            "hull": 11.5,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "khar": {
+          "protocol": 51,
+          "firstBeacon": 58,
+          "alignmentStart": 61
+        },
+        "choir": {
+          "protocol": 35,
+          "firstBeacon": 44,
+          "alignmentStart": 57
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 0,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 5,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 16,
+          "ships": 14,
+          "hull": 1062,
+          "military": 539.1,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 7,
+          "ships": 6,
+          "hull": 178,
+          "military": 63.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 65,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "checkedCycles": 64,
+      "firstWar": 53,
+      "repairs": {
+        "phases": 64,
+        "hull": 26.10000000000001,
+        "fleetCycles": 7,
+        "colonyCycles": 7,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "khar": {
+            "hull": 26.10000000000001,
+            "fleetCycles": 7,
+            "colonyCycles": 7
+          },
+          "choir": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstBeacon": 52,
+          "alignmentStart": 56
+        },
+        "veyr": {
+          "protocol": 49,
+          "firstBeacon": 55,
+          "alignmentStart": 65
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 57,
+          "alignmentStart": 59
+        },
+        "choir": {
+          "protocol": 40,
+          "firstBeacon": 48,
+          "alignmentStart": 56
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 11,
+          "ships": 8,
+          "hull": 297,
+          "military": 117.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 9,
+          "ships": 6,
+          "hull": 219,
+          "military": 72.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "khar",
+          "colonies": 9,
+          "ships": 4,
+          "hull": 174.9,
+          "military": 96.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 7
+        },
+        {
+          "factionId": "choir",
+          "colonies": 9,
+          "ships": 6,
+          "hull": 204,
+          "military": 90,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 86,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 85,
+      "firstWar": 43,
+      "repairs": {
+        "phases": 85,
+        "hull": 249.70000000000002,
+        "fleetCycles": 55,
+        "colonyCycles": 55,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 19.400000000000006,
+            "fleetCycles": 4,
+            "colonyCycles": 4
+          },
+          "veyr": {
+            "hull": 100.60000000000001,
+            "fleetCycles": 24,
+            "colonyCycles": 24
+          },
+          "khar": {
+            "hull": 2.8000000000000007,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          },
+          "choir": {
+            "hull": 126.9,
+            "fleetCycles": 26,
+            "colonyCycles": 26
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 57
+        },
+        "veyr": {
+          "protocol": 48,
+          "firstBeacon": 57,
+          "alignmentStart": 62
+        },
+        "khar": {
+          "protocol": 52,
+          "firstBeacon": 64,
+          "alignmentStart": 78
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 50,
+          "alignmentStart": 57
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 10,
+          "ships": 8,
+          "hull": 482,
+          "military": 227.5,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 2
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 12,
+          "ships": 10,
+          "hull": 541.2,
+          "military": 227.5,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 9
+        },
+        {
+          "factionId": "khar",
+          "colonies": 3,
+          "ships": 6,
+          "hull": 178,
+          "military": 73.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 9
+        },
+        {
+          "factionId": "choir",
+          "colonies": 17,
+          "ships": 11,
+          "hull": 623.8,
+          "military": 296.3,
+          "technologies": 12,
+          "beacons": 5,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 65,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "checkedCycles": 64,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 64,
+        "hull": 80.90000000000002,
+        "fleetCycles": 16,
+        "colonyCycles": 16,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 6.300000000000011,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "veyr": {
+            "hull": 15.600000000000009,
+            "fleetCycles": 4,
+            "colonyCycles": 4
+          },
+          "khar": {
+            "hull": 55,
+            "fleetCycles": 9,
+            "colonyCycles": 9
+          },
+          "choir": {
+            "hull": 4,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstBeacon": 54,
+          "alignmentStart": 56
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstBeacon": 54,
+          "alignmentStart": 65
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 62,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 41,
+          "firstBeacon": 50,
+          "alignmentStart": 58
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 10,
+          "ships": 7,
+          "hull": 289,
+          "military": 128.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 6,
+          "ships": 6,
+          "hull": 229,
+          "military": 87.5,
+          "technologies": 11,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "khar",
+          "colonies": 6,
+          "ships": 4,
+          "hull": 133.5,
+          "military": 96.3,
+          "technologies": 12,
+          "beacons": 1,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 10,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 71,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 70,
+      "firstWar": 57,
+      "repairs": {
+        "phases": 70,
+        "hull": 133.8,
+        "fleetCycles": 29,
+        "colonyCycles": 25,
+        "colonyCyclesAboveNewPool": 4,
+        "hullAboveNewPool": 15.799999999999983,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 24,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          },
+          "veyr": {
+            "hull": 26.600000000000023,
+            "fleetCycles": 7,
+            "colonyCycles": 5
+          },
+          "khar": {
+            "hull": 71.79999999999998,
+            "fleetCycles": 13,
+            "colonyCycles": 11
+          },
+          "choir": {
+            "hull": 11.400000000000006,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 51,
+          "firstBeacon": 57,
+          "alignmentStart": 62
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 62
+        },
+        "khar": {
+          "protocol": 69,
+          "firstBeacon": 61,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 36,
+          "firstBeacon": 46,
+          "alignmentStart": 54
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 10,
+          "ships": 6,
+          "hull": 332.8,
+          "military": 158.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 2
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 10,
+          "ships": 6,
+          "hull": 334.70000000000005,
+          "military": 150,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 10,
+          "ships": 10,
+          "hull": 565,
+          "military": 278.9,
+          "technologies": 10,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 70,
+      "firstWar": 48,
+      "repairs": {
+        "phases": 70,
+        "hull": 64.9,
+        "fleetCycles": 17,
+        "colonyCycles": 17,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "khar": {
+            "hull": 53.8,
+            "fleetCycles": 14,
+            "colonyCycles": 14
+          },
+          "choir": {
+            "hull": 11.100000000000001,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 55,
+          "firstBeacon": 63,
+          "alignmentStart": 71
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 57
+        },
+        "khar": {
+          "protocol": 53,
+          "firstBeacon": 60,
+          "alignmentStart": 62
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 50,
+          "alignmentStart": null
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 8,
+          "ships": 4,
+          "hull": 187,
+          "military": 83.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 11,
+          "ships": 6,
+          "hull": 239,
+          "military": 102.5,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 12,
+          "ships": 6,
+          "hull": 445.4,
+          "military": 267.4,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 5,
+          "ships": 2,
+          "hull": 52,
+          "military": 18.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 71,
+      "firstWar": 39,
+      "repairs": {
+        "phases": 71,
+        "hull": 79.99999999999996,
+        "fleetCycles": 22,
+        "colonyCycles": 22,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 6,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "veyr": {
+            "hull": 34.79999999999997,
+            "fleetCycles": 10,
+            "colonyCycles": 10
+          },
+          "khar": {
+            "hull": 35.199999999999996,
+            "fleetCycles": 9,
+            "colonyCycles": 9
+          },
+          "choir": {
+            "hull": 4,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstBeacon": 55,
+          "alignmentStart": 61
+        },
+        "veyr": {
+          "protocol": 52,
+          "firstBeacon": 59,
+          "alignmentStart": 61
+        },
+        "khar": {
+          "protocol": 53,
+          "firstBeacon": 63,
+          "alignmentStart": 72
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 56,
+          "alignmentStart": 65
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 9,
+          "ships": 6,
+          "hull": 239,
+          "military": 102.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 7,
+          "ships": 8,
+          "hull": 358.2,
+          "military": 152.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 8,
+          "ships": 6,
+          "hull": 188,
+          "military": 90.6,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "choir",
+          "colonies": 9,
+          "ships": 5,
+          "hull": 221,
+          "military": 98.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 75,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "checkedCycles": 74,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 74,
+        "hull": 150.50000000000003,
+        "fleetCycles": 29,
+        "colonyCycles": 29,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 59,
+            "fleetCycles": 10,
+            "colonyCycles": 10
+          },
+          "veyr": {
+            "hull": 38.40000000000001,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          },
+          "khar": {
+            "hull": 30.700000000000003,
+            "fleetCycles": 8,
+            "colonyCycles": 8
+          },
+          "choir": {
+            "hull": 22.400000000000006,
+            "fleetCycles": 5,
+            "colonyCycles": 5
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 50,
+          "firstBeacon": 56,
+          "alignmentStart": 62
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstBeacon": 54,
+          "alignmentStart": 62
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 60,
+          "alignmentStart": 70
+        },
+        "choir": {
+          "protocol": 34,
+          "firstBeacon": 42,
+          "alignmentStart": 44
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 15,
+          "ships": 11,
+          "hull": 691,
+          "military": 290,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 6,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 11,
+          "ships": 5,
+          "hull": 318.1,
+          "military": 178.3,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 6
+        },
+        {
+          "factionId": "choir",
+          "colonies": 10,
+          "ships": 5,
+          "hull": 323,
+          "military": 146.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "perFleet",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 70,
+      "firstWar": 27,
+      "repairs": {
+        "phases": 70,
+        "hull": 156.5,
+        "fleetCycles": 37,
+        "colonyCycles": 36,
+        "colonyCyclesAboveNewPool": 1,
+        "hullAboveNewPool": 2.6999999999999886,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 12.7,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          },
+          "veyr": {
+            "hull": 4.199999999999989,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 128.8,
+            "fleetCycles": 29,
+            "colonyCycles": 28
+          },
+          "choir": {
+            "hull": 10.800000000000011,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstBeacon": 50,
+          "alignmentStart": 54
+        },
+        "veyr": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "khar": {
+          "protocol": 52,
+          "firstBeacon": 59,
+          "alignmentStart": 61
+        },
+        "choir": {
+          "protocol": 38,
+          "firstBeacon": 49,
+          "alignmentStart": 60
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 5,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 1,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 0,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 5,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 20,
+          "ships": 17,
+          "hull": 1169.4,
+          "military": 618.1,
+          "technologies": 12,
+          "beacons": 6,
+          "alignment": 9
+        },
+        {
+          "factionId": "choir",
+          "colonies": 8,
+          "ships": 5,
+          "hull": 154,
+          "military": 63.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 69,
+      "firstWar": 38,
+      "repairs": {
+        "phases": 69,
+        "hull": 91.80000000000001,
+        "fleetCycles": 22,
+        "colonyCycles": 22,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 12,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          },
+          "khar": {
+            "hull": 79.80000000000001,
+            "fleetCycles": 19,
+            "colonyCycles": 19
+          },
+          "choir": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstBeacon": 53,
+          "alignmentStart": 68
+        },
+        "khar": {
+          "protocol": 51,
+          "firstBeacon": 58,
+          "alignmentStart": 61
+        },
+        "choir": {
+          "protocol": 38,
+          "firstBeacon": 46,
+          "alignmentStart": 56
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 3
+        },
+        {
+          "factionId": "khar",
+          "colonies": 17,
+          "ships": 12,
+          "hull": 893.7,
+          "military": 467.2,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 7,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 71,
+      "firstWar": 43,
+      "repairs": {
+        "phases": 71,
+        "hull": 96.69999999999999,
+        "fleetCycles": 26,
+        "colonyCycles": 26,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 40.19999999999999,
+            "fleetCycles": 11,
+            "colonyCycles": 11
+          },
+          "khar": {
+            "hull": 6.100000000000001,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "choir": {
+            "hull": 50.400000000000006,
+            "fleetCycles": 13,
+            "colonyCycles": 13
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 47,
+          "firstBeacon": 56,
+          "alignmentStart": 63
+        },
+        "khar": {
+          "protocol": 52,
+          "firstBeacon": 59,
+          "alignmentStart": 66
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 49,
+          "alignmentStart": 56
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 12,
+          "ships": 5,
+          "hull": 214.1,
+          "military": 98.8,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 17.3,
+          "technologies": 11,
+          "beacons": 3,
+          "alignment": 5
+        },
+        {
+          "factionId": "choir",
+          "colonies": 12,
+          "ships": 11,
+          "hull": 496.7,
+          "military": 225,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 67,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 67,
+        "hull": 67.99999999999999,
+        "fleetCycles": 17,
+        "colonyCycles": 17,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 39.599999999999994,
+            "fleetCycles": 10,
+            "colonyCycles": 10
+          },
+          "khar": {
+            "hull": 5.399999999999999,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          },
+          "choir": {
+            "hull": 23,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 51,
+          "firstBeacon": 58,
+          "alignmentStart": 63
+        },
+        "khar": {
+          "protocol": 46,
+          "firstBeacon": 54,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 41,
+          "firstBeacon": 50,
+          "alignmentStart": 55
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 12,
+          "ships": 5,
+          "hull": 221,
+          "military": 98.8,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 6
+        },
+        {
+          "factionId": "khar",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 17.3,
+          "technologies": 12,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 8,
+          "ships": 4,
+          "hull": 187,
+          "military": 83.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 85,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 84,
+      "firstWar": 57,
+      "repairs": {
+        "phases": 84,
+        "hull": 149.09999999999997,
+        "fleetCycles": 41,
+        "colonyCycles": 37,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 49,
+            "fleetCycles": 14,
+            "colonyCycles": 14
+          },
+          "khar": {
+            "hull": 76.19999999999997,
+            "fleetCycles": 17,
+            "colonyCycles": 16
+          },
+          "choir": {
+            "hull": 23.900000000000006,
+            "fleetCycles": 10,
+            "colonyCycles": 7
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstBeacon": 53,
+          "alignmentStart": 59
+        },
+        "khar": {
+          "protocol": 69,
+          "firstBeacon": 62,
+          "alignmentStart": 76
+        },
+        "choir": {
+          "protocol": 37,
+          "firstBeacon": 46,
+          "alignmentStart": 54
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 13,
+          "ships": 11,
+          "hull": 552,
+          "military": 233.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 13,
+          "ships": 13,
+          "hull": 715.4,
+          "military": 398.2,
+          "technologies": 12,
+          "beacons": 5,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 6,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 7
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 80,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 79,
+      "firstWar": 60,
+      "repairs": {
+        "phases": 79,
+        "hull": 53.3,
+        "fleetCycles": 11,
+        "colonyCycles": 10,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 3.700000000000003,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          },
+          "khar": {
+            "hull": 36,
+            "fleetCycles": 6,
+            "colonyCycles": 5
+          },
+          "choir": {
+            "hull": 13.599999999999994,
+            "fleetCycles": 4,
+            "colonyCycles": 4
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 57
+        },
+        "khar": {
+          "protocol": null,
+          "firstBeacon": 71,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 50,
+          "alignmentStart": 59
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 11,
+          "ships": 3,
+          "hull": 102,
+          "military": 45,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 6,
+          "ships": 8,
+          "hull": 481.2,
+          "military": 227.1,
+          "technologies": 8,
+          "beacons": 1,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 11,
+          "ships": 5,
+          "hull": 195,
+          "military": 72.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 69,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 68,
+      "firstWar": 31,
+      "repairs": {
+        "phases": 68,
+        "hull": 34.80000000000001,
+        "fleetCycles": 9,
+        "colonyCycles": 9,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 8,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 23.200000000000017,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          },
+          "choir": {
+            "hull": 3.5999999999999943,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstBeacon": 57,
+          "alignmentStart": 60
+        },
+        "khar": {
+          "protocol": 48,
+          "firstBeacon": 56,
+          "alignmentStart": 60
+        },
+        "choir": {
+          "protocol": 34,
+          "firstBeacon": 56,
+          "alignmentStart": null
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 10,
+          "ships": 11,
+          "hull": 501,
+          "military": 210,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 11,
+          "ships": 7,
+          "hull": 463.8,
+          "military": 257.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        },
+        {
+          "factionId": "choir",
+          "colonies": 5,
+          "ships": 3,
+          "hull": 86,
+          "military": 33.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 67,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 66,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 66,
+        "hull": 64.00000000000001,
+        "fleetCycles": 20,
+        "colonyCycles": 18,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 6.799999999999997,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 57.20000000000002,
+            "fleetCycles": 18,
+            "colonyCycles": 16
+          },
+          "choir": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstBeacon": 52,
+          "alignmentStart": 60
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 51,
+          "alignmentStart": 58
+        },
+        "choir": {
+          "protocol": 33,
+          "firstBeacon": 41,
+          "alignmentStart": 44
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 11,
+          "ships": 12,
+          "hull": 494,
+          "military": 216.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        },
+        {
+          "factionId": "khar",
+          "colonies": 12,
+          "ships": 8,
+          "hull": 550.9,
+          "military": 301.9,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 9,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 4
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 69,
+      "firstWar": 27,
+      "repairs": {
+        "phases": 69,
+        "hull": 73.29999999999998,
+        "fleetCycles": 19,
+        "colonyCycles": 19,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 4.199999999999989,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 57.599999999999994,
+            "fleetCycles": 14,
+            "colonyCycles": 14
+          },
+          "choir": {
+            "hull": 11.5,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "veyr": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "khar": {
+          "protocol": 51,
+          "firstBeacon": 58,
+          "alignmentStart": 61
+        },
+        "choir": {
+          "protocol": 35,
+          "firstBeacon": 44,
+          "alignmentStart": 57
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 1,
+          "ships": 3,
+          "hull": 76,
+          "military": 15,
+          "technologies": 0,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 0,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 5,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 16,
+          "ships": 14,
+          "hull": 1062,
+          "military": 539.1,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 7,
+          "ships": 6,
+          "hull": 178,
+          "military": 63.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 65,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "checkedCycles": 64,
+      "firstWar": 53,
+      "repairs": {
+        "phases": 64,
+        "hull": 26.099999999999994,
+        "fleetCycles": 7,
+        "colonyCycles": 7,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "khar": {
+            "hull": 26.099999999999994,
+            "fleetCycles": 7,
+            "colonyCycles": 7
+          },
+          "choir": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstBeacon": 52,
+          "alignmentStart": 56
+        },
+        "veyr": {
+          "protocol": 49,
+          "firstBeacon": 55,
+          "alignmentStart": 65
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 57,
+          "alignmentStart": 59
+        },
+        "choir": {
+          "protocol": 40,
+          "firstBeacon": 48,
+          "alignmentStart": 56
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 11,
+          "ships": 8,
+          "hull": 297,
+          "military": 117.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 9,
+          "ships": 6,
+          "hull": 219,
+          "military": 72.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "khar",
+          "colonies": 9,
+          "ships": 4,
+          "hull": 174.89999999999998,
+          "military": 96.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 7
+        },
+        {
+          "factionId": "choir",
+          "colonies": 9,
+          "ships": 6,
+          "hull": 204,
+          "military": 90,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 86,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 85,
+      "firstWar": 43,
+      "repairs": {
+        "phases": 85,
+        "hull": 249.70000000000002,
+        "fleetCycles": 55,
+        "colonyCycles": 55,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 19.400000000000006,
+            "fleetCycles": 4,
+            "colonyCycles": 4
+          },
+          "veyr": {
+            "hull": 100.60000000000001,
+            "fleetCycles": 24,
+            "colonyCycles": 24
+          },
+          "khar": {
+            "hull": 2.8000000000000007,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          },
+          "choir": {
+            "hull": 126.9,
+            "fleetCycles": 26,
+            "colonyCycles": 26
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 57
+        },
+        "veyr": {
+          "protocol": 48,
+          "firstBeacon": 57,
+          "alignmentStart": 62
+        },
+        "khar": {
+          "protocol": 52,
+          "firstBeacon": 64,
+          "alignmentStart": 78
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 50,
+          "alignmentStart": 57
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 10,
+          "ships": 8,
+          "hull": 482,
+          "military": 227.5,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 2
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 12,
+          "ships": 10,
+          "hull": 541.2,
+          "military": 227.5,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 9
+        },
+        {
+          "factionId": "khar",
+          "colonies": 3,
+          "ships": 6,
+          "hull": 178,
+          "military": 73.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 9
+        },
+        {
+          "factionId": "choir",
+          "colonies": 17,
+          "ships": 11,
+          "hull": 623.8,
+          "military": 296.3,
+          "technologies": 12,
+          "beacons": 5,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 65,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "checkedCycles": 64,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 64,
+        "hull": 80.90000000000002,
+        "fleetCycles": 16,
+        "colonyCycles": 16,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 6.300000000000011,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "veyr": {
+            "hull": 15.600000000000009,
+            "fleetCycles": 4,
+            "colonyCycles": 4
+          },
+          "khar": {
+            "hull": 55,
+            "fleetCycles": 9,
+            "colonyCycles": 9
+          },
+          "choir": {
+            "hull": 4,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstBeacon": 54,
+          "alignmentStart": 56
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstBeacon": 54,
+          "alignmentStart": 65
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 62,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 41,
+          "firstBeacon": 50,
+          "alignmentStart": 58
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 10,
+          "ships": 7,
+          "hull": 289,
+          "military": 128.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 6,
+          "ships": 6,
+          "hull": 229,
+          "military": 87.5,
+          "technologies": 11,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "khar",
+          "colonies": 6,
+          "ships": 4,
+          "hull": 133.5,
+          "military": 96.3,
+          "technologies": 12,
+          "beacons": 1,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 10,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 71,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 70,
+      "firstWar": 57,
+      "repairs": {
+        "phases": 70,
+        "hull": 118.00000000000001,
+        "fleetCycles": 31,
+        "colonyCycles": 25,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 24,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          },
+          "veyr": {
+            "hull": 18.60000000000001,
+            "fleetCycles": 7,
+            "colonyCycles": 5
+          },
+          "khar": {
+            "hull": 64,
+            "fleetCycles": 15,
+            "colonyCycles": 11
+          },
+          "choir": {
+            "hull": 11.400000000000006,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 51,
+          "firstBeacon": 57,
+          "alignmentStart": 62
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 62
+        },
+        "khar": {
+          "protocol": 69,
+          "firstBeacon": 61,
+          "alignmentStart": null
+        },
+        "choir": {
+          "protocol": 36,
+          "firstBeacon": 46,
+          "alignmentStart": 54
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 10,
+          "ships": 6,
+          "hull": 332.8,
+          "military": 158.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 2
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 10,
+          "ships": 6,
+          "hull": 326.7,
+          "military": 150,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 10,
+          "ships": 10,
+          "hull": 557.2,
+          "military": 278.9,
+          "technologies": 10,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "choir",
+          "colonies": 4,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "checkedCycles": 70,
+      "firstWar": 48,
+      "repairs": {
+        "phases": 70,
+        "hull": 64.9,
+        "fleetCycles": 17,
+        "colonyCycles": 17,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "veyr": {
+            "hull": 0,
+            "fleetCycles": 0,
+            "colonyCycles": 0
+          },
+          "khar": {
+            "hull": 53.8,
+            "fleetCycles": 14,
+            "colonyCycles": 14
+          },
+          "choir": {
+            "hull": 11.100000000000001,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 55,
+          "firstBeacon": 63,
+          "alignmentStart": 71
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstBeacon": 53,
+          "alignmentStart": 57
+        },
+        "khar": {
+          "protocol": 53,
+          "firstBeacon": 60,
+          "alignmentStart": 62
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 50,
+          "alignmentStart": null
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 8,
+          "ships": 4,
+          "hull": 187,
+          "military": 83.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 11,
+          "ships": 6,
+          "hull": 239,
+          "military": 102.5,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 12,
+          "ships": 6,
+          "hull": 445.4,
+          "military": 267.4,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 10
+        },
+        {
+          "factionId": "choir",
+          "colonies": 5,
+          "ships": 2,
+          "hull": 52,
+          "military": 18.8,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "checkedCycles": 71,
+      "firstWar": 39,
+      "repairs": {
+        "phases": 71,
+        "hull": 79.99999999999996,
+        "fleetCycles": 22,
+        "colonyCycles": 22,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 6,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "veyr": {
+            "hull": 34.79999999999997,
+            "fleetCycles": 10,
+            "colonyCycles": 10
+          },
+          "khar": {
+            "hull": 35.199999999999996,
+            "fleetCycles": 9,
+            "colonyCycles": 9
+          },
+          "choir": {
+            "hull": 4,
+            "fleetCycles": 1,
+            "colonyCycles": 1
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstBeacon": 55,
+          "alignmentStart": 61
+        },
+        "veyr": {
+          "protocol": 52,
+          "firstBeacon": 59,
+          "alignmentStart": 61
+        },
+        "khar": {
+          "protocol": 53,
+          "firstBeacon": 63,
+          "alignmentStart": 72
+        },
+        "choir": {
+          "protocol": 39,
+          "firstBeacon": 56,
+          "alignmentStart": 65
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 9,
+          "ships": 6,
+          "hull": 239,
+          "military": 102.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 7,
+          "ships": 8,
+          "hull": 358.2,
+          "military": 152.5,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "khar",
+          "colonies": 8,
+          "ships": 6,
+          "hull": 188,
+          "military": 90.6,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 1
+        },
+        {
+          "factionId": "choir",
+          "colonies": 9,
+          "ships": 5,
+          "hull": 221,
+          "military": 98.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 8
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 75,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "checkedCycles": 74,
+      "firstWar": 46,
+      "repairs": {
+        "phases": 74,
+        "hull": 150.5,
+        "fleetCycles": 29,
+        "colonyCycles": 29,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 1,
+        "byFaction": {
+          "player": {
+            "hull": 59,
+            "fleetCycles": 10,
+            "colonyCycles": 10
+          },
+          "veyr": {
+            "hull": 38.399999999999984,
+            "fleetCycles": 6,
+            "colonyCycles": 6
+          },
+          "khar": {
+            "hull": 30.700000000000003,
+            "fleetCycles": 8,
+            "colonyCycles": 8
+          },
+          "choir": {
+            "hull": 22.400000000000006,
+            "fleetCycles": 5,
+            "colonyCycles": 5
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 50,
+          "firstBeacon": 56,
+          "alignmentStart": 62
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstBeacon": 54,
+          "alignmentStart": 62
+        },
+        "khar": {
+          "protocol": 50,
+          "firstBeacon": 60,
+          "alignmentStart": 70
+        },
+        "choir": {
+          "protocol": 34,
+          "firstBeacon": 42,
+          "alignmentStart": 44
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 15,
+          "ships": 11,
+          "hull": 691,
+          "military": 290,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 6,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 12,
+          "beacons": 2,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 11,
+          "ships": 5,
+          "hull": 318.1,
+          "military": 178.3,
+          "technologies": 12,
+          "beacons": 4,
+          "alignment": 6
+        },
+        {
+          "factionId": "choir",
+          "colonies": 10,
+          "ships": 5,
+          "hull": 323,
+          "military": 146.3,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    },
+    {
+      "variant": "colonyPool",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "checkedCycles": 70,
+      "firstWar": 27,
+      "repairs": {
+        "phases": 70,
+        "hull": 154.8,
+        "fleetCycles": 37,
+        "colonyCycles": 36,
+        "colonyCyclesAboveNewPool": 0,
+        "hullAboveNewPool": 0,
+        "peakColocatedDamagedFleets": 2,
+        "byFaction": {
+          "player": {
+            "hull": 12.7,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          },
+          "veyr": {
+            "hull": 4.199999999999989,
+            "fleetCycles": 2,
+            "colonyCycles": 2
+          },
+          "khar": {
+            "hull": 127.10000000000001,
+            "fleetCycles": 29,
+            "colonyCycles": 28
+          },
+          "choir": {
+            "hull": 10.800000000000011,
+            "fleetCycles": 3,
+            "colonyCycles": 3
+          }
+        }
+      },
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstBeacon": 50,
+          "alignmentStart": 54
+        },
+        "veyr": {
+          "protocol": null,
+          "firstBeacon": null,
+          "alignmentStart": null
+        },
+        "khar": {
+          "protocol": 52,
+          "firstBeacon": 59,
+          "alignmentStart": 61
+        },
+        "choir": {
+          "protocol": 38,
+          "firstBeacon": 49,
+          "alignmentStart": 60
+        }
+      },
+      "final": [
+        {
+          "factionId": "player",
+          "colonies": 5,
+          "ships": 1,
+          "hull": 34,
+          "military": 15,
+          "technologies": 12,
+          "beacons": 1,
+          "alignment": 0
+        },
+        {
+          "factionId": "veyr",
+          "colonies": 0,
+          "ships": 0,
+          "hull": 0,
+          "military": 0,
+          "technologies": 5,
+          "beacons": 0,
+          "alignment": 0
+        },
+        {
+          "factionId": "khar",
+          "colonies": 20,
+          "ships": 17,
+          "hull": 1167.7,
+          "military": 618.1,
+          "technologies": 12,
+          "beacons": 6,
+          "alignment": 9
+        },
+        {
+          "factionId": "choir",
+          "colonies": 8,
+          "ships": 5,
+          "hull": 154,
+          "military": 63.8,
+          "technologies": 12,
+          "beacons": 3,
+          "alignment": 10
+        }
+      ]
+    }
+  ],
+  "reproduction": "node scripts/repair-benchmark.mjs --engine-ref 60fd9f8e85edfee92ed40ee29c9b8c314e140da3 docs/results/stage10-repair.json"
+}
