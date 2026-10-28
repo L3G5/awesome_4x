@@ -35,9 +35,10 @@ function divideHull(hp, ships, detachedShips, maximumHull) {
 export function getSplitPreview(state, fleetId, ships = 1, factionId = 'player') {
   const fleet = state.fleets.find(candidate => candidate.id === fleetId);
   const faction = state.factions.find(candidate => candidate.id === factionId);
+  const ownedFleet = fleet?.owner === factionId ? fleet : null;
   const result = {
-    enabled: false, reason: '', orderCost: 1, fleetId, systemId: fleet?.systemId ?? null,
-    parent: null, detached: null, originalHasRoute: Boolean(fleet?.route),
+    enabled: false, reason: '', orderCost: 1, fleetId, systemId: ownedFleet?.systemId ?? null,
+    parent: null, detached: null, originalHasRoute: Boolean(ownedFleet?.route),
     nextFleetNumber: null,
   };
   const fail = reason => ({ ...result, reason });

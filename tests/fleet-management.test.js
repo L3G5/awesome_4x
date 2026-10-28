@@ -87,6 +87,26 @@ test('rival empires use the same split cost and conservation rules without touch
   assert.ok(validateSave(state));
 });
 
+test('rejected foreign fleet previews expose no location or planned-route context', () => {
+  const state = createGame('private-detachment-preview');
+  const foreign = state.fleets.find(fleet => fleet.owner === 'khar' && fleet.type === 'frigate');
+  foreign.ships = 2; foreign.hp = 68;
+  const neighbor = state.lanes.find(lane => lane.includes(foreign.systemId)).find(id => id !== foreign.systemId);
+  const destination = state.systems.find(system => system.id === neighbor);
+  if (!destination.knownBy.includes('khar')) destination.knownBy.push('khar');
+  assert.ok(command(state, { type: 'planRoute', factionId: 'khar', fleetId: foreign.id, destinationId: neighbor }).ok);
+  const preview = getSplitPreview(state, foreign.id);
+  assert.equal(preview.enabled, false);
+  assert.equal(preview.systemId, null);
+  assert.equal(preview.originalHasRoute, false);
+  assert.equal(preview.parent, null);
+  assert.equal(preview.detached, null);
+  foreign.systemId = neighbor;
+  delete foreign.route;
+  assert.ok(validateSave(state));
+  assert.deepEqual(getSplitPreview(state, foreign.id), preview);
+});
+
 test('severely damaged merged forces retain explicit ship counts and fractional legacy hull', () => {
   for (const hp of [.1, .2, 1.0000000000001, 12, 35.1, 125.6789012345]) {
     const { state, fleet } = fixture({ ships: 12, hp });
