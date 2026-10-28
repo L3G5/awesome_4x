@@ -3,11 +3,12 @@
  * sensors. Every action goes through the same command rules as the player.
  * Imports are only called during a turn, so game.js may safely import runAI.
  */
-import { command, getNeighbors, getVisibleSystems, getEmpireStats, getBuildOptions, getResearchOptions, estimateCombat, fleetPower, getSystemYield, getInfrastructure, getDevelopmentOptions, CHARTERS } from './game.js';
+import { command, getNeighbors, getVisibleSystems, getEmpireStats, getBuildOptions, getResearchOptions, estimateCombat, fleetPower, getSystemYield, getInfrastructure, getDevelopmentOptions, CHARTERS, LAST_TURN } from './game.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
-import { ANOMALIES, SHIPS, BUILDINGS } from './content.js';
+import { ANOMALIES, SHIPS, BUILDINGS, TECHS } from './content.js';
 import { getDiplomaticIntent, getDiplomacyForecast } from './diplomacy.js';
 import { ALIGNMENT_RULES, getPublicRaces, getAlignmentStatus } from './victory.js';
+import { getDiscoveryView, getDiscoveryOptions } from './discoveries.js';
 
 const factionOf = (state, id) => state.factions.find(f => f.id === id);
 const systemOf = (state, id) => state.systems.find(s => s.id === id);
@@ -254,15 +255,124 @@ function militaryTurn(state, faction, act, ordinaryAct = act) {
   return threatsToColonies(state, faction);
 }
 
+function discoveryHorizon(state, faction) {
+  // Only public commitments shorten the planning horizon. A rival's hidden
+  // research, treasury or discovery history cannot influence this estimate.
+  const races = getPublicRaces(state, faction.id).filter(race => race.active && race.progress > 0);
+  const stats = getEmpireStats(state, faction.id), colonies = state.systems.filter(system => system.owner === faction.id);
+  const path = ['logistics', 'physics', 'computing', 'industry', 'singularity'];
+  const research = Math.max(0, path.reduce((total, id) => total + (faction.techs.includes(id) ? 0 : TECHS[id].cost), 0) - (path.includes(faction.research?.techId) ? faction.research.progress : 0) - faction.science);
+  const construction = colonies.filter(system => !system.buildings.includes('beacon')).map(system => Math.ceil(BUILDINGS.beacon.work / getSystemYield(state, system).production)).sort((a, b) => a - b);
+  const missingHosts = Math.max(0, ALIGNMENT_RULES.sites - colonies.length);
+  const constructionCycles = stats.beacons >= ALIGNMENT_RULES.sites ? 0 : Math.max(construction[Math.min(2 - stats.beacons, construction.length - 1)] || 0, missingHosts ? Math.ceil(BUILDINGS.beacon.work / 6) : 0);
+  const networkCycles = Math.ceil(research / Math.max(1, stats.scienceIncome)) + constructionCycles + missingHosts * 6 + ALIGNMENT_RULES.target;
+  return Math.max(0, Math.min(45, LAST_TURN - state.turn, networkCycles, ...races.map(race => race.target - race.progress + 6)));
+}
+
+function discoveryWeights(state, faction, role) {
+  const stats = getEmpireStats(state, faction.id);
+  const remainingResearch = Math.max(0, Object.values(TECHS).filter(tech => !faction.techs.includes(tech.id)).reduce((total, tech) => total + tech.cost, 0) - (faction.research?.progress || 0) - faction.science);
+  return {
+    credits: stats.creditIncome < (faction.alignment?.active ? ALIGNMENT_RULES.cost : 10) ? 1.3 : .6,
+    minerals: stats.mineralIncome < stats.colonies * 6 ? 1.2 : .75,
+    science: (faction.research ? 1.1 : .65) * (faction.id === 'choir' ? 1.25 : 1) * Math.min(1, remainingResearch / Math.max(1, stats.scienceIncome * discoveryHorizon(state, faction))),
+    production: role === 'forge' ? 1.3 : .9,
+  };
+}
+
+const resourceValue = (resources, weights) => Object.entries(weights).reduce((total, [id, weight]) => total + (resources?.[id] || 0) * weight, 0);
+
+/** A paid site must repay its cost, forgone portable reward and displaced output. */
+function restorationPlan(state, faction, system, buildingId, role, mature = false) {
+  if (system.owner !== faction.id || system.buildings.includes(buildingId)) return null;
+  const item = BUILDINGS[buildingId], weights = discoveryWeights(state, faction, role);
+  const replacements = getInfrastructure(state, system).available ? [null] : replacementCandidates(state, faction, system, buildingId, role);
+  const yieldOf = id => ({ ...BUILDINGS[id], science: (BUILDINGS[id]?.science || 0) + (id === 'lab' && faction.techs.includes('computing') ? 4 : 0) });
+  const matchingRole = item.science && role === 'academy' || item.minerals && ['forge', 'extraction'].includes(role);
+  return replacements.map(replaceBuildingId => {
+    const options = mature ? getDiscoveryOptions(state, system.id, faction.id, replaceBuildingId) : getBuildOptions(state, system.id, faction.id, replaceBuildingId);
+    const option = options.find(option => mature ? option.buildingId === buildingId : option.id === buildingId);
+    if (!option) return null;
+    const productiveCycles = Math.max(0, discoveryHorizon(state, faction) - Math.ceil(item.work / Math.max(1, getSystemYield(state, system).production)));
+    const output = resourceValue(yieldOf(buildingId), weights) * (matchingRole ? 1.25 : 1) - resourceValue(yieldOf(replaceBuildingId), weights);
+    const value = output * productiveCycles - resourceValue(option.cost, weights) - item.work * .2;
+    return { option, replaceBuildingId, value };
+  }).filter(Boolean).sort((a, b) => b.value - a.value || String(a.replaceBuildingId).localeCompare(String(b.replaceBuildingId)))[0] || null;
+}
+
+function canMatureDiscovery(state, faction, system, definition, role) {
+  if (discoveryHorizon(state, faction) < 8) return false;
+  if (!system.owner) {
+    const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
+    return system.habitability >= minimum && ownFleets(state, faction).some(fleet => fleet.systemId === system.id && fleet.type === 'colony');
+  }
+  if (system.owner !== faction.id) return false;
+  return system.buildings.includes(definition.support) || system.queue?.itemId === definition.support || getInfrastructure(state, system).available > 0 || replacementCandidates(state, faction, system, definition.support, role).length > 0;
+}
+
+function discoverySettlementPriority(state, faction, system) {
+  const view = getDiscoveryView(state, system.id, faction.id);
+  if (!view || !ANOMALIES[view.id].multiStage || !['opening', 'maturing', 'ready'].includes(view.phase)) return 0;
+  // A remembered opportunity remains a planning lead, not proof that nobody
+  // has touched the remote site since its last survey.
+  return view.phase === 'opening' ? .7 : 1.4;
+}
+
+function promisingSettlementDiscovery(state, faction, system) {
+  const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
+  if (system.owner || system.habitability < minimum || discoveryHorizon(state, faction) < 12) return false;
+  const arks = ownFleets(state, faction).filter(fleet => fleet.type === 'colony');
+  if (arks.some(fleet => { const travel = route(state, faction, fleet, system.id, { peaceful: true }); return travel && travel.path.length <= 4; })) return true;
+  // A shipyard within three charted jumps can plausibly send another Ark.
+  // Distant, inaccessible sites still offer their immediate expedition reward.
+  return state.systems.filter(colony => colony.owner === faction.id && colony.buildings.includes('shipyard')).some(colony => (knownDistances(state, faction, colony.id).get(system.id) ?? Infinity) <= 3);
+}
+
 function anomalyTurn(state, faction, act) {
+  const colonies = state.systems.filter(system => system.owner === faction.id), roles = colonyRoles(state, faction, colonies);
   const locations = new Set(ownFleets(state, faction).map(f => f.systemId));
   for (const system of state.systems.filter(s => locations.has(s.id) || s.owner === faction.id)) {
     if (faction.orders <= 1 || state.winner) break;
-    if (!surveyed(system, faction) || !system.anomaly || system.anomaly.resolved || system.owner && system.owner !== faction.id || observedEnemies(state, faction, system.id).length) continue;
-    const choices = ANOMALIES[system.anomaly.id].choices.filter(choice => canSpend(state, faction, choice.cost));
+    const view = getDiscoveryView(state, system.id, faction.id);
+    if (!view?.canInteract || observedEnemies(state, faction, system.id).length) continue;
+    const definition = ANOMALIES[view.id], role = roles.get(system.id);
+    if (view.phase === 'resolved') {
+      // The right to restore survives cancellation and conquest. Rebuilding
+      // pays normal construction costs and never repeats a discovery reward.
+      if (view.site?.state === 'planned') {
+        const plan = restorationPlan(state, faction, system, view.site.id, role);
+        if (plan?.value > 0 && plan.option.enabled && canSpend(state, faction, plan.option.cost)) {
+          act({ type: 'build', systemId: system.id, itemId: view.site.id, ...(plan.replaceBuildingId ? { replaceBuildingId: plan.replaceBuildingId } : {}) });
+        }
+      }
+      continue;
+    }
+    if (view.phase === 'maturing') {
+      if (!system.buildings.includes(definition.support)) buildAt(state, faction, system, [definition.support], act, { role, replace: true });
+      continue;
+    }
+    const choices = getDiscoveryOptions(state, system.id, faction.id);
+    if (view.phase === 'opening' && definition.multiStage && canMatureDiscovery(state, faction, system, definition, role)) {
+      const preservation = choices.find(choice => choice.kind === 'preserve');
+      // Keep an achievable long-term opportunity while saving or researching
+      // its prerequisite; a temporary funding shortage is not a salvage order.
+      if (preservation?.enabled && canSpend(state, faction, preservation.cost) && act({ type: 'anomaly', systemId: system.id, choiceId: preservation.id }).ok && system.owner === faction.id && !system.buildings.includes(definition.support)) {
+        buildAt(state, faction, system, [definition.support], act, { role, replace: true });
+      }
+      continue;
+    }
+    if (view.phase === 'opening' && definition.multiStage && promisingSettlementDiscovery(state, faction, system)) continue;
+    if (view.phase === 'ready') {
+      const plan = restorationPlan(state, faction, system, definition.siteId, role, true);
+      const reward = choices.find(choice => choice.kind === 'resolve');
+      if (plan && plan.value > resourceValue(reward?.gain, discoveryWeights(state, faction, role))) {
+        if (plan.option.enabled && canSpend(state, faction, plan.option.cost)) act({ type: 'anomaly', systemId: system.id, choiceId: plan.option.id, ...(plan.replaceBuildingId ? { replaceBuildingId: plan.replaceBuildingId } : {}) });
+        continue;
+      }
+    }
     const value = choice => (choice.gain?.minerals || 0) * (faction.minerals < 80 ? 1.4 : .65) + (choice.gain?.science || 0) * (faction.research ? 1.1 : .65) + (choice.gain?.credits || 0) * (faction.credits < 70 ? 1.3 : .35) + (choice.ship ? 60 : 0) + (choice.population ? 30 : 0) + (choice.habitability && !system.owner && system.habitability < 50 ? 45 : 0) + (choice.reveal ? 25 : 0);
-    choices.sort((a, b) => value(b) - value(a));
-    if (choices[0]) act({ type: 'anomaly', systemId: system.id, choiceId: choices[0].id });
+    const immediate = choices.filter(choice => choice.kind === 'resolve' && choice.enabled && canSpend(state, faction, choice.cost)).sort((a, b) => value(b) - value(a) || a.id.localeCompare(b.id));
+    if (immediate[0]) act({ type: 'anomaly', systemId: system.id, choiceId: immediate[0].id });
   }
 }
 
@@ -278,7 +388,7 @@ function civilianTurn(state, faction, act) {
       if (!system.owner && system.habitability >= minimum) { act({ type: 'colonize', fleetId: fleet.id }); continue; }
       if (fleet.movesLeft < 1) continue;
       const candidates = getVisibleSystems(state, faction.id).filter(s => !s.owner && surveyed(s, faction) && s.habitability >= minimum && !reserved.has(s.id) && !observedEnemies(state, faction, s.id).length && !ownFleets(state, faction).some(f => f.type === 'colony' && f.id !== fleet.id && f.systemId === s.id));
-      const destinations = candidates.map(target => ({ target, route: route(state, faction, fleet, target.id, { peaceful: true }) })).filter(item => item.route).sort((a, b) => a.route.cost - b.route.cost || (b.target.habitability + b.target.richness * 5) - (a.target.habitability + a.target.richness * 5));
+      const destinations = candidates.map(target => ({ target, route: route(state, faction, fleet, target.id, { peaceful: true }) })).filter(item => item.route).sort((a, b) => (a.route.cost - discoverySettlementPriority(state, faction, a.target)) - (b.route.cost - discoverySettlementPriority(state, faction, b.target)) || (b.target.habitability + b.target.richness * 5) - (a.target.habitability + a.target.richness * 5));
       const destination = destinations[0];
       if (!destination) continue;
       reserved.add(destination.target.id);
@@ -319,12 +429,11 @@ function canSpend(state, faction, cost = {}) {
 }
 
 function actionCost(state, faction, action) {
-  const system = systemOf(state, action.systemId);
   if (action.type === 'build') return getBuildOptions(state, action.systemId, faction.id, action.replaceBuildingId).find(option => option.id === action.itemId)?.cost;
   if (action.type === 'develop') return getDevelopmentOptions(state, action.systemId, faction.id).find(option => option.charterType === action.charterType)?.cost;
   if (action.type === 'colonize') return { credits: 30, minerals: 20 };
   if (action.type === 'repair') return { minerals: 10 };
-  if (action.type === 'anomaly') return ANOMALIES[system?.anomaly?.id]?.choices.find(choice => choice.id === action.choiceId)?.cost;
+  if (action.type === 'anomaly') return getDiscoveryOptions(state, action.systemId, faction.id, action.replaceBuildingId).find(choice => choice.id === action.choiceId)?.cost;
   if (action.type === 'diplomacy') {
     const cost = getDiplomacyForecast(state, faction.id, action.targetId).actions[action.stance]?.cost;
     return { credits: cost?.credits || 0 };
@@ -335,6 +444,8 @@ function actionCost(state, faction, action) {
 /** Replace low-value infrastructure without dismantling an established role. */
 function replacementCandidates(state, faction, system, itemId, role, emergency = false, incomeRecovery = false) {
   const protectedIds = new Set(['beacon', CHARTERS[system.charter?.type]?.support, CHARTERS[role]?.support]);
+  const discovery = getDiscoveryView(state, system.id, faction.id);
+  if (discovery?.phase === 'maturing') protectedIds.add(ANOMALIES[discovery.id].support);
   const colonies = state.systems.filter(colony => colony.owner === faction.id);
   if (system.buildings.includes('shipyard') && (colonies.filter(colony => colony.buildings.includes('shipyard')).length <= 1 || role === 'forge' || system.id === faction.strategy?.rallyId)) protectedIds.add('shipyard');
   const stats = getEmpireStats(state, faction.id);

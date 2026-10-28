@@ -105,7 +105,7 @@ function withdrawFleets(state, first, second) {
     if (!candidates.length) candidates = state.systems.filter(system => !system.owner && system.knownBy.includes(fleet.owner));
     const destination = [...candidates].sort((a, b) => Math.hypot(a.x - location.x, a.y - location.y) - Math.hypot(b.x - location.x, b.y - location.y) || a.id.localeCompare(b.id))[0];
     fleet.movesLeft = 0;
-    if (destination) { fleet.systemId = destination.id; moved++; } else stranded++;
+    if (destination) { fleet.systemId = destination.id; delete fleet.route; moved++; } else stranded++;
   }
   return { moved, stranded };
 }

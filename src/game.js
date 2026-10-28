@@ -5,9 +5,12 @@ import { executeDiplomacy, advanceDiplomacy, validateDiplomacyState } from './di
 import { captureParticipant, finishParticipant, appendCombatReport, finalizeBriefing, summarizeCombatReports, validateReportState } from './reports.js';
 import { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getConstructionCost, validateDevelopmentSystem } from './development.js';
 import { getAlignmentStatus, advanceAlignment, revealPublicBeacons, validateAlignmentState } from './victory.js';
+import { getRoutePreview, continuePlannedRoute, updateRouteAfterMove, reconcileRoutes, validateNavigationState } from './navigation.js';
+import { placeDiscoveries, observeDiscovery, observeDiscoveries, getDiscoveryBuildReason, recordDiscoveryConstruction, executeDiscovery, mergeDiscoveryHeritage, advanceDiscoveries, validateDiscoveryState } from './discoveries.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject } from './development.js';
+export { getRoutePreview, getRouteStatus } from './navigation.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -21,7 +24,6 @@ const fleetOf = (state, id) => state.fleets.find(f => f.id === id);
 const has = (faction, tech) => faction.techs.includes(tech);
 const canPay = (faction, cost = {}) => Object.entries(cost).every(([resource, amount]) => faction[resource] >= amount);
 const pay = (faction, cost = {}) => { for (const [key, value] of Object.entries(cost)) faction[key] -= value; };
-const add = (faction, gain = {}) => { for (const [key, value] of Object.entries(gain)) faction[key] += value; };
 
 function hashSeed(seed) {
   let hash = 2166136261;
@@ -71,6 +73,7 @@ function survey(state, systemId, factionId) {
   }
   for (const neighbor of getNeighbors(state, systemId)) chart(state, neighbor, factionId);
   for (const fleet of getVisibleFleets(state, factionId, systemId)) meet(state, factionId, fleet.owner);
+  observeDiscovery(state, systemId, factionId);
 }
 
 export function getVisibleSystems(state, factionId = 'player') {
@@ -106,7 +109,7 @@ export function createGame(seed = 'ASTERION') {
     }
     const type = home ? 'terran' : planetTypes[Math.floor(random(state) * planetTypes.length)];
     const habitability = home ? 90 : { terran: 85, ocean: 75, arid: 60, ice: 40, volcanic: 25, barren: 15 }[type] + Math.floor(random(state) * 11) - 5;
-    const anomalyKeys = Object.keys(ANOMALIES);
+    const anomalyKeys = Object.keys(ANOMALIES).filter(id => !ANOMALIES[id].multiStage);
     state.systems.push({ id: `s${index}`, name: SYSTEM_NAMES[index], x: round(x), y: round(y), type, habitability, richness: home ? 3 : 1 + Math.floor(random(state) * 5), science: home ? 2 : 1 + Math.floor(random(state) * 4), owner: home ? ids[index] : null, originalOwner: home ? ids[index] : null, population: home ? 4 : 0, growth: 0, buildings: home ? ['mine', 'shipyard'] : [], queue: null, defenseDamage: 0, anomaly: !home && index % 4 === 0 ? { id: anomalyKeys[Math.floor(random(state) * anomalyKeys.length)], resolved: false } : null, knownBy: [], exploredBy: [] });
   }
   // Prim's spanning tree guarantees every seeded map is connected. Short extra
@@ -126,6 +129,7 @@ export function createGame(seed = 'ASTERION') {
     const nearest = [...state.systems].filter(s => s !== system).sort((a, b) => distance(system, a) - distance(system, b));
     for (const neighbor of nearest.slice(0, 2)) connect(system.id, neighbor.id);
   }
+  placeDiscoveries(state);
   for (const faction of state.factions) {
     const neighbor = getNeighbors(state, faction.capitalId).map(id => systemOf(state, id)).find(s => !s.owner);
     if (neighbor) { neighbor.type = 'terran'; neighbor.habitability = Math.max(75, neighbor.habitability); }
@@ -196,6 +200,7 @@ export function getBuildOptions(state, systemId, factionId = 'player', replaceBu
     else if (item.kind === 'building' && getInfrastructure(state, system).available === 0 && replaceBuildingId === null) reason = 'Infrastructure slots are full. Choose a building to replace';
     else if (item.requires.some(id => !has(faction, id))) reason = `Requires ${item.requires.filter(id => !has(faction, id)).map(id => TECHS[id].name).join(' and ')}`;
     else if (item.kind === 'ship' && !system.buildings.includes('shipyard')) reason = 'Requires an Orbital Shipyard';
+    else if (getDiscoveryBuildReason(state, system, item.id, factionId)) reason = getDiscoveryBuildReason(state, system, item.id, factionId);
     else if (!canPay(faction, cost)) reason = 'Insufficient credits or minerals';
     else if (faction.orders < 1) reason = 'No orders remaining';
     return { ...item, cost, replaceBuildingId: item.kind === 'building' ? replaceBuildingId : null, enabled: !reason, reason, turns: system?.owner ? Math.ceil(item.work / getSystemYield(state, system).production) : 0 };
@@ -301,7 +306,7 @@ export function command(state, action) {
   const faction = factionOf(state, factionId);
   if (!faction || faction.eliminated) return fail('This empire is no longer active.');
   if (action.type === 'endTurn') return factionId === 'player' ? endTurn(state) : fail('Only the player can advance the turn.');
-  const freeActions = ['research', 'cancelBuild'];
+  const freeActions = ['research', 'cancelBuild', 'planRoute', 'clearRoute', 'continueRoute'];
   if (!freeActions.includes(action.type) && faction.orders < 1) return fail('No orders remaining. End the turn to receive a new mandate.');
   const fleet = action.fleetId ? fleetOf(state, action.fleetId) : null;
   const system = action.systemId ? systemOf(state, action.systemId) : fleet ? systemOf(state, fleet.systemId) : null;
@@ -309,6 +314,27 @@ export function command(state, action) {
   if (action.systemId && !system) return fail('Unknown system.');
   let result;
   switch (action.type) {
+    case 'planRoute': {
+      if (!fleet) return fail('Select a fleet first.');
+      const preview = getRoutePreview(state, fleet.id, action.destinationId);
+      if (!preview.ok) return fail(preview.reason);
+      if (preview.jumps) fleet.route = { destinationId: preview.destinationId, path: [...preview.path] };
+      else delete fleet.route;
+      result = success(preview.jumps ? `Route plotted: ${preview.jumps} jump${preview.jumps === 1 ? '' : 's'} to ${systemOf(state, preview.destinationId).name}. Continue when ready.` : 'The fleet is already at this destination. Route cleared.');
+      break;
+    }
+    case 'clearRoute': {
+      if (!fleet) return fail('Select a fleet first.');
+      delete fleet.route;
+      result = success('Route cleared.');
+      break;
+    }
+    case 'continueRoute': {
+      if (!fleet) return fail('Select a fleet first.');
+      result = continuePlannedRoute(state, fleet.id, move => command(state, move));
+      if (!result.ok) return result;
+      break;
+    }
     case 'move': {
       if (!fleet) return fail('Select a fleet first.');
       const target = systemOf(state, action.targetId);
@@ -329,11 +355,15 @@ export function command(state, action) {
         result = { ...success(message), outcome: 'intercepted' };
         break;
       }
+      observeDiscovery(state, fleet.systemId, factionId);
+      const originId = fleet.systemId;
       fleet.systemId = target.id; fleet.movesLeft--; faction.orders--;
+      updateRouteAfterMove(fleet, originId, target.id);
       survey(state, target.id, factionId);
       const combatReports = [];
       for (const enemy of enemies) { if (fleet.hp > 0) { const report = battle(state, fleet, enemy); if (report) combatReports.push(report); } }
       result = combatReports.length ? { ...success(summarizeCombatReports(combatReports)), combatReports } : success(`${fleet.name} ${fleet.hp > 0 ? `arrived at ${target.name}.` : 'was lost in battle.'}`);
+      if (enemies.length) result.combatOccurred = true;
       break;
     }
     case 'colonize': {
@@ -358,6 +388,7 @@ export function command(state, action) {
       pay(faction, option.cost); faction.orders--;
       system.queue = { itemId: option.id, kind: option.kind, progress: 0, work: option.work, cost: { ...option.cost } };
       if (option.replaceBuildingId) system.queue.replaceBuildingId = option.replaceBuildingId;
+      recordDiscoveryConstruction(state, system.id, factionId, option.id);
       result = success(`${option.name} commissioned at ${system.name}.`); break;
     }
     case 'develop': {
@@ -386,25 +417,14 @@ export function command(state, action) {
       result = success(`Research directed toward ${option.name}.`); break;
     }
     case 'anomaly': {
-      if (!system?.anomaly || system.anomaly.resolved) return fail('No unresolved anomaly here.');
-      if (!system.exploredBy.includes(factionId)) return fail('Survey this system first.');
-      if (system.owner !== factionId && !state.fleets.some(f => f.owner === factionId && f.systemId === system.id)) return fail('An expedition must be present to investigate.');
-      if (system.owner && system.owner !== factionId) return fail('Only the sovereign empire may investigate this site.');
-      const choice = ANOMALIES[system.anomaly.id].choices.find(c => c.id === action.choiceId);
-      if (!choice) return fail('Choose an expedition outcome.');
-      if (!canPay(faction, choice.cost)) return fail('Insufficient resources for this expedition.');
-      pay(faction, choice.cost); add(faction, choice.gain); faction.orders--;
-      if (choice.population) { const capital = systemOf(state, faction.capitalId); if (capital?.owner === factionId) capital.population += choice.population; }
-      if (choice.habitability) system.habitability = Math.min(100, system.habitability + choice.habitability);
-      if (choice.ship) makeFleet(state, factionId, system.id, choice.ship);
-      if (choice.reveal) {
-        let frontier = [system.id];
-        for (let depth = 0; depth < choice.reveal; depth++) { frontier = [...new Set(frontier.flatMap(id => getNeighbors(state, id)))]; for (const id of frontier) chart(state, id, factionId); }
-      }
-      system.anomaly.resolved = true; system.anomaly.resolvedBy = factionId;
-      applyResearch(state, faction);
-      record(state, `${ANOMALIES[system.anomaly.id].name}: ${choice.label}. ${choice.description}`, 'discovery', factionId, { systemId: system.id });
-      result = success('Expedition resolved.'); break;
+      result = executeDiscovery(state, { ...action, factionId, systemId: system?.id }, {
+        makeFleet: (ownerId, systemId, type) => makeFleet(state, ownerId, systemId, type),
+        chart: (systemId, ownerId) => chart(state, systemId, ownerId),
+        applyResearch: owner => applyResearch(state, owner),
+        build: buildAction => command(state, buildAction),
+      });
+      if (!result.ok) return result;
+      break;
     }
     case 'diplomacy': {
       result = executeDiplomacy(state, { ...action, factionId });
@@ -447,6 +467,7 @@ export function command(state, action) {
       if (!fleet || !other || other.id === fleet.id || other.owner !== factionId || other.type !== fleet.type || other.systemId !== fleet.systemId) return fail('Select two of your same-type fleets in the same system.');
       if (fleet.type === 'colony') return fail('Colony Arks operate independently.');
       if (fleet.ships + other.ships > 12) return fail('A task force can contain at most 12 ships.');
+      mergeDiscoveryHeritage(fleet, other);
       fleet.ships += other.ships; fleet.hp += other.hp; fleet.movesLeft = Math.min(fleet.movesLeft, other.movesLeft);
       state.fleets = state.fleets.filter(f => f.id !== other.id); faction.orders--;
       result = success('Fleets combined into one task force.'); break;
@@ -461,6 +482,8 @@ export function command(state, action) {
     }
     default: return fail('Unknown command.');
   }
+  reconcileRoutes(state);
+  observeDiscoveries(state);
   checkVictory(state);
   return result;
 }
@@ -516,6 +539,7 @@ export function endTurn(state) {
   if (state.winner) { finalizeBriefing(state, firstLogId, firstReportId); return success('Campaign concluded.'); }
   state.turn++;
   advanceDiplomacy(state);
+  reconcileRoutes(state);
   for (const faction of state.factions.filter(f => !f.eliminated)) {
     const stats = getEmpireStats(state, faction.id);
     faction.credits = Math.max(0, faction.credits + stats.creditIncome);
@@ -552,6 +576,7 @@ export function endTurn(state) {
     }
     if (!getVisibleFleets(state, system.owner, system.id).some(f => atWar(state, system.owner, f.owner))) system.defenseDamage = Math.max(0, system.defenseDamage - 5);
   }
+  advanceDiscoveries(state);
   for (const fleet of state.fleets) {
     const system = systemOf(state, fleet.systemId), faction = factionOf(state, fleet.owner);
     fleet.movesLeft = SHIPS[fleet.type].moves + (has(faction, 'command') && SHIPS[fleet.type].attack > 3 ? 1 : 0);
@@ -596,5 +621,7 @@ function isValidSave(value) {
   if (!validateDiplomacyState(value)) return false;
   if (!validateReportState(value)) return false;
   if (!validateAlignmentState(value)) return false;
+  if (!validateNavigationState(value)) return false;
+  if (!validateDiscoveryState(value)) return false;
   return true;
 }

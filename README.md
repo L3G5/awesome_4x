@@ -16,13 +16,15 @@ npm run test:browser
 npm run build
 ```
 
-The simulation in `src/game.js` is independent of rendering. Authored content, rival strategy, sensors, diplomacy, colony development, alignment victory and historical reports live in separate modules. `src/galaxy.js` renders the Three.js map, and `src/main.js` manages player interaction. Saves are stored locally in the browser; no account or server is required.
+The simulation in `src/game.js` is independent of rendering. Authored content, rival strategy, sensors, diplomacy, colony development, alignment victory, navigation, discoveries and historical reports live in separate modules. `src/galaxy.js` renders the Three.js map, and `src/main.js` manages player interaction. Saves are stored locally in the browser; no account or server is required.
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
-Browser tests require Chromium (`npx playwright install chromium`). They cover the opening campaign, diplomacy, sensor boundaries, combat reports, cycle briefings, colony replacement and specialization, discounted ship construction, and interrupting/restoring an alignment race. Set `PLAYWRIGHT_BASE_URL` to run them against a deployed build.
+Browser tests require Chromium (`npx playwright install chromium`). They cover the opening campaign, diplomacy, sensor boundaries, combat reports, cycle briefings, colony replacement and specialization, discounted ship construction, interrupting/restoring an alignment race, persistent routes, ancient-site restoration and fleet heritage. Set `PLAYWRIGHT_BASE_URL` to run them against a deployed build.
 
-The [campaign benchmark report](docs/campaign-benchmark.html) records 80 deterministic automated campaigns and their limits. Reproduce the measurements with `node scripts/campaign-benchmark.mjs`; the command writes detailed results under `/tmp` unless given another output path. These policies measure system behavior, not human difficulty or win rates.
+The [campaign benchmark report](docs/campaign-benchmark.html) records 80 deterministic automated campaigns for version 0.4.0 (commit `554612e`) and their limits. Use that revision to reproduce its exact source fingerprints; running the script on a later revision measures the current rules. Reproduce the measurements with `node scripts/campaign-benchmark.mjs`; the command writes detailed results under `/tmp` unless given another output path. These policies measure system behavior, not human difficulty or win rates.
+
+The version 0.5.0 [discovery measurements](docs/results/stage5-discoveries.json) record 40 campaigns and the source fingerprints used. Run `node scripts/campaign-benchmark.mjs --discoveries` to measure preservation, restoration and salvage under passive and balanced player policies.
 
 ## Deployment
 

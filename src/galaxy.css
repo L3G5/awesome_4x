@@ -1,6 +1,24 @@
 .galaxy-view { position: relative; overflow: hidden; isolation: isolate; background: #080e1b; touch-action: none; cursor: grab; min-width: 0; }
 .galaxy-canvas, .galaxy-labels { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
 .galaxy-labels { pointer-events: none; z-index: 2; overflow: hidden; }
+.galaxy-route-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: 1; }
+.galaxy-route { --route-color: #8be5d4; }
+.galaxy-route-preview, .galaxy-route-waypoint.galaxy-route-preview { --route-color: #edc987; }
+.galaxy-route-line, .galaxy-route-shadow, .galaxy-route-destination { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.galaxy-route-shadow { stroke: #07111b; stroke-width: 5px; opacity: .85; }
+.galaxy-route-line { stroke: var(--route-color); stroke-width: 2.1px; opacity: .9; }
+.galaxy-route-preview .galaxy-route-line { stroke-dasharray: 7 5; stroke-width: 2px; }
+.galaxy-route-line.is-blocked { opacity: .35; }
+.galaxy-route-destination { stroke: var(--route-color); stroke-width: 1.5px; opacity: .9; }
+.galaxy-route-preview .galaxy-route-destination { stroke-dasharray: 3 4; }
+.galaxy-route-waypoint { --route-color: #8be5d4; }
+.galaxy-route-waypoint circle { fill: #0b1925; stroke: var(--route-color); stroke-width: 1.2px; }
+.galaxy-route-waypoint.is-uncertain circle { stroke-dasharray: 2 2; }
+.galaxy-route-waypoint.is-stopped circle { stroke: #f49a87; stroke-width: 2px; }
+.galaxy-route-waypoint text { fill: var(--route-color); font: 600 9px 'DM Sans Variable', system-ui, sans-serif; }
+.galaxy-system-label.is-route-committed .galaxy-system-name { color: #a3e5d8; }
+.galaxy-system-label.is-route-preview .galaxy-system-name { color: #edcf9b; }
+.galaxy-tooltip .galaxy-tooltip-route { margin-top: 6px; color: #dcc497; font-size: 10px; }
 .galaxy-view::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 100px 12px rgba(3, 8, 17, .5); }
 .galaxy-view.galaxy-dragging, .galaxy-dragging * { cursor: grabbing !important; }
 .galaxy-pointing { cursor: pointer; }
@@ -30,7 +48,7 @@
 .galaxy-sector-label small { display: block; margin-top: 12px; font-size: 8px; letter-spacing: .6em; }
 .galaxy-fallback { background: radial-gradient(ellipse at 40% 40%, #15203a, #080e1b 70%); }
 .galaxy-fallback .galaxy-system-label::before { content: '✦'; display: block; height: 17px; color: var(--system-color); font-size: 18px; }
-.galaxy-fallback-notice { position: absolute; left: 16px; right: 16px; top: 12px; z-index: 10; margin: 0; padding: 9px 12px; border: 1px solid #8e743c; border-radius: 4px; background: #282417ee; color: #e9cd91; font-size: 11px; line-height: 1.5; }
+.galaxy-fallback-notice { position: absolute; left: 28px; top: 112px; width: min(350px, calc(100% - 56px)); z-index: 10; margin: 0; padding: 9px 12px; border: 1px solid #8e743c; border-radius: 4px; background: #282417ee; color: #e9cd91; font-size: 10px; line-height: 1.6; }
 @media (max-width: 720px) { .galaxy-system-name { font-size: 10px; } .galaxy-system-status { font-size: 7px; } .galaxy-sector-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .galaxy-system-label, .galaxy-fleet { transition: none; } }
 .galaxy-system-label.is-beacon .galaxy-system-status{color:#e1c38a}.galaxy-system-label.is-beacon .galaxy-system-name{color:#eddfbf}

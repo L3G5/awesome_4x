@@ -5,6 +5,9 @@ import { getDiplomacyForecast } from './diplomacy.js';
 import { renderDiplomacyPage } from './diplomacy-ui.js';
 import { renderCombatReports, renderBriefing } from './report-ui.js';
 import { planetImage } from './planet-art.js';
+import { renderDiscoverySummary, renderDiscoveryDialog } from './discovery-ui.js';
+import { getDiscoveryView } from './discoveries.js';
+import { getNavigationView, renderRouteStrip } from './navigation-ui.js';
 import { renderDevelopmentSummary, renderConstructionMenu, charterLabel } from './development-ui.js';
 import { renderAlignmentCard, renderPublicRaces, renderBeaconInspector } from './victory-ui.js';
 import { getAlignmentStatus, getPublicRaces, revealPublicBeacons } from './victory.js';
@@ -37,6 +40,7 @@ state ||= createGame('ASTERION');
 revealPublicBeacons(state);
 let selectedSystemId = state.factions.find(f => f.id === 'player').capitalId;
 let selectedFleetId = state.fleets.find(f => f.owner === 'player' && f.type === 'scout')?.id || null;
+if(state.fleets.find(f=>f.id===selectedFleetId)?.route)selectedSystemId=state.fleets.find(f=>f.id===selectedFleetId).systemId;
 let page = 'galaxy', researchFilter = 'All', logFilter = 'All', modalType = null, lastFocus = null, previousTurn = state.turn;
 const player = () => state.factions.find(f => f.id === 'player');
 const systemById = id => state.systems.find(s => s.id === id);
@@ -66,7 +70,7 @@ function setPage(value) { page = value; galaxy.setPaused?.(Boolean(modalType) ||
 function dispatch(action) {
   const result = command(state, action);
   if (!result.ok) { toast(result.message, true); return false; }
-  if (action.type === 'move' && fleetById(action.fleetId)) selectedSystemId = fleetById(action.fleetId).systemId;
+  if (['move','continueRoute'].includes(action.type) && fleetById(action.fleetId)) selectedSystemId = fleetById(action.fleetId).systemId;
   if (selectedFleetId && !fleetById(selectedFleetId)) selectedFleetId = null;
   save(); render(); toast(result.combatReports?.length ? `${result.combatReports.length} combat report${result.combatReports.length>1?'s':''} recorded.` : result.message); if (state.winner) showVictory(); else if(result.combatReports?.length)showReports(result.combatReports.map(r=>r.id)); return true;
 }
@@ -107,7 +111,7 @@ function renderInspector() {
     html += `<section class="panel-section"><div class="section-label">Colony production <span>${output.production} / cycle</span></div>${queue?`<div class="production-row"><span class="big-icon">${item.icon}</span><div><b>${escape(item.name)}</b><p>${Math.ceil((queue.work-queue.progress)/output.production)} cycles to completion</p></div><button class="small-button ghost" data-action="cancel-build" data-system="${system.id}" title="Cancel and refund unspent work">×</button></div><div class="progress-track"><i style="width:${queue.progress/queue.work*100}%"></i></div>`:`<p class="empty-note">Your construction teams await a new project.</p><button class="wide-button" data-action="build-menu" data-system="${system.id}">+ Commission a project</button>`}</section>${renderDevelopmentSummary(state,system)}<section class="panel-section"><p class="empty-note">${signed(output.credits)} credits · ${signed(output.minerals)} minerals · ${signed(output.science)} science</p></section>`;
   }
   html += renderBeaconInspector(state,system);
-  if (surveyed && system.anomaly && !system.anomaly.resolved) html += `<section class="panel-section"><div class="section-label">Unusual signal <span>✦</span></div><p style="font-family:var(--heading);font-size:17px;color:var(--gold)">${escape(ANOMALIES[system.anomaly.id].name)}</p><button class="wide-button" data-action="anomaly" data-system="${system.id}">Investigate discovery · 1 order</button></section>`;
+  html += renderDiscoverySummary(state,system);
   if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}><span class="ship-symbol" style="color:${FACTIONS[f.owner].color}">${SHIPS[f.type].icon}</span><span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${Math.ceil(f.hp)} hull</small></span><span class="fleet-ready">${f.owner==='player'?`${f.movesLeft} ⌁`:''}</span></button>`).join('')}</div></section>`;
   const selectedFleet=fleetById(selectedFleetId);
   const invasion=selectedFleet?.systemId===system.id ? estimateInvasion(state,selectedFleet.id) : null;
@@ -126,10 +130,15 @@ function movementReason(fleet, target) {
 }
 function renderFleet() {
   const fleet = fleetById(selectedFleetId), target = systemById(selectedSystemId), ownFleets = state.fleets.filter(f=>f.owner==='player');
-  if (!fleet) { $('#fleet-bar').innerHTML = `<div class="fleet-title"><div class="empty-fleet">A galaxy of possibilities.</div><p>Select a fleet in orbit to explore the frontier.</p></div>${ownFleets[0]?`<button data-fleet="${ownFleets[0].id}">Select fleet →</button>`:''}`; return; }
+  if (!fleet) { $('#fleet-bar').classList.remove('has-route'); $('#fleet-bar').innerHTML = `<div class="fleet-title"><div class="empty-fleet">A galaxy of possibilities.</div><p>Select a fleet in orbit to explore the frontier.</p></div>${ownFleets[0]?`<button data-fleet="${ownFleets[0].id}">Select fleet →</button>`:''}`; return; }
   const home = systemById(fleet.systemId), ship = SHIPS[fleet.type], different = target.id!==home.id;
+  const navigation=getNavigationView(state,fleet,target);
+  const adjacent=getNeighbors(state,fleet.systemId).includes(target.id);
   let detail = `${ship.role} · ${fleet.ships} ${fleet.ships===1?'ship':'ships'} · ${fleet.movesLeft} jumps · ${Math.ceil(fleet.hp)}/${fleet.ships*ship.hp} hull`, actions='';
-  if (different) {
+  if (different && !adjacent) {
+    detail=navigation.preview?.ok?`${home.name} → ${target.name} · ${navigation.preview.jumps} charted jumps`:(navigation.preview?.reason || 'No route through charted lanes.');
+    actions=`<button class="ghost small-button" data-system-select="${home.id}" title="Back to fleet">↶</button>`;
+  } else if (different) {
     const reason = movementReason(fleet,target), hostileColony = target.owner && target.owner!=='player' && player().relations[target.owner].status==='war';
     const hostileFleet = getVisibleFleets(state,'player',target.id).some(f=>f.owner!=='player' && player().relations[f.owner].status==='war');
     const war = hostileColony || hostileFleet;
@@ -143,9 +152,11 @@ function renderFleet() {
     if (home.owner==='player' && fleet.hp<fleet.ships*ship.hp) actions += '<button data-action="repair">Repair ◇10</button>';
     const merge = ownFleets.find(f=>f.id!==fleet.id && f.systemId===home.id && f.type===fleet.type && fleet.type!=='colony');
     if (merge) actions += `<button data-action="merge" data-target="${merge.id}" title="Merge ${escape(merge.name)} into this fleet; 1 order">Merge +${merge.ships}</button>`;
-    if (!actions) detail += ' · Select a connected star to plot a jump.';
+    if (!actions) detail += ' · Select a star to plot a jump or a course.';
   }
-  $('#fleet-bar').innerHTML = `<span class="fleet-icon">${ship.icon}</span><div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<button class="small-button ghost" data-action="fleet-roster" title="All fleets">⌁ ${ownFleets.length}</button><button class="small-button ghost" data-action="next-fleet" title="Next fleet (N)">⇥</button><div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>`;
+  if(fleet.heritage?.length)actions+=`<button class="small-button ghost" data-action="fleet-heritage" data-fleet-target="${fleet.id}">Heritage ✦</button>`;
+  $('#fleet-bar').classList.toggle('has-route',Boolean(navigation.display));
+  $('#fleet-bar').innerHTML = `<span class="fleet-icon">${ship.icon}</span><div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<button class="small-button ghost" data-action="fleet-roster" title="All fleets">⌁ ${ownFleets.length}</button><button class="small-button ghost" data-action="next-fleet" title="Next fleet (N)">⇥</button><div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>${renderRouteStrip(state,fleet,navigation)}`;
 }
 function renderPage() {
   if (page==='galaxy') return;
@@ -160,7 +171,7 @@ function renderPage() {
     const victory=getVictoryProgress(state), colonies=state.systems.filter(s=>s.owner==='player');
     html=`<div class="page-top"><div><div class="eyebrow">MANY WORLDS. ONE HORIZON.</div><h2>The Concord</h2><p>Make a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.</p></div><div class="page-symbol">⌘</div></div><div class="empire-overview"><div class="overview-card"><div class="eyebrow">COLONIZED WORLDS</div><strong>${stats.colonies}</strong><p>${stats.population} billion citizens across the Reach</p></div><div class="overview-card"><div class="eyebrow">FLEET POWER</div><strong>${num(stats.military)}</strong><p>${stats.ships} ships · ${stats.upkeep} credits upkeep / cycle</p></div><div class="overview-card"><div class="eyebrow">LEGACY SCORE</div><strong>${num(stats.score)}</strong><p>Highest score at cycle ${victory.legacy.finalTurn} wins</p></div></div><div class="section-label">Colonial administration</div><table class="colony-table"><thead><tr><th>World</th><th>Population</th><th>Development</th><th>Construction</th><th></th></tr></thead><tbody>${colonies.map(s=>`<tr><td>${escape(s.name)}</td><td>${s.population} / ${getSystemYield(state,s).capacity}</td><td><span class="colony-charter-name">${escape(charterLabel(s))}</span><small class="colony-slot-count">${s.buildings.length} / ${getInfrastructure(state,s).capacity} slots</small></td><td>${s.queue?escape(getConstructionProject(s.queue).name):'Idle'}</td><td><button data-action="inspect" data-system="${s.id}">Inspect →</button></td></tr>`).join('')}</tbody></table><div class="victory-grid">${renderAlignmentCard(state)}<div class="victory-card"><h3>⛨ Domination</h3><p>Unite the Reach under one banner by holding all four founding homeworlds at the same time.</p><div class="progress-track"><i style="width:${victory.domination.current/4*100}%"></i></div><p style="margin-top:10px">${victory.domination.current} / 4 founding systems</p></div></div><section class="network-section"><div class="section-label">The awakening network</div>${renderPublicRaces(state)}</section><div class="panel-section" style="margin-top:22px;padding-left:0;padding-right:0"><div class="section-label">Fleet registry</div><div class="fleet-list">${state.fleets.filter(f=>f.owner==='player').map(f=>`<button class="fleet-row" data-fleet="${f.id}"><span class="ship-symbol">${SHIPS[f.type].icon}</span><span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${Math.ceil(f.hp)} hull · ${fleetPower(state,f)} combat power</small></span><span class="fleet-ready">${f.movesLeft} jumps</span></button>`).join('')}</div></div>`;
   } else if (page==='journal') {
-    html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p></div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','research','combat','diplomacy','war'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><div><p>${escape(l.text)}</p>${l.reportId && getCombatReport(state,l.reportId)?`<button class="small-button" style="margin-top:10px" data-action="combat-report" data-report="${l.reportId}">Battle report →</button>`:''}</div></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
+    html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p></div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','research','combat','diplomacy','war'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><div><p>${escape(l.text)}</p>${l.reportId && getCombatReport(state,l.reportId)?`<button class="small-button" style="margin-top:10px" data-action="combat-report" data-report="${l.reportId}">Battle report →</button>`:''}${l.type==='discovery' && l.systemId && getDiscoveryView(state,l.systemId)?`<button class="small-button" style="margin-top:10px" data-action="anomaly" data-system="${l.systemId}">Expedition record →</button>`:''}</div></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
   }
   $('#workspace-page').innerHTML=html;
 }
@@ -174,9 +185,12 @@ function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $
 function buildMenu(systemId,tab='building',replaceBuildingId=null) {
   openModal('build',renderConstructionMenu(state,systemId,tab,replaceBuildingId),true);
 }
-function showAnomaly(systemId) {
-  const system=systemById(systemId), anomaly=ANOMALIES[system.anomaly?.id]; if (!anomaly) return;
-  openModal('anomaly',`<div class="eyebrow">EXPEDITION REPORT · ${escape(system.name)}</div><h2 id="modal-title">${escape(anomaly.name)}</h2><p class="modal-lead">${escape(anomaly.description)}</p>${anomaly.choices.map(c=>`<button class="choice-card" data-action="anomaly-choice" data-system="${systemId}" data-choice="${c.id}"><b>${escape(c.label)} →</b><p>${escape(c.description)} · 1 order</p></button>`).join('')}<p class="empty-note" style="margin-top:17px">An expedition must be present, or this world must belong to you. The choice is permanent.</p>`);
+function showAnomaly(systemId,replaceBuildingId=null) {
+  openModal('anomaly',renderDiscoveryDialog(state,systemId,replaceBuildingId),true);
+}
+function showFleetHeritage(fleetId) {
+  const fleet=fleetById(fleetId);if(!fleet || fleet.owner!=='player')return;
+  openModal('heritage',`<div class="eyebrow">CONCORD FLEET HERITAGE</div><h2 id="modal-title">${escape(fleet.name)}</h2><p class="modal-lead">The discoveries carried forward by this task force. These records survive mergers; they do not imply that every original hull remains.</p><div class="discovery-history">${(fleet.heritage||[]).map(entry=>`<article class="discovery-history-entry"><div class="discovery-history-meta">RECOVERED IN CYCLE ${entry.turn} · ${escape(FACTIONS[entry.factionId].shortName)}</div><h3>${escape(entry.name)}</h3><p>Recovered from ${escape(systemById(entry.systemId).name)}. The expedition's story remains with this fleet.</p><button class="small-button ghost" data-action="heritage-origin" data-system="${entry.systemId}">Read the expedition record →</button></article>`).join('')}</div>`);
 }
 function showMenu() {
   openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · ${escape(state.seed)} · The Concord</p><div class="menu-grid"><button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
@@ -249,10 +263,10 @@ $('#import-save').addEventListener('change',async event=>{
   const file=event.target.files[0]; event.target.value=''; if (!file) return;
   try { if (file.size>3_000_000) throw new Error('Save file is too large.'); const candidate=JSON.parse(await file.text()); if (!validateSave(candidate)) throw new Error('This file is not a valid Asterion Reach campaign.');
     openModal('confirm-import',`<div class="eyebrow">RESTORE A CAMPAIGN</div><h2 id="modal-title">Return to cycle ${candidate.turn}?</h2><p class="modal-lead">This will replace the current autosave. Export your current campaign first if you want to keep it.</p><div class="modal-actions"><button data-action="export">Export current</button><button id="confirm-import" class="primary">Restore campaign</button></div>`);
-    $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=state.fleets.find(f=>f.owner==='player')?.id||null;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
+    $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
   } catch(error){toast(error.message,true);}
 });
-document.addEventListener('change',event=>{if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
+document.addEventListener('change',event=>{if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
 document.addEventListener('click',event=>{
   const el=event.target.closest('button,a'); if (!el||el.disabled) return;
   if (el.dataset.page) return setPage(el.dataset.page);
@@ -287,14 +301,21 @@ document.addEventListener('click',event=>{
     case 'build':if(dispatch({type:'build',systemId:el.dataset.system,itemId:el.dataset.item,replaceBuildingId:el.dataset.replace||null}))closeModal();break;
     case 'cancel-build':dispatch({type:'cancelBuild',systemId:el.dataset.system});break;
     case 'research':dispatch({type:'research',techId:el.dataset.tech});break;
+    case 'plan-route':if(dispatch({type:'planRoute',fleetId:selectedFleetId,destinationId:el.dataset.destination}))galaxy.focusRoute?.(fleetById(selectedFleetId)?.route?.path);break;
+    case 'fit-route':galaxy.focusRoute?.(fleetById(selectedFleetId)?.route?.path);break;
+    case 'continue-route':dispatch({type:'continueRoute',fleetId:selectedFleetId});break;
+    case 'clear-route':dispatch({type:'clearRoute',fleetId:selectedFleetId});break;
+    case 'replot-route':{const destinationId=fleetById(selectedFleetId)?.route?.destinationId;if(destinationId&&dispatch({type:'planRoute',fleetId:selectedFleetId,destinationId}))galaxy.focusRoute?.(fleetById(selectedFleetId)?.route?.path);break;}
     case 'move':dispatch({type:'move',fleetId:selectedFleetId,targetId:el.dataset.target});break;
     case 'colonize':openModal('colonize',`<div class="eyebrow">A NEW WORLD</div><h2 id="modal-title">Settle ${escape(systemById(fleetById(selectedFleetId).systemId).name)}?</h2><p class="modal-lead">Your Colony Ark will become the foundation of a new settlement. Establishing the colony consumes the ark, 30 credits, 20 minerals, and 1 order.</p><p class="empty-note">Worlds need at least ${player().techs.includes('terraforming')?0:player().techs.includes('ecology')?30:50}% habitability with your current technology.</p><div class="modal-actions"><button data-action="close-modal">Wait</button><button class="primary" data-action="colonize-confirm">Found colony →</button></div>`);break;
     case 'colonize-confirm':if(dispatch({type:'colonize',fleetId:selectedFleetId}))closeModal();break;
     case 'attack':dispatch({type:'attack',fleetId:selectedFleetId});break;
     case 'repair':dispatch({type:'repair',fleetId:selectedFleetId});break;
     case 'merge':dispatch({type:'merge',fleetId:selectedFleetId,targetFleetId:el.dataset.target});break;
+    case 'fleet-heritage':showFleetHeritage(el.dataset.fleetTarget);break;
+    case 'heritage-origin':showAnomaly(el.dataset.system);break;
     case 'anomaly':showAnomaly(el.dataset.system);break;
-    case 'anomaly-choice':if(dispatch({type:'anomaly',systemId:el.dataset.system,choiceId:el.dataset.choice}))closeModal();break;
+    case 'anomaly-choice':if(dispatch({type:'anomaly',systemId:el.dataset.system,choiceId:el.dataset.choice,replaceBuildingId:el.dataset.replace||null}))closeModal();break;
     case 'diplomacy':dispatch({type:'diplomacy',targetId:el.dataset.target,stance:el.dataset.stance,offerId:el.dataset.offer});break;
     case 'review-peace':showPeaceOffer(el.dataset.offer);break;
     case 'peace-response':if(dispatch({type:'diplomacy',targetId:el.dataset.target,stance:el.dataset.stance,offerId:el.dataset.offer}))closeModal();break;
@@ -326,7 +347,7 @@ document.addEventListener('keydown',event=>{
   if(event.key==='?')window.open('./guide.html','_blank','noopener');
 });
 render();
-galaxy.focus(selectedSystemId);
+fleetById(selectedFleetId)?.route?galaxy.focusRoute?.(fleetById(selectedFleetId).route.path):galaxy.focus(selectedSystemId);
 if(importedError)toast(importedError,true);
 if(isNew)showWelcome();
 // Read-only inspection hook for reproducible browser acceptance, never a mutation API.

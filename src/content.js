@@ -40,6 +40,8 @@ export const BUILDINGS = {
   forum: { id: 'forum', name: 'Civic Forum', icon: '⌂', cost: { credits: 50, minerals: 30 }, work: 40, requires: ['diplomacy'], description: '+1 order each turn and +3 credits.', credits: 3, orders: 1 },
   bastion: { id: 'bastion', name: 'Orbital Bastion', icon: '⛨', cost: { credits: 45, minerals: 60 }, work: 50, requires: ['shields'], description: '+30 colony defense. Invading fleets suffer retaliatory fire.', defense: 30 },
   beacon: { id: 'beacon', name: 'Asterion Beacon', icon: '✦', cost: { credits: 180, minerals: 180 }, work: 140, requires: ['singularity'], description: 'A public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.' },
+  ancient_observatory: { id: 'ancient_observatory', name: 'Ancient Observatory', icon: '✧', cost: { credits: 80, minerals: 40 }, work: 60, requires: ['computing'], discovery: 'observatory', science: 8, description: '+8 science each turn. A unique planetary site; occupies one slot and does not replace a Research Enclave or support an Academy Charter.' },
+  lattice_works: { id: 'lattice_works', name: 'Lattice Works', icon: '❖', cost: { credits: 80, minerals: 40 }, work: 60, requires: ['industry'], discovery: 'reef', minerals: 4, production: 4, description: '+4 minerals and +4 production each turn. A living planetary site; occupies one slot and does not replace charter-supporting infrastructure.' },
 };
 
 export const SHIPS = {
@@ -56,6 +58,34 @@ export const ANOMALIES = {
   garden: { id: 'garden', name: 'Garden Between Stars', description: 'A biosphere of impossible geometry grows beneath the surface. Its caretakers wait for a signal.', choices: [{ id: 'preserve', label: 'Wake the caretakers', description: 'Habitability rises by 25 points; gain 20 science.', habitability: 25, gain: { science: 20 } }, { id: 'harvest', label: 'Harvest the exotic compounds', description: 'Gain 65 credits and 25 minerals.', gain: { credits: 65, minerals: 25 } }] },
   echo: { id: 'echo', name: 'Echo of the First Gate', description: 'Your instruments detect a door folded into the fabric of space. For a moment, you hear your own voice answering from the other side.', choices: [{ id: 'listen', label: 'Map the resonance', description: 'Gain 75 science.', gain: { science: 75 } }, { id: 'reach', label: 'Reach through the echo', description: 'Chart every star within two jumps of this system.', reveal: 2 }] },
   wreck: { id: 'wreck', name: 'A Banner in the Dark', description: 'A forgotten flagship drifts through a field of broken weapons. Its cargo manifests survive alongside a surprisingly intact reactor.', choices: [{ id: 'credit', label: 'Claim the lost treasury', description: 'Gain 90 credits.', gain: { credits: 90 } }, { id: 'reactor', label: 'Study the reactor', description: 'Gain 40 science and 30 minerals.', gain: { science: 40, minerals: 30 } }] },
+  observatory: {
+    id: 'observatory', name: 'The Last Observatory', multiStage: true, support: 'lab', siteId: 'ancient_observatory',
+    description: 'Beneath a mountain, a ring of mirrors still follows stars that no longer exist. One instrument has stopped moving. Its lens is pointed at your expedition.',
+    matureDescription: 'The observatory’s final atlas is complete. Its instruments can preserve the measurements here, or compress their remaining precision into one portable record.',
+    continuation: 'Settle this world and operate a Research Enclave for three completed cycles without hostile warships in orbit. Then choose 140 science and 30 credits, or restore an Ancient Observatory for 80 credits, 40 minerals and 60 work. Restoration requires Quantum Archives and one infrastructure slot (or explicit replacement), producing +8 science. The opportunity stays with the world if another empire takes it; progress never expires.',
+    choices: [
+      { id: 'salvage', label: 'Take the timing core', description: 'Gain 65 minerals and 20 science. Exhaust the observatory permanently.', gain: { minerals: 65, science: 20 } },
+      { id: 'preserve', label: 'Let the observatory finish', description: 'Spend 40 credits and 20 minerals to begin restoration research.', cost: { credits: 40, minerals: 20 }, requires: ['physics'], preserve: true },
+    ],
+    finalChoices: [
+      { id: 'restore', label: 'Keep the sky here', description: 'Commission an Ancient Observatory: 80 credits, 40 minerals, 60 work, one slot; +8 science each turn. Cancelling construction preserves the restoration plan but never reopens salvage.', buildingId: 'ancient_observatory' },
+      { id: 'harvest', label: 'Publish the last atlas', description: 'Gain 140 science and 30 credits. Exhaust the observatory permanently.', gain: { science: 140, credits: 30 } },
+    ],
+  },
+  reef: {
+    id: 'reef', name: 'The Patient Reef', multiStage: true, support: 'mine', siteId: 'lattice_works',
+    description: 'A pale lattice grows through the planet’s crust. Each branch encloses a tool. None contains a weapon. Far below, something waits for permission to continue.',
+    matureDescription: 'The reef has learned your machines. Its new chambers contain unfinished bridges and empty workshops. It can grow with this settlement, or surrender one final harvest.',
+    continuation: 'Settle this world and operate an Orbital Extractor for three completed cycles without hostile warships in orbit. Then choose 120 minerals and 20 science, or grow Lattice Works for 80 credits, 40 minerals and 60 work. Restoration requires Autonomous Industry and one infrastructure slot (or explicit replacement), producing +4 minerals and +4 production. The opportunity stays with the world if another empire takes it; progress never expires.',
+    choices: [
+      { id: 'salvage', label: 'Quarry the lattice', description: 'Gain 85 minerals. Exhaust the reef permanently.', gain: { minerals: 85 } },
+      { id: 'preserve', label: 'Feed the root', description: 'Spend 35 credits and 20 minerals to preserve the living structure.', cost: { credits: 35, minerals: 20 }, requires: ['ecology'], preserve: true },
+    ],
+    finalChoices: [
+      { id: 'restore', label: 'Grow a living foundry', description: 'Commission Lattice Works: 80 credits, 40 minerals, 60 work, one slot; +4 minerals and +4 production each turn. Cancelling construction preserves the restoration plan but never reopens salvage.', buildingId: 'lattice_works' },
+      { id: 'harvest', label: 'Harvest its final bloom', description: 'Gain 120 minerals and 20 science. Exhaust the reef permanently.', gain: { minerals: 120, science: 20 } },
+    ],
+  },
 };
 
 export const SYSTEM_NAMES = ['Solace', 'Veyr Prime', 'Kharos', 'Lumen', 'Meridian', 'Hesper', 'Aurelia', 'Nacre', 'Caldera', 'Velorum', 'Ashfall', 'Carina', 'Eidolon', 'Sable', 'Ilyra', 'Kepler', 'Stillwater', 'Orison', 'Cinder', 'Bellatrix', 'Sundrift', 'Thalassa', 'Ophion', 'Tethys', 'Corvus', 'Elysian', 'Aster', 'Nyx', 'Haven', 'Aldebaran', 'Caelum', 'Vesper', 'Iona', 'Halcyon', 'Antares', 'Seraph', 'Peregrine', 'Morrow', 'Zenith', 'Eos', 'Terminus', 'Asterion'];

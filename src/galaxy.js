@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { FACTIONS, PLANET_TYPES, SHIPS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
 import { getPublicRaces } from './victory.js';
+import { getRoutePreview, getRouteStatus } from './navigation.js';
+import { getDiscoveryView } from './discoveries.js';
 import './galaxy.css';
 
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -103,6 +105,13 @@ export class GalaxyView {
     this.canvas.className = 'galaxy-canvas';
     this.canvas.setAttribute('aria-hidden', 'true');
     this.container.append(this.canvas);
+    this.routeLayer = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    this.routeLayer.classList.add('galaxy-route-overlay');
+    this.routeLayer.setAttribute('aria-hidden', 'true');
+    this.routeLayer.setAttribute('focusable', 'false');
+    this.container.append(this.routeLayer);
+    this.routes = [];
+    this.routePoints = new Map();
     this.labelLayer = document.createElement('div');
     this.labelLayer.className = 'galaxy-labels';
     this.labelLayer.setAttribute('aria-label', 'Galaxy systems and fleets');
@@ -310,11 +319,13 @@ export class GalaxyView {
     this.selectedFleetId = selectedFleetId;
     this.systemsById = new Map(state.systems.map(s => [s.id, s]));
     this.publicBeaconIds = new Set(getPublicRaces(state).flatMap(race => race.sites.map(site => site.id)));
+    this.discoverySignals = new Set(state.systems.filter(system => ['opening', 'maturing', 'ready'].includes(getDiscoveryView(state, system.id)?.phase)).map(system => system.id));
     if (galaxyChanged) this.setBounds(state);
     this.clearGroup(this.dynamicGroup);
     this.labelLayer.replaceChildren();
     this.labels = []; this.hitTargets = []; this.selectionRings = [];
     const selectedFleet = state.fleets?.find(f => f.id === selectedFleetId);
+    this.buildRoutes(state, selectedFleet);
     const neighbors = new Set();
     if (selectedFleet?.owner === 'player') for (const lane of state.lanes || []) {
       if (lane[0] === selectedFleet.systemId) neighbors.add(lane[1]);
@@ -331,6 +342,93 @@ export class GalaxyView {
     this.sortedLabels = [...this.labels].sort((a, b) => b.priority - a.priority);
     this.labelsDirty = true;
     this.requestFrame();
+  }
+
+  /** Route helpers are the sole source of path and uncertainty information. */
+  buildRoutes(state, fleet) {
+    this.routeLayer.replaceChildren();
+    this.routes = [];
+    this.routePoints = new Map();
+    if (!fleet || fleet.owner !== 'player') return;
+    const committed = getRouteStatus(state, fleet.id);
+    const prospective = this.selectedSystemId && this.selectedSystemId !== fleet.systemId && this.selectedSystemId !== committed.destinationId
+      ? getRoutePreview(state, fleet.id, this.selectedSystemId) : null;
+    const svg = (tag, attributes, parent) => {
+      const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+      for (const [key, value] of Object.entries(attributes)) element.setAttribute(key, value);
+      parent.append(element);
+      return element;
+    };
+    for (const [kind, result] of [['committed', committed], ['preview', prospective]]) {
+      if (!result || !Array.isArray(result.path) || result.path.length < 2) continue;
+      // A defensive boundary for malformed imported state, without discovering
+      // anything the shared navigation forecast did not already supply.
+      if (result.path.some(id => !known(this.systemsById.get(id) || {}))) continue;
+      const group = svg('g', { class: `galaxy-route galaxy-route-${kind}` }, this.routeLayer);
+      const segments = result.path.slice(1).map((id, index) => {
+        const segment = svg('g', {}, group);
+        const shadow = svg('path', { class: 'galaxy-route-shadow' }, segment);
+        const line = svg('path', { class: 'galaxy-route-line' }, segment);
+        return { from: result.path[index], to: id, shadow, line };
+      });
+      const destination = svg('circle', { class: 'galaxy-route-destination' }, group);
+      this.routes.push({ kind, result, segments, destination });
+      const uncertain = new Set(result.uncertainSystems || []);
+      result.path.slice(1).forEach((id, index) => this.routePoints.set(id, {
+        id, kind, number: index + 1, jumps: result.path.length - 1,
+        destination: index === result.path.length - 2,
+        uncertain: uncertain.has(id),
+        stopReason: result.stopBefore?.systemId === id ? result.stopBefore.reason : '',
+      }));
+    }
+    // Preview waypoints replace coincident course markers instead of stacking
+    // two numbers over the same star. The two paths remain independently visible.
+    for (const point of this.routePoints.values()) {
+      const group = svg('g', { class: `galaxy-route-waypoint galaxy-route-${point.kind}${point.uncertain ? ' is-uncertain' : ''}${point.stopReason ? ' is-stopped' : ''}` }, this.routeLayer);
+      svg('circle', { r: point.destination ? 9 : 8 }, group);
+      const number = svg('text', { 'text-anchor': 'middle', dy: '.35em' }, group);
+      number.textContent = point.number;
+      point.element = group;
+    }
+  }
+
+  placeRoutes() {
+    if (!this.routes.length) return;
+    this.routeLayer.setAttribute('viewBox', `0 0 ${this.width} ${this.height}`);
+    const points = new Map();
+    for (const route of this.routes) for (const id of route.result.path) {
+      if (points.has(id)) continue;
+      this.projected.copy(this.world(this.systemsById.get(id))).project(this.camera);
+      points.set(id, {
+        x: (this.projected.x * .5 + .5) * this.width,
+        y: (-this.projected.y * .5 + .5) * this.height + (this.fallback ? 27 : 0),
+      });
+    }
+    const radius = clamp(this.unit * 1.65 * this.height / this.baseHeight * this.camera.zoom, 6, 19);
+    const committedEdges = new Set(this.routes.filter(route => route.kind === 'committed').flatMap(route => route.segments.map(segment => [segment.from, segment.to].sort().join(':'))));
+    for (const route of this.routes) {
+      const stoppedAt = route.result.stopBefore ? route.result.path.indexOf(route.result.stopBefore.systemId) : -1;
+      route.segments.forEach((segment, index) => {
+        const from = points.get(segment.from), to = points.get(segment.to);
+        const length = Math.hypot(to.x - from.x, to.y - from.y);
+        const dx = (to.x - from.x) / Math.max(1, length), dy = (to.y - from.y) / Math.max(1, length);
+        const inset = Math.min(radius, length * .3);
+        // A small parallel offset keeps a preview leg visible when it shares
+        // the current course, without shifting either endpoint's waypoint.
+        const shared = route.kind === 'preview' && committedEdges.has([segment.from, segment.to].sort().join(':'));
+        const offset = shared ? 3.5 : 0;
+        const d = `M ${from.x + dx * inset - dy * offset} ${from.y + dy * inset + dx * offset} L ${to.x - dx * inset - dy * offset} ${to.y - dy * inset + dx * offset}`;
+        segment.line.setAttribute('d', d); segment.shadow.setAttribute('d', d);
+        segment.line.classList.toggle('is-blocked', stoppedAt > 0 && index + 1 >= stoppedAt);
+      });
+      const end = points.get(route.result.path.at(-1));
+      route.destination.setAttribute('cx', end.x); route.destination.setAttribute('cy', end.y);
+      route.destination.setAttribute('r', radius + 5);
+    }
+    for (const point of this.routePoints.values()) {
+      const position = points.get(point.id);
+      point.element.setAttribute('transform', `translate(${position.x - radius - 4} ${position.y - radius - 4})`);
+    }
   }
 
   buildLanes(state, selectedFleet, neighbors) {
@@ -393,7 +491,7 @@ export class GalaxyView {
       const outer = circle(this.unit * 3.7, '#68d9cd', .13);
       outer.position.copy(position); this.dynamicGroup.add(outer);
     }
-    if (surveyed && system.anomaly && !system.anomaly.resolved) {
+    if (this.discoverySignals.has(system.id)) {
       const points = [new THREE.Vector3(0, this.unit * .5, 0), new THREE.Vector3(this.unit * .35, 0, 0), new THREE.Vector3(0, -this.unit * .5, 0), new THREE.Vector3(-this.unit * .35, 0, 0), new THREE.Vector3(0, this.unit * .5, 0)];
       const marker = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({ color: '#e9bb76' }));
       marker.position.set(position.x - this.unit * 2.5, position.y + this.unit * 2.5, 2);
@@ -417,14 +515,16 @@ export class GalaxyView {
     element.append(name);
     const status = document.createElement('small'); status.className = 'galaxy-system-status';
     const beacon = this.publicBeaconIds.has(system.id);
-    status.textContent = beacon ? `✦ ${FACTIONS[system.owner]?.shortName?.toUpperCase() || 'RESTORED'} BEACON` : system.owner ? FACTIONS[system.owner]?.shortName?.toUpperCase() || 'COLONY' : !surveyed ? 'UNSURVEYED' : system.anomaly && !system.anomaly.resolved ? '◇ ANOMALY' : PLANET_TYPES[system.type]?.name?.toUpperCase() || 'SURVEYED';
+    status.textContent = beacon ? `✦ ${FACTIONS[system.owner]?.shortName?.toUpperCase() || 'RESTORED'} BEACON` : system.owner ? FACTIONS[system.owner]?.shortName?.toUpperCase() || 'COLONY' : !surveyed ? 'UNSURVEYED' : this.discoverySignals.has(system.id) ? '◇ ANOMALY' : PLANET_TYPES[system.type]?.name?.toUpperCase() || 'SURVEYED';
     if (beacon) element.classList.add('is-beacon');
+    const routePoint = this.routePoints.get(system.id);
+    if (routePoint) element.classList.add(`is-route-${routePoint.kind}`);
     element.append(status);
-    element.setAttribute('aria-label', `${system.name}, ${status.textContent.toLowerCase()}${reachable ? ', adjacent to selected fleet' : ''}`);
+    element.setAttribute('aria-label', `${system.name}, ${status.textContent.toLowerCase()}${reachable ? ', adjacent to selected fleet' : ''}${routePoint ? `, ${routePoint.kind === 'committed' ? 'plotted course' : 'route preview'} jump ${routePoint.number} of ${routePoint.jumps}${routePoint.destination ? ', destination' : ''}${routePoint.stopReason ? `, ${routePoint.stopReason}` : ''}` : ''}`);
     element.addEventListener('click', event => { event.stopPropagation(); this.onSelect(system.id); });
     element.addEventListener('dblclick', event => { event.stopPropagation(); this.focus(system.id); });
     this.labelLayer.append(element);
-    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : system.owner === 'player' ? 80 : 40 });
+    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : routePoint ? 84 : system.owner === 'player' ? 80 : 40 });
   }
 
   buildFleetLabels(state) {
@@ -457,9 +557,16 @@ export class GalaxyView {
     const title = document.createElement('strong'); title.textContent = system.name;
     const line = document.createElement('span'); line.textContent = details;
     this.tooltip.append(title, line); this.tooltip.hidden = false;
+    const routePoint = this.routePoints.get(id);
+    if (routePoint) {
+      const route = document.createElement('span');
+      route.className = 'galaxy-tooltip-route';
+      route.textContent = `${routePoint.kind === 'committed' ? 'Plotted course' : 'Route preview'} · Jump ${routePoint.number} of ${routePoint.jumps}${routePoint.stopReason ? ` · ${routePoint.stopReason}` : routePoint.uncertain ? ' · Fleet presence unknown' : ''}`;
+      this.tooltip.append(route);
+    }
     const rect = this.container.getBoundingClientRect();
     this.tooltip.style.left = `${clamp(event.clientX - rect.left + 15, 8, this.width - Math.min(300, this.width - 16))}px`;
-    this.tooltip.style.top = `${clamp(event.clientY - rect.top - 64, 8, this.height - 70)}px`;
+    this.tooltip.style.top = `${clamp(event.clientY - rect.top - 64, 8, Math.max(8, this.height - this.tooltip.offsetHeight - 8))}px`;
   }
 
   pick(event) {
@@ -483,17 +590,56 @@ export class GalaxyView {
   }
 
   zoom(delta) {
-    this.targetZoom = clamp(this.targetZoom * Math.exp(delta), .6, 4.5);
+    this.targetZoom = clamp(this.targetZoom * Math.exp(delta), .35, 4.5);
     if (this.reducedMotion.matches) { this.camera.zoom = this.targetZoom; this.camera.updateProjectionMatrix(); }
     this.labelsDirty = true;
     this.requestFrame();
   }
 
   reset() {
+    if (this.state?.systems?.length) return this.fitSystems(this.state.systems);
     this.target.copy(this.mapCenter); this.targetZoom = 1;
-    if (this.reducedMotion.matches) { this.camera.position.x = this.target.x; this.camera.position.y = this.target.y; this.camera.zoom = 1; this.camera.updateProjectionMatrix(); }
+    if (this.reducedMotion.matches) { this.camera.position.x = this.target.x; this.camera.position.y = this.target.y; this.camera.zoom = this.targetZoom; this.camera.updateProjectionMatrix(); }
     this.labelsDirty = true;
     this.requestFrame();
+  }
+
+  /** Frame a supplied charted course without changing selection or issuing orders. */
+  focusRoute(path) {
+    if (!Array.isArray(path) || path.length < 2) return false;
+    const systems = path.map(id => this.systemsById?.get(id));
+    if (systems.some(system => !system || !known(system))) return false;
+    return this.fitSystems(systems);
+  }
+
+  fitSystems(systems) {
+    if (!systems.length || !this.surfaceVisible) return false;
+    const rect = this.container.getBoundingClientRect();
+    const page = this.container.closest('.galaxy-page');
+    const heading = page?.querySelector('.map-heading')?.getBoundingClientRect();
+    const fleetPanel = page?.querySelector('.fleet-bar')?.getBoundingClientRect();
+    const graphicsNotice = (this.fallbackNotice || this.contextNotice)?.getBoundingClientRect();
+    // Read chrome bounds only for an explicit fit. Selection, normal updates,
+    // animation and a player's manual camera work never refit the map.
+    const left = Math.min(72, this.width * .12), right = this.width - Math.min(120, this.width * .18);
+    const top = Math.max(40, heading?.height ? heading.bottom - rect.top + 40 : 0, graphicsNotice?.height ? graphicsNotice.bottom - rect.top + 32 : 0);
+    const panelTop = fleetPanel?.height && fleetPanel.top < rect.bottom ? fleetPanel.top - rect.top : this.height;
+    const bottom = Math.max(top + 80, Math.min(this.height - 45, panelTop - 50));
+    const positions = systems.map(system => this.world(system));
+    const minX = Math.min(...positions.map(position => position.x)), maxX = Math.max(...positions.map(position => position.x));
+    const minY = Math.min(...positions.map(position => position.y)), maxY = Math.max(...positions.map(position => position.y));
+    const scale = Math.min((right - left) / Math.max(this.unit * 10, maxX - minX), (bottom - top) / Math.max(this.unit * 10, maxY - minY));
+    this.targetZoom = clamp(scale * this.baseHeight / this.height, .35, 4.5);
+    const fittedScale = this.height * this.targetZoom / this.baseHeight;
+    this.target.set((minX + maxX) / 2 - ((left + right) / 2 - this.width / 2) / fittedScale,
+      (minY + maxY) / 2 + ((top + bottom) / 2 - this.height / 2 - (this.fallback ? 27 : 0)) / fittedScale);
+    if (this.reducedMotion.matches) {
+      this.camera.position.x = this.target.x; this.camera.position.y = this.target.y;
+      this.camera.zoom = this.targetZoom; this.camera.updateProjectionMatrix();
+    }
+    this.labelsDirty = true;
+    this.requestFrame();
+    return true;
   }
 
   placeLabels() {
@@ -513,6 +659,7 @@ export class GalaxyView {
       label.element.style.visibility = visible ? 'visible' : 'hidden';
       label.element.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)${label.kind === 'system' ? ' translateX(-50%)' : ''}`;
     }
+    this.placeRoutes();
     this.labelsDirty = false;
   }
 
@@ -595,7 +742,7 @@ export class GalaxyView {
     this.clearGroup(this.dynamicGroup); this.clearGroup(this.staticGroup);
     for (const resource of this.resources) resource.dispose();
     this.renderer?.dispose();
-    this.canvas.remove(); this.labelLayer.remove(); this.tooltip.remove(); this.backdropLabel.remove();
+    this.canvas.remove(); this.routeLayer.remove(); this.labelLayer.remove(); this.tooltip.remove(); this.backdropLabel.remove();
     this.fallbackNotice?.remove(); this.contextNotice?.remove();
     this.container.classList.remove('galaxy-view', 'galaxy-fallback', 'galaxy-dragging', 'galaxy-pointing');
   }

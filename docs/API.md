@@ -216,3 +216,30 @@ state.lastBriefing = {
 Only events produced **during that endTurn call** enter the briefing. Old player-action reports, discoveries, war declarations and other logs are excluded, preventing duplicate delayed notifications. AI events can retain the prior turn number because rivals act before the cycle advances; the briefing's own `turn` is the cycle shown after resolution. The snapshot is immutable, serializable and remains available for reopening until the next resolved cycle replaces it. An already-ended campaign rejects `endTurn` without replacing its final briefing.
 
 `validateReportState`, used by `validateSave`, checks reporting bounds, IDs, references, participant losses, outcomes, invasion arithmetic and optional navigation metadata. Destroyed fleet IDs are historical and need not remain in `state.fleets`. Briefing/log references may outlive report retention but must refer to an already issued ID. Tests in `tests/reports.test.js` cover actual losses, immutable history, defender reports, hidden-battle exclusion, invasion/shields/capture, end-turn boundaries, early victory, bounded storage and backward-compatible saves.
+
+## Fleet navigation
+
+`src/navigation.js` exports `getRoutePreview(state,fleetId,destinationId)` and `getRouteStatus(state,fleetId)`, also reexported by `game.js`. Both are pure and evaluate information available to the selected fleet's owner. Preview chooses the shortest accessible charted path; ties use ascending numeric system IDs. Closed public borders are excluded during planning. Fleet positions, hidden anomalies and unobserved colony details never influence path selection. Status evaluates the existing path without silently rerouting it.
+
+```js
+{
+  ok: true, reason: '', destinationId: 's7',
+  path: ['s0','s4','s5','s6','s7'], // includes current position
+  jumps: 4, totalOrders: 4,
+  maxJumpsNow: 2, maxOrdersNow: 2,
+  stopBefore: null, // or {systemId,reason}: first known impediment on full path
+  uncertainSystems: ['s4','s5','s6','s7'] // future positions without live sensors
+}
+```
+
+`ok` means a structurally valid path exists, even with no orders, no movement, or a visible blockade. `maxJumpsNow` and `maxOrdersNow` are the same disclosed ceiling: the minimum of remaining jumps, current movement, current orders, and the number of steps before the first observed hostile fleet or newly closed border. They cannot promise all those steps will occur: new contacts, discoveries or hidden opposition can stop travel sooner. `reason` explains why execution cannot start; otherwise it is empty. A later impediment still appears in `stopBefore`. No saved route returns `ok:false,path:[]`. An unknown/unreachable destination returns `ok:false`; the current position returns a valid one-node preview with zero jumps.
+
+Commands use the ordinary `command(state,action)` entry point and optional `factionId`:
+
+- `{type:'planRoute',fleetId,destinationId}` stores a route for free, even at zero orders/moves and even with an observed fleet on its path. Planning the current position clears an existing route.
+- `{type:'clearRoute',fleetId}` clears a route for free.
+- `{type:'continueRoute',fleetId}` deliberately executes ordinary one-lane movement up to the disclosed current ceiling. It charges no extra planning/continuation order. Routes never move automatically at end turn.
+
+Continue returns `{ok,outcome,message,jumpsCompleted,ordersSpent,movesSpent,combatReports:[]}`. `jumpsCompleted` counts successful physical jumps; `movesSpent` includes an intercepted jump attempt that withdrew to its origin. `combatReports` combines all reports from the actual jump. Outcomes are `arrived`, `moves-exhausted`, `orders-exhausted`, `blocked`, `intercepted`, `combat`, `destroyed`, `first-contact`, `discovery`, `campaign-ended`, or `paused`. A blocked first step returns `ok:false` with zero costs and leaves the entire state unchanged. Successful partial travel returns `ok:true` and its stopping reason. Every ship type stops before an observed hostile fleet; use a deliberate ordinary move to engage. Unknown opposition uses the ordinary paid interception/combat rules. Combat or destruction, first contact, and a newly surveyed unresolved anomaly or restored discovery site stop the sequence immediately. Discovery checks use the observer-safe view after arrival, including opening, maturing and ready phases. Routine surveys and remembered unresolved anomalies allow continued travel. Ordinary moves that fought also return `combatOccurred:true`; AI-only fights still produce no player reports.
+
+Optional version-1 storage is `fleet.route={destinationId,path:[currentSystem,...destination]}`. Paths contain 2–42 unique charted nodes linked by existing lanes, start at the fleet's current system and end at the destination. The save validator rejects extra route fields, loops, unknown nodes, stale origins and disconnected steps. Current border access is not a save-validity requirement: a route may become blocked without disappearing. Explicit replotting may find a new path. Ordinary successful movement advances a matching next step and clears a deviating route; interception and rejected movement keep it. Arrival clears the route. Merging preserves only the selected surviving fleet's route. Treaty withdrawal clears relocated fleets' routes, and successful game commands reconcile any other invalidated origins. Tests cover hidden-state noninterference, atomic rejection, exact movement costs, stops, administrative relocation, strict optional saves and twenty deterministic reload cycles without automatic travel.

@@ -73,14 +73,15 @@ test('invalid replacement requests are atomic and never destroy buildings immedi
 
 test('legacy over-capacity worlds and already-paid projects survive population loss and save restoration', () => {
   const state = funded(), colony = home(state);
-  colony.buildings = Object.keys(BUILDINGS).filter(id => id !== 'market');
+  const legacyBuildings = Object.keys(BUILDINGS).filter(id => !BUILDINGS[id].discovery);
+  colony.buildings = legacyBuildings.filter(id => id !== 'market');
   colony.population = 1;
   colony.charter = { type: 'forge', level: 2 };
   colony.queue = { itemId: 'market', kind: 'building', progress: 0, work: BUILDINGS.market.work, cost: { ...BUILDINGS.market.cost } };
   assert.ok(validateSave(state), 'old ordinary queued projects need no new slot metadata');
   const restored = JSON.parse(JSON.stringify(state));
   finish(restored);
-  assert.equal(home(restored).buildings.length, Object.keys(BUILDINGS).length);
+  assert.equal(home(restored).buildings.length, legacyBuildings.length);
   assert.equal(home(restored).charter.level, 2);
   assert.ok(getInfrastructure(restored, home(restored)).overCapacity > 0);
   assert.ok(validateSave(restored));

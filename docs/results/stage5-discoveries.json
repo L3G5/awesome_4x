@@ -1,0 +1,2198 @@
+{
+  "generatedAt": "2026-10-28T19:00:05.616Z",
+  "runtime": "v22.23.1",
+  "elapsedSeconds": 12.259,
+  "sources": {
+    "src/ai.js": "50528c2586d0ec39214e2d60927472ee2e3dc2273101f3a33f5b75d4e4a9bd4e",
+    "src/game.js": "44942d62551dec8d2841e8c231fe67c44206ef7d715deb362112430e0a11bd17",
+    "src/development.js": "79797a6f535a9bcc84d14f2f915cedf32f4b367358adba57199999df7bd22231",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/diplomacy.js": "b63473b9d052f1a58d699b8d855eff02770c9664cf337e69373e1608570c5e7c",
+    "src/reports.js": "1df885b5bfbf6b2e0f41783082448185b929fe96cf51b2976c8d542b865b4035",
+    "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "scripts/campaign-benchmark.mjs": "1c51362fee7d3829cfccc9ae7c4ee2838750d4ffccb4c1a188a60439821f5d9e"
+  },
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7",
+    "stage4-audit-8",
+    "stage4-audit-9",
+    "stage4-audit-10",
+    "stage4-audit-11",
+    "stage4-audit-12",
+    "stage4-audit-13",
+    "stage4-audit-14",
+    "stage4-audit-15",
+    "stage4-audit-16",
+    "stage4-audit-17",
+    "stage4-audit-18",
+    "stage4-audit-19"
+  ],
+  "policies": {
+    "passive": {
+      "subject": "Three AI empires per game; 60 observations per empire milestone.",
+      "description": "The player issues no commands. Measures autonomous rival development and race completion."
+    },
+    "balanced": {
+      "subject": "Player empire; 20 observations per milestone.",
+      "description": "Uses a mixed research order and the shared AI for exploration, expansion, military control, economic specialization and beacon commitments.",
+      "researchPriority": [
+        "logistics",
+        "ecology",
+        "physics",
+        "industry",
+        "diplomacy",
+        "weapons",
+        "computing",
+        "shields",
+        "singularity",
+        "command",
+        "cruisers",
+        "terraforming"
+      ]
+    }
+  },
+  "method": "20 fixed seeds per mode; no resource grants or hidden-fleet queries. All policies issue actions through the shared command API and retain ordinary faction traits. Every completed cycle checks save validity and nonnegative credits, minerals, science and orders. Timing medians include only empires reaching the milestone before the campaign ends; counts are reported alongside them. An even sample uses the mean of its middle pair. Passive timings describe 60 AI empires; other policy timings describe 20 player empires. Outcomes describe these automated policies, not human win rates. Alignment interruptions count transitions from active to inactive; this measure does not distinguish blockade, lost sites and funding shortfalls.",
+  "summary": {
+    "passive": {
+      "games": 20,
+      "outcomes": {
+        "choir:Transcendence": 12,
+        "veyr:Transcendence": 4,
+        "khar:Transcendence": 4
+      },
+      "finish": {
+        "count": 20,
+        "min": 60,
+        "median": 70.5,
+        "max": 83
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 46.5,
+        "max": 70
+      },
+      "firstTech": {
+        "count": 60,
+        "min": 2,
+        "median": 7,
+        "max": 11
+      },
+      "protocol": {
+        "count": 57,
+        "min": 33,
+        "median": 49,
+        "max": 69
+      },
+      "allTechs": {
+        "count": 48,
+        "min": 46,
+        "median": 62,
+        "max": 81
+      },
+      "firstCharter": {
+        "count": 60,
+        "min": 16,
+        "median": 23.5,
+        "max": 34
+      },
+      "firstBeacon": {
+        "count": 54,
+        "min": 43,
+        "median": 56,
+        "max": 77
+      },
+      "alignmentStart": {
+        "count": 42,
+        "min": 51,
+        "median": 63,
+        "max": 83
+      },
+      "totalInterruptions": 8,
+      "finalCharters": {
+        "count": 60,
+        "min": 0,
+        "median": 6,
+        "max": 10
+      },
+      "invalid": [],
+      "negativeResource": [],
+      "discoveries": {
+        "byFaction": {
+          "player": {
+            "preserve": 0,
+            "restore": 0,
+            "harvest": 0,
+            "salvage": 0,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "veyr": {
+            "preserve": 0,
+            "restore": 0,
+            "harvest": 0,
+            "salvage": 10,
+            "completedAncientSites": 0,
+            "activeAtFinish": 1
+          },
+          "khar": {
+            "preserve": 9,
+            "restore": 1,
+            "harvest": 7,
+            "salvage": 8,
+            "completedAncientSites": 1,
+            "activeAtFinish": 0
+          },
+          "choir": {
+            "preserve": 1,
+            "restore": 0,
+            "harvest": 2,
+            "salvage": 10,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          }
+        },
+        "preservedAt": {
+          "count": 10,
+          "min": 10,
+          "median": 38,
+          "max": 47
+        },
+        "restoredAt": {
+          "count": 1,
+          "min": 38,
+          "median": 38,
+          "max": 38
+        },
+        "harvestedAt": {
+          "count": 9,
+          "min": 21,
+          "median": 46,
+          "max": 56
+        },
+        "completedAt": {
+          "count": 1,
+          "min": 43,
+          "median": 43,
+          "max": 43
+        }
+      }
+    },
+    "balanced": {
+      "games": 20,
+      "outcomes": {
+        "khar:Transcendence": 6,
+        "choir:Transcendence": 3,
+        "veyr:Transcendence": 7,
+        "player:Transcendence": 4
+      },
+      "finish": {
+        "count": 20,
+        "min": 60,
+        "median": 73,
+        "max": 87
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 28,
+        "median": 50.5,
+        "max": 65
+      },
+      "firstTech": {
+        "count": 20,
+        "min": 3,
+        "median": 4,
+        "max": 11
+      },
+      "protocol": {
+        "count": 20,
+        "min": 45,
+        "median": 49,
+        "max": 60
+      },
+      "allTechs": {
+        "count": 18,
+        "min": 56,
+        "median": 61,
+        "max": 69
+      },
+      "firstCharter": {
+        "count": 20,
+        "min": 20,
+        "median": 22.5,
+        "max": 38
+      },
+      "firstBeacon": {
+        "count": 19,
+        "min": 52,
+        "median": 57,
+        "max": 68
+      },
+      "alignmentStart": {
+        "count": 18,
+        "min": 60,
+        "median": 64,
+        "max": 69
+      },
+      "totalInterruptions": 13,
+      "finalCharters": {
+        "count": 20,
+        "min": 4,
+        "median": 7,
+        "max": 9
+      },
+      "invalid": [],
+      "negativeResource": [],
+      "discoveries": {
+        "byFaction": {
+          "player": {
+            "preserve": 5,
+            "restore": 4,
+            "harvest": 1,
+            "salvage": 7,
+            "completedAncientSites": 4,
+            "activeAtFinish": 4
+          },
+          "veyr": {
+            "preserve": 1,
+            "restore": 0,
+            "harvest": 1,
+            "salvage": 5,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "khar": {
+            "preserve": 6,
+            "restore": 2,
+            "harvest": 4,
+            "salvage": 8,
+            "completedAncientSites": 2,
+            "activeAtFinish": 2
+          },
+          "choir": {
+            "preserve": 3,
+            "restore": 0,
+            "harvest": 3,
+            "salvage": 3,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          }
+        },
+        "preservedAt": {
+          "count": 15,
+          "min": 9,
+          "median": 34,
+          "max": 53
+        },
+        "restoredAt": {
+          "count": 6,
+          "min": 23,
+          "median": 40.5,
+          "max": 58
+        },
+        "harvestedAt": {
+          "count": 9,
+          "min": 17,
+          "median": 46,
+          "max": 59
+        },
+        "completedAt": {
+          "count": 6,
+          "min": 28,
+          "median": 44.5,
+          "max": 63
+        }
+      }
+    }
+  },
+  "discoveryMethod": "Discovery decisions count only the two staged types, The Last Observatory and The Patient Reef, attributed to the faction that made each recorded choice. Completed sites count each world once when its ancient building is first observed after a completed cycle, attributed to its owner then; activeAtFinish counts surviving sites by final owner. Construction can be cancelled or worlds captured, so restoration, completion and final-owner totals may differ. Counts describe these automated policies, not human win rates.",
+  "discoveryPolicy": {
+    "preservation": "Preserve an owned or local-Ark site when supporting infrastructure can realistically operate. Wait for prerequisites or reserved funding rather than automatically salvage. Build missing maturation support through ordinary paid construction.",
+    "settlement": "Scouts leave viable sites intact if an existing Ark can reach them within three known safe jumps, or an owned shipyard is within three charted enterable jumps. Ark route scores subtract 0.7 for a remembered opening discovery and 1.4 for a remembered maturing or ready discovery. Live remote phases and history are never consulted.",
+    "valuation": "Compare lasting weighted output after construction time against normal paid costs, displaced building output and the final portable reward. Colony role affects useful production and complementary output. Science value falls with remaining research. Planning time estimates own remaining Protocol research, beacon construction, missing colony hosts and alignment, bounded by 45 cycles, the campaign end and public active races. There is no required restoration quota.",
+    "constraints": "Ordinary resource and order rules apply. Preserve the next beacon budget and alignment payment. Replacement protects beacons, charter supports, maturation supports and the last or strategic shipyard. Known cancelled or captured restoration rights may rebuild at full ordinary prices; salvage never reopens."
+  },
+  "reproduction": "node scripts/campaign-benchmark.mjs --discoveries docs/results/stage5-discoveries.json",
+  "runs": [
+    {
+      "mode": "passive",
+      "seed": "ASTERION",
+      "turn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 45,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 8
+            }
+          ]
+        },
+        {
+          "systemId": "s24",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 37
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 46
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-1",
+      "turn": 70,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 43,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 39
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 46
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 25
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-2",
+      "turn": 73,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 46,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": "ancient_observatory",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 29
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "restore",
+              "turn": 38
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 19
+            }
+          ]
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s8",
+          "buildingId": "ancient_observatory",
+          "factionId": "khar",
+          "turn": 43
+        }
+      ]
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-3",
+      "turn": 70,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 60,
+      "discoveries": [
+        {
+          "systemId": "s20",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 8
+            }
+          ]
+        },
+        {
+          "systemId": "s32",
+          "id": "reef",
+          "phase": "opening",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": []
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-4",
+      "turn": 71,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 63,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 3
+            }
+          ]
+        },
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 52
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-5",
+      "turn": 72,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 47,
+      "discoveries": [
+        {
+          "systemId": "s20",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 17
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 15
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-6",
+      "turn": 60,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 52,
+      "discoveries": [
+        {
+          "systemId": "s24",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 6
+            }
+          ]
+        },
+        {
+          "systemId": "s32",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 3
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-7",
+      "turn": 82,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 40,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 13
+            }
+          ]
+        },
+        {
+          "systemId": "s20",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 12
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-8",
+      "turn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 38,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 1
+            }
+          ]
+        },
+        {
+          "systemId": "s16",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 34
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 40
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-9",
+      "turn": 73,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 59,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 6
+            }
+          ]
+        },
+        {
+          "systemId": "s24",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 40
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 45
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-10",
+      "turn": 76,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 35,
+      "discoveries": [
+        {
+          "systemId": "s16",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 41
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 53
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 31
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-11",
+      "turn": 80,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 24,
+      "discoveries": [
+        {
+          "systemId": "s24",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "preserve",
+              "turn": 10
+            },
+            {
+              "factionId": "choir",
+              "choiceId": "harvest",
+              "turn": 21
+            }
+          ]
+        },
+        {
+          "systemId": "s28",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 20
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-12",
+      "turn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 53,
+      "discoveries": [
+        {
+          "systemId": "s12",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 17
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 4
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-13",
+      "turn": 61,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 53,
+      "discoveries": [
+        {
+          "systemId": "s20",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 7
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 5
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-14",
+      "turn": 64,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 34,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 5
+            }
+          ]
+        },
+        {
+          "systemId": "s20",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 4
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-15",
+      "turn": 70,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 64,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 8
+            }
+          ]
+        },
+        {
+          "systemId": "s16",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 47
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 56
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-16",
+      "turn": 74,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 31,
+      "discoveries": [
+        {
+          "systemId": "s36",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 10
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 10
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-17",
+      "turn": 71,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 34,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 39
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 49
+            }
+          ]
+        },
+        {
+          "systemId": "s24",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 34
+            },
+            {
+              "factionId": "choir",
+              "choiceId": "harvest",
+              "turn": 52
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-18",
+      "turn": 67,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 61,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 5
+            }
+          ]
+        },
+        {
+          "systemId": "s32",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 7
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "passive",
+      "seed": "stage4-audit-19",
+      "turn": 83,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 70,
+      "discoveries": [
+        {
+          "systemId": "s32",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 26
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "reef",
+          "phase": "opening",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": []
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "ASTERION",
+      "turn": 73,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 45,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 8
+            }
+          ]
+        },
+        {
+          "systemId": "s24",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 37
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 46
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-1",
+      "turn": 75,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 44,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 9
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 14
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-2",
+      "turn": 71,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 49,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 33
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 46
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "preserve",
+              "turn": 53
+            },
+            {
+              "factionId": "choir",
+              "choiceId": "harvest",
+              "turn": 59
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-3",
+      "turn": 74,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 60,
+      "discoveries": [
+        {
+          "systemId": "s20",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": "ancient_observatory",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "preserve",
+              "turn": 14
+            },
+            {
+              "factionId": "player",
+              "choiceId": "restore",
+              "turn": 38
+            }
+          ]
+        },
+        {
+          "systemId": "s32",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 64
+            }
+          ]
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s20",
+          "buildingId": "ancient_observatory",
+          "factionId": "player",
+          "turn": 42
+        }
+      ]
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-4",
+      "turn": 71,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 47,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 3
+            }
+          ]
+        },
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "opening",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": []
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-5",
+      "turn": 73,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 39,
+      "discoveries": [
+        {
+          "systemId": "s20",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": "ancient_observatory",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "preserve",
+              "turn": 15
+            },
+            {
+              "factionId": "player",
+              "choiceId": "restore",
+              "turn": 37
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "reef",
+          "phase": "opening",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": []
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s20",
+          "buildingId": "ancient_observatory",
+          "factionId": "player",
+          "turn": 40
+        }
+      ]
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-6",
+      "turn": 60,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 52,
+      "discoveries": [
+        {
+          "systemId": "s24",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 6
+            }
+          ]
+        },
+        {
+          "systemId": "s32",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 3
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-7",
+      "turn": 71,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 43,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 2
+            }
+          ]
+        },
+        {
+          "systemId": "s20",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "player",
+          "site": "lattice_works",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "preserve",
+              "turn": 9
+            },
+            {
+              "factionId": "player",
+              "choiceId": "restore",
+              "turn": 23
+            }
+          ]
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s20",
+          "buildingId": "lattice_works",
+          "factionId": "player",
+          "turn": 28
+        }
+      ]
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-8",
+      "turn": 71,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 43,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 1
+            }
+          ]
+        },
+        {
+          "systemId": "s16",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 34
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 40
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-9",
+      "turn": 74,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 59,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 6
+            }
+          ]
+        },
+        {
+          "systemId": "s24",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 6
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-10",
+      "turn": 78,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 37,
+      "discoveries": [
+        {
+          "systemId": "s16",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": "lattice_works",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 52
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "restore",
+              "turn": 58
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 31
+            }
+          ]
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s16",
+          "buildingId": "lattice_works",
+          "factionId": "khar",
+          "turn": 63
+        }
+      ]
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-11",
+      "turn": 74,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 62,
+      "discoveries": [
+        {
+          "systemId": "s24",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "preserve",
+              "turn": 10
+            },
+            {
+              "factionId": "choir",
+              "choiceId": "harvest",
+              "turn": 21
+            }
+          ]
+        },
+        {
+          "systemId": "s28",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "salvage",
+              "turn": 20
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-12",
+      "turn": 69,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 53,
+      "discoveries": [
+        {
+          "systemId": "s12",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 1
+            }
+          ]
+        },
+        {
+          "systemId": "s36",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 4
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-13",
+      "turn": 69,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 54,
+      "discoveries": [
+        {
+          "systemId": "s20",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "preserve",
+              "turn": 10
+            },
+            {
+              "factionId": "player",
+              "choiceId": "harvest",
+              "turn": 17
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 5
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-14",
+      "turn": 87,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 28,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 17
+            }
+          ]
+        },
+        {
+          "systemId": "s20",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": "ancient_observatory",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "preserve",
+              "turn": 18
+            },
+            {
+              "factionId": "player",
+              "choiceId": "restore",
+              "turn": 43
+            }
+          ]
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s20",
+          "buildingId": "ancient_observatory",
+          "factionId": "player",
+          "turn": 47
+        }
+      ]
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-15",
+      "turn": 71,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 65,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "salvage",
+              "turn": 8
+            }
+          ]
+        },
+        {
+          "systemId": "s16",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 49
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "harvest",
+              "turn": 57
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-16",
+      "turn": 75,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 31,
+      "discoveries": [
+        {
+          "systemId": "s36",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 10
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 7
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-17",
+      "turn": 73,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 57,
+      "discoveries": [
+        {
+          "systemId": "s8",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "veyr",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "veyr",
+              "choiceId": "preserve",
+              "turn": 45
+            },
+            {
+              "factionId": "veyr",
+              "choiceId": "harvest",
+              "turn": 52
+            }
+          ]
+        },
+        {
+          "systemId": "s24",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": "ancient_observatory",
+          "active": true,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "preserve",
+              "turn": 39
+            },
+            {
+              "factionId": "khar",
+              "choiceId": "restore",
+              "turn": 58
+            }
+          ]
+        }
+      ],
+      "completedSites": [
+        {
+          "systemId": "s24",
+          "buildingId": "ancient_observatory",
+          "factionId": "khar",
+          "turn": 61
+        }
+      ]
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-18",
+      "turn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 63,
+      "discoveries": [
+        {
+          "systemId": "s4",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": "player",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "khar",
+              "choiceId": "salvage",
+              "turn": 5
+            }
+          ]
+        },
+        {
+          "systemId": "s32",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "khar",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 6
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    },
+    {
+      "mode": "balanced",
+      "seed": "stage4-audit-19",
+      "turn": 76,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "invalid": null,
+      "negativeResource": null,
+      "firstWar": 63,
+      "discoveries": [
+        {
+          "systemId": "s32",
+          "id": "observatory",
+          "phase": "resolved",
+          "owner": null,
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "player",
+              "choiceId": "salvage",
+              "turn": 16
+            }
+          ]
+        },
+        {
+          "systemId": "s40",
+          "id": "reef",
+          "phase": "resolved",
+          "owner": "choir",
+          "site": null,
+          "active": false,
+          "decisions": [
+            {
+              "factionId": "choir",
+              "choiceId": "preserve",
+              "turn": 48
+            },
+            {
+              "factionId": "choir",
+              "choiceId": "harvest",
+              "turn": 58
+            }
+          ]
+        }
+      ],
+      "completedSites": []
+    }
+  ]
+}
