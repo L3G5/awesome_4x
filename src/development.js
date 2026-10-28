@@ -3,7 +3,7 @@ import { BUILDINGS, SHIPS, TECHS } from './content.js';
 export const CHARTERS = Object.freeze({
   extraction: Object.freeze({ id: 'extraction', name: 'Extraction Charter', icon: '◇', support: 'mine', description: 'Develop native ore deposits. Each level adds 2 plus the world’s ore richness to mineral income.' }),
   academy: Object.freeze({ id: 'academy', name: 'Academy Charter', icon: '✧', support: 'lab', description: 'Build a center of discovery. Each level adds 2 plus the world’s native science to science income.' }),
-  forge: Object.freeze({ id: 'forge', name: 'Forge Charter', icon: '▥', support: 'factory', description: 'Specialize in shipbuilding. Each level adds production, 10% off military ship mineral costs, and 2 orbital repair.' }),
+  forge: Object.freeze({ id: 'forge', name: 'Forge Charter', icon: '▥', support: 'factory', description: 'Specialize in shipbuilding. Each level adds production, 10% off military ship mineral costs, and 2 colony repair capacity.' }),
   civic: Object.freeze({ id: 'civic', name: 'Civic Charter', icon: '⌂', support: 'forum', description: 'Coordinate a mature federation. Each level adds one order and credits based on the population.' }),
 });
 

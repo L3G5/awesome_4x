@@ -47,6 +47,7 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 | `diplomacy` | `targetId`, `stance`, optional `offerId` | `war`, `peace`, `trade`, `gift`, `endTrade`, `acceptPeace` or `declinePeace` |
 | `attack` | `fleetId` | Engage hostile fleets in orbit, otherwise bombard/invade colony |
 | `merge` | `fleetId`, `targetFleetId` | Combine same-type colocated ships; max 12, no colony arks |
+| `split` | `fleetId`, `ships` | Detach 1–N−1 ships for one order; returns `newFleetId`; no colony arks |
 | `repair` | `fleetId` | Repair up to 24 HP at friendly colony for 10 minerals |
 | `endTurn` | none | Advance turn |
 
@@ -111,10 +112,10 @@ All charter commissions consume one order and occupy the ordinary colony constru
 | --- | --- | --- |
 | Extraction | `mine` | `2 + system.richness` minerals |
 | Academy | `lab` | `2 + system.science` science |
-| Forge | `factory` | `4 + floor(population/4)` production; 10% military ship mineral discount; +2 automatic orbital repair |
+| Forge | `factory` | `4 + floor(population/4)` production; 10% military ship mineral discount; +2 shared colony repair capacity |
 | Civic | `forum` | +1 order; `2 + floor(population/2)` credits |
 
-Forge discounts apply only to frigate/cruiser minerals, capped at 20% by level II and rounded upward. Credits, civilian ship costs and buildings are unchanged. Forge repair augments ordinary automatic repair only in an unblocked owned colony, and remains capped by surviving fleet hull capacity. Civilization bonuses apply to the resulting colony outputs as usual; empire orders retain their existing cap.
+Forge discounts apply only to frigate/cruiser minerals, capped at 20% by level II and rounded upward. Credits, civilian ship costs and buildings are unchanged. Forge repair augments the shared automatic repair pool of an unblocked owned colony, capped by its fleets' missing hull. Civilization bonuses apply to the resulting colony outputs as usual; empire orders retain their existing cap.
 
 `getOrderCapacity(state,factionId='player')` returns `{total,uncapped,limit:18}` from colonies, faction/technology bonuses, buildings and charters. `getOrderChange(state,factionId='player',nominal=0)` returns `{current,projected,nominal,change,limit}`. Both are pure exports of `development.js` and `game.js`. Construction and development options expose this as `orderEffect`; ordinary `delta.orders` remains the nominal charter change. Building replacement includes both the removed building's order contribution and the loss of its supported Civic charter. These are current-state forecasts, not promises about future colony gains or losses. Keeping the uncapped capacity is essential: removing three nominal orders from a capacity of 21 leaves the usable mandate at 18, while removing them from 19 reduces it to 16. This refactoring does not change the original order formula or forbid a legal investment whose order gain is capped.
 
@@ -284,6 +285,16 @@ Optional Research Enclaves, Exchange Ports, Civic Forums, Academy charters and C
 Science beyond remaining unfunded technology demand has no forecast value. Order gains use the true empire cap, including queued sources and imminent completed Command research. Credit demand is bounded by owned beacon hosts, needed hulls at existing yards and one eligible support investment per colony, sharing available work and minerals. Recurring income also matters when it must support a concrete planned crew; existing treasury does not automatically satisfy that ongoing requirement. Replacements include displaced output. Emergency defense, wartime minimum readiness, alignment-income recovery and infrastructure supporting a preserved discovery remain exceptions. Existing paid queues are not cancelled by this policy.
 
 `scripts/investment-benchmark.mjs` compares the policy with the pinned version-0.6 AI inside a shared frozen engine. Its compact result in `docs/results/stage7-investment.json` records source hashes, the generated Halcyon planning scenario, eight paired all-AI campaigns, JSON restoration checks and uninstrumented CPU probes. “Zero under forecast” describes the policy assumptions; it does not prove that every counted historical purchase was globally useless.
+
+## Fleet division and colony repairs
+
+`getSplitPreview(state,fleetId,ships=1,factionId='player')` returns `enabled`, `reason`, `orderCost`, the original fleet/system IDs, `originalHasRoute`, and `parent`/`detached` forecasts containing `ships`, `hp`, `movesLeft` and `hasRoute`. A valid allocation conserves the original representable hull value exactly, including after immediate reunion; an unrepresentable subdivision fails without mutation. The command keeps explicit ship counts rather than recalculating them from aggregate hull.
+
+`command(state,{type:'split',fleetId,ships})` costs one order, creates a new canonical fleet ID/name and returns `newFleetId`. Both formations inherit their current remaining movement. The original retains its identity and route; the new formation has no route. Heritage entries are deep-copied with unchanged historical IDs and recovered-fleet references, so the existing merger deduplicates them and no discovery reward is repeated. Neither command changes upkeep or grants hull. Existing pairwise combat can produce different outcomes for different partitions; conservation applies to the reorganization itself.
+
+`getColonyRepairForecast(state,systemId)` returns `capacity`, `blocked`, `totalMissingHull`, `totalRepair`, and `fleets:[{fleetId,hp,maxHp,missingHull,repair,hpAfter}]`. It describes that colony owner's own fleets; callers must use normal visibility rules before displaying another owner's data. A colony supplies one pool of 4 hull, 8 with a shipyard, plus its Forge bonus. Hostile fleet presence blocks repairs under the existing rules. Missing hull determines proportional shares, with a deterministic floating-point remainder and no per-fleet minimum; total repair never exceeds the pool or available damage.
+
+End turn applies that same forecast after movement replenishment. Splitting at one colony cannot multiply free repairs; multiple colonies retain separate capacity. Emergency repairs keep their existing 10-mineral/one-order price and 24-hull limit. No new save fields are required.
 
 ## AI alignment expeditions
 

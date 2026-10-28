@@ -34,7 +34,7 @@ export const BUILDINGS = {
   mine: { id: 'mine', name: 'Orbital Extractor', icon: '◇', cost: { credits: 20, minerals: 25 }, work: 24, requires: [], description: '+5 minerals each turn.', minerals: 5 },
   lab: { id: 'lab', name: 'Research Enclave', icon: '✧', cost: { credits: 30, minerals: 30 }, work: 30, requires: [], description: '+5 science each turn.', science: 5 },
   market: { id: 'market', name: 'Exchange Port', icon: '◈', cost: { credits: 25, minerals: 20 }, work: 24, requires: [], description: '+7 credits each turn.', credits: 7 },
-  shipyard: { id: 'shipyard', name: 'Orbital Shipyard', icon: '⌁', cost: { credits: 25, minerals: 35 }, work: 32, requires: [], description: 'Build ships here. Fleets repair twice as quickly in orbit.' },
+  shipyard: { id: 'shipyard', name: 'Orbital Shipyard', icon: '⌁', cost: { credits: 25, minerals: 35 }, work: 32, requires: [], description: 'Build ships here. Adds 4 hull to this colony’s shared repair capacity each cycle.' },
   habitat: { id: 'habitat', name: 'Habitation Domes', icon: '◎', cost: { credits: 40, minerals: 35 }, work: 36, requires: ['ecology'], description: '+4 maximum population and +40% population growth.' },
   factory: { id: 'factory', name: 'Manufactory', icon: '▥', cost: { credits: 35, minerals: 45 }, work: 40, requires: ['industry'], description: '+6 construction production each turn.', production: 6 },
   forum: { id: 'forum', name: 'Civic Forum', icon: '⌂', cost: { credits: 50, minerals: 30 }, work: 40, requires: ['diplomacy'], description: '+1 order each turn and +3 credits.', credits: 3, orders: 1 },
