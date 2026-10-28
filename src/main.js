@@ -8,7 +8,9 @@ import { renderDiplomacyPage } from './diplomacy-ui.js';
 import { renderColonyTable } from './empire-ui.js';
 import { renderWorkspaceInspector } from './workspace-ui.js';
 import { renderShipPortrait } from './ship-ui.js';
-import { renderSplitDialog, renderColonyRepairSummary } from './fleet-ui.js';
+import { renderSplitDialog, renderColonyRepairSummary, renderFleetReadiness } from './fleet-ui.js';
+import { getFleetReadiness, getReadyFleets } from './game.js';
+import { formatHull } from './hull-format.js';
 import { renderPublicDispatchLinks, renderSovereigntyNote } from './public-affairs-ui.js';
 import { renderCombatReports, renderBriefing } from './report-ui.js';
 import { planetImage } from './planet-art.js';
@@ -127,7 +129,7 @@ function renderInspector() {
   html += renderBeaconInspector(state,system);
   html += renderSovereigntyNote(state,system.id);
   html += renderDiscoverySummary(state,system);
-  if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}>${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${Math.ceil(f.hp)} hull</small></span><span class="fleet-ready">${f.owner==='player'?`${f.movesLeft} ⌁`:''}</span></button>`).join('')}</div></section>`;
+  if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}>${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull</small></span>${f.owner==='player'?renderFleetReadiness(state,f):''}</button>`).join('')}</div></section>`;
   const selectedFleet=fleetById(selectedFleetId);
   html += renderColonyRepairSummary(state,system);
   const invasion=selectedFleet?.systemId===system.id ? estimateInvasion(state,selectedFleet.id) : null;
@@ -146,11 +148,12 @@ function movementReason(fleet, target) {
 }
 function renderFleet() {
   const fleet = fleetById(selectedFleetId), target = systemById(selectedSystemId), ownFleets = state.fleets.filter(f=>f.owner==='player');
-  if (!fleet) { $('#fleet-bar').classList.remove('has-route'); $('#fleet-bar').innerHTML = `<div class="fleet-title"><div class="empty-fleet">A galaxy of possibilities.</div><p>Select a fleet in orbit to explore the frontier.</p></div>${ownFleets[0]?`<button data-fleet="${ownFleets[0].id}">Select fleet →</button>`:''}`; return; }
+  if (!fleet) { $('#fleet-bar').classList.remove('has-route'); $('#fleet-bar').innerHTML = `<div class="fleet-title"><div class="empty-fleet">A galaxy of possibilities.</div><p>Select a fleet in orbit to explore the frontier.</p></div>${ownFleets.length?'<button data-action="fleet-roster">Fleet roster →</button>':''}`; return; }
   const home = systemById(fleet.systemId), ship = SHIPS[fleet.type], different = target.id!==home.id;
+  const readiness=getFleetReadiness(state,fleet.id);
   const navigation=getNavigationView(state,fleet,target);
   const adjacent=getNeighbors(state,fleet.systemId).includes(target.id);
-  let detail = `${ship.role} · ${fleet.ships} ${fleet.ships===1?'ship':'ships'} · ${fleet.movesLeft} jumps · ${Math.ceil(fleet.hp)}/${fleet.ships*ship.hp} hull`, actions='';
+  let detail = `${ship.role} · ${fleet.ships} ${fleet.ships===1?'ship':'ships'} · ${fleet.movesLeft} jumps · ${formatHull(fleet.hp, fleet.ships * ship.hp)} hull`, actions='';
   if (different && !adjacent) {
     detail=navigation.preview?.ok?`${home.name} → ${target.name} · ${navigation.preview.jumps} charted jumps`:(navigation.preview?.reason || 'No route through charted lanes.');
     actions=`<button class="ghost small-button" data-system-select="${home.id}" title="Back to fleet">↶</button>`;
@@ -170,6 +173,8 @@ function renderFleet() {
     if (merge) actions += `<button data-action="merge" data-target="${merge.id}" title="Merge ${escape(merge.name)} into this fleet; 1 order">Merge +${merge.ships}</button>`;
     if (!actions) detail += ' · Select a star to plot a jump or a course.';
   }
+  if(readiness.held)detail+=' · Holding position';
+  actions+=`<button class="small-button ghost fleet-hold" data-action="fleet-hold" data-fleet-target="${fleet.id}" aria-pressed="${readiness.held}" title="${readiness.held?'Return this fleet to the ready queue; free.':'Hold at '+escape(home.name)+'; free. Movement remains available.'}" ${state.winner?'disabled':''}>${readiness.held?'Resume':'Hold position'}</button>`;
   if(!different&&fleet.ships>1&&fleet.type!=='colony')actions+=`<button data-action="split-menu" data-fleet-target="${fleet.id}" title="Detach ships into a separate formation; 1 order">Split fleet</button>`;
   if(fleet.heritage?.length)actions+=`<button class="small-button ghost" data-action="fleet-heritage" data-fleet-target="${fleet.id}">Heritage ✦</button>`;
   $('#fleet-bar').classList.toggle('has-route',Boolean(navigation.display));
@@ -188,7 +193,7 @@ function renderPage() {
     html=renderDiplomacyPage(state,{dispatchesOpen:settings.publicDispatchesOpen===true,selectedRivalId:dossierRivalId()});
   } else if (page==='empire') {
     const victory=getVictoryProgress(state);
-    html=`<div class="page-top"><div><div class="eyebrow">MANY WORLDS. ONE HORIZON.</div><h2>The Concord</h2><p>Make a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.</p></div><div class="page-symbol">⌘</div></div><div class="empire-overview"><div class="overview-card"><div class="eyebrow">COLONIZED WORLDS</div><strong>${stats.colonies}</strong><p>${stats.population} billion citizens across the Reach</p></div><div class="overview-card"><div class="eyebrow">FLEET POWER</div><strong>${num(stats.military)}</strong><p>${stats.ships} ships · ${stats.upkeep} credits upkeep / cycle</p></div><div class="overview-card"><div class="eyebrow">LEGACY SCORE</div><strong>${num(stats.score)}</strong><p>Highest score at cycle ${victory.legacy.finalTurn} wins</p></div></div>${renderColonyTable(state,colonySort,colonySortDirection)}<div class="victory-grid">${renderAlignmentCard(state)}<div class="victory-card"><h3>⛨ Domination</h3><p>Unite the Reach under one banner by holding all four founding homeworlds at the same time.</p><div class="progress-track"><i style="width:${victory.domination.current/4*100}%"></i></div><p style="margin-top:10px">${victory.domination.current} / 4 founding systems</p></div></div><section class="network-section"><div class="section-label">The awakening network</div>${renderPublicRaces(state)}</section><div class="panel-section" style="margin-top:22px;padding-left:0;padding-right:0"><div class="section-label">Fleet registry</div><div class="fleet-list">${state.fleets.filter(f=>f.owner==='player').map(f=>`<button class="fleet-row" data-fleet="${f.id}">${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${Math.ceil(f.hp)} hull · ${fleetPower(state,f)} combat power</small></span><span class="fleet-ready">${f.movesLeft} jumps</span></button>`).join('')}</div></div>`;
+    html=`<div class="page-top"><div><div class="eyebrow">MANY WORLDS. ONE HORIZON.</div><h2>The Concord</h2><p>Make a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.</p></div><div class="page-symbol">⌘</div></div><div class="empire-overview"><div class="overview-card"><div class="eyebrow">COLONIZED WORLDS</div><strong>${stats.colonies}</strong><p>${stats.population} billion citizens across the Reach</p></div><div class="overview-card"><div class="eyebrow">FLEET POWER</div><strong>${num(stats.military)}</strong><p>${stats.ships} ships · ${stats.upkeep} credits upkeep / cycle</p></div><div class="overview-card"><div class="eyebrow">LEGACY SCORE</div><strong>${num(stats.score)}</strong><p>Highest score at cycle ${victory.legacy.finalTurn} wins</p></div></div>${renderColonyTable(state,colonySort,colonySortDirection)}<div class="victory-grid">${renderAlignmentCard(state)}<div class="victory-card"><h3>⛨ Domination</h3><p>Unite the Reach under one banner by holding all four founding homeworlds at the same time.</p><div class="progress-track"><i style="width:${victory.domination.current/4*100}%"></i></div><p style="margin-top:10px">${victory.domination.current} / 4 founding systems</p></div></div><section class="network-section"><div class="section-label">The awakening network</div>${renderPublicRaces(state)}</section><div class="panel-section" style="margin-top:22px;padding-left:0;padding-right:0"><div class="section-label">Fleet registry</div><div class="fleet-list">${state.fleets.filter(f=>f.owner==='player').map(f=>`<button class="fleet-row" data-fleet="${f.id}">${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull · ${fleetPower(state,f)} combat power</small></span>${renderFleetReadiness(state,f)}</button>`).join('')}</div></div>`;
   } else if (page==='journal') {
     html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p></div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','research','combat','diplomacy','war','sovereignty'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><div><p>${escape(l.text)}</p>${l.reportId && getCombatReport(state,l.reportId)?`<button class="small-button" style="margin-top:10px" data-action="combat-report" data-report="${l.reportId}">Battle report →</button>`:''}${l.type==='discovery' && l.systemId && getDiscoveryView(state,l.systemId)?`<button class="small-button" style="margin-top:10px" data-action="anomaly" data-system="${l.systemId}">Expedition record →</button>`:''}${l.publicAffairId?`<div class="public-affair-links">${renderPublicDispatchLinks({...l,systemName:systemById(l.systemId)?.name})}</div>`:''}</div></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
   }
@@ -233,13 +238,18 @@ function showReports(ids) {
 function nextFleet() {
   const all=state.fleets.filter(f=>f.owner==='player');
   if(!all.length)return toast('Your empire has no active fleets.');
-  const ready=all.filter(f=>f.movesLeft>0), pool=ready.length?ready:all;
-  const index=pool.findIndex(f=>f.id===selectedFleetId);
-  selectFleet(pool[(index+1)%pool.length].id);
+  const ready=getReadyFleets(state);
+  if(!ready.length)return toast(state.winner?'This campaign has ended.':player().orders<1?'No orders remain. Your fleets are still available in the roster.':'No fleet awaits orders. Held and spent fleets remain available in the roster.');
+  const index=ready.findIndex(f=>f.id===selectedFleetId);
+  selectFleet(ready[(index+1)%ready.length].id);
 }
 function showFleetRoster() {
-  const fleets=state.fleets.filter(f=>f.owner==='player').sort((a,b)=>(b.movesLeft>0)-(a.movesLeft>0)||a.name.localeCompare(b.name));
-  openModal('fleet-roster',`<div class="eyebrow">CONCORD FLEET COMMAND</div><h2 id="modal-title">Your presence among the stars</h2><p class="modal-lead">${fleets.length} fleets · ${fleets.filter(f=>f.movesLeft>0).length} with movement available. Select any fleet to focus its location.</p><div class="fleet-list">${fleets.map(f=>`<button class="fleet-row" data-fleet="${f.id}">${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${Math.ceil(f.hp)}/${SHIPS[f.type].hp*f.ships} hull · ${SHIPS[f.type].upkeep*f.ships} credits upkeep</small></span><span class="fleet-ready">${f.movesLeft} jumps →</span></button>`).join('')||'<p class="empty-note">Commission ships at an Orbital Shipyard to return to the stars.</p>'}</div>`);
+  const fleets=state.fleets.filter(f=>f.owner==='player').sort((a,b)=>{
+    const first=getFleetReadiness(state,a.id),second=getFleetReadiness(state,b.id);
+    return Number(second.ready)-Number(first.ready)||Number(first.held)-Number(second.held)||a.name.localeCompare(b.name);
+  });
+  const ready=getReadyFleets(state).length,held=fleets.filter(f=>getFleetReadiness(state,f.id).held).length;
+  openModal('fleet-roster',`<div class="eyebrow">CONCORD FLEET COMMAND</div><h2 id="modal-title">Your presence among the stars</h2><p class="modal-lead">${fleets.length} fleets · ${ready} awaiting orders · ${held} holding position. Select any fleet to focus its location.</p><div class="fleet-list">${fleets.map(f=>`<button class="fleet-row" data-fleet="${f.id}">${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull · ${SHIPS[f.type].upkeep*f.ships} credits upkeep</small></span>${renderFleetReadiness(state,f)}</button>`).join('')||'<p class="empty-note">Commission ships at an Orbital Shipyard to return to the stars.</p>'}</div><p class="empty-note" style="margin-top:18px">Hold position keeps a fleet out of the ready queue without spending orders or movement. Select a held fleet to resume it or issue a manual command.</p>`);
 }
 function showPeaceOffer(offerId) {
   const offer=(state.diplomacyOffers || []).find(o=>o.id===offerId && o.to==='player' && o.status==='pending');
@@ -256,9 +266,10 @@ function showWelcome() {
   openModal('welcome',`<div class="welcome-emblem">✦</div><div class="eyebrow">A NEW CHAPTER AMONG THE STARS</div><h2 id="modal-title">The Reach is calling.</h2><p class="modal-lead">For centuries, the ancient gates have been silent.<br>From the oceans of Solace, the Concord looks outward once more.<br>You have a homeworld, three ships, and a future to decide.</p><div class="welcome-steps"><div><span>01 / EXPLORE</span><b>Follow the starlanes</b><p>Select your Pathfinder, then a neighboring star. Choose Move to survey it.</p></div><div><span>02 / ESTABLISH</span><b>Found a second home</b><p>Move your Colony Ark to a habitable world. Settle it to grow your empire.</p></div><div><span>03 / ENDURE</span><b>Every order matters</b><p>Build, research, and meet your rivals. End each cycle to renew your orders.</p></div></div><div class="modal-actions"><a href="./guide.html" target="_blank" rel="noopener" style="align-self:center;font-size:11px;margin-right:12px">Field guide ↗</a><button class="primary" data-action="begin">Take command →</button></div>`);
 }
 function advanceTurn(force=false) {
-  const stats=getEmpireStats(state), idle=state.fleets.filter(f=>f.owner==='player'&&f.movesLeft>0).length;
-  if (!force && settings.warnUnspent && stats.orders>0 && (idle || !player().research)) {
-    openModal('end-confirm',`<div class="eyebrow">BEFORE THE NEXT CYCLE</div><h2 id="modal-title">Conclude your mandate?</h2><p class="modal-lead">${stats.orders} orders remain${idle?`, and ${idle} ${idle===1?'fleet has':'fleets have'} movement available`:''}. Unused orders do not carry over.${!player().research&&player().techs.length<12?' Your researchers have no assigned project; their science will remain in reserve.':''}</p><p class="empty-note">Rival empires will act, colonies will grow, production and research will advance, and your orders will replenish.</p><div class="modal-actions"><button data-action="close-modal">Keep planning</button><button class="primary" data-action="end-turn-confirm">End cycle →</button></div>`); return;
+  const stats=getEmpireStats(state), idle=getReadyFleets(state).length;
+  const unassignedResearch=!player().research && getResearchOptions(state).some(option=>option.enabled);
+  if (!force && settings.warnUnspent && stats.orders>0 && (idle || unassignedResearch)) {
+    openModal('end-confirm',`<div class="eyebrow">BEFORE THE NEXT CYCLE</div><h2 id="modal-title">Conclude your mandate?</h2><p class="modal-lead">${stats.orders} orders remain${idle?`, and ${idle} ${idle===1?'fleet awaits':'fleets await'} orders`:''}. Unused orders do not carry over.${unassignedResearch?' Your researchers have no assigned project; their science will remain in reserve.':''}</p><p class="empty-note">Rival empires will act, colonies will grow, production and research will advance, and your orders will replenish.</p><div class="modal-actions"><button data-action="close-modal">Keep planning</button><button class="primary" data-action="end-turn-confirm">End cycle →</button></div>`); return;
   }
   const previousRaces=getPublicRaces(state);
   closeModal(); const result=endTurn(state); if (!result.ok) return toast(result.message,true);
@@ -318,6 +329,7 @@ document.addEventListener('click',event=>{
     case 'home':selectSystem(player().capitalId);galaxy.focus(player().capitalId);break;
     case 'fleet-roster':showFleetRoster();break;
     case 'next-fleet':nextFleet();break;
+    case 'fleet-hold':if(dispatch({type:getFleetReadiness(state,el.dataset.fleetTarget).held?'resume':'hold',fleetId:el.dataset.fleetTarget}))$('[data-action="fleet-hold"]')?.focus();break;
     case 'zoom-in':galaxy.zoom(1);break;
     case 'zoom-out':galaxy.zoom(-1);break;
     case 'reset-view':galaxy.reset();break;

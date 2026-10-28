@@ -1,0 +1,107 @@
+{
+  "startedFrom": "Legitimate prior ASTERION warplay cycle59 export; no changes before load",
+  "method": "Stage10 production UI review through actual clicks and keyboard; unchanged legacy campaign loaded, no grants or save edits.",
+  "entries": [
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "1440-split-preview.png",
+      "text": "Legacy damaged seven-frigate force: proportional hull, movement and original-route disclosure."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "1280-split-preview.png",
+      "text": "Keyboard-selected two-ship detachment on a laptop viewport."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "390-split-preview.png",
+      "text": "Two-ship detachment preview on mobile."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "390-detached-selected.png",
+      "text": "The new two-ship formation is selected, with repair, merge, split and heritage actions."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "390-detached-heritage.png",
+      "text": "The detachment retains the original expedition history."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "1280-detached-crowded-bar.png",
+      "text": "All four fleet actions remain usable on laptop."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "1440-shared-maintenance.png",
+      "text": "One eight-hull pool is shared proportionally between the damaged formations."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "1280-original-crowded-route.png",
+      "text": "Original fleet retains its plotted course alongside all fleet actions."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "390-original-crowded-route.png",
+      "text": "Mobile controls and horizontal route strip with the original fleet selected."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "decision",
+      "text": "Repeated eight ordinary merge/split pairs, spending the remaining 16 orders to exercise the zero-order preview state. No hull, resources or movement were granted or edited; original route remained with Vanguard 3.",
+      "time": "2026-10-28T21:12:35.203Z"
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "1280-zero-orders-preview.png",
+      "text": "With zero orders, native keyboard selection remains usable and preview updates to three detached ships; confirmation explains the unavailable order."
+    },
+    {
+      "cycle": "Cycle 59",
+      "kind": "image",
+      "file": "390-zero-orders-preview.png",
+      "text": "Zero-order preview at390px remains fully readable; ship selection is available while confirmation is disabled."
+    },
+    {
+      "cycle": "Cycle 60",
+      "kind": "turn",
+      "text": "Turn 60: a new mandate begins.",
+      "resources": "\u25c8\n5,375+280\nCREDITS\n\u25c7\n513+86\nMINERALS\n\u2727\n504+129\nSCIENCE\n\u2318\n18 / 18\nORDERS",
+      "time": "2026-10-28T21:12:46.294Z"
+    },
+    {
+      "cycle": "Cycle 60",
+      "kind": "image",
+      "file": "1440-after-actual-repair.png",
+      "text": "After ordinary end cycle, original hull displays 168/170 and detached hull displays 68/68 because the existing UI rounds upward. Actual detached hull is 67.02857142857144/68. Remaining total recovery is 3.4, showing the previous 8-hull shared forecast was applied once."
+    },
+    {
+      "cycle": "Cycle 60",
+      "kind": "decision",
+      "text": "Zero-order native selector remained enabled and keyboard-changeable; confirmation disabled with explicit no-orders explanation. Actual cycle59\u219260 completed normally with both formations atVeyrPrime and original course retained. Shared repair forecast for next turn falls from8 to3.4 total.",
+      "time": "2026-10-28T21:13:10.224Z"
+    }
+  ],
+  "errors": [],
+  "provenance": {
+    "reviewedSourceCommit": "78e3cff160999a951919485cf1d06838bda41b8e",
+    "engineSourceCommit": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+    "preview": "http://127.0.0.1:5179/",
+    "version": "0.10.0",
+    "originSavePath": "/tmp/asterion-review-warplayed.json",
+    "originSaveSha256": "8921d6d32b459f2f9027dea042931624c552eec7877a568005dd10deafc473f5",
+    "lineage": "Unchanged prior legitimate ASTERION cycle59 warplay export loaded into production browser. Subsequent exports came from ordinary UI route, split, merge and end-cycle commands; no grants or save edits."
+  }
+}

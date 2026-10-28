@@ -25,11 +25,13 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 - `estimateCombat(state, fleetId, targetId)`: `{attack,defense,garrison,odds,unknown}` or null. Without target sensors, `unknown:true`, `odds:'Unscouted'`, and `defense`/`garrison` are null. With target sensors, `unknown:false` and numeric strength/defense are exact. Never coerce unknown defense to zero for a preview or AI decision.
 - `estimateInvasion(state, fleetId)`: pure current-system bombardment forecast, documented below. It never consumes RNG or queries a remote target.
 - `getCombatReport(state, reportId)`: a stored player-involved combat snapshot or null if missing/expired. Re-exported by `game.js` from `src/reports.js`.
+- `getFleetReadiness(state, fleetId, factionId = 'player')`: pure `{held,ready,reason,movesLeft}` for an owned fleet. Foreign/missing fleets return the same neutral unavailable result.
+- `getReadyFleets(state, factionId = 'player')`: owned fleets awaiting orders in stable campaign order; requires a move, an order, no hold, and an active campaign/empire.
 - `availableActions(state, {systemId?,fleetId?,factionId?,replaceBuildingId?})`: `{build,development,research,neighbors}`.
 
 ## Commands
 
-Every command costs one order except changing research and cancelling construction. Movement and attacking also consume one fleet move. Colonizing can occur after the ark has moved.
+Ordinary commands cost one order. Research, cancellation, route planning/clearing and advisory Hold/Resume are free; continuing a course pays for each executed jump. Movement and attacking also consume one fleet move. Colonizing can occur after the ark has moved.
 
 A civilian move into an unseen hostile fleet is a **consumed expedition**, returning `{ok:true,outcome:'intercepted',message}`. It spends one order and one move, retains the origin, establishes contact and logs the observed ship count without surveying the destination or granting ongoing sensors. A visible blockade instead returns a normal `{ok:false,message}` without cost or mutation. Callers should not retry an intercepted jump automatically. Warships may enter unscouted opposition and engage normally.
 
@@ -48,6 +50,7 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 | `attack` | `fleetId` | Engage hostile fleets in orbit, otherwise bombard/invade colony |
 | `merge` | `fleetId`, `targetFleetId` | Combine same-type colocated ships; max 12, no colony arks |
 | `split` | `fleetId`, `ships` | Detach 1–N−1 ships for one order; returns `newFleetId`; no colony arks |
+| `hold` / `resume` | `fleetId` | Free advisory acknowledgement; no movement, order, resource or combat effect |
 | `repair` | `fleetId` | Repair up to 24 HP at friendly colony for 10 minerals |
 | `endTurn` | none | Advance turn |
 
@@ -295,6 +298,16 @@ Science beyond remaining unfunded technology demand has no forecast value. Order
 `getColonyRepairForecast(state,systemId)` returns `capacity`, `blocked`, `totalMissingHull`, `totalRepair`, and `fleets:[{fleetId,hp,maxHp,missingHull,repair,hpAfter}]`. It describes that colony owner's own fleets; callers must use normal visibility rules before displaying another owner's data. A colony supplies one pool of 4 hull, 8 with a shipyard, plus its Forge bonus. Hostile fleet presence blocks repairs under the existing rules. Missing hull determines proportional shares, with a deterministic floating-point remainder and no per-fleet minimum; total repair never exceeds the pool or available damage.
 
 End turn applies that same forecast after movement replenishment. Splitting at one colony cannot multiply free repairs; multiple colonies retain separate capacity. Emergency repairs keep their existing 10-mineral/one-order price and 24-hull limit. No new save fields are required.
+
+## Fleet readiness
+
+Optional version-1 `fleet.hold` is a boolean. Legacy absence means active; commands write `true` or delete it. Hold and Resume require ownership and a live campaign but work with zero orders or movement. They do not consume RNG, append history or alter legal movement/combat. The same pure readiness predicate drives the next-fleet queue, roster status/counts and end-cycle fleet warning. An empty queue never falls back to held fleets. Unassigned research is a separate warning only while an available project remains.
+
+Inspection, repair, clearing a route and ordinary peaceful cycles preserve Hold. Successful movement (including a paid interception), attack, route continuation or plotting a nonempty course resumes the commanded fleet. Failed commands retain the original state. Split retains the original's hold and creates an active detachment; merge retains only the selected survivor's hold, matching its identity and course.
+
+Own combat wakes its participants. Transient observations before commands/turns also wake a held fleet after forced relocation, newly observed same-system hostile fleet IDs, or a new hostile owner at its actual position. These observations are not saved. The same already acknowledged hostility does not repeatedly wake the fleet; hidden neighboring fleets cannot change readiness. Hold is attention metadata, never automated defense or travel.
+
+`src/hull-format.js` formats current/max hull without rounding a damaged fleet to a full-looking ratio or a living fleet to zero. Ordinary current-hull views use one decimal, split previews use two; boundary values show `<maximum` or `<smallest displayed unit`. Formatting does not alter simulation hull or repair eligibility.
 
 ## AI alignment expeditions
 

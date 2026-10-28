@@ -1,0 +1,128 @@
+[
+  {
+    "id": "original-asterion",
+    "label": "Initial playable release",
+    "input": "inputs/original-asterion-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "99afa91a004d371d39cd80b41e2ea5c45d525354",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "original-legacy2",
+    "label": "Initial playable release, second seed",
+    "input": "inputs/original-legacy2-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "99afa91a004d371d39cd80b41e2ea5c45d525354",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "sensors",
+    "label": "Sensor intelligence release",
+    "input": "inputs/sensors-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "e5af48635ff41bf0605c6d315a1ebdfc883ea3ee",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage2",
+    "label": "Tactical AI and diplomacy",
+    "input": "inputs/stage2-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "379459bc1017e51bd64e5d451fd2acbef2d9a735",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage3",
+    "label": "Battle reports and briefings",
+    "input": "inputs/stage3-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "536e9ecdae66a9305ec89826e1a7cf5167f1c18b",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage4",
+    "label": "Colonies and alignment",
+    "input": "inputs/stage4-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "554612e0e1ef4b9d26d0cbf36709ca0fc27f5e05",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage5",
+    "label": "Routes and discoveries",
+    "input": "inputs/stage5-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "af9d817ff1c12dc4e08133f02400b7e00548542c",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage6",
+    "label": "Public affairs and readiness",
+    "input": "inputs/stage6-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage7",
+    "label": "Economic forecasts",
+    "input": "inputs/stage7-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "ff2dfa2ef598d8c6efc2d32a62da450dc329b552",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage8",
+    "label": "Civilization dossiers",
+    "input": "inputs/stage8-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "6c4ce936f87755ff5b53aaa01e22341f38bb202d",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "stage9",
+    "label": "Alignment expeditions",
+    "input": "inputs/stage9-cycle30.json",
+    "origin": "Reproducibly generated historical-engine export",
+    "revision": "feb7894e96c2f87631428fbdf1cfa8facd3debad",
+    "commands": 30,
+    "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b"
+  },
+  {
+    "id": "actual-stage6-cycle40",
+    "label": "Actual Stage6 cycle40 checkpoint",
+    "input": "inputs/actual-stage6-cycle40.json",
+    "origin": "Previously exported actual campaign or verified replay checkpoint",
+    "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+    "provenance": "Canonical checkpoint starting the recorded human campaign; SHA matches its published replay provenance.",
+    "repositorySource": "docs/intervention-audit/campaign-start-cycle40.json"
+  },
+  {
+    "id": "actual-stage6-route63",
+    "label": "Verified human campaign cycle63 route checkpoint",
+    "input": "inputs/actual-stage6-route63.json",
+    "origin": "Previously exported actual campaign or verified replay checkpoint",
+    "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+    "provenance": "Ordinary-command replay of the human UI campaign at Stage6; its final full state matched the actual export exactly. This checkpoint includes a partially travelled plotted route.",
+    "repositorySource": "docs/intervention-audit/results/verified-cycle63-before-ai.json"
+  },
+  {
+    "id": "actual-stage6-final67",
+    "label": "Actual human Stage6 final cycle67 export",
+    "input": "inputs/actual-stage6-final67.json",
+    "origin": "Previously exported actual campaign or verified replay checkpoint",
+    "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+    "provenance": "Human campaign played through the UI with no grants/save edits; independently reconstructed from 43 ordinary commands.",
+    "repositorySource": "docs/intervention-audit/campaign-final-cycle67.json"
+  }
+]

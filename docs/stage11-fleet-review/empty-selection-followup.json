@@ -1,0 +1,30 @@
+{
+  "before": "A galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nFleet roster \u2192",
+  "after": "A galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nFleet roster \u2192",
+  "status": "No fleet awaits orders. Held and spent fleets remain available in the roster.",
+  "buttons": [
+    {
+      "text": "Fleet roster \u2192",
+      "action": "fleet-roster"
+    }
+  ],
+  "selectedText": "A galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nFleet roster \u2192",
+  "rosterText": "\u00d7\nCONCORD FLEET COMMAND\nYour presence among the stars\n\n9 fleets \u00b7 0 awaiting orders \u00b7 9 holding position. Select any fleet to focus its location.\n\nPathfinder 1 \u00d71\nOphion \u00b7 18 / 18 hull \u00b7 1 credits upkeep\nHolding\n2 jumps\nSovereign 68 \u00d71\nSolace \u00b7 85 / 85 hull \u00b7 4 credits upkeep\nHolding\n2 jumps\nSovereign 71 \u00d71\nSundrift \u00b7 85 / 85 hull \u00b7 4 credits upkeep\nHolding\n2 jumps\nSovereign 74 \u00d71\nSolace \u00b7 85 / 85 hull \u00b7 4 credits upkeep\nHolding\n2 jumps\nSovereign 77 \u00d71\nSundrift \u00b7 85 / 85 hull \u00b7 4 credits upkeep\nHolding\n2 jumps\nVanguard 3 \u00d75\nElysian \u00b7 170 / 170 hull \u00b7 10 credits upkeep\nHolding\n2 jumps\nVanguard 52 \u00d71\nSundrift \u00b7 34 / 34 hull \u00b7 2 credits upkeep\nHolding\n2 jumps\nVanguard 67 \u00d72\nSolace \u00b7 68 / 68 hull \u00b7 4 credits upkeep\nHolding\n2 jumps\nVanguard 73 \u00d71\nHalcyon \u00b7 34 / 34 hull \u00b7 2 credits upkeep\nHolding\n2 jumps\n\nHold position keeps a fleet out of the ready queue without spending orders or movement. Select a held fleet to resume it or issue a manual command.",
+  "result": "Final5183 correction passed: Escape then N keeps selection empty; direct Fleet roster opens all9held formations without selecting Pathfinder. Original5182 evidence remains unchanged.",
+  "preview": "http://127.0.0.1:5183/",
+  "buildInfo": {
+    "version": "0.11.0",
+    "commit": "8b07399c428ac5b3cc2120ba5b8c88acd0fa5d81",
+    "builtAt": "2026-10-28T21:37:04.082Z"
+  },
+  "assetsSha256": {
+    "index.html": "4ebbfd2a9507d4f77745f380d073f556f5731b694c7010315f3318a3bd90009e",
+    "build-info.json": "e318beecf5f5b8cf251c6ed6a0c5c57d321ec1f25ea07c358ad88a07732a06fd",
+    "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+    "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+    "assets/index-BHUAV4WI.css": "2e077d8dac2b03124bdc62bc35836f7cd422e5f200c0d61ae33f46ec87a68c2f",
+    "assets/index-kKTg6vFM.js": "f2c89160c768aaa15dc5554d21a54b7aded9b4e1e26052e3bc619e4947eea4f7",
+    "assets/marcellus-latin-400-normal-86dSXJnk.woff2": "8a539799d12e3a144273288055490f57e1eee84da7a9145f085bc522e80719c3",
+    "assets/marcellus-latin-400-normal-AvMY561b.woff": "7083fa63e075a796f4beef9293fbc29a80be738d84bbfd89a20ddcdfc5c82198"
+  }
+}

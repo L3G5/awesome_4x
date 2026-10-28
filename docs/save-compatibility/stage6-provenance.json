@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "c4b33668964b42165c0d46edc5881498c661e572",
+  "sourceArchiveSha256": "2fc403917f6d20b04dcf031f4c83c85911ae54c5e51b40546ba05a8816625ced",
+  "engineSourceHashes": {
+    "ai.js": "3ef12265af9ad274d5ee80a27db3d65aef4472e5185e389c159aad9d1dee3c59",
+    "game.js": "d77232b5b5111e1dd125251853b87e78761bdff822986cf9a9927dc8d5d1caa2",
+    "diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+    "victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119"
+  },
+  "initialCheckpointSha256": "699e6c8b20048eb5d536cd9b986d234b3a854d4312a533671b8835694e0a358e",
+  "actualFinalExportSha256": "626dd110a0530b3554b5cccb310cecda82a37180ea414685d6bfe214469a167f",
+  "replayedCanonicalStateSha256": "218f5b1170b7ed2addb4e5ee4f2a5740af0cfa93c8cc4a62829ee02855fbebcb",
+  "actualCanonicalStateSha256": "218f5b1170b7ed2addb4e5ee4f2a5740af0cfa93c8cc4a62829ee02855fbebcb",
+  "exactFullStateMatch": true,
+  "playerCommands": 43,
+  "observedResourceBarsMatched": 27,
+  "sourceObservedRecordSha256": "b15772e0e7abf3ba11ba1a269af7765b123920c9a62b01c82f417003060a8bf7",
+  "turn": 67,
+  "winner": "player",
+  "victoryType": "Transcendence",
+  "method": "Archived Stage 6 engine; 43 normal player commands reconstructed from UI decisions; all rival turns ordinary runAI; no grants or state edits. Counterfactuals below fork this verified replay and are not the played campaign."
+}

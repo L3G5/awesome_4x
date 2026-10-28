@@ -1,0 +1,100 @@
+{
+  "engineCommit": "8b07399c428ac5b3cc2120ba5b8c88acd0fa5d81",
+  "fixture": {
+    "repositoryPath": "docs/intervention-audit/results/verified-cycle63-before-ai.json",
+    "sha256": "4ab22668b8ccfa41c7116eea7705e64eb95caae58a7ae5420381dc4cf891ea58"
+  },
+  "records": [
+    {
+      "case": "Actual63 attention",
+      "heldGarrisons": [
+        "f3",
+        "f52",
+        "f67",
+        "f68",
+        "f71"
+      ],
+      "scoutOnlyAfterGarrisons": true,
+      "noneAfterScout": true,
+      "metadataOnly": true
+    },
+    {
+      "case": "Actual campaign branch",
+      "turn": 64,
+      "winner": null,
+      "held": [
+        "f1",
+        "f3",
+        "f52",
+        "f67",
+        "f68",
+        "f71"
+      ],
+      "sameSimulation": true,
+      "sameReload": true
+    },
+    {
+      "case": "Actual campaign branch",
+      "turn": 65,
+      "winner": null,
+      "held": [
+        "f1",
+        "f3",
+        "f52",
+        "f67",
+        "f68",
+        "f71"
+      ],
+      "sameSimulation": true,
+      "sameReload": true
+    },
+    {
+      "case": "Actual campaign branch",
+      "turn": 66,
+      "winner": null,
+      "held": [
+        "f1",
+        "f3",
+        "f52",
+        "f67",
+        "f68",
+        "f71"
+      ],
+      "sameSimulation": true,
+      "sameReload": true
+    },
+    {
+      "case": "Actual campaign branch",
+      "turn": 67,
+      "winner": "player",
+      "held": [
+        "f1",
+        "f3",
+        "f52",
+        "f71"
+      ],
+      "sameSimulation": true,
+      "sameReload": true
+    },
+    {
+      "case": "Previously neutral local fleet becomes hostile through actual foreign war command",
+      "woke": true,
+      "reacknowledgementPersists": true
+    },
+    {
+      "case": "Invalid commands",
+      "count": 7,
+      "allAtomic": true
+    },
+    {
+      "case": "Zero-order zero-movement toggles",
+      "metadataOnly": true
+    },
+    {
+      "case": "Adjacent/foreign perturbation",
+      "ownPreviewUnchanged": true,
+      "ownObservedSnapshotUnchanged": true,
+      "foreignPreviewNeutral": true
+    }
+  ]
+}

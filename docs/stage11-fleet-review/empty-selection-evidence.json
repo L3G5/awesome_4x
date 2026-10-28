@@ -1,0 +1,13 @@
+{
+  "before": "A galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nSelect fleet →",
+  "after": "A galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nSelect fleet →",
+  "status": "No fleet awaits orders. Held and spent fleets remain available in the roster.",
+  "buttons": [
+    {
+      "text": "Select fleet →"
+    }
+  ],
+  "selectedText": "Pathfinder 1 / Ophion\n\nScout · 1 ship · 2 jumps · 18 / 18 hull · Select a star to plot a jump or a course. · Holding position\n\nResume\n⌁ 9\n⇥",
+  "rosterText": "×\nCONCORD FLEET COMMAND\nYour presence among the stars\n\n9 fleets · 0 awaiting orders · 9 holding position. Select any fleet to focus its location.\n\nPathfinder 1 ×1\nOphion · 18 / 18 hull · 1 credits upkeep\nHolding\n2 jumps\nSovereign 68 ×1\nSolace · 85 / 85 hull · 4 credits upkeep\nHolding\n2 jumps\nSovereign 71 ×1\nSundrift · 85 / 85 hull · 4 credits upkeep\nHolding\n2 jumps\nSovereign 74 ×1\nSolace · 85 / 85 hull · 4 credits upkeep\nHolding\n2 jumps\nSovereign 77 ×1\nSundrift · 85 / 85 hull · 4 credits upkeep\nHolding\n2 jumps\nVanguard 3 ×5\nElysian · 170 / 170 hull · 10 credits upkeep\nHolding\n2 jumps\nVanguard 52 ×1\nSundrift · 34 / 34 hull · 2 credits upkeep\nHolding\n2 jumps\nVanguard 67 ×2\nSolace · 68 / 68 hull · 4 credits upkeep\nHolding\n2 jumps\nVanguard 73 ×1\nHalcyon · 34 / 34 hull · 2 credits upkeep\nHolding\n2 jumps\n\nHold position keeps a fleet out of the ready queue without spending orders or movement. Select a held fleet to resume it or issue a manual command.",
+  "recommendation": "Replace empty-bar Select fleet with direct Fleet roster. N correctly refuses to cycle acknowledged fleets, and its explanatory message points to a roster that currently takes a preliminary arbitrary selection to expose."
+}

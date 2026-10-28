@@ -1,0 +1,1078 @@
+{
+  "generatedAt": "2026-10-28T21:15:15.034Z",
+  "engineRevision": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+  "scriptSha256": "4046e47bf42d804ae89ae7eeb6b2e67e7b04d6dccc87c2cf280d14a8d694b39b",
+  "method": {
+    "saveVersion": 1,
+    "resumeLimit": 20,
+    "playerPolicy": "Passive after import: no new player commands, ordinary endTurn runs current rival AI. Existing plotted routes are not automatically advanced.",
+    "generation": "Pinned historical engines: createGame(seed), ordinary endTurn to cycle30, then one lab commission at the player capital if enabled. No grants or direct state edits.",
+    "reload": "Every resumed cycle runs once from uninterrupted state and once from a JSON-parsed copy; endTurn result and full serialized next state must match exactly.",
+    "balanceFields": [
+      "credits",
+      "minerals",
+      "science",
+      "orders"
+    ],
+    "history": "Existing discovery event bodies must persist; knownBy may legitimately expand. Existing heritage entries must remain on surviving same-ID fleets. Fleet destruction/merger is ordinary gameplay.",
+    "limitation": "Finite real-save sample, not proof that every possible v1 save is accepted. Current rules and AI govern future play; future outcomes need not match the historical engine. Synthetic malformed fixtures are excluded."
+  },
+  "sources": {
+    "60fd9f8e85edfee92ed40ee29c9b8c314e140da3": {
+      "src/game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+      "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385"
+    },
+    "99afa91a004d371d39cd80b41e2ea5c45d525354": {
+      "src/game.js": "6c3cfc4bebf45c383968aaff7287a24e138cf2d6b8da1f04387b905101de3b81",
+      "src/content.js": "6ac4b5cebfdc8822aecb945bf846e8d17ade5248ab136fd92c96a7897ce600a6"
+    },
+    "e5af48635ff41bf0605c6d315a1ebdfc883ea3ee": {
+      "src/game.js": "e1ebd71f918e13c952ccac888de4bef4493aa7cf4e6f22527f136846c3cf6809",
+      "src/content.js": "6ac4b5cebfdc8822aecb945bf846e8d17ade5248ab136fd92c96a7897ce600a6",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119"
+    },
+    "379459bc1017e51bd64e5d451fd2acbef2d9a735": {
+      "src/game.js": "6b4cd1c49d3ef34538332150ec1c01578363ecfbfa12498dfe21eaa0918a1704",
+      "src/content.js": "6ac4b5cebfdc8822aecb945bf846e8d17ade5248ab136fd92c96a7897ce600a6",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "d38ee5d30fb73377f6ff405095680ed52ac01ce522ea30312960a24760564bc5",
+      "src/diplomacy.js": "de59021d7b3328173dd9fcead1eba0ea8b99e2a16ebc578f440a751c3f6fbb0a"
+    },
+    "536e9ecdae66a9305ec89826e1a7cf5167f1c18b": {
+      "src/game.js": "06c9481324da8b3bc4c96ffb23a49795da6ed90fdb56cbb7a051c5672e578503",
+      "src/content.js": "6ac4b5cebfdc8822aecb945bf846e8d17ade5248ab136fd92c96a7897ce600a6",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "d38ee5d30fb73377f6ff405095680ed52ac01ce522ea30312960a24760564bc5",
+      "src/diplomacy.js": "eab67e36a3107b4bbfe148dd2e7dfff5045bf9e575b178985fbb43c7679428dd",
+      "src/reports.js": "1df885b5bfbf6b2e0f41783082448185b929fe96cf51b2976c8d542b865b4035"
+    },
+    "554612e0e1ef4b9d26d0cbf36709ca0fc27f5e05": {
+      "src/game.js": "2257157ed972c883083ae3a18a7f2456be75be379ac4c3754168876970d7e52b",
+      "src/content.js": "08c39c90ade50eb89336a84f2cd49efd7e93bc64e611d7b7c27114a6653d6a1f",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "0e44278d56649fc58c82bb050ae7a430be1c0a5a8ccd8003567a5a91105c88b7",
+      "src/diplomacy.js": "eab67e36a3107b4bbfe148dd2e7dfff5045bf9e575b178985fbb43c7679428dd",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/reports.js": "1df885b5bfbf6b2e0f41783082448185b929fe96cf51b2976c8d542b865b4035",
+      "src/development.js": "79797a6f535a9bcc84d14f2f915cedf32f4b367358adba57199999df7bd22231"
+    },
+    "af9d817ff1c12dc4e08133f02400b7e00548542c": {
+      "src/game.js": "44942d62551dec8d2841e8c231fe67c44206ef7d715deb362112430e0a11bd17",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "50528c2586d0ec39214e2d60927472ee2e3dc2273101f3a33f5b75d4e4a9bd4e",
+      "src/diplomacy.js": "b63473b9d052f1a58d699b8d855eff02770c9664cf337e69373e1608570c5e7c",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/development.js": "79797a6f535a9bcc84d14f2f915cedf32f4b367358adba57199999df7bd22231",
+      "src/reports.js": "1df885b5bfbf6b2e0f41783082448185b929fe96cf51b2976c8d542b865b4035",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e"
+    },
+    "c4b33668964b42165c0d46edc5881498c661e572": {
+      "src/game.js": "d77232b5b5111e1dd125251853b87e78761bdff822986cf9a9927dc8d5d1caa2",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "3ef12265af9ad274d5ee80a27db3d65aef4472e5185e389c159aad9d1dee3c59",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/development.js": "79797a6f535a9bcc84d14f2f915cedf32f4b367358adba57199999df7bd22231",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e"
+    },
+    "ff2dfa2ef598d8c6efc2d32a62da450dc329b552": {
+      "src/game.js": "812accfaee69ff98147f965ec98066a9c963966a7aa89c4574750726e4a1d04b",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "27ddf3d7bd7f931f2b388eb65544574ab2c31e1e4efa3d0c52cc259f1abdd9c4",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/development.js": "9d3f8e4c37bb480125eca59dc20511f07ba00da5ce12cc7e19b365f9b1e4ba49",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e"
+    },
+    "6c4ce936f87755ff5b53aaa01e22341f38bb202d": {
+      "src/game.js": "812accfaee69ff98147f965ec98066a9c963966a7aa89c4574750726e4a1d04b",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "27ddf3d7bd7f931f2b388eb65544574ab2c31e1e4efa3d0c52cc259f1abdd9c4",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/development.js": "9d3f8e4c37bb480125eca59dc20511f07ba00da5ce12cc7e19b365f9b1e4ba49",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e"
+    },
+    "feb7894e96c2f87631428fbdf1cfa8facd3debad": {
+      "src/game.js": "883cdc5c540ebaae8ee2958bec0a2f61e4c3b3f0e4b32b79f7ca395fa27aface",
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/development.js": "9d3f8e4c37bb480125eca59dc20511f07ba00da5ce12cc7e19b365f9b1e4ba49",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e"
+    }
+  },
+  "cases": [
+    {
+      "id": "original-asterion",
+      "label": "Initial playable release",
+      "input": "inputs/original-asterion-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "99afa91a004d371d39cd80b41e2ea5c45d525354",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "0c9e5adfa86808aa2b1e13cfaa1f59ef708508e73cde73f12119fe22fa130297",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [
+          {
+            "id": "s1",
+            "owner": "veyr",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s2",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s3",
+            "owner": "choir",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s22",
+            "owner": "choir",
+            "buildings": [
+              "lab",
+              "market",
+              "mine",
+              "factory",
+              "shipyard",
+              "habitat",
+              "forum"
+            ],
+            "capacity": 5,
+            "population": 9
+          },
+          {
+            "id": "s26",
+            "owner": "veyr",
+            "buildings": [
+              "mine",
+              "lab",
+              "market",
+              "forum",
+              "factory",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          }
+        ],
+        "paidQueues": 6,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 0,
+        "heritageFleets": 0,
+        "plottedRoutes": [],
+        "charters": 0,
+        "combatReports": 0,
+        "hasBriefing": false
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "7b68768de42d1a5d106723d4d019bee132f216ab2c8f67929989a88592afd7c6",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "original-legacy2",
+      "label": "Initial playable release, second seed",
+      "input": "inputs/original-legacy2-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "99afa91a004d371d39cd80b41e2ea5c45d525354",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "837b5da9273b58edd05b73d0fe6cc694aa634bb86ec58d4cac5577dca6db39d9",
+      "seed": "stage4-legacy-2",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [
+          {
+            "id": "s2",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s3",
+            "owner": "choir",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "factory",
+              "market",
+              "forum"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s9",
+            "owner": "choir",
+            "buildings": [
+              "lab",
+              "factory",
+              "market",
+              "mine",
+              "forum"
+            ],
+            "capacity": 3,
+            "population": 5
+          },
+          {
+            "id": "s22",
+            "owner": "choir",
+            "buildings": [
+              "mine",
+              "lab",
+              "market",
+              "factory",
+              "forum"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s26",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "lab",
+              "market",
+              "forum",
+              "factory"
+            ],
+            "capacity": 4,
+            "population": 7
+          }
+        ],
+        "paidQueues": 5,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 0,
+        "heritageFleets": 0,
+        "plottedRoutes": [],
+        "charters": 0,
+        "combatReports": 0,
+        "hasBriefing": false
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "54bc6b823dff38a89caaf857a06d1889efd97b7a097fb9e5fa85fbe1faf10127",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "sensors",
+      "label": "Sensor intelligence release",
+      "input": "inputs/sensors-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "e5af48635ff41bf0605c6d315a1ebdfc883ea3ee",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "0c9e5adfa86808aa2b1e13cfaa1f59ef708508e73cde73f12119fe22fa130297",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [
+          {
+            "id": "s1",
+            "owner": "veyr",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s2",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s3",
+            "owner": "choir",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s22",
+            "owner": "choir",
+            "buildings": [
+              "lab",
+              "market",
+              "mine",
+              "factory",
+              "shipyard",
+              "habitat",
+              "forum"
+            ],
+            "capacity": 5,
+            "population": 9
+          },
+          {
+            "id": "s26",
+            "owner": "veyr",
+            "buildings": [
+              "mine",
+              "lab",
+              "market",
+              "forum",
+              "factory",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          }
+        ],
+        "paidQueues": 6,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 0,
+        "heritageFleets": 0,
+        "plottedRoutes": [],
+        "charters": 0,
+        "combatReports": 0,
+        "hasBriefing": false
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "7b68768de42d1a5d106723d4d019bee132f216ab2c8f67929989a88592afd7c6",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage2",
+      "label": "Tactical AI and diplomacy",
+      "input": "inputs/stage2-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "379459bc1017e51bd64e5d451fd2acbef2d9a735",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "2ebaa4282c2af64082deacdc3445a062a35cc793e058a957dfc198fe8116aa0c",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [
+          {
+            "id": "s1",
+            "owner": "veyr",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s2",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "factory",
+              "market",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s3",
+            "owner": "choir",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s9",
+            "owner": "choir",
+            "buildings": [
+              "lab",
+              "factory",
+              "market",
+              "mine",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 7
+          },
+          {
+            "id": "s18",
+            "owner": "veyr",
+            "buildings": [
+              "lab",
+              "market",
+              "mine",
+              "forum",
+              "habitat",
+              "factory",
+              "shipyard"
+            ],
+            "capacity": 5,
+            "population": 11
+          },
+          {
+            "id": "s24",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "lab",
+              "market",
+              "factory",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          }
+        ],
+        "paidQueues": 4,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 0,
+        "heritageFleets": 0,
+        "plottedRoutes": [],
+        "charters": 0,
+        "combatReports": 0,
+        "hasBriefing": false
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "2a8a238a28e3cdc5eb9480140323cca31a597aec72ca4d92eb5524cf12a8c3a6",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage3",
+      "label": "Battle reports and briefings",
+      "input": "inputs/stage3-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "536e9ecdae66a9305ec89826e1a7cf5167f1c18b",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "1eeb42c6fe2fa206ccfd5c4be714ebf0960e6473d5da7d21402ec11df9f0d6c9",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [
+          {
+            "id": "s1",
+            "owner": "veyr",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s2",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "factory",
+              "market",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s3",
+            "owner": "choir",
+            "buildings": [
+              "mine",
+              "shipyard",
+              "lab",
+              "market",
+              "factory",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          },
+          {
+            "id": "s9",
+            "owner": "choir",
+            "buildings": [
+              "lab",
+              "factory",
+              "market",
+              "mine",
+              "forum",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 7
+          },
+          {
+            "id": "s18",
+            "owner": "veyr",
+            "buildings": [
+              "lab",
+              "market",
+              "mine",
+              "forum",
+              "habitat",
+              "factory",
+              "shipyard"
+            ],
+            "capacity": 5,
+            "population": 11
+          },
+          {
+            "id": "s24",
+            "owner": "khar",
+            "buildings": [
+              "mine",
+              "lab",
+              "market",
+              "factory",
+              "habitat"
+            ],
+            "capacity": 4,
+            "population": 8
+          }
+        ],
+        "paidQueues": 4,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 0,
+        "heritageFleets": 0,
+        "plottedRoutes": [],
+        "charters": 0,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "33a4c402246c05d10c39e9dc0caaeb2774a0e03acc1382dc7482a9526b080d47",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage4",
+      "label": "Colonies and alignment",
+      "input": "inputs/stage4-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "554612e0e1ef4b9d26d0cbf36709ca0fc27f5e05",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "49bdab40a5c2e78bff8559627d431c20dea2f701d6db9e8edf7954194688a0d2",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 9,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 0,
+        "heritageFleets": 0,
+        "plottedRoutes": [],
+        "charters": 5,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "0edbfbc6bf3b991ff640eb9f75d42a881b6cc5d76cb1fff0e07644ba7b932f19",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage5",
+      "label": "Routes and discoveries",
+      "input": "inputs/stage5-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "af9d817ff1c12dc4e08133f02400b7e00548542c",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "4b8189e24ec8b9b98b13f60bc554ef5129a78fac41d435ad94b4942503dd5656",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 9,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 9,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 5,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "debaf03166c19efe83123ac722e5e075bd07c2bc6624f6c4a0336774c83cb255",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage6",
+      "label": "Public affairs and readiness",
+      "input": "inputs/stage6-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "c7d8241e0bc9182c53452cca710ad1036a87adf876a2484265536f0f436add28",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 9,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 9,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 5,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "764d06ca769f5b4166fe3fc9990e1551a86feecea75274501e204ed3f89fdc20",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage7",
+      "label": "Economic forecasts",
+      "input": "inputs/stage7-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "ff2dfa2ef598d8c6efc2d32a62da450dc329b552",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "36cea39a3ca09a08ce149966fe6835f891f807e7e8e5b6b2db2c1c0c29afbae5",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 10,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 9,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 4,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "9abebd44994124cc8f2a788db7cdba0992466bec6f32cf74789b794441ae1f3f",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage8",
+      "label": "Civilization dossiers",
+      "input": "inputs/stage8-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "6c4ce936f87755ff5b53aaa01e22341f38bb202d",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "36cea39a3ca09a08ce149966fe6835f891f807e7e8e5b6b2db2c1c0c29afbae5",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 10,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 9,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 4,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "9abebd44994124cc8f2a788db7cdba0992466bec6f32cf74789b794441ae1f3f",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "stage9",
+      "label": "Alignment expeditions",
+      "input": "inputs/stage9-cycle30.json",
+      "origin": "Reproducibly generated historical-engine export",
+      "revision": "feb7894e96c2f87631428fbdf1cfa8facd3debad",
+      "commands": 30,
+      "commandLogSha256": "3985aacc38d03873dbc499acc213d0b8028a1eb718a3be07f59bdf28f0bd176b",
+      "inputSha256": "36cea39a3ca09a08ce149966fe6835f891f807e7e8e5b6b2db2c1c0c29afbae5",
+      "seed": "ASTERION",
+      "start": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 10,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 9,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 4,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 50,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "9abebd44994124cc8f2a788db7cdba0992466bec6f32cf74789b794441ae1f3f",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 0
+    },
+    {
+      "id": "actual-stage6-cycle40",
+      "label": "Actual Stage6 cycle40 checkpoint",
+      "input": "inputs/actual-stage6-cycle40.json",
+      "origin": "Previously exported actual campaign or verified replay checkpoint",
+      "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+      "provenance": "Canonical checkpoint starting the recorded human campaign; SHA matches its published replay provenance.",
+      "repositorySource": "docs/intervention-audit/campaign-start-cycle40.json",
+      "inputSha256": "699e6c8b20048eb5d536cd9b986d234b3a854d4312a533671b8835694e0a358e",
+      "seed": "ASTERION",
+      "start": 40,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 15,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 10,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 9,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 60,
+      "steps": 20,
+      "winner": null,
+      "victoryType": null,
+      "finalCanonicalSha256": "99b79f329664a74328174bca0687571e29257bdecdf6529f15b07916a03c83ae",
+      "retainedInitialPendingQueues": 0,
+      "remainingInitialHeritageFleets": 1
+    },
+    {
+      "id": "actual-stage6-route63",
+      "label": "Verified human campaign cycle63 route checkpoint",
+      "input": "inputs/actual-stage6-route63.json",
+      "origin": "Previously exported actual campaign or verified replay checkpoint",
+      "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+      "provenance": "Ordinary-command replay of the human UI campaign at Stage6; its final full state matched the actual export exactly. This checkpoint includes a partially travelled plotted route.",
+      "repositorySource": "docs/intervention-audit/results/verified-cycle63-before-ai.json",
+      "inputSha256": "4ab22668b8ccfa41c7116eea7705e64eb95caae58a7ae5420381dc4cf891ea58",
+      "seed": "ASTERION",
+      "start": 63,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 15,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [
+          {
+            "systemId": "s0",
+            "kind": "ship",
+            "itemId": "cruiser",
+            "cost": {
+              "credits": 65,
+              "minerals": 77
+            },
+            "work": 65
+          },
+          {
+            "systemId": "s2",
+            "kind": "ship",
+            "itemId": "cruiser",
+            "cost": {
+              "credits": 65,
+              "minerals": 77
+            },
+            "work": 65
+          }
+        ],
+        "historicalEvents": 11,
+        "heritageFleets": 1,
+        "plottedRoutes": [
+          {
+            "fleetId": "f73",
+            "owner": "player",
+            "systemId": "s33",
+            "route": {
+              "destinationId": "s25",
+              "path": [
+                "s33",
+                "s25"
+              ]
+            }
+          }
+        ],
+        "charters": 19,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "end": 67,
+      "steps": 4,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "finalCanonicalSha256": "dd87400973912b49c4a47289ac9fadf3559d86f277186e6e1eca1d158c4acf24",
+      "retainedInitialPendingQueues": 1,
+      "remainingInitialHeritageFleets": 1
+    },
+    {
+      "id": "actual-stage6-final67",
+      "label": "Actual human Stage6 final cycle67 export",
+      "input": "inputs/actual-stage6-final67.json",
+      "origin": "Previously exported actual campaign or verified replay checkpoint",
+      "revision": "c4b33668964b42165c0d46edc5881498c661e572",
+      "provenance": "Human campaign played through the UI with no grants/save edits; independently reconstructed from 43 ordinary commands.",
+      "repositorySource": "docs/intervention-audit/campaign-final-cycle67.json",
+      "inputSha256": "626dd110a0530b3554b5cccb310cecda82a37180ea414685d6bfe214469a167f",
+      "seed": "ASTERION",
+      "start": 67,
+      "initialWinner": "player",
+      "status": "pass",
+      "features": {
+        "overCapacity": [],
+        "paidQueues": 7,
+        "queueReceiptsDifferFromCurrentBaseDefinitions": [],
+        "historicalEvents": 11,
+        "heritageFleets": 1,
+        "plottedRoutes": [],
+        "charters": 22,
+        "combatReports": 0,
+        "hasBriefing": true
+      },
+      "finishedCampaignUnchanged": true,
+      "end": 67,
+      "steps": 0,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "finalCanonicalSha256": "e2f41f4938d3f56f29b4f81c5d320f26e86481ae8e784b0d4ee0caf54aacc0e8",
+      "retainedInitialPendingQueues": 7,
+      "remainingInitialHeritageFleets": 1
+    }
+  ],
+  "ui": {
+    "status": "pass",
+    "url": "http://127.0.0.1:5179",
+    "cases": [
+      {
+        "id": "original-asterion",
+        "status": "pass",
+        "input": "inputs/original-asterion-cycle30.json",
+        "viewport": [
+          1440,
+          960
+        ],
+        "actions": "Menu > Import campaign > choose historical save file > Restore campaign; inspect Empire/Research/Chronicle/Galaxy; Menu > Export; browser reload.",
+        "fullStateImportEqual": true,
+        "inspectionStateEqual": true,
+        "exportEqual": true,
+        "autosaveReloadEqual": true,
+        "pageErrors": [],
+        "screenshot": "original-asterion-import.png",
+        "exportSha256": "17536415f691c5bef9ae590ebb276589421c6a1284d4355830f16e99f4787b3b"
+      },
+      {
+        "id": "actual-stage6-cycle40",
+        "status": "pass",
+        "input": "inputs/actual-stage6-cycle40.json",
+        "viewport": [
+          1440,
+          960
+        ],
+        "actions": "Menu > Import campaign > choose historical save file > Restore campaign; inspect Empire/Research/Chronicle/Galaxy; Menu > Export; browser reload.",
+        "fullStateImportEqual": true,
+        "inspectionStateEqual": true,
+        "exportEqual": true,
+        "autosaveReloadEqual": true,
+        "pageErrors": [],
+        "screenshot": "actual-stage6-cycle40-import.png",
+        "exportSha256": "acd1dbd583b0e53d6102ac532153d39ddb22a51e45b676708c366e2f0cd38f62"
+      },
+      {
+        "id": "actual-stage6-route63",
+        "status": "pass",
+        "input": "inputs/actual-stage6-route63.json",
+        "viewport": [
+          1440,
+          960
+        ],
+        "actions": "Menu > Import campaign > choose historical save file > Restore campaign; inspect Empire/Research/Chronicle/Galaxy; Menu > Export; browser reload.",
+        "fullStateImportEqual": true,
+        "inspectionStateEqual": true,
+        "exportEqual": true,
+        "autosaveReloadEqual": true,
+        "pageErrors": [],
+        "screenshot": "actual-stage6-route63-import.png",
+        "exportSha256": "4ab22668b8ccfa41c7116eea7705e64eb95caae58a7ae5420381dc4cf891ea58"
+      }
+    ]
+  },
+  "failures": [],
+  "historicalProvenance": {
+    "file": "stage6-provenance.json",
+    "sha256": "2bb36907f31f9e9ac02c91dcb0e1a37e65867202bdf699a6a38b864856bc0811"
+  },
+  "summary": {
+    "cases": 14,
+    "oldValidatorsAccepted": 14,
+    "currentValidatorsAccepted": 14,
+    "resumedCycles": 244,
+    "reloadChecks": 244,
+    "checkedStates": 502,
+    "paidQueues": 119,
+    "queueReceiptChecks": 168,
+    "overCapacityColonies": 27,
+    "historicalEvents": 77,
+    "heritageFleets": 8,
+    "plottedRoutes": 1,
+    "finishedImports": 1
+  }
+}

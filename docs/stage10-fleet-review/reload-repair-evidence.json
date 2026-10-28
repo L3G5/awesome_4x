@@ -1,0 +1,118 @@
+{
+  "source": "Unmodified actual cycle59 warplay loaded, followed by ordinary UI split/merge and one end cycle",
+  "before": [
+    {
+      "id": "f3",
+      "ships": 5,
+      "hp": 161.85714285714286,
+      "movesLeft": 1,
+      "route": {
+        "destinationId": "s0",
+        "path": [
+          "s1",
+          "s26",
+          "s13",
+          "s5",
+          "s10",
+          "s23",
+          "s15",
+          "s28",
+          "s0"
+        ]
+      },
+      "heritage": [
+        {
+          "id": "s20:forge:ship",
+          "name": "Last Light of Sundrift",
+          "systemId": "s20",
+          "discoveryId": "forge",
+          "choiceId": "ship",
+          "turn": 3,
+          "factionId": "player",
+          "fleetId": "f13"
+        }
+      ]
+    },
+    {
+      "id": "f71",
+      "ships": 2,
+      "hp": 64.74285714285713,
+      "movesLeft": 1,
+      "heritage": [
+        {
+          "id": "s20:forge:ship",
+          "name": "Last Light of Sundrift",
+          "systemId": "s20",
+          "discoveryId": "forge",
+          "choiceId": "ship",
+          "turn": 3,
+          "factionId": "player",
+          "fleetId": "f13"
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "id": "f3",
+      "ships": 5,
+      "hp": 167.57142857142856,
+      "movesLeft": 2,
+      "route": {
+        "destinationId": "s0",
+        "path": [
+          "s1",
+          "s26",
+          "s13",
+          "s5",
+          "s10",
+          "s23",
+          "s15",
+          "s28",
+          "s0"
+        ]
+      },
+      "heritage": [
+        {
+          "id": "s20:forge:ship",
+          "name": "Last Light of Sundrift",
+          "systemId": "s20",
+          "discoveryId": "forge",
+          "choiceId": "ship",
+          "turn": 3,
+          "factionId": "player",
+          "fleetId": "f13"
+        }
+      ]
+    },
+    {
+      "id": "f71",
+      "ships": 2,
+      "hp": 67.02857142857144,
+      "movesLeft": 2,
+      "heritage": [
+        {
+          "id": "s20:forge:ship",
+          "name": "Last Light of Sundrift",
+          "systemId": "s20",
+          "discoveryId": "forge",
+          "choiceId": "ship",
+          "turn": 3,
+          "factionId": "player",
+          "fleetId": "f13"
+        }
+      ]
+    }
+  ],
+  "totalHullBefore": 226.6,
+  "totalHullAfter": 234.6,
+  "actualTotalRepair": 8,
+  "validBefore": true,
+  "validAfter": true,
+  "actualUIImport": true,
+  "actualPageReload": true,
+  "fullReloadStateEqual": true,
+  "originalRouteAfterReload": "Vanguard 3 / Veyr Prime\n\nFrigate · 5 ships · 2 jumps · 168/170 hull\n\nRepair ◇10\nMerge +2\nSplit fleet\nHeritage ✦\n⌁ 4\n⇥\n△\n▴\n⬡\n▴\nPLANNED COURSE\nSolace · 8 jumps · 8 orders total\nContinue · up to 2 jumps\n⌖\nReplot\n×\n●\nVeyr Prime\n›\n1\nAster\n›\n2\nSable\n›\n3\nHesper\n›\n4\nAshfall\n›\n5\nTethys\n›\n6\nKepler\n›\n7\nHaven\n›\n8\nSolace\n\nUp to 2 orders now; stops for new contacts, discoveries or combat. Opposition unknown at 4 stops.",
+  "detachedAfterReload": "Vanguard 71 / Veyr Prime\n\nFrigate · 2 ships · 2 jumps · 68/68 hull\n\nRepair ◇10\nMerge +5\nSplit fleet\nHeritage ✦\n⌁ 4\n⇥\n△\n▴\n⬡\n▴",
+  "errors": []
+}

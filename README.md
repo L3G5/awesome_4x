@@ -38,6 +38,10 @@ The [expedition comparison](docs/results/expedition-comparison.json) measures th
 
 The [shared repair comparison](docs/results/stage10-repair.json) changes only passive recovery within one committed engine and measures 32 campaigns with replay checks. Reproduce with `node scripts/repair-benchmark.mjs --engine-ref 60fd9f8`; omit the revision to measure the current committed engine. The automated policies do not deliberately split fleets, so the report distinguishes ordinary recovery balance from the separate anti-fragmentation command tests.
 
+The [fleet interface review](docs/stage10-fleet-review/index.html) preserves actual division, shared repair, keyboard and import/reload checks at three screen widths. The [cross-version save audit](docs/save-compatibility/index.html) resumes fourteen original-to-version-0.9 campaigns through the version-0.10 engine, including previously exported human campaign checkpoints. Its portable runner and exact inputs distinguish historical engine generation from recorded exports.
+
+The [fleet readiness review](docs/stage11-fleet-review/index.html) verifies deliberate garrison holds, truthful fractional hull, ready-fleet cycling and saved routes. Its portable engine check pins the source revision and compares held/unheld continuations of the recorded cycle-63 campaign through victory, including exact serialization reloads.
+
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.
