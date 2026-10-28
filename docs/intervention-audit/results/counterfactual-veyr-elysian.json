@@ -1,0 +1,427 @@
+{
+  "label": "Counterfactual normal-command reachability branch; not the played campaign",
+  "startTurn": 60,
+  "target": "Elysian",
+  "turn": 64,
+  "arrived": true,
+  "arrival": {
+    "target": "Elysian",
+    "alive": false,
+    "fleet": {
+      "id": "f59",
+      "name": "Vanguard 59",
+      "owner": "veyr",
+      "systemId": "s25",
+      "type": "frigate",
+      "ships": 0,
+      "hp": 0,
+      "movesLeft": 0
+    },
+    "guard": [
+      {
+        "id": "f3",
+        "name": "Vanguard 3",
+        "owner": "player",
+        "systemId": "s25",
+        "type": "frigate",
+        "ships": 4,
+        "hp": 108.9,
+        "movesLeft": 2,
+        "heritage": [
+          {
+            "id": "s20:forge:ship",
+            "name": "Last Light of Sundrift",
+            "systemId": "s20",
+            "discoveryId": "forge",
+            "choiceId": "ship",
+            "turn": 3,
+            "factionId": "player",
+            "fleetId": "f13"
+          }
+        ]
+      },
+      {
+        "id": "f73",
+        "name": "Vanguard 73",
+        "owner": "player",
+        "systemId": "s25",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "movesLeft": 1
+      }
+    ],
+    "alignment": {
+      "factionId": "player",
+      "progress": 7,
+      "target": 10,
+      "beacons": 3,
+      "sites": [
+        "s20",
+        "s25",
+        "s0"
+      ],
+      "ready": true,
+      "reason": "",
+      "cost": 60
+    },
+    "veyr": {
+      "credits": 7780,
+      "minerals": 255,
+      "science": 1068,
+      "creditIncome": 432,
+      "mineralIncome": 101,
+      "scienceIncome": 184,
+      "production": 156,
+      "upkeep": 5,
+      "colonies": 11,
+      "population": 100,
+      "ships": 2,
+      "military": 42.5,
+      "orders": 16,
+      "maxOrders": 18,
+      "score": 814,
+      "beacons": 3,
+      "explored": 40
+    }
+  },
+  "finalAlignment": {
+    "factionId": "player",
+    "progress": 7,
+    "target": 10,
+    "beacons": 3,
+    "sites": [
+      "s20",
+      "s25",
+      "s0"
+    ],
+    "ready": true,
+    "reason": "",
+    "cost": 60
+  },
+  "timeline": [
+    {
+      "turn": 60,
+      "action": {
+        "type": "diplomacy",
+        "factionId": "veyr",
+        "targetId": "player",
+        "stance": "war"
+      },
+      "result": {
+        "ok": true,
+        "message": "Veyr Consortium declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance.",
+        "outcome": "war"
+      }
+    },
+    {
+      "turn": 60,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s26"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Aster."
+      }
+    },
+    {
+      "turn": 60,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s13"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Sable."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "cruiser"
+      },
+      "result": {
+        "ok": true,
+        "message": "Sovereign commissioned at Solace."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "build",
+        "systemId": "s20",
+        "itemId": "cruiser"
+      },
+      "result": {
+        "ok": true,
+        "message": "Sovereign commissioned at Sundrift."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s5"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Hesper."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s10"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Ashfall."
+      }
+    },
+    {
+      "turn": 62,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s23"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Tethys."
+      }
+    },
+    {
+      "turn": 62,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s15"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Kepler."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "fleetId": "f73",
+        "targetId": "s0"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 73 arrived at Solace."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "fleetId": "f73",
+        "targetId": "s33"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 73 arrived at Halcyon."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s7"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Nacre."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s4"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Meridian."
+      }
+    },
+    {
+      "turn": 64,
+      "action": {
+        "type": "move",
+        "fleetId": "f73",
+        "targetId": "s25"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 73 arrived at Elysian."
+      }
+    },
+    {
+      "turn": 64,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s12"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Eidolon."
+      }
+    },
+    {
+      "turn": 64,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s25"
+      },
+      "result": {
+        "ok": true,
+        "message": "Battle at Elysian: Veyr lost 3 ships and 102 hull; Concord lost 1 ship and 61.1 hull. Attacking fleet destroyed.",
+        "combatReports": [
+          {
+            "kind": "fleet",
+            "systemId": "s25",
+            "participants": [
+              {
+                "role": "attacker",
+                "fleetId": "f59",
+                "owner": "veyr",
+                "name": "Vanguard 59",
+                "type": "frigate",
+                "shipsBefore": 3,
+                "hullBefore": 102,
+                "shipsAfter": 0,
+                "hullAfter": 0
+              },
+              {
+                "role": "defender",
+                "fleetId": "f3",
+                "owner": "player",
+                "name": "Vanguard 3",
+                "type": "frigate",
+                "shipsBefore": 5,
+                "hullBefore": 170,
+                "shipsAfter": 4,
+                "hullAfter": 108.9
+              }
+            ],
+            "outcome": "attacker-destroyed",
+            "summary": "Battle at Elysian: Veyr lost 3 ships and 102 hull; Concord lost 1 ship and 61.1 hull. Attacking fleet destroyed.",
+            "id": 1,
+            "turn": 64
+          }
+        ],
+        "combatOccurred": true
+      }
+    },
+    {
+      "turn": 64,
+      "arrival": {
+        "target": "Elysian",
+        "alive": false,
+        "fleet": {
+          "id": "f59",
+          "name": "Vanguard 59",
+          "owner": "veyr",
+          "systemId": "s25",
+          "type": "frigate",
+          "ships": 0,
+          "hp": 0,
+          "movesLeft": 0
+        },
+        "guard": [
+          {
+            "id": "f3",
+            "name": "Vanguard 3",
+            "owner": "player",
+            "systemId": "s25",
+            "type": "frigate",
+            "ships": 4,
+            "hp": 108.9,
+            "movesLeft": 2,
+            "heritage": [
+              {
+                "id": "s20:forge:ship",
+                "name": "Last Light of Sundrift",
+                "systemId": "s20",
+                "discoveryId": "forge",
+                "choiceId": "ship",
+                "turn": 3,
+                "factionId": "player",
+                "fleetId": "f13"
+              }
+            ]
+          },
+          {
+            "id": "f73",
+            "name": "Vanguard 73",
+            "owner": "player",
+            "systemId": "s25",
+            "type": "frigate",
+            "ships": 1,
+            "hp": 34,
+            "movesLeft": 1
+          }
+        ],
+        "alignment": {
+          "factionId": "player",
+          "progress": 7,
+          "target": 10,
+          "beacons": 3,
+          "sites": [
+            "s20",
+            "s25",
+            "s0"
+          ],
+          "ready": true,
+          "reason": "",
+          "cost": 60
+        },
+        "veyr": {
+          "credits": 7780,
+          "minerals": 255,
+          "science": 1068,
+          "creditIncome": 432,
+          "mineralIncome": 101,
+          "scienceIncome": 184,
+          "production": 156,
+          "upkeep": 5,
+          "colonies": 11,
+          "population": 100,
+          "ships": 2,
+          "military": 42.5,
+          "orders": 16,
+          "maxOrders": 18,
+          "score": 814,
+          "beacons": 3,
+          "explored": 40
+        }
+      }
+    }
+  ]
+}

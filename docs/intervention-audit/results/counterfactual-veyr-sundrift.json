@@ -1,0 +1,256 @@
+{
+  "label": "Counterfactual normal-command reachability branch; not the played campaign",
+  "startTurn": 60,
+  "target": "Sundrift",
+  "turn": 63,
+  "arrived": false,
+  "finalAlignment": {
+    "factionId": "player",
+    "progress": 6,
+    "target": 10,
+    "beacons": 3,
+    "sites": [
+      "s20",
+      "s25",
+      "s0"
+    ],
+    "ready": true,
+    "reason": "",
+    "cost": 60
+  },
+  "timeline": [
+    {
+      "turn": 60,
+      "action": {
+        "type": "diplomacy",
+        "factionId": "veyr",
+        "targetId": "player",
+        "stance": "war"
+      },
+      "result": {
+        "ok": true,
+        "message": "Veyr Consortium declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance.",
+        "outcome": "war"
+      }
+    },
+    {
+      "turn": 60,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s26"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Aster."
+      }
+    },
+    {
+      "turn": 60,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s13"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Sable."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "cruiser"
+      },
+      "result": {
+        "ok": true,
+        "message": "Sovereign commissioned at Solace."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "build",
+        "systemId": "s20",
+        "itemId": "cruiser"
+      },
+      "result": {
+        "ok": true,
+        "message": "Sovereign commissioned at Sundrift."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s5"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Hesper."
+      }
+    },
+    {
+      "turn": 61,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s10"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Ashfall."
+      }
+    },
+    {
+      "turn": 62,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s23"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Tethys."
+      }
+    },
+    {
+      "turn": 62,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s36"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Peregrine."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "fleetId": "f73",
+        "targetId": "s0"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 73 arrived at Solace."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "fleetId": "f73",
+        "targetId": "s33"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 73 arrived at Halcyon."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s28"
+      },
+      "result": {
+        "ok": true,
+        "message": "Vanguard 59 arrived at Haven."
+      }
+    },
+    {
+      "turn": 63,
+      "action": {
+        "type": "move",
+        "factionId": "veyr",
+        "fleetId": "f59",
+        "targetId": "s0"
+      },
+      "result": {
+        "ok": true,
+        "message": "Battle at Solace: Veyr lost 1 ship and 49.8 hull; Concord lost 2 ships and 68 hull. Attacking fleet survives; defending fleet destroyed. Battle at Solace: Veyr lost 2 ships and 52.2 hull; Concord lost 0 ships and 38.7 hull. Attacking fleet destroyed.",
+        "combatReports": [
+          {
+            "kind": "fleet",
+            "systemId": "s0",
+            "participants": [
+              {
+                "role": "attacker",
+                "fleetId": "f59",
+                "owner": "veyr",
+                "name": "Vanguard 59",
+                "type": "frigate",
+                "shipsBefore": 3,
+                "hullBefore": 102,
+                "shipsAfter": 2,
+                "hullAfter": 52.2
+              },
+              {
+                "role": "defender",
+                "fleetId": "f67",
+                "owner": "player",
+                "name": "Vanguard 67",
+                "type": "frigate",
+                "shipsBefore": 2,
+                "hullBefore": 68,
+                "shipsAfter": 0,
+                "hullAfter": 0
+              }
+            ],
+            "outcome": "defender-destroyed",
+            "summary": "Battle at Solace: Veyr lost 1 ship and 49.8 hull; Concord lost 2 ships and 68 hull. Attacking fleet survives; defending fleet destroyed.",
+            "id": 1,
+            "turn": 63
+          },
+          {
+            "kind": "fleet",
+            "systemId": "s0",
+            "participants": [
+              {
+                "role": "attacker",
+                "fleetId": "f59",
+                "owner": "veyr",
+                "name": "Vanguard 59",
+                "type": "frigate",
+                "shipsBefore": 2,
+                "hullBefore": 52.2,
+                "shipsAfter": 0,
+                "hullAfter": 0
+              },
+              {
+                "role": "defender",
+                "fleetId": "f68",
+                "owner": "player",
+                "name": "Sovereign 68",
+                "type": "cruiser",
+                "shipsBefore": 1,
+                "hullBefore": 85,
+                "shipsAfter": 1,
+                "hullAfter": 46.3
+              }
+            ],
+            "outcome": "attacker-destroyed",
+            "summary": "Battle at Solace: Veyr lost 2 ships and 52.2 hull; Concord lost 0 ships and 38.7 hull. Attacking fleet destroyed.",
+            "id": 2,
+            "turn": 63
+          }
+        ],
+        "combatOccurred": true
+      }
+    }
+  ]
+}

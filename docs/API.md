@@ -285,6 +285,14 @@ Science beyond remaining unfunded technology demand has no forecast value. Order
 
 `scripts/investment-benchmark.mjs` compares the policy with the pinned version-0.6 AI inside a shared frozen engine. Its compact result in `docs/results/stage7-investment.json` records source hashes, the generated Halcyon planning scenario, eight paired all-AI campaigns, JSON restoration checks and uninstrumented CPU probes. “Zero under forecast” describes the policy assumptions; it does not prove that every counted historical purchase was globally useless.
 
+## AI alignment expeditions
+
+AI intervention keeps the existing public-race, diplomatic and home-threat thresholds. Arrival estimates account for remaining movement, the declaration order and movement replenished by Distributed Command. A selected force transits intermediate hostile colonies to reach its beacon objective, then holds a surviving blockade instead of treating every colony along the way as an invasion target. Encountering combat stops its travel for that cycle; ordinary rescue and observed-threat checks still run.
+
+Optional `faction.strategy.expedition={fleetId,targetId,systemId}` keeps a feasible force assigned across turns. Planning can reconsider a changed target, blocked access, new threats or an obsolete race. Validation requires exact fields, a known target system and an owned live fleet or a previously issued fleet ID. A fleet destroyed between AI turns or a captured target does not invalidate an immediate player save; the next planner clears or replaces the stale commitment. Older version-1 saves omit the field unchanged.
+
+`scripts/expedition-benchmark.mjs` holds the complete engine fixed while comparing the version-0.7 AI with the expedition controller. `docs/results/expedition-comparison.json` contains source hashes, policy limitations, 32 campaign measurements, reload/instrumentation checks and the verified human-run continuation. Blockade-decline counts are completed cycles with falling alignment and an actual hostile blockade, not counts of unique raids.
+
 ## Presentation assets and workspace context
 
 `workspace-ui.js` renders the non-map inspector from the current command page. Civilization dossiers require contact; public beacon summaries use `getPublicRaces`; expedition links use `getDiscoveryView`. Choosing a dossier or following an inspection link does not mutate the campaign. Dossier selection is presentation state only. On the galaxy page, the ordinary system inspector remains active.

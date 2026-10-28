@@ -616,6 +616,15 @@ function isValidSave(value) {
     if (!text(faction.name) || !text(faction.color) || !/^#[0-9a-f]{6}$/i.test(faction.color) || typeof faction.eliminated !== 'boolean' || !['credits', 'minerals', 'science', 'orders'].every(key => Number.isFinite(faction[key]) && faction[key] >= 0) || !Array.isArray(faction.techs) || faction.techs.some(id => !member(TECHS, id)) || new Set(faction.techs).size !== faction.techs.length || !Array.isArray(faction.contacts) || faction.contacts.some(id => !ids.includes(id)) || !systemIds.has(faction.capitalId) || !faction.relations) return false;
     if (faction.research && (!member(TECHS, faction.research.techId) || faction.techs.includes(faction.research.techId) || !Number.isFinite(faction.research.progress) || faction.research.progress < 0 || faction.research.progress >= TECHS[faction.research.techId].cost)) return false;
     if (faction.strategy !== undefined && (!faction.strategy || !['defend', 'assemble', 'advance', 'develop'].includes(faction.strategy.mode) || (faction.strategy.rallyId !== null && !systemIds.has(faction.strategy.rallyId)) || (faction.strategy.objectiveId !== null && !systemIds.has(faction.strategy.objectiveId)) || !Number.isInteger(faction.strategy.turn) || faction.strategy.turn < 1 || faction.strategy.turn > value.turn)) return false;
+    if (faction.strategy?.expedition !== undefined) {
+      const expedition = faction.strategy.expedition;
+      if (!expedition || typeof expedition !== 'object' || Array.isArray(expedition) || Object.keys(expedition).some(key => !['fleetId', 'targetId', 'systemId'].includes(key)) || typeof expedition.fleetId !== 'string' || expedition.fleetId.length > 32 || !/^f[1-9][0-9]*$/.test(expedition.fleetId) || !ids.includes(expedition.targetId) || expedition.targetId === faction.id || !systemIds.has(expedition.systemId) || !value.systems.find(system => system.id === expedition.systemId).knownBy?.includes(faction.id)) return false;
+      // A player attack may destroy the fleet between AI turns. That stale
+      // commitment is valid to load and is reconsidered on the next AI turn.
+      const assigned = value.fleets.find(fleet => fleet.id === expedition.fleetId);
+      const issuedId = Number(expedition.fleetId.slice(1));
+      if (assigned ? assigned.owner !== faction.id : !Number.isSafeInteger(issuedId) || issuedId >= value.nextFleetId) return false;
+    }
     for (const other of ids.filter(id => id !== faction.id)) { const r = faction.relations[other]; if (!r || !['peace', 'war'].includes(r.status) || !Number.isFinite(r.trust) || typeof r.trade !== 'boolean' || !Number.isFinite(r.treatyTurn)) return false; }
   }
   for (const system of value.systems) {

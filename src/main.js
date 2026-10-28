@@ -262,7 +262,7 @@ function advanceTurn(force=false) {
     const newOffer=(state.diplomacyOffers || []).find(o=>o.to==='player' && o.status==='pending' && o.createdTurn>=previousTurn);
     const raceAlert=getPublicRaces(state).some(race=>{const before=previousRaces.find(r=>r.factionId===race.factionId);return race.factionId!=='player' && (race.progress>0 && !before?.progress || race.progress>=8 && (before?.progress||0)<8);});
     const transferBlocksRoute=entry=>{const world=systemById(entry.systemId);return world?.owner && world.owner!=='player' && !player().relations[world.owner].trade && player().relations[world.owner].status!=='war' && state.fleets.some(fleet=>fleet.owner==='player' && fleet.route?.path.slice(1).includes(entry.systemId));};
-    const publicAlert=briefing?.entries.some(entry=>entry.publicAffairId && (entry.type==='war' || entry.type==='sovereignty' && transferBlocksRoute(entry)));
+    const publicAlert=briefing?.entries.some(entry=>entry.type==='war' || entry.publicAffairId && entry.type==='sovereignty' && transferBlocksRoute(entry));
     if(briefing?.reportIds.length || raceAlert || publicAlert)showCycleBriefing();
     else if(newOffer) showPeaceOffer(newOffer.id);
   }
