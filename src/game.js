@@ -9,12 +9,14 @@ import { getRoutePreview, continuePlannedRoute, updateRouteAfterMove, reconcileR
 import { placeDiscoveries, observeDiscovery, observeDiscoveries, getDiscoveryBuildReason, recordDiscoveryConstruction, executeDiscovery, mergeDiscoveryHeritage, advanceDiscoveries, validateDiscoveryState } from './discoveries.js';
 import { recordSovereigntyTransfer, validatePublicAffairsState } from './public-affairs.js';
 import { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
+import { captureFleetReadiness, reconcileFleetReadiness, validateFleetReadiness } from './fleet-readiness.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getOrderCapacity, getOrderChange } from './development.js';
 export { getRoutePreview, getRouteStatus } from './navigation.js';
 export { getPublicRelationships, getPublicDispatches, getKnownTransfers } from './public-affairs.js';
 export { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
+export { getFleetReadiness, getReadyFleets } from './fleet-readiness.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -268,6 +270,7 @@ function decommissionShip(state, fleet) {
 }
 
 function battle(state, attacker, defender) {
+  delete attacker.hold; delete defender.hold;
   const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');
   for (let roundIndex = 0; roundIndex < 4 && attacker.hp > 0 && defender.hp > 0; roundIndex++) {
     const aHit = fleetPower(state, attacker) * (.85 + random(state) * .3);
@@ -312,12 +315,19 @@ export function command(state, action) {
   const faction = factionOf(state, factionId);
   if (!faction || faction.eliminated) return fail('This empire is no longer active.');
   if (action.type === 'endTurn') return factionId === 'player' ? endTurn(state) : fail('Only the player can advance the turn.');
-  const freeActions = ['research', 'cancelBuild', 'planRoute', 'clearRoute', 'continueRoute'];
+  const freeActions = ['research', 'cancelBuild', 'planRoute', 'clearRoute', 'continueRoute', 'hold', 'resume'];
   if (!freeActions.includes(action.type) && faction.orders < 1) return fail('No orders remaining. End the turn to receive a new mandate.');
   const fleet = action.fleetId ? fleetOf(state, action.fleetId) : null;
   const system = action.systemId ? systemOf(state, action.systemId) : fleet ? systemOf(state, fleet.systemId) : null;
   if (action.fleetId && (!fleet || fleet.owner !== factionId)) return fail('Select one of your own fleets.');
   if (action.systemId && !system) return fail('Unknown system.');
+  if (action.type === 'hold' || action.type === 'resume') {
+    if (!fleet) return fail('Select a fleet first.');
+    if (action.type === 'hold') fleet.hold = true;
+    else delete fleet.hold;
+    return success(action.type === 'hold' ? `${fleet.name} is holding position.` : `${fleet.name} awaits orders.`);
+  }
+  const readinessBefore = captureFleetReadiness(state);
   let result;
   switch (action.type) {
     case 'planRoute': {
@@ -511,9 +521,11 @@ export function command(state, action) {
     }
     default: return fail('Unknown command.');
   }
+  if (fleet && (['move', 'attack', 'continueRoute'].includes(action.type) || action.type === 'planRoute' && fleet.route)) delete fleet.hold;
   reconcileRoutes(state);
   observeDiscoveries(state);
   checkVictory(state);
+  reconcileFleetReadiness(state, readinessBefore);
   return result;
 }
 
@@ -563,9 +575,10 @@ function checkVictory(state) {
 
 export function endTurn(state) {
   if (state.winner) return fail('This campaign has ended.');
+  const readinessBefore = captureFleetReadiness(state);
   const firstLogId = state.nextLogId, firstReportId = state.nextCombatReportId || 1;
   for (const faction of state.factions.filter(f => f.id !== 'player')) runAI(state, faction);
-  if (state.winner) { finalizeBriefing(state, firstLogId, firstReportId); return success('Campaign concluded.'); }
+  if (state.winner) { reconcileFleetReadiness(state, readinessBefore); finalizeBriefing(state, firstLogId, firstReportId); return success('Campaign concluded.'); }
   state.turn++;
   advanceDiplomacy(state);
   reconcileRoutes(state);
@@ -616,6 +629,7 @@ export function endTurn(state) {
   for (const faction of state.factions) faction.orders = faction.eliminated ? 0 : getEmpireStats(state, faction.id).maxOrders;
   advanceAlignment(state);
   checkVictory(state);
+  reconcileFleetReadiness(state, readinessBefore);
   finalizeBriefing(state, firstLogId, firstReportId);
   return success(`Turn ${state.turn}: a new mandate begins.`);
 }
@@ -662,6 +676,7 @@ function isValidSave(value) {
   if (!validateReportState(value)) return false;
   if (!validateAlignmentState(value)) return false;
   if (!validateNavigationState(value)) return false;
+  if (!validateFleetReadiness(value)) return false;
   if (!validateDiscoveryState(value)) return false;
   if (!validatePublicAffairsState(value)) return false;
   return true;
