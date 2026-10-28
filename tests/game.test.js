@@ -141,7 +141,7 @@ test('anomalies require an expedition, resolve once, and grant authored effects'
   assert.equal(player(state).science, 50);
 });
 
-test('diplomacy is symmetric, trade pays income, and wars have a five-turn settlement floor', () => {
+test('diplomacy is symmetric, trade pays income, and negotiated peace enforces a truce', () => {
   const state = createGame(), other = state.factions.find(f => f.id === 'veyr');
   assert.equal(command(state, { type: 'diplomacy', targetId: 'veyr', stance: 'trade' }).ok, false);
   player(state).contacts.push('veyr'); other.contacts.push('player');
@@ -154,9 +154,16 @@ test('diplomacy is symmetric, trade pays income, and wars have a five-turn settl
   assert.equal(other.relations.player.trade, false);
   assert.equal(command(state, { type: 'diplomacy', targetId: 'veyr', stance: 'peace' }).ok, false);
   state.turn += 5;
+  // The negotiation floor opens talks, but an unpressured rival can refuse.
+  const beforeRefusal = structuredClone(state);
+  assert.equal(command(state, { type: 'diplomacy', targetId: 'veyr', stance: 'peace' }).ok, false);
+  assert.deepEqual(state, beforeRefusal);
+  state.turn += 7;
   assert.ok(command(state, { type: 'diplomacy', targetId: 'veyr', stance: 'peace' }).ok);
   assert.equal(other.relations.player.status, 'peace');
   assert.equal(player(state).relations.veyr.status, 'peace');
+  assert.equal(player(state).relations.veyr.truceUntil, state.turn + 5);
+  assert.equal(command(state, { type: 'diplomacy', targetId: 'veyr', stance: 'war' }).ok, false);
 });
 
 test('fleets cannot bypass neutral borders; trade permits peaceful passage', () => {

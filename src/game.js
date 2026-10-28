@@ -1,5 +1,7 @@
 import { FACTIONS, PLANET_TYPES, SYSTEM_NAMES, TECHS, BUILDINGS, SHIPS, ANOMALIES } from './content.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
+import { runAI } from './ai.js';
+import { executeDiplomacy, advanceDiplomacy, validateDiplomacyState } from './diplomacy.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 
 export const SAVE_VERSION = 1;
@@ -360,44 +362,9 @@ export function command(state, action) {
       result = success('Expedition resolved.'); break;
     }
     case 'diplomacy': {
-      const other = factionOf(state, action.targetId);
-      if (!other || other.id === factionId || other.eliminated) return fail('Select an active foreign empire.');
-      if (!faction.contacts.includes(other.id)) return fail('Establish first contact before opening negotiations.');
-      const relation = faction.relations[other.id], reverse = other.relations[factionId];
-      if (action.stance === 'war') {
-        if (relation.status === 'war') return fail('Already at war.');
-        for (const r of [relation, reverse]) { r.status = 'war'; r.trade = false; r.trust = Math.max(-100, r.trust - 40); r.treatyTurn = state.turn; }
-        record(state, `${faction.name} declared war on ${other.name}.`, 'war', factionId === 'player' || other.id === 'player' ? null : factionId);
-      } else if (action.stance === 'peace') {
-        if (relation.status !== 'war') return fail('Already at peace.');
-        if (state.turn - relation.treatyTurn < 5) return fail('They will not discuss peace during the first five turns of war.');
-        if (!canPay(faction, { credits: 60 })) return fail('A peace settlement costs 60 credits.');
-        pay(faction, { credits: 60 }); other.credits += 60;
-        for (const r of [relation, reverse]) { r.status = 'peace'; r.trust = -5; r.treatyTurn = state.turn; }
-        record(state, `Peace signed between ${faction.name} and ${other.name}.`, 'diplomacy', factionId === 'player' || other.id === 'player' ? null : factionId);
-        // Return fleets trapped inside the other empire's now-closed borders.
-        for (const f of state.fleets.filter(f => [factionId, other.id].includes(f.owner))) {
-          const location = systemOf(state, f.systemId);
-          if (location.owner && location.owner !== f.owner && [factionId, other.id].includes(location.owner)) {
-            const destination = state.systems.filter(s => s.owner === f.owner).sort((a, b) => Math.hypot(a.x - location.x, a.y - location.y) - Math.hypot(b.x - location.x, b.y - location.y))[0];
-            if (destination) { f.systemId = destination.id; f.movesLeft = 0; }
-          }
-        }
-      } else if (action.stance === 'trade') {
-        if (relation.status === 'war') return fail('End the war before negotiating trade.');
-        if (relation.trade) return fail('A trade treaty is already active.');
-        if (relation.trust < 0) return fail('Relations are too strained. Send a diplomatic gift first.');
-        if (!canPay(faction, { credits: 30 })) return fail('A trade treaty costs 30 credits.');
-        pay(faction, { credits: 30 });
-        for (const r of [relation, reverse]) { r.trade = true; r.trust = Math.min(100, r.trust + 10); r.treatyTurn = state.turn; }
-        record(state, `Trade route established between ${faction.name} and ${other.name}. Borders are open.`, 'diplomacy', factionId === 'player' || other.id === 'player' ? null : factionId);
-      } else if (action.stance === 'gift') {
-        if (relation.status === 'war') return fail('Diplomatic gifts cannot be sent during a war.');
-        if (!canPay(faction, { credits: 35 })) return fail('A diplomatic gift costs 35 credits.');
-        pay(faction, { credits: 35 }); other.credits += 35;
-        for (const r of [relation, reverse]) r.trust = Math.min(100, r.trust + 20);
-      } else return fail('Unknown diplomatic proposal.');
-      faction.orders--; result = success('Diplomatic action completed.'); break;
+      result = executeDiplomacy(state, { ...action, factionId });
+      if (!result.ok) return result;
+      break;
     }
     case 'attack': {
       if (!fleet || SHIPS[fleet.type].attack < 4) return fail('A military fleet is required.');
@@ -453,111 +420,6 @@ export function availableActions(state, context = {}) {
   return { build: context.systemId ? getBuildOptions(state, context.systemId, factionId) : [], research: getResearchOptions(state, factionId), neighbors: context.fleetId && fleetOf(state, context.fleetId) ? getNeighbors(state, fleetOf(state, context.fleetId).systemId) : [] };
 }
 
-function pathTo(state, factionId, from, targets) {
-  const targetSet = new Set(targets), visited = new Set([from]), queue = [[from]];
-  while (queue.length) {
-    const path = queue.shift(), last = path[path.length - 1];
-    if (targetSet.has(last)) return path;
-    for (const id of getNeighbors(state, last)) {
-      const system = systemOf(state, id);
-      if (!visited.has(id) && system.knownBy.includes(factionId) && canEnter(state, factionId, system)) { visited.add(id); queue.push([...path, id]); }
-    }
-  }
-  return null;
-}
-
-function aiTurn(state, faction) {
-  if (faction.eliminated || state.winner) return;
-  const id = faction.id;
-  const act = action => command(state, { ...action, factionId: id });
-  const colonies = state.systems.filter(s => s.owner === id);
-  const stats = getEmpireStats(state, id);
-  if (!faction.research) {
-    const priority = id === 'khar' ? ['weapons', 'logistics', 'shields', 'cruisers', 'industry', 'physics', 'ecology', 'computing', 'singularity', 'diplomacy', 'command', 'terraforming'] : id === 'choir' ? ['physics', 'logistics', 'computing', 'industry', 'singularity', 'ecology', 'weapons', 'diplomacy', 'shields', 'command', 'cruisers', 'terraforming'] : ['logistics', 'ecology', 'diplomacy', 'industry', 'physics', 'computing', 'weapons', 'singularity', 'command', 'shields', 'cruisers', 'terraforming'];
-    const option = priority.find(tech => getResearchOptions(state, id).some(t => t.id === tech && t.enabled));
-    if (option) act({ type: 'research', techId: option });
-  }
-  // Diplomacy uses contact, border pressure and military strength, never the
-  // player's hidden economy or unexplored geography.
-  for (const otherId of faction.contacts) {
-    const other = factionOf(state, otherId), relation = faction.relations[otherId];
-    if (other.eliminated || faction.orders < 2) continue;
-    const border = colonies.some(s => getNeighbors(state, s.id).some(n => systemOf(state, n).owner === otherId));
-    if (relation.status === 'war' && state.turn - relation.treatyTurn >= 12 && stats.military < 24 && faction.credits > 100) act({ type: 'diplomacy', targetId: otherId, stance: 'peace' });
-    else if (id === 'khar' && border && relation.status !== 'war' && !relation.trade && state.turn > 15 && stats.military > 45 && relation.trust < 20 && state.turn - relation.treatyTurn > 10) act({ type: 'diplomacy', targetId: otherId, stance: 'war' });
-    else if (id !== 'khar' && relation.status === 'peace' && !relation.trade && relation.trust >= 0 && faction.credits > 110) act({ type: 'diplomacy', targetId: otherId, stance: 'trade' });
-  }
-  const military = state.fleets.filter(f => f.owner === id && SHIPS[f.type].attack > 3);
-  // Concentrate forces; a dozen separate single-ship fleets waste orders and
-  // feed an opponent piecemeal.
-  for (const fleet of military) {
-    if (!fleetOf(state, fleet.id) || faction.orders < 2) continue;
-    const mate = state.fleets.find(f => f.owner === id && f.id !== fleet.id && f.type === fleet.type && f.systemId === fleet.systemId && f.ships + fleet.ships <= 12);
-    if (mate) act({ type: 'merge', fleetId: fleet.id, targetFleetId: mate.id });
-  }
-  const known = getVisibleSystems(state, id);
-  for (const fleet of [...state.fleets.filter(f => f.owner === id)].sort((a, b) => (a.type === 'colony' ? -1 : b.type === 'colony' ? 1 : 0))) {
-    if (!fleetOf(state, fleet.id) || faction.orders < 1) continue;
-    let system = systemOf(state, fleet.systemId);
-    if (system.anomaly && !system.anomaly.resolved && (system.owner === null || system.owner === id)) {
-      const choices = ANOMALIES[system.anomaly.id].choices.filter(c => canPay(faction, c.cost));
-      if (choices.length && faction.orders > 1) act({ type: 'anomaly', systemId: system.id, choiceId: choices[Math.floor(random(state) * choices.length)].id });
-    }
-    if (fleet.type === 'colony') {
-      const minimum = has(faction, 'terraforming') ? 0 : has(faction, 'ecology') ? 30 : 50;
-      if (!system.owner && system.habitability >= minimum) { act({ type: 'colonize', fleetId: fleet.id }); continue; }
-      const candidates = known.filter(s => !s.owner && s.exploredBy.includes(id) && s.habitability >= minimum && !state.fleets.some(f => f.owner === id && f.type === 'colony' && f.id !== fleet.id && f.systemId === s.id) && !getVisibleFleets(state, id, s.id).some(f => atWar(state, id, f.owner)));
-      const path = pathTo(state, id, fleet.systemId, candidates.map(s => s.id));
-      if (path?.length > 1) { act({ type: 'move', fleetId: fleet.id, targetId: path[1] }); if (faction.orders > 0 && fleetOf(state, fleet.id) && !systemOf(state, fleet.systemId).owner) act({ type: 'colonize', fleetId: fleet.id }); }
-    } else if (fleet.type === 'scout') {
-      for (let move = 0; move < 2 && fleet.movesLeft && faction.orders > 1; move++) {
-        const path = pathTo(state, id, fleet.systemId, getVisibleSystems(state, id).filter(s => !s.exploredBy.includes(id) && !getVisibleFleets(state, id, s.id).some(f => atWar(state, id, f.owner))).map(s => s.id));
-        if (path?.length > 1) {
-          const movement = act({ type: 'move', fleetId: fleet.id, targetId: path[1] });
-          if (!movement.ok || movement.outcome === 'intercepted') break;
-        } else break;
-      }
-    } else {
-      const enemiesHere = getVisibleFleets(state, id, fleet.systemId).some(f => atWar(state, id, f.owner));
-      if (enemiesHere || (system.owner && atWar(state, id, system.owner))) {
-        act({ type: 'attack', fleetId: fleet.id });
-      } else {
-        const hostiles = known.filter(s => (s.owner && atWar(state, id, s.owner)) || getVisibleFleets(state, id, s.id).some(f => atWar(state, id, f.owner)));
-        const reachable = hostiles.filter(s => { const estimate = estimateCombat(state, fleet.id, s.id); return estimate && (estimate.odds !== 'Dangerous' || fleet.ships >= 5); });
-        const path = pathTo(state, id, fleet.systemId, reachable.map(s => s.id));
-        if (path?.length > 1) act({ type: 'move', fleetId: fleet.id, targetId: path[1] });
-        else if (!hostiles.length && fleet.systemId !== faction.capitalId && fleet.ships < 4) {
-          const rally = pathTo(state, id, fleet.systemId, [faction.capitalId]);
-          if (rally?.length > 1) act({ type: 'move', fleetId: fleet.id, targetId: rally[1] });
-        }
-      }
-    }
-  }
-  // Reserve construction opportunities after strategic movement. Each colony
-  // chooses an economic role, but military pressure can interrupt that plan.
-  for (const system of colonies.filter(s => !s.queue)) {
-    if (faction.orders < 1) break;
-    const fleets = state.fleets.filter(f => f.owner === id);
-    const settling = fleets.filter(f => f.type === 'colony').length;
-    const expansion = known.some(s => !s.owner && s.exploredBy.includes(id) && s.habitability >= (has(faction, 'ecology') ? 30 : 50));
-    const atAnyWar = Object.values(faction.relations).some(r => r.status === 'war');
-    const desiredMilitary = (id === 'khar' ? 26 : 12) * colonies.length + (atAnyWar ? 50 : 0);
-    const priorities = [];
-    if (has(faction, 'singularity') && getEmpireStats(state, id).beacons < 3 && faction.minerals > 220) priorities.push('beacon');
-    if (faction.credits < 60 || stats.creditIncome < 4) priorities.push('market');
-    if (stats.mineralIncome < colonies.length * 6) priorities.push('mine');
-    if (expansion && settling < Math.min(2, Math.ceil(colonies.length / 3)) && faction.minerals > 70 && faction.credits > 65) priorities.push('colony');
-    if (!fleets.some(f => f.type === 'scout')) priorities.push('scout');
-    if (stats.military < desiredMilitary) priorities.push(has(faction, 'cruisers') ? 'cruiser' : 'frigate');
-    priorities.push('factory', 'lab', 'market', 'mine', 'forum', 'habitat');
-    if (colonies.length > 2 && !system.buildings.includes('shipyard') && system.richness >= 3) priorities.push('shipyard');
-    if (atAnyWar) priorities.push('bastion');
-    const options = getBuildOptions(state, system.id, id);
-    const item = priorities.find(itemId => options.some(o => o.id === itemId && o.enabled));
-    if (item) act({ type: 'build', systemId: system.id, itemId: item });
-  }
-}
-
 function checkVictory(state) {
   if (state.winner) return;
   for (const faction of state.factions) {
@@ -566,7 +428,7 @@ function checkVictory(state) {
     if (!colonies.length && !arks && !faction.eliminated) {
       faction.eliminated = true;
       state.fleets = state.fleets.filter(f => f.owner !== faction.id);
-      for (const other of state.factions.filter(f => f.id !== faction.id)) { other.relations[faction.id].trade = false; faction.relations[other.id].trade = false; }
+      for (const other of state.factions.filter(f => f.id !== faction.id)) { other.relations[faction.id].trade = false; other.relations[faction.id].tradeEndsAt = 0; faction.relations[other.id].trade = false; faction.relations[other.id].tradeEndsAt = 0; }
       record(state, `${faction.name} has collapsed.`, 'war');
     }
     if (colonies.length && !colonies.some(s => s.id === faction.capitalId)) faction.capitalId = colonies[0].id;
@@ -587,9 +449,10 @@ function checkVictory(state) {
 
 export function endTurn(state) {
   if (state.winner) return fail('This campaign has ended.');
-  for (const faction of state.factions.filter(f => f.id !== 'player')) aiTurn(state, faction);
+  for (const faction of state.factions.filter(f => f.id !== 'player')) runAI(state, faction);
   if (state.winner) return success('Campaign concluded.');
   state.turn++;
+  advanceDiplomacy(state);
   for (const faction of state.factions.filter(f => !f.eliminated)) {
     const stats = getEmpireStats(state, faction.id);
     faction.credits = Math.max(0, faction.credits + stats.creditIncome);
@@ -600,7 +463,6 @@ export function endTurn(state) {
       if (fleet) { decommissionShip(state, fleet); record(state, 'Treasury exhausted: one ship was decommissioned to pay its crew. Build Exchange Ports or reduce fleet upkeep.', 'warning', faction.id); }
     }
     applyResearch(state, faction);
-    for (const relation of Object.values(faction.relations)) if (relation.trade) relation.trust = Math.min(100, relation.trust + 1);
   }
   for (const system of state.systems.filter(s => s.owner)) {
     const output = getSystemYield(state, system);
@@ -659,5 +521,6 @@ function isValidSave(value) {
   for (const fleet of value.fleets) if (!/^f[1-9][0-9]*$/.test(fleet.id) || !member(SHIPS, fleet.type) || !ids.includes(fleet.owner) || !systemIds.has(fleet.systemId) || !Number.isInteger(fleet.ships) || fleet.ships < 1 || fleet.ships > 12 || !Number.isFinite(fleet.hp) || fleet.hp <= 0 || fleet.hp > SHIPS[fleet.type].hp * fleet.ships || !Number.isFinite(fleet.movesLeft) || fleet.movesLeft < 0 || !text(fleet.name)) return false;
   if (value.lanes.some(lane => !Array.isArray(lane) || lane.length !== 2 || !systemIds.has(lane[0]) || !systemIds.has(lane[1]) || lane[0] === lane[1])) return false;
   if (value.log.some(entry => !Number.isInteger(entry.id) || !Number.isInteger(entry.turn) || !text(entry.type) || !text(entry.text))) return false;
+  if (!validateDiplomacyState(value)) return false;
   return true;
 }

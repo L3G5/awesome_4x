@@ -49,6 +49,16 @@ The audit's reproducible findings are in `docs/SIMULATION_AUDIT.md`: military ro
 - Rules validation: 25 tests passed, including nine new intelligence/bankruptcy/save regressions. Browser validation: all three tests passed, including an actual hidden-blockade UI scenario that confirms no fleet leak, an enabled uncertain move, and the charged withdrawal. Production build passed.
 - Separate tactical-AI and consent-based diplomacy modules are being developed next; neither is yet claimed integrated or verified.
 
+### Stage 2b — tactical rivals and negotiated peace (2026-10-28 17:17–17:31 UTC)
+
+- Extracted rival strategy into `src/ai.js`. Fleets now evaluate dangerous intermediate systems, reinforce via safe routes, concentrate during war, prioritize observed threats to colonies, retreat from overwhelming opposition and pay the same costs as the player. The arbitrary five-ship aggression exception is removed.
+- Eleven focused tactical regressions cover blockade avoidance, safe detours, rally/merge/relief, threatened garrison concentration, defensive priority, retreat, construction and hidden-information invariance. Five exploratory passive-player campaigns using the new planner remained valid through victories around cycles 83–89; these are not human difficulty/win-rate measurements.
+- Added a separate diplomatic rules module and interface. AI peace proposals escrow 60 credits and remain pending until the player accepts; declining or expiration refunds the sender. Accepted peace creates a five-cycle mutual truce with disclosed fleet withdrawal. Player peace requests show the other empire's willingness and reasons.
+- Added three-cycle trade cancellation notice, directional grievances, frontier claims and observable military pressure. Khar's shared-frontier rivalry can lead to a warned cancellation and war despite past gifts, while quiet peaceful borders allow grievances to ease. Breaking an active treaty directly has an explicit larger penalty.
+- Updated the player Field Guide and internal API documentation. Existing version-1 saves remain compatible; optional strategy/diplomacy fields are validated. Eliminated empires clear treaty deadlines consistently.
+- Validation: all 50 Node rules tests passed, including 14 diplomacy scenarios; all five Playwright browser tests passed, including explicit accept/decline outcomes with correct funds, positions and truce enforcement. Production build passed. Visual inspection of the peace dialog and diplomacy view confirmed readable terms; the 390px diplomatic page had no document overflow.
+- Version 0.2.0 includes emitted build metadata so the deployed source commit can be checked directly. Deployment of this stage remains to be verified.
+
 ## Subsequent stages
 
 1. Playtest the complete opening and midgame, fix usability and rules inconsistencies.
@@ -59,4 +69,4 @@ The audit's reproducible findings are in `docs/SIMULATION_AUDIT.md`: military ro
 
 ## Current blockers
 
-None confirmed after the session permissions were updated. GitHub repository/Pages setup remains to be exercised.
+None. GitHub authentication, repository administration, Actions and Pages deployment are working and verified. Further work is development and playtesting, not blocked on access.

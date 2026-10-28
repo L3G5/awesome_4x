@@ -16,7 +16,7 @@ npm run test:browser
 npm run build
 ```
 
-The simulation in `src/game.js` is independent of rendering. `src/content.js` contains authored rules and content, `src/galaxy.js` renders the Three.js map, and `src/main.js` manages player interaction. Saves are stored locally in the browser; no account or server is required.
+The simulation in `src/game.js` is independent of rendering. `src/content.js` contains authored rules and content; `src/ai.js`, `src/intelligence.js`, and `src/diplomacy.js` handle rival decisions, sensors, and treaties. `src/galaxy.js` renders the Three.js map, and `src/main.js` manages player interaction. Saves are stored locally in the browser; no account or server is required.
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
@@ -25,3 +25,5 @@ Browser tests require Chromium (`npx playwright install chromium`). They play an
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.
+
+The production `build-info.json` records the version and source commit. Fonts and visual assets are self-hosted; runtime gameplay does not depend on external CDNs. Bundled third-party licenses are available under `licenses/`.

@@ -35,7 +35,7 @@ A civilian move into an unseen hostile fleet is a **consumed expedition**, retur
 | `cancelBuild` | `systemId` | Refund unused fraction of resource costs |
 | `research` | `techId` | Set research project, preserving prior investment as science |
 | `anomaly` | `systemId`, `choiceId` | Resolve an anomaly with a present expedition or owned colony |
-| `diplomacy` | `targetId`, `stance` | `war`, `peace`, `trade` or `gift` |
+| `diplomacy` | `targetId`, `stance`, optional `offerId` | `war`, `peace`, `trade`, `gift`, `endTrade`, `acceptPeace` or `declinePeace` |
 | `attack` | `fleetId` | Engage hostile fleets in orbit, otherwise bombard/invade colony |
 | `merge` | `fleetId`, `targetFleetId` | Combine same-type colocated ships; max 12, no colony arks |
 | `repair` | `fleetId` | Repair up to 24 HP at friendly colony for 10 minerals |
@@ -81,3 +81,13 @@ At zero credits with negative income, bankruptcy removes exactly one ship from t
 ## Validation
 
 Run the repository's `npm test`. Tests cover map connectivity, fair starts, exploration, colonization, order restrictions, production/refunds, research switching/prerequisites, one-shot expeditions, symmetric diplomacy, borders, combat/invasion, ship construction/merge/repair, victory, multi-seed AI campaigns, and deterministic save round-trips. `tests/intelligence.test.js` covers presence-based sensors, hidden-state noninterference, civilian interception costs and survey limits, visible blockade rejection, AI observation boundaries, bankruptcy with shields, and optional strategy metadata.
+
+## Strategic AI and diplomacy
+
+`src/ai.js` exports `runAI(state, faction)`. The turn engine invokes it for rival factions. The AI uses the ordinary command API, charted sovereignty and shared sensors, with safe intermediate routing, military assembly, defensive priority and retreat. Optional `faction.strategy` stores `{mode,rallyId,objectiveId,turn}`; it is serializable and validated but not required in older version-1 saves.
+
+`src/diplomacy.js` owns diplomatic mutations through `executeDiplomacy(state, action)`. The game's `command` routes diplomacy to it; do not charge orders or credits a second time. `advanceDiplomacy(state)` runs once after incrementing `state.turn`, before income, to expire offers, finish treaty notices and update grievances. `getDiplomaticIntent(state, factionId)` supplies AI proposals that still pass through ordinary commands.
+
+`getDiplomacyForecast(state, factionId, targetId)` is a pure UI forecast. Its `actions` object has one entry per stance with `{enabled,reason,effect,cost}`; peace also includes willingness and whether it creates a player offer or an immediate accepted AI settlement. It exposes incoming/outgoing offers, truce and cancellation deadlines, and both sides' grievances.
+
+Optional `state.diplomacyOffers` contains `{id,from,to,createdTurn,expiresTurn,credits,status,truceTurns}`. Pending offers escrow 60 credits; acceptance transfers them, decline/expiry refunds them. Optional relation fields include `truceUntil`, `tradeEndsAt`, `grievance`, `warStartColonies`, `peaceOfferTurn`, and `lastBorderCount`. `validateDiplomacyState` checks these when present and accepts older saves without them. A proposal to the player never changes war status or withdraws fleets until accepted.

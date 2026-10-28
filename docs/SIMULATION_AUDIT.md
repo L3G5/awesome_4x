@@ -2,6 +2,10 @@
 
 Reviewed engine SHA-256: `6c3cfc4bebf45c383968aaff7287a24e138cf2d6b8da1f04387b905101de3b81` (`src/game.js`). Reviewed content SHA-256: `6ac4b5cebfdc8822aecb945bf846e8d17ade5248ab136fd92c96a7897ce600a6`. This review did not change simulation code. Root was concurrently fixing inspector fleet visibility; that particular UI leak is already corrected in the current inspector.
 
+## Resolution in version 0.2.0
+
+The three priority issues below have been addressed by shared sensor helpers, the new tactical AI module, and consent-based diplomacy with enforceable truces and treaty cancellation. Fifty rules tests and five browser tests cover the integrated behavior. The original findings and reproductions remain below as an audit record. Research pacing, colony differentiation, credit sinks and victory budgeting remain open design questions for the next stage.
+
 ## Recommended next three changes
 
 1. **Use one sensor/intelligence API across the renderer, inspector, command previews and AI.** The player should see ownership of charted systems as an explicit public-information rule, but live foreign fleets and precise strength only where a player colony or fleet has sensors. The current engine still exposes hidden fleets to previews, route validation and AI decisions.
