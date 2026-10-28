@@ -1,0 +1,298 @@
+{
+  "stage": 8,
+  "measuredAt": "2026-10-28",
+  "method": "Chromium SwiftShader and forced Canvas2D; timing is environment-specific. Details and manual preview in docs/ship-art.html.",
+  "sourceHash": "9b87b5258126e7a57d7c0fcf836405f2a0d1107d6a227024d06e7858cb30afbf",
+  "qa": [
+    {
+      "fallback": false,
+      "qa": {
+        "fallback": false,
+        "timings": [
+          {
+            "type": "scout",
+            "ancient": false,
+            "milliseconds": 136.6,
+            "dataUrlCharacters": 44250
+          },
+          {
+            "type": "colony",
+            "ancient": false,
+            "milliseconds": 75.2,
+            "dataUrlCharacters": 69838
+          },
+          {
+            "type": "frigate",
+            "ancient": false,
+            "milliseconds": 71.3,
+            "dataUrlCharacters": 55294
+          },
+          {
+            "type": "cruiser",
+            "ancient": false,
+            "milliseconds": 75.5,
+            "dataUrlCharacters": 65886
+          },
+          {
+            "type": "scout",
+            "ancient": true,
+            "milliseconds": 69.9,
+            "dataUrlCharacters": 48122
+          },
+          {
+            "type": "colony",
+            "ancient": true,
+            "milliseconds": 72.5,
+            "dataUrlCharacters": 70866
+          },
+          {
+            "type": "frigate",
+            "ancient": true,
+            "milliseconds": 72.8,
+            "dataUrlCharacters": 56470
+          },
+          {
+            "type": "cruiser",
+            "ancient": true,
+            "milliseconds": 71.1,
+            "dataUrlCharacters": 67114
+          }
+        ],
+        "cacheTime": 1.0999999046325684,
+        "cacheMatches": true,
+        "ready": true
+      },
+      "bounds": [
+        {
+          "name": "Pathfinder",
+          "minX": 36,
+          "minY": 81,
+          "maxX": 404,
+          "maxY": 248,
+          "opaque": 27315,
+          "transparentCorners": true
+        },
+        {
+          "name": "Colony Ark",
+          "minX": 98,
+          "minY": 82,
+          "maxX": 382,
+          "maxY": 239,
+          "opaque": 25898,
+          "transparentCorners": true
+        },
+        {
+          "name": "Vanguard",
+          "minX": 33,
+          "minY": 73,
+          "maxX": 424,
+          "maxY": 262,
+          "opaque": 35027,
+          "transparentCorners": true
+        },
+        {
+          "name": "Sovereign",
+          "minX": 61,
+          "minY": 66,
+          "maxX": 435,
+          "maxY": 286,
+          "opaque": 41125,
+          "transparentCorners": true
+        }
+      ],
+      "repeatEncodes": 0,
+      "normalizations": true,
+      "hitAtLimit": true,
+      "evicted": true,
+      "deterministicAfterEviction": true,
+      "webglContexts": 1,
+      "contextLoss": {
+        "validPng": true,
+        "contexts": 1
+      },
+      "errors": []
+    },
+    {
+      "fallback": true,
+      "qa": {
+        "fallback": true,
+        "timings": [
+          {
+            "type": "scout",
+            "ancient": false,
+            "milliseconds": 23.8,
+            "dataUrlCharacters": 76746
+          },
+          {
+            "type": "colony",
+            "ancient": false,
+            "milliseconds": 20.3,
+            "dataUrlCharacters": 85050
+          },
+          {
+            "type": "frigate",
+            "ancient": false,
+            "milliseconds": 11.1,
+            "dataUrlCharacters": 92894
+          },
+          {
+            "type": "cruiser",
+            "ancient": false,
+            "milliseconds": 14.3,
+            "dataUrlCharacters": 104754
+          },
+          {
+            "type": "scout",
+            "ancient": true,
+            "milliseconds": 7.7,
+            "dataUrlCharacters": 77838
+          },
+          {
+            "type": "colony",
+            "ancient": true,
+            "milliseconds": 17.2,
+            "dataUrlCharacters": 84926
+          },
+          {
+            "type": "frigate",
+            "ancient": true,
+            "milliseconds": 8.4,
+            "dataUrlCharacters": 93182
+          },
+          {
+            "type": "cruiser",
+            "ancient": true,
+            "milliseconds": 15.8,
+            "dataUrlCharacters": 103954
+          }
+        ],
+        "cacheTime": 0.39999985694885254,
+        "cacheMatches": true,
+        "ready": true
+      },
+      "bounds": [
+        {
+          "name": "Pathfinder",
+          "minX": 35,
+          "minY": 81,
+          "maxX": 405,
+          "maxY": 249,
+          "opaque": 27926,
+          "transparentCorners": true
+        },
+        {
+          "name": "Colony Ark",
+          "minX": 98,
+          "minY": 81,
+          "maxX": 383,
+          "maxY": 240,
+          "opaque": 26424,
+          "transparentCorners": true
+        },
+        {
+          "name": "Vanguard",
+          "minX": 32,
+          "minY": 72,
+          "maxX": 424,
+          "maxY": 262,
+          "opaque": 35573,
+          "transparentCorners": true
+        },
+        {
+          "name": "Sovereign",
+          "minX": 60,
+          "minY": 66,
+          "maxX": 436,
+          "maxY": 286,
+          "opaque": 41696,
+          "transparentCorners": true
+        }
+      ],
+      "repeatEncodes": 0,
+      "normalizations": true,
+      "hitAtLimit": true,
+      "evicted": true,
+      "deterministicAfterEviction": true,
+      "webglContexts": 0,
+      "errors": []
+    }
+  ],
+  "disposal": {
+    "before": {
+      "Buffer": {
+        "created": 470,
+        "deleted": 470,
+        "live": 0
+      },
+      "Texture": {
+        "created": 21,
+        "deleted": 16,
+        "live": 5
+      },
+      "Framebuffer": {
+        "created": 11,
+        "deleted": 8,
+        "live": 3
+      },
+      "Renderbuffer": {
+        "created": 0,
+        "deleted": 0,
+        "live": 0
+      },
+      "Program": {
+        "created": 9,
+        "deleted": 8,
+        "live": 1
+      },
+      "Shader": {
+        "created": 18,
+        "deleted": 18,
+        "live": 0
+      },
+      "VertexArray": {
+        "created": 252,
+        "deleted": 252,
+        "live": 0
+      }
+    },
+    "after": {
+      "Buffer": {
+        "created": 1645,
+        "deleted": 1645,
+        "live": 0
+      },
+      "Texture": {
+        "created": 61,
+        "deleted": 56,
+        "live": 5
+      },
+      "Framebuffer": {
+        "created": 31,
+        "deleted": 28,
+        "live": 3
+      },
+      "Renderbuffer": {
+        "created": 0,
+        "deleted": 0,
+        "live": 0
+      },
+      "Program": {
+        "created": 29,
+        "deleted": 28,
+        "live": 1
+      },
+      "Shader": {
+        "created": 58,
+        "deleted": 58,
+        "live": 0
+      },
+      "VertexArray": {
+        "created": 882,
+        "deleted": 882,
+        "live": 0
+      }
+    },
+    "animationFrames": 0,
+    "animationFramesAfterIdle": 0
+  }
+}

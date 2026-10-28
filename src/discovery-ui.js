@@ -1,6 +1,7 @@
 import { BUILDINGS, FACTIONS } from './content.js';
 import { getDiscoveryView, getDiscoveryOptions } from './discoveries.js';
 import { getInfrastructure } from './game.js';
+import { renderIllustration } from './illustrations.js';
 
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const symbols={observatory:'✧',reef:'◇'};
@@ -32,7 +33,7 @@ export function renderDiscoveryDialog(state,systemId,replaceBuildingId=null) {
   const system=state.systems.find(s=>s.id===systemId),view=getDiscoveryView(state,systemId);
   if(!view)return '<h2 id="modal-title">An uncharted story</h2><p class="modal-lead">Survey this world to learn what remains here.</p>';
   const options=view.canInteract?getDiscoveryOptions(state,systemId,'player',replaceBuildingId):[];
-  let html=`<div class="eyebrow">FIELD EXPEDITION · ${escape(system.name)}</div><div class="discovery-title"><span>${symbols[view.id]||'✦'}</span><h2 id="modal-title">${escape(view.name)}</h2></div><p class="modal-lead">${escape(view.description)}</p>`;
+  let html=`<div class="eyebrow">FIELD EXPEDITION · ${escape(system.name)}</div><div class="discovery-title"><span>${symbols[view.id]||'✦'}</span><h2 id="modal-title">${escape(view.name)}</h2></div>${renderIllustration(view.id,{wide:true})}<p class="modal-lead">${escape(view.description)}</p>`;
   if(view.stale && !view.legacyOutcome)html+=`<div class="callout">${view.observedTurn===null?'Earlier charts contain no detailed expedition record.':`Last observed in cycle ${view.observedTurn}.`} This record retains what your expedition learned. Return to the system to observe its current state.</div>`;
   if(view.phase==='maturing')html+=`<div class="discovery-maturation"><div><span class="eyebrow">RESTORATION IN PROGRESS</span><strong>${view.progress}<small> / ${view.target} cycles</small></strong></div><p>${escape(view.continuation)}</p><div class="progress-track"><i style="width:${view.progress/view.target*100}%"></i></div></div>`;
   if(view.site)html+=`<div class="discovery-site-card"><span>${BUILDINGS[view.site.id]?.icon||'✦'}</span><div><h3>${escape(view.site.name)}</h3><p>${escape(BUILDINGS[view.site.id]?.description||'A restored legacy of this world.')}</p><small>${view.site.state==='active'?'Restoration complete':view.site.state==='building'?'Construction in progress':'The restoration plan remains with this world'}</small></div></div>`;

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Asterion — Native fleet silhouettes</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0a1120;color:#e3e9f0;font:15px/1.65 system-ui,sans-serif}main{width:min(1240px,calc(100% - 48px));margin:50px auto}h1,h2{font-family:Georgia,serif;font-weight:400}h1{font-size:44px;line-height:1.1;letter-spacing:-.03em;margin:12px 0 18px}h2{font-size:23px;margin:0}.eyebrow{color:#8bcec5;text-transform:uppercase;letter-spacing:.17em;font-size:11px}p{color:#aebbd0;max-width:850px}a{color:#a8dacf}code{font-size:12px;color:#c7d9e9}.controls{display:flex;gap:25px;margin:28px 0}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.card{border:1px solid #2b3b52;background:linear-gradient(145deg,#19263a,#0d1627);overflow:hidden}.portrait{width:100%;height:auto;display:block;aspect-ratio:8/5}.caption{padding:0 20px 21px}.caption p{font-size:12px;margin:5px 0 0}.heritage{background:linear-gradient(145deg,#292b36,#111726)}.section{margin:44px 0 18px}.section h2{margin-bottom:4px}.section p{font-size:13px;margin:0}.roster{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.roster>div{display:flex;align-items:center;gap:12px;background:#101c2e;border:1px solid #27374c;padding:14px}.roster img{width:80px;height:50px}.roster strong{font-size:13px;font-weight:500}.stats{margin-top:40px;padding:22px;border:1px solid #2b3b52;background:#101a2b;font:12px/1.8 ui-monospace,monospace;white-space:pre-wrap}.notes{margin-top:38px;max-width:980px}.notes h2{margin-bottom:15px}.notes p{font-size:14px}.notes ul{padding-left:22px;color:#aebbd0;font-size:14px}.notes li{margin-bottom:7px}.status{color:#c7b894}.foot{padding-top:25px;margin-top:40px;border-top:1px solid #2b3b52;font-size:12px;color:#8395ad}@media(max-width:900px){.grid,.roster{grid-template-columns:repeat(2,1fr)}}@media(max-width:500px){main{width:calc(100% - 28px);margin-top:30px}h1{font-size:34px}.grid{grid-template-columns:1fr}.roster{gap:8px}.roster>div{display:block}.roster img{margin-bottom:6px}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">Asterion / native geometry study</div>
+<h1>Four hulls. Four purposes.</h1>
+<p>Static ship portraits built from original Three.js geometry. Faction color marks the hull; an ancient variant changes its materials and heritage details. Portraits are individually framed, not a comparison of physical ship size.</p>
+<div class="controls"><a href="?">WebGL portraits</a><a href="?fallback=1">Force Canvas2D fallback</a><span class="status" id="mode"></span></div>
+<section class="grid" id="normal" aria-label="Four ship classes"></section>
+<div class="section"><h2>Ancient lineage</h2><p>Patinated metal, old-gold structural trim and a pale violet drive signature. Class and owner color remain legible.</p></div>
+<section class="grid" id="ancient" aria-label="Ancient variants"></section>
+<div class="section"><h2>Roster size</h2><p>80 × 50 CSS pixels, using the same cached portraits.</p></div>
+<section class="roster" id="roster" aria-label="Small portrait samples"></section>
+<div class="stats" id="stats" role="status">Rendering portraits…</div>
+<section class="notes"><h2>Delivery contract &amp; cost</h2>
+<p><code>import { shipImage } from '../src/ship-art.js';</code><br><code>shipImage(type, { color = '#76d7c4', ancient = false } = {})</code></p>
+<ul>
+<li>Returns a transparent 512 × 320 PNG data URL. Supported classes: <code>scout</code>, <code>colony</code>, <code>frigate</code>, <code>cruiser</code>. Unknown classes use scout. Colors accept three- or six-digit hexadecimal; invalid colors use the default. No simulation state is read.</li>
+<li>One lazy reusable offscreen WebGL2 renderer, with no animation loop, timer, asset loading or runtime network request. At most 24 portraits are retained in a least-recently-used cache, keyed by normalized class, color and heritage.</li>
+<li>Geometry, materials and the 512 × 512 key-light shadow map are disposed after capture. Renderer render lists are cleared. GPU use is bounded by one antialiased 512 × 320 color/depth surface plus the current model, shadow map and programs; exact allocation depends on the browser.</li>
+<li>One decoded RGBA portrait is 640 KiB; 24 simultaneously decoded portraits would be 15 MiB (15,728,640 bytes), excluding browser overhead and compressed data URL strings. The module stores only PNG strings; the browser controls image decoding and its own cache. Visible image elements may retain portraits beyond the module’s cache. No image pixels are retained in application arrays after rendering.</li>
+<li>On WebGL unavailability or context loss, Canvas2D projects and shades the same native geometry. It preserves all four silhouettes and uses a single reusable 512 × 320 canvas. Its painter’s algorithm and flat lighting are less exact than WebGL depth testing and material shading.</li>
+<li>Uncached work includes mesh generation, one static render and PNG encoding. The first WebGL request also compiles shaders. Measured timings below describe this browser and hardware only. Repeated requests return the cached string; arrange visible images on demand.</li>
+</ul>
+<h2>Verification snapshot</h2>
+<p>Chromium with SwiftShader, 28 October 2026: the first WebGL portrait took 137 ms; subsequent unique portraits took 70–76 ms. The eight Canvas2D variants took 8–24 ms each. Four hundred cached requests took about 1 ms; a separate 1,000-call check performed no PNG encoding. These are software-rendering measurements, not a promise for other devices.</p>
+<p>All four classes had transparent corners and unclipped silhouettes. Repeated values and normalized colors reused the cache; the 24-entry limit evicted old entries, and regeneration produced identical PNG bytes. Forced WebGL unavailability and an explicit context-loss event both produced valid fallback portraits without creating another WebGL context.</p>
+<p>GPU accounting across eight initial portraits and twenty further unique renders stayed constant after each capture: zero live geometry buffers, zero vertex arrays, five renderer-owned textures, three renderer-owned framebuffers and one shared depth program. All per-portrait shaders, geometry buffers and shadow textures were released. No animation-frame request occurred during rendering or the subsequent idle interval.</p>
+</section>
+<footer class="foot">Internal visual QA document. Serve through the project’s Vite server at <code>/docs/ship-art.html</code>. No generated raster artwork or external model assets are used here.</footer>
+</main>
+<script type="module">
+const fallback = new URLSearchParams(location.search).has('fallback');
+const nativeContext = HTMLCanvasElement.prototype.getContext;
+if (fallback) HTMLCanvasElement.prototype.getContext = function(type, ...args) {
+  return /^webgl/.test(type) ? null : nativeContext.call(this, type, ...args);
+};
+const { shipImage } = await import('../src/ship-art.js');
+const types = [
+  ['scout', 'Pathfinder', 'A needle hull, sensor vanes and exposed outrider drives.'],
+  ['colony', 'Colony Ark', 'A habitat wheel, rounded life support and settlement packages.'],
+  ['frigate', 'Vanguard', 'A narrow armored escort with paired drive pods.'],
+  ['cruiser', 'Sovereign', 'A broad hammerhead, layered armor and command citadel.'],
+];
+const timings = [];
+const portraits = new Map();
+for (const ancient of [false, true]) {
+  for (const [type, name, description] of types) {
+    const start = performance.now();
+    const source = shipImage(type, { ancient });
+    timings.push({ type, ancient, milliseconds: +(performance.now() - start).toFixed(2), dataUrlCharacters: source.length });
+    portraits.set(`${type}:${ancient}`, source);
+    const card = document.createElement('article');
+    card.className = `card${ancient ? ' heritage' : ''}`;
+    card.innerHTML = `<img class="portrait" width="512" height="320" alt="${ancient ? 'Ancient ' : ''}${name}"><div class="caption"><h2>${name}</h2><p>${description}</p></div>`;
+    card.querySelector('img').src = source;
+    document.querySelector(ancient ? '#ancient' : '#normal').append(card);
+  }
+}
+const start = performance.now();
+let cacheMatches = true;
+for (let i = 0; i < 100; i++) for (const [type] of types) cacheMatches &&= shipImage(type) === portraits.get(`${type}:false`);
+const cacheTime = performance.now() - start;
+for (const [type, name] of types) {
+  const row = document.createElement('div');
+  row.innerHTML = `<img width="80" height="50" alt="${name}"><strong>${name}</strong>`;
+  row.querySelector('img').src = portraits.get(`${type}:false`);
+  document.querySelector('#roster').append(row);
+}
+HTMLCanvasElement.prototype.getContext = nativeContext;
+document.querySelector('#mode').textContent = fallback ? 'Canvas2D forced' : 'WebGL requested';
+document.querySelector('#stats').textContent = `${fallback ? 'Forced fallback' : 'WebGL'} · 512 × 320 transparent PNG\n` + timings.map(t => `${t.type.padEnd(8)} ${t.ancient ? 'ancient ' : 'standard'}  ${String(t.milliseconds).padStart(7)} ms  ${String(t.dataUrlCharacters).padStart(7)} data URL characters`).join('\n') + `\n400 cache hits: ${cacheTime.toFixed(2)} ms · identical strings: ${cacheMatches}`;
+window.shipArtQA = { fallback, timings, cacheTime, cacheMatches, ready: true, shipImage };
+</script>
+</body>
+</html>

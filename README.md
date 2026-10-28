@@ -37,3 +37,5 @@ The [human-style midgame playtest](docs/stage6-playtest.html) records a legitima
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.
 
 The production `build-info.json` records the version and source commit. Fonts and visual assets are self-hosted; runtime gameplay does not depend on external CDNs. Bundled third-party licenses are available under `licenses/`.
+
+The [artbook](docs/artwork.html) records the original civilization/expedition illustrations and their generation prompts. [Native ship portraits](docs/ship-art.html) documents the four Three.js hull designs, static rendering, fallback and cache limits. These development HTML previews run through the Vite server (`/docs/artwork.html` and `/docs/ship-art.html`); the production game loads only the artwork used by the current view.

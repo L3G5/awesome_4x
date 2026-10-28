@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { createGame, validateSave } from '../src/game.js';
+import { createGame, command, endTurn, validateSave } from '../src/game.js';
 
 async function load(page,state) {
   expect(validateSave(state)).toBe(true);
@@ -25,6 +25,8 @@ test('an observatory matures, reserves its restoration after cancellation, and p
   home.buildings=['mine','shipyard','lab'];home.anomaly={id:'observatory',resolved:false};
   await load(page,state);
   await page.locator('#inspector [data-action="anomaly"]').click();
+  await page.locator('[data-illustration="observatory"] img').evaluate(img=>img.decode());
+  await expect(page.locator('[data-illustration="observatory"] img')).toBeVisible();
   await expect(page.locator('[data-choice="preserve"]')).toContainText('Research Enclave');
   await page.locator('[data-choice="preserve"]').click();
   let current=await page.evaluate(()=>window.__asterion.getState());
@@ -71,6 +73,28 @@ test('an observatory matures, reserves its restoration after cancellation, and p
   await page.locator('[data-page="journal"]').click();
   await page.locator('#workspace-page [data-action="anomaly"]').first().click();
   await expect(page.locator('.discovery-history-entry')).toHaveCount(2);
+});
+
+test('an exhausted expedition can reach the restoration selector by keyboard',async({page})=>{
+  const state=createGame('keyboard-restoration'),p=state.factions[0],home=state.systems[0];
+  p.techs=['physics','logistics','industry','computing'];p.credits=1000;p.minerals=700;
+  home.buildings=['mine','shipyard','lab'];home.anomaly={id:'observatory',resolved:false};
+  expect(command(state,{type:'anomaly',systemId:home.id,choiceId:'preserve'}).ok).toBe(true);
+  for(let i=0;i<3;i++)endTurn(state);
+  p.orders=0;
+  await load(page,state);
+  const opener=page.locator('#inspector [data-action="anomaly"]');
+  await opener.click();
+  await expect(page.locator('.discovery-choice:enabled')).toHaveCount(0);
+  await expect(page.locator('.close-modal')).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.locator('#discovery-replacement')).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.close-modal')).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(page.locator('#discovery-replacement')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(opener).toBeFocused();
 });
 
 test('a recovered escort keeps its name and fleet heritage after merging',async({page})=>{
