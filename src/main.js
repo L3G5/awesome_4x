@@ -53,7 +53,7 @@ function toast(message, error = false) {
 }
 function selectSystem(id) { if (!systemById(id)?.knownBy.includes('player')) return; selectedSystemId = id; if (page !== 'galaxy') setPage('galaxy'); render(); }
 function selectFleet(id) { const fleet = fleetById(id); if (!fleet || fleet.owner !== 'player') return; selectedFleetId = id; selectedSystemId = fleet.systemId; if (page !== 'galaxy') setPage('galaxy'); render(); }
-function setPage(value) { page = value; $('#galaxy-page').hidden = page !== 'galaxy'; $('#workspace-page').hidden = page === 'galaxy'; document.querySelectorAll('[data-page]').forEach(el => { el.classList.toggle('active',el.dataset.page === page); el.setAttribute('aria-current',el.dataset.page === page ? 'page' : 'false'); }); renderPage(); }
+function setPage(value) { page = value; galaxy.setPaused?.(Boolean(modalType) || page !== 'galaxy'); $('#galaxy-page').hidden = page !== 'galaxy'; $('#workspace-page').hidden = page === 'galaxy'; document.querySelectorAll('[data-page]').forEach(el => { el.classList.toggle('active',el.dataset.page === page); el.setAttribute('aria-current',el.dataset.page === page ? 'page' : 'false'); }); renderPage(); }
 function dispatch(action) {
   const result = command(state, action);
   if (!result.ok) { toast(result.message, true); return false; }
@@ -140,10 +140,10 @@ function renderPage() {
 }
 function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
-  modalType=type; $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button>${html}</section></div>`;
+  modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button>${html}</section></div>`;
   const focusTarget=$('.modal .primary') || $('.modal button'); focusTarget?.focus();
 }
-function closeModal() { modalType=null; $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
+function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
 function buildMenu(systemId) {
   const system=systemById(systemId), options=getBuildOptions(state,systemId);
   openModal('build',`<div class="eyebrow">COLONIAL COMMISSION · ${escape(system.name)}</div><h2 id="modal-title">Shape this world's future</h2><p class="modal-lead">Each commission uses one order. Materials are paid now; local production completes the project over the following cycles.</p>${['building','ship'].map(kind=>`<div class="modal-subhead">${kind==='building'?'Planetary infrastructure':'Orbital shipyard'}</div><div class="build-grid">${options.filter(o=>o.kind===kind).map(o=>`<button class="build-card" data-action="build" data-system="${systemId}" data-item="${o.id}" ${!o.enabled?'disabled':''} title="${escape(o.reason||o.description)}"><span class="build-icon">${o.icon}</span><div><b>${escape(o.name)}</b><p>${escape(o.description)}</p><div class="build-cost">◈ ${o.cost.credits} &nbsp; ◇ ${o.cost.minerals} &nbsp; · ${o.turns} cycles${kind==='ship'?` · ${o.upkeep} upkeep`:''}</div>${o.reason?`<p style="color:#d2a887;margin-top:7px">${escape(o.reason)}</p>`:''}</div></button>`).join('')}</div>`).join('')}`,true);

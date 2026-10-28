@@ -66,6 +66,12 @@ export class GalaxyView {
     this.selectedSystemId = null;
     this.selectedFleetId = null;
     this.disposed = false;
+    this.paused = false;
+    this.surfaceVisible = false;
+    this.viewportVisible = true;
+    this.needsRender = true;
+    this.labelsDirty = true;
+    this.lastRenderTime = 0;
     this.animate = this.animate.bind(this);
     this.width = 1; this.height = 1;
     this.baseHeight = 800;
@@ -126,6 +132,12 @@ export class GalaxyView {
     this.bindEvents();
     this.resizeObserver = new ResizeObserver(() => this.resize());
     this.resizeObserver.observe(container);
+    this.intersectionObserver = new IntersectionObserver(([entry]) => {
+      this.viewportVisible = entry.isIntersecting;
+      if (!this.viewportVisible) this.cancelScheduledFrame();
+      else this.resize();
+    });
+    this.intersectionObserver.observe(container);
     this.resize();
     this.lastTime = 0;
     this.requestFrame();
@@ -146,7 +158,9 @@ export class GalaxyView {
           const scale = this.baseHeight / this.camera.zoom / this.height;
           this.target.x -= dx * scale; this.target.y += dy * scale;
           this.camera.position.x = this.target.x; this.camera.position.y = this.target.y;
+          this.labelsDirty = true;
           this.container.classList.add('galaxy-dragging');
+          this.requestFrame();
         }
         this.drag.x = event.clientX; this.drag.y = event.clientY;
         this.tooltip.hidden = true;
@@ -155,7 +169,6 @@ export class GalaxyView {
         this.container.classList.toggle('galaxy-pointing', Boolean(id));
         this.showTooltip(id, event);
       }
-      this.requestFrame();
     }, { signal });
     this.container.addEventListener('pointerup', event => {
       if (!this.drag) return;
@@ -182,12 +195,13 @@ export class GalaxyView {
       this.zoom(-Math.sign(event.deltaY) * .14);
     }, { passive: false, signal });
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden && this.frame) { cancelAnimationFrame(this.frame); this.frame = null; }
+      if (document.hidden) this.cancelScheduledFrame();
       else this.requestFrame();
     }, { signal });
     this.canvas.addEventListener('webglcontextlost', event => {
       event.preventDefault();
       this.contextLost = true;
+      this.cancelScheduledFrame();
       if (!this.contextNotice) {
         this.contextNotice = document.createElement('p');
         this.contextNotice.className = 'galaxy-fallback-notice';
@@ -204,15 +218,25 @@ export class GalaxyView {
 
   resize() {
     if (this.disposed) return;
-    this.width = Math.max(1, this.container.clientWidth);
-    this.height = Math.max(1, this.container.clientHeight);
-    this.renderer?.setSize(this.width, this.height, false);
+    const width = this.container.clientWidth, height = this.container.clientHeight;
+    this.surfaceVisible = width > 0 && height > 0;
+    if (!this.surfaceVisible) {
+      // A hidden page reports zero dimensions. Keep the last useful projection
+      // rather than resizing the drawing buffer and camera to a 1px square.
+      this.cancelScheduledFrame();
+      return;
+    }
+    if (width !== this.width || height !== this.height || !this.hasMeasuredSize) this.renderer?.setSize(width, height, false);
+    this.width = width; this.height = height;
     const aspect = this.width / this.height;
+    if (!this.hasMeasuredSize && this.boundsWidth !== undefined) this.baseHeight = Math.max(this.boundsHeight * 1.22, this.boundsWidth / Math.max(.7, aspect) * 1.22, 100);
+    this.hasMeasuredSize = true;
     this.camera.left = -this.baseHeight * aspect / 2;
     this.camera.right = this.baseHeight * aspect / 2;
     this.camera.top = this.baseHeight / 2;
     this.camera.bottom = -this.baseHeight / 2;
     this.camera.updateProjectionMatrix();
+    this.labelsDirty = true;
     this.requestFrame();
   }
 
@@ -221,6 +245,7 @@ export class GalaxyView {
   setBounds(state) {
     const xs = state.systems.map(s => s.x), ys = state.systems.map(s => -s.y);
     const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+    this.boundsWidth = maxX - minX; this.boundsHeight = maxY - minY;
     this.span = Math.max(maxX - minX, maxY - minY, 100);
     this.unit = this.span / 110;
     this.mapCenter.set((minX + maxX) / 2, (minY + maxY) / 2);
@@ -300,6 +325,8 @@ export class GalaxyView {
       if (charted) this.buildLabel(system, position, surveyed, isSelected, neighbors.has(system.id));
     }
     this.buildFleetLabels(state);
+    this.sortedLabels = [...this.labels].sort((a, b) => b.priority - a.priority);
+    this.labelsDirty = true;
     this.requestFrame();
   }
 
@@ -444,25 +471,28 @@ export class GalaxyView {
     const pos = this.world(system); this.target.set(pos.x, pos.y);
     this.targetZoom = Math.max(this.targetZoom, 1.6);
     if (this.reducedMotion.matches) { this.camera.position.x = pos.x; this.camera.position.y = pos.y; this.camera.zoom = this.targetZoom; this.camera.updateProjectionMatrix(); }
+    this.labelsDirty = true;
     this.requestFrame();
   }
 
   zoom(delta) {
     this.targetZoom = clamp(this.targetZoom * Math.exp(delta), .6, 4.5);
     if (this.reducedMotion.matches) { this.camera.zoom = this.targetZoom; this.camera.updateProjectionMatrix(); }
+    this.labelsDirty = true;
     this.requestFrame();
   }
 
   reset() {
     this.target.copy(this.mapCenter); this.targetZoom = 1;
     if (this.reducedMotion.matches) { this.camera.position.x = this.target.x; this.camera.position.y = this.target.y; this.camera.zoom = 1; this.camera.updateProjectionMatrix(); }
+    this.labelsDirty = true;
     this.requestFrame();
   }
 
   placeLabels() {
     this.camera.updateMatrixWorld();
     const occupied = [];
-    const labels = [...this.labels].sort((a, b) => b.priority - a.priority);
+    const labels = this.sortedLabels || this.labels;
     for (const label of labels) {
       this.projected.copy(label.position).project(this.camera);
       const x = (this.projected.x * .5 + .5) * this.width + label.offsetX;
@@ -476,26 +506,67 @@ export class GalaxyView {
       label.element.style.visibility = visible ? 'visible' : 'hidden';
       label.element.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)${label.kind === 'system' ? ' translateX(-50%)' : ''}`;
     }
+    this.labelsDirty = false;
+  }
+
+  /** Pause decorative animation, while still drawing explicit updates once. */
+  setPaused(paused) {
+    const value = Boolean(paused);
+    if (this.paused === value || this.disposed) return;
+    this.paused = value;
+    this.cancelScheduledFrame();
+    this.requestFrame();
+  }
+
+  cancelScheduledFrame() {
+    if (this.frame != null) cancelAnimationFrame(this.frame);
+    if (this.frameTimer != null) clearTimeout(this.frameTimer);
+    this.frame = null; this.frameTimer = null;
+    this.lastTime = 0;
   }
 
   requestFrame() {
-    if (!this.frame && !this.disposed && !document.hidden) this.frame = requestAnimationFrame(this.animate || (() => { this.frame = null; this.requestFrame(); }));
+    this.needsRender = true;
+    // User input and state updates should not wait for the next idle tick.
+    if (this.frameTimer != null) { clearTimeout(this.frameTimer); this.frameTimer = null; }
+    this.scheduleFrame();
+  }
+
+  scheduleFrame(delay = 0) {
+    if (this.frame != null || this.frameTimer != null || this.disposed || document.hidden || !this.surfaceVisible || !this.viewportVisible) return;
+    if (delay > 0) {
+      this.frameTimer = setTimeout(() => {
+        this.frameTimer = null;
+        this.scheduleFrame();
+      }, delay);
+    } else this.frame = requestAnimationFrame(this.animate);
   }
 
   animate(time) {
     this.frame = null;
-    if (this.disposed || document.hidden) return;
+    if (this.disposed || document.hidden || !this.surfaceVisible || !this.viewportVisible) return;
     const elapsed = Math.min(64, this.lastTime ? time - this.lastTime : 16); this.lastTime = time;
-    const t = this.reducedMotion.matches ? 1 : 1 - Math.exp(-elapsed / 95);
-    this.camera.position.x = THREE.MathUtils.lerp(this.camera.position.x, this.target.x, t);
-    this.camera.position.y = THREE.MathUtils.lerp(this.camera.position.y, this.target.y, t);
-    this.camera.zoom = THREE.MathUtils.lerp(this.camera.zoom, this.targetZoom, t);
-    this.camera.updateProjectionMatrix();
-    if (!this.reducedMotion.matches) for (const ring of this.selectionRings) ring.rotation.z = time * .00009;
-    this.placeLabels();
-    if (!this.contextLost) this.renderer?.render(this.scene, this.camera);
-    const moving = Math.abs(this.camera.position.x - this.target.x) + Math.abs(this.camera.position.y - this.target.y) + Math.abs(this.camera.zoom - this.targetZoom) > .001;
-    if (moving || !this.reducedMotion.matches && this.selectionRings.length && !this.contextLost) this.requestFrame();
+    const t = this.reducedMotion.matches || this.paused ? 1 : 1 - Math.exp(-elapsed / 95);
+    const oldX = this.camera.position.x, oldY = this.camera.position.y, oldZoom = this.camera.zoom;
+    const distance = Math.abs(oldX - this.target.x) + Math.abs(oldY - this.target.y) + Math.abs(oldZoom - this.targetZoom);
+    const settle = distance <= .001;
+    this.camera.position.x = settle ? this.target.x : THREE.MathUtils.lerp(oldX, this.target.x, t);
+    this.camera.position.y = settle ? this.target.y : THREE.MathUtils.lerp(oldY, this.target.y, t);
+    this.camera.zoom = settle ? this.targetZoom : THREE.MathUtils.lerp(oldZoom, this.targetZoom, t);
+    const cameraChanged = oldX !== this.camera.position.x || oldY !== this.camera.position.y || oldZoom !== this.camera.zoom;
+    if (oldZoom !== this.camera.zoom) this.camera.updateProjectionMatrix();
+    if (cameraChanged) this.labelsDirty = true;
+    const animateRings = !this.paused && !this.reducedMotion.matches && this.selectionRings.length > 0 && !this.contextLost;
+    if (this.needsRender || cameraChanged || animateRings && time - this.lastRenderTime >= 1000 / 30) {
+      if (animateRings) for (const ring of this.selectionRings) ring.rotation.z = time * .00009;
+      if (this.labelsDirty) this.placeLabels();
+      if (!this.contextLost) this.renderer?.render(this.scene, this.camera);
+      this.lastRenderTime = time;
+      this.needsRender = false;
+    }
+    const moving = this.camera.position.x !== this.target.x || this.camera.position.y !== this.target.y || this.camera.zoom !== this.targetZoom;
+    if (!this.paused && moving) this.scheduleFrame();
+    else if (animateRings) this.scheduleFrame(Math.max(1, 1000 / 30 - (performance.now() - this.lastRenderTime)));
   }
 
   clearGroup(group) {
@@ -512,8 +583,8 @@ export class GalaxyView {
   dispose() {
     if (this.disposed) return;
     this.disposed = true;
-    cancelAnimationFrame(this.frame); this.frame = null;
-    this.abort.abort(); this.resizeObserver.disconnect();
+    this.cancelScheduledFrame();
+    this.abort.abort(); this.resizeObserver.disconnect(); this.intersectionObserver.disconnect();
     this.clearGroup(this.dynamicGroup); this.clearGroup(this.staticGroup);
     for (const resource of this.resources) resource.dispose();
     this.renderer?.dispose();
