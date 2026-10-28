@@ -828,6 +828,30 @@ function economicTurn(state, faction, act) {
   }
 }
 
+function defenseLeadTurn(state, faction, act) {
+  if (faction.orders < 1 || state.winner) return;
+  const groups = new Map();
+  for (const fleet of ownFleets(state, faction)) {
+    if (!groups.has(fleet.systemId)) groups.set(fleet.systemId, []);
+    groups.get(fleet.systemId).push(fleet);
+  }
+  const candidates = [];
+  for (const [systemId, fleets] of groups) {
+    // Keep an established assignment; routine damage/repair must not spend
+    // another order reshuffling it. A naturally first defender needs no order.
+    if (fleets.length < 2 || fleets.some(fleet => fleet.defenseLead && military(fleet))) continue;
+    const fleet = fleets.filter(military).sort((a, b) => b.hp - a.hp || strength(state, b) - strength(state, a) || a.id.localeCompare(b.id))[0];
+    if (!fleet || fleet.id === fleets[0].id) continue;
+    const threatened = observedEnemies(state, faction, systemId).length > 0 || war(faction, systemOf(state, systemId).owner);
+    const priority = threatened ? 0 : fleets.some(fleet => fleet.type === 'colony') ? 1 : 2;
+    candidates.push({ fleet, systemId, priority });
+  }
+  candidates.sort((a, b) => a.priority - b.priority || a.systemId.localeCompare(b.systemId) || a.fleet.id.localeCompare(b.fleet.id));
+  // Final, optional preparation: never reserve orders ahead of existing jobs,
+  // never alter fleet iteration order, and use the player's ordinary command.
+  if (candidates.length) act({ type: 'leadDefense', fleetId: candidates[0].fleet.id });
+}
+
 export function runAI(state, faction) {
   if (!faction || faction.eliminated || state.winner) return;
   const id = faction.id;
@@ -854,4 +878,5 @@ export function runAI(state, faction) {
   civilianTurn(state, faction, ordinaryAct);
   anomalyTurn(state, faction, ordinaryAct);
   economicTurn(state, faction, act);
+  defenseLeadTurn(state, faction, act);
 }
