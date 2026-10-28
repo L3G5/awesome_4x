@@ -1,0 +1,2889 @@
+{
+  "schemaVersion": 1,
+  "engineRevision": "5170cbc84f91d8a0d59d2d6362fe8cc3e268b129",
+  "baselineAIRevision": "0fc7de7907e574667cb67747aa4a89cb844132d8",
+  "runtime": "v22.23.1",
+  "hashes": {
+    "scriptSha256": "4780a016b73164220c34fa04977e30df162b6b99f72be46426453edc4f80ddcd",
+    "sourceGraphs": {
+      "before-raw": {
+        "src/ai.js": "d746798486f0200886259b3cd00e8ae3433ee60aa21b24f2671ce982060db7fe",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "4151fb7d296180706ddce706c713f4d8e0e22d845d0fea81ce564262958d3417",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "d746798486f0200886259b3cd00e8ae3433ee60aa21b24f2671ce982060db7fe",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      },
+      "before-observed": {
+        "src/ai.js": "3336070292f25ec27d33f7568e41e323910429c92986dd13b26089657044effa",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "8c00ede87ba22f33c1dc62396bd5e9ccf5f3bcd5d9ebee60957be4496d51ba29",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "3336070292f25ec27d33f7568e41e323910429c92986dd13b26089657044effa",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      },
+      "after-raw": {
+        "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "4151fb7d296180706ddce706c713f4d8e0e22d845d0fea81ce564262958d3417",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "d746798486f0200886259b3cd00e8ae3433ee60aa21b24f2671ce982060db7fe",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      },
+      "after-observed": {
+        "src/ai.js": "f454ce7dddf3e725f33916c804e7b2fdfb5f5f21dbd312e124448483fccb0343",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "8c00ede87ba22f33c1dc62396bd5e9ccf5f3bcd5d9ebee60957be4496d51ba29",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "3336070292f25ec27d33f7568e41e323910429c92986dd13b26089657044effa",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      }
+    },
+    "rawDifferingFiles": [
+      "src/ai.js"
+    ]
+  },
+  "method": {
+    "design": "32 measured configurations: 8 established seeds × passive/balanced player policy × baseline/current rival AI. Complete dependency graph comes from pinned Stage14 engine5170cbc. Only src/ai.js differs between raw variants; src/player-ai.js is the same exact baseline0fc7de7 AI in both. No campaign grants, save edits, scripted splits or player Lead defense commands.",
+    "playerPolicyDifferenceFromEarlierExpeditionBenchmark": "Balanced research priority is unchanged, but its remaining actions now use a fixed baseline player AI in both variants, rather than each variant AI. Thus only the three rival governments adopt the new assignment policy. This isolates AI adoption; it does not measure human use of defense control.",
+    "observer": "Identical read-only command wrappers on rival/player AI record every successful assignment immediately, including cost and location. Identical game.js hooks bracket every actual fleet-versus-fleet duel, including battles outside player sensors; these observations are retrospective metrics and are never given to any policy. Neither current flag counts nor retained public battle reports are used as event counts.",
+    "equality": "Every measured configuration has one complete uninstrumented replay from the same seed. Entire JSON states are compared after every round and at campaign completion, not merely selected fields. At cycles20/40/60, a JSON-reloaded raw checkpoint also runs the same next round and must match exactly. Raw validation repeats are not counted as extra outcome samples.",
+    "validity": "Every initial and post-round state in both instrumented and raw executions must validate and have finite nonnegative credits/minerals/science/orders for all four factions. A winning AI action can finish a campaign before incrementing the turn; completedCycles counts only actual increments.",
+    "metrics": "Assignments count successful false/absent-to-true lead commands; assignmentOrders sums exact before/after order differences and each must equal1. Redundant no-ops and failures are separate. Lead-defender duels count each actual battle call whose defender is marked at entry, even if the same formation fights again later; they do not count attacks made by a marked fleet or nonparticipants. Fleet-combat ship/hull losses sum immediate participant before/after differences for those duels only, excluding invasions, upkeep and other removal. AssignmentExamples/leadDuelExamples retain only the first5 per run; all counts include the complete run.",
+    "limitations": "Eight fixed seeds with two scripted policies are a regression/balance probe, not human win-rate estimates. Ordering changes can alter subsequent combat RNG consumption, strategy and campaign duration. Loss totals are descriptive, not equal-exposure causal casualty estimates. No additional seeds or cohorts were run."
+  },
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7"
+  ],
+  "policies": {
+    "passive": "Player issues no commands.",
+    "balanced": {
+      "description": "Existing mixed research priority, then pinned baseline AI for all other player commands at normal costs/orders. It never assigns defense leads.",
+      "researchPriority": [
+        "logistics",
+        "ecology",
+        "physics",
+        "industry",
+        "diplomacy",
+        "weapons",
+        "computing",
+        "shields",
+        "singularity",
+        "command",
+        "cruisers",
+        "terraforming"
+      ]
+    }
+  },
+  "checks": {
+    "measuredConfigurations": 32,
+    "completeRawValidationReplays": 32,
+    "measuredCompletedCycles": 2240,
+    "measuredStateChecks": 2272,
+    "rawStateChecks": 2272,
+    "jsonReloadNextRoundChecks": 96,
+    "fullFinalStateObserverEqualityChecks": 32,
+    "pairedRoundObserverEqualityChecks": 2240,
+    "invalidStates": 0,
+    "negativeBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "summary": {
+    "before": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3
+        },
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 89,
+        "leadDefenderDuels": 0,
+        "fleetCombatShipsLost": {
+          "player": 0,
+          "veyr": 61,
+          "khar": 56,
+          "choir": 56
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 1,
+          "veyr": 3,
+          "khar": 2,
+          "choir": 2
+        },
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 99,
+        "leadDefenderDuels": 0,
+        "fleetCombatShipsLost": {
+          "player": 44,
+          "veyr": 70,
+          "khar": 52,
+          "choir": 55
+        }
+      }
+    },
+    "after": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3
+        },
+        "assignments": 93,
+        "assignmentOrders": 93,
+        "assignmentsAtObservedWarThreat": 14,
+        "assignmentsWithArk": 30,
+        "assignmentsElsewhere": 49,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 90,
+        "leadDefenderDuels": 3,
+        "fleetCombatShipsLost": {
+          "player": 0,
+          "veyr": 64,
+          "khar": 55,
+          "choir": 56
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 2,
+          "veyr": 3,
+          "khar": 1,
+          "choir": 2
+        },
+        "assignments": 65,
+        "assignmentOrders": 65,
+        "assignmentsAtObservedWarThreat": 5,
+        "assignmentsWithArk": 45,
+        "assignmentsElsewhere": 15,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 95,
+        "leadDefenderDuels": 2,
+        "fleetCombatShipsLost": {
+          "player": 43,
+          "veyr": 70,
+          "khar": 52,
+          "choir": 52
+        }
+      }
+    }
+  },
+  "paired": {
+    "passive": {
+      "pairs": 8,
+      "changedWinners": 0,
+      "changedVictoryTypes": 0,
+      "finishDelta": {
+        "count": 8,
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "rows": [
+        {
+          "seed": "ASTERION",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 66,
+          "afterFinish": 66,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 2,
+          "assignments": 21,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-1",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 69,
+          "afterFinish": 69,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 3,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-2",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 68,
+          "afterFinish": 68,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": -1,
+          "assignments": 12,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-3",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 85,
+          "afterFinish": 85,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 12,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-4",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 8,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-5",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 70,
+          "afterFinish": 70,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 12,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-6",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 78,
+          "afterFinish": 78,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 14,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-7",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 70,
+          "afterFinish": 70,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 11,
+          "leadDefenderDuels": 0
+        }
+      ]
+    },
+    "balanced": {
+      "pairs": 8,
+      "changedWinners": 1,
+      "changedVictoryTypes": 0,
+      "finishDelta": {
+        "count": 8,
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "rows": [
+        {
+          "seed": "ASTERION",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 63,
+          "afterFinish": 63,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 11,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-1",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 73,
+          "afterFinish": 73,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 9,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-2",
+          "beforeWinner": "player",
+          "afterWinner": "player",
+          "beforeFinish": 65,
+          "afterFinish": 65,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 4,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-3",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 6,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-4",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 4,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-5",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 14,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-6",
+          "beforeWinner": "khar",
+          "afterWinner": "player",
+          "beforeFinish": 70,
+          "afterFinish": 70,
+          "finishDelta": 0,
+          "winnerChanged": true,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": -4,
+          "assignments": 8,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-7",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 71,
+          "afterFinish": 71,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 9,
+          "leadDefenderDuels": 0
+        }
+      ]
+    }
+  },
+  "runs": [
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 66,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 65,
+      "firstWar": 38,
+      "finalStateSha256": "69b981faa6b2582742beb9cecfe0ca82100ffb430105813fd028fb3cd6e1de9d",
+      "rawFinalStateSha256": "69b981faa6b2582742beb9cecfe0ca82100ffb430105813fd028fb3cd6e1de9d",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 9,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 8,
+            "hull": 272.6
+          },
+          "khar": {
+            "ships": 7,
+            "hull": 241.9
+          },
+          "choir": {
+            "ships": 1,
+            "hull": 18
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 69,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 68,
+      "firstWar": 43,
+      "finalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "rawFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 10,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 9,
+            "hull": 307.29999999999995
+          },
+          "khar": {
+            "ships": 9,
+            "hull": 400.20000000000005
+          },
+          "choir": {
+            "ships": 6,
+            "hull": 269.1
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 67,
+      "firstWar": 46,
+      "finalStateSha256": "47ad12f4a87103141acc8a40f7370959a7e964a2da316acaafeed8173e8bd997",
+      "rawFinalStateSha256": "47ad12f4a87103141acc8a40f7370959a7e964a2da316acaafeed8173e8bd997",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 14,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 418.70000000000005
+          },
+          "khar": {
+            "ships": 12,
+            "hull": 387.4
+          },
+          "choir": {
+            "ships": 8,
+            "hull": 269.4
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 85,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 84,
+      "firstWar": 57,
+      "finalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "rawFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 12,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 4,
+            "hull": 270.1
+          },
+          "khar": {
+            "ships": 6,
+            "hull": 474.83333333333337
+          },
+          "choir": {
+            "ships": 10,
+            "hull": 374.21278195488725
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 60,
+      "finalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "rawFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 6,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 5,
+            "hull": 180.7
+          },
+          "khar": {
+            "ships": 1,
+            "hull": 32.5
+          },
+          "choir": {
+            "ships": 9,
+            "hull": 296
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 69,
+      "firstWar": 31,
+      "finalStateSha256": "f29c031aa9872ab955142a830caebb57c140048295529b5108f13dd04942bdde",
+      "rawFinalStateSha256": "f29c031aa9872ab955142a830caebb57c140048295529b5108f13dd04942bdde",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 12,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 7,
+            "hull": 213
+          },
+          "khar": {
+            "ships": 3,
+            "hull": 249.7
+          },
+          "choir": {
+            "ships": 9,
+            "hull": 261.2
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 78,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 77,
+      "firstWar": 46,
+      "finalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "rawFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 22,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 12,
+            "hull": 391.7
+          },
+          "khar": {
+            "ships": 14,
+            "hull": 836.212908777969
+          },
+          "choir": {
+            "ships": 13,
+            "hull": 566.8
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 69,
+      "firstWar": 27,
+      "finalStateSha256": "a7cc2e19213c32584adcd9a1647419d6551dffedf4642a076982b79cea112e91",
+      "rawFinalStateSha256": "a7cc2e19213c32584adcd9a1647419d6551dffedf4642a076982b79cea112e91",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 4,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 5,
+            "hull": 174.2
+          },
+          "khar": {
+            "ships": 4,
+            "hull": 124
+          },
+          "choir": {
+            "ships": 0,
+            "hull": 7.199999999999999
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 63,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 62,
+      "firstWar": 53,
+      "finalStateSha256": "c3e8484715765e36157d9cc04b07c636c0faf7a3ddfded4e2cd49115c99f3ca8",
+      "rawFinalStateSha256": "c3e8484715765e36157d9cc04b07c636c0faf7a3ddfded4e2cd49115c99f3ca8",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 7,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 358
+          },
+          "khar": {
+            "ships": 5,
+            "hull": 340.8
+          },
+          "choir": {
+            "ships": 1,
+            "hull": 18
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 73,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 72,
+      "firstWar": 43,
+      "finalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1",
+      "rawFinalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 13,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 11,
+            "hull": 398.2
+          },
+          "veyr": {
+            "ships": 9,
+            "hull": 295.29999999999995
+          },
+          "khar": {
+            "ships": 8,
+            "hull": 312.6
+          },
+          "choir": {
+            "ships": 6,
+            "hull": 275.5
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 65,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "completedCycles": 64,
+      "firstWar": 43,
+      "finalStateSha256": "e071fb697032cff42d8cd370f2150c4ff166816345e44961f36128e99e2b1ed5",
+      "rawFinalStateSha256": "e071fb697032cff42d8cd370f2150c4ff166816345e44961f36128e99e2b1ed5",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 10,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 2,
+            "hull": 42
+          },
+          "veyr": {
+            "ships": 6,
+            "hull": 203.4
+          },
+          "khar": {
+            "ships": 5,
+            "hull": 155.69999999999996
+          },
+          "choir": {
+            "ships": 2,
+            "hull": 42
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 60,
+      "finalStateSha256": "d1a26abacab5c3cda627924183ea8b7117aa0a594dbc5672b577083b1437969e",
+      "rawFinalStateSha256": "d1a26abacab5c3cda627924183ea8b7117aa0a594dbc5672b577083b1437969e",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 9,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 8,
+            "hull": 390.79999999999995
+          },
+          "veyr": {
+            "ships": 8,
+            "hull": 236.4
+          },
+          "khar": {
+            "ships": 3,
+            "hull": 99.44381270903008
+          },
+          "choir": {
+            "ships": 8,
+            "hull": 313.6
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 72,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 43,
+      "finalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "rawFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 16,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 362
+          },
+          "khar": {
+            "ships": 9,
+            "hull": 564.1
+          },
+          "choir": {
+            "ships": 10,
+            "hull": 413.8
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 39,
+      "finalStateSha256": "1bab1bc30ad8885d0c60ac6168377f217234b1c2d2e3d609a9554523dba8d7f0",
+      "rawFinalStateSha256": "1bab1bc30ad8885d0c60ac6168377f217234b1c2d2e3d609a9554523dba8d7f0",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 14,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 5,
+            "hull": 221.60000000000002
+          },
+          "veyr": {
+            "ships": 7,
+            "hull": 245.3
+          },
+          "khar": {
+            "ships": 9,
+            "hull": 408
+          },
+          "choir": {
+            "ships": 11,
+            "hull": 337.8
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 69,
+      "firstWar": 46,
+      "finalStateSha256": "adcf4005340d6c39b60bfb5b62143e7158a6a958d456ab84fb2df2e3491ab277",
+      "rawFinalStateSha256": "adcf4005340d6c39b60bfb5b62143e7158a6a958d456ab84fb2df2e3491ab277",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 19,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 10,
+            "hull": 400.6
+          },
+          "veyr": {
+            "ships": 12,
+            "hull": 430.3
+          },
+          "khar": {
+            "ships": 7,
+            "hull": 391.59999999999997
+          },
+          "choir": {
+            "ships": 11,
+            "hull": 501
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 70,
+      "firstWar": 27,
+      "finalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4",
+      "rawFinalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4",
+      "metrics": {
+        "assignmentAttempts": 0,
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 11,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 8,
+            "hull": 421.20000000000005
+          },
+          "veyr": {
+            "ships": 6,
+            "hull": 192.2
+          },
+          "khar": {
+            "ships": 6,
+            "hull": 200.8
+          },
+          "choir": {
+            "ships": 6,
+            "hull": 188
+          }
+        },
+        "assignmentExamples": [],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 66,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 65,
+      "firstWar": 38,
+      "finalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "rawFinalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "metrics": {
+        "assignmentAttempts": 21,
+        "assignments": 21,
+        "assignmentOrders": 21,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 19,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 2,
+        "assignmentsWithArk": 3,
+        "assignmentsElsewhere": 16,
+        "fleetDuels": 11,
+        "leadDefenderDuels": 1,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 1,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 350
+          },
+          "khar": {
+            "ships": 6,
+            "hull": 287.9365529227739
+          },
+          "choir": {
+            "ships": 1,
+            "hull": 21.30000000000001
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 14,
+            "factionId": "khar",
+            "fleetId": "f21",
+            "systemId": "s20",
+            "orders": 1
+          },
+          {
+            "turn": 20,
+            "factionId": "khar",
+            "fleetId": "f21",
+            "systemId": "s15",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": [
+          {
+            "turn": 47,
+            "systemId": "s13",
+            "attackerId": "f44",
+            "defenderId": "f42",
+            "defenderOwner": "khar",
+            "attackerSurvived": false,
+            "defenderSurvived": true
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 69,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 68,
+      "firstWar": 43,
+      "finalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "rawFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "metrics": {
+        "assignmentAttempts": 3,
+        "assignments": 3,
+        "assignmentOrders": 3,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 1,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 3,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 10,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 9,
+            "hull": 307.29999999999995
+          },
+          "khar": {
+            "ships": 9,
+            "hull": 400.20000000000005
+          },
+          "choir": {
+            "ships": 6,
+            "hull": 269.1
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 67,
+      "firstWar": 46,
+      "finalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016",
+      "rawFinalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016",
+      "metrics": {
+        "assignmentAttempts": 12,
+        "assignments": 12,
+        "assignmentOrders": 12,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 6,
+          "khar": 2,
+          "choir": 4
+        },
+        "assignmentsAtObservedWarThreat": 3,
+        "assignmentsWithArk": 4,
+        "assignmentsElsewhere": 5,
+        "fleetDuels": 13,
+        "leadDefenderDuels": 1,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 411.50000000000006
+          },
+          "khar": {
+            "ships": 12,
+            "hull": 387.4
+          },
+          "choir": {
+            "ships": 8,
+            "hull": 269.4
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 47,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 47,
+            "factionId": "khar",
+            "fleetId": "f43",
+            "systemId": "s16",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": [
+          {
+            "turn": 65,
+            "systemId": "s16",
+            "attackerId": "f56",
+            "defenderId": "f61",
+            "defenderOwner": "veyr",
+            "attackerSurvived": false,
+            "defenderSurvived": false
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 85,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 84,
+      "firstWar": 57,
+      "finalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "rawFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "metrics": {
+        "assignmentAttempts": 12,
+        "assignments": 12,
+        "assignmentOrders": 12,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 6,
+          "choir": 5
+        },
+        "assignmentsAtObservedWarThreat": 2,
+        "assignmentsWithArk": 3,
+        "assignmentsElsewhere": 7,
+        "fleetDuels": 12,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 4,
+            "hull": 270.1
+          },
+          "khar": {
+            "ships": 6,
+            "hull": 474.83333333333337
+          },
+          "choir": {
+            "ships": 10,
+            "hull": 374.21278195488725
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 57,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 67,
+            "factionId": "khar",
+            "fleetId": "f54",
+            "systemId": "s16",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 60,
+      "finalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "rawFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "metrics": {
+        "assignmentAttempts": 8,
+        "assignments": 8,
+        "assignmentOrders": 8,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 4,
+          "choir": 2
+        },
+        "assignmentsAtObservedWarThreat": 1,
+        "assignmentsWithArk": 4,
+        "assignmentsElsewhere": 3,
+        "fleetDuels": 6,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 5,
+            "hull": 180.7
+          },
+          "khar": {
+            "ships": 1,
+            "hull": 32.5
+          },
+          "choir": {
+            "ships": 9,
+            "hull": 296
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 60,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s14",
+            "orders": 1
+          },
+          {
+            "turn": 67,
+            "factionId": "khar",
+            "fleetId": "f51",
+            "systemId": "s11",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 69,
+      "firstWar": 31,
+      "finalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "rawFinalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "metrics": {
+        "assignmentAttempts": 12,
+        "assignments": 12,
+        "assignmentOrders": 12,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 4,
+          "khar": 6,
+          "choir": 2
+        },
+        "assignmentsAtObservedWarThreat": 2,
+        "assignmentsWithArk": 6,
+        "assignmentsElsewhere": 4,
+        "fleetDuels": 12,
+        "leadDefenderDuels": 1,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 1
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 7,
+            "hull": 213
+          },
+          "khar": {
+            "ships": 3,
+            "hull": 250.00000000000003
+          },
+          "choir": {
+            "ships": 9,
+            "hull": 261.2
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 30,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s24",
+            "orders": 1
+          },
+          {
+            "turn": 31,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s14",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": [
+          {
+            "turn": 35,
+            "systemId": "s14",
+            "attackerId": "f9",
+            "defenderId": "f12",
+            "defenderOwner": "choir",
+            "attackerSurvived": true,
+            "defenderSurvived": false
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 78,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 77,
+      "firstWar": 46,
+      "finalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "rawFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "metrics": {
+        "assignmentAttempts": 14,
+        "assignments": 14,
+        "assignmentOrders": 14,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 12,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 4,
+        "assignmentsWithArk": 4,
+        "assignmentsElsewhere": 6,
+        "fleetDuels": 22,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 12,
+            "hull": 391.7
+          },
+          "khar": {
+            "ships": 14,
+            "hull": 836.212908777969
+          },
+          "choir": {
+            "ships": 13,
+            "hull": 566.8
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 54,
+            "factionId": "khar",
+            "fleetId": "f44",
+            "systemId": "s6",
+            "orders": 1
+          },
+          {
+            "turn": 56,
+            "factionId": "khar",
+            "fleetId": "f44",
+            "systemId": "s14",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 69,
+      "firstWar": 27,
+      "finalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "rawFinalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "metrics": {
+        "assignmentAttempts": 11,
+        "assignments": 11,
+        "assignmentOrders": 11,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 8,
+          "choir": 2
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 3,
+        "assignmentsElsewhere": 8,
+        "fleetDuels": 4,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 5,
+            "hull": 174.2
+          },
+          "khar": {
+            "ships": 4,
+            "hull": 124
+          },
+          "choir": {
+            "ships": 0,
+            "hull": 7.199999999999999
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 41,
+            "factionId": "khar",
+            "fleetId": "f35",
+            "systemId": "s26",
+            "orders": 1
+          },
+          {
+            "turn": 42,
+            "factionId": "khar",
+            "fleetId": "f35",
+            "systemId": "s13",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 63,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 62,
+      "firstWar": 53,
+      "finalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "rawFinalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "metrics": {
+        "assignmentAttempts": 11,
+        "assignments": 11,
+        "assignmentOrders": 11,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 9,
+          "khar": 1,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 1,
+        "assignmentsWithArk": 10,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 7,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 358
+          },
+          "khar": {
+            "ships": 5,
+            "hull": 340.8
+          },
+          "choir": {
+            "ships": 1,
+            "hull": 18
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 54,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s13",
+            "orders": 1
+          },
+          {
+            "turn": 55,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s8",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 73,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 72,
+      "firstWar": 43,
+      "finalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1",
+      "rawFinalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1",
+      "metrics": {
+        "assignmentAttempts": 9,
+        "assignments": 9,
+        "assignmentOrders": 9,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 4,
+          "khar": 1,
+          "choir": 4
+        },
+        "assignmentsAtObservedWarThreat": 1,
+        "assignmentsWithArk": 4,
+        "assignmentsElsewhere": 4,
+        "fleetDuels": 13,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 11,
+            "hull": 398.2
+          },
+          "veyr": {
+            "ships": 9,
+            "hull": 295.29999999999995
+          },
+          "khar": {
+            "ships": 8,
+            "hull": 312.6
+          },
+          "choir": {
+            "ships": 6,
+            "hull": 275.5
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 44,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s14",
+            "orders": 1
+          },
+          {
+            "turn": 54,
+            "factionId": "veyr",
+            "fleetId": "f66",
+            "systemId": "s1",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 65,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "completedCycles": 64,
+      "firstWar": 43,
+      "finalStateSha256": "d7e03d54f3fc64d64148f9f3c60583fd6da44c7c843ce0cf2b6f9e40df974ef6",
+      "rawFinalStateSha256": "d7e03d54f3fc64d64148f9f3c60583fd6da44c7c843ce0cf2b6f9e40df974ef6",
+      "metrics": {
+        "assignmentAttempts": 4,
+        "assignments": 4,
+        "assignmentOrders": 4,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 1,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 4,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 10,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 2,
+            "hull": 42
+          },
+          "veyr": {
+            "ships": 6,
+            "hull": 203.4
+          },
+          "khar": {
+            "ships": 5,
+            "hull": 155.69999999999996
+          },
+          "choir": {
+            "ships": 2,
+            "hull": 42
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f71",
+            "systemId": "s1",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 60,
+      "finalStateSha256": "a969c62fda3d30b5a692ff54dedd538c309ac21c029ad5ce128e60ddb4b760ea",
+      "rawFinalStateSha256": "a969c62fda3d30b5a692ff54dedd538c309ac21c029ad5ce128e60ddb4b760ea",
+      "metrics": {
+        "assignmentAttempts": 6,
+        "assignments": 6,
+        "assignmentOrders": 6,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 1,
+        "assignmentsWithArk": 3,
+        "assignmentsElsewhere": 2,
+        "fleetDuels": 9,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 8,
+            "hull": 390.79999999999995
+          },
+          "veyr": {
+            "ships": 8,
+            "hull": 236.4
+          },
+          "khar": {
+            "ships": 3,
+            "hull": 99.44381270903008
+          },
+          "choir": {
+            "ships": 8,
+            "hull": 313.6
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 68,
+            "factionId": "khar",
+            "fleetId": "f60",
+            "systemId": "s6",
+            "orders": 1
+          },
+          {
+            "turn": 70,
+            "factionId": "khar",
+            "fleetId": "f55",
+            "systemId": "s3",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 72,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 43,
+      "finalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "rawFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "metrics": {
+        "assignmentAttempts": 4,
+        "assignments": 4,
+        "assignmentOrders": 4,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 1,
+          "choir": 1
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 4,
+        "assignmentsElsewhere": 0,
+        "fleetDuels": 16,
+        "leadDefenderDuels": 1,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 0,
+            "hull": 0
+          },
+          "veyr": {
+            "ships": 11,
+            "hull": 362
+          },
+          "khar": {
+            "ships": 9,
+            "hull": 564.0999999999999
+          },
+          "choir": {
+            "ships": 10,
+            "hull": 413.8
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 52,
+            "factionId": "veyr",
+            "fleetId": "f55",
+            "systemId": "s1",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": [
+          {
+            "turn": 53,
+            "systemId": "s1",
+            "attackerId": "f49",
+            "defenderId": "f55",
+            "defenderOwner": "veyr",
+            "attackerSurvived": true,
+            "defenderSurvived": false
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "completedCycles": 71,
+      "firstWar": 39,
+      "finalStateSha256": "d9939272d20fa09d151228856b46b1f0a972b76d525b94a7fea1c04d1209e75b",
+      "rawFinalStateSha256": "d9939272d20fa09d151228856b46b1f0a972b76d525b94a7fea1c04d1209e75b",
+      "metrics": {
+        "assignmentAttempts": 14,
+        "assignments": 14,
+        "assignmentOrders": 14,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 4,
+          "khar": 1,
+          "choir": 9
+        },
+        "assignmentsAtObservedWarThreat": 1,
+        "assignmentsWithArk": 10,
+        "assignmentsElsewhere": 3,
+        "fleetDuels": 14,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 5,
+            "hull": 221.60000000000002
+          },
+          "veyr": {
+            "ships": 7,
+            "hull": 245.3
+          },
+          "khar": {
+            "ships": 9,
+            "hull": 408
+          },
+          "choir": {
+            "ships": 11,
+            "hull": 337.8
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 39,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s18",
+            "orders": 1
+          },
+          {
+            "turn": 39,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s14",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 70,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "completedCycles": 69,
+      "firstWar": 46,
+      "finalStateSha256": "e56c45e2405e4a528e06cbdb00b3f992123ba1f0d80b4cb9a28b3564e3c097ca",
+      "rawFinalStateSha256": "e56c45e2405e4a528e06cbdb00b3f992123ba1f0d80b4cb9a28b3564e3c097ca",
+      "metrics": {
+        "assignmentAttempts": 8,
+        "assignments": 8,
+        "assignmentOrders": 8,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 3,
+          "khar": 3,
+          "choir": 2
+        },
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 3,
+        "assignmentsElsewhere": 5,
+        "fleetDuels": 15,
+        "leadDefenderDuels": 1,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 1
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 9,
+            "hull": 346.6
+          },
+          "veyr": {
+            "ships": 12,
+            "hull": 430.9
+          },
+          "khar": {
+            "ships": 7,
+            "hull": 440.69999999999993
+          },
+          "choir": {
+            "ships": 8,
+            "hull": 348
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 49,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s21",
+            "orders": 1
+          },
+          {
+            "turn": 50,
+            "factionId": "choir",
+            "fleetId": "f58",
+            "systemId": "s30",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": [
+          {
+            "turn": 51,
+            "systemId": "s30",
+            "attackerId": "f3",
+            "defenderId": "f58",
+            "defenderOwner": "choir",
+            "attackerSurvived": true,
+            "defenderSurvived": false
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "completedCycles": 70,
+      "firstWar": 27,
+      "finalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4",
+      "rawFinalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4",
+      "metrics": {
+        "assignmentAttempts": 9,
+        "assignments": 9,
+        "assignmentOrders": 9,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "assignmentByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 6,
+          "choir": 2
+        },
+        "assignmentsAtObservedWarThreat": 1,
+        "assignmentsWithArk": 7,
+        "assignmentsElsewhere": 1,
+        "fleetDuels": 11,
+        "leadDefenderDuels": 0,
+        "leadDefenderByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "fleetCombatLosses": {
+          "player": {
+            "ships": 8,
+            "hull": 421.20000000000005
+          },
+          "veyr": {
+            "ships": 6,
+            "hull": 192.2
+          },
+          "khar": {
+            "ships": 6,
+            "hull": 200.8
+          },
+          "choir": {
+            "ships": 6,
+            "hull": 188
+          }
+        },
+        "assignmentExamples": [
+          {
+            "turn": 1,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "systemId": "s1",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 1,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "systemId": "s3",
+            "orders": 1
+          },
+          {
+            "turn": 44,
+            "factionId": "khar",
+            "fleetId": "f55",
+            "systemId": "s2",
+            "orders": 1
+          },
+          {
+            "turn": 47,
+            "factionId": "khar",
+            "fleetId": "f59",
+            "systemId": "s26",
+            "orders": 1
+          }
+        ],
+        "leadDuelExamples": []
+      }
+    }
+  ],
+  "reproduction": "node compare.mjs --repo /path/to/awesome_4x --out results.json"
+}

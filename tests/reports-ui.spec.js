@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { createGame, validateSave } from '../src/game.js';
+import { createGame, command, validateSave } from '../src/game.js';
 
 async function loadFixture(page, state) {
   expect(validateSave(state)).toBe(true);
@@ -50,6 +50,24 @@ test('visible opposition at a neutral star previews combat and reports actual lo
   await page.locator(`[data-action="combat-report"][data-report="${report.id}"]`).click();
   await expect(page.locator('.combat-summary')).toHaveText(report.summary);
   await page.screenshot({path:'test-results/combat-report.png'});
+});
+
+test('zero enemy fire keeps a fractional-hull formation alive and the report never displays it as zero',async({page})=>{
+  const state=createGame('fractional-report-browser'),fleet=state.fleets.find(f=>f.owner==='player'&&f.type==='frigate');
+  const ark=state.fleets.find(f=>f.owner==='veyr'&&f.type==='colony');fleet.hp=.01;ark.systemId=fleet.systemId;
+  for(const[a,b]of[['player','veyr'],['veyr','player']]){
+    const faction=state.factions.find(f=>f.id===a);faction.contacts.push(b);faction.relations[b].status='war';
+  }
+  const expected=JSON.parse(JSON.stringify(state));
+  await loadFixture(page,state);
+  await page.locator(`#inspector [data-fleet="${fleet.id}"]`).click();
+  await page.locator('[data-action="attack"]').click();
+  expect(command(expected,{type:'attack',fleetId:fleet.id}).ok).toBe(true);
+  expect(await page.evaluate(()=>window.__asterion.getState())).toEqual(expected);
+  await expect(page.locator('.combat-side[data-owner="player"] .combat-hull')).toContainText('Hull <0.1 → <0.1');
+  await expect(page.locator('.combat-side[data-owner="player"] .combat-hull')).toContainText('Survived');
+  await page.reload();
+  expect(await page.evaluate(()=>window.__asterion.getState())).toEqual(expected);
 });
 
 test('the map roster exposes a fifth remote fleet and selecting it focuses its location', async ({ page }) => {

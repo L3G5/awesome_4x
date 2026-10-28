@@ -48,6 +48,8 @@ The [trade consent review](docs/stage12-treaty-review/index.html) verifies funde
 
 The [complete military playtest](docs/military-playtest/report.html) follows an unedited, UI-only campaign through Domination at cycle 57 on version 0.10. Its self-contained pinned engine replay reproduces 340 commands, 14 export-event comparisons and 340 JSON-reload checks exactly. Actual exports, original receipts and all transcript normalizations are preserved. The [command clarity review](docs/stage13-command-review/index.html) connects that evidence to observer-safe engagement order, historical ship portraits and attainable discovery rewards.
 
+The [defensive-lead design audit](docs/defense-order-audit/index.html) separates the actual military replay from hypothetical formation-order experiments. The [independent defense review](docs/stage14-defense-review/index.html) verifies costs, visibility, keyboard behavior and historical markers. The [rival-AI comparison](docs/defense-ai-comparison/index.html) holds the complete engine and player policy fixed across 32 configurations; its bounded result distinguishes 158 paid assignments from five actual marked-defender engagements. Reproduce with `node docs/defense-ai-comparison/compare.mjs --repo . --out /tmp/defense-ai-results.json`.
+
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.

@@ -1,0 +1,394 @@
+{
+  "reason": "Rerun of the exact same 32 configurations after the zero-fire guard engine correction, not additional sampling. Original705 bundle remains separate superseded evidence.",
+  "supersededEngine": "705b6127ef1eaa9a29e941e02428b1ceb7c895ae",
+  "correctedEngine": "5170cbc84f91d8a0d59d2d6362fe8cc3e268b129",
+  "baselineAIUnchanged": true,
+  "seedsUnchanged": true,
+  "policiesUnchanged": true,
+  "scriptDifference": "Only engine revision literal and its matching method label changed.",
+  "sourceGraphDifferences": {
+    "before-raw": [
+      "src/game.js"
+    ],
+    "before-observed": [
+      "src/game.js"
+    ],
+    "after-raw": [
+      "src/game.js"
+    ],
+    "after-observed": [
+      "src/game.js"
+    ]
+  },
+  "stateHashMethod": "SHA-256 of complete JSON.stringify(state), using deterministic engine property order; no key sorting or state fields omitted.",
+  "checksIdentical": true,
+  "summaryIdentical": true,
+  "pairedAggregatesIdentical": true,
+  "all32PerRunRecordsIdentical": true,
+  "perRunOutcomeMatches": 32,
+  "perRunFullStateHashMatches": 32,
+  "rows": [
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "69b981faa6b2582742beb9cecfe0ca82100ffb430105813fd028fb3cd6e1de9d",
+      "correctedFinalStateSha256": "69b981faa6b2582742beb9cecfe0ca82100ffb430105813fd028fb3cd6e1de9d"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "correctedFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "47ad12f4a87103141acc8a40f7370959a7e964a2da316acaafeed8173e8bd997",
+      "correctedFinalStateSha256": "47ad12f4a87103141acc8a40f7370959a7e964a2da316acaafeed8173e8bd997"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "correctedFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "correctedFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "f29c031aa9872ab955142a830caebb57c140048295529b5108f13dd04942bdde",
+      "correctedFinalStateSha256": "f29c031aa9872ab955142a830caebb57c140048295529b5108f13dd04942bdde"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "correctedFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e"
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "a7cc2e19213c32584adcd9a1647419d6551dffedf4642a076982b79cea112e91",
+      "correctedFinalStateSha256": "a7cc2e19213c32584adcd9a1647419d6551dffedf4642a076982b79cea112e91"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "c3e8484715765e36157d9cc04b07c636c0faf7a3ddfded4e2cd49115c99f3ca8",
+      "correctedFinalStateSha256": "c3e8484715765e36157d9cc04b07c636c0faf7a3ddfded4e2cd49115c99f3ca8"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1",
+      "correctedFinalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "e071fb697032cff42d8cd370f2150c4ff166816345e44961f36128e99e2b1ed5",
+      "correctedFinalStateSha256": "e071fb697032cff42d8cd370f2150c4ff166816345e44961f36128e99e2b1ed5"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "d1a26abacab5c3cda627924183ea8b7117aa0a594dbc5672b577083b1437969e",
+      "correctedFinalStateSha256": "d1a26abacab5c3cda627924183ea8b7117aa0a594dbc5672b577083b1437969e"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "correctedFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "1bab1bc30ad8885d0c60ac6168377f217234b1c2d2e3d609a9554523dba8d7f0",
+      "correctedFinalStateSha256": "1bab1bc30ad8885d0c60ac6168377f217234b1c2d2e3d609a9554523dba8d7f0"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "adcf4005340d6c39b60bfb5b62143e7158a6a958d456ab84fb2df2e3491ab277",
+      "correctedFinalStateSha256": "adcf4005340d6c39b60bfb5b62143e7158a6a958d456ab84fb2df2e3491ab277"
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4",
+      "correctedFinalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "correctedFinalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "correctedFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016",
+      "correctedFinalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "correctedFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "correctedFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "correctedFinalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "correctedFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "correctedFinalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "correctedFinalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1",
+      "correctedFinalStateSha256": "381df2fb65790862ac8133b333c3abba7cb84aa9632be12c5fcb7028667e44c1"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "d7e03d54f3fc64d64148f9f3c60583fd6da44c7c843ce0cf2b6f9e40df974ef6",
+      "correctedFinalStateSha256": "d7e03d54f3fc64d64148f9f3c60583fd6da44c7c843ce0cf2b6f9e40df974ef6"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "a969c62fda3d30b5a692ff54dedd538c309ac21c029ad5ce128e60ddb4b760ea",
+      "correctedFinalStateSha256": "a969c62fda3d30b5a692ff54dedd538c309ac21c029ad5ce128e60ddb4b760ea"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "correctedFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "d9939272d20fa09d151228856b46b1f0a972b76d525b94a7fea1c04d1209e75b",
+      "correctedFinalStateSha256": "d9939272d20fa09d151228856b46b1f0a972b76d525b94a7fea1c04d1209e75b"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "e56c45e2405e4a528e06cbdb00b3f992123ba1f0d80b4cb9a28b3564e3c097ca",
+      "correctedFinalStateSha256": "e56c45e2405e4a528e06cbdb00b3f992123ba1f0d80b4cb9a28b3564e3c097ca"
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "allPerRunFieldsIdentical": true,
+      "changedFields": [],
+      "outcomeIdentical": true,
+      "finalStateHashIdentical": true,
+      "beforeFinalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4",
+      "correctedFinalStateSha256": "29e82af0c9dfcd27b23b7b7fce324536062ccf59aed6f9f8a653881d9b3ca8a4"
+    }
+  ],
+  "supersededArtifacts": {
+    "folder": "/tmp/asterion-stage14-comparison-superseded-705b612",
+    "resultsSha256": "5424c6e4179776d7936ddca2ee8cdee4c0cdf070ac8c48cdf6f812b4b894e79e",
+    "runnerSha256": "416630fcc2661ffda50a5f1e49c05e8fb34662d71e74df82e03ef91d45285d5b",
+    "manifestSha256": "ba8a9604db6f19b6234905d7fa46979a13cbea5ffaa133632c587fbe20f29725"
+  },
+  "correctedArtifacts": {
+    "resultsSha256": "06c8ea2b009b55380f4ebf22ff21e23dfb442c6c29ecd27fcaba2de474eebff6",
+    "runnerSha256": "4780a016b73164220c34fa04977e30df162b6b99f72be46426453edc4f80ddcd"
+  }
+}

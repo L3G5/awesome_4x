@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-10-28T23:00:01.334Z",
+  "review": "Stage14 independent AI/UI and comparison-method review",
+  "result": "No blocker found",
+  "aiFocusedTests": {
+    "passed": 12,
+    "total": 12
+  },
+  "browserChecks": 7,
+  "sourcePhases": {
+    "initialFive": "results.json",
+    "postFocusFixTwo": "report-focus-results.json",
+    "exactOnlyDifferenceInInitialTrackedSources": "src/main.js: combat-report initial focus changes from bottom primary to fixed close button with preventScroll. Reversing precisely that line reproduces the saved initial main.js SHA256; all other tracked files match."
+  },
+  "finalSourceHashes": {
+    "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+    "src/defense-ui.js": "189300142e6300ebff2fd35bec87d715fc6ed92024e7b50086305fbc07fdafdd",
+    "src/main.js": "0621f82a989472f167fba81b97635740d2ff75e0998493c877c9d793fb8b3489",
+    "src/report-ui.js": "1a9492ed2aa38df7e58149e6f3fcc48f486e5e2604748893401797c37a03a926",
+    "src/combat-ui.js": "4785857d35f2c1e86a42e9a07351de33851b7980359bc1bcfe8d44f0ec6d9e21",
+    "src/combat-preview.js": "c9a02e5ec95dcc0e7ab93292a93bcca84376236a6ed4ad12290ad327e54cab77",
+    "src/fleet-ui.js": "85b5120a6f3d2722344831971309a0cff0fefb596700433323ef4131fd74ece3",
+    "src/defense.css": "2418dc62f04b734511216cce67d37de400473f84648fe00bebc5140f55b1589e",
+    "src/game.js": "f033470fd4baf953dd60189115733c639ddb0d97e0ba43ccd0bee604f30065ad",
+    "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a"
+  },
+  "comparisonAudit": "comparison-audit.json",
+  "cohortRerun": false
+}

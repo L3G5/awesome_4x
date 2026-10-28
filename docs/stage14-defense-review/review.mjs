@@ -1,0 +1,35 @@
+import {chromium} from '/home/leg/projects/awesome_4x/node_modules/@playwright/test/index.mjs';
+import {createGame,command,getNeighbors,validateSave} from '/tmp/asterion-stage14-defense/src/game.js';
+import assert from 'node:assert/strict';import fs from'node:fs';import{createHash}from'node:crypto';
+const out='/tmp/asterion-stage14-independent-review',results={checks:[],errors:[]};
+const browser=await chromium.launch({executablePath:'/home/leg/.cache/ms-playwright/chromium-1223/chrome-linux64/chrome',args:['--no-sandbox','--enable-unsafe-swiftshader']});
+async function load(state,width=1280){assert.equal(validateSave(state),true);const page=await browser.newPage({viewport:{width,height:width===390?844:800},reducedMotion:'reduce'});page.on('pageerror',e=>results.errors.push(e.message));await page.addInitScript(s=>{if(!localStorage.getItem('independent-initialized')){localStorage.setItem('asterion-reach-save-v1',JSON.stringify(s));localStorage.setItem('independent-initialized','true');}},state);await page.goto('http://127.0.0.1:5194/');await page.locator('#inspector').waitFor();return page;}
+const snapshot=p=>p.evaluate(()=>window.__asterion.getState());
+for(const width of[1280,390]){
+ const s=createGame('defense-independent-ui'),f=s.fleets.find(f=>f.owner==='player'&&f.type==='frigate');s.factions[0].orders=1;f.movesLeft=0;f.hold=true;
+ const page=await load(s,width);await page.locator(`#inspector [data-fleet="${f.id}"]`).click();assert.deepEqual(await snapshot(page),s);
+ const control=page.locator('[data-action="defense-lead-toggle"]');assert.match(await control.innerText(),/Lead defense · 1 order/);await control.focus();await page.keyboard.press('Enter');
+ const expected=structuredClone(s);assert.equal(command(expected,{type:'leadDefense',fleetId:f.id}).ok,true);assert.deepEqual(await snapshot(page),expected);assert.equal(await control.isDisabled(),true);
+ const focused=await page.evaluate(()=>({tag:document.activeElement.tagName,fleet:document.activeElement.dataset.fleet,disabled:document.activeElement.disabled}));assert.deepEqual(focused,{tag:'BUTTON',fleet:f.id,disabled:false});
+ const first=await page.locator('#inspector .fleet-row').first().getAttribute('data-fleet');assert.equal(first,f.id);
+ assert.match(await page.locator('.defense-controls').innerText(),/A surviving attacker can still reach later defenders/);assert.equal(await page.locator(`#inspector [data-fleet="${f.id}"] .defense-badge`).count(),1);
+ await page.locator('.defense-controls').scrollIntoViewIfNeeded();await page.screenshot({path:out+`/last-order-${width}.png`});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+ await page.reload();assert.deepEqual(await snapshot(page),expected);await page.locator('[data-page="empire"]').click();assert.equal(await page.locator(`#workspace-page [data-fleet="${f.id}"] .defense-badge`).count(),1);assert.deepEqual(await snapshot(page),expected);
+ await page.locator('[data-page="galaxy"]').click();await page.locator('[data-action="fleet-roster"]').click();assert.equal(await page.locator(`.modal [data-fleet="${f.id}"] .defense-badge`).count(),1);assert.deepEqual(await snapshot(page),expected);
+ results.checks.push({name:`Last-order keyboard assignment, reload and read-only Empire/roster ${width}`,focused,first});await page.close();
+}
+{
+ const base=createGame('defense-independent-fog'),own=base.fleets.find(f=>f.owner==='player'&&f.type==='frigate'),enemy=base.fleets.find(f=>f.owner==='veyr'&&f.type==='frigate'),target=getNeighbors(base,own.systemId)[0];
+ for(const[a,b]of[['player','veyr'],['veyr','player']]){const f=base.factions.find(f=>f.id===a);f.contacts.push(b);f.relations[b].status='war';}enemy.systemId=target;
+ const changed=structuredClone(base),hidden=changed.fleets.find(f=>f.id===enemy.id);hidden.defenseLead=true;hidden.name='Unseen lead';hidden.hp=408;hidden.ships=12;
+ const rendered=[];
+ for(const s of[base,changed]){const p=await load(s);await p.locator(`#inspector [data-fleet="${own.id}"]`).click();await p.locator(`[data-system-select="${target}"]`).click();assert.deepEqual(await snapshot(p),s);rendered.push({inspector:await p.locator('#inspector').innerText(),fleetbar:await p.locator('#fleet-bar').innerText(),badges:await p.locator('.defense-badge').count()});await p.close();}
+ assert.deepEqual(rendered[0],rendered[1]);assert.equal(rendered[0].badges,0);assert.match(rendered[0].inspector,/Fleet presence unknown/);results.checks.push({name:'Hidden lead/name/strength changes leave target inspector and command bar identical',target,badges:0});
+ const visible=structuredClone(changed);visible.fleets.find(f=>f.id===enemy.id).systemId=own.systemId;const p=await load(visible);await p.locator(`#inspector [data-fleet="${own.id}"]`).click();assert.equal(await p.locator(`#inspector [data-fleet="${enemy.id}"]`).isDisabled(),true);assert.equal(await p.locator(`#inspector [data-fleet="${enemy.id}"] .defense-badge`).count(),1);assert.equal(await p.locator(`.engagement-order [data-opponent-id="${enemy.id}"] .defense-badge`).count(),1);assert.deepEqual(await snapshot(p),visible);results.checks.push({name:'Locally observed foreign lead appears without an actionable foreign control'});await p.close();
+}
+{
+ const s=createGame('defense-independent-history'),a=s.fleets.find(f=>f.owner==='player'&&f.type==='frigate'),d=s.fleets.find(f=>f.owner==='veyr'&&f.type==='frigate');
+ for(const[x,y]of[['player','veyr'],['veyr','player']]){const f=s.factions.find(f=>f.id===x);f.contacts.push(y);f.relations[y].status='war';}a.ships=4;a.hp=136;d.systemId=a.systemId;assert.equal(command(s,{type:'leadDefense',fleetId:d.id,factionId:'veyr'}).ok,true);const result=command(s,{type:'attack',fleetId:a.id});assert.equal(result.ok,true);const saved=result.combatReports[0];assert.equal(saved.participants[1].defenseLead,true);s.fleets=s.fleets.filter(f=>f.id!==d.id);
+ const p=await load(s);await p.locator('[data-page="journal"]').click();await p.locator(`[data-action="combat-report"][data-report="${saved.id}"]`).click();assert.equal(await p.locator('.combat-side[data-owner="veyr"] .defense-badge').innerText(),'Lead defender');assert.equal(await p.locator('.combat-side[data-owner="player"] .defense-badge').count(),0);assert.deepEqual(await snapshot(p),s);await p.screenshot({path:out+'/historical-defender.png'});results.checks.push({name:'Report marker remains historical after the live defender is gone'});await p.close();
+}
+assert.deepEqual(results.errors,[]);await browser.close();results.sourceHashes=Object.fromEntries(['src/ai.js','src/defense.js','src/defense-ui.js','src/main.js','src/report-ui.js'].map(f=>[f,createHash('sha256').update(fs.readFileSync('/tmp/asterion-stage14-defense/'+f)).digest('hex')]));results.method='Independent AI source review +12 focused AI regressions and five browser checks using labeled synthetic fixtures on dev5194. No campaign cohort repeated; no source edits.';fs.writeFileSync(out+'/results.json',JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify({checks:results.checks.length,errors:results.errors,passed:true}));

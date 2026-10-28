@@ -1,0 +1,29 @@
+{
+  "method": "One additional synthetic0.01HP military-versus-zero-fire-Ark UI boundary check on dev5194 after engine5170cbc and tiny-hull formatter. Previous7browserchecks preserved separately; no campaign rerun.",
+  "hullText": "Hull <0.1 → <0.1\nSurvived",
+  "exactOrdinaryCommand": true,
+  "saveValid": true,
+  "exactReload": true,
+  "chronicleReopenUnchanged": true,
+  "pageErrors": [],
+  "earlierSourceDifferences": [
+    "src/report-ui.js",
+    "src/game.js"
+  ],
+  "reportDifferenceOnlyTinyFormatter": true,
+  "finalSourceHashes": {
+    "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+    "src/defense-ui.js": "189300142e6300ebff2fd35bec87d715fc6ed92024e7b50086305fbc07fdafdd",
+    "src/main.js": "0621f82a989472f167fba81b97635740d2ff75e0998493c877c9d793fb8b3489",
+    "src/report-ui.js": "4cc33383baf8fffc13188f8e9cf12b6d3da9797aaea51e3faa00366ad2789bc2",
+    "src/combat-ui.js": "4785857d35f2c1e86a42e9a07351de33851b7980359bc1bcfe8d44f0ec6d9e21",
+    "src/combat-preview.js": "c9a02e5ec95dcc0e7ab93292a93bcca84376236a6ed4ad12290ad327e54cab77",
+    "src/fleet-ui.js": "85b5120a6f3d2722344831971309a0cff0fefb596700433323ef4131fd74ece3",
+    "src/defense.css": "2418dc62f04b734511216cce67d37de400473f84648fe00bebc5140f55b1589e",
+    "src/game.js": "4151fb7d296180706ddce706c713f4d8e0e22d845d0fea81ce564262958d3417",
+    "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a"
+  },
+  "passed": true
+}

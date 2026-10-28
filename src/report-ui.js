@@ -1,7 +1,7 @@
 import { FACTIONS, SHIPS } from './content.js';
 import { renderShipPortrait } from './ship-ui.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const amount = n => Number.isInteger(n) ? n : n.toFixed(1);
+const amount = n => n>0&&Math.round(n*10)===0 ? '&lt;0.1' : Number.isInteger(n) ? n : n.toFixed(1);
 
 export function renderCombatReports(state, reports) {
   const first = reports[0], location = state.systems.find(s => s.id === first.systemId);
@@ -11,7 +11,7 @@ export function renderCombatReports(state, reports) {
     html += `<section class="combat-report" data-report-id="${report.id}"><p class="combat-summary">${escape(report.summary)}</p><div class="combat-sides">`;
     for (const participant of report.participants) {
       const lost = participant.shipsBefore - participant.shipsAfter;
-      html += `<article class="combat-side" data-owner="${participant.owner}" style="--side-color:${FACTIONS[participant.owner].color}"><div class="eyebrow">${escape(FACTIONS[participant.owner].shortName)} · ${participant.role}</div><div class="combat-fleet-art">${renderShipPortrait(participant.type,participant.owner)}</div><div class="combat-fleet-heading"><div><h3>${escape(participant.name)}</h3><p>${SHIPS[participant.type].role} formation</p></div></div><div class="combat-numbers"><div><strong>${participant.shipsBefore} <span>→</span> ${participant.shipsAfter}</strong><small>Ships remaining</small></div><div><strong class="${lost ? 'loss' : ''}">${lost}</strong><small>Ships lost</small></div></div><div class="combat-hull"><span>Hull ${amount(participant.hullBefore)} → ${amount(participant.hullAfter)}</span><b>${participant.shipsAfter ? 'Survived' : 'Destroyed'}</b></div><div class="progress-track"><i style="width:${participant.hullAfter / participant.hullBefore * 100}%;background:var(--side-color)"></i></div></article>`;
+      html += `<article class="combat-side" data-owner="${participant.owner}" style="--side-color:${FACTIONS[participant.owner].color}"><div class="eyebrow">${escape(FACTIONS[participant.owner].shortName)} · ${participant.role}</div>${participant.defenseLead?'<span class="defense-badge">Lead defender</span>':''}<div class="combat-fleet-art">${renderShipPortrait(participant.type,participant.owner)}</div><div class="combat-fleet-heading"><div><h3>${escape(participant.name)}</h3><p>${SHIPS[participant.type].role} formation</p></div></div><div class="combat-numbers"><div><strong>${participant.shipsBefore} <span>→</span> ${participant.shipsAfter}</strong><small>Ships remaining</small></div><div><strong class="${lost ? 'loss' : ''}">${lost}</strong><small>Ships lost</small></div></div><div class="combat-hull"><span>Hull ${amount(participant.hullBefore)} → ${amount(participant.hullAfter)}</span><b>${participant.shipsAfter ? 'Survived' : 'Destroyed'}</b></div><div class="progress-track"><i style="width:${participant.hullAfter / participant.hullBefore * 100}%;background:var(--side-color)"></i></div></article>`;
     }
     if (report.invasion) {
       const invasion = report.invasion;

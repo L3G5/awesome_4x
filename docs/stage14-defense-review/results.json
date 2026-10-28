@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "name": "Last-order keyboard assignment, reload and read-only Empire/roster 1280",
+      "focused": {
+        "tag": "BUTTON",
+        "fleet": "f3",
+        "disabled": false
+      },
+      "first": "f3"
+    },
+    {
+      "name": "Last-order keyboard assignment, reload and read-only Empire/roster 390",
+      "focused": {
+        "tag": "BUTTON",
+        "fleet": "f3",
+        "disabled": false
+      },
+      "first": "f3"
+    },
+    {
+      "name": "Hidden lead/name/strength changes leave target inspector and command bar identical",
+      "target": "s20",
+      "badges": 0
+    },
+    {
+      "name": "Locally observed foreign lead appears without an actionable foreign control"
+    },
+    {
+      "name": "Report marker remains historical after the live defender is gone"
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+    "src/defense-ui.js": "189300142e6300ebff2fd35bec87d715fc6ed92024e7b50086305fbc07fdafdd",
+    "src/main.js": "80b76a54efaad8b06fe59b5c277c4c8c095c9e9264ee0105121ec342c71e788f",
+    "src/report-ui.js": "1a9492ed2aa38df7e58149e6f3fcc48f486e5e2604748893401797c37a03a926"
+  },
+  "method": "Independent AI source review +12 focused AI regressions and five browser checks using labeled synthetic fixtures on dev5194. No campaign cohort repeated; no source edits."
+}

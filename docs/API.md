@@ -51,6 +51,7 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 | `merge` | `fleetId`, `targetFleetId` | Combine same-type colocated ships; max 12, no colony arks |
 | `split` | `fleetId`, `ships` | Detach 1–N−1 ships for one order; returns `newFleetId`; no colony arks |
 | `hold` / `resume` | `fleetId` | Free advisory acknowledgement; no movement, order, resource or combat effect |
+| `leadDefense` / `clearDefenseLead` | `fleetId` | Assign/clear one military defensive lead per owner/system; one order for a change, no move/resources; redundant commands are free no-ops |
 | `repair` | `fleetId` | Repair up to 24 HP at friendly colony for 10 minerals |
 | `endTurn` | none | Advance turn |
 
@@ -338,3 +339,17 @@ Optional `faction.strategy.expedition={fleetId,targetId,systemId}` keeps a feasi
 `getDefenseOrder(state,systemId,factionId='player')` returns copied own formation snapshots in current engine order, including civilian ships. Hold, movement and UI sorting do not change that order. One selected attacker fights each hostile formation in sequence for up to four rounds each, continuing while alive even if the previous defender also survives. Other friendly formations do not join that attack. A destroyed attacker never reaches later listed opponents. No new combat or save rules are introduced.
 
 Discovery options now include `effectsPreview`, null without current interaction access and otherwise an object containing applicable `population` and/or `habitability` projections. Population is `{amount,systemId,systemName,before,after,capacity,overCapacity}`. An unavailable owned capital yields amount0 and null context fields, with `overCapacity:false`; no foreign population or capacity is exposed. Capacity comes from the shared colony yield. Refugee arrival can exceed natural-growth capacity and retains the original cost, eligibility and reward rules. Habitability is `{amount,before,after}` with the existing100% cap. Neither preview is persisted. AI uses the attainable population amount when valuing the choice, avoiding a population bonus when no owned capital can receive it. Echo previews do not count unseen stars.
+
+## Defensive leads
+
+Optional `fleet.defenseLead` is boolean; only a military formation may have `true`, and at most one true lead may exist per owner/system. Older saves omit it and retain their original ordering. `validateDefenseState`, called by `validateSave`, rejects malformed types, civilian true leads and duplicate assignments. Explicit false is harmless.
+
+`getDefenseLeadPreview(state,fleetId,factionId='player')`, also exported from `game.js`, returns null for missing, foreign or civilian selections. Otherwise it returns `{lead,currentLeadId,assign:{enabled,reason,orders},clear:{enabled,reason,orders}}`. Actual assignment/reassignment/clearing costs one order, no movement/resources/RNG. Assigning the existing lead or clearing a nonlead returns an exact free no-op, including at zero orders. Ended campaigns and eliminated empires still reject. Assigning clears the former lead for that owner/system; invalid commands are atomic.
+
+`orderDefenders(fleets)` returns a new array containing existing fleet references. It promotes each lead only within that owner/system's original positions, preserving the interleaving of other governments and never reordering `state.fleets`. Both actual move/attack loops and observer-safe previews use it. `getDefenseOrder` now reflects the same own-government order. Locally observed formation snapshots include optional `defenseLead:true`; unobserved fleets remain absent.
+
+Physical departure clears the assignment, including ordinary/route movement and diplomatic withdrawal. Failed movement and an interception that retains the origin preserve it. Hold/Resume, repairs, route plotting/clearing and local attacks preserve it while the formation survives. Split retains the original lead and gives none to the child; merge transfers it to the survivor if either input was lead. Reordering grants no damage bonus, combined fire or extra attack.
+
+Actual defender snapshots add optional `participant.defenseLead:true` only when the military formation led at the time of that engagement. Validation rejects this marker on attackers, civilians or with a value other than true. Old reports stay unchanged; later reassignment or fleet destruction does not rewrite history.
+
+AI performs one optional assignment at the end of its ordinary turn, after existing military, civilian, discovery and economic work. It uses a remaining order through the normal command, retains an existing lead, and skips a candidate already naturally first. Candidate ranking uses current owned hull, existing strength and stable IDs; group priority uses observed local enemies/hostile sovereignty, Ark protection, then other co-located groups. This is a bounded preparation heuristic, not an optimal casualty forecast. The controlled cohort freezes the player policy without defensive-lead commands to isolate rival adoption.

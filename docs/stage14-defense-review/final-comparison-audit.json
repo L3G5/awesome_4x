@@ -1,0 +1,34 @@
+{
+  "method": "Independent read-only final method, artifact/source hash and exact old/new per-run audit. No campaign rerun. Corrected results replace the same32 configurations; not pooled with superseded results.",
+  "engineRevision": "5170cbc84f91d8a0d59d2d6362fe8cc3e268b129",
+  "supersededEngineRevision": "705b6127ef1eaa9a29e941e02428b1ceb7c895ae",
+  "runnerSha256": "4780a016b73164220c34fa04977e30df162b6b99f72be46426453edc4f80ddcd",
+  "verifiedArtifactHashes": 12,
+  "verifiedRawSourceHashes": 30,
+  "runnerChangesOnlyPinAndLabel": true,
+  "rawVariantDifference": [
+    "src/ai.js"
+  ],
+  "crossEngineSourceChangesOnly": [
+    "src/game.js"
+  ],
+  "exactPerRunMatches": 32,
+  "exactFinalStateHashMatches": 32,
+  "allMetricsAndAggregatesMatch": true,
+  "checks": {
+    "measuredConfigurations": 32,
+    "completeRawValidationReplays": 32,
+    "measuredCompletedCycles": 2240,
+    "measuredStateChecks": 2272,
+    "rawStateChecks": 2272,
+    "jsonReloadNextRoundChecks": 96,
+    "fullFinalStateObserverEqualityChecks": 32,
+    "pairedRoundObserverEqualityChecks": 2240,
+    "invalidStates": 0,
+    "negativeBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "paidAssignments": 158,
+  "markedDefenderDuels": 5,
+  "passed": true
+}

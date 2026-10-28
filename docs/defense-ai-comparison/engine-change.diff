@@ -1,0 +1,13 @@
+diff --git a/src/game.js b/src/game.js
+index e7acefb..915650e 100644
+--- a/src/game.js
++++ b/src/game.js
+@@ -257,6 +257,8 @@ export function estimateInvasion(state, fleetId) {
+ function atWar(state, a, b) { return a !== b && factionOf(state, a).relations[b]?.status === 'war'; }
+ 
+ function damage(state, fleet, amount) {
++  // Zero fire cannot round fractional legacy hull or normalize a merged fleet.
++  if (amount === 0) return;
+   const shield = has(factionOf(state, fleet.owner), 'shields') ? .8 : 1;
+   fleet.hp = Math.max(0, round(fleet.hp - amount * shield));
+   fleet.ships = Math.ceil(fleet.hp / SHIPS[fleet.type].hp);

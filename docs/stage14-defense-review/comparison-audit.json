@@ -1,0 +1,27 @@
+{
+  "method": "Read-only script/methodology/source-fingerprint and result-denominator audit; no campaigns rerun.",
+  "engineRevision": "705b6127ef1eaa9a29e941e02428b1ceb7c895ae",
+  "scriptSha256": "416630fcc2661ffda50a5f1e49c05e8fb34662d71e74df82e03ef91d45285d5b",
+  "rawSourceFingerprintsVerified": 30,
+  "onlyRawDifference": [
+    "src/ai.js"
+  ],
+  "configurations": 32,
+  "assignments": 158,
+  "leadDefenderDuels": 5,
+  "changedWinners": 1,
+  "checks": {
+    "measuredConfigurations": 32,
+    "completeRawValidationReplays": 32,
+    "measuredCompletedCycles": 2240,
+    "measuredStateChecks": 2272,
+    "rawStateChecks": 2272,
+    "jsonReloadNextRoundChecks": 96,
+    "fullFinalStateObserverEqualityChecks": 32,
+    "pairedRoundObserverEqualityChecks": 2240,
+    "invalidStates": 0,
+    "negativeBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "passed": true
+}
