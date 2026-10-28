@@ -8,11 +8,13 @@ import { getAlignmentStatus, advanceAlignment, revealPublicBeacons, validateAlig
 import { getRoutePreview, continuePlannedRoute, updateRouteAfterMove, reconcileRoutes, validateNavigationState } from './navigation.js';
 import { placeDiscoveries, observeDiscovery, observeDiscoveries, getDiscoveryBuildReason, recordDiscoveryConstruction, executeDiscovery, mergeDiscoveryHeritage, advanceDiscoveries, validateDiscoveryState } from './discoveries.js';
 import { recordSovereigntyTransfer, validatePublicAffairsState } from './public-affairs.js';
+import { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getOrderCapacity, getOrderChange } from './development.js';
 export { getRoutePreview, getRouteStatus } from './navigation.js';
 export { getPublicRelationships, getPublicDispatches, getKnownTransfers } from './public-affairs.js';
+export { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -471,6 +473,24 @@ export function command(state, action) {
       result = { ...success(summary), combatReports: report ? [report] : [] };
       break;
     }
+    case 'split': {
+      if (!Number.isInteger(action.ships)) return fail('Detach a whole number of ships, leaving at least one in the original fleet.');
+      const preview = getSplitPreview(state, action.fleetId, action.ships, factionId);
+      if (!preview.enabled) return fail(preview.reason);
+      state.nextFleetId = preview.nextFleetNumber;
+      const detached = makeFleet(state, factionId, fleet.systemId, fleet.type, preview.detached.ships);
+      detached.hp = preview.detached.hp;
+      detached.movesLeft = preview.detached.movesLeft;
+      if (fleet.heritage !== undefined) {
+        fleet.heritage = structuredClone(fleet.heritage);
+        detached.heritage = structuredClone(fleet.heritage);
+      }
+      fleet.ships = preview.parent.ships;
+      fleet.hp = preview.parent.hp;
+      faction.orders--;
+      result = { ...success(`${detached.ships} ship${detached.ships === 1 ? '' : 's'} detached as ${detached.name}.`), newFleetId: detached.id };
+      break;
+    }
     case 'merge': {
       const other = fleetOf(state, action.targetFleetId);
       if (!fleet || !other || other.id === fleet.id || other.owner !== factionId || other.type !== fleet.type || other.systemId !== fleet.systemId) return fail('Select two of your same-type fleets in the same system.');
@@ -587,9 +607,11 @@ export function endTurn(state) {
   }
   advanceDiscoveries(state);
   for (const fleet of state.fleets) {
-    const system = systemOf(state, fleet.systemId), faction = factionOf(state, fleet.owner);
+    const faction = factionOf(state, fleet.owner);
     fleet.movesLeft = SHIPS[fleet.type].moves + (has(faction, 'command') && SHIPS[fleet.type].attack > 3 ? 1 : 0);
-    if (system.owner === fleet.owner && !getVisibleFleets(state, fleet.owner, system.id).some(f => atWar(state, fleet.owner, f.owner))) fleet.hp = Math.min(fleet.ships * SHIPS[fleet.type].hp, fleet.hp + (system.buildings.includes('shipyard') ? 8 : 4) + getCharterBonuses(system).repair);
+  }
+  for (const system of state.systems.filter(candidate => candidate.owner)) {
+    for (const repair of getColonyRepairForecast(state, system.id).fleets) fleetOf(state, repair.fleetId).hp = repair.hpAfter;
   }
   for (const faction of state.factions) faction.orders = faction.eliminated ? 0 : getEmpireStats(state, faction.id).maxOrders;
   advanceAlignment(state);
