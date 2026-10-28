@@ -273,13 +273,34 @@ function decommissionShip(state, fleet) {
   else fleet.hp = Math.min(fleet.hp, fleet.ships * SHIPS[fleet.type].hp);
 }
 
+function captureRoundSide(state, fleet, firepower, rawHit) {
+  const faction = factionOf(state, fleet.owner);
+  return {
+    shipsBefore: fleet.ships, hullBefore: fleet.hp,
+    shipsAfter: fleet.ships, hullAfter: fleet.hp,
+    firepower, rawHit,
+    weaponsFactor: has(faction, 'weapons') ? 1.25 : 1,
+    factionFactor: fleet.owner === 'khar' ? 1.15 : 1,
+    shieldFactor: has(faction, 'shields') ? .8 : 1,
+  };
+}
+
 function battle(state, attacker, defender) {
   delete attacker.hold; delete defender.hold;
   const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');
+  const rounds = attacker.owner === 'player' || defender.owner === 'player' ? [] : null;
   for (let roundIndex = 0; roundIndex < 4 && attacker.hp > 0 && defender.hp > 0; roundIndex++) {
-    const aHit = fleetPower(state, attacker) * (.85 + random(state) * .3);
-    const dHit = fleetPower(state, defender) * (.85 + random(state) * .3);
+    const aPower = fleetPower(state, attacker);
+    const aHit = aPower * (.85 + random(state) * .3);
+    const dPower = fleetPower(state, defender);
+    const dHit = dPower * (.85 + random(state) * .3);
+    const exchange = rounds && { number: roundIndex + 1, attacker: captureRoundSide(state, attacker, aPower, aHit), defender: captureRoundSide(state, defender, dPower, dHit) };
     damage(state, attacker, dHit); damage(state, defender, aHit);
+    if (exchange) {
+      exchange.attacker.shipsAfter = attacker.ships; exchange.attacker.hullAfter = attacker.hp;
+      exchange.defender.shipsAfter = defender.ships; exchange.defender.hullAfter = defender.hp;
+      rounds.push(exchange);
+    }
     if (aHit === 0 && dHit === 0) break;
   }
   if (attacker.owner === 'player' || defender.owner === 'player') {
@@ -288,7 +309,7 @@ function battle(state, attacker, defender) {
     const casualties = participants.map(p => `${FACTIONS[p.owner].shortName} lost ${p.shipsBefore - p.shipsAfter} ship${p.shipsBefore - p.shipsAfter === 1 ? '' : 's'} and ${round(p.hullBefore - p.hullAfter)} hull`).join('; ');
     const ending = outcome === 'mutual-destruction' ? 'Both fleets destroyed.' : outcome === 'attacker-destroyed' ? 'Attacking fleet destroyed.' : outcome === 'defender-destroyed' ? 'Attacking fleet survives; defending fleet destroyed.' : 'Both fleets survive in orbit.';
     const summary = `Battle at ${systemOf(state, attacker.systemId).name}: ${casualties}. ${ending}`;
-    const report = appendCombatReport(state, { kind: 'fleet', systemId: attacker.systemId, participants, outcome, summary });
+    const report = appendCombatReport(state, { kind: 'fleet', systemId: attacker.systemId, participants, outcome, summary, rounds });
     record(state, summary, 'combat', null, { systemId: attacker.systemId, reportId: report.id });
     return report;
   }

@@ -100,7 +100,7 @@ test('positive-hit combat retains the exact pre-fix results with and without shi
     assert.equal(state.rng, 1333619698);
     assert.equal(state.factions[0].orders, 5);
     assert.equal(attacker.movesLeft, 0);
-    assert.deepEqual(result.combatReports, [{
+    assert.deepEqual(result.combatReports.map(({ rounds, ...report }) => report), [{
       kind: 'fleet', systemId: 's0',
       participants: [
         { role: 'attacker', fleetId: 'f3', owner: 'player', name: 'Vanguard 3', type: 'frigate', shipsBefore: 3, hullBefore: 83.06, shipsAfter: 1, hullAfter: shielded ? 32.5 : 33.2 },

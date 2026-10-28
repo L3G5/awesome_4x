@@ -50,6 +50,39 @@ export function summarizeCombatReports(reports) {
   return reports.map(report => report.summary).join(' ');
 }
 
+const ROUND_SIDE_FIELDS = ['shipsBefore', 'hullBefore', 'shipsAfter', 'hullAfter', 'firepower', 'rawHit', 'weaponsFactor', 'factionFactor', 'shieldFactor'];
+
+/** Trace arithmetic uses its saved modifiers, never a government's live research. */
+function validateCombatRounds(report) {
+  if (report.rounds === undefined) return true;
+  if (report.kind !== 'fleet' || !Array.isArray(report.rounds) || report.rounds.length < 1 || report.rounds.length > 4 || SHIPS[report.participants[0].type].attack < 4) return false;
+  for (const [index, exchange] of report.rounds.entries()) {
+    if (!exchange || typeof exchange !== 'object' || Object.keys(exchange).length !== 3 || exchange.number !== index + 1 || !exchange.attacker || !exchange.defender) return false;
+    for (const [participantIndex, role] of ['attacker', 'defender'].entries()) {
+      const side = exchange[role], opponent = exchange[role === 'attacker' ? 'defender' : 'attacker'];
+      const participant = report.participants[participantIndex], ship = SHIPS[participant.type];
+      if (typeof side !== 'object' || Object.keys(side).length !== ROUND_SIDE_FIELDS.length || !ROUND_SIDE_FIELDS.every(field => Object.hasOwn(side, field) && Number.isFinite(side[field]))) return false;
+      if (!Number.isInteger(side.shipsBefore) || side.shipsBefore < 1 || side.shipsBefore > 12 || !Number.isInteger(side.shipsAfter) || side.shipsAfter < 0 || side.shipsAfter > side.shipsBefore || side.hullBefore <= 0 || side.hullBefore > side.shipsBefore * ship.hp || side.hullAfter < 0 || side.hullAfter > side.hullBefore || side.hullAfter > side.shipsAfter * ship.hp) return false;
+      if (![1, 1.25].includes(side.weaponsFactor) || side.factionFactor !== (participant.owner === 'khar' ? 1.15 : 1) || ![1, .8].includes(side.shieldFactor)) return false;
+      const first = report.rounds[0][role];
+      if (['weaponsFactor', 'factionFactor', 'shieldFactor'].some(field => side[field] !== first[field])) return false;
+      const maximumRoll = side.firepower * (.85 + (4294967295 / 4294967296) * .3);
+      if (side.firepower !== ship.attack * side.shipsBefore * side.weaponsFactor * side.factionFactor || side.rawHit < side.firepower * .85 || side.rawHit > maximumRoll) return false;
+      const previous = index ? report.rounds[index - 1][role] : participant;
+      if (side.shipsBefore !== previous[index ? 'shipsAfter' : 'shipsBefore'] || side.hullBefore !== previous[index ? 'hullAfter' : 'hullBefore']) return false;
+      // A zero volley is an exact no-op even for a legacy formation with
+      // sub-tenth hull or more explicit ships than its hull-derived count.
+      const hullAfter = opponent.rawHit === 0 ? side.hullBefore : Math.max(0, round(side.hullBefore - opponent.rawHit * side.shieldFactor));
+      const shipsAfter = opponent.rawHit === 0 ? side.shipsBefore : Math.ceil(hullAfter / ship.hp);
+      if (side.hullAfter !== hullAfter || side.shipsAfter !== shipsAfter) return false;
+      if (index === report.rounds.length - 1 && (side.shipsAfter !== participant.shipsAfter || side.hullAfter !== participant.hullAfter)) return false;
+    }
+    if (index < report.rounds.length - 1 && (exchange.attacker.hullAfter === 0 || exchange.defender.hullAfter === 0)) return false;
+  }
+  const last = report.rounds.at(-1);
+  return report.rounds.length === 4 || last.attacker.hullAfter === 0 || last.defender.hullAfter === 0;
+}
+
 /** Validate optional version-1 reporting fields without migrating old saves. */
 export function validateReportState(state) {
   try {
@@ -80,6 +113,7 @@ export function validateReportState(state) {
           if (!participant || participant.role !== (index === 0 ? 'attacker' : 'defender') || !/^f[1-9][0-9]*$/.test(participant.fleetId) || !factions.has(participant.owner) || !text(participant.name) || !hasContent(SHIPS, participant.type) || !positiveInt(participant.shipsBefore) || participant.shipsBefore > 12 || !Number.isInteger(participant.shipsAfter) || participant.shipsAfter < 0 || participant.shipsAfter > participant.shipsBefore || !Number.isFinite(participant.hullBefore) || participant.hullBefore <= 0 || participant.hullBefore > participant.shipsBefore * SHIPS[participant.type].hp || !nonnegative(participant.hullAfter) || participant.hullAfter > participant.hullBefore || participant.hullAfter > participant.shipsAfter * SHIPS[participant.type].hp || (participant.shipsAfter === 0) !== (participant.hullAfter === 0)) return false;
           if (participant.defenseLead !== undefined && (participant.defenseLead !== true || participant.role !== 'defender' || SHIPS[participant.type].attack < 4)) return false;
         }
+        if (!validateCombatRounds(report)) return false;
         const attacker = report.participants[0];
         if (report.kind === 'fleet') {
           const defender = report.participants[1];
