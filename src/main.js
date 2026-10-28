@@ -3,7 +3,9 @@ import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast } from './diplomacy.js';
 import { renderDiplomacyPage } from './diplomacy-ui.js';
-import { createGame, command, endTurn, getEmpireStats, getSystemYield, getVisibleSystems, getNeighbors, getBuildOptions, getResearchOptions, getVictoryProgress, fleetPower, estimateCombat, validateSave } from './game.js';
+import { renderCombatReports, renderBriefing } from './report-ui.js';
+import { planetImage } from './planet-art.js';
+import { createGame, command, endTurn, getEmpireStats, getSystemYield, getVisibleSystems, getNeighbors, getBuildOptions, getResearchOptions, getVictoryProgress, fleetPower, estimateCombat, estimateInvasion, getCombatReport, validateSave } from './game.js';
 import { FACTIONS, TECHS, BUILDINGS, SHIPS, ANOMALIES, PLANET_TYPES } from './content.js';
 
 const SAVE_KEY = 'asterion-reach-save-v1';
@@ -37,7 +39,7 @@ const systemById = id => state.systems.find(s => s.id === id);
 const fleetById = id => state.fleets.find(f => f.id === id);
 
 $('#app').innerHTML = `<div class="app-shell">
-  <header class="topbar"><div class="brand"><div class="brand-mark">${icon('mark',34)}</div><div><h1>ASTERION REACH</h1><small>THE STARS REMEMBER</small></div></div><div class="resources" id="resources"></div><div class="top-actions"><a href="./guide.html" target="_blank" rel="noopener" aria-label="Open field guide" title="Field guide (?)">${icon('help')}</a><button data-action="menu" aria-label="Game menu" title="Game menu">${icon('menu')}</button></div></header>
+  <header class="topbar"><div class="brand"><div class="brand-mark">${icon('mark',34)}</div><div><h1>ASTERION REACH</h1><small>THE STARS REMEMBER</small></div></div><div class="resources" id="resources"></div><div class="top-actions"><button data-action="briefing" id="briefing-button" aria-label="Latest cycle briefing" title="Latest cycle briefing">${icon('journal')}</button><a href="./guide.html" target="_blank" rel="noopener" aria-label="Open field guide" title="Field guide (?)">${icon('help')}</a><button data-action="menu" aria-label="Game menu" title="Game menu">${icon('menu')}</button></div></header>
   <nav class="rail" aria-label="Command views">${[['galaxy','Galaxy'],['research','Research'],['diplomacy','Diplomacy'],['empire','Empire'],['journal','Chronicle']].map(([id,label],i)=>`<button data-page="${id}" class="${id==='galaxy'?'active':''}" title="${label} (${i+1})">${icon(id)}<span>${label}</span></button>`).join('')}<div class="rail-bottom"><button data-action="home" title="Focus homeworld (H)">${icon('home')}<span>Home</span></button></div></nav>
   <main class="main-stage"><div class="galaxy-page" id="galaxy-page"><div class="map-canvas" id="galaxy" aria-label="Interactive galaxy map"></div><div class="map-heading"><div class="eyebrow">CONCORD EXPLORATION AUTHORITY</div><h2>The Asterion Reach</h2><p id="map-meta"></p></div><div class="map-tools"><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="zoom-out" aria-label="Zoom out">−</button><button data-action="reset-view" title="Fit galaxy" aria-label="Fit galaxy">⌖</button></div><div class="map-message" id="mandate"></div><div class="map-caption">PER ASPERA, AD ASTRA</div><div class="map-legend"><span><i></i>CONCORD</span><span><i style="background:#d9bd7c"></i>CHARTED</span><span><i style="background:#596a82"></i>UNKNOWN</span></div><div class="fleet-bar" id="fleet-bar"></div></div><div class="workspace-page" id="workspace-page" hidden></div></main>
   <aside class="inspector" aria-label="System inspector"><div class="inspector-content" id="inspector"></div><div class="turn-panel"><div class="turn-meta"><b id="turn-number"></b><span id="turn-year"></span></div><button class="primary end-turn" data-action="end-turn" id="end-turn"><span>End cycle →</span><kbd>SPACE</kbd></button><div class="turn-hint" id="turn-hint"></div></div></aside>
@@ -55,14 +57,14 @@ function toast(message, error = false) {
   $('#status-message').textContent = message;
 }
 function selectSystem(id) { if (!systemById(id)?.knownBy.includes('player')) return; selectedSystemId = id; if (page !== 'galaxy') setPage('galaxy'); render(); }
-function selectFleet(id) { const fleet = fleetById(id); if (!fleet || fleet.owner !== 'player') return; selectedFleetId = id; selectedSystemId = fleet.systemId; if (page !== 'galaxy') setPage('galaxy'); render(); }
+function selectFleet(id) { const fleet = fleetById(id); if (!fleet || fleet.owner !== 'player') return; selectedFleetId = id; selectedSystemId = fleet.systemId; if (page !== 'galaxy') setPage('galaxy'); render(); galaxy.focus(fleet.systemId); }
 function setPage(value) { page = value; galaxy.setPaused?.(Boolean(modalType) || page !== 'galaxy'); $('#galaxy-page').hidden = page !== 'galaxy'; $('#workspace-page').hidden = page === 'galaxy'; document.querySelectorAll('[data-page]').forEach(el => { el.classList.toggle('active',el.dataset.page === page); el.setAttribute('aria-current',el.dataset.page === page ? 'page' : 'false'); }); renderPage(); }
 function dispatch(action) {
   const result = command(state, action);
   if (!result.ok) { toast(result.message, true); return false; }
   if (action.type === 'move' && fleetById(action.fleetId)) selectedSystemId = fleetById(action.fleetId).systemId;
   if (selectedFleetId && !fleetById(selectedFleetId)) selectedFleetId = null;
-  save(); render(); toast(result.message); if (state.winner) showVictory(); return true;
+  save(); render(); toast(result.combatReports?.length ? `${result.combatReports.length} combat report${result.combatReports.length>1?'s':''} recorded.` : result.message); if (state.winner) showVictory(); else if(result.combatReports?.length)showReports(result.combatReports.map(r=>r.id)); return true;
 }
 function render() {
   const p = player(), stats = getEmpireStats(state);
@@ -70,6 +72,10 @@ function render() {
   $('#turn-number').textContent = `Cycle ${String(state.turn).padStart(2,'0')}`; $('#turn-year').textContent = `${2400 + state.turn - 1} CE`;
   $('#turn-hint').textContent = state.winner ? 'The chronicle of this age is complete.' : `${stats.orders} orders remaining · ${stats.colonies} ${stats.colonies===1?'colony':'colonies'}`;
   $('#end-turn').disabled = !!state.winner;
+  const briefing=state.lastBriefing;
+  $('#briefing-button').disabled=!briefing;
+  $('#briefing-button').classList.toggle('briefing-alert', Boolean(briefing?.entries.length && settings.reviewedBriefing!==briefingKey()));
+  $('#briefing-button').title=briefing?`Cycle ${briefing.turn} briefing · ${briefing.entries.length} dispatches`:'Complete a cycle to receive a briefing';
   $('#map-meta').innerHTML = `<span class="live-dot"></span>${getVisibleSystems(state).length} charted systems · ${stats.explored} surveyed · seed ${escape(state.seed)}`;
   const mandate = stats.colonies<2 ? ['YOUR FIRST MANDATE','Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Asterion Beacons restored. Protect your worlds as the network awakens.`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
   $('#mandate').innerHTML = `<strong>${mandate[0]}</strong>${mandate[1]}`;
@@ -84,7 +90,7 @@ function renderInspector() {
   const system = systemById(selectedSystemId); if (!system) return;
   const surveyed = system.exploredBy.includes('player'), mine = system.owner === 'player', owner = FACTIONS[system.owner], planet = PLANET_TYPES[system.type], output = getSystemYield(state,system);
   const orbit = getVisibleFleets(state, 'player', system.id);
-  let html = `<div class="system-header"><div class="owner-tag" style="color:${owner?.color||'#bba77e'}"><i></i>${owner?escape(owner.name):'UNCLAIMED FRONTIER'}</div><h2>${escape(system.name)}</h2><p class="subtitle">${surveyed?`${escape(planet.name)} world · ${system.originalOwner?'Founding system':'Frontier system'}`:'Unsurveyed system · Charted starlanes'}</p></div><div class="planet-art"><div class="planet-sphere" style="--planet:${surveyed?planet.color:'#5a6477'}"></div></div><p class="system-description">${surveyed?escape(planet.description):'Send a fleet to survey this system and reveal its worlds, resources, and hidden history.'}</p>`;
+  let html = `<div class="system-header"><div class="owner-tag" style="color:${owner?.color||'#bba77e'}"><i></i>${owner?escape(owner.name):'UNCLAIMED FRONTIER'}</div><h2>${escape(system.name)}</h2><p class="subtitle">${surveyed?`${escape(planet.name)} world · ${system.originalOwner?'Founding system':'Frontier system'}`:'Unsurveyed system · Charted starlanes'}</p></div><div class="planet-art"><img class="planet-globe" src="${planetImage(surveyed?{...system,seed:state.seed}:{type:'unknown'})}" alt="${surveyed?escape(planet.name)+' world':'Unsurveyed world'}" width="142" height="142" /></div><p class="system-description">${surveyed?escape(planet.description):'Send a fleet to survey this system and reveal its worlds, resources, and hidden history.'}</p>`;
   if (surveyed) html += `<div class="stat-grid"><div class="stat-cell"><b>${system.habitability}%</b><span>Habitability</span></div><div class="stat-cell"><b>${mine?`${system.population}/${output.capacity}`:system.richness}</b><span>${mine?'Population':'Ore richness'}</span></div><div class="stat-cell"><b>${mine?output.production:system.science}</b><span>${mine?'Production':'Science'}</span></div></div>`;
   if (mine) {
     const queue = system.queue, item = queue && (BUILDINGS[queue.itemId]||SHIPS[queue.itemId]);
@@ -92,6 +98,9 @@ function renderInspector() {
   }
   if (surveyed && system.anomaly && !system.anomaly.resolved) html += `<section class="panel-section"><div class="section-label">Unusual signal <span>✦</span></div><p style="font-family:var(--heading);font-size:17px;color:var(--gold)">${escape(ANOMALIES[system.anomaly.id].name)}</p><button class="wide-button" data-action="anomaly" data-system="${system.id}">Investigate discovery · 1 order</button></section>`;
   if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}><span class="ship-symbol" style="color:${FACTIONS[f.owner].color}">${SHIPS[f.type].icon}</span><span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${Math.ceil(f.hp)} hull</small></span><span class="fleet-ready">${f.owner==='player'?`${f.movesLeft} ⌁`:''}</span></button>`).join('')}</div></section>`;
+  const selectedFleet=fleetById(selectedFleetId);
+  const invasion=selectedFleet?.systemId===system.id ? estimateInvasion(state,selectedFleet.id) : null;
+  if(invasion) html+=`<section class="panel-section"><div class="invasion-preview"><div class="section-label">Invasion forecast</div><strong>${invasion.defense} colony defenses</strong><br>Your volley: ${invasion.damageMin}–${invasion.damageMax} defense damage<br>Retaliation: ${invasion.retaliation} hull${invasion.shielded?' · Shields applied':''}<br>${invasion.captureGuaranteed?'Capture expected with this volley.':invasion.capturePossible?'This volley may capture the colony.':'Further bombardment is required.'}<br>Cost: 1 order + 1 move</div></section>`;
   const neighbors = getNeighbors(state,system.id).map(systemById).filter(s=>s.knownBy.includes('player'));
   html += `<section class="panel-section"><div class="section-label">Connected systems</div><div class="building-pills">${neighbors.map(s=>`<button class="small-button ghost" data-system-select="${s.id}">${escape(s.name)} ↗</button>`).join('')}</div></section>`;
   $('#inspector').innerHTML = html;
@@ -110,19 +119,22 @@ function renderFleet() {
   const home = systemById(fleet.systemId), ship = SHIPS[fleet.type], different = target.id!==home.id;
   let detail = `${ship.role} · ${fleet.ships} ${fleet.ships===1?'ship':'ships'} · ${fleet.movesLeft} jumps · ${Math.ceil(fleet.hp)}/${fleet.ships*ship.hp} hull`, actions='';
   if (different) {
-    const reason = movementReason(fleet,target), war = target.owner && target.owner!=='player' && player().relations[target.owner].status==='war';
+    const reason = movementReason(fleet,target), hostileColony = target.owner && target.owner!=='player' && player().relations[target.owner].status==='war';
+    const hostileFleet = getVisibleFleets(state,'player',target.id).some(f=>f.owner!=='player' && player().relations[f.owner].status==='war');
+    const war = hostileColony || hostileFleet;
     detail = reason || `${home.name} → ${target.name} · 1 order${war?` · ${estimateCombat(state,fleet.id,target.id).odds} engagement`:!hasSensors(state,'player',target.id)?' · Fleet presence unknown':''}`;
-    actions = `<button class="primary" data-action="move" data-target="${target.id}" ${reason?'disabled':''}>${war?'Engage':'Move'} →</button><button class="ghost small-button" data-system-select="${home.id}" title="Back to fleet">↶</button>`;
+    actions = `<button class="primary" data-action="move" data-target="${target.id}" ${reason?'disabled':''}>${hostileFleet?'Engage':hostileColony?'Enter orbit':'Move'} →</button><button class="ghost small-button" data-system-select="${home.id}" title="Back to fleet">↶</button>`;
   } else {
     if (fleet.type==='colony' && !home.owner) actions += `<button class="primary" data-action="colonize">Settle world</button>`;
-    if (home.owner && home.owner!=='player' && player().relations[home.owner].status==='war' && ship.attack>3) actions += '<button class="danger" data-action="attack">Invade</button>';
-    if (state.fleets.some(f=>f.systemId===home.id && f.owner!=='player' && player().relations[f.owner].status==='war') && ship.attack>3) actions += '<button class="danger" data-action="attack">Engage</button>';
+    const enemiesHere = getVisibleFleets(state,'player',home.id).some(f=>f.owner!=='player' && player().relations[f.owner].status==='war');
+    if (enemiesHere && ship.attack>3) actions += `<button class="danger" data-action="attack" ${!fleet.movesLeft||!player().orders?'disabled':''}>Engage</button>`;
+    else if (home.owner && home.owner!=='player' && player().relations[home.owner].status==='war' && ship.attack>3) actions += `<button class="danger" data-action="attack" ${!fleet.movesLeft||!player().orders?'disabled':''}>Invade</button>`;
     if (home.owner==='player' && fleet.hp<fleet.ships*ship.hp) actions += '<button data-action="repair">Repair ◇10</button>';
     const merge = ownFleets.find(f=>f.id!==fleet.id && f.systemId===home.id && f.type===fleet.type && fleet.type!=='colony');
     if (merge) actions += `<button data-action="merge" data-target="${merge.id}" title="Merge ${escape(merge.name)} into this fleet; 1 order">Merge +${merge.ships}</button>`;
     if (!actions) detail += ' · Select a connected star to plot a jump.';
   }
-  $('#fleet-bar').innerHTML = `<span class="fleet-icon">${ship.icon}</span><div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>`;
+  $('#fleet-bar').innerHTML = `<span class="fleet-icon">${ship.icon}</span><div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<button class="small-button ghost" data-action="fleet-roster" title="All fleets">⌁ ${ownFleets.length}</button><button class="small-button ghost" data-action="next-fleet" title="Next fleet (N)">⇥</button><div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>`;
 }
 function renderPage() {
   if (page==='galaxy') return;
@@ -137,7 +149,7 @@ function renderPage() {
     const victory=getVictoryProgress(state), colonies=state.systems.filter(s=>s.owner==='player');
     html=`<div class="page-top"><div><div class="eyebrow">MANY WORLDS. ONE HORIZON.</div><h2>The Concord</h2><p>Make a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.</p></div><div class="page-symbol">⌘</div></div><div class="empire-overview"><div class="overview-card"><div class="eyebrow">COLONIZED WORLDS</div><strong>${stats.colonies}</strong><p>${stats.population} billion citizens across the Reach</p></div><div class="overview-card"><div class="eyebrow">FLEET POWER</div><strong>${num(stats.military)}</strong><p>${stats.ships} ships · ${stats.upkeep} credits upkeep / cycle</p></div><div class="overview-card"><div class="eyebrow">LEGACY SCORE</div><strong>${num(stats.score)}</strong><p>Highest score at cycle ${victory.legacy.finalTurn} wins</p></div></div><div class="section-label">Colonial administration</div><table class="colony-table"><thead><tr><th>World</th><th>Population</th><th>Income</th><th>Construction</th><th></th></tr></thead><tbody>${colonies.map(s=>`<tr><td>${escape(s.name)}</td><td>${s.population} / ${getSystemYield(state,s).capacity}</td><td>◈ ${getSystemYield(state,s).credits} · ◇ ${getSystemYield(state,s).minerals}</td><td>${s.queue?escape((BUILDINGS[s.queue.itemId]||SHIPS[s.queue.itemId]).name):'Idle'}</td><td><button data-action="inspect" data-system="${s.id}">Inspect →</button></td></tr>`).join('')}</tbody></table><div class="victory-grid"><div class="victory-card"><h3>✦ Transcendence</h3><p>Research the Asterion Protocol, then complete a Beacon on three worlds. The ancient network will awaken.</p><div class="progress-track"><i style="width:${victory.transcendence.current/3*100}%"></i></div><p style="margin-top:10px">${victory.transcendence.current} / 3 beacons · ${victory.transcendence.unlocked?'Protocol unlocked':'Protocol undiscovered'}</p></div><div class="victory-card"><h3>⛨ Domination</h3><p>Unite the Reach under one banner by holding all four founding homeworlds at the same time.</p><div class="progress-track"><i style="width:${victory.domination.current/4*100}%"></i></div><p style="margin-top:10px">${victory.domination.current} / 4 founding systems</p></div></div><div class="panel-section" style="margin-top:22px;padding-left:0;padding-right:0"><div class="section-label">Fleet registry</div><div class="fleet-list">${state.fleets.filter(f=>f.owner==='player').map(f=>`<button class="fleet-row" data-fleet="${f.id}"><span class="ship-symbol">${SHIPS[f.type].icon}</span><span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${Math.ceil(f.hp)} hull · ${fleetPower(state,f)} combat power</small></span><span class="fleet-ready">${f.movesLeft} jumps</span></button>`).join('')}</div></div>`;
   } else if (page==='journal') {
-    html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p></div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','combat','diplomacy'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><p>${escape(l.text)}</p></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
+    html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p></div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','research','combat','diplomacy','war'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><div><p>${escape(l.text)}</p>${l.reportId && getCombatReport(state,l.reportId)?`<button class="small-button" style="margin-top:10px" data-action="combat-report" data-report="${l.reportId}">Battle report →</button>`:''}</div></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
   }
   $('#workspace-page').innerHTML=html;
 }
@@ -157,6 +169,30 @@ function showAnomaly(systemId) {
 }
 function showMenu() {
   openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · ${escape(state.seed)} · The Concord</p><div class="menu-grid"><button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
+}
+function briefingKey() {
+  return state.lastBriefing ? `${state.seed}:${state.lastBriefing.turn}:${state.lastBriefing.entries[0]?.id || 0}` : '';
+}
+function showCycleBriefing() {
+  settings.reviewedBriefing=briefingKey();saveSettings();
+  $('#briefing-button').classList.remove('briefing-alert');
+  openModal('briefing',renderBriefing(state),true);
+}
+function showReports(ids) {
+  const reports=ids.map(id=>getCombatReport(state,id)).filter(Boolean);
+  if(!reports.length)return toast('This report is no longer in the active archive.',true);
+  openModal('combat-report',renderCombatReports(state,reports),true);
+}
+function nextFleet() {
+  const all=state.fleets.filter(f=>f.owner==='player');
+  if(!all.length)return toast('Your empire has no active fleets.');
+  const ready=all.filter(f=>f.movesLeft>0), pool=ready.length?ready:all;
+  const index=pool.findIndex(f=>f.id===selectedFleetId);
+  selectFleet(pool[(index+1)%pool.length].id);
+}
+function showFleetRoster() {
+  const fleets=state.fleets.filter(f=>f.owner==='player').sort((a,b)=>(b.movesLeft>0)-(a.movesLeft>0)||a.name.localeCompare(b.name));
+  openModal('fleet-roster',`<div class="eyebrow">CONCORD FLEET COMMAND</div><h2 id="modal-title">Your presence among the stars</h2><p class="modal-lead">${fleets.length} fleets · ${fleets.filter(f=>f.movesLeft>0).length} with movement available. Select any fleet to focus its location.</p><div class="fleet-list">${fleets.map(f=>`<button class="fleet-row" data-fleet="${f.id}"><span class="ship-symbol">${SHIPS[f.type].icon}</span><span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${Math.ceil(f.hp)}/${SHIPS[f.type].hp*f.ships} hull · ${SHIPS[f.type].upkeep*f.ships} credits upkeep</small></span><span class="fleet-ready">${f.movesLeft} jumps →</span></button>`).join('')||'<p class="empty-note">Commission ships at an Orbital Shipyard to return to the stars.</p>'}</div>`);
 }
 function showPeaceOffer(offerId) {
   const offer=(state.diplomacyOffers || []).find(o=>o.id===offerId && o.to==='player' && o.status==='pending');
@@ -181,10 +217,11 @@ function advanceTurn(force=false) {
   previousTurn=state.turn-1; save(); render(); toast(result.message);
   if (state.winner) showVictory();
   else {
-    const important=state.log.filter(l=>l.turn>=previousTurn && ['construction','research','war','combat'].includes(l.type)).slice(0,3);
-    if (important.length) $('#status-message').textContent=important.map(l=>l.text).join(' · ');
+    const briefing=state.lastBriefing;
+    if(briefing?.entries.length) $('#status-message').textContent=`Cycle ${briefing.turn}: ${briefing.entries.length} dispatches available in your briefing.`;
     const newOffer=(state.diplomacyOffers || []).find(o=>o.to==='player' && o.status==='pending' && o.createdTurn>=previousTurn);
-    if(newOffer) showPeaceOffer(newOffer.id);
+    if(briefing?.reportIds.length)showCycleBriefing();
+    else if(newOffer) showPeaceOffer(newOffer.id);
   }
 }
 function showVictory() {
@@ -206,16 +243,25 @@ document.addEventListener('change',event=>{if(event.target.id==='warn-unspent'){
 document.addEventListener('click',event=>{
   const el=event.target.closest('button,a'); if (!el||el.disabled) return;
   if (el.dataset.page) return setPage(el.dataset.page);
-  if (el.dataset.fleet) return selectFleet(el.dataset.fleet);
+  if (el.dataset.fleet) { if(modalType==='fleet-roster')closeModal(); return selectFleet(el.dataset.fleet); }
   if (el.dataset.systemSelect) return selectSystem(el.dataset.systemSelect);
   if (el.dataset.researchFilter) { researchFilter=el.dataset.researchFilter;return renderPage(); }
   if (el.dataset.logFilter) {logFilter=el.dataset.logFilter;return renderPage();}
   const action=el.dataset.action;
   switch(action){
     case 'menu':showMenu();break;
+    case 'briefing':showCycleBriefing();break;
+    case 'combat-report':showReports([Number(el.dataset.report)]);break;
+    case 'report-inspect':closeModal();selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);break;
+    case 'report-select-fleet':closeModal();selectFleet(el.dataset.fleetTarget);break;
+    case 'report-diplomacy':closeModal();setPage('diplomacy');document.querySelector(`[data-rival="${el.dataset.target}"]`)?.scrollIntoView({block:'nearest'});break;
+    case 'report-research':closeModal();setPage('research');break;
+    case 'report-chronicle':closeModal();setPage('journal');break;
     case 'close-modal':closeModal();break;
     case 'begin':closeModal();save();break;
     case 'home':selectSystem(player().capitalId);galaxy.focus(player().capitalId);break;
+    case 'fleet-roster':showFleetRoster();break;
+    case 'next-fleet':nextFleet();break;
     case 'zoom-in':galaxy.zoom(1);break;
     case 'zoom-out':galaxy.zoom(-1);break;
     case 'reset-view':galaxy.reset();break;
@@ -257,6 +303,7 @@ document.addEventListener('keydown',event=>{
   if (event.target.matches('input,textarea,select')||event.ctrlKey||event.metaKey||event.altKey) return;
   if(event.code==='Space'&&!event.repeat&&!event.target.matches('button,a')){event.preventDefault();advanceTurn();}
   if (['1','2','3','4','5'].includes(event.key)) setPage(['galaxy','research','diplomacy','empire','journal'][Number(event.key)-1]);
+  if(event.key.toLowerCase()==='n')nextFleet();
   if(event.key.toLowerCase()==='h'){selectSystem(player().capitalId);galaxy.focus(player().capitalId);}
   if(event.key==='Escape'){selectedFleetId=null;render();}
   if(event.key==='?')window.open('./guide.html','_blank','noopener');

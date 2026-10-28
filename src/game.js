@@ -2,7 +2,9 @@ import { FACTIONS, PLANET_TYPES, SYSTEM_NAMES, TECHS, BUILDINGS, SHIPS, ANOMALIE
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { runAI } from './ai.js';
 import { executeDiplomacy, advanceDiplomacy, validateDiplomacyState } from './diplomacy.js';
+import { captureParticipant, finishParticipant, appendCombatReport, finalizeBriefing, summarizeCombatReports, validateReportState } from './reports.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
+export { getCombatReport } from './reports.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -29,9 +31,9 @@ function random(state) {
   return state.rng / 4294967296;
 }
 
-function record(state, text, type = 'info', audience = null) {
+function record(state, text, type = 'info', audience = null, metadata = {}) {
   if (audience && audience !== 'player') return;
-  state.log.unshift({ id: state.nextLogId++, turn: state.turn, type, text });
+  state.log.unshift({ id: state.nextLogId++, turn: state.turn, type, text, ...metadata });
   if (state.log.length > 160) state.log.length = 160;
 }
 
@@ -45,7 +47,7 @@ function meet(state, firstId, secondId) {
   if (!a.contacts.includes(secondId)) {
     a.contacts.push(secondId);
     b.contacts.push(firstId);
-    if ([firstId, secondId].includes('player')) record(state, `First contact: ${firstId === 'player' ? b.name : a.name}. A diplomatic channel is open.`, 'diplomacy');
+    if ([firstId, secondId].includes('player')) record(state, `First contact: ${firstId === 'player' ? b.name : a.name}. A diplomatic channel is open.`, 'diplomacy', null, { targetId: firstId === 'player' ? secondId : firstId });
   }
 }
 
@@ -60,8 +62,8 @@ function survey(state, systemId, factionId) {
   chart(state, systemId, factionId);
   if (!system.exploredBy.includes(factionId)) {
     system.exploredBy.push(factionId);
-    if (system.anomaly && !system.anomaly.resolved) record(state, `${system.name}: ${ANOMALIES[system.anomaly.id].name} detected. An expedition can investigate.`, 'discovery', factionId);
-    if (factionId === 'player' && state.turn > 1) record(state, `Survey complete at ${system.name}: ${PLANET_TYPES[system.type].name} world, ${system.habitability}% habitability.`, 'survey');
+    if (system.anomaly && !system.anomaly.resolved) record(state, `${system.name}: ${ANOMALIES[system.anomaly.id].name} detected. An expedition can investigate.`, 'discovery', factionId, { systemId });
+    if (factionId === 'player' && state.turn > 1) record(state, `Survey complete at ${system.name}: ${PLANET_TYPES[system.type].name} world, ${system.habitability}% habitability.`, 'survey', null, { systemId });
   }
   for (const neighbor of getNeighbors(state, systemId)) chart(state, neighbor, factionId);
   for (const fleet of getVisibleFleets(state, factionId, systemId)) meet(state, factionId, fleet.owner);
@@ -79,7 +81,7 @@ function makeFleet(state, owner, systemId, type, ships = 1) {
 }
 
 export function createGame(seed = 'ASTERION') {
-  const state = { version: SAVE_VERSION, seed: String(seed), rng: hashSeed(seed), turn: 1, nextFleetId: 1, nextLogId: 1, systems: [], lanes: [], factions: [], fleets: [], log: [], winner: null, victoryType: null };
+  const state = { version: SAVE_VERSION, seed: String(seed), rng: hashSeed(seed), turn: 1, nextFleetId: 1, nextLogId: 1, nextCombatReportId: 1, systems: [], lanes: [], factions: [], fleets: [], log: [], combatReports: [], lastBriefing: null, winner: null, victoryType: null };
   for (const [index, id] of ids.entries()) {
     const template = FACTIONS[id];
     state.factions.push({ ...template, credits: 140, minerals: 110, science: 0, research: null, techs: [], orders: 0, contacts: [], capitalId: `s${index}`, eliminated: false, relations: Object.fromEntries(ids.filter(other => other !== id).map(other => [other, { status: 'peace', trust: id === 'khar' || other === 'khar' ? -10 : 10, trade: false, treatyTurn: 0 }])) });
@@ -213,6 +215,21 @@ export function estimateCombat(state, fleetId, targetId) {
   return { attack: round(attack), defense: round(defense), garrison, odds: attack > defense * 1.5 + garrison * .45 ? 'Favorable' : attack > defense * .8 + garrison * .25 ? 'Contested' : 'Dangerous', unknown: false };
 }
 
+/** A pure forecast for bombarding the hostile colony this fleet occupies. */
+export function estimateInvasion(state, fleetId) {
+  const fleet = fleetOf(state, fleetId);
+  if (!fleet || SHIPS[fleet.type].attack < 4 || !hasSensors(state, fleet.owner, fleet.systemId)) return null;
+  const system = systemOf(state, fleet.systemId);
+  if (!system?.owner || !atWar(state, fleet.owner, system.owner) || getVisibleFleets(state, fleet.owner, system.id).some(other => atWar(state, fleet.owner, other.owner))) return null;
+  const defense = getSystemYield(state, system).defense;
+  const power = fleetPower(state, fleet);
+  const damageMin = Math.round(power * .9), damageMax = Math.round(power * (.9 + (4294967295 / 4294967296) * .2));
+  const shielded = has(factionOf(state, fleet.owner), 'shields');
+  const hullAfter = Math.max(0, round(fleet.hp - Math.max(4, defense * .28) * (shielded ? .8 : 1)));
+  const retaliation = round(fleet.hp - hullAfter);
+  return { systemId: system.id, defense, damageMin, damageMax, retaliation, shielded, capturePossible: hullAfter > 0 && damageMax >= defense, captureGuaranteed: hullAfter > 0 && damageMin >= defense };
+}
+
 function atWar(state, a, b) { return a !== b && factionOf(state, a).relations[b]?.status === 'war'; }
 
 function damage(state, fleet, amount) {
@@ -231,7 +248,7 @@ function decommissionShip(state, fleet) {
 }
 
 function battle(state, attacker, defender) {
-  const aStart = attacker.ships, dStart = defender.ships;
+  const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');
   for (let roundIndex = 0; roundIndex < 4 && attacker.hp > 0 && defender.hp > 0; roundIndex++) {
     const aHit = fleetPower(state, attacker) * (.85 + random(state) * .3);
     const dHit = fleetPower(state, defender) * (.85 + random(state) * .3);
@@ -239,8 +256,16 @@ function battle(state, attacker, defender) {
     if (aHit === 0 && dHit === 0) break;
   }
   if (attacker.owner === 'player' || defender.owner === 'player') {
-    record(state, `Battle at ${systemOf(state, attacker.systemId).name}: ${FACTIONS[attacker.owner].shortName} lost ${aStart - attacker.ships} ship${aStart - attacker.ships === 1 ? '' : 's'}; ${FACTIONS[defender.owner].shortName} lost ${dStart - defender.ships}. ${attacker.hp <= 0 ? 'Attacking fleet destroyed.' : defender.hp <= 0 ? 'Defending fleet destroyed.' : 'Both fleets remain in orbit.'}`, 'combat');
+    const participants = [finishParticipant(aStart, attacker), finishParticipant(dStart, defender)];
+    const outcome = attacker.hp <= 0 && defender.hp <= 0 ? 'mutual-destruction' : attacker.hp <= 0 ? 'attacker-destroyed' : defender.hp <= 0 ? 'defender-destroyed' : 'contested';
+    const casualties = participants.map(p => `${FACTIONS[p.owner].shortName} lost ${p.shipsBefore - p.shipsAfter} ship${p.shipsBefore - p.shipsAfter === 1 ? '' : 's'} and ${round(p.hullBefore - p.hullAfter)} hull`).join('; ');
+    const ending = outcome === 'mutual-destruction' ? 'Both fleets destroyed.' : outcome === 'attacker-destroyed' ? 'Attacking fleet destroyed.' : outcome === 'defender-destroyed' ? 'Attacking fleet survives; defending fleet destroyed.' : 'Both fleets survive in orbit.';
+    const summary = `Battle at ${systemOf(state, attacker.systemId).name}: ${casualties}. ${ending}`;
+    const report = appendCombatReport(state, { kind: 'fleet', systemId: attacker.systemId, participants, outcome, summary });
+    record(state, summary, 'combat', null, { systemId: attacker.systemId, reportId: report.id });
+    return report;
   }
+  return null;
 }
 
 function applyResearch(state, faction) {
@@ -251,7 +276,7 @@ function applyResearch(state, faction) {
   faction.research.progress += progress;
   if (faction.research.progress >= tech.cost) {
     faction.techs.push(tech.id); faction.research = null;
-    record(state, `Research complete: ${tech.name}. ${tech.description}`, 'research', faction.id);
+    record(state, `Research complete: ${tech.name}. ${tech.description}`, 'research', faction.id, { techId: tech.id });
   }
 }
 
@@ -291,14 +316,15 @@ export function command(state, action) {
         for (const enemy of enemies) meet(state, factionId, enemy.owner);
         const observedShips = enemies.reduce((total, enemy) => total + enemy.ships, 0);
         const message = `${fleet.name} encountered ${observedShips} hostile ship${observedShips === 1 ? '' : 's'} at ${target.name} and withdrew to ${systemOf(state, fleet.systemId).name}. One order and one jump were spent; no survey was conducted.`;
-        record(state, message, 'interception', factionId);
+        record(state, message, 'interception', factionId, { systemId: target.id });
         result = { ...success(message), outcome: 'intercepted' };
         break;
       }
       fleet.systemId = target.id; fleet.movesLeft--; faction.orders--;
       survey(state, target.id, factionId);
-      for (const enemy of enemies) { if (fleet.hp > 0) battle(state, fleet, enemy); }
-      result = success(`${fleet.name} ${fleet.hp > 0 ? `arrived at ${target.name}.` : 'was lost in battle.'}`);
+      const combatReports = [];
+      for (const enemy of enemies) { if (fleet.hp > 0) { const report = battle(state, fleet, enemy); if (report) combatReports.push(report); } }
+      result = combatReports.length ? { ...success(summarizeCombatReports(combatReports)), combatReports } : success(`${fleet.name} ${fleet.hp > 0 ? `arrived at ${target.name}.` : 'was lost in battle.'}`);
       break;
     }
     case 'colonize': {
@@ -312,7 +338,7 @@ export function command(state, action) {
       system.owner = factionId; system.population = 1; system.growth = 0; system.defenseDamage = 0;
       state.fleets = state.fleets.filter(f => f.id !== fleet.id);
       survey(state, system.id, factionId);
-      record(state, `A new beginning: ${system.name} joins ${FACTIONS[factionId].shortName}.`, 'colony', factionId);
+      record(state, `A new beginning: ${system.name} joins ${FACTIONS[factionId].shortName}.`, 'colony', factionId, { systemId: system.id });
       result = success(`Colony founded at ${system.name}.`); break;
     }
     case 'build': {
@@ -358,7 +384,7 @@ export function command(state, action) {
       }
       system.anomaly.resolved = true; system.anomaly.resolvedBy = factionId;
       applyResearch(state, faction);
-      record(state, `${ANOMALIES[system.anomaly.id].name}: ${choice.label}. ${choice.description}`, 'discovery', factionId);
+      record(state, `${ANOMALIES[system.anomaly.id].name}: ${choice.label}. ${choice.description}`, 'discovery', factionId, { systemId: system.id });
       result = success('Expedition resolved.'); break;
     }
     case 'diplomacy': {
@@ -373,23 +399,28 @@ export function command(state, action) {
       if (!enemies.length && (!system.owner || !atWar(state, factionId, system.owner))) return fail('No hostile target in this system.');
       faction.orders--; fleet.movesLeft--;
       if (enemies.length) {
-        for (const enemy of enemies) if (fleet.hp > 0) battle(state, fleet, enemy);
-        result = success('Fleet engagement resolved.'); break;
+        const combatReports = [];
+        for (const enemy of enemies) if (fleet.hp > 0) { const report = battle(state, fleet, enemy); if (report) combatReports.push(report); }
+        result = { ...success(combatReports.length ? summarizeCombatReports(combatReports) : 'Fleet engagement resolved.'), combatReports }; break;
       }
+      const before = captureParticipant(fleet, 'attacker'), ownerBefore = system.owner;
       const defense = getSystemYield(state, system).defense;
       const attack = fleetPower(state, fleet) * (.9 + random(state) * .2);
       system.defenseDamage += Math.round(attack);
       damage(state, fleet, Math.max(4, defense * .28));
-      if (getSystemYield(state, system).defense <= 0 && fleet.hp > 0) {
-        const oldOwner = system.owner;
+      const defenseAfter = getSystemYield(state, system).defense;
+      const captured = defenseAfter <= 0 && fleet.hp > 0;
+      if (captured) {
         system.owner = factionId; system.population = Math.max(1, system.population - 1); system.defenseDamage = 0; system.queue = null;
         survey(state, system.id, factionId);
-        record(state, `${system.name} has fallen to ${FACTIONS[factionId].shortName}.`, 'combat', factionId === 'player' || oldOwner === 'player' ? null : factionId);
-        result = success(`${system.name} captured.`);
-      } else {
-        record(state, `Invasion of ${system.name}: ${Math.round(attack)} defense damage inflicted. ${Math.ceil(getSystemYield(state, system).defense)} defenses remain.`, 'combat', factionId === 'player' || system.owner === 'player' ? null : factionId);
-        result = success('Bombardment resolved.');
       }
+      const participant = finishParticipant(before, fleet);
+      const invasion = { ownerBefore, ownerAfter: system.owner, defenseBefore: defense, defenseAfter, damage: round(defense - defenseAfter), damageRoll: Math.round(attack), retaliation: round(before.hullBefore - fleet.hp), captured };
+      const outcome = captured ? 'captured' : fleet.hp <= 0 ? 'repelled' : 'bombardment';
+      const summary = `Invasion of ${system.name}: ${invasion.damage} defense damage; ${defenseAfter} defenses remain. ${FACTIONS[factionId].shortName} lost ${before.shipsBefore - fleet.ships} ship${before.shipsBefore - fleet.ships === 1 ? '' : 's'} and ${invasion.retaliation} hull to retaliation. ${captured ? `${system.name} captured; invading fleet survives.` : fleet.hp <= 0 ? 'Invading fleet destroyed; colony holds.' : 'Invading fleet survives; colony holds.'}`;
+      const report = appendCombatReport(state, { kind: 'invasion', systemId: system.id, participants: [participant], outcome, summary, invasion });
+      if (report) record(state, summary, 'combat', null, { systemId: system.id, reportId: report.id });
+      result = { ...success(summary), combatReports: report ? [report] : [] };
       break;
     }
     case 'merge': {
@@ -429,7 +460,7 @@ function checkVictory(state) {
       faction.eliminated = true;
       state.fleets = state.fleets.filter(f => f.owner !== faction.id);
       for (const other of state.factions.filter(f => f.id !== faction.id)) { other.relations[faction.id].trade = false; other.relations[faction.id].tradeEndsAt = 0; faction.relations[other.id].trade = false; faction.relations[other.id].tradeEndsAt = 0; }
-      record(state, `${faction.name} has collapsed.`, 'war');
+      record(state, `${faction.name} has collapsed.`, 'war', null, { targetId: faction.id });
     }
     if (colonies.length && !colonies.some(s => s.id === faction.capitalId)) faction.capitalId = colonies[0].id;
     const beacons = colonies.filter(s => s.buildings.includes('beacon')).length;
@@ -449,8 +480,9 @@ function checkVictory(state) {
 
 export function endTurn(state) {
   if (state.winner) return fail('This campaign has ended.');
+  const firstLogId = state.nextLogId, firstReportId = state.nextCombatReportId || 1;
   for (const faction of state.factions.filter(f => f.id !== 'player')) runAI(state, faction);
-  if (state.winner) return success('Campaign concluded.');
+  if (state.winner) { finalizeBriefing(state, firstLogId, firstReportId); return success('Campaign concluded.'); }
   state.turn++;
   advanceDiplomacy(state);
   for (const faction of state.factions.filter(f => !f.eliminated)) {
@@ -476,7 +508,7 @@ export function endTurn(state) {
         const item = system.queue.kind === 'ship' ? SHIPS[system.queue.itemId] : BUILDINGS[system.queue.itemId];
         if (system.queue.kind === 'ship') makeFleet(state, system.owner, system.id, item.id);
         else system.buildings.push(item.id);
-        record(state, `${system.name} completed ${item.name}.`, 'construction', system.owner);
+        record(state, `${system.name} completed ${item.name}.`, 'construction', system.owner, { systemId: system.id, itemId: item.id });
         system.queue = null;
       }
     }
@@ -489,6 +521,7 @@ export function endTurn(state) {
   }
   for (const faction of state.factions) faction.orders = faction.eliminated ? 0 : getEmpireStats(state, faction.id).maxOrders;
   checkVictory(state);
+  finalizeBriefing(state, firstLogId, firstReportId);
   return success(`Turn ${state.turn}: a new mandate begins.`);
 }
 
@@ -522,5 +555,6 @@ function isValidSave(value) {
   if (value.lanes.some(lane => !Array.isArray(lane) || lane.length !== 2 || !systemIds.has(lane[0]) || !systemIds.has(lane[1]) || lane[0] === lane[1])) return false;
   if (value.log.some(entry => !Number.isInteger(entry.id) || !Number.isInteger(entry.turn) || !text(entry.type) || !text(entry.text))) return false;
   if (!validateDiplomacyState(value)) return false;
+  if (!validateReportState(value)) return false;
   return true;
 }

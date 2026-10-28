@@ -19,6 +19,8 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 - `getVictoryProgress(state, factionId = 'player')`: `{transcendence:{current,target,unlocked},domination:{current,target},legacy:{score,turn,finalTurn}}`.
 - `fleetPower(state, fleet)`: modified fleet attack.
 - `estimateCombat(state, fleetId, targetId)`: `{attack,defense,garrison,odds,unknown}` or null. Without target sensors, `unknown:true`, `odds:'Unscouted'`, and `defense`/`garrison` are null. With target sensors, `unknown:false` and numeric strength/defense are exact. Never coerce unknown defense to zero for a preview or AI decision.
+- `estimateInvasion(state, fleetId)`: pure current-system bombardment forecast, documented below. It never consumes RNG or queries a remote target.
+- `getCombatReport(state, reportId)`: a stored player-involved combat snapshot or null if missing/expired. Re-exported by `game.js` from `src/reports.js`.
 - `availableActions(state, {systemId?,fleetId?,factionId?})`: `{build,research,neighbors}`.
 
 ## Commands
@@ -26,6 +28,8 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 Every command costs one order except changing research and cancelling construction. Movement and attacking also consume one fleet move. Colonizing can occur after the ark has moved.
 
 A civilian move into an unseen hostile fleet is a **consumed expedition**, returning `{ok:true,outcome:'intercepted',message}`. It spends one order and one move, retains the origin, establishes contact and logs the observed ship count without surveying the destination or granting ongoing sensors. A visible blockade instead returns a normal `{ok:false,message}` without cost or mutation. Callers should not retry an intercepted jump automatically. Warships may enter unscouted opposition and engage normally.
+
+Moves and attacks that produce player-involved combat return `combatReports: Report[]` in engagement order. Their `message` summarizes both sides' actual ship/hull losses and survival, rather than merely announcing arrival. AI actions against the player generate the same reports. AI-versus-AI engagements never create player reports or combat log entries.
 
 | type | Other fields | Result |
 | --- | --- | --- |
@@ -46,7 +50,7 @@ A civilian move into an unseen hostile fleet is a **consumed expedition**, retur
 ```js
 {
   version: 1, seed: 'ASTERION', rng: 123, turn: 1,
-  nextFleetId: 13, nextLogId: 3,
+  nextFleetId: 13, nextLogId: 3, nextCombatReportId: 1,
   systems: [{
     id: 's0', name: 'Solace', x: 29, y: 29, // coordinates roughly -50 to +50
     type: 'terran', habitability: 90, richness: 3, science: 2,
@@ -68,6 +72,8 @@ A civilian move into an unseen hostile fleet is a **consumed expedition**, retur
   }],
   fleets: [{id:'f1',name:'Pathfinder 1',owner:'player',systemId:'s0',type:'scout',ships:1,hp:18,movesLeft:2}],
   log: [{id:1,turn:1,type:'story',text:'...'}], // newest first, max160
+  combatReports: [], // newest first, max50; optional in older saves
+  lastBriefing: null, // optional in older saves; snapshot created by endTurn
   winner: null, victoryType: null // or faction ID and human-readable ending
 }
 ```
@@ -91,3 +97,61 @@ Run the repository's `npm test`. Tests cover map connectivity, fair starts, expl
 `getDiplomacyForecast(state, factionId, targetId)` is a pure UI forecast. Its `actions` object has one entry per stance with `{enabled,reason,effect,cost}`; peace also includes willingness and whether it creates a player offer or an immediate accepted AI settlement. It exposes incoming/outgoing offers, truce and cancellation deadlines, and both sides' grievances.
 
 Optional `state.diplomacyOffers` contains `{id,from,to,createdTurn,expiresTurn,credits,status,truceTurns}`. Pending offers escrow 60 credits; acceptance transfers them, decline/expiry refunds them. Optional relation fields include `truceUntil`, `tradeEndsAt`, `grievance`, `warStartColonies`, `peaceOfferTurn`, and `lastBorderCount`. `validateDiplomacyState` checks these when present and accepts older saves without them. A proposal to the player never changes war status or withdraws fleets until accepted.
+
+## Combat reports and cycle briefings
+
+`src/reports.js` owns snapshot creation and optional-field validation. Reports contain copied values, never fleet/colony references, and are deeply frozen when created. Later repairs, renames, captures and fleet destruction cannot alter a previous report. JSON serialization preserves the snapshots; save version stays 1 and older saves without reporting fields remain valid.
+
+```js
+{
+  id: 1, turn: 7, kind: 'fleet', systemId: 's8',
+  participants: [
+    {role:'attacker',fleetId:'f3',owner:'player',name:'Vanguard 3',type:'frigate',
+     shipsBefore:3,shipsAfter:1,hullBefore:102,hullAfter:29.4},
+    {role:'defender',fleetId:'f6',owner:'veyr',name:'Vanguard 6',type:'frigate',
+     shipsBefore:2,shipsAfter:0,hullBefore:68,hullAfter:0}
+  ],
+  outcome: 'defender-destroyed',
+  summary: 'Battle at Caldera: ...'
+}
+```
+
+Fleet outcomes are `attacker-destroyed`, `defender-destroyed`, `mutual-destruction`, or `contested`. Participants are ordered attacker then defender. A move/attack may engage several opposing fleets, producing several reports; each successive attacker snapshot begins where the previous engagement ended.
+
+An invasion report has `kind:'invasion'`, one attacker participant, outcome `captured`, `repelled`, or `bombardment`, and:
+
+```js
+invasion: {
+  ownerBefore:'veyr', ownerAfter:'player',
+  defenseBefore:39, defenseAfter:0,
+  damage:39, damageRoll:68, retaliation:8.7, captured:true
+}
+```
+
+`defenseAfter` is the defending garrison immediately after bombardment, **before** a successful capture resets colony defenses for the new owner. `damage` is actual defending-garrison reduction, capped by defenses present; `damageRoll` includes any overkill. `retaliation` is actual attacker hull lost after shield reduction and the zero-hull cap. If the player owns the defending colony, this report is persisted even though the only fleet participant belongs to an AI empire.
+
+The invasion forecast is:
+
+```js
+estimateInvasion(state, fleetId) // =>
+{systemId:'s1', defense:39, damageMin:65, damageMax:79,
+ retaliation:8.7, shielded:true, capturePossible:true, captureGuaranteed:true}
+```
+
+It returns null for a missing/civilian fleet, a non-hostile current colony, or hostile fleets still requiring an orbital engagement. It reads only the fleet's occupied system, where that fleet supplies sensors. The damage range follows the actual rounded random bombardment roll; retaliation follows the current defense and shield rules. Capture flags also require surviving retaliation. Orders/movement availability is still checked by `command`; the forecast does not spend either or consume RNG.
+
+Combat log entries carry `reportId` and `systemId`. Discovery, colony and survey events carry `systemId`; construction carries `systemId` and `itemId`; completed research carries `techId`; diplomacy/war events carry `targetId` where a faction is identified. These stable IDs support UI navigation without parsing narrative text. Older plain-text entries remain valid. Reports are retained newest-first up to 50, so an older log's report link may legitimately expire; `getCombatReport` returns null in that case.
+
+At the beginning of each `endTurn`, the engine marks the next log/report IDs. At every successful exit, including an AI victory before the turn increments, it stores:
+
+```js
+state.lastBriefing = {
+  turn: state.turn,
+  entries: [/* copied new player-visible log entries, newest first, max160 */],
+  reportIds: [/* new retained combat-report IDs, newest first, max50 */]
+};
+```
+
+Only events produced **during that endTurn call** enter the briefing. Old player-action reports, discoveries, war declarations and other logs are excluded, preventing duplicate delayed notifications. AI events can retain the prior turn number because rivals act before the cycle advances; the briefing's own `turn` is the cycle shown after resolution. The snapshot is immutable, serializable and remains available for reopening until the next resolved cycle replaces it. An already-ended campaign rejects `endTurn` without replacing its final briefing.
+
+`validateReportState`, used by `validateSave`, checks reporting bounds, IDs, references, participant losses, outcomes, invasion arithmetic and optional navigation metadata. Destroyed fleet IDs are historical and need not remain in `state.fleets`. Briefing/log references may outlive report retention but must refer to an already issued ID. Tests in `tests/reports.test.js` cover actual losses, immutable history, defender reports, hidden-battle exclusion, invasion/shields/capture, end-turn boundaries, early victory, bounded storage and backward-compatible saves.

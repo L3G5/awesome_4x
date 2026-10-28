@@ -16,7 +16,7 @@ const weight = fleet => fleet.type === 'cruiser' ? fleet.ships * 3 : fleet.type 
 
 function record(state, first, second, message, type = 'diplomacy') {
   if (first !== 'player' && second !== 'player') return;
-  state.log.unshift({ id: state.nextLogId++, turn: state.turn, type, text: message });
+  state.log.unshift({ id: state.nextLogId++, turn: state.turn, type, text: message, targetId: first === 'player' ? second : first });
   state.log.length = Math.min(state.log.length, 160);
 }
 

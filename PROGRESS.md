@@ -58,6 +58,22 @@ The audit's reproducible findings are in `docs/SIMULATION_AUDIT.md`: military ro
 - Updated the player Field Guide and internal API documentation. Existing version-1 saves remain compatible; optional strategy/diplomacy fields are validated. Eliminated empires clear treaty deadlines consistently.
 - Validation: all 50 Node rules tests passed, including 14 diplomacy scenarios; all five Playwright browser tests passed, including explicit accept/decline outcomes with correct funds, positions and truce enforcement. Production build passed. Visual inspection of the peace dialog and diplomacy view confirmed readable terms; the 390px diplomatic page had no document overflow.
 - Version 0.2.0 includes emitted build metadata so the deployed source commit can be checked directly. Deployment of this stage remains to be verified.
+- Workflow 40736395654 succeeded at commit `379459b`; hosted build metadata matched version 0.2.0 and the exact source commit. Both peace-offer acceptance/decline browser scenarios passed against the live Pages site.
+
+## Stage 3 — command feedback and world portraits (2026-10-28 17:32–18:00 UTC)
+
+Goals: make combat consequences explicit, preserve a complete latest-cycle briefing, expose every fleet from the map, and give surveyed worlds recognizable visual identities.
+
+- Visible hostile fleets at neutral stars now preview an engagement. Selecting a remote fleet focuses its location; the map has a full roster and a next-ready-fleet command (`N`).
+- Battles immediately show actual ships and hull before/after, casualties, surviving forces and colony capture. The latest 50 player-involved reports persist in saves and reopen from the Chronicle. Pure invasion forecasts show damage range, retaliation and capture prospects.
+- A persistent cycle briefing groups new threats, diplomatic developments, construction/research completions and exploration, with navigation to the relevant world, research or diplomatic channel. It excludes previous actions, survives reload, and automatically opens after rival-turn combat.
+- Added deterministic procedural portraits for all six planet types with distinct geography, light, cloud and surface treatments. Unsurveyed worlds share an anonymous portrait; economic changes do not alter a surveyed world's identity. Portraits are cached and generated locally without runtime asset downloads.
+- Validation: 60 rules tests passed, including ten new report/briefing/forecast/save scenarios. All eight browser tests passed (31.6 seconds), including actual neutral-system combat and losses, selecting a fifth remote fleet, and a persistent multi-event briefing. Production build passed; the battle report screenshot was visually inspected. Updated the HTML Field Guide.
+- Version 0.3.0 is ready for deployment verification. Existing version-1 saves remain compatible.
+
+## Stage 4 — colonial development and a contested endgame (planning)
+
+Three independent design/playtest reviews found that unrestricted building sets homogenize colonies, the entire technology tree finishes too early, and AI repeatedly spends the minerals it needs for victory projects. Experiments showed that fixing beacon reserves alone can accelerate victory to cycles 49–52. The next stage will introduce meaningful colony specializations and infrastructure choices, preserve foundational research pacing while extending later tiers, and turn transcendence into a public alignment race that fleets can interrupt. These changes require explicit AI budgeting and fresh seeded measurements; target pacing is not yet a verified result.
 
 ## Subsequent stages
 
