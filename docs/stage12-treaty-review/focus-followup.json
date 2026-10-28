@@ -1,0 +1,48 @@
+{
+  "preview": "http://127.0.0.1:5186/",
+  "initial": {
+    "tag": "BUTTON",
+    "action": "close-modal",
+    "inModal": true,
+    "disabled": false,
+    "text": "\u00d7"
+  },
+  "afterTab": {
+    "tag": "BUTTON",
+    "action": "close-modal",
+    "inModal": true,
+    "disabled": false,
+    "text": "\u00d7"
+  },
+  "afterShiftTab": {
+    "tag": "BUTTON",
+    "action": "close-modal",
+    "inModal": true,
+    "disabled": false,
+    "text": "\u00d7"
+  },
+  "afterEscape": {
+    "tag": "BUTTON",
+    "action": "review-trade",
+    "inModal": false,
+    "disabled": false,
+    "text": "Review their trade offer"
+  },
+  "inspectionStateUnchanged": true,
+  "result": "Passed enabled initial focus, forward/backward keyboard containment and Escape focus restoration. Both response actions remain disabled.",
+  "buildInfo": {
+    "version": "0.12.0",
+    "commit": "123cee1a4e2b8175713468b2d8d9c3fc0d5787cf",
+    "builtAt": "2026-10-28T22:04:55.644Z"
+  },
+  "compiledAssetsSha256": {
+    "index.html": "217a216ff40d4f2cbc4141cead4840ba683935ae12ae59424e03308b360efb42",
+    "build-info.json": "79408bfa32a040ce11a9a2df8c10ffec643a43aec803c11369ca0b14ec795b9b",
+    "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+    "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+    "assets/index-BHUAV4WI.css": "2e077d8dac2b03124bdc62bc35836f7cd422e5f200c0d61ae33f46ec87a68c2f",
+    "assets/index-DbBk05CG.js": "b4ecb7f2e38a537f20e4eca40f0c4232826b540b07f75692e52dc432d94f15fd",
+    "assets/marcellus-latin-400-normal-86dSXJnk.woff2": "8a539799d12e3a144273288055490f57e1eee84da7a9145f085bc522e80719c3",
+    "assets/marcellus-latin-400-normal-AvMY561b.woff": "7083fa63e075a796f4beef9293fbc29a80be738d84bbfd89a20ddcdfc5c82198"
+  }
+}

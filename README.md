@@ -42,6 +42,10 @@ The [fleet interface review](docs/stage10-fleet-review/index.html) preserves act
 
 The [fleet readiness review](docs/stage11-fleet-review/index.html) verifies deliberate garrison holds, truthful fractional hull, ready-fleet cycling and saved routes. Its portable engine check pins the source revision and compares held/unheld continuations of the recorded cycle-63 campaign through victory, including exact serialization reloads.
 
+The [diplomatic consent audit](docs/diplomacy-audit/index.html) reproduces the actual military campaign's cycle20–29 sequence and explains why a valid funded peace offer appeared beside an unrelated refusal. A separate, labeled cancellation experiment establishes why renewed AI trade must require player consent. Both scripts pin their historical source and preserve the distinction between actual exports and verified replay checkpoints.
+
+The [trade consent review](docs/stage12-treaty-review/index.html) verifies funded proposals, exact response costs, stale imports, binding peace terms and keyboard focus at three widths. The [complete-campaign lifecycle audit](docs/trade-lifecycle-audit.html) checks 24 passive-policy campaigns with 75 exact reload comparisons and no unauthorized treaty openings. Its pinned portable runner preserves the distinction between actual response treasury deltas and receipt-based expiry obligations.
+
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.

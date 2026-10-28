@@ -9,6 +9,8 @@ async function begin(page) {
 async function endCycle(page) {
   await page.locator('[data-action="end-turn"]').click();
   if (await page.locator('[data-action="end-turn-confirm"]').isVisible()) await page.locator('[data-action="end-turn-confirm"]').click();
+  // This opening leaves new trade proposals undecided while developing colonies.
+  if (await page.locator('[data-action="trade-response"]').count()) await page.keyboard.press('Escape');
 }
 
 test('a real opening campaign surveys, settles, builds, researches, saves, and advances rival empires', async ({ page }) => {

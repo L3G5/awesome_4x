@@ -46,7 +46,7 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 | `cancelBuild` | `systemId` | Refund unused fraction of resource costs |
 | `research` | `techId` | Set research project, preserving prior investment as science |
 | `anomaly` | `systemId`, `choiceId` | Resolve an anomaly with a present expedition or owned colony |
-| `diplomacy` | `targetId`, `stance`, optional `offerId` | `war`, `peace`, `trade`, `gift`, `endTrade`, `acceptPeace` or `declinePeace` |
+| `diplomacy` | `targetId`, `stance`, optional `offerId` | `war`, `peace`, `trade`, `gift`, `endTrade`, `acceptPeace`, `declinePeace`, `acceptTrade` or `declineTrade` |
 | `attack` | `fleetId` | Engage hostile fleets in orbit, otherwise bombard/invade colony |
 | `merge` | `fleetId`, `targetFleetId` | Combine same-type colocated ships; max 12, no colony arks |
 | `split` | `fleetId`, `ships` | Detach 1–N−1 ships for one order; returns `newFleetId`; no colony arks |
@@ -161,9 +161,15 @@ Run the repository's `npm test`. Tests cover map connectivity, fair starts, expl
 
 `src/diplomacy.js` owns diplomatic mutations through `executeDiplomacy(state, action)`. The game's `command` routes diplomacy to it; do not charge orders or credits a second time. `advanceDiplomacy(state)` runs once after incrementing `state.turn`, before income, to expire offers, finish treaty notices and update grievances. `getDiplomaticIntent(state, factionId)` supplies AI proposals that still pass through ordinary commands.
 
-`getDiplomacyForecast(state, factionId, targetId)` is a pure UI forecast. Its `actions` object has one entry per stance with `{enabled,reason,effect,cost}`; peace also includes willingness and whether it creates a player offer or an immediate accepted AI settlement. It exposes incoming/outgoing offers, truce and cancellation deadlines, and both sides' grievances.
+`getDiplomacyForecast(state, factionId, targetId)` is a pure UI forecast. Its `actions` object has one entry per stance with `{enabled,reason,effect,cost}`; peace includes willingness and whether it creates a player offer or an immediate accepted AI settlement. Trade also distinguishes an offer from direct establishment. `incomingOffer`/`outgoingOffer` remain peace aliases; `incomingTradeOffer`/`outgoingTradeOffer` describe trade. The forecast also provides truce/cancellation deadlines and both sides' grievances.
 
-Optional `state.diplomacyOffers` contains `{id,from,to,createdTurn,expiresTurn,credits,status,truceTurns}`. Pending offers escrow 60 credits; acceptance transfers them, decline/expiry refunds them. Optional relation fields include `truceUntil`, `tradeEndsAt`, `grievance`, `warStartColonies`, `peaceOfferTurn`, and `lastBorderCount`. `validateDiplomacyState` checks these when present and accepts older saves without them. A proposal to the player never changes war status or withdraws fleets until accepted.
+`getActiveDiplomacyOffers(state,factionId='player')` returns copied, kind-normalized active offers involving that faction. It consistently excludes elapsed deadlines, eliminated participants and incompatible treaty states, without mutating imported saves. Use this helper for badges, cards and dialogs. Missing saved `kind` means peace; normalized results explicitly carry `kind:'peace'` or `kind:'trade'`.
+
+Optional `state.diplomacyOffers` holds peace entries `{id:'peace-N',from,to,createdTurn,expiresTurn,credits:60,status,truceTurns:5}` and new trade entries `{id:'trade-N',kind:'trade',from:aiId,to:'player',createdTurn,expiresTurn,credits:30,status}`. Both share `nextDiplomacyOfferId` and a three-cycle decision window. Peace acceptance transfers the reserved 60 credits to the recipient. Trade acceptance consumes the reserved 30-credit signing fee, opens both borders and applies the existing trust/income effects; it never pays that fee to the recipient or charges a second fee. Each response costs one order. Refusal, expiry or legal invalidation refunds once. Kind, recipient and offer ID are checked before mutation.
+
+Only new AI-to-player trade requires an offer. Direct player-to-AI and AI-to-AI trade keeps its ordinary price and behavior. A pending incoming offer replaces the separate paid commission; wrong-kind, stale and duplicate responses fail atomically. An issued offer remains binding despite later trust or peace-willingness changes. No public trade commitment is emitted until acceptance. War, collapse or an already concluded treaty invalidates incompatible escrow; reconciliation follows successful diplomacy and victory/elimination checks as well as the normal turn phase.
+
+Optional relation fields include `truceUntil`, `tradeEndsAt`, `grievance`, `warStartColonies`, `peaceOfferTurn`, `lastBorderCount`, and the AI-to-player-only `tradeOfferAfter` deadline. Decline/expiry and completed cancellation require five quiet cycles before another unsolicited trade proposal. Manual player initiation ignores this deadline. An expired pending import contributes its expiry-based quiet deadline before the AI phase, preventing a duplicate proposal before normal refund processing. Old active treaties and kindless peace commitments remain valid without retroactive charges or consent prompts.
 
 ## Combat reports and cycle briefings
 

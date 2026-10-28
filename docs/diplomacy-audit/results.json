@@ -1,0 +1,813 @@
+{
+  "generatedAt": "2026-10-28T21:39:24.571Z",
+  "sourceRevision": "78e3cff160999a951919485cf1d06838bda41b8e",
+  "sourceArchiveSha256": "5b4a7bc483e0c8a85c6068f4a67fbe7feb6cff1fbf8b6a1f3eb5db5342e37e62",
+  "sourceHashes": {
+    "game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+    "diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+    "diplomacy-ui.js": "77c499aff7b55130124349aafbb5dafe0b27556323773f69238514dae960eb3d",
+    "ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119"
+  },
+  "inputSha256": "5a7715292fb9af76c6ccfe298b0ffb235dcd108dcce5f4255a8691baf0f5f48e",
+  "actualFinalExportSha256": "25fdd7398529cbc398e1e706ded4c4734a119ff6566b376f604c0cece6472117",
+  "recordSnapshotSha256": "6116c4554ad9f2b81a984ca8a56a7a6cbf293eb4c6d04a15213596bd2edb7933",
+  "observationsSnapshotSha256": "9d4c0c5e35cc3f19822c0d5613199583f6a1f23fbb151e7be53aebac9d7ca791",
+  "method": "Replay only recorded ordinary commands from actual UI-exported cycle20 to actual UI-exported postsettlement29. Missing/misnamed annotations resolved from clicked control/selection; all normalization documented. No grants, direct state edits, or fabricated pre-accept save. Diagnostic willingness score is recomputed from the inspected formula and lawful Khar local observations; engine exports unchanged.",
+  "commands": 51,
+  "endTurns": 9,
+  "exactFullPostsettlementMatch": true,
+  "preAcceptSource": "Verified replay checkpoint, not an untouched original export",
+  "preAcceptDOMTime": "2026-10-28T21:30:29.763Z",
+  "samples": [
+    {
+      "label": "Cycle28 before rival phase",
+      "turn": 28,
+      "kharWarStart": 19,
+      "kharCurrentColonies": 4,
+      "kharStartColonies": 3,
+      "kharObservedThreatenedColonies": [
+        "s8"
+      ],
+      "kharObservedInvadingWeight": 5,
+      "derivedWillingnessScore": 51,
+      "threshold": 48,
+      "playerForecast": {
+        "factionId": "player",
+        "targetId": "khar",
+        "status": "war",
+        "trust": -50,
+        "grievance": 0,
+        "ourGrievance": 0,
+        "theirGrievance": 20,
+        "truceUntil": 0,
+        "truceRemaining": 0,
+        "tradeEndsAt": 0,
+        "tradeEndingIn": null,
+        "borderCount": 0,
+        "policy": "Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.",
+        "actions": {
+          "war": {
+            "enabled": false,
+            "reason": "Already at war.",
+            "effect": "Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "peace": {
+            "enabled": true,
+            "reason": "",
+            "effect": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+            "cost": {
+              "credits": 60,
+              "orders": 1
+            },
+            "accepted": true,
+            "mode": "settlement",
+            "willingness": {
+              "accepted": true,
+              "reason": "Their colonies face military pressure they can observe.",
+              "reasons": [
+                "Their colonies face military pressure they can observe.",
+                "The Khar Dominion is reluctant to concede a war."
+              ],
+              "warAge": 9,
+              "lostColonies": 0
+            }
+          },
+          "trade": {
+            "enabled": false,
+            "reason": "End the war before negotiating trade.",
+            "effect": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.",
+            "cost": {
+              "credits": 30,
+              "orders": 1
+            }
+          },
+          "gift": {
+            "enabled": false,
+            "reason": "Diplomatic gifts cannot be sent during war.",
+            "effect": "Transfer 35 credits; mutual trust +20. Existing border grievances remain.",
+            "cost": {
+              "credits": 35,
+              "orders": 1
+            }
+          },
+          "endTrade": {
+            "enabled": false,
+            "reason": "No active trade treaty.",
+            "effect": "Give 3 cycles of notice. Income and access continue until turn 31, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "acceptPeace": {
+            "enabled": false,
+            "reason": "No active incoming peace offer.",
+            "effect": "Receive 60 credits. End the war and establish a 5-cycle truce. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "declinePeace": {
+            "enabled": false,
+            "reason": "No active incoming peace offer.",
+            "effect": "Continue the war without moving any fleet. The proposer receives its reserved credits back.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          }
+        },
+        "war": {
+          "enabled": false,
+          "reason": "Already at war.",
+          "effect": "Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "peace": {
+          "enabled": true,
+          "reason": "",
+          "effect": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+          "cost": {
+            "credits": 60,
+            "orders": 1
+          },
+          "accepted": true,
+          "mode": "settlement",
+          "willingness": {
+            "accepted": true,
+            "reason": "Their colonies face military pressure they can observe.",
+            "reasons": [
+              "Their colonies face military pressure they can observe.",
+              "The Khar Dominion is reluctant to concede a war."
+            ],
+            "warAge": 9,
+            "lostColonies": 0
+          }
+        },
+        "trade": {
+          "enabled": false,
+          "reason": "End the war before negotiating trade.",
+          "effect": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.",
+          "cost": {
+            "credits": 30,
+            "orders": 1
+          }
+        },
+        "gift": {
+          "enabled": false,
+          "reason": "Diplomatic gifts cannot be sent during war.",
+          "effect": "Transfer 35 credits; mutual trust +20. Existing border grievances remain.",
+          "cost": {
+            "credits": 35,
+            "orders": 1
+          }
+        },
+        "endTrade": {
+          "enabled": false,
+          "reason": "No active trade treaty.",
+          "effect": "Give 3 cycles of notice. Income and access continue until turn 31, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "acceptPeace": {
+          "enabled": false,
+          "reason": "No active incoming peace offer.",
+          "effect": "Receive 60 credits. End the war and establish a 5-cycle truce. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "declinePeace": {
+          "enabled": false,
+          "reason": "No active incoming peace offer.",
+          "effect": "Continue the war without moving any fleet. The proposer receives its reserved credits back.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "pendingOffers": [],
+        "incomingOffer": null,
+        "outgoingOffer": null
+      },
+      "kharIntent": [
+        {
+          "type": "diplomacy",
+          "factionId": "khar",
+          "targetId": "player",
+          "stance": "peace",
+          "reason": "Their colonies face military pressure they can observe."
+        }
+      ]
+    },
+    {
+      "label": "Cycle29 before player invasion",
+      "turn": 29,
+      "kharWarStart": 19,
+      "kharCurrentColonies": 4,
+      "kharStartColonies": 3,
+      "kharObservedThreatenedColonies": [
+        "s8"
+      ],
+      "kharObservedInvadingWeight": 5,
+      "derivedWillingnessScore": 54,
+      "threshold": 48,
+      "playerForecast": {
+        "factionId": "player",
+        "targetId": "khar",
+        "status": "war",
+        "trust": -50,
+        "grievance": 0,
+        "ourGrievance": 0,
+        "theirGrievance": 20,
+        "truceUntil": 0,
+        "truceRemaining": 0,
+        "tradeEndsAt": 0,
+        "tradeEndingIn": null,
+        "borderCount": 0,
+        "policy": "Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.",
+        "actions": {
+          "war": {
+            "enabled": false,
+            "reason": "Already at war.",
+            "effect": "Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "peace": {
+            "enabled": true,
+            "reason": "",
+            "effect": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+            "cost": {
+              "credits": 60,
+              "orders": 1
+            },
+            "accepted": true,
+            "mode": "settlement",
+            "willingness": {
+              "accepted": true,
+              "reason": "Their colonies face military pressure they can observe.",
+              "reasons": [
+                "Their colonies face military pressure they can observe.",
+                "The Khar Dominion is reluctant to concede a war."
+              ],
+              "warAge": 10,
+              "lostColonies": 0
+            }
+          },
+          "trade": {
+            "enabled": false,
+            "reason": "End the war before negotiating trade.",
+            "effect": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.",
+            "cost": {
+              "credits": 30,
+              "orders": 1
+            }
+          },
+          "gift": {
+            "enabled": false,
+            "reason": "Diplomatic gifts cannot be sent during war.",
+            "effect": "Transfer 35 credits; mutual trust +20. Existing border grievances remain.",
+            "cost": {
+              "credits": 35,
+              "orders": 1
+            }
+          },
+          "endTrade": {
+            "enabled": false,
+            "reason": "No active trade treaty.",
+            "effect": "Give 3 cycles of notice. Income and access continue until turn 32, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "acceptPeace": {
+            "enabled": true,
+            "reason": "",
+            "effect": "Receive 60 credits. End the war and establish a 5-cycle truce. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "declinePeace": {
+            "enabled": true,
+            "reason": "",
+            "effect": "Continue the war without moving any fleet. The proposer receives its reserved credits back.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          }
+        },
+        "war": {
+          "enabled": false,
+          "reason": "Already at war.",
+          "effect": "Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "peace": {
+          "enabled": true,
+          "reason": "",
+          "effect": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+          "cost": {
+            "credits": 60,
+            "orders": 1
+          },
+          "accepted": true,
+          "mode": "settlement",
+          "willingness": {
+            "accepted": true,
+            "reason": "Their colonies face military pressure they can observe.",
+            "reasons": [
+              "Their colonies face military pressure they can observe.",
+              "The Khar Dominion is reluctant to concede a war."
+            ],
+            "warAge": 10,
+            "lostColonies": 0
+          }
+        },
+        "trade": {
+          "enabled": false,
+          "reason": "End the war before negotiating trade.",
+          "effect": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.",
+          "cost": {
+            "credits": 30,
+            "orders": 1
+          }
+        },
+        "gift": {
+          "enabled": false,
+          "reason": "Diplomatic gifts cannot be sent during war.",
+          "effect": "Transfer 35 credits; mutual trust +20. Existing border grievances remain.",
+          "cost": {
+            "credits": 35,
+            "orders": 1
+          }
+        },
+        "endTrade": {
+          "enabled": false,
+          "reason": "No active trade treaty.",
+          "effect": "Give 3 cycles of notice. Income and access continue until turn 32, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "acceptPeace": {
+          "enabled": true,
+          "reason": "",
+          "effect": "Receive 60 credits. End the war and establish a 5-cycle truce. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "declinePeace": {
+          "enabled": true,
+          "reason": "",
+          "effect": "Continue the war without moving any fleet. The proposer receives its reserved credits back.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "pendingOffers": [
+          {
+            "id": "peace-1",
+            "from": "khar",
+            "to": "player",
+            "createdTurn": 28,
+            "expiresTurn": 31,
+            "credits": 60,
+            "status": "pending",
+            "truceTurns": 5
+          }
+        ],
+        "incomingOffer": {
+          "id": "peace-1",
+          "from": "khar",
+          "to": "player",
+          "createdTurn": 28,
+          "expiresTurn": 31,
+          "credits": 60,
+          "status": "pending",
+          "truceTurns": 5
+        },
+        "outgoingOffer": null
+      },
+      "kharIntent": []
+    },
+    {
+      "label": "Exact cycle29 before acceptance",
+      "turn": 29,
+      "kharWarStart": 19,
+      "kharCurrentColonies": 3,
+      "kharStartColonies": 3,
+      "kharObservedThreatenedColonies": [],
+      "kharObservedInvadingWeight": 0,
+      "derivedWillingnessScore": 30,
+      "threshold": 48,
+      "playerForecast": {
+        "factionId": "player",
+        "targetId": "khar",
+        "status": "war",
+        "trust": -50,
+        "grievance": 0,
+        "ourGrievance": 0,
+        "theirGrievance": 20,
+        "truceUntil": 0,
+        "truceRemaining": 0,
+        "tradeEndsAt": 0,
+        "tradeEndingIn": null,
+        "borderCount": 0,
+        "policy": "Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.",
+        "actions": {
+          "war": {
+            "enabled": false,
+            "reason": "Already at war.",
+            "effect": "Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "peace": {
+            "enabled": false,
+            "reason": "They refuse: the war has not lasted long enough, and their observed losses or military pressure are insufficient.",
+            "effect": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+            "cost": {
+              "credits": 60,
+              "orders": 1
+            },
+            "accepted": false,
+            "mode": "settlement",
+            "willingness": {
+              "accepted": false,
+              "reason": "They refuse: the war has not lasted long enough, and their observed losses or military pressure are insufficient.",
+              "reasons": [
+                "The Khar Dominion is reluctant to concede a war."
+              ],
+              "warAge": 10,
+              "lostColonies": 0
+            }
+          },
+          "trade": {
+            "enabled": false,
+            "reason": "End the war before negotiating trade.",
+            "effect": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.",
+            "cost": {
+              "credits": 30,
+              "orders": 1
+            }
+          },
+          "gift": {
+            "enabled": false,
+            "reason": "Diplomatic gifts cannot be sent during war.",
+            "effect": "Transfer 35 credits; mutual trust +20. Existing border grievances remain.",
+            "cost": {
+              "credits": 35,
+              "orders": 1
+            }
+          },
+          "endTrade": {
+            "enabled": false,
+            "reason": "No active trade treaty.",
+            "effect": "Give 3 cycles of notice. Income and access continue until turn 32, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "acceptPeace": {
+            "enabled": true,
+            "reason": "",
+            "effect": "Receive 60 credits. End the war and establish a 5-cycle truce. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          },
+          "declinePeace": {
+            "enabled": true,
+            "reason": "",
+            "effect": "Continue the war without moving any fleet. The proposer receives its reserved credits back.",
+            "cost": {
+              "credits": 0,
+              "orders": 1
+            }
+          }
+        },
+        "war": {
+          "enabled": false,
+          "reason": "Already at war.",
+          "effect": "Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "peace": {
+          "enabled": false,
+          "reason": "They refuse: the war has not lasted long enough, and their observed losses or military pressure are insufficient.",
+          "effect": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+          "cost": {
+            "credits": 60,
+            "orders": 1
+          },
+          "accepted": false,
+          "mode": "settlement",
+          "willingness": {
+            "accepted": false,
+            "reason": "They refuse: the war has not lasted long enough, and their observed losses or military pressure are insufficient.",
+            "reasons": [
+              "The Khar Dominion is reluctant to concede a war."
+            ],
+            "warAge": 10,
+            "lostColonies": 0
+          }
+        },
+        "trade": {
+          "enabled": false,
+          "reason": "End the war before negotiating trade.",
+          "effect": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.",
+          "cost": {
+            "credits": 30,
+            "orders": 1
+          }
+        },
+        "gift": {
+          "enabled": false,
+          "reason": "Diplomatic gifts cannot be sent during war.",
+          "effect": "Transfer 35 credits; mutual trust +20. Existing border grievances remain.",
+          "cost": {
+            "credits": 35,
+            "orders": 1
+          }
+        },
+        "endTrade": {
+          "enabled": false,
+          "reason": "No active trade treaty.",
+          "effect": "Give 3 cycles of notice. Income and access continue until turn 32, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "acceptPeace": {
+          "enabled": true,
+          "reason": "",
+          "effect": "Receive 60 credits. End the war and establish a 5-cycle truce. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "declinePeace": {
+          "enabled": true,
+          "reason": "",
+          "effect": "Continue the war without moving any fleet. The proposer receives its reserved credits back.",
+          "cost": {
+            "credits": 0,
+            "orders": 1
+          }
+        },
+        "pendingOffers": [
+          {
+            "id": "peace-1",
+            "from": "khar",
+            "to": "player",
+            "createdTurn": 28,
+            "expiresTurn": 31,
+            "credits": 60,
+            "status": "pending",
+            "truceTurns": 5
+          }
+        ],
+        "incomingOffer": {
+          "id": "peace-1",
+          "from": "khar",
+          "to": "player",
+          "createdTurn": 28,
+          "expiresTurn": 31,
+          "credits": 60,
+          "status": "pending",
+          "truceTurns": 5
+        },
+        "outgoingOffer": null
+      },
+      "kharIntent": []
+    }
+  ],
+  "tradeViews": [
+    {
+      "time": "2026-10-28T21:16:02.642Z",
+      "turn": 7,
+      "op": "end",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 10,
+        "trade": false,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0
+      },
+      "commands": []
+    },
+    {
+      "time": "2026-10-28T21:16:14.518Z",
+      "turn": 7,
+      "op": "actions",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 10,
+        "trade": false,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0
+      },
+      "commands": [
+        {
+          "type": "move",
+          "fleetId": "f1",
+          "targetId": "s11"
+        },
+        {
+          "type": "move",
+          "fleetId": "f3",
+          "targetId": "s21"
+        },
+        {
+          "type": "build",
+          "systemId": "s20",
+          "itemId": "lab"
+        }
+      ]
+    },
+    {
+      "time": "2026-10-28T21:16:30.207Z",
+      "turn": 7,
+      "op": "actions",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 10,
+        "trade": false,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0
+      },
+      "commands": [
+        {
+          "type": "move",
+          "fleetId": "f1",
+          "targetId": "s16"
+        }
+      ]
+    },
+    {
+      "time": "2026-10-28T21:16:30.757Z",
+      "turn": 8,
+      "op": "end",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 21,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "commands": []
+    },
+    {
+      "time": "2026-10-28T21:16:49.464Z",
+      "turn": 8,
+      "op": "actions",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 21,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "commands": []
+    },
+    {
+      "time": "2026-10-28T21:17:11.020Z",
+      "turn": 8,
+      "op": "actions",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 21,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "commands": [
+        {
+          "type": "move",
+          "fleetId": "f1",
+          "targetId": "s24"
+        }
+      ]
+    },
+    {
+      "time": "2026-10-28T21:17:24.222Z",
+      "turn": 8,
+      "op": "actions",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 21,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "commands": []
+    },
+    {
+      "time": "2026-10-28T21:17:55.100Z",
+      "turn": 8,
+      "op": "actions",
+      "choirRelation": {
+        "status": "peace",
+        "trust": 21,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "commands": [
+        {
+          "type": "anomaly",
+          "systemId": "s24",
+          "choice": "salvage"
+        },
+        {
+          "type": "move",
+          "fleetId": "f1",
+          "targetId": "s37"
+        },
+        {
+          "type": "move",
+          "fleetId": "f3",
+          "targetId": "s13"
+        }
+      ]
+    }
+  ],
+  "engineSourceHashes": {
+    "src/game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385"
+  },
+  "frozenEngineEquivalentTo": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+  "exactSerializedPostsettlementMatch": true,
+  "postsettlementCanonicalSha256": "bba4930803c2499b0e75d3417fc90b36974eab2fca21c01a54511f77b42b2e9c",
+  "verifiedPreacceptSha256": "a7be80db74ea94238e9fea651b7fe3ed7ea2aade73f66a96398e90e561ab78a6",
+  "normalizations": 3,
+  "renderingNote": "Text-only original diplomacy UI rendering ignored CSS imports using a module loader; no engine or UI JavaScript source changed.",
+  "replayScriptSha256": "5fee956be8d2fbf4dd9663ddcd30fcfd4b2f4bfc83464bfdbb5cea1fbd81024c",
+  "commandsFileSha256": "94cfdb3354a00def57d9891cfc62a3fdad5f3bdfed8ef359755a1fd84411657e",
+  "actualPreacceptDOMSha256": "aacdca0868193b306509ffd359484d101487b80de4837ab593d5994bbb6e04d4",
+  "counterfactualCancellation": {
+    "file": "reopen-trade-results.json",
+    "sha256": "828219a5782ada6427a3ad1bcba276c4026432c433fde69a6032550c160c5224",
+    "closedAt": 23,
+    "reopenedAt": 24,
+    "actualHumanAction": false
+  }
+}

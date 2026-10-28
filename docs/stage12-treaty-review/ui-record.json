@@ -1,0 +1,171 @@
+{
+  "preview": "http://127.0.0.1:5185/",
+  "buildInfo": {
+    "version": "0.12.0",
+    "commit": "123cee1a4e2b8175713468b2d8d9c3fc0d5787cf",
+    "builtAt": "2026-10-28T21:59:26.939Z"
+  },
+  "method": "Actual recorded peace checkpoint plus normal-command changed-policy trade fork. Zero-order fixture spends ordinary gifts; stale expiry fixture is explicitly synthetic. All response/selection/export actions through UI.",
+  "entries": [
+    {
+      "type": "image",
+      "file": "390-zero-order-trade-terms.png",
+      "caption": "Terms remain readable at zero orders, and both responses are disabled. Initial keyboard focus is recorded separately.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "finding",
+      "name": "Zero-order initial focus",
+      "initial": {
+        "tag": "BUTTON",
+        "text": "Review their trade offer",
+        "action": "review-trade",
+        "inModal": false,
+        "disabled": false
+      },
+      "afterTab": {
+        "tag": "BUTTON",
+        "text": "View diplomatic actions \u2192",
+        "action": "rival-channel",
+        "inModal": false,
+        "disabled": false
+      },
+      "afterEscape": {
+        "tag": "BUTTON",
+        "text": "Review their trade offer",
+        "action": "review-trade",
+        "inModal": false,
+        "disabled": false
+      }
+    },
+    {
+      "type": "image",
+      "file": "1440-pending-trade.png",
+      "caption": "Ordinary-command cancellation fork: a funded proposal is pending, with closed borders and no duplicate paid treaty button.",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "image",
+      "file": "1440-funded-trade-terms.png",
+      "caption": "Trade explicitly spends the proposer\u2019s reserved30-credit signing fee; the recipient pays no credits and receives no transfer.",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "image",
+      "file": "1280-funded-trade-terms.png",
+      "caption": "Trade explicitly spends the proposer\u2019s reserved30-credit signing fee; the recipient pays no credits and receives no transfer.",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "image",
+      "file": "390-funded-trade-terms.png",
+      "caption": "Trade explicitly spends the proposer\u2019s reserved30-credit signing fee; the recipient pays no credits and receives no transfer.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "check",
+      "name": "Funded trade acceptance",
+      "pendingBordersClosed": true,
+      "noDuplicatePaidButton": true,
+      "proposerReservation": 30,
+      "recipientCreditChange": 0,
+      "proposerCreditChangeAtAcceptance": 0,
+      "recipientOrderCost": 1,
+      "keyboardOpenAndEscapeRestore": true,
+      "normalInitialFocus": {
+        "tag": "BUTTON",
+        "text": "Accept trade \u00b7 1 order",
+        "action": "trade-response",
+        "inModal": true,
+        "disabled": false
+      },
+      "exactReload": true
+    },
+    {
+      "type": "check",
+      "name": "Decline",
+      "refund": 30,
+      "recipientCreditsUnchanged": true,
+      "responseOrders": 1,
+      "cooldownUntil": 34,
+      "manualPlayerInitiativeAvailable": true,
+      "exactReload": true
+    },
+    {
+      "type": "image",
+      "file": "1280-stale-offer-hidden.png",
+      "caption": "Synthetic expiry-boundary import: stale pending record produces no badge/card/review action and inspection leaves escrow untouched.",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "check",
+      "name": "Stale import",
+      "noBadgeCardOrReview": true,
+      "inspectionAndReloadPure": true
+    },
+    {
+      "type": "image",
+      "file": "1280-real-khar-binding-offer.png",
+      "caption": "Real verified preaccept29: binding60-credit offer replaces the misleading unrelated refusal wording.",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "image",
+      "file": "390-real-peace-transfer.png",
+      "caption": "The actual Khar peace offer says Receive60 credits, with a five-cycle truce and withdrawal; this contrasts accurately with the trade fee.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentOverflow": false
+    },
+    {
+      "type": "check",
+      "name": "Exact actual29 peace and split",
+      "noGeneralRefusalAlongsideOffer": true,
+      "recipientTransfer": 60,
+      "fullHistoricalExportEquality": true,
+      "exactReload": true
+    }
+  ],
+  "errors": [],
+  "compiledAssetsSha256": {
+    "index.html": "1ad700c0001f8b53368dcc1fbb60bf583f9bb62e6c53a82594d29f6ec140e23f",
+    "build-info.json": "d7520a447566f9473bd2542af3f79137682061bd10746a7f2003c257312fc5b8",
+    "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+    "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+    "assets/index-BHUAV4WI.css": "2e077d8dac2b03124bdc62bc35836f7cd422e5f200c0d61ae33f46ec87a68c2f",
+    "assets/index-CTROYHi6.js": "351d5bdc04c50fd106a0f2900e0baf18a81ef0d064a723584a733f1b0371423c",
+    "assets/marcellus-latin-400-normal-86dSXJnk.woff2": "8a539799d12e3a144273288055490f57e1eee84da7a9145f085bc522e80719c3",
+    "assets/marcellus-latin-400-normal-AvMY561b.woff": "7083fa63e075a796f4beef9293fbc29a80be738d84bbfd89a20ddcdfc5c82198"
+  },
+  "sourceNote": "Engine is pinned123cee1. Integrated UI was an uncommitted working-tree addition when frozen5185 was built; the compiled asset hashes pin the exact reviewed UI bytes."
+}

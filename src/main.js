@@ -3,7 +3,7 @@ import './workspace.css';
 import './fleet-operations.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
-import { getDiplomacyForecast } from './diplomacy.js';
+import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
 import { renderDiplomacyPage } from './diplomacy-ui.js';
 import { renderColonyTable } from './empire-ui.js';
 import { renderWorkspaceInspector } from './workspace-ui.js';
@@ -106,9 +106,9 @@ function render() {
   empireButton.querySelector('.nav-badge')?.remove();
   empireButton.setAttribute('aria-label',`Empire${rivalRace?`, rival alignment ${rivalRace.progress} of ${rivalRace.target}`:''}`);
   if(rivalRace)empireButton.insertAdjacentHTML('beforeend',`<b class="nav-badge">${rivalRace.progress}/${rivalRace.target}</b>`);
-  const incomingOffers = (state.diplomacyOffers || []).filter(o => o.to === 'player' && o.status === 'pending');
+  const incomingOffers = getActiveDiplomacyOffers(state).filter(offer => offer.to === 'player');
   const diplomacyButton = $('[data-page="diplomacy"]');
-  diplomacyButton.setAttribute('aria-label', `Diplomacy${incomingOffers.length ? `, ${incomingOffers.length} pending peace proposal` : ''}`);
+  diplomacyButton.setAttribute('aria-label', `Diplomacy${incomingOffers.length ? `, ${incomingOffers.length} pending diplomatic proposal${incomingOffers.length===1?'':'s'}` : ''}`);
   diplomacyButton.querySelector('.nav-badge')?.remove();
   if (incomingOffers.length) diplomacyButton.insertAdjacentHTML('beforeend', `<b class="nav-badge">${incomingOffers.length}</b>`);
   renderInspector(); renderFleet(); renderPage(); galaxy.update(state, selectedSystemId, selectedFleetId);
@@ -203,7 +203,7 @@ function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
   $('#toasts').replaceChildren();
   modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><div class="modal-content">${html}</div></section></div>`;
-  const focusTarget=$('.modal .primary') || $('.modal button'); focusTarget?.focus();
+  const focusTarget=$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus();
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
 function buildMenu(systemId,tab='building',replaceBuildingId=null) {
@@ -252,10 +252,16 @@ function showFleetRoster() {
   openModal('fleet-roster',`<div class="eyebrow">CONCORD FLEET COMMAND</div><h2 id="modal-title">Your presence among the stars</h2><p class="modal-lead">${fleets.length} fleets · ${ready} awaiting orders · ${held} holding position. Select any fleet to focus its location.</p><div class="fleet-list">${fleets.map(f=>`<button class="fleet-row" data-fleet="${f.id}">${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)} ×${f.ships}<small>${escape(systemById(f.systemId).name)} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull · ${SHIPS[f.type].upkeep*f.ships} credits upkeep</small></span>${renderFleetReadiness(state,f)}</button>`).join('')||'<p class="empty-note">Commission ships at an Orbital Shipyard to return to the stars.</p>'}</div><p class="empty-note" style="margin-top:18px">Hold position keeps a fleet out of the ready queue without spending orders or movement. Select a held fleet to resume it or issue a manual command.</p>`);
 }
 function showPeaceOffer(offerId) {
-  const offer=(state.diplomacyOffers || []).find(o=>o.id===offerId && o.to==='player' && o.status==='pending');
+  const offer=getActiveDiplomacyOffers(state).find(o=>o.id===offerId && o.to==='player' && o.kind==='peace');
   if(!offer) return toast('That proposal is no longer available.',true);
   const forecast=getDiplomacyForecast(state,'player',offer.from);
   openModal('peace-offer',`<div class="eyebrow">AN ENVOY FROM ${escape(FACTIONS[offer.from].shortName)}</div><h2 id="modal-title">An offer to end the war</h2><p class="modal-lead">${escape(FACTIONS[offer.from].name)} proposes a settlement. The war continues until you agree.</p><ul class="peace-terms"><li><b>Receive ${offer.credits} credits.</b> Their payment is already reserved for this agreement.</li><li><b>A ${offer.truceTurns}-cycle mutual truce.</b> Neither side may declare war during the truce.</li><li><b>Military withdrawal.</b> Fleets inside each other's territory return to their nearest owned colony and lose remaining movement.</li><li><b>Expires on cycle ${offer.expiresTurn}.</b> Responding uses one order.</li></ul><div class="modal-actions"><button data-action="peace-response" data-stance="declinePeace" data-target="${offer.from}" data-offer="${offer.id}" ${forecast.actions.declinePeace.enabled?'':'disabled'}>Decline proposal</button><button class="primary" data-action="peace-response" data-stance="acceptPeace" data-target="${offer.from}" data-offer="${offer.id}" ${forecast.actions.acceptPeace.enabled?'':'disabled'}>Accept settlement →</button></div>${!forecast.actions.acceptPeace.enabled?`<p class="empty-note" style="margin-top:14px">${escape(forecast.actions.acceptPeace.reason)}</p>`:''}`);
+}
+function showTradeOffer(offerId) {
+  const offer=getActiveDiplomacyOffers(state).find(candidate=>candidate.id===offerId && candidate.to==='player' && candidate.kind==='trade');
+  if(!offer)return toast('This trade offer is no longer available.',true);
+  const forecast=getDiplomacyForecast(state,'player',offer.from),income=player().techs.includes('diplomacy')?10:6;
+  openModal('trade-offer',`<div class="eyebrow">A TRADE ENVOY FROM ${escape(FACTIONS[offer.from].shortName)}</div><h2 id="modal-title">An offer of open borders</h2><p class="modal-lead">${escape(FACTIONS[offer.from].name)} proposes a trade treaty. Your borders stay closed until you accept.</p><ul class="peace-terms"><li><b>No signing fee from your treasury.</b> The proposer has reserved ${offer.credits} credits to establish the treaty.</li><li><b>Mutual border access.</b> Both empires may move their fleets through each other's territory under the ordinary movement rules.</li><li><b>Earn ${income} credits per cycle.</b> Mutual trust improves by 10; existing grievances remain.</li><li><b>Decision due before cycle ${offer.expiresTurn}.</b> Accepting or declining uses one order. Refusal or expiry refunds the proposer and leaves borders closed.</li><li><b>Trade continues until cancelled.</b> Peaceful cancellation gives three cycles of notice before income and access end and visiting fleets withdraw.</li></ul><div class="modal-actions"><button data-action="trade-response" data-stance="declineTrade" data-target="${offer.from}" data-offer="${offer.id}" ${forecast.actions.declineTrade.enabled?'':'disabled'}>Decline · 1 order</button><button class="primary" data-action="trade-response" data-stance="acceptTrade" data-target="${offer.from}" data-offer="${offer.id}" ${forecast.actions.acceptTrade.enabled?'':'disabled'}>Accept trade · 1 order</button></div>${!forecast.actions.acceptTrade.enabled?`<p class="empty-note" style="margin-top:14px">${escape(forecast.actions.acceptTrade.reason)}</p>`:''}`);
 }
 function showDiplomaticConfirmation(stance,targetId) {
   const forecast=getDiplomacyForecast(state,'player',targetId),option=forecast.actions[stance];
@@ -278,12 +284,12 @@ function advanceTurn(force=false) {
   else {
     const briefing=state.lastBriefing;
     if(briefing?.entries.length) $('#status-message').textContent=`Cycle ${briefing.turn}: ${briefing.entries.length} dispatches available in your briefing.`;
-    const newOffer=(state.diplomacyOffers || []).find(o=>o.to==='player' && o.status==='pending' && o.createdTurn>=previousTurn);
+    const newOffer=getActiveDiplomacyOffers(state).find(offer=>offer.to==='player' && offer.createdTurn>=previousTurn);
     const raceAlert=getPublicRaces(state).some(race=>{const before=previousRaces.find(r=>r.factionId===race.factionId);return race.factionId!=='player' && (race.progress>0 && !before?.progress || race.progress>=8 && (before?.progress||0)<8);});
     const transferBlocksRoute=entry=>{const world=systemById(entry.systemId);return world?.owner && world.owner!=='player' && !player().relations[world.owner].trade && player().relations[world.owner].status!=='war' && state.fleets.some(fleet=>fleet.owner==='player' && fleet.route?.path.slice(1).includes(entry.systemId));};
     const publicAlert=briefing?.entries.some(entry=>entry.type==='war' || entry.publicAffairId && entry.type==='sovereignty' && transferBlocksRoute(entry));
     if(briefing?.reportIds.length || raceAlert || publicAlert)showCycleBriefing();
-    else if(newOffer) showPeaceOffer(newOffer.id);
+    else if(newOffer) newOffer.kind==='trade'?showTradeOffer(newOffer.id):showPeaceOffer(newOffer.id);
   }
 }
 function showVictory() {
@@ -360,7 +366,9 @@ document.addEventListener('click',event=>{
     case 'anomaly-choice':if(dispatch({type:'anomaly',systemId:el.dataset.system,choiceId:el.dataset.choice,replaceBuildingId:el.dataset.replace||null}))closeModal();break;
     case 'diplomacy':dispatch({type:'diplomacy',targetId:el.dataset.target,stance:el.dataset.stance,offerId:el.dataset.offer});break;
     case 'review-peace':showPeaceOffer(el.dataset.offer);break;
+    case 'review-trade':showTradeOffer(el.dataset.offer);break;
     case 'peace-response':if(dispatch({type:'diplomacy',targetId:el.dataset.target,stance:el.dataset.stance,offerId:el.dataset.offer}))closeModal();break;
+    case 'trade-response':if(dispatch({type:'diplomacy',targetId:el.dataset.target,stance:el.dataset.stance,offerId:el.dataset.offer}))closeModal();break;
     case 'peace-confirmation':showDiplomaticConfirmation('peace',el.dataset.target);break;
     case 'end-trade-confirmation':showDiplomaticConfirmation('endTrade',el.dataset.target);break;
     case 'diplomatic-confirm':if(dispatch({type:'diplomacy',targetId:el.dataset.target,stance:el.dataset.stance}))closeModal();break;

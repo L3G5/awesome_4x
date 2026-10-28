@@ -1,0 +1,155 @@
+{
+  "method": "Counterfactual ordinary-command branch from the legitimate actual cycle20 export. This cancellation was not performed in the human campaign. One player endTrade command, then only endTurn; no grants or state edits.",
+  "sourceRevision": "78e3cff160999a951919485cf1d06838bda41b8e",
+  "inputSha256": "5a7715292fb9af76c6ccfe298b0ffb235dcd108dcce5f4255a8691baf0f5f48e",
+  "scriptSha256": "39cfb1dcd6dd713267f69a733280c57040f6890940a934031c23bad6d3b3d74b",
+  "closedAt": 23,
+  "reopenedAt": 24,
+  "commands": [
+    {
+      "turn": 20,
+      "action": {
+        "type": "diplomacy",
+        "targetId": "choir",
+        "stance": "endTrade"
+      },
+      "result": {
+        "ok": true,
+        "message": "The Concord gave notice to end trade with The Luminous Choir. Income and open borders continue until turn 23, when visiting fleets withdraw.",
+        "outcome": "tradeNotice"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "type": "endTurn"
+      },
+      "result": {
+        "ok": true,
+        "message": "Turn 21: a new mandate begins."
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "type": "endTurn"
+      },
+      "result": {
+        "ok": true,
+        "message": "Turn 22: a new mandate begins."
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "type": "endTurn"
+      },
+      "result": {
+        "ok": true,
+        "message": "Turn 23: a new mandate begins."
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "type": "endTurn"
+      },
+      "result": {
+        "ok": true,
+        "message": "Turn 24: a new mandate begins."
+      }
+    }
+  ],
+  "rows": [
+    {
+      "label": "Actual exported initial state",
+      "turn": 20,
+      "trade": true,
+      "tradeEndsAt": 0,
+      "choirTrust": 33,
+      "choirGrievance": 0,
+      "choirCredits": 320,
+      "choirProposals": [],
+      "bilateralLog": []
+    },
+    {
+      "label": "Counterfactual player gives cancellation notice",
+      "turn": 20,
+      "trade": true,
+      "tradeEndsAt": 23,
+      "choirTrust": 28,
+      "choirGrievance": 5,
+      "choirCredits": 320,
+      "choirProposals": [],
+      "bilateralLog": [
+        {
+          "turn": 20,
+          "text": "The Concord gave notice to end trade with The Luminous Choir. Income and open borders continue until turn 23, when visiting fleets withdraw."
+        }
+      ]
+    },
+    {
+      "label": "Only ordinary End cycle; no player treaty action",
+      "turn": 21,
+      "trade": true,
+      "tradeEndsAt": 23,
+      "choirTrust": 29,
+      "choirGrievance": 4,
+      "choirCredits": 367,
+      "choirProposals": [],
+      "bilateralLog": []
+    },
+    {
+      "label": "Only ordinary End cycle; no player treaty action",
+      "turn": 22,
+      "trade": true,
+      "tradeEndsAt": 23,
+      "choirTrust": 30,
+      "choirGrievance": 3,
+      "choirCredits": 315,
+      "choirProposals": [],
+      "bilateralLog": []
+    },
+    {
+      "label": "Only ordinary End cycle; no player treaty action",
+      "turn": 23,
+      "trade": false,
+      "tradeEndsAt": 0,
+      "choirTrust": 30,
+      "choirGrievance": 2,
+      "choirCredits": 364,
+      "choirProposals": [
+        {
+          "type": "diplomacy",
+          "factionId": "choir",
+          "targetId": "player",
+          "stance": "trade",
+          "reason": "Peaceful relations and manageable frontier tensions favor trade."
+        }
+      ],
+      "bilateralLog": [
+        {
+          "turn": 23,
+          "text": "Trade between The Concord and The Luminous Choir has ended. Trade income and open borders cease; 0 visiting fleets withdrew."
+        }
+      ]
+    },
+    {
+      "label": "Only ordinary End cycle; no player treaty action",
+      "turn": 24,
+      "trade": true,
+      "tradeEndsAt": 0,
+      "choirTrust": 41,
+      "choirGrievance": 1,
+      "choirCredits": 389,
+      "choirProposals": [],
+      "bilateralLog": [
+        {
+          "turn": 23,
+          "text": "Trade established between The Luminous Choir and The Concord. Borders are open; existing grievances remain."
+        }
+      ]
+    }
+  ],
+  "allStatesValid": true
+}

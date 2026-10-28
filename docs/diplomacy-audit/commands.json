@@ -1,0 +1,585 @@
+[
+  {
+    "eventIndex": 321,
+    "time": "2026-10-28T21:23:31.204Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "attack",
+      "fleetId": "f13"
+    },
+    "normalization": "Missing annotation reconstructed from the exact clicked attack control and preceding selected fleet.",
+    "result": "Invasion of Caldera: 24 defense damage; 0 defenses remain. Concord lost 0 ships and 6.7 hull to retaliation. Caldera captured; invading fleet survives."
+  },
+  {
+    "eventIndex": 329,
+    "time": "2026-10-28T21:24:23.613Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "lab"
+    },
+    "normalization": null,
+    "result": "Research Enclave commissioned at Caldera."
+  },
+  {
+    "eventIndex": 332,
+    "time": "2026-10-28T21:24:25.101Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s13"
+    },
+    "normalization": null,
+    "result": "Vanguard 25 arrived at Sable."
+  },
+  {
+    "eventIndex": 334,
+    "time": "2026-10-28T21:24:25.868Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "normalization": null,
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 339,
+    "time": "2026-10-28T21:24:28.572Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s28"
+    },
+    "normalization": null,
+    "result": "Vanguard 32 arrived at Haven."
+  },
+  {
+    "eventIndex": 341,
+    "time": "2026-10-28T21:24:28.694Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "gift"
+    },
+    "normalization": null,
+    "result": "The Concord sent a 35-credit gift to Veyr Consortium. Trust improves; border grievances remain."
+  },
+  {
+    "eventIndex": 342,
+    "time": "2026-10-28T21:24:28.946Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 21: a new mandate begins."
+  },
+  {
+    "eventIndex": 345,
+    "time": "2026-10-28T21:25:33.942Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "normalization": null,
+    "result": "Research directed toward Deflector Fields."
+  },
+  {
+    "eventIndex": 350,
+    "time": "2026-10-28T21:25:36.056Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s5"
+    },
+    "normalization": null,
+    "result": "Vanguard 25 arrived at Hesper."
+  },
+  {
+    "eventIndex": 352,
+    "time": "2026-10-28T21:25:37.114Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "normalization": null,
+    "result": "Vanguard 28 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 355,
+    "time": "2026-10-28T21:25:38.712Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s36"
+    },
+    "normalization": null,
+    "result": "Vanguard 32 arrived at Peregrine."
+  },
+  {
+    "eventIndex": 358,
+    "time": "2026-10-28T21:25:40.241Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "normalization": null,
+    "result": "Pathfinder 1 encountered 1 hostile ship at Stillwater and withdrew to Aldebaran. One order and one jump were spent; no survey was conducted."
+  },
+  {
+    "eventIndex": 360,
+    "time": "2026-10-28T21:26:01.616Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "cancelBuild",
+      "systemId": "s8"
+    },
+    "normalization": "Missing annotation reconstructed from the clicked cancellation control system ID.",
+    "result": "Project cancelled. Unspent materials returned."
+  },
+  {
+    "eventIndex": 362,
+    "time": "2026-10-28T21:26:10.250Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 22: a new mandate begins."
+  },
+  {
+    "eventIndex": 367,
+    "time": "2026-10-28T21:26:55.952Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s10"
+    },
+    "normalization": null,
+    "result": "Vanguard 25 arrived at Ashfall."
+  },
+  {
+    "eventIndex": 369,
+    "time": "2026-10-28T21:26:56.931Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f25"
+    },
+    "normalization": null,
+    "result": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 370,
+    "time": "2026-10-28T21:26:57.254Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f35"
+    },
+    "normalization": null,
+    "result": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 373,
+    "time": "2026-10-28T21:26:57.619Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "normalization": null,
+    "result": "Vanguard commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 376,
+    "time": "2026-10-28T21:26:59.008Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s23"
+    },
+    "normalization": null,
+    "result": "Vanguard 32 arrived at Tethys."
+  },
+  {
+    "eventIndex": 378,
+    "time": "2026-10-28T21:26:59.535Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 23: a new mandate begins."
+  },
+  {
+    "eventIndex": 381,
+    "time": "2026-10-28T21:27:13.606Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s10"
+    },
+    "normalization": null,
+    "result": "Vanguard 32 arrived at Ashfall."
+  },
+  {
+    "eventIndex": 383,
+    "time": "2026-10-28T21:27:14.645Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f32"
+    },
+    "normalization": null,
+    "result": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 386,
+    "time": "2026-10-28T21:27:15.912Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "normalization": "Annotation charterId normalized to actual UI command charterType using data-charter=forge.",
+    "result": "Forge Charter I commissioned at Solace."
+  },
+  {
+    "eventIndex": 390,
+    "time": "2026-10-28T21:27:16.615Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalization": null,
+    "result": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 391,
+    "time": "2026-10-28T21:27:17.104Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 24: a new mandate begins."
+  },
+  {
+    "eventIndex": 393,
+    "time": "2026-10-28T21:27:28.295Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 25: a new mandate begins."
+  },
+  {
+    "eventIndex": 396,
+    "time": "2026-10-28T21:28:12.054Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalization": null,
+    "result": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 400,
+    "time": "2026-10-28T21:28:14.444Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f39",
+      "destinationId": "s10"
+    },
+    "normalization": null,
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 401,
+    "time": "2026-10-28T21:28:15.176Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalization": null,
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 403,
+    "time": "2026-10-28T21:28:16.498Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f38"
+    },
+    "normalization": null,
+    "result": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 405,
+    "time": "2026-10-28T21:28:16.703Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "factory"
+    },
+    "normalization": null,
+    "result": "Manufactory commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 407,
+    "time": "2026-10-28T21:28:17.216Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s5"
+    },
+    "normalization": null,
+    "result": "Vanguard 28 arrived at Hesper."
+  },
+  {
+    "eventIndex": 409,
+    "time": "2026-10-28T21:28:17.590Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 26: a new mandate begins."
+  },
+  {
+    "eventIndex": 412,
+    "time": "2026-10-28T21:28:36.214Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s13"
+    },
+    "normalization": null,
+    "result": "Vanguard 28 arrived at Sable."
+  },
+  {
+    "eventIndex": 414,
+    "time": "2026-10-28T21:28:37.210Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalization": null,
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 415,
+    "time": "2026-10-28T21:28:37.838Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 27: a new mandate begins."
+  },
+  {
+    "eventIndex": 417,
+    "time": "2026-10-28T21:29:04.789Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "normalization": null,
+    "result": "Research directed toward Capital Ship Architecture."
+  },
+  {
+    "eventIndex": 420,
+    "time": "2026-10-28T21:29:05.792Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalization": null,
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 423,
+    "time": "2026-10-28T21:29:07.361Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s21"
+    },
+    "normalization": null,
+    "result": "Vanguard 28 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 427,
+    "time": "2026-10-28T21:29:08.538Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "normalization": null,
+    "result": "Vanguard commissioned at Solace."
+  },
+  {
+    "eventIndex": 431,
+    "time": "2026-10-28T21:29:09.167Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalization": null,
+    "result": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 435,
+    "time": "2026-10-28T21:29:11.490Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f40",
+      "destinationId": "s10"
+    },
+    "normalization": null,
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 436,
+    "time": "2026-10-28T21:29:12.284Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "normalization": null,
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 437,
+    "time": "2026-10-28T21:29:12.741Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 28: a new mandate begins."
+  },
+  {
+    "eventIndex": 439,
+    "time": "2026-10-28T21:29:19.864Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "normalization": null,
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 441,
+    "time": "2026-10-28T21:29:21.437Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalization": null,
+    "result": "Vanguard 39 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 444,
+    "time": "2026-10-28T21:29:23.291Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s8"
+    },
+    "normalization": null,
+    "result": "Vanguard 28 arrived at Caldera."
+  },
+  {
+    "eventIndex": 445,
+    "time": "2026-10-28T21:29:34.410Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "endTurn"
+    },
+    "normalization": null,
+    "result": "Turn 29: a new mandate begins."
+  },
+  {
+    "eventIndex": 449,
+    "time": "2026-10-28T21:30:23.318Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "attack",
+      "fleetId": "f28",
+      "systemId": "s8"
+    },
+    "normalization": null,
+    "result": "Invasion of Caldera: 24 defense damage; 0 defenses remain. Concord lost 0 ships and 5.4 hull to retaliation. Caldera captured; invading fleet survives."
+  },
+  {
+    "eventIndex": 453,
+    "time": "2026-10-28T21:30:42.470Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "acceptPeace",
+      "offerId": "peace-1"
+    },
+    "normalization": null,
+    "result": "Peace accepted. You receive 60 credits; war is forbidden until turn 34."
+  },
+  {
+    "eventIndex": 459,
+    "time": "2026-10-28T21:31:05.305Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "split",
+      "fleetId": "f28",
+      "ships": 2
+    },
+    "normalization": null,
+    "result": "2 ships detached as Vanguard 46."
+  }
+]

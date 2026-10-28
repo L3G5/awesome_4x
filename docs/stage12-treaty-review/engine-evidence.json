@@ -1,0 +1,175 @@
+{
+  "commit": "123cee1a4e2b8175713468b2d8d9c3fc0d5787cf",
+  "sourceArchiveSha256": "e9f5fce194d458e81ccdb0c3fac0c198a9b5ea2cdd31d58f6c230417b77ea65a",
+  "fixtureHashes": {
+    "actual-cycle20.json": "5a7715292fb9af76c6ccfe298b0ffb235dcd108dcce5f4255a8691baf0f5f48e",
+    "verified-before-accept29.json": "a7be80db74ea94238e9fea651b7fe3ed7ea2aade73f66a96398e90e561ab78a6",
+    "actual-postsettlement29.json": "25fdd7398529cbc398e1e706ded4c4734a119ff6566b376f604c0cece6472117"
+  },
+  "method": "Engine source archived from exact commit. Historical29 acceptance must reproduce its actual final export. The20 cancellation is a separately labelled counterfactual compared with its historical result. Stale/trust edge fixtures are explicitly synthetic copies; no repository edits.",
+  "results": [
+    {
+      "case": "Historical29 funded peace acceptance and recorded two-ship garrison split",
+      "newPaidProposalDisabled": true,
+      "existingOfferEnabled": true,
+      "playerCreditsReceived": 60,
+      "fullOriginalPostsettlementEquality": true
+    },
+    {
+      "case": "Changed-policy cancellation fork",
+      "historicalCounterfactual": "Same20 cancellation closed23 and automatically reopened24 under78e3cff",
+      "newBehavior": "Closes23; quiet through AI cycle27; new funded offer created28 is visible29 with borders still closed. Acceptance at29 opens trade.",
+      "commands": [
+        {
+          "turn": 20,
+          "type": "endTrade",
+          "targetId": "choir"
+        },
+        {
+          "turn": 20,
+          "type": "endTurn"
+        },
+        {
+          "turn": 21,
+          "type": "endTurn"
+        },
+        {
+          "turn": 22,
+          "type": "endTurn"
+        },
+        {
+          "turn": 23,
+          "type": "endTurn"
+        },
+        {
+          "turn": 24,
+          "type": "endTurn"
+        },
+        {
+          "turn": 25,
+          "type": "endTurn"
+        },
+        {
+          "turn": 26,
+          "type": "endTurn"
+        },
+        {
+          "turn": 27,
+          "type": "endTurn"
+        },
+        {
+          "turn": 28,
+          "type": "endTurn"
+        }
+      ],
+      "rows": [
+        {
+          "turn": 21,
+          "trade": true,
+          "after": null,
+          "activeOffer": null
+        },
+        {
+          "turn": 22,
+          "trade": true,
+          "after": null,
+          "activeOffer": null
+        },
+        {
+          "turn": 23,
+          "trade": false,
+          "after": 28,
+          "activeOffer": null
+        },
+        {
+          "turn": 24,
+          "trade": false,
+          "after": 28,
+          "activeOffer": null
+        },
+        {
+          "turn": 25,
+          "trade": false,
+          "after": 28,
+          "activeOffer": null
+        },
+        {
+          "turn": 26,
+          "trade": false,
+          "after": 28,
+          "activeOffer": null
+        },
+        {
+          "turn": 27,
+          "trade": false,
+          "after": 28,
+          "activeOffer": null
+        },
+        {
+          "turn": 28,
+          "trade": false,
+          "after": 28,
+          "activeOffer": null
+        },
+        {
+          "turn": 29,
+          "trade": false,
+          "after": 28,
+          "activeOffer": {
+            "id": "trade-1",
+            "kind": "trade",
+            "from": "choir",
+            "to": "player",
+            "createdTurn": 28,
+            "expiresTurn": 31,
+            "credits": 30,
+            "status": "pending"
+          }
+        }
+      ],
+      "acceptance": {
+        "recipientCreditsChange": 0,
+        "proposerCreditsChangeAtAcceptance": 0,
+        "responseOrders": 1,
+        "incomeChange": 6
+      },
+      "nextCycleReloadEquality": true
+    },
+    {
+      "case": "Decline and voluntary player initiation",
+      "refund": 30,
+      "quietDeadline": 34,
+      "manualPlayerInitiativeStillCosts": 30
+    },
+    {
+      "case": "Six duplicate/wrong-kind/foreign/mismatched/unknown responses",
+      "allFailuresAtomic": true
+    },
+    {
+      "case": "Stale import before advanceDiplomacy",
+      "pureActiveAndForecastQueries": true,
+      "noImmediateReplacement": true,
+      "staleResponseAtomic": true,
+      "refundOnce": 30,
+      "quietDeadline": 36
+    },
+    {
+      "case": "Late stale import after quiet deadline",
+      "replacementAllowed": true,
+      "oldEscrowRefundAndNewReservationNet": 0,
+      "oneActiveProposal": true,
+      "validSave": true
+    },
+    {
+      "case": "Binding terms after trust decline",
+      "accepted": true,
+      "recipientPaidOrReceivedCredits": false
+    },
+    {
+      "case": "Immediate war invalidation",
+      "refundOnce": 30,
+      "closedTrade": true,
+      "validImmediately": true
+    }
+  ]
+}

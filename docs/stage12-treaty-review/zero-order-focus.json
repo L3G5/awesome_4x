@@ -1,0 +1,25 @@
+{
+  "type": "finding",
+  "name": "Zero-order initial focus",
+  "initial": {
+    "tag": "BUTTON",
+    "text": "Review their trade offer",
+    "action": "review-trade",
+    "inModal": false,
+    "disabled": false
+  },
+  "afterTab": {
+    "tag": "BUTTON",
+    "text": "View diplomatic actions →",
+    "action": "rival-channel",
+    "inModal": false,
+    "disabled": false
+  },
+  "afterEscape": {
+    "tag": "BUTTON",
+    "text": "Review their trade offer",
+    "action": "review-trade",
+    "inModal": false,
+    "disabled": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "engineCommit": "123cee1a4e2b8175713468b2d8d9c3fc0d5787cf",
+  "trade": "Ordinary-command counterfactual from actual20 export: endTrade Choir, nine endTurn commands. This is changed-policy evidence, not historical replay.",
+  "zeroOrders": {
+    "source": "current-policy-trade29.json",
+    "commands": [
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      },
+      {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "gift"
+      }
+    ],
+    "method": "Ordinary paid gifts to already contacted peaceful Veyr; no grants or edits."
+  },
+  "expired": {
+    "source": "current-policy-trade29.json",
+    "method": "Synthetic stale-import edge fixture; only turn changed to the offer expiry31 without processing that phase."
+  }
+}

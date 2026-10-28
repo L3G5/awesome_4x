@@ -1,0 +1,2347 @@
+{
+  "generatedAt": "2026-10-28T22:07:48.883Z",
+  "sourceRevision": "123cee1a4e2b8175713468b2d8d9c3fc0d5787cf",
+  "sourceArchiveSha256": "e9f5fce194d458e81ccdb0c3fac0c198a9b5ea2cdd31d58f6c230417b77ea65a",
+  "engineHashes": {
+    "src/game.js": "530029ef4d981d88e8d30f9e046d955ff704d85379d24b42e69ce78c9df1c0e9",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "src/diplomacy.js": "74b4edcb2a24561d65161b03d2472cfb9564fa6850f7103f0522aa93f2cc9152",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c"
+  },
+  "scriptSha256": "cec72f37d1f1a3684b021f4f1b7cb354691b7688bcce5396e19a24e8bee4c117",
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7"
+  ],
+  "policies": {
+    "ignore": "Never respond to incoming trade; all other player decisions also remain passive.",
+    "accept": "Before End cycle, accept each legal active incoming trade offer using its normal command; make no other player choices.",
+    "decline": "Before End cycle, decline each legal active incoming trade offer using its normal command; make no other player choices."
+  },
+  "method": {
+    "cohort": "Eight identical seeds per policy;24 campaigns total. Source is pinned and unmodified. No older-engine or balance comparator.",
+    "termination": "First winner or LAST_TURN120; no extra campaigns.",
+    "decisionOrder": "Incoming trade sorted by createdTurn, numeric offer ID, then proposer ID. Re-query legal response before each command. Offers without a legal response remain pending.",
+    "checkpoints": [
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "reload": "At each reached checkpoint, execute the full next policy round from structuredClone and JSON.parse(JSON.stringify(state)); compare command results and complete serialized states. Probes are excluded from cohort event/cycle totals.",
+    "checks": "Validate every initial/post-command/post-End-cycle state, finite nonnegative faction credits/minerals/science/orders, bilateral treaty flags, explicit accepted-offer authorization for every player treaty opening, immutable offer terms, no lost pending receipts, no second resolution, no post before a prior quiet deadline, valid quiet-phase forecasts and AI intents.",
+    "financialMeasurement": "Accept/decline commands check actual recipient/proposer credit deltas and order cost. Campaign expiry totals are30-credit refund obligations derived from resolved offer receipts, not isolated treasury deltas: AI spending and income share the same End-cycle operation. No engine instrumentation or synthetic counterfactual is used.",
+    "denominators": "Offer counts are distinct trade offer IDs within each campaign, including finalized records later pruned from the bounded save archive. A treaty observation is one player-rival pair after a main-cohort state check. Quiet observations count pair states whose deadline is still future. Resource checks count four fields for all four factions per checked state.",
+    "limits": "These are intentionally passive policy measurements, not human difficulty/win rates or an earlier-version balance comparison. Neither policy initiates or cancels treaties, moves ships, develops colonies, researches, declares war, responds to peace, or uses Hold. Completed games can retain pending escrow; this is reported, not treated as an invented refund. Eight matched seeds do not estimate a population win probability."
+  },
+  "runs": [
+    {
+      "policy": "ignore",
+      "seed": "ASTERION",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 12,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 11,
+        "terminalPending": 1,
+        "expiryAtDeadline": 11,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 11,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 6,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 5,
+          "terminalPending": 1,
+          "expiryAtDeadline": 5,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 5,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 6,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 6,
+          "terminalPending": 0,
+          "expiryAtDeadline": 6,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 6,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 66,
+        "quietObservations": 55,
+        "receiptChecks": 288,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 65,
+      "turnAdvances": 65,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 12,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 18,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 21,
+      "endTurn": 66,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 64,
+        "khar": 0,
+        "choir": 66
+      },
+      "escrowReceipts": {
+        "reservedCredits": 360,
+        "consumedFees": 0,
+        "refundedCredits": 330,
+        "terminalOutstandingCredits": 30
+      },
+      "commandTraceSha256": "d0dd284df79b1ba6260a31226da168b4bb91ae5fd6d6192e5d3d27b147d53788",
+      "finalStateSha256": "69b981faa6b2582742beb9cecfe0ca82100ffb430105813fd028fb3cd6e1de9d"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-1",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 12,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 12,
+        "terminalPending": 0,
+        "expiryAtDeadline": 12,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 12,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 6,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 6,
+          "terminalPending": 0,
+          "expiryAtDeadline": 6,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 6,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 6,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 6,
+          "terminalPending": 0,
+          "expiryAtDeadline": 6,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 6,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 69,
+        "quietObservations": 58,
+        "receiptChecks": 306,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 68,
+      "turnAdvances": 68,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 12,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 21,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 24,
+      "endTurn": 69,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 72,
+        "khar": 0,
+        "choir": 69
+      },
+      "escrowReceipts": {
+        "reservedCredits": 360,
+        "consumedFees": 0,
+        "refundedCredits": 360,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "b11951a132dccec96ec339937b05eeecd3eb68db7e234b3fb0aab1c9eb943c31",
+      "finalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-2",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 10,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 9,
+        "terminalPending": 1,
+        "expiryAtDeadline": 9,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 9,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 7,
+          "terminalPending": 1,
+          "expiryAtDeadline": 7,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 7,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 2,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 2,
+          "terminalPending": 0,
+          "expiryAtDeadline": 2,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 2,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 68,
+        "quietObservations": 43,
+        "receiptChecks": 248,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 67,
+      "turnAdvances": 67,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 10,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 10,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 13,
+      "endTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 66,
+        "khar": 0,
+        "choir": 71
+      },
+      "escrowReceipts": {
+        "reservedCredits": 300,
+        "consumedFees": 0,
+        "refundedCredits": 270,
+        "terminalOutstandingCredits": 30
+      },
+      "commandTraceSha256": "3e7f459fefaeeeaf9faa4ebbc21c121c1646a7cd8a1c8edeeacb11dc71172449",
+      "finalStateSha256": "47ad12f4a87103141acc8a40f7370959a7e964a2da316acaafeed8173e8bd997"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-3",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 18,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 17,
+        "terminalPending": 1,
+        "expiryAtDeadline": 17,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 17,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 8,
+          "terminalPending": 0,
+          "expiryAtDeadline": 8,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 10,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 9,
+          "terminalPending": 1,
+          "expiryAtDeadline": 9,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 9,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 85,
+        "quietObservations": 85,
+        "receiptChecks": 650,
+        "reloadRounds": 4
+      },
+      "endTurnCalls": 84,
+      "turnAdvances": 84,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 18,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 11,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 14,
+      "endTurn": 85,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 85,
+        "khar": 0,
+        "choir": 83
+      },
+      "escrowReceipts": {
+        "reservedCredits": 540,
+        "consumedFees": 0,
+        "refundedCredits": 510,
+        "terminalOutstandingCredits": 30
+      },
+      "commandTraceSha256": "533515f5f15d91b0f87dc5322670f14d2e3bca6534080be6094c6b7bd7f891b8",
+      "finalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-4",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 16,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 16,
+        "terminalPending": 0,
+        "expiryAtDeadline": 16,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 16,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 8,
+          "terminalPending": 0,
+          "expiryAtDeadline": 8,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 8,
+          "terminalPending": 0,
+          "expiryAtDeadline": 8,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 72,
+        "quietObservations": 78,
+        "receiptChecks": 536,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 71,
+      "turnAdvances": 71,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 16,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 8,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 11,
+      "endTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 75,
+        "khar": 0,
+        "choir": 72
+      },
+      "escrowReceipts": {
+        "reservedCredits": 480,
+        "consumedFees": 0,
+        "refundedCredits": 480,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "c8eded6155f623dc00531df53498f7c3d37a63b4c8886e432d9962a23bf4cc81",
+      "finalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-5",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 7,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 7,
+        "terminalPending": 0,
+        "expiryAtDeadline": 7,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 7,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 7,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 7,
+          "terminalPending": 0,
+          "expiryAtDeadline": 7,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 7,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 70,
+        "quietObservations": 33,
+        "receiptChecks": 196,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 69,
+      "turnAdvances": 69,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 7,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 17,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 20,
+      "endTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 73
+      },
+      "escrowReceipts": {
+        "reservedCredits": 210,
+        "consumedFees": 0,
+        "refundedCredits": 210,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "e1a4e62187efef0c208e14582c35fef00468f0c74815988d9606c93dea8294b4",
+      "finalStateSha256": "f29c031aa9872ab955142a830caebb57c140048295529b5108f13dd04942bdde"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-6",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 17,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 17,
+        "terminalPending": 0,
+        "expiryAtDeadline": 17,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 17,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 8,
+          "terminalPending": 0,
+          "expiryAtDeadline": 8,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 9,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 9,
+          "terminalPending": 0,
+          "expiryAtDeadline": 9,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 9,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 78,
+        "quietObservations": 81,
+        "receiptChecks": 586,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 77,
+      "turnAdvances": 77,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 17,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 11,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 14,
+      "endTurn": 78,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 78,
+        "khar": 0,
+        "choir": 83
+      },
+      "escrowReceipts": {
+        "reservedCredits": 510,
+        "consumedFees": 0,
+        "refundedCredits": 510,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "ad61f3fd68243968698d022c525fb0131db68202ec7642476aebc1c92f1ab18d",
+      "finalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e"
+    },
+    {
+      "policy": "ignore",
+      "seed": "stage4-audit-7",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 9,
+        "accepted": 0,
+        "declined": 0,
+        "expired": 9,
+        "terminalPending": 0,
+        "expiryAtDeadline": 9,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 9,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 2,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 2,
+          "terminalPending": 0,
+          "expiryAtDeadline": 2,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 2,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 7,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 7,
+          "terminalPending": 0,
+          "expiryAtDeadline": 7,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 7,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 70,
+        "quietObservations": 44,
+        "receiptChecks": 279,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 69,
+      "turnAdvances": 69,
+      "responseCommands": 0,
+      "peakSavedOfferRecords": 9,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 16,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 19,
+      "endTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 43,
+        "khar": 0,
+        "choir": 72
+      },
+      "escrowReceipts": {
+        "reservedCredits": 270,
+        "consumedFees": 0,
+        "refundedCredits": 270,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "e1a4e62187efef0c208e14582c35fef00468f0c74815988d9606c93dea8294b4",
+      "finalStateSha256": "a7cc2e19213c32584adcd9a1647419d6551dffedf4642a076982b79cea112e91"
+    },
+    {
+      "policy": "accept",
+      "seed": "ASTERION",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 72,
+        "quietObservations": 0,
+        "receiptChecks": 99,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 69,
+      "turnAdvances": 69,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 18,
+      "firstAcceptanceTurn": 19,
+      "firstDeadlineTurn": null,
+      "endTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "4b41c178c355ffac55630232dc646101a42ab090b95cc021d914ec093ce460b2",
+      "finalStateSha256": "ad68114f23467b17991e7d31973c6f04514867ee3b5a5e80447422a8a69dae06"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-1",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 65,
+        "quietObservations": 0,
+        "receiptChecks": 82,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 62,
+      "turnAdvances": 62,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 21,
+      "firstAcceptanceTurn": 22,
+      "firstDeadlineTurn": null,
+      "endTurn": 63,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "8ecec891f6cf25f4aa75e916b786d9d36528accc6fb2a71268827b860e0ead27",
+      "finalStateSha256": "a9b666918eac973b121dd10507c22e9a95128253aea80e985f669c72e9cf4519"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-2",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 70,
+        "quietObservations": 0,
+        "receiptChecks": 72,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 67,
+      "turnAdvances": 67,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 10,
+      "firstAcceptanceTurn": 11,
+      "firstDeadlineTurn": null,
+      "endTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "63608db9bf51744e57b3f7f8b47a8f489e14fbd67680c7f51aa0a518b11a3eb8",
+      "finalStateSha256": "c2789f6ee0c8dbe3d706d8020989df63badd145660ae67e201b07bf676099950"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-3",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 70,
+        "quietObservations": 0,
+        "receiptChecks": 105,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 67,
+      "turnAdvances": 67,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 11,
+      "firstAcceptanceTurn": 12,
+      "firstDeadlineTurn": null,
+      "endTurn": 68,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "c748675bb151eceb9e5ec640cd99a522e7536ca034ec8763ac1c05c833dd131d",
+      "finalStateSha256": "2712538255b90f153346a189da0423086538771dfeba141b0fb63895a14ca1e1"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-4",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 74,
+        "quietObservations": 0,
+        "receiptChecks": 126,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 71,
+      "turnAdvances": 71,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 8,
+      "firstAcceptanceTurn": 9,
+      "firstDeadlineTurn": null,
+      "endTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "6d2f5b5c190dd0c4c659c21317acaa0e4b684be45ebefd36d64f88fbe4bfe199",
+      "finalStateSha256": "62b71d532ef0782c9a4d048279eefc2f14bf50176c790d1b4e054687fb967713"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-5",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 1,
+        "accepted": 1,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 1
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 82,
+        "quietObservations": 0,
+        "receiptChecks": 64,
+        "reloadRounds": 4
+      },
+      "endTurnCalls": 80,
+      "turnAdvances": 80,
+      "responseCommands": 1,
+      "peakSavedOfferRecords": 1,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 17,
+      "firstAcceptanceTurn": 18,
+      "firstDeadlineTurn": null,
+      "endTurn": 81,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 30,
+        "consumedFees": 30,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "480529e1047b9daa813186b1271fec640314a5a8552348ff4fee7df193790841",
+      "finalStateSha256": "6d41cb982d4b7d01d61615a4ec3a225cb075631bcedf0813916c3427e06b36c8"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-6",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 64,
+        "quietObservations": 0,
+        "receiptChecks": 100,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 61,
+      "turnAdvances": 61,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 11,
+      "firstAcceptanceTurn": 12,
+      "firstDeadlineTurn": null,
+      "endTurn": 62,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "1cfac891b33a6e22b0b16f9ce5e3bfa08e38c07eb8d9d5c764159088035983cd",
+      "finalStateSha256": "59608996e3aea61ef6c90f1fa568b4ab34699520b07c4727e2daf5732e345c02"
+    },
+    {
+      "policy": "accept",
+      "seed": "stage4-audit-7",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 2,
+        "accepted": 2,
+        "declined": 0,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 0,
+        "closedTreaties": 0,
+        "openedTreaties": 2
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 1,
+          "accepted": 1,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 1
+        }
+      },
+      "checks": {
+        "states": 75,
+        "quietObservations": 0,
+        "receiptChecks": 104,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 72,
+      "turnAdvances": 72,
+      "responseCommands": 2,
+      "peakSavedOfferRecords": 2,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 16,
+      "firstAcceptanceTurn": 17,
+      "firstDeadlineTurn": null,
+      "endTurn": 73,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [
+        "veyr",
+        "choir"
+      ],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 0
+      },
+      "escrowReceipts": {
+        "reservedCredits": 60,
+        "consumedFees": 60,
+        "refundedCredits": 0,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "9717c10445036363e4216cc8163a5d55dba1c8d4ca599be1414b5d7cd730fa89",
+      "finalStateSha256": "c77d23c6a8d2b312346015037551d851f5d2daff8acdf1acc0e01bad92adcef7"
+    },
+    {
+      "policy": "decline",
+      "seed": "ASTERION",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 15,
+        "accepted": 0,
+        "declined": 15,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 15,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 7,
+          "accepted": 0,
+          "declined": 7,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 7,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 8,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 81,
+        "quietObservations": 82,
+        "receiptChecks": 496,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 65,
+      "turnAdvances": 65,
+      "responseCommands": 15,
+      "peakSavedOfferRecords": 15,
+      "peakPendingTradeOffers": 2,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 18,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 19,
+      "endTurn": 66,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 66,
+        "khar": 0,
+        "choir": 66
+      },
+      "escrowReceipts": {
+        "reservedCredits": 450,
+        "consumedFees": 0,
+        "refundedCredits": 450,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "37477e179cc06ab166515756692b24fe2fd726db73c9d6953a092ce503247df3",
+      "finalStateSha256": "6fb3330a1d0ccb549259d3992a83480a441128e43c0124bd0bc6a806151a7952"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-1",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 16,
+        "accepted": 0,
+        "declined": 16,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 16,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 8,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 8,
+          "accepted": 0,
+          "declined": 8,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 8,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 85,
+        "quietObservations": 93,
+        "receiptChecks": 528,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 68,
+      "turnAdvances": 68,
+      "responseCommands": 16,
+      "peakSavedOfferRecords": 16,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 21,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 22,
+      "endTurn": 69,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 72,
+        "khar": 0,
+        "choir": 69
+      },
+      "escrowReceipts": {
+        "reservedCredits": 480,
+        "consumedFees": 0,
+        "refundedCredits": 480,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "5b9f1a696e6f62381c98f82d61e5e870683aac111cf24139cc723b0b6b5f9907",
+      "finalStateSha256": "986a39852adc7d3e30ae6ef5ebcc3f218c7b2aa501d54dfff04503feb501f4e0"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-2",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 13,
+        "accepted": 0,
+        "declined": 12,
+        "expired": 0,
+        "terminalPending": 1,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 12,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 10,
+          "accepted": 0,
+          "declined": 10,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 10,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 3,
+          "accepted": 0,
+          "declined": 2,
+          "expired": 0,
+          "terminalPending": 1,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 2,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 80,
+        "quietObservations": 63,
+        "receiptChecks": 396,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 67,
+      "turnAdvances": 67,
+      "responseCommands": 12,
+      "peakSavedOfferRecords": 13,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 10,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 11,
+      "endTurn": 68,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 70,
+        "khar": 0,
+        "choir": 67
+      },
+      "escrowReceipts": {
+        "reservedCredits": 390,
+        "consumedFees": 0,
+        "refundedCredits": 360,
+        "terminalOutstandingCredits": 30
+      },
+      "commandTraceSha256": "e53a0aa2ea77c4e640d0838d89a539e55df693d3394852c0eb0eae8cf3b23c7f",
+      "finalStateSha256": "20614e408d9cca6b2c857c0de68c978bacab3ecd6984664d9040b56a02c9fa44"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-3",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 24,
+        "accepted": 0,
+        "declined": 24,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 24,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 11,
+          "accepted": 0,
+          "declined": 11,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 11,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 13,
+          "accepted": 0,
+          "declined": 13,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 13,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 109,
+        "quietObservations": 138,
+        "receiptChecks": 1144,
+        "reloadRounds": 4
+      },
+      "endTurnCalls": 84,
+      "turnAdvances": 84,
+      "responseCommands": 24,
+      "peakSavedOfferRecords": 24,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 11,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 12,
+      "endTurn": 85,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 87,
+        "khar": 0,
+        "choir": 89
+      },
+      "escrowReceipts": {
+        "reservedCredits": 720,
+        "consumedFees": 0,
+        "refundedCredits": 720,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "c44507bf8e706137d39da8a66966820f247f9def5922aad9e40848f80b51f0b8",
+      "finalStateSha256": "4062cfd5ea0b9e7bb9d744e5838508016d5e77466e445b2ac4b678a69d30259a"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-4",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 22,
+        "accepted": 0,
+        "declined": 21,
+        "expired": 0,
+        "terminalPending": 1,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 21,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 11,
+          "accepted": 0,
+          "declined": 10,
+          "expired": 0,
+          "terminalPending": 1,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 10,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 11,
+          "accepted": 0,
+          "declined": 11,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 11,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 93,
+        "quietObservations": 124,
+        "receiptChecks": 924,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 71,
+      "turnAdvances": 71,
+      "responseCommands": 21,
+      "peakSavedOfferRecords": 22,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 8,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 9,
+      "endTurn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 71,
+        "khar": 0,
+        "choir": 74
+      },
+      "escrowReceipts": {
+        "reservedCredits": 660,
+        "consumedFees": 0,
+        "refundedCredits": 630,
+        "terminalOutstandingCredits": 30
+      },
+      "commandTraceSha256": "eefcb7cb9c18253ae088044b86dad1794196866ae6f4218c29c2491129479e60",
+      "finalStateSha256": "dfa13597257f08761ae2aa1e0b431383cd5e999f0494ebbaee49e62f257ee92d"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-5",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 9,
+        "accepted": 0,
+        "declined": 9,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 9,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 9,
+          "accepted": 0,
+          "declined": 9,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 9,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 79,
+        "quietObservations": 45,
+        "receiptChecks": 297,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 69,
+      "turnAdvances": 69,
+      "responseCommands": 9,
+      "peakSavedOfferRecords": 9,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 17,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 18,
+      "endTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 0,
+        "khar": 0,
+        "choir": 71
+      },
+      "escrowReceipts": {
+        "reservedCredits": 270,
+        "consumedFees": 0,
+        "refundedCredits": 270,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "673f355774ad46329c74e44dd2abbcf2ef110399db01ad6e3a4dcd56f98e4fe9",
+      "finalStateSha256": "62c2a8b5ecdcd5d2198e3534e2788cade55b97f76fc8c045c5f05af4f42cabc1"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-6",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 23,
+        "accepted": 0,
+        "declined": 22,
+        "expired": 0,
+        "terminalPending": 1,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 22,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 11,
+          "accepted": 0,
+          "declined": 11,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 11,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 12,
+          "accepted": 0,
+          "declined": 11,
+          "expired": 0,
+          "terminalPending": 1,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 11,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 100,
+        "quietObservations": 130,
+        "receiptChecks": 1012,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 77,
+      "turnAdvances": 77,
+      "responseCommands": 22,
+      "peakSavedOfferRecords": 23,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 11,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 12,
+      "endTurn": 78,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 80,
+        "khar": 0,
+        "choir": 77
+      },
+      "escrowReceipts": {
+        "reservedCredits": 690,
+        "consumedFees": 0,
+        "refundedCredits": 660,
+        "terminalOutstandingCredits": 30
+      },
+      "commandTraceSha256": "78187dd224a5bb34206bb0ac3908f434764478411ec020f4bded1e9cddd21589",
+      "finalStateSha256": "4b4aa652f19971da609b0a42fbab2b7ee503dc92738853fade2b40bbd26f8807"
+    },
+    {
+      "policy": "decline",
+      "seed": "stage4-audit-7",
+      "status": "pass",
+      "startTurn": 1,
+      "counters": {
+        "created": 12,
+        "accepted": 0,
+        "declined": 12,
+        "expired": 0,
+        "terminalPending": 0,
+        "expiryAtDeadline": 0,
+        "earlyInvalidation": 0,
+        "quietDeadlineChanges": 12,
+        "closedTreaties": 0,
+        "openedTreaties": 0
+      },
+      "byFaction": {
+        "veyr": {
+          "created": 3,
+          "accepted": 0,
+          "declined": 3,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 3,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "khar": {
+          "created": 0,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "choir": {
+          "created": 9,
+          "accepted": 0,
+          "declined": 9,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 9,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        }
+      },
+      "checks": {
+        "states": 82,
+        "quietObservations": 63,
+        "receiptChecks": 447,
+        "reloadRounds": 3
+      },
+      "endTurnCalls": 69,
+      "turnAdvances": 69,
+      "responseCommands": 12,
+      "peakSavedOfferRecords": 12,
+      "peakPendingTradeOffers": 1,
+      "prunedFinalizedTradeRecords": 0,
+      "firstOfferTurn": 16,
+      "firstAcceptanceTurn": null,
+      "firstDeadlineTurn": 17,
+      "endTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finalActiveTradePartners": [],
+      "finalQuietDeadlines": {
+        "veyr": 45,
+        "khar": 0,
+        "choir": 70
+      },
+      "escrowReceipts": {
+        "reservedCredits": 360,
+        "consumedFees": 0,
+        "refundedCredits": 360,
+        "terminalOutstandingCredits": 0
+      },
+      "commandTraceSha256": "57596f4ac14a5f7a5bdc0a3a096491498fc3df9d6fb0e8d3d19da0755d7e7109",
+      "finalStateSha256": "20fd9aa2e9b1bc2cc7957de5ad33f60571154db73e679a47f347db1dc56048b9"
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "campaigns": 24,
+    "passed": 24,
+    "endTurnCalls": 1689,
+    "turnAdvances": 1689,
+    "checks": {
+      "states": 1859,
+      "resourceValues": 29744,
+      "treatyObservations": 5577,
+      "quietObservations": 1215,
+      "creationDeadlineChecks": 250,
+      "receiptChecks": 9085,
+      "resolutionChecks": 244,
+      "actualResponseFinanceChecks": 146,
+      "reloadRounds": 75,
+      "reloadStates": 150,
+      "unauthorizedOpenings": 0,
+      "invalidStates": 0,
+      "negativeOrNonfiniteValues": 0
+    },
+    "byPolicy": {
+      "ignore": {
+        "campaigns": 8,
+        "passed": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3,
+          "player": 0
+        },
+        "endTurnCalls": 570,
+        "responses": 0,
+        "tradeOffers": {
+          "created": 101,
+          "accepted": 0,
+          "declined": 0,
+          "expired": 98,
+          "terminalPending": 3,
+          "expiryAtDeadline": 98,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 98,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "prunedFinalizedTradeRecords": 0,
+        "peakSavedOfferRecords": 18,
+        "firstOfferTurn": {
+          "count": 8,
+          "min": 8,
+          "median": 13.5,
+          "max": 21
+        },
+        "escrowReceipts": {
+          "reservedCredits": 3030,
+          "consumedFees": 0,
+          "refundedCredits": 2940,
+          "terminalOutstandingCredits": 90
+        }
+      },
+      "accept": {
+        "campaigns": 8,
+        "passed": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 62,
+          "median": 69,
+          "max": 81
+        },
+        "winners": {
+          "veyr": 2,
+          "khar": 3,
+          "choir": 3,
+          "player": 0
+        },
+        "endTurnCalls": 549,
+        "responses": 15,
+        "tradeOffers": {
+          "created": 15,
+          "accepted": 15,
+          "declined": 0,
+          "expired": 0,
+          "terminalPending": 0,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 0,
+          "closedTreaties": 0,
+          "openedTreaties": 15
+        },
+        "prunedFinalizedTradeRecords": 0,
+        "peakSavedOfferRecords": 2,
+        "firstOfferTurn": {
+          "count": 8,
+          "min": 8,
+          "median": 13.5,
+          "max": 21
+        },
+        "escrowReceipts": {
+          "reservedCredits": 450,
+          "consumedFees": 450,
+          "refundedCredits": 0,
+          "terminalOutstandingCredits": 0
+        }
+      },
+      "decline": {
+        "campaigns": 8,
+        "passed": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3,
+          "player": 0
+        },
+        "endTurnCalls": 570,
+        "responses": 131,
+        "tradeOffers": {
+          "created": 134,
+          "accepted": 0,
+          "declined": 131,
+          "expired": 0,
+          "terminalPending": 3,
+          "expiryAtDeadline": 0,
+          "earlyInvalidation": 0,
+          "quietDeadlineChanges": 131,
+          "closedTreaties": 0,
+          "openedTreaties": 0
+        },
+        "prunedFinalizedTradeRecords": 0,
+        "peakSavedOfferRecords": 24,
+        "firstOfferTurn": {
+          "count": 8,
+          "min": 8,
+          "median": 13.5,
+          "max": 21
+        },
+        "escrowReceipts": {
+          "reservedCredits": 4020,
+          "consumedFees": 0,
+          "refundedCredits": 3930,
+          "terminalOutstandingCredits": 90
+        }
+      }
+    },
+    "elapsedSeconds": 16.542
+  }
+}
