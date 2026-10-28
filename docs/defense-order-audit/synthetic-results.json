@@ -1,0 +1,2513 @@
+{
+  "commit": "d50ed50cb076157ba09fb6e5dd4d0c06652a06ef",
+  "method": "Synthetic micro-cases only, not the actual Sable battle or human win rates. Same ordinary engine attack, same initial RNG/resources, only current own defender ordering changed to model a proposed Take point command. No combat source changes or campaign files inspected.",
+  "summaries": [
+    {
+      "scenario": {
+        "name": "Ark before military",
+        "first": {
+          "type": "colony",
+          "ships": 1,
+          "hp": 24
+        },
+        "second": {
+          "type": "frigate",
+          "ships": 3,
+          "hp": 102
+        },
+        "attackShips": 1
+      },
+      "pairedSeeds": 12,
+      "original": {
+        "attacksStopped": 12,
+        "meanDefenderHull": 84.8,
+        "arksSurviving": 0,
+        "cruisersSurviving": 0
+      },
+      "secondFirst": {
+        "attacksStopped": 12,
+        "meanDefenderHull": 110.9,
+        "arksSurviving": 12,
+        "cruisersSurviving": 0
+      }
+    },
+    {
+      "scenario": {
+        "name": "Damaged escort before cruiser",
+        "first": {
+          "type": "frigate",
+          "ships": 1,
+          "hp": 10
+        },
+        "second": {
+          "type": "cruiser",
+          "ships": 1,
+          "hp": 85
+        },
+        "attackShips": 2
+      },
+      "pairedSeeds": 12,
+      "original": {
+        "attacksStopped": 12,
+        "meanDefenderHull": 48.2,
+        "arksSurviving": 0,
+        "cruisersSurviving": 12
+      },
+      "secondFirst": {
+        "attacksStopped": 12,
+        "meanDefenderHull": 40.9,
+        "arksSurviving": 0,
+        "cruisersSurviving": 12
+      }
+    },
+    {
+      "scenario": {
+        "name": "Healthy escort force before cruiser",
+        "first": {
+          "type": "frigate",
+          "ships": 3,
+          "hp": 102
+        },
+        "second": {
+          "type": "cruiser",
+          "ships": 1,
+          "hp": 85
+        },
+        "attackShips": 3
+      },
+      "pairedSeeds": 12,
+      "original": {
+        "attacksStopped": 12,
+        "meanDefenderHull": 83.6,
+        "arksSurviving": 0,
+        "cruisersSurviving": 12
+      },
+      "secondFirst": {
+        "attacksStopped": 12,
+        "meanDefenderHull": 94.7,
+        "arksSurviving": 0,
+        "cruisersSurviving": 1
+      }
+    },
+    {
+      "scenario": {
+        "name": "Larger raider against two formations",
+        "first": {
+          "type": "frigate",
+          "ships": 3,
+          "hp": 102
+        },
+        "second": {
+          "type": "cruiser",
+          "ships": 1,
+          "hp": 85
+        },
+        "attackShips": 6
+      },
+      "pairedSeeds": 12,
+      "original": {
+        "attacksStopped": 0,
+        "meanDefenderHull": 0,
+        "arksSurviving": 0,
+        "cruisersSurviving": 0
+      },
+      "secondFirst": {
+        "attacksStopped": 0,
+        "meanDefenderHull": 0,
+        "arksSurviving": 0,
+        "cruisersSurviving": 0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "scenario": "Ark before military",
+      "seed": 1,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 88.8,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 88.8
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 113.6,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.6
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 2,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 76,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 76
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 114,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 3,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 89,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 114.3,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90.3
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 4,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 90.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 115.4,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 91.4
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 5,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 75,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 75
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 115.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 91.7
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 6,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 88.3,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 88.3
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 112.5,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 88.5
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 7,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 78.2,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 78.2
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 99.3,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 75.3
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 8,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 91.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 91.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 113.9,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.9
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 9,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 79.3,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 79.3
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 102.5,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 78.5
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 10,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 90.5,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90.5
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 113.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.7
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 11,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 79.9,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 79.9
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 113.3,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.3
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Ark before military",
+      "seed": 12,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 90,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 102.3,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 78.3
+            },
+            {
+              "type": "colony",
+              "ships": 1,
+              "hp": 24
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 1,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 48.3,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 48.3
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 33.5,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 23.5
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 2,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 46.6,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 46.6
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 32.6,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 22.6
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 3,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 44.9,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 44.9
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 45.2,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 35.2
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 4,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 52.9,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 52.9
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 41.7,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 31.7
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 5,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 51.3,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 51.3
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 52.5,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 42.5
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 6,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 46,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 46
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 55.3,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 45.3
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 7,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 34.1,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 34.1
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 28.2,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 18.2
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 8,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 52.2,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 52.2
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 59.9,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 49.9
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 9,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 50.7,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 50.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 37.3,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 27.3
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 10,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 48.6,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 48.6
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 34,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 24
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 11,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 50.3,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 50.3
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 35,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 25
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Damaged escort before cruiser",
+      "seed": 12,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 51.9,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 51.9
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 35.8,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 25.8
+            },
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 10
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 1,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 75.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 4
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 71.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "contested",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 91.2,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 91.2
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 2,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 73.2,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 1.5
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 71.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "contested",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 89.1,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.1
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 3,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 74.5,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 2.7
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 71.8
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "contested",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 90.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 4,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 111.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 26.7
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 85
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 90.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 5,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 109.1,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 24.1
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 85
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 102,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 102
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "mutual-destruction",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 6,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 85,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 85
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "mutual-destruction",
+              "defender": "First formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 102,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 102
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "mutual-destruction",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 7,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 50.9,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 50.9
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 91.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 91.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 8,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 107.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 22.7
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 85
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 118,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 16
+            },
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 102
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 9,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 74.7,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 74.7
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 89.6,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.6
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 10,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 89.7,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 4.7
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 85
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 89.5,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 89.5
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 11,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 79,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 1,
+              "hp": 7.1
+            },
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 71.9
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "contested",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 91.5,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 91.5
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Healthy escort force before cruiser",
+      "seed": 12,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 71.8,
+          "defenders": [
+            {
+              "type": "cruiser",
+              "ships": 1,
+              "hp": 71.8
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": true,
+          "attackerHull": 0,
+          "defenderHull": 90,
+          "defenders": [
+            {
+              "type": "frigate",
+              "ships": 3,
+              "hp": 90
+            }
+          ],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "attacker-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 1,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 98.7,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 88.4,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 2,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 93.4,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 82.5,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 3,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 91.9,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 82.3,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 4,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 80.5,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 68.8,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 5,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 80.8,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 68.8,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 6,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 86.8,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 63.1,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 7,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 105.5,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 94.5,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 8,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 87,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 59.7,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 9,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 105.5,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 93,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 10,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 84.5,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 59.7,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 11,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 98.9,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 76.2,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "Larger raider against two formations",
+      "seed": 12,
+      "variants": [
+        {
+          "order": "original",
+          "attackerDestroyed": false,
+          "attackerHull": 91.2,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            }
+          ]
+        },
+        {
+          "order": "second-first",
+          "attackerDestroyed": false,
+          "attackerHull": 77.2,
+          "defenderHull": 0,
+          "defenders": [],
+          "reports": [
+            {
+              "outcome": "defender-destroyed",
+              "defender": "Second formation"
+            },
+            {
+              "outcome": "defender-destroyed",
+              "defender": "First formation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

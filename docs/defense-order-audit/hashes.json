@@ -1,0 +1,69 @@
+{
+  "artifacts": {
+    "compare-synthetic.mjs": "e2eb9b70dad04d49caa3f0fa69f9df180906083e5d98e4a1f13cb4e1eda0265d",
+    "index.html": "cf998038ae26f7118938b18def2a66a75768ba928cb80d2019b46584cf0622f2",
+    "original-counterfactual-runner.mjs": "683635cfb8fc2bca75e506e70c9d141a1435a1a060f861e7e411dca2d940c653",
+    "original-counterfactual.json": "f3085c7d51456c31ac07c5b2408f5ae98424fc4065cb82702a3392fb7fe44c0c",
+    "original-synthetic-runner.mjs": "1c70def80203eff4141fa15c924497b43717441a438ff3ad252cdfb09b9837c6",
+    "replay-sable.mjs": "fec255c5b7bc32b3aa705d01677939fe3e1358e190df498e38866ec0d429be3a",
+    "sable-results.json": "0c7a609764a310f481b41545211f27f5389392c2e235a08d3e65891c3c9e4362",
+    "synthetic-engine/package.json": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae",
+    "synthetic-engine/src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "synthetic-engine/src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "synthetic-engine/src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "synthetic-engine/src/diplomacy.js": "74b4edcb2a24561d65161b03d2472cfb9564fa6850f7103f0522aa93f2cc9152",
+    "synthetic-engine/src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "synthetic-engine/src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "synthetic-engine/src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+    "synthetic-engine/src/game.js": "530029ef4d981d88e8d30f9e046d955ff704d85379d24b42e69ce78c9df1c0e9",
+    "synthetic-engine/src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "synthetic-engine/src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "synthetic-engine/src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "synthetic-engine/src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+    "synthetic-engine/src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "synthetic-provenance.json": "191660b11b99aa3b0fbc01caebcbafb3abe551760d29bf70b3b11fec175094d9",
+    "synthetic-results.json": "448d008d949d4c77fe57a2193e03dee3986e8d05a9901a37a1be5af13eeb8d82",
+    "verified-pre41.json": "f4fa3560dc0372ffe2bbf92d7a6ecdd3f67ac43f722739a5fdeb43b11a210d3d",
+    "verify-artifacts.mjs": "2687d318f72276dc4d5937619e46c61848f4eee21e9bd2b56cab4202b7026880"
+  },
+  "externalReferences": {
+    "../military-playtest/report.html": "c4fc42fde3384af7e92adfd0373f8a0897a98ba607f9c12176329e1ce499567f",
+    "../military-playtest/replay/commands.json": "44e938b4dee2d1fbea587703e638d1b8dc65dc0ffad8af1bf51098f2654d0a87",
+    "../military-playtest/replay/results.json": "e0a88e55543bf7ddbac94cc2acf5c8506edc646090f129f5ea028621957bf964",
+    "../military-playtest/replay/actual-exports/cycle42.json": "3f5ccb8a7b0bb8aba7bc7c531eeb8c84db5c6c446880b618e456b63a7981b991",
+    "../military-playtest/replay/engine/src/game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+    "../military-playtest/replay/engine/src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "../military-playtest/replay/engine/src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "../military-playtest/replay/engine/src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "../military-playtest/replay/engine/src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+    "../military-playtest/replay/engine/src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "../military-playtest/replay/engine/src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "../military-playtest/replay/engine/src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "../military-playtest/replay/engine/src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "../military-playtest/replay/engine/src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+    "../military-playtest/replay/engine/src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "../military-playtest/replay/engine/src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385"
+  },
+  "originalCopies": {
+    "original-counterfactual.json": {
+      "source": "/tmp/asterion-screen-counterfactual.json",
+      "sha256": "f3085c7d51456c31ac07c5b2408f5ae98424fc4065cb82702a3392fb7fe44c0c",
+      "exactCopy": true
+    },
+    "original-counterfactual-runner.mjs": {
+      "source": "/tmp/asterion-screen-counterfactual.mjs",
+      "sha256": "683635cfb8fc2bca75e506e70c9d141a1435a1a060f861e7e411dca2d940c653",
+      "exactCopy": true
+    },
+    "original-synthetic-runner.mjs": {
+      "source": "/tmp/asterion-screening-design/compare.mjs",
+      "sha256": "1c70def80203eff4141fa15c924497b43717441a438ff3ad252cdfb09b9837c6",
+      "exactCopy": true
+    },
+    "synthetic-results.json": {
+      "source": "/tmp/asterion-screening-design/results.json",
+      "sha256": "448d008d949d4c77fe57a2193e03dee3986e8d05a9901a37a1be5af13eeb8d82",
+      "exactCopy": true
+    }
+  }
+}

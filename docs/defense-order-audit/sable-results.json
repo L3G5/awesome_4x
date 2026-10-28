@@ -1,0 +1,155 @@
+{
+  "sourceRevision": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+  "receiptFile": "../military-playtest/replay/commands.json",
+  "receiptCount": 340,
+  "receiptSha256": "44e938b4dee2d1fbea587703e638d1b8dc65dc0ffad8af1bf51098f2654d0a87",
+  "engineSourceHashes": {
+    "src/game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385"
+  },
+  "checkpointKind": "Replay-derived cycle41 after recorded player commands, immediately before the rival phase. Not an actual UI export.",
+  "commandsReplayedBeforeBoundary": 233,
+  "lastPlayerCommandEvent": 689,
+  "rivalPhaseEvent": 690,
+  "actual42ExportEvent": 692,
+  "extraCommandsBeforeActual42": [],
+  "actual42Sha256": "3f5ccb8a7b0bb8aba7bc7c531eeb8c84db5c6c446880b618e456b63a7981b991",
+  "baselineMatchesActual42Exactly": true,
+  "pre41Sha256": "f4fa3560dc0372ffe2bbf92d7a6ecdd3f67ac43f722739a5fdeb43b11a210d3d",
+  "pre41CanonicalSha256": "d4b7bd135bceace7304c020f0ecdc88e4a400221f43f404558eb508d40bdd1eb",
+  "counterfactual": "Exchange only the two own Sable fleet array positions before the historical endTurn. This is an order-only hypothetical, not a legal historical command or a Stage14 implementation. No order cost is charged. Subsequent RNG differs, so no whole-campaign improvement is claimed.",
+  "before": [
+    {
+      "id": "f28",
+      "name": "Vanguard 28",
+      "owner": "player",
+      "systemId": "s13",
+      "type": "frigate",
+      "ships": 3,
+      "hp": 95.4,
+      "movesLeft": 0
+    },
+    {
+      "id": "f60",
+      "name": "Sovereign 60",
+      "owner": "player",
+      "systemId": "s13",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 0
+    }
+  ],
+  "baseline": {
+    "reports": [
+      {
+        "kind": "fleet",
+        "systemId": "s13",
+        "participants": [
+          {
+            "role": "attacker",
+            "fleetId": "f54",
+            "owner": "veyr",
+            "name": "Vanguard 54",
+            "type": "frigate",
+            "shipsBefore": 3,
+            "hullBefore": 102,
+            "shipsAfter": 0,
+            "hullAfter": 0
+          },
+          {
+            "role": "defender",
+            "fleetId": "f28",
+            "owner": "player",
+            "name": "Vanguard 28",
+            "type": "frigate",
+            "shipsBefore": 3,
+            "hullBefore": 95.4,
+            "shipsAfter": 1,
+            "hullAfter": 11.2
+          }
+        ],
+        "outcome": "attacker-destroyed",
+        "summary": "Battle at Sable: Veyr lost 3 ships and 102 hull; Concord lost 2 ships and 84.2 hull. Attacking fleet destroyed.",
+        "id": 11,
+        "turn": 41
+      }
+    ],
+    "ownSable": [
+      {
+        "id": "f28",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 19.2
+      },
+      {
+        "id": "f60",
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "rng": 568196148
+  },
+  "cruiserFirst": {
+    "reports": [
+      {
+        "kind": "fleet",
+        "systemId": "s13",
+        "participants": [
+          {
+            "role": "attacker",
+            "fleetId": "f54",
+            "owner": "veyr",
+            "name": "Vanguard 54",
+            "type": "frigate",
+            "shipsBefore": 3,
+            "hullBefore": 102,
+            "shipsAfter": 0,
+            "hullAfter": 0
+          },
+          {
+            "role": "defender",
+            "fleetId": "f60",
+            "owner": "player",
+            "name": "Sovereign 60",
+            "type": "cruiser",
+            "shipsBefore": 1,
+            "hullBefore": 85,
+            "shipsAfter": 1,
+            "hullAfter": 3.6
+          }
+        ],
+        "outcome": "attacker-destroyed",
+        "summary": "Battle at Sable: Veyr lost 3 ships and 102 hull; Concord lost 0 ships and 81.4 hull. Attacking fleet destroyed.",
+        "id": 11,
+        "turn": 41
+      }
+    ],
+    "ownSable": [
+      {
+        "id": "f60",
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 11.000000000000005
+      },
+      {
+        "id": "f28",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 96
+      }
+    ],
+    "rng": 1587030578
+  }
+}

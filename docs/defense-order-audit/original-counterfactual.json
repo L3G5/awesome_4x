@@ -1,0 +1,127 @@
+{
+  "method": "Explicit hypothetical defensive-screen experiment on the verified historical cycle41 position. Replay all ordinary UI receipts up to before the41 rival phase, then exchange only the two own co-located Sable fleet positions in the fleet array. No game source edits and no campaign action changes. This is not an actual UI action or balanced implementation; it isolates pairwise defender order.",
+  "before": [
+    {
+      "id": "f28",
+      "name": "Vanguard 28",
+      "owner": "player",
+      "systemId": "s13",
+      "type": "frigate",
+      "ships": 3,
+      "hp": 95.4,
+      "movesLeft": 0
+    },
+    {
+      "id": "f60",
+      "name": "Sovereign 60",
+      "owner": "player",
+      "systemId": "s13",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 0
+    }
+  ],
+  "baseline": {
+    "reports": [
+      {
+        "kind": "fleet",
+        "systemId": "s13",
+        "participants": [
+          {
+            "role": "attacker",
+            "fleetId": "f54",
+            "owner": "veyr",
+            "name": "Vanguard 54",
+            "type": "frigate",
+            "shipsBefore": 3,
+            "hullBefore": 102,
+            "shipsAfter": 0,
+            "hullAfter": 0
+          },
+          {
+            "role": "defender",
+            "fleetId": "f28",
+            "owner": "player",
+            "name": "Vanguard 28",
+            "type": "frigate",
+            "shipsBefore": 3,
+            "hullBefore": 95.4,
+            "shipsAfter": 1,
+            "hullAfter": 11.2
+          }
+        ],
+        "outcome": "attacker-destroyed",
+        "summary": "Battle at Sable: Veyr lost 3 ships and 102 hull; Concord lost 2 ships and 84.2 hull. Attacking fleet destroyed.",
+        "id": 11,
+        "turn": 41
+      }
+    ],
+    "ownSable": [
+      {
+        "id": "f28",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 19.2
+      },
+      {
+        "id": "f60",
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "rng": 568196148
+  },
+  "cruiserFirst": {
+    "reports": [
+      {
+        "kind": "fleet",
+        "systemId": "s13",
+        "participants": [
+          {
+            "role": "attacker",
+            "fleetId": "f54",
+            "owner": "veyr",
+            "name": "Vanguard 54",
+            "type": "frigate",
+            "shipsBefore": 3,
+            "hullBefore": 102,
+            "shipsAfter": 0,
+            "hullAfter": 0
+          },
+          {
+            "role": "defender",
+            "fleetId": "f60",
+            "owner": "player",
+            "name": "Sovereign 60",
+            "type": "cruiser",
+            "shipsBefore": 1,
+            "hullBefore": 85,
+            "shipsAfter": 1,
+            "hullAfter": 3.6
+          }
+        ],
+        "outcome": "attacker-destroyed",
+        "summary": "Battle at Sable: Veyr lost 3 ships and 102 hull; Concord lost 0 ships and 81.4 hull. Attacking fleet destroyed.",
+        "id": 11,
+        "turn": 41
+      }
+    ],
+    "ownSable": [
+      {
+        "id": "f60",
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 11.000000000000005
+      },
+      {
+        "id": "f28",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 96
+      }
+    ],
+    "rng": 1587030578
+  }
+}
