@@ -1,5 +1,6 @@
 import './style.css';
 import { GalaxyView } from './galaxy.js';
+import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { createGame, command, endTurn, getEmpireStats, getSystemYield, getVisibleSystems, getNeighbors, getBuildOptions, getResearchOptions, getVictoryProgress, fleetPower, estimateCombat, validateSave } from './game.js';
 import { FACTIONS, TECHS, BUILDINGS, SHIPS, ANOMALIES, PLANET_TYPES } from './content.js';
 
@@ -75,8 +76,7 @@ function render() {
 function renderInspector() {
   const system = systemById(selectedSystemId); if (!system) return;
   const surveyed = system.exploredBy.includes('player'), mine = system.owner === 'player', owner = FACTIONS[system.owner], planet = PLANET_TYPES[system.type], output = getSystemYield(state,system);
-  const hasSensors = mine || state.fleets.some(f => f.owner === 'player' && f.systemId === system.id);
-  const orbit = state.fleets.filter(f => f.systemId === system.id && (f.owner === 'player' || hasSensors));
+  const orbit = getVisibleFleets(state, 'player', system.id);
   let html = `<div class="system-header"><div class="owner-tag" style="color:${owner?.color||'#bba77e'}"><i></i>${owner?escape(owner.name):'UNCLAIMED FRONTIER'}</div><h2>${escape(system.name)}</h2><p class="subtitle">${surveyed?`${escape(planet.name)} world · ${system.originalOwner?'Founding system':'Frontier system'}`:'Unsurveyed system · Charted starlanes'}</p></div><div class="planet-art"><div class="planet-sphere" style="--planet:${surveyed?planet.color:'#5a6477'}"></div></div><p class="system-description">${surveyed?escape(planet.description):'Send a fleet to survey this system and reveal its worlds, resources, and hidden history.'}</p>`;
   if (surveyed) html += `<div class="stat-grid"><div class="stat-cell"><b>${system.habitability}%</b><span>Habitability</span></div><div class="stat-cell"><b>${mine?`${system.population}/${output.capacity}`:system.richness}</b><span>${mine?'Population':'Ore richness'}</span></div><div class="stat-cell"><b>${mine?output.production:system.science}</b><span>${mine?'Production':'Science'}</span></div></div>`;
   if (mine) {
@@ -94,7 +94,7 @@ function movementReason(fleet, target) {
   if (!fleet.movesLeft) return 'Movement spent. End the cycle to move again.';
   if (!player().orders) return 'No orders remain this cycle.';
   if (target.owner && target.owner!=='player' && player().relations[target.owner].status!=='war' && !player().relations[target.owner].trade) return 'Borders closed. Negotiate trade or declare war.';
-  if (SHIPS[fleet.type].attack<4 && state.fleets.some(f=>f.systemId===target.id && f.owner!=='player' && player().relations[f.owner].status==='war')) return 'Hostile fleet present. Civilian ships cannot enter.';
+  if (SHIPS[fleet.type].attack<4 && getVisibleFleets(state, 'player', target.id).some(f=>f.owner!=='player' && player().relations[f.owner].status==='war')) return 'Hostile fleet present. Civilian ships cannot enter.';
   return '';
 }
 function renderFleet() {
@@ -104,7 +104,7 @@ function renderFleet() {
   let detail = `${ship.role} · ${fleet.ships} ${fleet.ships===1?'ship':'ships'} · ${fleet.movesLeft} jumps · ${Math.ceil(fleet.hp)}/${fleet.ships*ship.hp} hull`, actions='';
   if (different) {
     const reason = movementReason(fleet,target), war = target.owner && target.owner!=='player' && player().relations[target.owner].status==='war';
-    detail = reason || `${home.name} → ${target.name} · 1 order${war?` · ${estimateCombat(state,fleet.id,target.id).odds} engagement`:''}`;
+    detail = reason || `${home.name} → ${target.name} · 1 order${war?` · ${estimateCombat(state,fleet.id,target.id).odds} engagement`:!hasSensors(state,'player',target.id)?' · Fleet presence unknown':''}`;
     actions = `<button class="primary" data-action="move" data-target="${target.id}" ${reason?'disabled':''}>${war?'Engage':'Move'} →</button><button class="ghost small-button" data-system-select="${home.id}" title="Back to fleet">↶</button>`;
   } else {
     if (fleet.type==='colony' && !home.owner) actions += `<button class="primary" data-action="colonize">Settle world</button>`;

@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { FACTIONS, PLANET_TYPES, SHIPS } from './content.js';
+import { getVisibleFleets } from './intelligence.js';
 import './galaxy.css';
 
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -419,12 +420,9 @@ export class GalaxyView {
 
   buildFleetLabels(state) {
     const orbitCounts = new Map();
-    for (const fleet of state.fleets || []) {
+    for (const fleet of getVisibleFleets(state, 'player')) {
       const system = this.systemsById.get(fleet.systemId);
       if (!system || !known(system)) continue;
-      // Foreign ships are visible only where a player colony or fleet has sensors.
-      const sensorPresent = system.owner === 'player' || state.fleets.some(f => f.owner === 'player' && f.systemId === system.id);
-      if (fleet.owner !== 'player' && !sensorPresent) continue;
       const index = orbitCounts.get(system.id) || 0; orbitCounts.set(system.id, index + 1);
       const element = document.createElement('button');
       element.type = 'button'; element.className = `galaxy-fleet${fleet.id === this.selectedFleetId ? ' is-selected' : ''}${fleet.owner !== 'player' ? ' is-foreign' : ''}${fleet.movesLeft <= 0 ? ' is-spent' : ''}`;

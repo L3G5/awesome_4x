@@ -14,7 +14,7 @@ Completion requires a playable exploration/expansion/economy/warfare loop; purpo
 - Chosen architecture: Vite + Three.js renderer; deterministic serializable JavaScript simulation independent of DOM; accessible DOM command interface; static GitHub Pages hosting with local saves.
 - Delegated core simulation and independent visual/strategic design review. Renderer implementation runs separately with file ownership to avoid overlapping edits.
 
-## Stage 1 — first playable campaign (2026-10-28 16:45–17:02 UTC, deployment verification in progress)
+## Stage 1 — first playable campaign (2026-10-28 16:45–17:10 UTC)
 
 Goals: galaxy generation, exploration, orders, colonies, construction, research, fleets, combat, diplomacy, anomalies, three rival factions, victory, autosave; rendered map and comprehensive command interface; automated simulation tests and browser smoke tests; initial public deployment.
 
@@ -31,12 +31,23 @@ Results:
 - Created public repository https://github.com/L3G5/awesome_4x; verified ADMIN repository access and successfully enabled GitHub Pages using the authenticated CLI. SSH push lacked a known host; HTTPS push through the existing gh credential helper succeeded without changing global Git authentication.
 - Initial workflow run 40731337048 passed installation and all rules tests, but the 12-cycle browser test exceeded its 40-second total allowance on the software-rendered CI runner. The second browser test passed. This is a failed deployment gate, not successful hosting.
 - Follow-up: self-hosted licensed DM Sans and Marcellus fonts, retained browser failure traces as CI artifacts, allowed 90 seconds for the full multi-cycle test while retaining a 15-second individual-action limit, and reduced renderer work during modal/non-map views. The full gameplay assertions remain unchanged. Deployment verification is pending.
+- Follow-up workflow 40732526107 at commit `5c5c252` succeeded, including both gameplay browser tests and Pages deployment. The hosted URL returned HTTP 200, and both Playwright acceptance tests passed against https://l3g5.github.io/awesome_4x/ (34.2 seconds). This verifies an actual hosted opening campaign, not just successful artifact upload.
+- Renderer profiling verified zero redraws while paused or hidden, one redraw for an explicit paused update, and at most 30 idle animation frames per second. Label layout runs only when camera/state changes require it. Camera selection, pan, zoom, resizing and restoration remained functional.
 
 ## Stage 2 — intelligence and strategy audit (started 2026-10-28 17:00 UTC)
 
 The independent simulation audit found that some remote combat estimates and AI target choices inspect fleets outside local sensors. The inspector has been corrected to match the renderer's presence-based fleet visibility. A shared engine-level intelligence rule and meaningful tactical/AI tests are the next priority. The audit also measures technology pacing and early war pressure before making balance changes.
 
 The audit's reproducible findings are in `docs/SIMULATION_AUDIT.md`: military routing can enter an unsafe intermediate system or fail to rally during war; AI peace currently displaces player fleets without acceptance; a cheap trade agreement can permanently prevent Khar aggression. These remain open and will receive dedicated regression scenarios, not only broad end-to-end simulation checks.
+
+### Stage 2a — shared sensor intelligence (2026-10-28 17:10–17:17 UTC)
+
+- Added shared `hasSensors`/`getVisibleFleets` helpers used by the engine, renderer, inspector, movement previews and AI target selection. Old charts preserve planetary knowledge and public sovereignty, not live foreign fleet locations.
+- Combat forecasts explicitly return unknown opposition without local sensors. A hidden civilian interception costs exactly one order/move, leaves the ship at its origin, and records a fixed observation without surveying or creating a permanent sensor. A known blockade remains a free invalid-command rejection.
+- Corrected bankruptcy to remove one ship administratively, bypassing combat shields.
+- Preserved save version 1 and validated optional future AI strategy metadata.
+- Rules validation: 25 tests passed, including nine new intelligence/bankruptcy/save regressions. Browser validation: all three tests passed, including an actual hidden-blockade UI scenario that confirms no fleet leak, an enabled uncertain move, and the charged withdrawal. Production build passed.
+- Separate tactical-AI and consent-based diplomacy modules are being developed next; neither is yet claimed integrated or verified.
 
 ## Subsequent stages
 
