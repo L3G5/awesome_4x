@@ -1,5 +1,6 @@
 import './style.css';
 import './workspace.css';
+import './fleet-operations.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast } from './diplomacy.js';
@@ -7,6 +8,7 @@ import { renderDiplomacyPage } from './diplomacy-ui.js';
 import { renderColonyTable } from './empire-ui.js';
 import { renderWorkspaceInspector } from './workspace-ui.js';
 import { renderShipPortrait } from './ship-ui.js';
+import { renderSplitDialog, renderColonyRepairSummary } from './fleet-ui.js';
 import { renderPublicDispatchLinks, renderSovereigntyNote } from './public-affairs-ui.js';
 import { renderCombatReports, renderBriefing } from './report-ui.js';
 import { planetImage } from './planet-art.js';
@@ -78,6 +80,7 @@ function setPage(value) { const changed=page!==value;page = value; galaxy.setPau
 function dispatch(action) {
   const result = command(state, action);
   if (!result.ok) { toast(result.message, true); return false; }
+  if(action.type==='split'&&result.newFleetId){selectedFleetId=result.newFleetId;selectedSystemId=fleetById(selectedFleetId).systemId;}
   if (['move','continueRoute'].includes(action.type) && fleetById(action.fleetId)) selectedSystemId = fleetById(action.fleetId).systemId;
   if (selectedFleetId && !fleetById(selectedFleetId)) selectedFleetId = null;
   save(); render(); toast(result.combatReports?.length ? `${result.combatReports.length} combat report${result.combatReports.length>1?'s':''} recorded.` : result.message); if (state.winner) showVictory(); else if(result.combatReports?.length)showReports(result.combatReports.map(r=>r.id)); return true;
@@ -126,6 +129,7 @@ function renderInspector() {
   html += renderDiscoverySummary(state,system);
   if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}>${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${Math.ceil(f.hp)} hull</small></span><span class="fleet-ready">${f.owner==='player'?`${f.movesLeft} ⌁`:''}</span></button>`).join('')}</div></section>`;
   const selectedFleet=fleetById(selectedFleetId);
+  html += renderColonyRepairSummary(state,system);
   const invasion=selectedFleet?.systemId===system.id ? estimateInvasion(state,selectedFleet.id) : null;
   if(invasion) html+=`<section class="panel-section"><div class="invasion-preview"><div class="section-label">Invasion forecast</div><strong>${invasion.defense} colony defenses</strong><br>Your volley: ${invasion.damageMin}–${invasion.damageMax} defense damage<br>Retaliation: ${invasion.retaliation} hull${invasion.shielded?' · Shields applied':''}<br>${invasion.captureGuaranteed?'Capture expected with this volley.':invasion.capturePossible?'This volley may capture the colony.':'Further bombardment is required.'}<br>Cost: 1 order + 1 move</div></section>`;
   const neighbors = getNeighbors(state,system.id).map(systemById).filter(s=>s.knownBy.includes('player'));
@@ -166,6 +170,7 @@ function renderFleet() {
     if (merge) actions += `<button data-action="merge" data-target="${merge.id}" title="Merge ${escape(merge.name)} into this fleet; 1 order">Merge +${merge.ships}</button>`;
     if (!actions) detail += ' · Select a star to plot a jump or a course.';
   }
+  if(!different&&fleet.ships>1&&fleet.type!=='colony')actions+=`<button data-action="split-menu" data-fleet-target="${fleet.id}" title="Detach ships into a separate formation; 1 order">Split fleet</button>`;
   if(fleet.heritage?.length)actions+=`<button class="small-button ghost" data-action="fleet-heritage" data-fleet-target="${fleet.id}">Heritage ✦</button>`;
   $('#fleet-bar').classList.toggle('has-route',Boolean(navigation.display));
   $('#fleet-bar').innerHTML = `${renderShipPortrait(fleet.type,fleet.owner,Boolean(fleet.heritage?.length))}<div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<button class="small-button ghost" data-action="fleet-roster" title="All fleets">⌁ ${ownFleets.length}</button><button class="small-button ghost" data-action="next-fleet" title="Next fleet (N)">⇥</button><div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>${renderRouteStrip(state,fleet,navigation)}`;
@@ -201,6 +206,9 @@ function buildMenu(systemId,tab='building',replaceBuildingId=null) {
 }
 function showAnomaly(systemId,replaceBuildingId=null) {
   openModal('anomaly',renderDiscoveryDialog(state,systemId,replaceBuildingId),true);
+}
+function showSplit(fleetId,ships=1) {
+  openModal('split',renderSplitDialog(state,fleetId,ships));
 }
 function showFleetHeritage(fleetId) {
   const fleet=fleetById(fleetId);if(!fleet || fleet.owner!=='player')return;
@@ -282,7 +290,7 @@ $('#import-save').addEventListener('change',async event=>{
     $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
   } catch(error){toast(error.message,true);}
 });
-document.addEventListener('change',event=>{if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
+document.addEventListener('change',event=>{if(event.target.id==='split-ships'){showSplit(event.target.dataset.fleetTarget,Number(event.target.value));$('#split-ships')?.focus();}if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
 document.addEventListener('toggle',event=>{if(event.target.matches?.('.public-dispatches') && event.target.isConnected && settings.publicDispatchesOpen!==event.target.open){settings.publicDispatchesOpen=event.target.open;saveSettings();}},true);
 document.addEventListener('click',event=>{
   const el=event.target.closest('button,a'); if (!el||el.disabled) return;
@@ -332,6 +340,8 @@ document.addEventListener('click',event=>{
     case 'attack':dispatch({type:'attack',fleetId:selectedFleetId});break;
     case 'repair':dispatch({type:'repair',fleetId:selectedFleetId});break;
     case 'merge':dispatch({type:'merge',fleetId:selectedFleetId,targetFleetId:el.dataset.target});break;
+    case 'split-menu':showSplit(el.dataset.fleetTarget);break;
+    case 'split-confirm':if(dispatch({type:'split',fleetId:el.dataset.fleetTarget,ships:Number(el.dataset.ships)}))closeModal();break;
     case 'fleet-heritage':showFleetHeritage(el.dataset.fleetTarget);break;
     case 'heritage-origin':showAnomaly(el.dataset.system);break;
     case 'anomaly':showAnomaly(el.dataset.system);break;
