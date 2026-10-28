@@ -1,0 +1,527 @@
+[
+  {
+    "turn": 40,
+    "a": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "mine"
+    },
+    "result": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Sundrift."
+    }
+  },
+  {
+    "turn": 40,
+    "a": {
+      "type": "build",
+      "systemId": "s25",
+      "itemId": "lab"
+    },
+    "result": {
+      "ok": true,
+      "message": "Research Enclave commissioned at Elysian."
+    }
+  },
+  {
+    "turn": 40,
+    "a": {
+      "type": "move",
+      "fleetId": "f46",
+      "targetId": "s15"
+    },
+    "result": {
+      "ok": true,
+      "message": "Colony Ark 46 arrived at Kepler."
+    }
+  },
+  {
+    "turn": 41,
+    "a": {
+      "type": "colonize",
+      "fleetId": "f46"
+    },
+    "result": {
+      "ok": true,
+      "message": "Colony founded at Kepler."
+    }
+  },
+  {
+    "turn": 41,
+    "a": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "mine"
+    },
+    "result": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Kepler."
+    }
+  },
+  {
+    "turn": 41,
+    "a": {
+      "type": "move",
+      "fleetId": "f48",
+      "targetId": "s28"
+    },
+    "result": {
+      "ok": true,
+      "message": "Colony Ark 48 arrived at Haven."
+    }
+  },
+  {
+    "turn": 42,
+    "a": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "result": {
+      "ok": true,
+      "message": "Forge Charter I commissioned at Solace."
+    }
+  },
+  {
+    "turn": 42,
+    "a": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s33"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard 3 arrived at Halcyon."
+    }
+  },
+  {
+    "turn": 42,
+    "a": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s27"
+    },
+    "result": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Nyx."
+    }
+  },
+  {
+    "turn": 42,
+    "a": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s35"
+    },
+    "result": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Seraph."
+    }
+  },
+  {
+    "turn": 42,
+    "a": {
+      "type": "move",
+      "fleetId": "f48",
+      "targetId": "s15"
+    },
+    "result": {
+      "ok": true,
+      "message": "Colony Ark 48 arrived at Kepler."
+    }
+  },
+  {
+    "turn": 43,
+    "a": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s25"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard 3 arrived at Elysian."
+    }
+  },
+  {
+    "turn": 43,
+    "a": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s3"
+    },
+    "result": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Lumen."
+    }
+  },
+  {
+    "turn": 43,
+    "a": {
+      "type": "move",
+      "fleetId": "f48",
+      "targetId": "s23"
+    },
+    "result": {
+      "ok": true,
+      "message": "Colony Ark 48 arrived at Tethys."
+    }
+  },
+  {
+    "turn": 43,
+    "a": {
+      "type": "colonize",
+      "fleetId": "f48"
+    },
+    "result": {
+      "ok": true,
+      "message": "Colony founded at Tethys."
+    }
+  },
+  {
+    "turn": 44,
+    "a": {
+      "type": "build",
+      "systemId": "s23",
+      "itemId": "mine"
+    },
+    "result": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Tethys."
+    }
+  },
+  {
+    "turn": 44,
+    "a": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "factory"
+    },
+    "result": {
+      "ok": true,
+      "message": "Manufactory commissioned at Sundrift."
+    }
+  },
+  {
+    "turn": 44,
+    "a": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "mine"
+    },
+    "result": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Haven."
+    }
+  },
+  {
+    "turn": 45,
+    "a": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "gift"
+    },
+    "result": {
+      "ok": true,
+      "message": "The Concord sent a 35-credit gift to Khar Dominion. Trust improves; border grievances remain.",
+      "outcome": "gift"
+    }
+  },
+  {
+    "turn": 45,
+    "a": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "trade"
+    },
+    "result": {
+      "ok": true,
+      "message": "Trade established between The Concord and Khar Dominion. Borders are open; existing grievances remain.",
+      "outcome": "trade"
+    }
+  },
+  {
+    "turn": 45,
+    "a": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard commissioned at Solace."
+    }
+  },
+  {
+    "turn": 46,
+    "a": {
+      "type": "move",
+      "fleetId": "f52",
+      "targetId": "s20"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard 52 arrived at Sundrift."
+    }
+  },
+  {
+    "turn": 46,
+    "a": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard commissioned at Solace."
+    }
+  },
+  {
+    "turn": 49,
+    "a": {
+      "type": "research",
+      "techId": "command"
+    },
+    "result": {
+      "ok": true,
+      "message": "Research directed toward Distributed Command."
+    }
+  },
+  {
+    "turn": 49,
+    "a": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "beacon",
+      "replaceBuildingId": "market"
+    },
+    "result": {
+      "ok": true,
+      "message": "Asterion Beacon commissioned at Sundrift."
+    }
+  },
+  {
+    "turn": 50,
+    "a": {
+      "type": "build",
+      "systemId": "s25",
+      "itemId": "beacon",
+      "replaceBuildingId": "market"
+    },
+    "result": {
+      "ok": true,
+      "message": "Asterion Beacon commissioned at Elysian."
+    }
+  },
+  {
+    "turn": 52,
+    "a": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s22"
+    },
+    "result": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Ophion."
+    }
+  },
+  {
+    "turn": 53,
+    "a": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "beacon",
+      "replaceBuildingId": "market"
+    },
+    "result": {
+      "ok": true,
+      "message": "Asterion Beacon commissioned at Solace."
+    }
+  },
+  {
+    "turn": 53,
+    "a": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "result": {
+      "ok": true,
+      "message": "Research directed toward Capital Ship Architecture."
+    }
+  },
+  {
+    "turn": 54,
+    "a": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "shipyard"
+    },
+    "result": {
+      "ok": true,
+      "message": "Orbital Shipyard commissioned at Haven."
+    }
+  },
+  {
+    "turn": 56,
+    "a": {
+      "type": "research",
+      "techId": "terraforming"
+    },
+    "result": {
+      "ok": true,
+      "message": "Research directed toward Worldshaping."
+    }
+  },
+  {
+    "turn": 56,
+    "a": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "shipyard",
+      "replaceBuildingId": "mine"
+    },
+    "result": {
+      "ok": true,
+      "message": "Orbital Shipyard commissioned at Sundrift."
+    }
+  },
+  {
+    "turn": 57,
+    "a": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "frigate"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard commissioned at Haven."
+    }
+  },
+  {
+    "turn": 58,
+    "a": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "result": {
+      "ok": true,
+      "message": "Sovereign commissioned at Solace."
+    }
+  },
+  {
+    "turn": 58,
+    "a": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "cruiser"
+    },
+    "result": {
+      "ok": true,
+      "message": "Sovereign commissioned at Sundrift."
+    }
+  },
+  {
+    "turn": 60,
+    "a": {
+      "type": "move",
+      "fleetId": "f67",
+      "targetId": "s0"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard 67 arrived at Solace."
+    }
+  },
+  {
+    "turn": 60,
+    "a": {
+      "type": "merge",
+      "fleetId": "f67",
+      "targetFleetId": "f54"
+    },
+    "result": {
+      "ok": true,
+      "message": "Fleets combined into one task force."
+    }
+  },
+  {
+    "turn": 60,
+    "a": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "frigate"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard commissioned at Haven."
+    }
+  },
+  {
+    "turn": 61,
+    "a": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "result": {
+      "ok": true,
+      "message": "Sovereign commissioned at Solace."
+    }
+  },
+  {
+    "turn": 61,
+    "a": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "cruiser"
+    },
+    "result": {
+      "ok": true,
+      "message": "Sovereign commissioned at Sundrift."
+    }
+  },
+  {
+    "turn": 63,
+    "a": {
+      "type": "planRoute",
+      "fleetId": "f73",
+      "destinationId": "s25"
+    },
+    "result": {
+      "ok": true,
+      "message": "Route plotted: 3 jumps to Elysian. Continue when ready."
+    }
+  },
+  {
+    "turn": 63,
+    "a": {
+      "type": "continueRoute",
+      "fleetId": "f73"
+    },
+    "result": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    }
+  },
+  {
+    "turn": 64,
+    "a": {
+      "type": "continueRoute",
+      "fleetId": "f73"
+    },
+    "result": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Vanguard 73 reached Elysian in 1 jump.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    }
+  }
+]

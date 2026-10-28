@@ -32,6 +32,10 @@ The [investment comparison](docs/results/stage7-investment.json) measures bounde
 
 The [human-style midgame playtest](docs/stage6-playtest.html) records a legitimate cycle-40 campaign played through the version-0.6 interface to victory at cycle 67, with decisions, screenshots and the exported save. It documents useful production constraints and the quiet final countdown; it is one observed strategy, not a difficulty estimate.
 
+The [alignment intervention audit](docs/intervention-audit/index.html) reconstructs that complete run from recorded commands and distinguishes feasible rival journeys from raids the player's defenses can defeat. Its bundled script uses the pinned historical engine and reproduces the verified snapshots and clearly labeled counterfactuals.
+
+The [expedition comparison](docs/results/expedition-comparison.json) measures the subsequent AI correction over 32 campaigns, changing only the AI within a fixed complete engine. Run `node scripts/expedition-benchmark.mjs`; `--engine-ref` selects a historical release. The report distinguishes declarations, arrivals, survival and cycles with confirmed blockade declines, and includes replay and instrumentation checks.
+
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.

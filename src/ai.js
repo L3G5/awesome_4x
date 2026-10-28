@@ -145,6 +145,20 @@ function selectObjective(state, faction, threats) {
 }
 
 /** Public beacon broadcasts justify an achievable intervention, never omniscient targeting. */
+function interventionCandidate(state, faction, race, site, fleet) {
+  if (!fleet || !military(fleet) || fleet.movesLeft < 1 || strength(state, fleet) < 30) return null;
+  const observedGuard = getVisibleFleets(state, faction.id, site.id).filter(other => other.owner === race.factionId).reduce((total, other) => total + strength(state, other), 0);
+  if (observedGuard * 1.18 > strength(state, fleet)) return null;
+  const travel = route(state, faction, fleet, site.id, { interventionOwner: race.factionId });
+  if (!travel) return null;
+  const hops = travel.path.length - 1;
+  const declarationOrder = war(faction, race.factionId) ? 0 : 1;
+  const movesNow = Math.max(0, Math.min(fleet.movesLeft, faction.orders - declarationOrder));
+  const movesPerCycle = Math.min(getEmpireStats(state, faction.id).maxOrders, SHIPS[fleet.type].moves + (faction.techs.includes('command') ? 1 : 0));
+  const arrivalCycles = !hops ? 0 : hops <= movesNow ? 1 : 1 + Math.ceil((hops - movesNow) / movesPerCycle);
+  return arrivalCycles <= race.target - race.progress ? { race, site, fleet, travel, arrivalCycles } : null;
+}
+
 function raceIntervention(state, faction, allowDeclaration = false) {
   const ownProgress = faction.alignment?.active ? faction.alignment.progress : -1;
   const candidates = [];
@@ -154,18 +168,40 @@ function raceIntervention(state, faction, allowDeclaration = false) {
     const participants = new Set(race.participatingSites);
     for (const beacon of race.sites.filter(site => participants.has(site.id))) {
       const site = systemOf(state, beacon.id);
-      for (const fleet of ownFleets(state, faction).filter(fleet => military(fleet) && fleet.movesLeft > 0 && strength(state, fleet) >= 30)) {
-        const observedGuard = getVisibleFleets(state, faction.id, site.id).filter(other => other.owner === race.factionId).reduce((total, other) => total + strength(state, other), 0);
-        if (observedGuard * 1.18 > strength(state, fleet)) continue;
-        const travel = route(state, faction, fleet, site.id, { interventionOwner: race.factionId });
-        // Military routing currently commits one hop per AI cycle. Use that
-        // conservative speed rather than promise an interception we cannot make.
-        if (!travel || travel.path.length - 1 > race.target - race.progress) continue;
-        candidates.push({ race, site, fleet, travel });
+      for (const fleet of ownFleets(state, faction)) {
+        const candidate = interventionCandidate(state, faction, race, site, fleet);
+        if (candidate) candidates.push(candidate);
       }
     }
   }
-  return candidates.sort((a, b) => b.race.progress - a.race.progress || a.travel.cost - b.travel.cost || a.site.id.localeCompare(b.site.id))[0] || null;
+  const previous = faction.strategy?.expedition;
+  const committed = candidate => Number(candidate.fleet.id === previous?.fleetId && candidate.race.factionId === previous?.targetId && candidate.site.id === previous?.systemId);
+  return candidates.sort((a, b) => b.race.progress - a.race.progress || committed(b) - committed(a) || a.travel.cost - b.travel.cost || a.site.id.localeCompare(b.site.id))[0] || null;
+}
+
+/** One selected expedition transits colonies and spends only ordinary moves. */
+function advanceIntervention(state, faction, expedition, act) {
+  let handled = false;
+  while (!state.winner) {
+    const fleet = fleetOf(state, expedition.fleet.id);
+    const race = getPublicRaces(state, faction.id).find(race => race.factionId === expedition.race.factionId);
+    const ownProgress = faction.alignment?.active ? faction.alignment.progress : -1;
+    if (!fleet || !race || !war(faction, race.factionId) || race.progress < 3 || race.progress <= ownProgress || !race.participatingSites.includes(expedition.site.id)) return { handled, active: false };
+    // Arrival is enough to blockade. Do not turn the expedition into an
+    // invasion, or abandon its blockade because the public signal pauses.
+    if (fleet.systemId === expedition.site.id && !observedEnemies(state, faction, fleet.systemId).length) return { handled: true, active: true };
+    if (observedEnemies(state, faction, fleet.systemId).length) return { handled, active: false };
+    if (fleet.movesLeft < 1 || faction.orders < 1) return { handled: true, active: true };
+    const candidate = interventionCandidate(state, faction, race, systemOf(state, expedition.site.id), fleet);
+    if (!candidate) return { handled, active: false };
+    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });
+    if (!result.ok) return { handled: true, active: false };
+    handled = true;
+    // Actual contact may reveal a battle we could not know about beforehand.
+    // Stop this cycle; ordinary rescue/combat logic reassesses next cycle.
+    if (result.combatOccurred || result.combatReports?.length || !fleetOf(state, fleet.id)) return { handled: true, active: Boolean(fleetOf(state, fleet.id)) };
+  }
+  return { handled, active: false };
 }
 
 function defendAlignment(state, faction, fleet, act) {
@@ -180,11 +216,11 @@ function defendAlignment(state, faction, fleet, act) {
   return act({ type: 'move', fleetId: fleet.id, targetId: destination.travel.path[1] }).ok;
 }
 
-function mergeForces(state, faction, act) {
-  for (const fleet of ownFleets(state, faction).filter(military)) {
+function mergeForces(state, faction, act, expeditionId = null) {
+  for (const fleet of ownFleets(state, faction).filter(fleet => military(fleet) && fleet.id !== expeditionId)) {
     if (!fleetOf(state, fleet.id)) continue;
     while (faction.orders > 1) {
-      const mate = ownFleets(state, faction).find(other => other.id !== fleet.id && other.type === fleet.type && other.systemId === fleet.systemId && other.ships + fleet.ships <= 12);
+      const mate = ownFleets(state, faction).find(other => other.id !== fleet.id && other.id !== expeditionId && other.type === fleet.type && other.systemId === fleet.systemId && other.ships + fleet.ships <= 12);
       if (!mate || !act({ type: 'merge', fleetId: fleet.id, targetFleetId: mate.id }).ok) break;
     }
   }
@@ -201,8 +237,8 @@ function retreat(state, faction, fleet, act) {
   return false;
 }
 
-function militaryTurn(state, faction, act, ordinaryAct = act) {
-  mergeForces(state, faction, act);
+function militaryTurn(state, faction, act, ordinaryAct = act, intervention = null) {
+  mergeForces(state, faction, act, intervention?.fleet.id);
   const handled = new Set();
   // Rescue damaged or outmatched forces before assigning new offensives.
   for (const fleet of ownFleets(state, faction).filter(military)) {
@@ -221,6 +257,11 @@ function militaryTurn(state, faction, act, ordinaryAct = act) {
   const rally = selectRally(state, faction, objective, threats);
   const assaultReady = objective && ownFleets(state, faction).some(fleet => military(fleet) && canAssault(state, faction, fleet, objective) && route(state, faction, fleet, objective.id));
   faction.strategy = { mode: threats.length ? 'defend' : objective ? assaultReady ? 'advance' : 'assemble' : 'develop', rallyId: rally?.id || null, objectiveId: objective?.id || null, turn: state.turn };
+  if (intervention && !threats.length && !handled.has(intervention.fleet.id)) {
+    const result = advanceIntervention(state, faction, intervention, act);
+    if (result.handled) handled.add(intervention.fleet.id);
+    if (result.active) faction.strategy.expedition = { fleetId: intervention.fleet.id, targetId: intervention.race.factionId, systemId: intervention.site.id };
+  }
   const distances = rally ? knownDistances(state, faction, rally.id) : new Map();
   const fleets = ownFleets(state, faction).filter(military).sort((a, b) => strength(state, b) - strength(state, a) || (distances.get(b.systemId) ?? 100) - (distances.get(a.systemId) ?? 100));
   for (const fleet of fleets) {
@@ -251,7 +292,7 @@ function militaryTurn(state, faction, act, ordinaryAct = act) {
       if (reinforce?.path.length > 1) act({ type: 'move', fleetId: fleet.id, targetId: reinforce.path[1] });
     }
   }
-  mergeForces(state, faction, act);
+  mergeForces(state, faction, act, faction.strategy.expedition?.fleetId);
   return threatsToColonies(state, faction);
 }
 
@@ -808,7 +849,7 @@ export function runAI(state, faction) {
     if (proposal.stance === 'peace' && intervention?.race.factionId === proposal.targetId) continue;
     ordinaryAct(proposal);
   }
-  const threats = militaryTurn(state, faction, act, ordinaryAct);
+  const threats = militaryTurn(state, faction, act, ordinaryAct, intervention);
   emergencyConstruction(state, faction, threats, act);
   civilianTurn(state, faction, ordinaryAct);
   anomalyTurn(state, faction, ordinaryAct);

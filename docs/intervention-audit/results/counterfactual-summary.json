@@ -1,0 +1,52 @@
+[
+  {
+    "label": "Counterfactual normal-command reachability branch; not the played campaign",
+    "target": "Solace",
+    "startTurn": 60,
+    "turn": 63,
+    "arrived": true,
+    "alive": false,
+    "remainingHP": 0,
+    "alignmentBlocked": false,
+    "arrivalGuard": [
+      {
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 46.3
+      }
+    ]
+  },
+  {
+    "label": "Counterfactual normal-command reachability branch; not the played campaign",
+    "target": "Sundrift",
+    "startTurn": 60,
+    "turn": 63,
+    "arrived": false,
+    "alive": false,
+    "remainingHP": 0,
+    "alignmentBlocked": false,
+    "arrivalGuard": []
+  },
+  {
+    "label": "Counterfactual normal-command reachability branch; not the played campaign",
+    "target": "Elysian",
+    "startTurn": 60,
+    "turn": 64,
+    "arrived": true,
+    "alive": false,
+    "remainingHP": 0,
+    "alignmentBlocked": false,
+    "arrivalGuard": [
+      {
+        "type": "frigate",
+        "ships": 4,
+        "hp": 108.9
+      },
+      {
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34
+      }
+    ]
+  }
+]

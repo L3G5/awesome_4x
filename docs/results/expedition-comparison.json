@@ -1,0 +1,4616 @@
+{
+  "schemaVersion": 1,
+  "baselineRevision": "ff2dfa2ef598d8c6efc2d32a62da450dc329b552",
+  "engineRevision": null,
+  "engineSource": "working-tree snapshot",
+  "headWhenRun": "ff2dfa2ef598d8c6efc2d32a62da450dc329b552",
+  "hashes": {
+    "script": "f04ec6c33062a218a993ef70badf066674c22399fda5f8407783e6934a18166e",
+    "variants": {
+      "before": {
+        "src/ai.js": "27ddf3d7bd7f931f2b388eb65544574ab2c31e1e4efa3d0c52cc259f1abdd9c4",
+        "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+        "src/development.js": "9d3f8e4c37bb480125eca59dc20511f07ba00da5ce12cc7e19b365f9b1e4ba49",
+        "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+        "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+        "src/game.js": "883cdc5c540ebaae8ee2958bec0a2f61e4c3b3f0e4b32b79f7ca395fa27aface",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      },
+      "after": {
+        "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+        "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+        "src/development.js": "9d3f8e4c37bb480125eca59dc20511f07ba00da5ce12cc7e19b365f9b1e4ba49",
+        "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+        "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+        "src/game.js": "883cdc5c540ebaae8ee2958bec0a2f61e4c3b3f0e4b32b79f7ca395fa27aface",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      }
+    },
+    "differingFiles": [
+      "src/ai.js"
+    ]
+  },
+  "method": [
+    "Eight identical seed pairs under passive and balanced policies (32 campaigns). The complete engine is frozen once; only ai.js differs between variants. Balanced policy uses the existing mixed research priority plus the variant AI for other player actions. These are policy comparisons, not human win rates.",
+    "The same command-observer wrapper is applied to both AI modules. Hooks only record successful commands; instrumented versus uninstrumented next-cycle states are compared at turns20/40/60 to verify noninterference.",
+    "Alignment declarations are successful AI war commands carrying the existing expedition reason. Hostile beacon entries are military moves into a contacted rival participating site at public progress3+, during war; they include ordinary assaults as well as intended expeditions, and survivors are reported separately.",
+    "Confirmed blockade declines require progress to fall during a completed cycle and the owner-view status to identify hostile warships at its participating sites. Any-cause interruptions additionally include funding or ownership failures. These retrospective audit queries never enter the AI policy.",
+    "Every campaign cycle validates the save and nonnegative finite balances. JSON-reload replay checkpoints occur at turns20/40/60 and every cycle of the human continuation. Published thresholds, diplomacy and home-threat veto remain unchanged."
+  ],
+  "researchPriority": [
+    "logistics",
+    "ecology",
+    "physics",
+    "industry",
+    "diplomacy",
+    "weapons",
+    "computing",
+    "shields",
+    "singularity",
+    "command",
+    "cruisers",
+    "terraforming"
+  ],
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7"
+  ],
+  "checks": {
+    "campaigns": 32,
+    "checkedCycles": 2228,
+    "invalidSaves": 0,
+    "negativeResourceStates": 0,
+    "jsonReloadReplayChecks": 110,
+    "observerNoninterferenceChecks": 96
+  },
+  "summary": {
+    "before": {
+      "passive": {
+        "campaigns": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 65,
+          "median": 69.5,
+          "max": 78
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 3,
+          "khar": 3,
+          "choir": 2
+        },
+        "interventions": {
+          "declarations": 12,
+          "hostileBeaconEntries": 19,
+          "survivingBeaconArrivals": 14,
+          "alignmentInterruptionsAnyCause": 9,
+          "confirmedBlockadeDeclines": 11
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 65,
+          "median": 67,
+          "max": 72
+        },
+        "winners": {
+          "player": 4,
+          "veyr": 2,
+          "khar": 0,
+          "choir": 2
+        },
+        "interventions": {
+          "declarations": 16,
+          "hostileBeaconEntries": 17,
+          "survivingBeaconArrivals": 13,
+          "alignmentInterruptionsAnyCause": 7,
+          "confirmedBlockadeDeclines": 8
+        }
+      }
+    },
+    "after": {
+      "passive": {
+        "campaigns": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 67,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 4,
+          "choir": 2
+        },
+        "interventions": {
+          "declarations": 17,
+          "hostileBeaconEntries": 29,
+          "survivingBeaconArrivals": 24,
+          "alignmentInterruptionsAnyCause": 15,
+          "confirmedBlockadeDeclines": 33
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finishTurn": {
+          "count": 8,
+          "min": 65,
+          "median": 71,
+          "max": 86
+        },
+        "winners": {
+          "player": 3,
+          "veyr": 2,
+          "khar": 1,
+          "choir": 2
+        },
+        "interventions": {
+          "declarations": 26,
+          "hostileBeaconEntries": 25,
+          "survivingBeaconArrivals": 21,
+          "alignmentInterruptionsAnyCause": 19,
+          "confirmedBlockadeDeclines": 42
+        }
+      }
+    }
+  },
+  "humanContinuation": {
+    "fixturePath": "docs/intervention-audit/results/verified-cycle60-before-ai.json",
+    "fixtureSha256": "cb673c9a02a4a0b5def907816533e048ab1812e934bbac29f865eaa45348e5a7",
+    "interpretation": "Verified Stage 6 human-run cycle60 before-AI checkpoint. Both final-engine variants apply the recorded player follow-up construction and route commands; subsequent AI actions and RNG may diverge. This continuation is not the original historical run and does not require the defended raider to succeed.",
+    "variants": {
+      "before": {
+        "firstDecision": {
+          "relation": "peace",
+          "expedition": null,
+          "raiderSystem": "s1",
+          "movesLeft": 2
+        },
+        "finishTurn": 67,
+        "winner": "player",
+        "victory": "Transcendence",
+        "events": [
+          {
+            "kind": "hostileBeaconEntry",
+            "turn": 65,
+            "factionId": "khar",
+            "targetId": "choir",
+            "systemId": "s3",
+            "fleetId": "f53",
+            "progress": 4,
+            "survivedArrival": true,
+            "combat": true
+          },
+          {
+            "kind": "alignmentDeclaration",
+            "turn": 66,
+            "factionId": "khar",
+            "targetId": "veyr",
+            "progress": 4,
+            "brokeTrade": false
+          }
+        ],
+        "playerActions": [
+          {
+            "turn": 61,
+            "action": {
+              "type": "build",
+              "systemId": "s0",
+              "itemId": "cruiser"
+            }
+          },
+          {
+            "turn": 61,
+            "action": {
+              "type": "build",
+              "systemId": "s20",
+              "itemId": "cruiser"
+            }
+          },
+          {
+            "turn": 63,
+            "action": {
+              "type": "planRoute",
+              "fleetId": "f73",
+              "destinationId": "s25"
+            }
+          },
+          {
+            "turn": 63,
+            "action": {
+              "type": "continueRoute",
+              "fleetId": "f73"
+            }
+          },
+          {
+            "turn": 64,
+            "action": {
+              "type": "continueRoute",
+              "fleetId": "f73"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "turn": 61,
+            "playerAlignment": 4,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s1",
+              "system": "Veyr Prime",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "playerAlignment": 5,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s1",
+              "system": "Veyr Prime",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "playerAlignment": 6,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s1",
+              "system": "Veyr Prime",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 64,
+            "playerAlignment": 7,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s18",
+              "system": "Cinder",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "playerAlignment": 8,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s18",
+              "system": "Cinder",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "playerAlignment": 9,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s18",
+              "system": "Cinder",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "playerAlignment": 10,
+            "veyrRelation": "peace",
+            "expedition": null,
+            "raider": {
+              "systemId": "s18",
+              "system": "Cinder",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "firstDecision": {
+          "relation": "war",
+          "expedition": {
+            "fleetId": "f59",
+            "targetId": "player",
+            "systemId": "s0"
+          },
+          "raiderSystem": "s13",
+          "movesLeft": 0
+        },
+        "finishTurn": 67,
+        "winner": "player",
+        "victory": "Transcendence",
+        "events": [
+          {
+            "kind": "alignmentDeclaration",
+            "turn": 60,
+            "factionId": "veyr",
+            "targetId": "player",
+            "progress": 3,
+            "brokeTrade": true
+          },
+          {
+            "kind": "hostileBeaconEntry",
+            "turn": 63,
+            "factionId": "veyr",
+            "targetId": "player",
+            "systemId": "s0",
+            "fleetId": "f59",
+            "progress": 6,
+            "survivedArrival": false,
+            "combat": true
+          },
+          {
+            "kind": "alignmentDeclaration",
+            "turn": 63,
+            "factionId": "khar",
+            "targetId": "player",
+            "progress": 6,
+            "brokeTrade": true
+          },
+          {
+            "kind": "alignmentDeclaration",
+            "turn": 65,
+            "factionId": "khar",
+            "targetId": "veyr",
+            "progress": 3,
+            "brokeTrade": false
+          },
+          {
+            "kind": "hostileBeaconEntry",
+            "turn": 66,
+            "factionId": "khar",
+            "targetId": "veyr",
+            "systemId": "s16",
+            "fleetId": "f75",
+            "progress": 4,
+            "survivedArrival": true,
+            "combat": false
+          }
+        ],
+        "playerActions": [
+          {
+            "turn": 61,
+            "action": {
+              "type": "build",
+              "systemId": "s0",
+              "itemId": "cruiser"
+            }
+          },
+          {
+            "turn": 61,
+            "action": {
+              "type": "build",
+              "systemId": "s20",
+              "itemId": "cruiser"
+            }
+          },
+          {
+            "turn": 63,
+            "action": {
+              "type": "planRoute",
+              "fleetId": "f73",
+              "destinationId": "s25"
+            }
+          },
+          {
+            "turn": 63,
+            "action": {
+              "type": "continueRoute",
+              "fleetId": "f73"
+            }
+          },
+          {
+            "turn": 64,
+            "action": {
+              "type": "continueRoute",
+              "fleetId": "f73"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "turn": 61,
+            "playerAlignment": 4,
+            "veyrRelation": "war",
+            "expedition": {
+              "fleetId": "f59",
+              "targetId": "player",
+              "systemId": "s0"
+            },
+            "raider": {
+              "systemId": "s13",
+              "system": "Sable",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "playerAlignment": 5,
+            "veyrRelation": "war",
+            "expedition": {
+              "fleetId": "f59",
+              "targetId": "player",
+              "systemId": "s0"
+            },
+            "raider": {
+              "systemId": "s10",
+              "system": "Ashfall",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "playerAlignment": 6,
+            "veyrRelation": "war",
+            "expedition": {
+              "fleetId": "f59",
+              "targetId": "player",
+              "systemId": "s0"
+            },
+            "raider": {
+              "systemId": "s36",
+              "system": "Peregrine",
+              "ships": 3,
+              "hp": 102
+            },
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 64,
+            "playerAlignment": 7,
+            "veyrRelation": "war",
+            "expedition": null,
+            "raider": null,
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "playerAlignment": 8,
+            "veyrRelation": "war",
+            "expedition": null,
+            "raider": null,
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "playerAlignment": 9,
+            "veyrRelation": "war",
+            "expedition": null,
+            "raider": null,
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "playerAlignment": 10,
+            "veyrRelation": "war",
+            "expedition": null,
+            "raider": null,
+            "transitColonies": [
+              {
+                "systemId": "s23",
+                "owner": "player",
+                "defenseDamage": 0
+              },
+              {
+                "systemId": "s28",
+                "owner": "player",
+                "defenseDamage": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runs": [
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstAlignment": 68,
+          "peakAlignment": 3
+        },
+        "khar": {
+          "protocol": 51,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 38,
+          "firstAlignment": 56,
+          "peakAlignment": 9
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 2,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 64,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s3",
+          "fleetId": "f43",
+          "progress": 9,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 66,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s22",
+          "fleetId": "f43",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 65,
+          "factionId": "choir",
+          "before": 9,
+          "after": 8,
+          "sites": [
+            "s22",
+            "s30",
+            "s3"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 65,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 64,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 47,
+          "firstAlignment": 63,
+          "peakAlignment": 3
+        },
+        "khar": {
+          "protocol": 52,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 0,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        }
+      ],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 76,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 75,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 51,
+          "firstAlignment": 63,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 46,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 41,
+          "firstAlignment": 55,
+          "peakAlignment": 9
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 6,
+        "survivingBeaconArrivals": 3,
+        "alignmentInterruptionsAnyCause": 3,
+        "confirmedBlockadeDeclines": 4
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 57,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 58,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s16",
+          "fleetId": "f6",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s22",
+          "fleetId": "f6",
+          "progress": 9,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s16",
+          "fleetId": "f56",
+          "progress": 3,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 70,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s16",
+          "fleetId": "f66",
+          "progress": 4,
+          "survivedArrival": false,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 72,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s16",
+          "fleetId": "f70",
+          "progress": 6,
+          "survivedArrival": false,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 74,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s16",
+          "fleetId": "f75",
+          "progress": 8,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 59,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s9",
+            "s3",
+            "s16"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "veyr",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s1",
+            "s16",
+            "s18"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "choir",
+          "before": 9,
+          "after": 8,
+          "sites": [
+            "s9",
+            "s3",
+            "s22"
+          ]
+        },
+        {
+          "turn": 67,
+          "factionId": "veyr",
+          "before": 2,
+          "after": 1,
+          "sites": [
+            "s1",
+            "s16",
+            "s18"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 78,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 77,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstAlignment": 59,
+          "peakAlignment": 8
+        },
+        "khar": {
+          "protocol": 69,
+          "firstAlignment": 76,
+          "peakAlignment": 3
+        },
+        "choir": {
+          "protocol": 37,
+          "firstAlignment": 54,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 3,
+        "hostileBeaconEntries": 5,
+        "survivingBeaconArrivals": 4,
+        "alignmentInterruptionsAnyCause": 2,
+        "confirmedBlockadeDeclines": 3
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f41",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 62,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 4,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 66,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f50",
+          "progress": 8,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 67,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f53",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 72,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 4,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 77,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s3",
+          "fleetId": "f61",
+          "progress": 9,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 60,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s14",
+            "s3",
+            "s38"
+          ]
+        },
+        {
+          "turn": 67,
+          "factionId": "veyr",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        },
+        {
+          "turn": 68,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 66,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 65,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstAlignment": 57,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 59,
+          "peakAlignment": 7
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 1,
+        "survivingBeaconArrivals": 1,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 61,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s9",
+          "fleetId": "f9",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 66,
+          "factionId": "choir",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s9",
+            "s35",
+            "s3"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 69,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 68,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstAlignment": 60,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 48,
+          "firstAlignment": 60,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 34,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        }
+      },
+      "interventions": {
+        "declarations": 0,
+        "hostileBeaconEntries": 0,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 66,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 65,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstAlignment": 60,
+          "peakAlignment": 7
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": 57,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 33,
+          "firstAlignment": 44,
+          "peakAlignment": 6
+        }
+      },
+      "interventions": {
+        "declarations": 3,
+        "hostileBeaconEntries": 3,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 49,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s6",
+          "fleetId": "f38",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 49,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s6",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 61,
+          "factionId": "choir",
+          "targetId": "khar",
+          "systemId": "s35",
+          "fleetId": "f48",
+          "progress": 5,
+          "survivedArrival": false,
+          "combat": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 62,
+          "factionId": "veyr",
+          "targetId": "khar",
+          "progress": 6,
+          "brokeTrade": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 50,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s35",
+            "s30",
+            "s6"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "khar": {
+          "protocol": 51,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 35,
+          "firstAlignment": 57,
+          "peakAlignment": 6
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 2,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 63,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f35",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 63,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s14",
+            "s3",
+            "s30"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 65,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 64,
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 49,
+          "firstAlignment": 65,
+          "peakAlignment": 1
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": 59,
+          "peakAlignment": 7
+        },
+        "choir": {
+          "protocol": 40,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 0,
+        "hostileBeaconEntries": 0,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 66,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 65,
+      "milestones": {
+        "player": {
+          "protocol": 46,
+          "firstAlignment": 57,
+          "peakAlignment": 5
+        },
+        "veyr": {
+          "protocol": 48,
+          "firstAlignment": 63,
+          "peakAlignment": 2
+        },
+        "khar": {
+          "protocol": 52,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 57,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 1,
+        "survivingBeaconArrivals": 1,
+        "alignmentInterruptionsAnyCause": 2,
+        "confirmedBlockadeDeclines": 2
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "veyr",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 61,
+          "factionId": "veyr",
+          "targetId": "player",
+          "systemId": "s15",
+          "fleetId": "f6",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 62,
+          "factionId": "player",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s7",
+            "s0",
+            "s15"
+          ]
+        },
+        {
+          "turn": 64,
+          "factionId": "veyr",
+          "before": 1,
+          "after": 0,
+          "sites": [
+            "s39",
+            "s1",
+            "s15"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 65,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 64,
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstAlignment": 65,
+          "peakAlignment": 1
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 41,
+          "firstAlignment": 58,
+          "peakAlignment": 8
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 0,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "veyr",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 61,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 4,
+          "brokeTrade": false
+        }
+      ],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 71,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "milestones": {
+        "player": {
+          "protocol": 51,
+          "firstAlignment": 62,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstAlignment": 62,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 69,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 36,
+          "firstAlignment": 54,
+          "peakAlignment": 6
+        }
+      },
+      "interventions": {
+        "declarations": 3,
+        "hostileBeaconEntries": 4,
+        "survivingBeaconArrivals": 3,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "player",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f50",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 60,
+          "factionId": "player",
+          "targetId": "choir",
+          "systemId": "s38",
+          "fleetId": "f3",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 66,
+          "factionId": "khar",
+          "targetId": "player",
+          "progress": 5,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "khar",
+          "targetId": "player",
+          "systemId": "s38",
+          "fleetId": "f9",
+          "progress": 7,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 60,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s14",
+            "s3",
+            "s38"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 66,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 65,
+      "milestones": {
+        "player": {
+          "protocol": 55,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstAlignment": 57,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 53,
+          "firstAlignment": 62,
+          "peakAlignment": 5
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 0,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "player",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 65,
+          "factionId": "player",
+          "targetId": "khar",
+          "progress": 4,
+          "brokeTrade": false
+        }
+      ],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 71,
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstAlignment": 61,
+          "peakAlignment": 5
+        },
+        "veyr": {
+          "protocol": 52,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 53,
+          "firstAlignment": 72,
+          "peakAlignment": 1
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 65,
+          "peakAlignment": 8
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 3,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 2,
+        "confirmedBlockadeDeclines": 2
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 63,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 63,
+          "factionId": "choir",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s5",
+          "fleetId": "f53",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s25",
+          "fleetId": "f54",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 71,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s5",
+          "fleetId": "f76",
+          "progress": 9,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 66,
+          "factionId": "player",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s20",
+            "s0",
+            "s25"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "veyr",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s5",
+            "s10",
+            "s23"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 68,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 67,
+      "milestones": {
+        "player": {
+          "protocol": 50,
+          "firstAlignment": 59,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstAlignment": 62,
+          "peakAlignment": 7
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": 59,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 34,
+          "firstAlignment": 44,
+          "peakAlignment": 9
+        }
+      },
+      "interventions": {
+        "declarations": 4,
+        "hostileBeaconEntries": 5,
+        "survivingBeaconArrivals": 4,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 2
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "player",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 52,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s6",
+          "fleetId": "f56",
+          "progress": 9,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 53,
+          "factionId": "player",
+          "targetId": "choir",
+          "systemId": "s30",
+          "fleetId": "f3",
+          "progress": 8,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 53,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s6",
+          "fleetId": "f9",
+          "progress": 8,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 57,
+          "factionId": "player",
+          "targetId": "choir",
+          "systemId": "s35",
+          "fleetId": "f3",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 61,
+          "factionId": "veyr",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 67,
+          "factionId": "veyr",
+          "targetId": "player",
+          "systemId": "s0",
+          "fleetId": "f70",
+          "progress": 9,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 53,
+          "factionId": "choir",
+          "before": 9,
+          "after": 8,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 54,
+          "factionId": "choir",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "before",
+      "mode": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstAlignment": 54,
+          "peakAlignment": 7
+        },
+        "veyr": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "khar": {
+          "protocol": 52,
+          "firstAlignment": 62,
+          "peakAlignment": 9
+        },
+        "choir": {
+          "protocol": 38,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 4,
+        "survivingBeaconArrivals": 3,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "choir",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 60,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s25",
+          "fleetId": "f12",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "khar",
+          "targetId": "player",
+          "systemId": "s20",
+          "fleetId": "f9",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s33",
+          "fleetId": "f12",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 64,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 4,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f66",
+          "progress": 8,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 61,
+          "factionId": "player",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s20",
+            "s33",
+            "s25"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "ASTERION",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstAlignment": 68,
+          "peakAlignment": 3
+        },
+        "khar": {
+          "protocol": 51,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 38,
+          "firstAlignment": 56,
+          "peakAlignment": 6
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 1,
+        "survivingBeaconArrivals": 1,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 3
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 61,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s3",
+          "fleetId": "f46",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 62,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s22",
+            "s30",
+            "s3"
+          ]
+        },
+        {
+          "turn": 63,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s22",
+            "s30",
+            "s3"
+          ]
+        },
+        {
+          "turn": 64,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s22",
+            "s30",
+            "s3"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-1",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 71,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 47,
+          "firstAlignment": 63,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 52,
+          "firstAlignment": 66,
+          "peakAlignment": 6
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 56,
+          "peakAlignment": 7
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 2,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 2,
+        "confirmedBlockadeDeclines": 5
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s38",
+          "fleetId": "f6",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 71,
+          "factionId": "choir",
+          "targetId": "khar",
+          "systemId": "s2",
+          "fleetId": "f63",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 63,
+          "factionId": "choir",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 64,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 65,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 72,
+          "factionId": "khar",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s24",
+            "s2",
+            "s5"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-2",
+      "finishTurn": 68,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 67,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 51,
+          "firstAlignment": 63,
+          "peakAlignment": 6
+        },
+        "khar": {
+          "protocol": 46,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 41,
+          "firstAlignment": 55,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 3,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 2
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 57,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 58,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s16",
+          "fleetId": "f6",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 58,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s16",
+          "fleetId": "f48",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s16",
+          "fleetId": "f56",
+          "progress": 3,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 59,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s9",
+            "s3",
+            "s16"
+          ]
+        },
+        {
+          "turn": 60,
+          "factionId": "choir",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s9",
+            "s3",
+            "s16"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-3",
+      "finishTurn": 85,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 84,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstAlignment": 59,
+          "peakAlignment": 9
+        },
+        "khar": {
+          "protocol": 69,
+          "firstAlignment": 76,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 37,
+          "firstAlignment": 54,
+          "peakAlignment": 7
+        }
+      },
+      "interventions": {
+        "declarations": 5,
+        "hostileBeaconEntries": 13,
+        "survivingBeaconArrivals": 11,
+        "alignmentInterruptionsAnyCause": 5,
+        "confirmedBlockadeDeclines": 12
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f41",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 60,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s38",
+          "fleetId": "f6",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 64,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 6,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 67,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f52",
+          "progress": 9,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 70,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f54",
+          "progress": 6,
+          "survivedArrival": false,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 71,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f56",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 72,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 72,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s8",
+          "fleetId": "f45",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 72,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "progress": 6,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 75,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "systemId": "s23",
+          "fleetId": "f12",
+          "progress": 7,
+          "survivedArrival": false,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 76,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "systemId": "s38",
+          "fleetId": "f64",
+          "progress": 8,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 77,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 78,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "systemId": "s38",
+          "fleetId": "f55",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 79,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s3",
+          "fleetId": "f65",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 81,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s7",
+          "fleetId": "f6",
+          "progress": 3,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 60,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s14",
+            "s3",
+            "s38"
+          ]
+        },
+        {
+          "turn": 61,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s14",
+            "s3",
+            "s38"
+          ]
+        },
+        {
+          "turn": 68,
+          "factionId": "veyr",
+          "before": 9,
+          "after": 8,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        },
+        {
+          "turn": 69,
+          "factionId": "veyr",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        },
+        {
+          "turn": 70,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        },
+        {
+          "turn": 72,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        },
+        {
+          "turn": 73,
+          "factionId": "veyr",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s1",
+            "s8",
+            "s23"
+          ]
+        },
+        {
+          "turn": 77,
+          "factionId": "veyr",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s1",
+            "s23",
+            "s38"
+          ]
+        },
+        {
+          "turn": 78,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s1",
+            "s23",
+            "s38"
+          ]
+        },
+        {
+          "turn": 79,
+          "factionId": "veyr",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s1",
+            "s23",
+            "s38"
+          ]
+        },
+        {
+          "turn": 80,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s3",
+            "s30",
+            "s7"
+          ]
+        },
+        {
+          "turn": 81,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s3",
+            "s30",
+            "s7"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-4",
+      "finishTurn": 80,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 79,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstAlignment": 57,
+          "peakAlignment": 8
+        },
+        "khar": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 59,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 3,
+        "hostileBeaconEntries": 5,
+        "survivingBeaconArrivals": 4,
+        "alignmentInterruptionsAnyCause": 3,
+        "confirmedBlockadeDeclines": 7
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 61,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 64,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "systemId": "s31",
+          "fleetId": "f12",
+          "progress": 8,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s9",
+          "fleetId": "f9",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 69,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s9",
+          "fleetId": "f43",
+          "progress": 3,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 73,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s3",
+          "fleetId": "f43",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 76,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 6,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 78,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "systemId": "s31",
+          "fleetId": "f44",
+          "progress": 8,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 65,
+          "factionId": "veyr",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s26",
+            "s31",
+            "s34"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "choir",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s9",
+            "s35",
+            "s3"
+          ]
+        },
+        {
+          "turn": 67,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s9",
+            "s35",
+            "s3"
+          ]
+        },
+        {
+          "turn": 68,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s9",
+            "s35",
+            "s3"
+          ]
+        },
+        {
+          "turn": 69,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s9",
+            "s35",
+            "s3"
+          ]
+        },
+        {
+          "turn": 70,
+          "factionId": "choir",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s9",
+            "s35",
+            "s3"
+          ]
+        },
+        {
+          "turn": 74,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s35",
+            "s3",
+            "s31"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-5",
+      "finishTurn": 69,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 68,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstAlignment": 60,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 48,
+          "firstAlignment": 60,
+          "peakAlignment": 8
+        },
+        "choir": {
+          "protocol": 34,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        }
+      },
+      "interventions": {
+        "declarations": 0,
+        "hostileBeaconEntries": 1,
+        "survivingBeaconArrivals": 1,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 66,
+          "factionId": "choir",
+          "targetId": "khar",
+          "systemId": "s14",
+          "fleetId": "f43",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 67,
+          "factionId": "khar",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s11",
+            "s24",
+            "s14"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-6",
+      "finishTurn": 67,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 66,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": 44,
+          "firstAlignment": 60,
+          "peakAlignment": 8
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": 58,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 33,
+          "firstAlignment": 44,
+          "peakAlignment": 6
+        }
+      },
+      "interventions": {
+        "declarations": 3,
+        "hostileBeaconEntries": 3,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 1
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 49,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s6",
+          "fleetId": "f9",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 49,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s6",
+          "fleetId": "f38",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 62,
+          "factionId": "choir",
+          "targetId": "khar",
+          "progress": 5,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "choir",
+          "targetId": "khar",
+          "systemId": "s35",
+          "fleetId": "f48",
+          "progress": 5,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 50,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s35",
+            "s30",
+            "s6"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "passive",
+      "seed": "stage4-audit-7",
+      "finishTurn": 70,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 69,
+      "milestones": {
+        "player": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "veyr": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "khar": {
+          "protocol": 51,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 35,
+          "firstAlignment": 57,
+          "peakAlignment": 4
+        }
+      },
+      "interventions": {
+        "declarations": 1,
+        "hostileBeaconEntries": 1,
+        "survivingBeaconArrivals": 1,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 2
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 60,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s14",
+          "fleetId": "f9",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 61,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s14",
+            "s3",
+            "s30"
+          ]
+        },
+        {
+          "turn": 62,
+          "factionId": "choir",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s14",
+            "s3",
+            "s30"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "ASTERION",
+      "finishTurn": 65,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 64,
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 49,
+          "firstAlignment": 65,
+          "peakAlignment": 1
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": 59,
+          "peakAlignment": 7
+        },
+        "choir": {
+          "protocol": 40,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 0,
+        "hostileBeaconEntries": 0,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-1",
+      "finishTurn": 86,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 85,
+      "milestones": {
+        "player": {
+          "protocol": 46,
+          "firstAlignment": 57,
+          "peakAlignment": 7
+        },
+        "veyr": {
+          "protocol": 48,
+          "firstAlignment": 62,
+          "peakAlignment": 9
+        },
+        "khar": {
+          "protocol": 52,
+          "firstAlignment": 78,
+          "peakAlignment": 9
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 57,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 5,
+        "hostileBeaconEntries": 8,
+        "survivingBeaconArrivals": 8,
+        "alignmentInterruptionsAnyCause": 7,
+        "confirmedBlockadeDeclines": 17
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "veyr",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 60,
+          "factionId": "veyr",
+          "targetId": "player",
+          "systemId": "s15",
+          "fleetId": "f6",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 61,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 5,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 62,
+          "factionId": "player",
+          "targetId": "choir",
+          "progress": 6,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "player",
+          "targetId": "choir",
+          "systemId": "s38",
+          "fleetId": "f3",
+          "progress": 9,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "player",
+          "targetId": "veyr",
+          "systemId": "s15",
+          "fleetId": "f76",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 71,
+          "factionId": "player",
+          "targetId": "veyr",
+          "systemId": "s15",
+          "fleetId": "f81",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 74,
+          "factionId": "veyr",
+          "targetId": "player",
+          "systemId": "s7",
+          "fleetId": "f6",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 78,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s29",
+          "fleetId": "f87",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 80,
+          "factionId": "khar",
+          "targetId": "player",
+          "progress": 6,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 81,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s38",
+          "fleetId": "f67",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 82,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "progress": 7,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 82,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "systemId": "s29",
+          "fleetId": "f91",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 61,
+          "factionId": "player",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s7",
+            "s0",
+            "s15"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "choir",
+          "before": 9,
+          "after": 8,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 67,
+          "factionId": "choir",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 68,
+          "factionId": "choir",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s22",
+            "s19",
+            "s38"
+          ]
+        },
+        {
+          "turn": 69,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s39",
+            "s1",
+            "s15"
+          ]
+        },
+        {
+          "turn": 70,
+          "factionId": "veyr",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s39",
+            "s1",
+            "s15"
+          ]
+        },
+        {
+          "turn": 71,
+          "factionId": "veyr",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s39",
+            "s1",
+            "s15"
+          ]
+        },
+        {
+          "turn": 72,
+          "factionId": "veyr",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s39",
+            "s1",
+            "s15"
+          ]
+        },
+        {
+          "turn": 73,
+          "factionId": "veyr",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s39",
+            "s1",
+            "s15"
+          ]
+        },
+        {
+          "turn": 75,
+          "factionId": "player",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s7",
+            "s0",
+            "s38"
+          ]
+        },
+        {
+          "turn": 76,
+          "factionId": "player",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s7",
+            "s0",
+            "s38"
+          ]
+        },
+        {
+          "turn": 77,
+          "factionId": "player",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s7",
+            "s0",
+            "s38"
+          ]
+        },
+        {
+          "turn": 79,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s39",
+            "s1",
+            "s29"
+          ]
+        },
+        {
+          "turn": 80,
+          "factionId": "veyr",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s39",
+            "s1",
+            "s29"
+          ]
+        },
+        {
+          "turn": 82,
+          "factionId": "player",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s0",
+            "s38",
+            "s20"
+          ]
+        },
+        {
+          "turn": 83,
+          "factionId": "player",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s0",
+            "s38",
+            "s20"
+          ]
+        },
+        {
+          "turn": 83,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s39",
+            "s1",
+            "s29"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-2",
+      "finishTurn": 65,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 64,
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstAlignment": 56,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 50,
+          "firstAlignment": 65,
+          "peakAlignment": 1
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 41,
+          "firstAlignment": 58,
+          "peakAlignment": 8
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 1,
+        "survivingBeaconArrivals": 0,
+        "alignmentInterruptionsAnyCause": 0,
+        "confirmedBlockadeDeclines": 0
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 58,
+          "factionId": "veyr",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 61,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 4,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 63,
+          "factionId": "veyr",
+          "targetId": "player",
+          "systemId": "s41",
+          "fleetId": "f56",
+          "progress": 8,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": []
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-3",
+      "finishTurn": 71,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "milestones": {
+        "player": {
+          "protocol": 51,
+          "firstAlignment": 62,
+          "peakAlignment": 5
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstAlignment": 62,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 69,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "choir": {
+          "protocol": 36,
+          "firstAlignment": 54,
+          "peakAlignment": 4
+        }
+      },
+      "interventions": {
+        "declarations": 4,
+        "hostileBeaconEntries": 3,
+        "survivingBeaconArrivals": 3,
+        "alignmentInterruptionsAnyCause": 3,
+        "confirmedBlockadeDeclines": 4
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "player",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 57,
+          "factionId": "player",
+          "targetId": "choir",
+          "systemId": "s38",
+          "fleetId": "f3",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 64,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s38",
+          "fleetId": "f12",
+          "progress": 3,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 66,
+          "factionId": "player",
+          "targetId": "veyr",
+          "progress": 5,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s7",
+          "fleetId": "f12",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 58,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s14",
+            "s3",
+            "s38"
+          ]
+        },
+        {
+          "turn": 59,
+          "factionId": "choir",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s14",
+            "s3",
+            "s38"
+          ]
+        },
+        {
+          "turn": 65,
+          "factionId": "player",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s0",
+            "s38",
+            "s7"
+          ]
+        },
+        {
+          "turn": 69,
+          "factionId": "player",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s0",
+            "s7",
+            "s33"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-4",
+      "finishTurn": 71,
+      "winner": "khar",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "milestones": {
+        "player": {
+          "protocol": 55,
+          "firstAlignment": 71,
+          "peakAlignment": 1
+        },
+        "veyr": {
+          "protocol": 46,
+          "firstAlignment": 57,
+          "peakAlignment": 6
+        },
+        "khar": {
+          "protocol": 53,
+          "firstAlignment": 62,
+          "peakAlignment": 10
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        }
+      },
+      "interventions": {
+        "declarations": 4,
+        "hostileBeaconEntries": 4,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 1,
+        "confirmedBlockadeDeclines": 3
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "player",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 59,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "player",
+          "targetId": "veyr",
+          "systemId": "s31",
+          "fleetId": "f3",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s26",
+          "fleetId": "f45",
+          "progress": 6,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 65,
+          "factionId": "player",
+          "targetId": "khar",
+          "progress": 4,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "player",
+          "targetId": "khar",
+          "systemId": "s24",
+          "fleetId": "f3",
+          "progress": 7,
+          "survivedArrival": false,
+          "combat": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 68,
+          "factionId": "choir",
+          "targetId": "khar",
+          "progress": 7,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "choir",
+          "targetId": "khar",
+          "systemId": "s27",
+          "fleetId": "f68",
+          "progress": 7,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 63,
+          "factionId": "veyr",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s26",
+            "s31",
+            "s34"
+          ]
+        },
+        {
+          "turn": 64,
+          "factionId": "veyr",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s26",
+            "s31",
+            "s34"
+          ]
+        },
+        {
+          "turn": 65,
+          "factionId": "veyr",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s26",
+            "s31",
+            "s34"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-5",
+      "finishTurn": 72,
+      "winner": "veyr",
+      "victory": "Transcendence",
+      "checkedCycles": 71,
+      "milestones": {
+        "player": {
+          "protocol": 47,
+          "firstAlignment": 61,
+          "peakAlignment": 8
+        },
+        "veyr": {
+          "protocol": 52,
+          "firstAlignment": 61,
+          "peakAlignment": 10
+        },
+        "khar": {
+          "protocol": 53,
+          "firstAlignment": 72,
+          "peakAlignment": 1
+        },
+        "choir": {
+          "protocol": 39,
+          "firstAlignment": 65,
+          "peakAlignment": 8
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 3,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 2,
+        "confirmedBlockadeDeclines": 3
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 63,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 63,
+          "factionId": "choir",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 64,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s5",
+          "fleetId": "f53",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 64,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s25",
+          "fleetId": "f54",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 71,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s5",
+          "fleetId": "f76",
+          "progress": 9,
+          "survivedArrival": false,
+          "combat": true
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 65,
+          "factionId": "player",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s20",
+            "s0",
+            "s25"
+          ]
+        },
+        {
+          "turn": 65,
+          "factionId": "veyr",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s5",
+            "s10",
+            "s23"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "player",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s20",
+            "s0",
+            "s25"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-6",
+      "finishTurn": 75,
+      "winner": "player",
+      "victory": "Transcendence",
+      "checkedCycles": 74,
+      "milestones": {
+        "player": {
+          "protocol": 50,
+          "firstAlignment": 62,
+          "peakAlignment": 10
+        },
+        "veyr": {
+          "protocol": 45,
+          "firstAlignment": 62,
+          "peakAlignment": 7
+        },
+        "khar": {
+          "protocol": 50,
+          "firstAlignment": 70,
+          "peakAlignment": 6
+        },
+        "choir": {
+          "protocol": 34,
+          "firstAlignment": 44,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 7,
+        "hostileBeaconEntries": 2,
+        "survivingBeaconArrivals": 2,
+        "alignmentInterruptionsAnyCause": 3,
+        "confirmedBlockadeDeclines": 11
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "player",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "veyr",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 46,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 51,
+          "factionId": "player",
+          "targetId": "choir",
+          "systemId": "s30",
+          "fleetId": "f3",
+          "progress": 8,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 64,
+          "factionId": "choir",
+          "targetId": "veyr",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 66,
+          "factionId": "player",
+          "targetId": "veyr",
+          "progress": 5,
+          "brokeTrade": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 66,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "progress": 5,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 68,
+          "factionId": "khar",
+          "targetId": "veyr",
+          "systemId": "s26",
+          "fleetId": "f56",
+          "progress": 7,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 71,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 6,
+          "brokeTrade": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 52,
+          "factionId": "choir",
+          "before": 8,
+          "after": 7,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 53,
+          "factionId": "choir",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 54,
+          "factionId": "choir",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 55,
+          "factionId": "choir",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 56,
+          "factionId": "choir",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 57,
+          "factionId": "choir",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s30",
+            "s35",
+            "s6"
+          ]
+        },
+        {
+          "turn": 64,
+          "factionId": "player",
+          "before": 2,
+          "after": 1,
+          "sites": [
+            "s0",
+            "s30",
+            "s20"
+          ]
+        },
+        {
+          "turn": 65,
+          "factionId": "player",
+          "before": 1,
+          "after": 0,
+          "sites": [
+            "s0",
+            "s30",
+            "s20"
+          ]
+        },
+        {
+          "turn": 69,
+          "factionId": "veyr",
+          "before": 7,
+          "after": 6,
+          "sites": [
+            "s1",
+            "s18",
+            "s26"
+          ]
+        },
+        {
+          "turn": 70,
+          "factionId": "veyr",
+          "before": 6,
+          "after": 5,
+          "sites": [
+            "s1",
+            "s18",
+            "s26"
+          ]
+        },
+        {
+          "turn": 71,
+          "factionId": "veyr",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s1",
+            "s18",
+            "s26"
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "after",
+      "mode": "balanced",
+      "seed": "stage4-audit-7",
+      "finishTurn": 71,
+      "winner": "choir",
+      "victory": "Transcendence",
+      "checkedCycles": 70,
+      "milestones": {
+        "player": {
+          "protocol": 42,
+          "firstAlignment": 54,
+          "peakAlignment": 4
+        },
+        "veyr": {
+          "protocol": null,
+          "firstAlignment": null,
+          "peakAlignment": 0
+        },
+        "khar": {
+          "protocol": 52,
+          "firstAlignment": 61,
+          "peakAlignment": 9
+        },
+        "choir": {
+          "protocol": 38,
+          "firstAlignment": 60,
+          "peakAlignment": 10
+        }
+      },
+      "interventions": {
+        "declarations": 2,
+        "hostileBeaconEntries": 4,
+        "survivingBeaconArrivals": 4,
+        "alignmentInterruptionsAnyCause": 3,
+        "confirmedBlockadeDeclines": 4
+      },
+      "events": [
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 56,
+          "factionId": "choir",
+          "targetId": "player",
+          "progress": 3,
+          "brokeTrade": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 57,
+          "factionId": "choir",
+          "targetId": "player",
+          "systemId": "s25",
+          "fleetId": "f12",
+          "progress": 4,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 58,
+          "factionId": "khar",
+          "targetId": "player",
+          "systemId": "s20",
+          "fleetId": "f53",
+          "progress": 3,
+          "survivedArrival": true,
+          "combat": false
+        },
+        {
+          "kind": "alignmentDeclaration",
+          "turn": 62,
+          "factionId": "khar",
+          "targetId": "choir",
+          "progress": 3,
+          "brokeTrade": false
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 62,
+          "factionId": "khar",
+          "targetId": "choir",
+          "systemId": "s25",
+          "fleetId": "f42",
+          "progress": 3,
+          "survivedArrival": true,
+          "combat": true
+        },
+        {
+          "kind": "hostileBeaconEntry",
+          "turn": 65,
+          "factionId": "choir",
+          "targetId": "khar",
+          "systemId": "s20",
+          "fleetId": "f64",
+          "progress": 5,
+          "survivedArrival": true,
+          "combat": false
+        }
+      ],
+      "blockadeDeclines": [
+        {
+          "turn": 58,
+          "factionId": "player",
+          "before": 4,
+          "after": 3,
+          "sites": [
+            "s20",
+            "s33",
+            "s25"
+          ]
+        },
+        {
+          "turn": 59,
+          "factionId": "player",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s20",
+            "s33",
+            "s25"
+          ]
+        },
+        {
+          "turn": 63,
+          "factionId": "choir",
+          "before": 3,
+          "after": 2,
+          "sites": [
+            "s3",
+            "s14",
+            "s25"
+          ]
+        },
+        {
+          "turn": 66,
+          "factionId": "khar",
+          "before": 5,
+          "after": 4,
+          "sites": [
+            "s13",
+            "s20",
+            "s1"
+          ]
+        }
+      ]
+    }
+  ]
+}
