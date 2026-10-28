@@ -1,6 +1,7 @@
 import { ANOMALIES, BUILDINGS, SHIPS, TECHS } from './content.js';
 import { getInfrastructure, getCharterBonuses } from './development.js';
 import { getVisibleFleets, hasSensors } from './intelligence.js';
+import { getSystemYield } from './game.js';
 
 const TARGET = 3;
 const factionOf = (state, id) => state.factions.find(faction => faction.id === id);
@@ -111,6 +112,29 @@ function restorationReason(state, system, faction, building, replacement) {
   return getDiscoveryBuildReason(state, system, building.id, faction.id);
 }
 
+// Evaluate only for a currently accessible expedition. Remembered choices
+// must not expose a remote world's later changes or a foreign capital's data.
+function previewChoiceEffects(state, system, faction, choice, view) {
+  if (!view.canInteract) return null;
+  const effects = {};
+  if (choice.population) {
+    const capital = systemOf(state, faction.capitalId);
+    if (capital?.owner === faction.id) {
+      const before = capital.population, after = before + choice.population;
+      // Capacity limits natural growth, not the arrival of refugees.
+      const capacity = getSystemYield(state, capital).capacity;
+      effects.population = { amount: choice.population, systemId: capital.id, systemName: capital.name, before, after, capacity, overCapacity: after > capacity };
+    } else {
+      effects.population = { amount: 0, systemId: null, systemName: null, before: null, after: null, capacity: null, overCapacity: false };
+    }
+  }
+  if (choice.habitability) {
+    const before = system.habitability, after = Math.min(100, before + choice.habitability);
+    effects.habitability = { amount: after - before, before, after };
+  }
+  return effects;
+}
+
 /** The same action schema is used by player UI and AI. Remote options stay stale. */
 export function getDiscoveryOptions(state, systemId, factionId = 'player', replaceBuildingId = null) {
   const system = systemOf(state, systemId), faction = factionOf(state, factionId);
@@ -128,7 +152,7 @@ export function getDiscoveryOptions(state, systemId, factionId = 'player', repla
     if (!reason && building) reason = restorationReason(state, system, faction, building, replaceBuildingId);
     if (!reason && !canPay(faction, cost)) reason = 'Insufficient credits or minerals';
     const production = view.canInteract ? 4 + system.population + system.buildings.reduce((total, id) => total + (BUILDINGS[id].production || 0), 0) + getCharterBonuses(system).production : 0;
-    return { ...copy(choice), cost: { ...cost }, gain: { ...choice.gain }, requires: [...requires], orders: 1, enabled: !reason, reason, stageId: view.phase, kind: building ? 'restore' : choice.preserve ? 'preserve' : 'resolve', ...(building ? { work: building.work, turns: view.canInteract ? Math.ceil(building.work / Math.max(1, production)) : null, replaceBuildingId } : {}), continuation: choice.preserve ? definition.continuation : null };
+    return { ...copy(choice), cost: { ...cost }, gain: { ...choice.gain }, requires: [...requires], orders: 1, enabled: !reason, reason, stageId: view.phase, kind: building ? 'restore' : choice.preserve ? 'preserve' : 'resolve', ...(building ? { work: building.work, turns: view.canInteract ? Math.ceil(building.work / Math.max(1, production)) : null, replaceBuildingId } : {}), continuation: choice.preserve ? definition.continuation : null, effectsPreview: previewChoiceEffects(state, system, faction, choice, view) };
   });
 }
 

@@ -411,7 +411,7 @@ function anomalyTurn(state, faction, act) {
         continue;
       }
     }
-    const value = choice => (choice.gain?.minerals || 0) * (faction.minerals < 80 ? 1.4 : .65) + (choice.gain?.science || 0) * (faction.research ? 1.1 : .65) + (choice.gain?.credits || 0) * (faction.credits < 70 ? 1.3 : .35) + (choice.ship ? 60 : 0) + (choice.population ? 30 : 0) + (choice.habitability && !system.owner && system.habitability < 50 ? 45 : 0) + (choice.reveal ? 25 : 0);
+    const value = choice => (choice.gain?.minerals || 0) * (faction.minerals < 80 ? 1.4 : .65) + (choice.gain?.science || 0) * (faction.research ? 1.1 : .65) + (choice.gain?.credits || 0) * (faction.credits < 70 ? 1.3 : .35) + (choice.ship ? 60 : 0) + (choice.effectsPreview?.population?.amount || 0) * 30 + (choice.habitability && !system.owner && system.habitability < 50 ? 45 : 0) + (choice.reveal ? 25 : 0);
     const immediate = choices.filter(choice => choice.kind === 'resolve' && choice.enabled && canSpend(state, faction, choice.cost)).sort((a, b) => value(b) - value(a) || a.id.localeCompare(b.id));
     if (immediate[0]) act({ type: 'anomaly', systemId: system.id, choiceId: immediate[0].id });
   }
