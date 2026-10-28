@@ -1,7 +1,7 @@
 import { FACTIONS, PLANET_TYPES, SYSTEM_NAMES, TECHS, BUILDINGS, SHIPS, ANOMALIES } from './content.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { runAI } from './ai.js';
-import { executeDiplomacy, advanceDiplomacy, validateDiplomacyState } from './diplomacy.js';
+import { executeDiplomacy, advanceDiplomacy, reconcileDiplomacyOffers, validateDiplomacyState } from './diplomacy.js';
 import { captureParticipant, finishParticipant, appendCombatReport, finalizeBriefing, summarizeCombatReports, validateReportState } from './reports.js';
 import { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getConstructionCost, getOrderCapacity, getOrderChange, validateDevelopmentSystem } from './development.js';
 import { getAlignmentStatus, advanceAlignment, revealPublicBeacons, validateAlignmentState } from './victory.js';
@@ -557,6 +557,7 @@ function checkVictory(state) {
     const transcendent = has(faction, 'singularity') && beacons >= 3 && (faction.alignment?.progress || 0) >= 10;
     if (transcendent || capitals === 4) qualifiers.push({ faction, victoryType: transcendent ? 'Transcendence' : 'Domination' });
   }
+  reconcileDiplomacyOffers(state);
   if (qualifiers.length) {
     qualifiers.sort((first, second) => compareFinish(first.faction, second.faction));
     state.winner = qualifiers[0].faction.id;

@@ -2,8 +2,9 @@ import { FACTIONS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
 import { recordPublicDiplomacy } from './public-affairs.js';
 
-export const DIPLOMACY_RULES = Object.freeze({ peaceCost: 60, tradeCost: 30, giftCost: 35, minimumWarTurns: 5, truceTurns: 5, offerTurns: 3, tradeNoticeTurns: 3 });
-const STANCES = ['war', 'peace', 'trade', 'gift', 'endTrade', 'acceptPeace', 'declinePeace'];
+export const DIPLOMACY_RULES = Object.freeze({ peaceCost: 60, tradeCost: 30, giftCost: 35, minimumWarTurns: 5, truceTurns: 5, offerTurns: 3, tradeNoticeTurns: 3, tradeOfferQuietTurns: 5 });
+const STANCES = ['war', 'peace', 'trade', 'gift', 'endTrade', 'acceptPeace', 'declinePeace', 'acceptTrade', 'declineTrade'];
+const offerKind = offer => offer.kind || 'peace';
 const factionOf = (state, id) => state.factions.find(faction => faction.id === id);
 const coloniesOf = (state, id) => state.systems.filter(system => system.owner === id);
 const clamp = value => Math.max(0, Math.min(100, value));
@@ -46,12 +47,31 @@ function willingness(state, recipientId, proposerId) {
   if (pressure.threatenedColonies) reasons.push('Their colonies face military pressure they can observe.');
   if (warAge >= 12) reasons.push('The prolonged war increases their willingness to settle.');
   if (recipientId === 'khar') reasons.push('The Khar Dominion is reluctant to concede a war.');
-  const reason = warAge < DIPLOMACY_RULES.minimumWarTurns ? `Peace negotiations open after ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : accepted ? (reasons[0] || 'They are willing to end the war.') : 'They refuse: the war has not lasted long enough, and their observed losses or military pressure are insufficient.';
+  const reason = warAge < DIPLOMACY_RULES.minimumWarTurns ? `Peace negotiations open after ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : accepted ? (reasons[0] || 'They are willing to end the war.') : 'They refuse these terms for now: war weariness and their observed losses or military pressure are insufficient.';
   return { accepted, reason, reasons, warAge, lostColonies };
 }
 
-function activeOffers(state, first, second) {
-  return (state.diplomacyOffers || []).filter(offer => offer.status === 'pending' && state.turn < offer.expiresTurn && ((offer.from === first && offer.to === second) || (offer.from === second && offer.to === first)));
+function compatibleOffer(state, offer) {
+  const proposer = factionOf(state, offer.from), recipient = factionOf(state, offer.to);
+  if (!proposer || !recipient || proposer.eliminated || recipient.eliminated) return false;
+  const relation = proposer.relations[offer.to];
+  return offerKind(offer) === 'trade' ? relation.status === 'peace' && !relation.trade : relation.status === 'war';
+}
+
+/** Participant-only, current proposals. Legacy kindless entries remain peace. */
+export function getActiveDiplomacyOffers(state, factionId = 'player') {
+  if (state.winner || !factionOf(state, factionId) || factionOf(state, factionId).eliminated) return [];
+  return (state.diplomacyOffers || []).filter(offer => (offer.from === factionId || offer.to === factionId)
+    && offer.status === 'pending' && state.turn < offer.expiresTurn && compatibleOffer(state, offer))
+    .map(offer => ({ ...offer, kind: offerKind(offer) }));
+}
+
+function tradeOfferDeadline(state, factionId, targetId) {
+  const saved = factionOf(state, factionId).relations[targetId].tradeOfferAfter || 0;
+  // A stale imported pending record is already expired even before its refund
+  // is reconciled. Reading it must not permit an immediate replacement offer.
+  const expired = (state.diplomacyOffers || []).filter(offer => offerKind(offer) === 'trade' && offer.from === factionId && offer.to === targetId && offer.status === 'pending' && state.turn >= offer.expiresTurn);
+  return Math.max(saved, ...expired.map(offer => offer.expiresTurn + DIPLOMACY_RULES.tradeOfferQuietTurns));
 }
 
 function option(enabled, reason, effect, credits = 0) {
@@ -65,36 +85,43 @@ export function getDiplomacyForecast(state, factionId = 'player', targetId) {
   const commonReason = state.winner ? 'This campaign has ended.' : !faction || faction.eliminated ? 'This empire is no longer active.' : !target || targetId === factionId || target.eliminated || !relation ? 'Select an active foreign empire.' : !faction.contacts.includes(targetId) ? 'Establish first contact before opening negotiations.' : faction.orders < 1 ? 'No orders remaining.' : '';
   if (!relation || !target || !faction) {
     const actions = Object.fromEntries(STANCES.map(stance => [stance, option(false, commonReason, '')]));
-    return { factionId, targetId, status: null, actions, ...actions, pendingOffers: [], incomingOffer: null, outgoingOffer: null };
+    return { factionId, targetId, status: null, actions, ...actions, pendingOffers: [], incomingOffer: null, outgoingOffer: null, incomingTradeOffer: null, outgoingTradeOffer: null };
   }
-  const pendingOffers = activeOffers(state, factionId, targetId);
-  const incomingOffer = pendingOffers.find(offer => offer.to === factionId) || null;
-  const outgoingOffer = pendingOffers.find(offer => offer.from === factionId) || null;
+  const pendingOffers = getActiveDiplomacyOffers(state, factionId).filter(offer => offer.from === targetId || offer.to === targetId);
+  const incomingOffer = pendingOffers.find(offer => offer.kind === 'peace' && offer.to === factionId) || null;
+  const outgoingOffer = pendingOffers.find(offer => offer.kind === 'peace' && offer.from === factionId) || null;
+  const incomingTradeOffer = pendingOffers.find(offer => offer.kind === 'trade' && offer.to === factionId) || null;
+  const outgoingTradeOffer = pendingOffers.find(offer => offer.kind === 'trade' && offer.from === factionId) || null;
   const truceUntil = Math.max(relation.truceUntil || 0, target.relations[factionId]?.truceUntil || 0);
   const truceRemaining = Math.max(0, truceUntil - state.turn);
   const tradeEndsAt = relation.trade ? relation.tradeEndsAt || 0 : 0;
   const tradeEndingIn = tradeEndsAt ? Math.max(0, tradeEndsAt - state.turn) : null;
   const warAge = Math.max(0, state.turn - relation.treatyTurn);
   const peaceMode = targetId === 'player' && factionId !== 'player' ? 'offer' : 'settlement';
+  const tradeMode = peaceMode;
+  const tradeOfferAfter = tradeMode === 'offer' ? tradeOfferDeadline(state, factionId, targetId) : 0;
   const peaceWillingness = relation.status === 'war' && peaceMode === 'settlement' ? willingness(state, targetId, factionId) : null;
   const warReason = commonReason || (relation.status === 'war' ? 'Already at war.' : truceRemaining ? `The peace settlement forbids war until turn ${truceUntil} (${truceRemaining} cycles remaining).` : '');
   const peaceReason = commonReason || (relation.status !== 'war' ? 'Already at peace.' : warAge < DIPLOMACY_RULES.minimumWarTurns ? `They will not discuss peace during the first ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : outgoingOffer ? `A peace offer is pending until turn ${outgoingOffer.expiresTurn}.` : faction.credits < DIPLOMACY_RULES.peaceCost ? `A peace settlement costs ${DIPLOMACY_RULES.peaceCost} credits.` : peaceWillingness && !peaceWillingness.accepted ? peaceWillingness.reason : '');
-  const tradeReason = commonReason || (relation.status === 'war' ? 'End the war before negotiating trade.' : relation.trade ? tradeEndsAt ? `Trade is ending on turn ${tradeEndsAt}.` : 'A trade treaty is already active.' : relation.trust < 0 ? 'Trust must be at least zero. A diplomatic gift can improve it.' : faction.credits < DIPLOMACY_RULES.tradeCost ? `A trade treaty costs ${DIPLOMACY_RULES.tradeCost} credits.` : '');
+  const tradeReason = commonReason || (relation.status === 'war' ? 'End the war before negotiating trade.' : relation.trade ? tradeEndsAt ? `Trade is ending on turn ${tradeEndsAt}.` : 'A trade treaty is already active.' : incomingTradeOffer || outgoingTradeOffer ? 'A trade offer is awaiting a decision.' : tradeOfferAfter > state.turn ? `A new trade proposal may be sent on cycle ${tradeOfferAfter}.` : relation.trust < 0 ? 'Trust must be at least zero. A diplomatic gift can improve it.' : faction.credits < DIPLOMACY_RULES.tradeCost ? `A trade treaty costs ${DIPLOMACY_RULES.tradeCost} credits.` : '');
   const giftReason = commonReason || (relation.status === 'war' ? 'Diplomatic gifts cannot be sent during war.' : faction.credits < DIPLOMACY_RULES.giftCost ? `A diplomatic gift costs ${DIPLOMACY_RULES.giftCost} credits.` : '');
   const endTradeReason = commonReason || (!relation.trade ? 'No active trade treaty.' : tradeEndsAt ? `Cancellation already announced for turn ${tradeEndsAt}.` : '');
   const answerReason = commonReason || (!incomingOffer ? 'No active incoming peace offer.' : relation.status !== 'war' ? 'The war has already ended.' : '');
+  const tradeAnswerReason = commonReason || (!incomingTradeOffer ? 'No active incoming trade offer.' : '');
   const withdrawal = 'Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.';
   const actions = {
     war: option(!warReason, warReason, relation.trade ? 'Break trade immediately: mutual trust −65; the betrayed empire gains 35 grievance. War opens their borders.' : 'Declare war: mutual trust −40; the other empire gains 20 grievance. War opens their borders.'),
     peace: { ...option(!peaceReason, peaceReason, peaceMode === 'offer' ? `Reserve ${DIPLOMACY_RULES.peaceCost} credits for a player decision. The war continues until acceptance. Offer expires on turn ${state.turn + DIPLOMACY_RULES.offerTurns}; refusal or expiry refunds the credits. Acceptance creates a ${DIPLOMACY_RULES.truceTurns}-cycle truce. ${withdrawal}` : `Pay ${DIPLOMACY_RULES.peaceCost} credits to end the war. War is forbidden for ${DIPLOMACY_RULES.truceTurns} cycles. ${withdrawal}`, DIPLOMACY_RULES.peaceCost), accepted: peaceMode === 'offer' ? null : Boolean(peaceWillingness?.accepted), mode: peaceMode, willingness: peaceWillingness },
-    trade: option(!tradeReason, tradeReason, 'Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.', DIPLOMACY_RULES.tradeCost),
+    trade: { ...option(!tradeReason, tradeReason, tradeMode === 'offer' ? `Reserve ${DIPLOMACY_RULES.tradeCost} credits for a trade offer. Borders, income and trust stay unchanged until the player accepts. The reserved treaty fee is consumed on acceptance, or refunded on refusal or expiry.` : 'Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation.', DIPLOMACY_RULES.tradeCost), mode: tradeMode },
     gift: option(!giftReason, giftReason, 'Transfer 35 credits; mutual trust +20. Existing border grievances remain.', DIPLOMACY_RULES.giftCost),
     endTrade: option(!endTradeReason, endTradeReason, `Give ${DIPLOMACY_RULES.tradeNoticeTurns} cycles of notice. Income and access continue until turn ${state.turn + DIPLOMACY_RULES.tradeNoticeTurns}, then both end and visiting fleets withdraw. Mutual trust −5; the other empire gains 5 grievance.`),
     acceptPeace: option(!answerReason, answerReason, `Receive ${incomingOffer?.credits || DIPLOMACY_RULES.peaceCost} credits. End the war and establish a ${DIPLOMACY_RULES.truceTurns}-cycle truce. ${withdrawal}`),
     declinePeace: option(!answerReason, answerReason, 'Continue the war without moving any fleet. The proposer receives its reserved credits back.'),
+    acceptTrade: option(!tradeAnswerReason, tradeAnswerReason, `Open borders and begin trade income. Mutual trust +10. The proposer already reserved the ${DIPLOMACY_RULES.tradeCost}-credit treaty fee; acceptance costs you no credits.`),
+    declineTrade: option(!tradeAnswerReason, tradeAnswerReason, 'Keep borders closed. The proposer receives its reserved treaty fee back.'),
   };
   const pressure = pressureFor(state, factionId, targetId);
-  return { factionId, targetId, status: relation.status, trust: relation.trust, grievance: relation.grievance || 0, ourGrievance: relation.grievance || 0, theirGrievance: target.relations[factionId].grievance || 0, truceUntil, truceRemaining, tradeEndsAt, tradeEndingIn, borderCount: pressure.borderCount, policy: targetId === 'khar' ? 'Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.' : 'New neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.', actions, ...actions, pendingOffers, incomingOffer, outgoingOffer };
+  return { factionId, targetId, status: relation.status, trust: relation.trust, grievance: relation.grievance || 0, ourGrievance: relation.grievance || 0, theirGrievance: target.relations[factionId].grievance || 0, truceUntil, truceRemaining, tradeEndsAt, tradeEndingIn, tradeOfferAfter, borderCount: pressure.borderCount, policy: targetId === 'khar' ? 'Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.' : 'New neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.', actions, ...actions, pendingOffers, incomingOffer, outgoingOffer, incomingTradeOffer, outgoingTradeOffer };
 }
 
 function withdrawFleets(state, first, second) {
@@ -114,8 +141,45 @@ function withdrawFleets(state, first, second) {
 function resolveOffer(state, offer, status) {
   if (offer.status !== 'pending') return;
   offer.status = status;
-  if (status === 'accepted') factionOf(state, offer.to).credits += offer.credits;
-  else factionOf(state, offer.from).credits += offer.credits;
+  if (status === 'accepted') {
+    if (offerKind(offer) === 'peace') factionOf(state, offer.to).credits += offer.credits;
+  } else {
+    factionOf(state, offer.from).credits += offer.credits;
+    if (offerKind(offer) === 'trade') {
+      const resolvedTurn = status === 'expired' ? Math.min(state.turn, offer.expiresTurn) : state.turn;
+      delayTradeOffer(state, offer.from, offer.to, resolvedTurn);
+    }
+  }
+}
+
+function delayTradeOffer(state, first, second, turn = state.turn) {
+  if (first !== 'player' && second !== 'player') return;
+  const sender = first === 'player' ? second : first;
+  const relation = factionOf(state, sender).relations.player;
+  relation.tradeOfferAfter = Math.max(relation.tradeOfferAfter || 0, turn + DIPLOMACY_RULES.tradeOfferQuietTurns);
+}
+
+/** Safe after any successful mutation: refund incompatible commitments once. */
+export function reconcileDiplomacyOffers(state) {
+  let offersExpired = 0;
+  for (const offer of state.diplomacyOffers || []) {
+    if (offer.status !== 'pending' || state.turn < offer.expiresTurn && compatibleOffer(state, offer)) continue;
+    resolveOffer(state, offer, 'expired'); offersExpired++;
+    const trade = offerKind(offer) === 'trade';
+    record(state, offer.from, offer.to, `${nameOf(state, offer.from)}’s ${trade ? 'trade' : 'peace'} offer expired. Its ${offer.credits} reserved credits were returned; ${trade ? 'no treaty was established' : 'no fleets moved'}.`);
+  }
+  return offersExpired;
+}
+
+function establishTrade(state, first, second) {
+  const faction = factionOf(state, first), target = factionOf(state, second);
+  for (const relation of [faction.relations[second], target.relations[first]]) {
+    relation.trade = true; relation.tradeEndsAt = 0; relation.trust = trust(relation.trust + 10);
+  }
+  const message = `Trade established between ${faction.name} and ${target.name}. Borders are open; existing grievances remain.`;
+  record(state, first, second, message);
+  recordPublicDiplomacy(state, { kind: 'trade', firstId: first, secondId: second });
+  return message;
 }
 
 function settlePeace(state, first, second) {
@@ -139,9 +203,10 @@ export function executeDiplomacy(state, action = {}) {
   if (!STANCES.includes(stance)) return failure('Unknown diplomatic proposal.');
   let targetId = action.targetId;
   let offer = null;
-  if (stance === 'acceptPeace' || stance === 'declinePeace') {
-    offer = (state.diplomacyOffers || []).find(candidate => candidate.status === 'pending' && candidate.to === factionId && (action.offerId ? candidate.id === action.offerId : candidate.from === targetId));
-    if (!offer || state.turn >= offer.expiresTurn || (targetId && targetId !== offer.from)) return failure('No matching active incoming peace offer.');
+  if (['acceptPeace', 'declinePeace', 'acceptTrade', 'declineTrade'].includes(stance)) {
+    const kind = stance.endsWith('Trade') ? 'trade' : 'peace';
+    offer = (state.diplomacyOffers || []).find(candidate => offerKind(candidate) === kind && candidate.status === 'pending' && candidate.to === factionId && (action.offerId ? candidate.id === action.offerId : candidate.from === targetId));
+    if (!offer || state.turn >= offer.expiresTurn || !compatibleOffer(state, offer) || (targetId && targetId !== offer.from)) return failure(`No matching active incoming ${kind} offer.`);
     targetId = offer.from;
   }
   const forecast = getDiplomacyForecast(state, factionId, targetId);
@@ -182,12 +247,26 @@ export function executeDiplomacy(state, action = {}) {
     resolveOffer(state, offer, 'declined');
     message = `${faction.name} declined ${target.name}’s peace offer. The war continues.`;
     record(state, factionId, targetId, message); outcome = 'peaceDeclined'; extra.offer = offer;
+  } else if (stance === 'trade' && forecast.trade.mode === 'offer') {
+    faction.credits -= DIPLOMACY_RULES.tradeCost;
+    state.diplomacyOffers ||= [];
+    state.nextDiplomacyOfferId ||= 1;
+    offer = { id: `trade-${state.nextDiplomacyOfferId++}`, kind: 'trade', from: factionId, to: targetId, createdTurn: state.turn, expiresTurn: state.turn + DIPLOMACY_RULES.offerTurns, credits: DIPLOMACY_RULES.tradeCost, status: 'pending' };
+    state.diplomacyOffers.push(offer);
+    message = `${faction.name} proposes trade and reserves its ${offer.credits}-credit treaty fee. Borders remain closed until you accept. The offer expires on cycle ${offer.expiresTurn}.`;
+    record(state, factionId, targetId, message);
+    outcome = 'tradeOffered'; extra.offer = offer;
   } else if (stance === 'trade') {
     faction.credits -= DIPLOMACY_RULES.tradeCost;
-    for (const r of [relation, reverse]) { r.trade = true; r.tradeEndsAt = 0; r.trust = trust(r.trust + 10); }
-    message = `Trade established between ${faction.name} and ${target.name}. Borders are open; existing grievances remain.`;
-    record(state, factionId, targetId, message);
-    recordPublicDiplomacy(state, { kind: 'trade', firstId: factionId, secondId: targetId });
+    message = establishTrade(state, factionId, targetId);
+  } else if (stance === 'acceptTrade') {
+    resolveOffer(state, offer, 'accepted');
+    message = establishTrade(state, offer.from, offer.to);
+    outcome = 'tradeAccepted'; extra.offer = offer;
+  } else if (stance === 'declineTrade') {
+    resolveOffer(state, offer, 'declined');
+    message = `${faction.name} declined ${target.name}’s trade offer. Borders remain closed.`;
+    record(state, factionId, targetId, message); outcome = 'tradeDeclined'; extra.offer = offer;
   } else if (stance === 'gift') {
     faction.credits -= DIPLOMACY_RULES.giftCost; target.credits += DIPLOMACY_RULES.giftCost;
     for (const r of [relation, reverse]) r.trust = trust(r.trust + 20);
@@ -201,26 +280,22 @@ export function executeDiplomacy(state, action = {}) {
     recordPublicDiplomacy(state, { kind: 'trade-notice', firstId: factionId, secondId: targetId, untilTurn: relation.tradeEndsAt });
   }
   faction.orders--;
+  reconcileDiplomacyOffers(state);
   return { ok: true, message, outcome, ...extra };
 }
 
 /** Call after incrementing turn, before income. Repeated calls are harmless. */
 export function advanceDiplomacy(state) {
   if (state.diplomacyUpdatedTurn === state.turn) return { offersExpired: 0, treatiesEnded: 0 };
-  let offersExpired = 0, treatiesEnded = 0;
-  for (const offer of state.diplomacyOffers || []) {
-    const proposer = factionOf(state, offer.from), recipient = factionOf(state, offer.to);
-    if (offer.status === 'pending' && (state.turn >= offer.expiresTurn || proposer.eliminated || recipient.eliminated || proposer.relations[offer.to].status !== 'war')) {
-      resolveOffer(state, offer, 'expired'); offersExpired++;
-      record(state, offer.from, offer.to, `${nameOf(state, offer.from)}’s peace offer expired. Its ${offer.credits} reserved credits were returned; no fleets moved.`);
-    }
-  }
+  const offersExpired = reconcileDiplomacyOffers(state);
+  let treatiesEnded = 0;
   for (let i = 0; i < state.factions.length; i++) for (let j = i + 1; j < state.factions.length; j++) {
     const first = state.factions[i], second = state.factions[j];
     const relation = first.relations[second.id], reverse = second.relations[first.id];
     if (relation.trade && relation.tradeEndsAt && state.turn >= relation.tradeEndsAt) {
       for (const r of [relation, reverse]) { r.trade = false; r.tradeEndsAt = 0; }
       const withdrawal = withdrawFleets(state, first.id, second.id);
+      delayTradeOffer(state, first.id, second.id);
       record(state, first.id, second.id, `Trade between ${first.name} and ${second.name} has ended. Trade income and open borders cease; ${withdrawal.moved} visiting fleet${withdrawal.moved === 1 ? '' : 's'} withdrew.`);
       recordPublicDiplomacy(state, { kind: 'trade-ended', firstId: first.id, secondId: second.id });
       treatiesEnded++;
@@ -288,6 +363,7 @@ export function validateDiplomacyState(state) {
     for (const [targetId, relation] of Object.entries(faction.relations)) {
       if (!ids.has(targetId) || !relation || typeof relation !== 'object') return false;
       for (const key of ['truceUntil', 'tradeEndsAt', 'warStartColonies', 'peaceOfferTurn', 'lastBorderCount']) if (relation[key] !== undefined && !integer(relation[key])) return false;
+      if (relation.tradeOfferAfter !== undefined && (faction.id === 'player' || targetId !== 'player' || !integer(relation.tradeOfferAfter) || relation.tradeOfferAfter > state.turn + DIPLOMACY_RULES.tradeOfferQuietTurns)) return false;
       if (relation.grievance !== undefined && (!Number.isFinite(relation.grievance) || relation.grievance < 0 || relation.grievance > 100)) return false;
       if (relation.warStartColonies > state.systems?.length || relation.lastBorderCount > state.systems?.length || relation.peaceOfferTurn > state.turn) return false;
       const reverse = factionOf(state, targetId)?.relations?.[faction.id];
@@ -300,13 +376,16 @@ export function validateDiplomacyState(state) {
   if (!Array.isArray(state.diplomacyOffers) || state.diplomacyOffers.length > 100 || !Number.isSafeInteger(state.nextDiplomacyOfferId)) return false;
   const seen = new Set(), pending = new Set();
   for (const offer of state.diplomacyOffers) {
-    if (!offer || typeof offer !== 'object' || typeof offer.id !== 'string' || !/^peace-[1-9]\d*$/.test(offer.id) || seen.has(offer.id)) return false;
+    if (!offer || typeof offer !== 'object' || (offer.kind !== undefined && !['peace', 'trade'].includes(offer.kind))) return false;
+    const kind = offerKind(offer), trade = kind === 'trade';
+    if (typeof offer.id !== 'string' || !(trade ? /^trade-[1-9]\d*$/ : /^peace-[1-9]\d*$/).test(offer.id) || seen.has(offer.id)) return false;
     if (!ids.has(offer.from) || !ids.has(offer.to) || offer.from === offer.to || !['pending', 'accepted', 'declined', 'expired'].includes(offer.status)) return false;
-    if (!integer(offer.createdTurn) || offer.createdTurn > state.turn || !integer(offer.expiresTurn) || offer.expiresTurn !== offer.createdTurn + DIPLOMACY_RULES.offerTurns || offer.credits !== DIPLOMACY_RULES.peaceCost || offer.truceTurns !== DIPLOMACY_RULES.truceTurns) return false;
+    if (!integer(offer.createdTurn) || offer.createdTurn > state.turn || !integer(offer.expiresTurn) || offer.expiresTurn !== offer.createdTurn + DIPLOMACY_RULES.offerTurns || offer.credits !== (trade ? DIPLOMACY_RULES.tradeCost : DIPLOMACY_RULES.peaceCost)) return false;
+    if (trade ? offer.to !== 'player' || offer.from === 'player' || offer.truceTurns !== undefined : offer.truceTurns !== DIPLOMACY_RULES.truceTurns) return false;
     if (Number(offer.id.slice(6)) >= state.nextDiplomacyOfferId) return false;
     if (offer.status === 'pending') {
-      const key = `${offer.from}:${offer.to}`;
-      if (pending.has(key) || factionOf(state, offer.from).relations[offer.to]?.status !== 'war') return false;
+      const key = `${kind}:${offer.from}:${offer.to}`;
+      if (pending.has(key) || (trade ? !compatibleOffer(state, offer) : factionOf(state, offer.from).relations[offer.to]?.status !== 'war')) return false;
       pending.add(key);
     }
     seen.add(offer.id);
