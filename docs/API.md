@@ -366,3 +366,13 @@ Physical departure clears the assignment, including ordinary/route movement and 
 Actual defender snapshots add optional `participant.defenseLead:true` only when the military formation led at the time of that engagement. Validation rejects this marker on attackers, civilians or with a value other than true. Old reports stay unchanged; later reassignment or fleet destruction does not rewrite history.
 
 AI performs one optional assignment at the end of its ordinary turn, after existing military, civilian, discovery and economic work. It uses a remaining order through the normal command, retains an existing lead, and skips a candidate already naturally first. Candidate ranking uses current owned hull, existing strength and stable IDs; group priority uses observed local enemies/hostile sovereignty, Ark protection, then other co-located groups. This is a bounded preparation heuristic, not an optimal casualty forecast. The controlled cohort freezes the player policy without defensive-lead commands to isolate rival adoption.
+
+## Founding-world knowledge
+
+`getConquestView(state, observerId = 'player')` in `src/conquest.js` is a pure copied projection, returning null for a missing observer. It returns `{target:4,knownCount,unknownCount,complete,worlds,empires}`. `complete` means all four founding objectives are recognized, not that anyone has won.
+
+A world is recognized only if owned by the observer or present in its `exploredBy` survey record, then identified by its permanent `originalOwner`. Mere contact or `knownBy` charting does not reveal the objective. `worlds` entries contain `{id,name,founder,sovereign}`. Identity objects are `{status:'known',factionId,name,shortName,color}` for the observer/contacted governments or `{status:'unknown'}` with no hidden ID; only a genuinely null sovereign produces `{status:'unowned'}`. No coordinates, fleets, economy, private capitals or unknown-world properties are exposed.
+
+`empires` contains only self/contacted identities, extended with `{controlled,exact}`. The count includes recognized worlds only. The observer's own count is exact because owned worlds are recognized; a rival count is exact only when all four objectives are recognized. Otherwise render it as confirmed control, never an omniscient total. `unknownCount` is derived from the constant target minus recognized count. `capitalId` relocation cannot create or move objectives. Current sovereignty on recognized worlds follows the existing public ownership rule without requiring present fleet sensors.
+
+The projection introduces no persisted state, logs, warnings or commands. The interface may show a current control warning from these confirmed values; it never invents historical announcements on import or first contact.

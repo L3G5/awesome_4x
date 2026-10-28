@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-10-28T23:53:31.546Z",
+  "url": "http://127.0.0.1:5199/",
+  "method": "One new targeted legacy-selection boundary after main.js selectSystem guard broadening. Earlier four UI cases remain attributed to their original source hashes, not claimed as rerun. Two additional phone screenshots reposition the unchanged actual55 export for readability; no gameplay commands.",
+  "sources": {
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/conquest-ui.js": "2877342a17f20f7027b95be24dfe8c5be5477adb0633961e6baf98b37edeb52c",
+    "src/conquest.css": "6b6b80661a9709fd282901cd9e900aca0a8eb39aafe886ecb468ca97c5caaed9",
+    "src/main.js": "2dd5effcf2c02ac5af7fc7f96fc55736f1bc94405e655c63a7efe7a4bd0362f2",
+    "src/galaxy.js": "483511a4bd2f6ad35e00e862732f5cdcaffaebee77cc58e480f78ea79ea5356b"
+  },
+  "changedSincePriorFour": [
+    "src/main.js"
+  ],
+  "scriptSha256": "19ebb4662303c262c6fafb3f651f1babeec41a48c782bae82f7310eaa8664e55",
+  "checks": [
+    {
+      "name": "Final selectSystem boundary: owned-only and surveyed-only worlds without redundant knownBy remain inspectable with Enter; founding identity stays anonymous without contact",
+      "passed": true,
+      "stateUnchanged": true
+    }
+  ]
+}

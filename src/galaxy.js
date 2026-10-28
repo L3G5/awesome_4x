@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { FACTIONS, PLANET_TYPES, SHIPS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
 import { getPublicRaces } from './victory.js';
+import { getConquestView } from './conquest.js';
 import { getRoutePreview, getRouteStatus } from './navigation.js';
 import { getDiscoveryView } from './discoveries.js';
 import { getKnownTransfers } from './public-affairs.js';
@@ -320,6 +321,7 @@ export class GalaxyView {
     this.selectedFleetId = selectedFleetId;
     this.systemsById = new Map(state.systems.map(s => [s.id, s]));
     this.publicBeaconIds = new Set(getPublicRaces(state).flatMap(race => race.sites.map(site => site.id)));
+    this.foundingWorldIds = new Set(getConquestView(state).worlds.map(world => world.id));
     this.discoverySignals = new Set(state.systems.filter(system => ['opening', 'maturing', 'ready'].includes(getDiscoveryView(state, system.id)?.phase)).map(system => system.id));
     this.recentTransfers = new Map();
     for (const transfer of getKnownTransfers(state)) if (!this.recentTransfers.has(transfer.systemId)) this.recentTransfers.set(transfer.systemId, transfer);
@@ -505,6 +507,11 @@ export class GalaxyView {
       beacon.position.copy(position); beacon.position.z = 1;
       this.dynamicGroup.add(beacon);
     }
+    if (this.foundingWorldIds.has(system.id)) {
+      const founding = circle(this.unit * 5.1, '#dbc69a', .65, 4);
+      founding.position.copy(position); founding.position.z = 1;
+      this.dynamicGroup.add(founding);
+    }
   }
 
   buildLabel(system, position, surveyed, selected, reachable) {
@@ -514,7 +521,13 @@ export class GalaxyView {
     element.dataset.systemId = system.id;
     element.style.setProperty('--system-color', system.owner ? ownedColor(system.owner) : '#bac8d9');
     element.setAttribute('aria-pressed', String(selected));
+    const founding = this.foundingWorldIds.has(system.id);
     const name = document.createElement('span'); name.className = 'galaxy-system-name'; name.textContent = system.name;
+    if (founding) {
+      element.classList.add('is-founding');
+      const emblem = document.createElement('span'); emblem.className = 'galaxy-founding-icon'; emblem.textContent = '⌂'; emblem.setAttribute('aria-hidden', 'true');
+      name.prepend(emblem);
+    }
     element.append(name);
     const status = document.createElement('small'); status.className = 'galaxy-system-status';
     const beacon = this.publicBeaconIds.has(system.id);
@@ -531,11 +544,11 @@ export class GalaxyView {
       element.title = `Cycle ${transfer.turn}: ${transfer.to.name} took control from ${transfer.from.name}.`;
       element.append(marker);
     }
-    element.setAttribute('aria-label', `${system.name}, ${status.textContent.toLowerCase()}${reachable ? ', adjacent to selected fleet' : ''}${routePoint ? `, ${routePoint.kind === 'committed' ? 'plotted course' : 'route preview'} jump ${routePoint.number} of ${routePoint.jumps}${routePoint.destination ? ', destination' : ''}${routePoint.stopReason ? `, ${routePoint.stopReason}` : ''}` : ''}`);
+    element.setAttribute('aria-label', `${system.name}${founding ? ', founding world' : ''}, ${status.textContent.toLowerCase()}${reachable ? ', adjacent to selected fleet' : ''}${routePoint ? `, ${routePoint.kind === 'committed' ? 'plotted course' : 'route preview'} jump ${routePoint.number} of ${routePoint.jumps}${routePoint.destination ? ', destination' : ''}${routePoint.stopReason ? `, ${routePoint.stopReason}` : ''}` : ''}`);
     element.addEventListener('click', event => { event.stopPropagation(); this.onSelect(system.id); });
     element.addEventListener('dblclick', event => { event.stopPropagation(); this.focus(system.id); });
     this.labelLayer.append(element);
-    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : routePoint ? 84 : transfer ? 82 : system.owner === 'player' ? 80 : 40 });
+    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : routePoint ? 84 : founding ? 83 : transfer ? 82 : system.owner === 'player' ? 80 : 40 });
   }
 
   buildFleetLabels(state) {

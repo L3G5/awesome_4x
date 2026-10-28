@@ -1,0 +1,67 @@
+{
+  "frozenAt": "2026-10-28T23:55:16.982Z",
+  "base": "a8a8595",
+  "projectionRevision": "dfd109872e30ddab428969027a2e37b5320e849b",
+  "finalReviewedSources": {
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/conquest-ui.js": "2877342a17f20f7027b95be24dfe8c5be5477adb0633961e6baf98b37edeb52c",
+    "src/conquest.css": "6b6b80661a9709fd282901cd9e900aca0a8eb39aafe886ecb468ca97c5caaed9",
+    "src/main.js": "2dd5effcf2c02ac5af7fc7f96fc55736f1bc94405e655c63a7efe7a4bd0362f2",
+    "src/galaxy.js": "483511a4bd2f6ad35e00e862732f5cdcaffaebee77cc58e480f78ea79ea5356b"
+  },
+  "phaseAttribution": "9 projection checks; four original UI cases; one targeted final boundary case after main.js selection guard changed. Earlier UI results retain original source hashes.",
+  "artifacts": {
+    "README.md": {
+      "bytes": 4225,
+      "sha256": "87c8f31ac9f23984f0e8476dac40699a37b61079fbad2b4f69d0ac6690e53e37"
+    },
+    "actual55-ledger-1280.png": {
+      "bytes": 245561,
+      "sha256": "95737c1a04cbcd2ccb17a9486536d9e535dd1d5757d2c57e7220ca5b61594b63"
+    },
+    "actual55-ledger-390-bottom.png": {
+      "bytes": 118270,
+      "sha256": "298ca8b1ee58cb48d35a933d5687a0c1c3def5436f0672503e912cea5a29f31c"
+    },
+    "actual55-ledger-390-top.png": {
+      "bytes": 88699,
+      "sha256": "3f1fb2fa32cd4b37e6abab34852ce89abec4955a227b0d7340c676986c8bec93"
+    },
+    "actual55-ledger-390.png": {
+      "bytes": 86872,
+      "sha256": "0b9440fcecadee45087b35901fcb6235302fec0b096dc443e18cf87e6e61647d"
+    },
+    "actual55-map-1280.png": {
+      "bytes": 604346,
+      "sha256": "dc68e8f22c0e0cd3888bdcf6193d47a9eb107bab5428d22506bd18ed004f4196"
+    },
+    "boundary-results.json": {
+      "bytes": 1275,
+      "sha256": "2f5b3776c440301efc45c849307d4f26da2c49337f9934bd855dd534124eb46d"
+    },
+    "boundary-review.mjs": {
+      "bytes": 4810,
+      "sha256": "19ebb4662303c262c6fafb3f651f1babeec41a48c782bae82f7310eaa8664e55"
+    },
+    "index.html": {
+      "bytes": 4585,
+      "sha256": "ac30b769cb6e23c1615dd2e9f668f41c380eb3ba2ddc33e41bb56442a818e5b4"
+    },
+    "projection-results.json": {
+      "bytes": 2560,
+      "sha256": "3818304d3b3339e93e9367dbf2e43868e57081162e9a3759c6c4662d38a89abb"
+    },
+    "projection-review.mjs": {
+      "bytes": 7152,
+      "sha256": "06c8109c94183a60b1f8131a94461ed5de438fae5214a39e860376532f069787"
+    },
+    "ui-results.json": {
+      "bytes": 1962,
+      "sha256": "87e1599e4b4071ce502c8a8b2a3274eef10926ee33a074813e98635c39ab27ed"
+    },
+    "ui-review.mjs": {
+      "bytes": 7116,
+      "sha256": "d8c1aa53e0e030fd85e9c9ee83f35d1957de21ab6f39261eac593ea7f8a67024"
+    }
+  }
+}

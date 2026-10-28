@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-10-28T23:50:12.803Z",
+  "method": "Independent bounded projection checks; synthetic fixtures except two unchanged actual completed campaign exports. No ongoing WATCH files or live campaign state accessed. No commands or campaign cohort executed.",
+  "sources": {
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a"
+  },
+  "scriptSha256": "06c8109c94183a60b1f8131a94461ed5de438fae5214a39e860376532f069787",
+  "checks": [
+    {
+      "name": "Opening exposes one owned founding world and three anonymous unknowns",
+      "passed": true
+    },
+    {
+      "name": "Charting and contact do not identify a foreign founding world",
+      "passed": true
+    },
+    {
+      "name": "Unrecognized ownership, identities, geography, fleets and current capital locations do not affect the view",
+      "passed": true
+    },
+    {
+      "name": "Recognized worlds expose public sovereignty, while rival counts remain confirmed lower bounds",
+      "passed": true
+    },
+    {
+      "name": "Owned but unsurveyed founding worlds are recognized; relocation does not create a replacement target",
+      "passed": true
+    },
+    {
+      "name": "Recognized worlds preserve anonymous foreign identities in contact-inconsistent legacy-shaped states",
+      "passed": true
+    },
+    {
+      "name": "Returned identity and world records cannot mutate the save; JSON reload is exact",
+      "passed": true
+    },
+    {
+      "name": "Actual completed IRON-COVENANT cycle 55 export remains valid and read-only",
+      "passed": true,
+      "input": "/tmp/asterion-stage16-founding/docs/military-playtest/replay/actual-exports/cycle55.json",
+      "inputSha256": "f43cffaf6a72be7a2c422f0988ab6931acc0d895afd1df925aabbc8485053f8e",
+      "turn": 55,
+      "knownCount": 4,
+      "ownControlled": 3,
+      "missingOwnTargets": [
+        {
+          "id": "s3",
+          "name": "Lumen"
+        }
+      ]
+    },
+    {
+      "name": "Actual completed IRON-COVENANT cycle 57 export remains valid and read-only",
+      "passed": true,
+      "input": "/tmp/asterion-stage16-founding/docs/military-playtest/replay/actual-exports/cycle57.json",
+      "inputSha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "turn": 57,
+      "knownCount": 4,
+      "ownControlled": 4,
+      "missingOwnTargets": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-10-28T23:51:29.611Z",
+  "url": "http://127.0.0.1:5199/",
+  "method": "Four independent read-only UI cases: two widths of unchanged actual completed cycle55 export, a two-fixture synthetic hidden-state comparison, and a synthetic rival-control warning. Each uses an isolated fresh browser context. No ongoing WATCH files/profile/state accessed. No commands dispatched.",
+  "sources": {
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/conquest-ui.js": "2877342a17f20f7027b95be24dfe8c5be5477adb0633961e6baf98b37edeb52c",
+    "src/conquest.css": "6b6b80661a9709fd282901cd9e900aca0a8eb39aafe886ecb468ca97c5caaed9",
+    "src/main.js": "2705a6ed00ee743e2cec9dd049ef96f5225174f8d70686c5c4ee54884042aba4",
+    "src/galaxy.js": "483511a4bd2f6ad35e00e862732f5cdcaffaebee77cc58e480f78ea79ea5356b"
+  },
+  "scriptSha256": "d8c1aa53e0e030fd85e9c9ee83f35d1957de21ab6f39261eac593ea7f8a67024",
+  "actualInput": {
+    "path": "/tmp/asterion-stage16-founding/docs/military-playtest/replay/actual-exports/cycle55.json",
+    "sha256": "f43cffaf6a72be7a2c422f0988ab6931acc0d895afd1df925aabbc8485053f8e"
+  },
+  "checks": [
+    {
+      "name": "Actual cycle55 at 1280px",
+      "passed": true,
+      "screenshot": "actual55-ledger-1280.png",
+      "keyboardInspectPure": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "Actual cycle55 at 390px with WebGL disabled and reduced motion",
+      "passed": true,
+      "screenshot": "actual55-ledger-390.png",
+      "keyboardInspectPure": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "Charted/contacted world stays unidentified and hidden ownership/fleet changes leave new ledger/markers identical",
+      "passed": true,
+      "foundingMarkers": [
+        "s0"
+      ]
+    },
+    {
+      "name": "Recognized rival three-world control appears only in ledger without popup or state change",
+      "passed": true
+    }
+  ]
+}
