@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f1a">
+  <meta name="description" content="The Asterion Reach player field guide: learn to explore, establish colonies, direct fleets, negotiate, and lead the Concord to victory.">
+  <title>Field Guide — Asterion Reach</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    :root{color-scheme:dark;--bg:#080f1a;--panel:#0d1825;--line:#263341;--text:#dce4e9;--muted:#9eafbb;--teal:#83d8cb;--gold:#d9bc81;--red:#e9a099;--serif:Georgia,"Times New Roman",serif;--sans:Inter,"Segoe UI",Arial,sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:30px}
+    body{margin:0;background:radial-gradient(ellipse at 85% 0,rgba(42,78,83,.16),transparent 32rem),var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+    a{color:var(--teal);text-underline-offset:4px;text-decoration-thickness:1px}
+    a:hover{color:#b8f2e8}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px;border-radius:2px}
+    .skip{position:absolute;top:12px;left:20px;padding:8px 15px;background:var(--panel);z-index:10;transform:translateY(-180%)}
+    .skip:focus{transform:translateY(0)}
+    .wrap{width:min(1280px,calc(100% - 80px));margin-inline:auto}
+    .masthead{min-height:102px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;gap:15px;align-items:center;text-decoration:none;color:var(--text)}
+    .sigil{height:32px;width:32px;position:relative;display:grid;place-items:center;color:var(--gold);font-size:29px;line-height:1}
+    .sigil:before{content:"";position:absolute;width:22px;height:22px;border:1px solid #bda4737a;transform:rotate(45deg)}
+    .wordmark{font-size:12px;letter-spacing:.25em;line-height:1.6;text-transform:uppercase}
+    .wordmark small{display:block;color:var(--muted);font-size:9px;letter-spacing:.27em}
+    .return{font-size:12px;letter-spacing:.06em;text-decoration:none;border:1px solid #38554f;padding:10px 17px;white-space:nowrap}
+    .return:hover{background:#14312e}
+    .hero{padding:72px 0 65px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:50px;align-items:center}
+    .eyebrow{color:var(--gold);font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin:0 0 20px}
+    h1,h2,h3{color:#f0eee6;font-family:var(--serif);font-weight:400;line-height:1.16}
+    h1{font-size:clamp(42px,6vw,76px);letter-spacing:-.035em;margin:0 0 25px;max-width:720px}
+    h1 em{font-weight:400;color:var(--teal)}
+    .intro{font-size:17px;line-height:1.8;max-width:620px;color:#b3c0ca;margin:0}
+    .hero-chart{width:100%;color:var(--teal)}
+    .chart-caption{font-size:9px;letter-spacing:.2em;text-transform:uppercase;text-align:center;color:var(--muted);margin-top:3px}
+    .layout{display:grid;grid-template-columns:218px minmax(0,1fr);gap:65px;align-items:start;border-top:1px solid var(--line)}
+    aside{position:sticky;top:28px;padding:38px 0}
+    .nav-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+    nav a{display:flex;gap:16px;align-items:baseline;padding:7px 0;text-decoration:none;font-size:13px;color:#b7c5ce}
+    nav a:hover{color:var(--teal)}
+    nav a span{font-size:10px;font-variant-numeric:tabular-nums;color:#6e8994;min-width:14px}
+    .aside-note{font-size:11px;line-height:1.8;color:var(--muted);border-top:1px solid var(--line);padding-top:22px;margin-top:25px}
+    main{min-width:0;padding-bottom:20px}
+    section{padding:45px 0 48px;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+    .section-heading{display:flex;align-items:baseline;gap:17px;margin-bottom:24px}
+    .section-number{font-size:11px;font-variant-numeric:tabular-nums;color:var(--gold);letter-spacing:.06em}
+    h2{font-size:34px;letter-spacing:-.02em;margin:0}
+    h3{font-size:23px;margin:29px 0 13px;line-height:1.3}
+    p{margin:0 0 17px}
+    section>p:last-child{margin-bottom:0}
+    strong{color:#e9eeed;font-weight:600}
+    ul,ol{padding-left:22px;margin:15px 0 24px}
+    li{padding-left:5px;margin:8px 0}
+    li::marker{color:var(--teal)}
+    .lede{font-size:17px;color:#bdcbd2;max-width:760px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:24px 0}
+    .card{padding:24px;background:linear-gradient(145deg,#101e2b,#0b1521);border:1px solid var(--line)}
+    .card h3{font-size:23px;margin:0 0 10px}
+    .card p{font-size:14px;color:#b4c1ca;line-height:1.75;margin:0}
+    .card .tag{font-family:var(--sans);display:block;color:var(--gold);font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+    .callout{margin:25px 0;padding:18px 23px;border-left:2px solid var(--gold);background:#d9bc8108;color:#c4d0d5;font-size:14px}
+    .callout p:last-child{margin:0}
+    .callout strong{color:#e6d4af}
+    .steps{list-style:none;counter-reset:steps;padding:0;margin:27px 0}
+    .steps li{counter-increment:steps;position:relative;padding:0 0 0 48px;margin:0 0 25px}
+    .steps li:before{content:counter(steps,decimal-leading-zero);position:absolute;left:0;top:3px;color:var(--teal);font-size:12px;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+    .steps strong{display:block;font-size:15px;margin-bottom:4px}
+    .steps p{color:#b6c4cd;font-size:14px;margin:0}
+    .table-scroll{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:2px;scrollbar-color:#3c5b63 #101b28}
+    table{border-collapse:collapse;width:100%;min-width:500px;font-size:13px;line-height:1.65}
+    caption{text-align:left;padding:15px 18px;background:#101d2a;color:#c5d6dd;font-size:11px;letter-spacing:.07em}
+    th,td{text-align:left;padding:13px 18px;border-bottom:1px solid #253443;vertical-align:top}
+    thead th{color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;background:#0e1925}
+    tbody th{font-weight:500;color:#d7e4e7}
+    td{color:#adbdc7}
+    tbody tr:last-child>*{border-bottom:0}
+    .cost{white-space:nowrap;font-variant-numeric:tabular-nums}
+    .small{font-size:13px;color:var(--muted)}
+    .resource{display:inline-block;font-size:10px;letter-spacing:.04em;color:var(--gold);margin-left:2px}
+    .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin:20px 0}
+    .split h3{margin-top:0}
+    .split p{font-size:14px;color:#b6c4cd}
+    details{border:1px solid var(--line);margin:21px 0;background:#0b1520}
+    summary{cursor:pointer;font-size:13px;color:var(--teal);padding:15px 20px}
+    details[open] summary{border-bottom:1px solid var(--line)}
+    details .table-scroll{margin:0;border:0}
+    details .details-body{padding:3px 20px 20px}
+    kbd{display:inline-block;font-family:var(--sans);font-size:11px;line-height:1.5;padding:2px 7px;margin:1px 2px;color:#d7e4e6;border:1px solid #415463;border-bottom-width:2px;border-radius:3px;background:#152230;white-space:nowrap}
+    .key-table{min-width:0}
+    .key-table td:first-child{width:37%;white-space:nowrap}
+    .footer{display:flex;justify-content:space-between;gap:25px;align-items:center;padding:35px 0 40px;color:var(--muted);font-size:11px}
+    .footer em{color:var(--gold);font-family:var(--serif);font-size:18px;font-style:normal}
+    @media(min-width:1250px){.hero{padding-top:85px;padding-bottom:80px}.layout{gap:80px}}
+    @media(max-width:950px){.wrap{width:calc(100% - 48px)}.hero{grid-template-columns:minmax(0,1fr) 200px;gap:24px}.layout{grid-template-columns:170px minmax(0,1fr);gap:30px}.cards{grid-template-columns:1fr}.card{padding:21px}.split{grid-template-columns:1fr;gap:12px}}
+    @media(max-width:720px){.wrap{width:calc(100% - 36px)}.masthead{min-height:83px;gap:12px}.wordmark{font-size:10px;letter-spacing:.18em}.wordmark small{font-size:8px}.brand{gap:10px}.return{font-size:10px;padding:8px 10px}.hero{display:block;padding:46px 0 36px}.hero-chart{display:none}.intro{font-size:15px}.eyebrow{font-size:9px;letter-spacing:.17em}h1{font-size:47px}.layout{display:block}aside{position:static;padding:24px 0;border-bottom:1px solid var(--line)}.nav-label{margin-bottom:10px}nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px}nav a{font-size:12px;gap:10px;padding:6px 0}.aside-note{display:none}section{padding:34px 0 37px}h2{font-size:30px}.lede{font-size:16px}p,li{font-size:14px}.cards{grid-template-columns:1fr}.callout{padding:17px 18px}.footer{align-items:flex-start;flex-direction:column;gap:12px}.key-table td{padding-inline:12px}.section-heading{gap:12px;margin-bottom:20px}}
+    @media(max-width:380px){.wordmark{font-size:9px;letter-spacing:.1em}.wordmark small{display:none}.sigil{width:24px;height:24px;font-size:24px}.sigil:before{width:18px;height:18px}.brand{gap:8px}.return{font-size:9px;padding-inline:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{background:#fff;color:#222;font-size:11pt}.wrap{width:100%}.masthead,.hero-chart,aside,.footer,.skip{display:none}.hero{display:block;padding:0 0 20px}.layout{display:block;border:0}main{padding:0}section{break-inside:auto;padding:20px 0}h1,h2,h3,strong,.intro,.lede,.card p,.steps p,td,th{color:#222}h1{font-size:36pt}h2{font-size:22pt}.cards{display:block}.card,.callout,details{background:#fff;border-color:#999}.card{margin:12px 0}.table-scroll{overflow:visible}table{min-width:0}a{color:#222}details:not([open]){display:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#guide">Skip to the guide</a>
+  <div class="wrap">
+    <header class="masthead">
+      <a class="brand" href="./index.html" aria-label="Asterion Reach — return to game"><span class="sigil" aria-hidden="true">✧</span><span class="wordmark">Asterion Reach<small>A civilization among the stars</small></span></a>
+      <a class="return" href="./index.html">← Return to the galaxy</a>
+    </header>
+    <div class="hero">
+      <div>
+        <p class="eyebrow">The Concord · Player field guide</p>
+        <h1>Find your place<br>among the <em>stars.</em></h1>
+        <p class="intro">Lead the Concord from its home at Solace into an unsettled galaxy. Explore the ancient reaches, establish an economy, and decide what kind of civilization will follow you into the dark.</p>
+      </div>
+      <div class="hero-chart" aria-hidden="true">
+        <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="140" cy="140" r="117" stroke="#273e48" stroke-dasharray="2 9"/>
+          <circle cx="140" cy="140" r="86" stroke="#233541"/>
+          <circle cx="140" cy="140" r="46" stroke="#273e48"/>
+          <path d="M140 9V32M140 248V271M9 140H32M248 140H271" stroke="#577377"/>
+          <path d="M140 140L87 89L48 130M140 140L207 85L231 153L184 202L140 140M87 89L143 38L207 85M184 202L94 228" stroke="#37676b"/>
+          <path d="M140 140L207 85" stroke="#86d7cb"/>
+          <circle cx="140" cy="140" r="16" stroke="#83d8cb" stroke-opacity=".35"/>
+          <circle cx="140" cy="140" r="6" fill="#a7eee2"/>
+          <circle cx="87" cy="89" r="4" fill="#d9bc81"/>
+          <circle cx="207" cy="85" r="5" fill="#dfc992"/>
+          <circle cx="48" cy="130" r="3" fill="#83a9b7"/>
+          <circle cx="143" cy="38" r="3" fill="#83a9b7"/>
+          <circle cx="231" cy="153" r="3" fill="#83a9b7"/>
+          <circle cx="184" cy="202" r="4" fill="#b39cc9"/>
+          <circle cx="94" cy="228" r="3" fill="#83a9b7"/>
+          <text x="140" y="172" fill="#86b7b2" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" letter-spacing="3">SOLACE</text>
+        </svg>
+        <div class="chart-caption">Many worlds. One horizon.</div>
+      </div>
+    </div>
+    <div class="layout">
+      <aside>
+        <p class="nav-label">In this field guide</p>
+        <nav aria-label="Field guide contents">
+          <a href="#quick-start"><span>01</span>Your first expedition</a>
+          <a href="#orders"><span>02</span>Orders &amp; the turn</a>
+          <a href="#exploration"><span>03</span>The unknown galaxy</a>
+          <a href="#colonies"><span>04</span>Worlds &amp; economy</a>
+          <a href="#research"><span>05</span>Research &amp; progress</a>
+          <a href="#combat"><span>06</span>Fleets &amp; warfare</a>
+          <a href="#diplomacy"><span>07</span>Your neighbors</a>
+          <a href="#victory"><span>08</span>A lasting civilization</a>
+          <a href="#controls"><span>09</span>Controls &amp; saves</a>
+        </nav>
+        <p class="aside-note">The galaxy waits for your decisions. You can inspect systems, compare technologies, and read this guide without advancing a turn.</p>
+      </aside>
+      <main id="guide">
+        <section id="quick-start" aria-labelledby="quick-start-title">
+          <div class="section-heading"><span class="section-number">01</span><h2 id="quick-start-title">Your first expedition</h2></div>
+          <p class="lede">Begin with an achievable ambition: discover a suitable neighbor, settle a second world, and give that world a useful role.</p>
+          <ol class="steps">
+            <li><strong>Take stock at Solace.</strong><p>You begin with 140 credits, 110 minerals, and 6 Orders. Solace has 4 population, an Orbital Extractor, and an Orbital Shipyard. Your starting fleet includes a Pathfinder, a Colony Ark, and a Vanguard.</p></li>
+            <li><strong>Choose your first research.</strong><p>Deep-space Logistics is a practical opening: completing it adds one order every turn and opens the engineering branch. Adaptive Biospheres is useful when the nearby worlds are harsh.</p></li>
+            <li><strong>Send a Pathfinder along a hyperlane.</strong><p>Select the scout, click an adjacent star to preview the destination, then use Move. A Pathfinder can make two jumps in a turn, provided you also have enough Orders.</p></li>
+            <li><strong>Read the arrival survey.</strong><p>Arriving automatically surveys a system and charts its neighboring stars. Inspect habitability, mineral richness, and science potential. Your starting technology permits settlement at 50% habitability or better.</p></li>
+            <li><strong>Prepare a second economy.</strong><p>Move the Colony Ark to a suitable unclaimed world, then settle for 30 credits, 20 minerals, and an order. The Ark is consumed. An Orbital Extractor supports further construction; an Exchange Port funds a growing fleet; a Research Enclave accelerates technologies.</p></li>
+            <li><strong>End the turn, then reassess.</strong><p>Check what completed, what your neighbors did, and whether your income still supports your plans. New resources and refreshed Orders let you continue the expedition.</p></li>
+          </ol>
+          <div class="callout"><p><strong>Try this first turn.</strong> Choose Logistics for free. Send the Pathfinder to a habitable adjacent world, move the Ark there, and settle: three Orders. Commission a Research Enclave at Solace and an Extractor at the new colony: two more. You retain one order, 60 credits, and 35 minerals before the next income. Use that final order for a useful scout jump or an available anomaly.</p></div>
+        </section>
+
+        <section id="orders" aria-labelledby="orders-title">
+          <div class="section-heading"><span class="section-number">02</span><h2 id="orders-title">Orders &amp; the turn</h2></div>
+          <p class="lede">Your economy measures what you can afford. Orders measure how much of it you can direct at once.</p>
+          <p>The Concord starts with <strong>6 Orders</strong>: a base of 4, one for its colony, and one from its Civic mandate. Each additional colony increases your next turn’s allowance by one, up to a total cap of 18. Unused Orders do not carry over.</p>
+          <p>Moving one jump, settling, starting construction, resolving an anomaly, taking a diplomatic action, attacking, merging fleets, or ordering emergency repairs each costs <strong>one order</strong>. Selecting research and cancelling construction are free.</p>
+          <p>A ship’s remaining moves are a separate limit. Moving and attacking each use one move as well as an order; settling does not require a remaining move. Having spare Orders does not give an exhausted fleet another jump or attack.</p>
+          <div class="cards">
+            <article class="card"><span class="tag">Immediate decisions</span><h3>Give a command</h3><p>Select the relevant fleet or world, inspect the action and its cost, then commit. Fleet destinations are previewed before you press Move.</p></article>
+            <article class="card"><span class="tag">Long-term capacity</span><h3>Grow your mandate</h3><p>Deep-space Logistics adds one order per turn. Distributed Command adds two. Each completed Civic Forum contributes another order.</p></article>
+          </div>
+          <h3>What happens when you end a turn</h3>
+          <p>Rival civilizations act, then income and research are applied. Colonies grow and advance construction; eligible fleets repair. Fleet moves and each empire’s Orders refresh for the next turn. An ongoing construction project does not need another order each turn.</p>
+          <p>Spend your strongest turns on actions that unlock future options: another colony, a shipyard in the right place, or exploration that establishes a useful route. A growing empire benefits from more Orders as well as more income.</p>
+          <div class="callout"><p><strong>Before ending a turn:</strong> check idle fleets, your research selection, colony construction, and the credits needed to maintain your fleet.</p></div>
+        </section>
+
+        <section id="exploration" aria-labelledby="exploration-title">
+          <div class="section-heading"><span class="section-number">03</span><h2 id="exploration-title">The unknown galaxy</h2></div>
+          <p class="lede">Hyperlanes connect the stars. Exploration turns a possible destination into a place you can understand, use, and defend.</p>
+          <p>Move fleets one jump at a time between adjacent, charted systems. <strong>Arrival automatically surveys the destination and reveals its neighboring stars.</strong> A charted system is visible on your map; a surveyed system has the detailed information gained by visiting it.</p>
+          <p>Scouts are fast but fragile: the Pathfinder has two moves, 18 hull, and only 3 base attack. Pathfinders and Colony Arks cannot enter systems occupied by hostile fleets. Peaceful foreign borders require a trade treaty for passage.</p>
+          <h3>A world is more than its color</h3>
+          <p>Inspect a system’s habitability, ownership, and survey status before sending an Ark. Worlds range from temperate Terran planets and ocean worlds to glacial, volcanic, arid, and barren environments. Your technology determines which environments you can settle.</p>
+          <h3>Discoveries have a choice</h3>
+          <p>Anomalies offer distinct rewards and can be resolved only once. Investigating costs one order and requires either your colony or a fleet at the surveyed system. You cannot investigate another empire’s anomaly. Read both options before committing: one might solve an immediate shortage, while another changes the long-term value of a world.</p>
+          <div class="cards">
+            <article class="card"><span class="tag">The Hollow Sun</span><h3>Materials or an escort</h3><p>Redirect ancient foundries for 85 minerals, or complete an ancient frigate that joins your expedition.</p></article>
+            <article class="card"><span class="tag">Garden Between Stars</span><h3>A world or a windfall</h3><p>Wake the caretakers for 25 additional habitability points and 20 science, or harvest 65 credits and 25 minerals.</p></article>
+          </div>
+          <p>The Echo of the First Gate offers a different trade: 75 science, or a chart of every star within two jumps of the discovery. Information can help you choose where your next fleet should go.</p>
+        </section>
+
+        <section id="colonies" aria-labelledby="colonies-title">
+          <div class="section-heading"><span class="section-number">04</span><h2 id="colonies-title">Worlds &amp; economy</h2></div>
+          <p class="lede">A colony becomes valuable through what it produces and where it lets your fleets operate.</p>
+          <p>A <strong>Colony Ark</strong> establishes a colony on an unclaimed world at its current location. Settling costs 30 credits, 20 minerals, and one order; the Ark is consumed and the colony begins with one population. Clear any hostile fleet first. The initial habitability threshold is 50%; Adaptive Biospheres reduces it to 30%. Worldshaping permits colonization of any world and increases colony growth by 50%.</p>
+          <div class="split">
+            <div><h3>Credits &amp; minerals</h3><p>Construction requires both resources up front. Warships and civilian vessels also have credit upkeep every turn. Balance a new purchase against the income needed to maintain it.</p></div>
+            <div><h3>Production &amp; growth</h3><p>A colony produces 4 construction work plus its population each turn. A Manufactory adds 6 more. Habitability affects growth and population capacity. Habitation Domes add 4 capacity and improve growth by 40%.</p></div>
+          </div>
+          <p>Each colony builds <strong>one project at a time</strong>, and each improvement can be built once per colony. Costs are paid when you commission the project. Cancelling refunds the unused fraction of its credits and minerals; production already spent is not refunded.</p>
+          <h3>Build for the next constraint</h3>
+          <p>An Extractor is useful when minerals limit your expansion. An Exchange Port supports credit income. A Research Enclave produces science. An Orbital Shipyard enables local ship construction and doubles the speed of fleet repairs in orbit.</p>
+          <details>
+            <summary>Colony improvement reference</summary>
+            <div class="table-scroll" role="region" aria-label="Colony improvements" tabindex="0">
+              <table>
+                <caption>C = credits · M = minerals · Work = construction production required</caption>
+                <thead><tr><th scope="col">Improvement</th><th scope="col">Cost / Work</th><th scope="col">Benefit</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Orbital Extractor</th><td class="cost">20 C / 25 M · 24</td><td>+5 minerals per turn.</td></tr>
+                  <tr><th scope="row">Research Enclave</th><td class="cost">30 C / 30 M · 30</td><td>+5 science per turn.</td></tr>
+                  <tr><th scope="row">Exchange Port</th><td class="cost">25 C / 20 M · 24</td><td>+7 credits per turn.</td></tr>
+                  <tr><th scope="row">Orbital Shipyard</th><td class="cost">25 C / 35 M · 32</td><td>Enables ship construction; doubles orbital repair speed.</td></tr>
+                  <tr><th scope="row">Habitation Domes</th><td class="cost">40 C / 35 M · 36</td><td>+4 maximum population; +40% growth. Requires Adaptive Biospheres.</td></tr>
+                  <tr><th scope="row">Manufactory</th><td class="cost">35 C / 45 M · 40</td><td>+6 production per turn. Requires Autonomous Industry.</td></tr>
+                  <tr><th scope="row">Civic Forum</th><td class="cost">50 C / 30 M · 40</td><td>+1 order and +3 credits per turn. Requires Stellar Accords.</td></tr>
+                  <tr><th scope="row">Orbital Bastion</th><td class="cost">45 C / 60 M · 50</td><td>+30 defense; retaliatory fire against invaders. Requires Deflector Fields.</td></tr>
+                  <tr><th scope="row">Asterion Beacon</th><td class="cost">180 C / 180 M · 140</td><td>A node in the transcendence victory network. Requires the Asterion Protocol.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="callout"><p><strong>Watch your net income.</strong> The income figures already include fleet upkeep. If your treasury reaches zero while credit income is negative, a ship is decommissioned. Exchange Ports and trade income can help restore a sustainable budget.</p></div>
+        </section>
+
+        <section id="research" aria-labelledby="research-title">
+          <div class="section-heading"><span class="section-number">05</span><h2 id="research-title">Research &amp; progress</h2></div>
+          <p class="lede">Choose a technology for the change it makes possible. The research tree links economic capacity, fleet strength, and the ancient network.</p>
+          <p>Choose one active research project. Science income and discovery rewards advance it; science left over is banked for later. Choosing or changing a project costs no Orders. Changing projects returns its invested progress to your science stock, so you do not lose that investment.</p>
+          <div class="cards">
+            <article class="card"><span class="tag">An expanding civilization</span><h3>Logistics &amp; biospheres</h3><p>Deep-space Logistics increases Orders. Adaptive Biospheres opens harsher worlds. Their branches lead to factories, better growth, and Civic Forums.</p></article>
+            <article class="card"><span class="tag">A contested frontier</span><h3>Lances &amp; deflectors</h3><p>Coherent Lances increases warship damage by 25%. Deflector Fields reduces incoming fleet damage by 20%. Capital Ship Architecture unlocks cruisers.</p></article>
+          </div>
+          <p>For the ancient network, follow <strong>Resonance Theory → Quantum Archives → the Asterion Protocol</strong>. The Protocol also requires Autonomous Industry, which follows Deep-space Logistics. That scientific route depends on an economy able to construct the Beacons it unlocks.</p>
+          <details>
+            <summary>Technology costs and prerequisites</summary>
+            <div class="table-scroll" role="region" aria-label="Technology reference" tabindex="0">
+              <table>
+                <caption>Research costs are measured in science.</caption>
+                <thead><tr><th scope="col">Technology</th><th scope="col">Science</th><th scope="col">Prerequisites / effect</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Deep-space Logistics</th><td>55</td><td>No prerequisite. +1 order each turn.</td></tr>
+                  <tr><th scope="row">Adaptive Biospheres</th><td>60</td><td>No prerequisite. 30% colonization threshold; Habitation Domes.</td></tr>
+                  <tr><th scope="row">Resonance Theory</th><td>60</td><td>No prerequisite. +2 science per colony.</td></tr>
+                  <tr><th scope="row">Coherent Lances</th><td>70</td><td>No prerequisite. +25% warship damage.</td></tr>
+                  <tr><th scope="row">Autonomous Industry</th><td>110</td><td>Deep-space Logistics. Unlocks Manufactories.</td></tr>
+                  <tr><th scope="row">Stellar Accords</th><td>100</td><td>Adaptive Biospheres. +4 credits per trade treaty; Civic Forums.</td></tr>
+                  <tr><th scope="row">Deflector Fields</th><td>120</td><td>Resonance Theory. −20% incoming fleet damage; Orbital Bastions.</td></tr>
+                  <tr><th scope="row">Capital Ship Architecture</th><td>150</td><td>Deep-space Logistics and Coherent Lances. Unlocks cruisers.</td></tr>
+                  <tr><th scope="row">Worldshaping</th><td>180</td><td>Adaptive Biospheres and Autonomous Industry. Settle any world; +50% colony growth.</td></tr>
+                  <tr><th scope="row">Quantum Archives</th><td>150</td><td>Resonance Theory. +4 science per Research Enclave.</td></tr>
+                  <tr><th scope="row">Distributed Command</th><td>180</td><td>Deep-space Logistics and Stellar Accords. +2 orders; warships gain a move each turn.</td></tr>
+                  <tr><th scope="row">The Asterion Protocol</th><td>320</td><td>Quantum Archives and Autonomous Industry. Unlocks Asterion Beacons.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="combat" aria-labelledby="combat-title">
+          <div class="section-heading"><span class="section-number">06</span><h2 id="combat-title">Fleets &amp; warfare</h2></div>
+          <p class="lede">A fleet is an investment you must build, supply with credits, and keep alive.</p>
+          <p>Build ships at a colony with an Orbital Shipyard. Pathfinders explore; Colony Arks settle. Vanguards provide economical combat strength, and Sovereign cruisers carry heavier weapons and much more hull.</p>
+          <div class="table-scroll" role="region" aria-label="Ship reference" tabindex="0">
+            <table>
+              <caption>Base ship values, before faction traits and researched improvements.</caption>
+              <thead><tr><th scope="col">Ship</th><th scope="col">Hull / Attack</th><th scope="col">Moves</th><th scope="col">Cost</th><th scope="col">Upkeep</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Pathfinder<br><span class="small">Scout</span></th><td class="cost">18 / 3</td><td>2</td><td class="cost">20 C / 20 M</td><td>1 C / turn</td></tr>
+                <tr><th scope="row">Colony Ark<br><span class="small">Colony ship</span></th><td class="cost">24 / 0</td><td>1</td><td class="cost">45 C / 55 M</td><td>1 C / turn</td></tr>
+                <tr><th scope="row">Vanguard<br><span class="small">Frigate</span></th><td class="cost">34 / 12</td><td>1</td><td class="cost">25 C / 35 M</td><td>2 C / turn</td></tr>
+                <tr><th scope="row">Sovereign<br><span class="small">Cruiser</span></th><td class="cost">85 / 31</td><td>1</td><td class="cost">65 C / 85 M</td><td>4 C / turn</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Prepare before committing</h3>
+          <p>Declare war before fighting another empire. Moving into a system occupied by its fleets triggers combat automatically. Each engagement lasts up to four rounds, with both sides dealing damage each round. If both survive, they remain in orbit; another attack requires a move and an order. The combat estimate is a guide to relative strength, not a guarantee.</p>
+          <p>Combine your same-type fleets in the same system for one order, up to 12 ships in a task force. Merging keeps the lower remaining movement allowance of the two fleets. Colony Arks cannot merge.</p>
+          <h3>Capture a world</h3>
+          <p>Clear hostile fleets, then use the attack action while orbiting the enemy colony. Bombardment reduces its defenses and the colony returns fire. You capture it when defenses reach zero and your attacking fleet survives. Capturing reduces population by one, to a minimum of one, and cancels its construction project.</p>
+          <p>Base colony defense is 12 plus 3 per population. Original capital worlds add 15; an Orbital Bastion adds another 30. A colony recovers 5 defense each turn when no hostile fleet is in orbit, so maintaining pressure matters.</p>
+          <h3>Repair and regroup</h3>
+          <p>At your own colonies, fleets recover 4 hull per turn, or 8 with an Orbital Shipyard, if no hostile fleet is present. Emergency repairs restore up to 24 hull immediately for 10 minerals and one order. Repairs cannot replace ships already destroyed.</p>
+          <p>Coherent Lances improves damage by 25%, and Deflector Fields reduces incoming damage by 20%. Distributed Command gives warships a second move, allowing them to move and attack in the same turn when Orders permit.</p>
+          <div class="callout"><p><strong>A fleet needs an economy behind it.</strong> Four Vanguards cost 8 credits every turn in upkeep. Before expanding a task force, check that your income can support it alongside your next construction project.</p></div>
+        </section>
+
+        <section id="diplomacy" aria-labelledby="diplomacy-title">
+          <div class="section-heading"><span class="section-number">07</span><h2 id="diplomacy-title">Your neighbors</h2></div>
+          <p class="lede">Three rival civilizations are pursuing their own futures. Their strengths affect which contests you can afford to enter.</p>
+          <div class="table-scroll" role="region" aria-label="Faction reference" tabindex="0">
+            <table>
+              <thead><tr><th scope="col">Civilization</th><th scope="col">Distinct advantage</th><th scope="col">Leader</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">The Concord</th><td>One additional order per turn.</td><td>First Speaker Mara Voss</td></tr>
+                <tr><th scope="row">Veyr Consortium</th><td>25% more credit income.</td><td>Director Cassian Rook</td></tr>
+                <tr><th scope="row">Khar Dominion</th><td>15% more warship damage.</td><td>High Marshal Sera Kade</td></tr>
+                <tr><th scope="row">The Luminous Choir</th><td>25% more science.</td><td>The Ninth Voice</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Discover a civilization’s territory or encounter its fleet to establish contact, then open Diplomacy. Each diplomatic action costs one order in addition to any credit payment.</p>
+          <ul>
+            <li><strong>Trade treaty:</strong> costs 30 credits and requires peace and trust of at least zero. Both sides gain open borders and 6 credits per turn; Stellar Accords raises your treaty income to 10. Signing adds 10 trust, and active trade adds one trust each turn.</li>
+            <li><strong>Diplomatic gift:</strong> transfers 35 credits to the other empire and improves trust by 20. Available only during peace.</li>
+            <li><strong>Declare war:</strong> opens hostile territory to your fleets, ends trade, and reduces trust by 40. You cannot negotiate peace during the first five turns of a war.</li>
+            <li><strong>Peace settlement:</strong> after those five turns, pay the other empire 60 credits to end the war. Trust resets to −5. Fleets inside the other side’s territory return to a nearby owned colony when one is available.</li>
+          </ul>
+          <p>A peaceful frontier frees fleets and Orders for expansion elsewhere. An economic lead can also finance the ships you will need if negotiations stop serving your interests.</p>
+        </section>
+
+        <section id="victory" aria-labelledby="victory-title">
+          <div class="section-heading"><span class="section-number">08</span><h2 id="victory-title">A lasting civilization</h2></div>
+          <p class="lede">Turn a growing empire into an outcome. Make your long-term objective part of every major investment.</p>
+          <h3>Restore the ancient network</h3>
+          <p>Research <strong>the Asterion Protocol</strong>, then own <strong>three colonies with Asterion Beacons</strong> to achieve a transcendence victory. Each Beacon costs 180 credits and 180 minerals and requires 140 construction production.</p>
+          <p>This path needs more than science. Establish enough colonies and income to build the network, improve their production, and protect the worlds on which you are constructing Beacons.</p>
+          <div class="callout"><p><strong>Plan the whole project.</strong> Three Beacons together require 540 credits and 540 minerals, before the cost of the colonies and infrastructure that build them.</p></div>
+          <h3>Unite the original capitals</h3>
+          <p>A <strong>domination victory</strong> requires ownership of all four original capitals: Solace, Veyr Prime, Kharos, and Lumen. These specific worlds remain the objectives even if an empire relocates its government.</p>
+          <h3>Leave the greatest legacy</h3>
+          <p>If no empire has won earlier, the surviving civilization with the highest score on <strong>turn 120</strong> wins a legacy victory. Score adds 20 per colony, 2 per population, 12 per completed technology, 80 per Beacon, and one point per 4 military power, rounded down.</p>
+          <p>Rivals can win by the same routes. Losing every colony does not eliminate an empire while it still has a Colony Ark; losing both its colonies and its Arks ends its civilization.</p>
+        </section>
+
+        <section id="controls" aria-labelledby="controls-title">
+          <div class="section-heading"><span class="section-number">09</span><h2 id="controls-title">Controls &amp; saves</h2></div>
+          <p>Drag the map to pan and use the mouse wheel to zoom. Select a fleet, then click an adjacent star to preview a move. Press <strong>Move</strong> to commit. Selecting a destination alone does not send the fleet.</p>
+          <div class="table-scroll" role="region" aria-label="Keyboard shortcuts" tabindex="0">
+            <table class="key-table">
+              <thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead>
+              <tbody>
+                <tr><td><kbd>Space</kbd></td><td>End the turn when no dialog or text field is active.</td></tr>
+                <tr><td><kbd>1</kbd></td><td>Open the galaxy view.</td></tr>
+                <tr><td><kbd>2</kbd></td><td>Open research.</td></tr>
+                <tr><td><kbd>3</kbd></td><td>Open diplomacy.</td></tr>
+                <tr><td><kbd>4</kbd></td><td>Open the empire overview.</td></tr>
+                <tr><td><kbd>H</kbd></td><td>Return to your homeworld.</td></tr>
+                <tr><td><kbd>Esc</kbd></td><td>Close the current panel or go back.</td></tr>
+                <tr><td><kbd>?</kbd></td><td>Open this Field Guide.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Keep your civilization</h3>
+          <p>The game saves automatically after each action. Use the menu’s <strong>export</strong> and <strong>import</strong> controls to keep a separate save or move your game between browsers. Export a copy before clearing browser data if you want to retain the campaign.</p>
+          <p>The game is turn based. Taking time to inspect a world, compare a research choice, or read the guide does not advance the simulation.</p>
+        </section>
+      </main>
+    </div>
+    <footer class="footer"><em>Many worlds. One horizon.</em><a href="./index.html">Return to Asterion Reach →</a></footer>
+  </div>
+</body>
+</html>

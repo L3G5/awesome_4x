@@ -1,0 +1,35 @@
+.galaxy-view { position: relative; overflow: hidden; isolation: isolate; background: #080e1b; touch-action: none; cursor: grab; min-width: 0; }
+.galaxy-canvas, .galaxy-labels { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+.galaxy-labels { pointer-events: none; z-index: 2; overflow: hidden; }
+.galaxy-view::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 100px 12px rgba(3, 8, 17, .5); }
+.galaxy-view.galaxy-dragging, .galaxy-dragging * { cursor: grabbing !important; }
+.galaxy-pointing { cursor: pointer; }
+.galaxy-system-label { all: unset; box-sizing: border-box; position: absolute; top: 0; left: 0; min-width: 82px; max-width: 180px; padding: 3px 7px 5px; border: 1px solid transparent; border-radius: 3px; color: #b9c8dc; background: transparent; text-align: center; cursor: pointer; pointer-events: auto; white-space: nowrap; text-shadow: 0 2px 3px #050a14, 0 0 8px #050a14; transition: border-color .18s, background .18s, color .18s; }
+.galaxy-system-name { display: block; font-family: inherit; font-size: 11px; font-weight: 500; line-height: 1.35; letter-spacing: .035em; }
+.galaxy-system-status { display: block; font-family: inherit; font-size: 7.5px; font-weight: 500; line-height: 1.6; letter-spacing: .14em; color: #6f829a; }
+.galaxy-system-label.is-owned .galaxy-system-name { color: #9ddbd4; }
+.galaxy-system-label.is-owned .galaxy-system-status { color: #628e8e; }
+.galaxy-system-label.is-unsurveyed { opacity: .72; }
+.galaxy-system-label.is-selected { color: #edfcf7; opacity: 1; }
+.galaxy-system-label.is-selected .galaxy-system-name { color: #e4fff7; font-weight: 650; }
+.galaxy-system-label.is-selected .galaxy-system-status { color: #92c9c2; }
+.galaxy-system-label:hover { background: rgba(16, 31, 45, .85); border-color: rgba(126, 189, 193, .25); color: white; opacity: 1; }
+.galaxy-system-label.is-reachable .galaxy-system-name::before { content: '·'; color: #8de7d6; margin-right: 4px; }
+.galaxy-system-label:focus-visible, .galaxy-fleet:focus-visible { outline: 2px solid #b2eee2; outline-offset: 3px; }
+.galaxy-fleet { all: unset; box-sizing: border-box; display: grid; place-items: center; position: absolute; top: 0; left: 0; pointer-events: auto; cursor: pointer; width: 25px; height: 24px; border: 1px solid color-mix(in srgb, var(--fleet-color) 32%, transparent); border-radius: 3px; color: var(--fleet-color); background: rgba(8, 20, 32, .85); font: 12px/1 inherit; font-size: 12px; text-shadow: 0 0 10px color-mix(in srgb, var(--fleet-color) 40%, transparent); transition: border-color .15s, background .15s; }
+.galaxy-fleet:hover, .galaxy-fleet.is-selected { background: color-mix(in srgb, var(--fleet-color) 18%, #0a1523); border-color: var(--fleet-color); }
+.galaxy-fleet.is-selected { box-shadow: 0 0 12px color-mix(in srgb, var(--fleet-color) 15%, transparent); }
+.galaxy-fleet.is-spent:not(.is-selected) { opacity: .5; }
+.galaxy-fleet.is-foreign { background: rgba(30, 15, 25, .9); }
+.galaxy-tooltip { position: absolute; z-index: 8; pointer-events: none; max-width: min(300px, calc(100% - 16px)); padding: 10px 13px; background: rgba(10, 21, 34, .96); border: 1px solid #344355; border-radius: 4px; box-shadow: 0 10px 25px #0005; color: #d7e1ec; font: 11px/1.55 inherit; font-size: 11px; }
+.galaxy-tooltip[hidden] { display: none; }
+.galaxy-tooltip strong { display: block; font-size: 13px; margin-bottom: 3px; font-weight: 500; }
+.galaxy-tooltip span { color: #91a5bd; }
+.galaxy-sector-label { position: absolute; left: 48%; top: 48%; transform: translate(-50%, -50%) rotate(-12deg); pointer-events: none; text-align: center; z-index: 0; color: rgba(151, 170, 201, .075); white-space: nowrap; }
+.galaxy-sector-label span { display: block; font-size: clamp(12px, 2.2vw, 32px); font-weight: 300; letter-spacing: .5em; }
+.galaxy-sector-label small { display: block; margin-top: 12px; font-size: 8px; letter-spacing: .6em; }
+.galaxy-fallback { background: radial-gradient(ellipse at 40% 40%, #15203a, #080e1b 70%); }
+.galaxy-fallback .galaxy-system-label::before { content: '✦'; display: block; height: 17px; color: var(--system-color); font-size: 18px; }
+.galaxy-fallback-notice { position: absolute; left: 16px; right: 16px; top: 12px; z-index: 10; margin: 0; padding: 9px 12px; border: 1px solid #8e743c; border-radius: 4px; background: #282417ee; color: #e9cd91; font-size: 11px; line-height: 1.5; }
+@media (max-width: 720px) { .galaxy-system-name { font-size: 10px; } .galaxy-system-status { font-size: 7px; } .galaxy-sector-label { display: none; } }
+@media (prefers-reduced-motion: reduce) { .galaxy-system-label, .galaxy-fleet { transition: none; } }
