@@ -1,0 +1,410 @@
+before/passive/ASTERION: choir at 66; 0 assignments, 0/9 lead-defender duels
+before/passive/stage4-audit-1: choir at 69; 0 assignments, 0/10 lead-defender duels
+before/passive/stage4-audit-2: choir at 68; 0 assignments, 0/14 lead-defender duels
+before/passive/stage4-audit-3: khar at 85; 0 assignments, 0/12 lead-defender duels
+before/passive/stage4-audit-4: veyr at 72; 0 assignments, 0/6 lead-defender duels
+before/passive/stage4-audit-5: khar at 70; 0 assignments, 0/12 lead-defender duels
+before/passive/stage4-audit-6: khar at 78; 0 assignments, 0/22 lead-defender duels
+before/passive/stage4-audit-7: khar at 70; 0 assignments, 0/4 lead-defender duels
+before/balanced/ASTERION: choir at 63; 0 assignments, 0/7 lead-defender duels
+before/balanced/stage4-audit-1: veyr at 73; 0 assignments, 0/13 lead-defender duels
+before/balanced/stage4-audit-2: player at 65; 0 assignments, 0/10 lead-defender duels
+before/balanced/stage4-audit-3: veyr at 72; 0 assignments, 0/9 lead-defender duels
+before/balanced/stage4-audit-4: khar at 72; 0 assignments, 0/16 lead-defender duels
+before/balanced/stage4-audit-5: veyr at 72; 0 assignments, 0/14 lead-defender duels
+before/balanced/stage4-audit-6: khar at 70; 0 assignments, 0/19 lead-defender duels
+before/balanced/stage4-audit-7: choir at 71; 0 assignments, 0/11 lead-defender duels
+after/passive/ASTERION: choir at 66; 21 assignments, 1/11 lead-defender duels
+after/passive/stage4-audit-1: choir at 69; 3 assignments, 0/10 lead-defender duels
+after/passive/stage4-audit-2: choir at 68; 12 assignments, 1/13 lead-defender duels
+after/passive/stage4-audit-3: khar at 85; 12 assignments, 0/12 lead-defender duels
+after/passive/stage4-audit-4: veyr at 72; 8 assignments, 0/6 lead-defender duels
+after/passive/stage4-audit-5: khar at 70; 12 assignments, 1/12 lead-defender duels
+after/passive/stage4-audit-6: khar at 78; 14 assignments, 0/22 lead-defender duels
+after/passive/stage4-audit-7: khar at 70; 11 assignments, 0/4 lead-defender duels
+after/balanced/ASTERION: choir at 63; 11 assignments, 0/7 lead-defender duels
+after/balanced/stage4-audit-1: veyr at 73; 9 assignments, 0/13 lead-defender duels
+after/balanced/stage4-audit-2: player at 65; 4 assignments, 0/10 lead-defender duels
+after/balanced/stage4-audit-3: veyr at 72; 6 assignments, 0/9 lead-defender duels
+after/balanced/stage4-audit-4: khar at 72; 4 assignments, 1/16 lead-defender duels
+after/balanced/stage4-audit-5: veyr at 72; 14 assignments, 0/14 lead-defender duels
+after/balanced/stage4-audit-6: player at 70; 8 assignments, 1/15 lead-defender duels
+after/balanced/stage4-audit-7: choir at 71; 9 assignments, 0/11 lead-defender duels
+{
+  "output": "/tmp/asterion-stage14-comparison/results.json",
+  "checks": {
+    "measuredConfigurations": 32,
+    "completeRawValidationReplays": 32,
+    "measuredCompletedCycles": 2240,
+    "measuredStateChecks": 2272,
+    "rawStateChecks": 2272,
+    "jsonReloadNextRoundChecks": 96,
+    "fullFinalStateObserverEqualityChecks": 32,
+    "pairedRoundObserverEqualityChecks": 2240,
+    "invalidStates": 0,
+    "negativeBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "summary": {
+    "before": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3
+        },
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 89,
+        "leadDefenderDuels": 0,
+        "fleetCombatShipsLost": {
+          "player": 0,
+          "veyr": 61,
+          "khar": 56,
+          "choir": 56
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 1,
+          "veyr": 3,
+          "khar": 2,
+          "choir": 2
+        },
+        "assignments": 0,
+        "assignmentOrders": 0,
+        "assignmentsAtObservedWarThreat": 0,
+        "assignmentsWithArk": 0,
+        "assignmentsElsewhere": 0,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 99,
+        "leadDefenderDuels": 0,
+        "fleetCombatShipsLost": {
+          "player": 44,
+          "veyr": 70,
+          "khar": 52,
+          "choir": 55
+        }
+      }
+    },
+    "after": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3
+        },
+        "assignments": 93,
+        "assignmentOrders": 93,
+        "assignmentsAtObservedWarThreat": 14,
+        "assignmentsWithArk": 30,
+        "assignmentsElsewhere": 49,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 90,
+        "leadDefenderDuels": 3,
+        "fleetCombatShipsLost": {
+          "player": 0,
+          "veyr": 64,
+          "khar": 55,
+          "choir": 56
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 2,
+          "veyr": 3,
+          "khar": 1,
+          "choir": 2
+        },
+        "assignments": 65,
+        "assignmentOrders": 65,
+        "assignmentsAtObservedWarThreat": 5,
+        "assignmentsWithArk": 45,
+        "assignmentsElsewhere": 15,
+        "assignmentNoops": 0,
+        "failedAssignments": 0,
+        "fleetDuels": 95,
+        "leadDefenderDuels": 2,
+        "fleetCombatShipsLost": {
+          "player": 43,
+          "veyr": 70,
+          "khar": 52,
+          "choir": 52
+        }
+      }
+    }
+  },
+  "paired": {
+    "passive": {
+      "pairs": 8,
+      "changedWinners": 0,
+      "changedVictoryTypes": 0,
+      "finishDelta": {
+        "count": 8,
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "rows": [
+        {
+          "seed": "ASTERION",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 66,
+          "afterFinish": 66,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 2,
+          "assignments": 21,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-1",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 69,
+          "afterFinish": 69,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 3,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-2",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 68,
+          "afterFinish": 68,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": -1,
+          "assignments": 12,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-3",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 85,
+          "afterFinish": 85,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 12,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-4",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 8,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-5",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 70,
+          "afterFinish": 70,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 12,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-6",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 78,
+          "afterFinish": 78,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 14,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-7",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 70,
+          "afterFinish": 70,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 11,
+          "leadDefenderDuels": 0
+        }
+      ]
+    },
+    "balanced": {
+      "pairs": 8,
+      "changedWinners": 1,
+      "changedVictoryTypes": 0,
+      "finishDelta": {
+        "count": 8,
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "rows": [
+        {
+          "seed": "ASTERION",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 63,
+          "afterFinish": 63,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 11,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-1",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 73,
+          "afterFinish": 73,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 9,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-2",
+          "beforeWinner": "player",
+          "afterWinner": "player",
+          "beforeFinish": 65,
+          "afterFinish": 65,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 4,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-3",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 6,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-4",
+          "beforeWinner": "khar",
+          "afterWinner": "khar",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 4,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-5",
+          "beforeWinner": "veyr",
+          "afterWinner": "veyr",
+          "beforeFinish": 72,
+          "afterFinish": 72,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 14,
+          "leadDefenderDuels": 0
+        },
+        {
+          "seed": "stage4-audit-6",
+          "beforeWinner": "khar",
+          "afterWinner": "player",
+          "beforeFinish": 70,
+          "afterFinish": 70,
+          "finishDelta": 0,
+          "winnerChanged": true,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": -4,
+          "assignments": 8,
+          "leadDefenderDuels": 1
+        },
+        {
+          "seed": "stage4-audit-7",
+          "beforeWinner": "choir",
+          "afterWinner": "choir",
+          "beforeFinish": 71,
+          "afterFinish": 71,
+          "finishDelta": 0,
+          "winnerChanged": false,
+          "victoryTypeChanged": false,
+          "fleetDuelDelta": 0,
+          "assignments": 9,
+          "leadDefenderDuels": 0
+        }
+      ]
+    }
+  }
+}
