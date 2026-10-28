@@ -13,7 +13,7 @@ function freezeSnapshot(value) {
 }
 
 export function captureParticipant(fleet, role) {
-  return { role, fleetId: fleet.id, owner: fleet.owner, name: fleet.name, type: fleet.type, shipsBefore: fleet.ships, hullBefore: fleet.hp };
+  return { role, fleetId: fleet.id, owner: fleet.owner, name: fleet.name, type: fleet.type, shipsBefore: fleet.ships, hullBefore: fleet.hp, ...(role === 'defender' && fleet.defenseLead === true ? { defenseLead: true } : {}) };
 }
 
 export function finishParticipant(before, fleet) {
@@ -78,6 +78,7 @@ export function validateReportState(state) {
         reportIds.add(report.id);
         for (const [index, participant] of report.participants.entries()) {
           if (!participant || participant.role !== (index === 0 ? 'attacker' : 'defender') || !/^f[1-9][0-9]*$/.test(participant.fleetId) || !factions.has(participant.owner) || !text(participant.name) || !hasContent(SHIPS, participant.type) || !positiveInt(participant.shipsBefore) || participant.shipsBefore > 12 || !Number.isInteger(participant.shipsAfter) || participant.shipsAfter < 0 || participant.shipsAfter > participant.shipsBefore || !Number.isFinite(participant.hullBefore) || participant.hullBefore <= 0 || participant.hullBefore > participant.shipsBefore * SHIPS[participant.type].hp || !nonnegative(participant.hullAfter) || participant.hullAfter > participant.hullBefore || participant.hullAfter > participant.shipsAfter * SHIPS[participant.type].hp || (participant.shipsAfter === 0) !== (participant.hullAfter === 0)) return false;
+          if (participant.defenseLead !== undefined && (participant.defenseLead !== true || participant.role !== 'defender' || SHIPS[participant.type].attack < 4)) return false;
         }
         const attacker = report.participants[0];
         if (report.kind === 'fleet') {

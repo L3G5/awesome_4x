@@ -10,6 +10,7 @@ import { placeDiscoveries, observeDiscovery, observeDiscoveries, getDiscoveryBui
 import { recordSovereigntyTransfer, validatePublicAffairsState } from './public-affairs.js';
 import { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
 import { captureFleetReadiness, reconcileFleetReadiness, validateFleetReadiness } from './fleet-readiness.js';
+import { getDefenseLeadPreview, orderDefenders, validateDefenseState } from './defense.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getOrderCapacity, getOrderChange } from './development.js';
@@ -17,6 +18,7 @@ export { getRoutePreview, getRouteStatus } from './navigation.js';
 export { getPublicRelationships, getPublicDispatches, getKnownTransfers } from './public-affairs.js';
 export { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
 export { getFleetReadiness, getReadyFleets } from './fleet-readiness.js';
+export { getDefenseLeadPreview, orderDefenders } from './defense.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -315,12 +317,26 @@ export function command(state, action) {
   const faction = factionOf(state, factionId);
   if (!faction || faction.eliminated) return fail('This empire is no longer active.');
   if (action.type === 'endTurn') return factionId === 'player' ? endTurn(state) : fail('Only the player can advance the turn.');
-  const freeActions = ['research', 'cancelBuild', 'planRoute', 'clearRoute', 'continueRoute', 'hold', 'resume'];
+  const freeActions = ['research', 'cancelBuild', 'planRoute', 'clearRoute', 'continueRoute', 'hold', 'resume', 'leadDefense', 'clearDefenseLead'];
   if (!freeActions.includes(action.type) && faction.orders < 1) return fail('No orders remaining. End the turn to receive a new mandate.');
   const fleet = action.fleetId ? fleetOf(state, action.fleetId) : null;
   const system = action.systemId ? systemOf(state, action.systemId) : fleet ? systemOf(state, fleet.systemId) : null;
   if (action.fleetId && (!fleet || fleet.owner !== factionId)) return fail('Select one of your own fleets.');
   if (action.systemId && !system) return fail('Unknown system.');
+  if (action.type === 'leadDefense' || action.type === 'clearDefenseLead') {
+    const preview = getDefenseLeadPreview(state, action.fleetId, factionId);
+    if (!preview) return fail('Select one of your military fleets.');
+    const assigning = action.type === 'leadDefense', option = assigning ? preview.assign : preview.clear;
+    if (!option.enabled) return fail(option.reason);
+    // A repeated acknowledgement is a literal no-op, including at zero orders.
+    if (!option.orders) return success(assigning ? 'This formation already leads its local defense.' : 'This formation has no defensive lead assignment.');
+    if (assigning) {
+      for (const other of state.fleets) if (other.owner === factionId && other.systemId === fleet.systemId && other.defenseLead === true) delete other.defenseLead;
+      fleet.defenseLead = true;
+    } else delete fleet.defenseLead;
+    faction.orders -= option.orders;
+    return success(assigning ? `${fleet.name} will lead its local defense.` : `${fleet.name} returns to the ordinary defensive order.`);
+  }
   if (action.type === 'hold' || action.type === 'resume') {
     if (!fleet) return fail('Select a fleet first.');
     if (action.type === 'hold') fleet.hold = true;
@@ -358,7 +374,7 @@ export function command(state, action) {
       if (!target.knownBy.includes(factionId)) return fail('That starlane has not been charted.');
       if (fleet.movesLeft < 1) return fail('This fleet has used all its movement this turn.');
       if (!canEnter(state, factionId, target)) return fail('Borders are closed. Sign a trade treaty or declare war to enter.');
-      const enemies = state.fleets.filter(f => f.systemId === target.id && atWar(state, factionId, f.owner));
+      const enemies = orderDefenders(state.fleets.filter(f => f.systemId === target.id && atWar(state, factionId, f.owner)));
       if (enemies.length && SHIPS[fleet.type].attack < 4) {
         if (hasSensors(state, factionId, target.id)) return fail('Civilian vessels cannot enter hostile fleet positions.');
         // An unknown interception is a spent expedition, not a free query of
@@ -374,6 +390,7 @@ export function command(state, action) {
       observeDiscovery(state, fleet.systemId, factionId);
       const originId = fleet.systemId;
       fleet.systemId = target.id; fleet.movesLeft--; faction.orders--;
+      delete fleet.defenseLead;
       updateRouteAfterMove(fleet, originId, target.id);
       survey(state, target.id, factionId);
       const combatReports = [];
@@ -450,7 +467,7 @@ export function command(state, action) {
     case 'attack': {
       if (!fleet || SHIPS[fleet.type].attack < 4) return fail('A military fleet is required.');
       if (fleet.movesLeft < 1) return fail('This fleet has used all its movement this turn.');
-      const enemies = getVisibleFleets(state, factionId, fleet.systemId).filter(f => atWar(state, factionId, f.owner));
+      const enemies = orderDefenders(getVisibleFleets(state, factionId, fleet.systemId).filter(f => atWar(state, factionId, f.owner)));
       if (!enemies.length && (!system.owner || !atWar(state, factionId, system.owner))) return fail('No hostile target in this system.');
       faction.orders--; fleet.movesLeft--;
       if (enemies.length) {
@@ -507,6 +524,7 @@ export function command(state, action) {
       if (fleet.type === 'colony') return fail('Colony Arks operate independently.');
       if (fleet.ships + other.ships > 12) return fail('A task force can contain at most 12 ships.');
       mergeDiscoveryHeritage(fleet, other);
+      if (other.defenseLead === true) fleet.defenseLead = true;
       fleet.ships += other.ships; fleet.hp += other.hp; fleet.movesLeft = Math.min(fleet.movesLeft, other.movesLeft);
       state.fleets = state.fleets.filter(f => f.id !== other.id); faction.orders--;
       result = success('Fleets combined into one task force.'); break;
@@ -678,6 +696,7 @@ function isValidSave(value) {
   if (!validateAlignmentState(value)) return false;
   if (!validateNavigationState(value)) return false;
   if (!validateFleetReadiness(value)) return false;
+  if (!validateDefenseState(value)) return false;
   if (!validateDiscoveryState(value)) return false;
   if (!validatePublicAffairsState(value)) return false;
   return true;

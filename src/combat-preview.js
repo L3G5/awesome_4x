@@ -1,5 +1,6 @@
 import { SHIPS } from './content.js';
 import { getVisibleFleets, hasSensors } from './intelligence.js';
+import { orderDefenders } from './defense.js';
 
 // Presentation snapshots contain only current formation facts. They never
 // retain fleet references, plans, research, or historical participation claims.
@@ -11,6 +12,7 @@ const formation = fleet => ({
   ships: fleet.ships,
   hp: fleet.hp,
   maxHp: fleet.ships * SHIPS[fleet.type].hp,
+  ...(fleet.defenseLead === true ? { defenseLead: true } : {}),
 });
 
 /** Own current formations in engine order, including civilian defenders. */
@@ -18,8 +20,8 @@ export function getDefenseOrder(state, systemId, factionId = 'player') {
   const faction = state.factions.find(candidate => candidate.id === factionId);
   const system = state.systems.find(candidate => candidate.id === systemId);
   if (!faction || !system?.knownBy.includes(factionId)) return [];
-  return state.fleets
-    .filter(fleet => fleet.owner === factionId && fleet.systemId === systemId)
+  return orderDefenders(state.fleets
+    .filter(fleet => fleet.owner === factionId && fleet.systemId === systemId))
     .map(formation);
 }
 
@@ -46,8 +48,8 @@ export function getEngagementPreview(state, fleetId, targetId, factionId = 'play
     selected: formation(fleet),
     observed,
     opponents: observed
-      ? getVisibleFleets(state, factionId, target.id)
-        .filter(other => other.owner !== factionId && faction.relations[other.owner]?.status === 'war')
+      ? orderDefenders(getVisibleFleets(state, factionId, target.id)
+        .filter(other => other.owner !== factionId && faction.relations[other.owner]?.status === 'war'))
         .map(formation)
       : null,
     otherFriendly: getDefenseOrder(state, target.id, factionId).filter(other => other.id !== fleet.id),
