@@ -3,10 +3,11 @@
  * sensors. Every action goes through the same command rules as the player.
  * Imports are only called during a turn, so game.js may safely import runAI.
  */
-import { command, getNeighbors, getVisibleSystems, getEmpireStats, getBuildOptions, getResearchOptions, estimateCombat, fleetPower, getSystemYield } from './game.js';
+import { command, getNeighbors, getVisibleSystems, getEmpireStats, getBuildOptions, getResearchOptions, estimateCombat, fleetPower, getSystemYield, getInfrastructure, getDevelopmentOptions, CHARTERS } from './game.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
-import { ANOMALIES, SHIPS } from './content.js';
-import { getDiplomaticIntent } from './diplomacy.js';
+import { ANOMALIES, SHIPS, BUILDINGS } from './content.js';
+import { getDiplomaticIntent, getDiplomacyForecast } from './diplomacy.js';
+import { ALIGNMENT_RULES, getPublicRaces, getAlignmentStatus } from './victory.js';
 
 const factionOf = (state, id) => state.factions.find(f => f.id === id);
 const systemOf = (state, id) => state.systems.find(s => s.id === id);
@@ -52,7 +53,7 @@ function knownDistances(state, faction, from) {
  * Unknown fleets stay unknown: hostile sovereignty adds a risk premium, not
  * an inspection of the hidden fleet array.
  */
-function route(state, faction, fleet, targetId, { peaceful = false } = {}) {
+function route(state, faction, fleet, targetId, { peaceful = false, interventionOwner = null } = {}) {
   if (fleet.systemId === targetId) return { path: [targetId], cost: 0 };
   const known = new Set(getVisibleSystems(state, faction.id).map(s => s.id));
   if (!known.has(targetId)) return null;
@@ -69,14 +70,14 @@ function route(state, faction, fleet, targetId, { peaceful = false } = {}) {
     for (const next of getNeighbors(state, current)) {
       if (!known.has(next)) continue;
       const system = systemOf(state, next);
-      if (!enterable(faction, system)) continue;
-      const enemies = observedEnemies(state, faction, next);
+      if (!enterable(faction, system) && system.owner !== interventionOwner) continue;
+      const enemies = getVisibleFleets(state, faction.id, next).filter(other => war(faction, other.owner) || other.owner === interventionOwner);
       const opposition = enemies.reduce((total, f) => total + strength(state, f), 0);
       if (enemies.length && (peaceful || !military(fleet))) continue;
       if (opposition > 0 && power < opposition * 1.18) continue;
       // Retreat and reinforcement prefer friendly territory over uncertain
       // hostile systems, even if the hostile route is one jump shorter.
-      const uncertainHostile = war(faction, system.owner) && !hasSensors(state, faction.id, next);
+      const uncertainHostile = (war(faction, system.owner) || interventionOwner && system.owner === interventionOwner) && !hasSensors(state, faction.id, next);
       const risk = opposition > 0 ? opposition / Math.max(1, power) * 3 : 0;
       const cost = costs.get(current) + 1 + risk + (uncertainHostile ? peaceful ? 8 : 2.5 : 0);
       if (cost >= (costs.get(next) ?? Infinity)) continue;
@@ -108,7 +109,8 @@ function threatsToColonies(state, faction) {
     const nearby = approaches.reduce((total, item) => total + item.power, 0);
     const required = (here + nearby) * 1.18;
     const stationed = friendlyStrength(state, faction, colony.id);
-    return { colony, here, nearby, required, stationed, sourceId: here > 0 ? colony.id : approaches[0]?.systemId || null, urgency: here ? 100 + here + colony.population * 2 : nearby ? 40 + nearby + Math.max(0, required - stationed) * .3 : 0 };
+    const beaconPriority = (here || nearby) && faction.alignment?.active && faction.alignment.sites.includes(colony.id) ? 60 : 0;
+    return { colony, here, nearby, required, stationed, sourceId: here > 0 ? colony.id : approaches[0]?.systemId || null, urgency: (here ? 100 + here + colony.population * 2 : nearby ? 40 + nearby + Math.max(0, required - stationed) * .3 : 0) + beaconPriority };
   }).filter(threat => threat.urgency > 0).sort((a, b) => b.urgency - a.urgency || a.colony.id.localeCompare(b.colony.id));
 }
 
@@ -130,6 +132,8 @@ function selectRally(state, faction, objective, threats) {
 
 function selectObjective(state, faction, threats) {
   if (threats.length) return systemOf(state, threats[0].sourceId);
+  const intervention = raceIntervention(state, faction);
+  if (intervention && war(faction, intervention.race.factionId)) return intervention.site;
   const hostiles = getVisibleSystems(state, faction.id).filter(system => war(faction, system.owner) || enemyStrength(state, faction, system.id) > 0);
   if (!hostiles.length) return null;
   const previous = hostiles.find(system => system.id === faction.strategy?.objectiveId);
@@ -137,6 +141,42 @@ function selectObjective(state, faction, threats) {
   const origins = state.systems.filter(s => s.owner === faction.id).map(s => knownDistances(state, faction, s.id));
   const distance = system => Math.min(...origins.map(distances => distances.get(system.id) ?? 100), 100);
   return hostiles.sort((a, b) => distance(a) - distance(b) || a.id.localeCompare(b.id))[0];
+}
+
+/** Public beacon broadcasts justify an achievable intervention, never omniscient targeting. */
+function raceIntervention(state, faction, allowDeclaration = false) {
+  const ownProgress = faction.alignment?.active ? faction.alignment.progress : -1;
+  const candidates = [];
+  for (const race of getPublicRaces(state, faction.id)) {
+    if (race.factionId === faction.id || race.progress < 3 || race.progress <= ownProgress) continue;
+    if (!war(faction, race.factionId) && (!allowDeclaration || !getDiplomacyForecast(state, faction.id, race.factionId).war.enabled)) continue;
+    const participants = new Set(race.participatingSites);
+    for (const beacon of race.sites.filter(site => participants.has(site.id))) {
+      const site = systemOf(state, beacon.id);
+      for (const fleet of ownFleets(state, faction).filter(fleet => military(fleet) && fleet.movesLeft > 0 && strength(state, fleet) >= 30)) {
+        const observedGuard = getVisibleFleets(state, faction.id, site.id).filter(other => other.owner === race.factionId).reduce((total, other) => total + strength(state, other), 0);
+        if (observedGuard * 1.18 > strength(state, fleet)) continue;
+        const travel = route(state, faction, fleet, site.id, { interventionOwner: race.factionId });
+        // Military routing currently commits one hop per AI cycle. Use that
+        // conservative speed rather than promise an interception we cannot make.
+        if (!travel || travel.path.length - 1 > race.target - race.progress) continue;
+        candidates.push({ race, site, fleet, travel });
+      }
+    }
+  }
+  return candidates.sort((a, b) => b.race.progress - a.race.progress || a.travel.cost - b.travel.cost || a.site.id.localeCompare(b.site.id))[0] || null;
+}
+
+function defendAlignment(state, faction, fleet, act) {
+  if (!faction.alignment?.active) return false;
+  const sites = getAlignmentStatus(state, faction.id).sites.map(id => systemOf(state, id));
+  if (!sites.length) return false;
+  const choices = sites.map(site => ({ site, travel: route(state, faction, fleet, site.id, { peaceful: true }), stationed: friendlyStrength(state, faction, site.id, fleet.id) }))
+    .filter(item => item.travel).sort((a, b) => a.stationed - b.stationed || a.travel.cost - b.travel.cost || a.site.id.localeCompare(b.site.id));
+  const destination = choices[0];
+  if (!destination) return false;
+  if (destination.site.id === fleet.systemId) return true;
+  return act({ type: 'move', fleetId: fleet.id, targetId: destination.travel.path[1] }).ok;
 }
 
 function mergeForces(state, faction, act) {
@@ -160,7 +200,7 @@ function retreat(state, faction, fleet, act) {
   return false;
 }
 
-function militaryTurn(state, faction, act) {
+function militaryTurn(state, faction, act, ordinaryAct = act) {
   mergeForces(state, faction, act);
   const handled = new Set();
   // Rescue damaged or outmatched forces before assigning new offensives.
@@ -171,11 +211,12 @@ function militaryTurn(state, faction, act) {
       retreat(state, faction, fleet, act);
       handled.add(fleet.id); // Do not spend an order on a hopeless attack.
     } else if (system.owner === faction.id && fleet.hp < SHIPS[fleet.type].hp * fleet.ships * .7 && faction.minerals >= 10 && faction.orders > 1) {
-      act({ type: 'repair', fleetId: fleet.id });
+      (opposition > 0 ? act : ordinaryAct)({ type: 'repair', fleetId: fleet.id });
     }
   }
   const threats = threatsToColonies(state, faction);
   const objective = selectObjective(state, faction, threats);
+  const raceTarget = raceIntervention(state, faction);
   const rally = selectRally(state, faction, objective, threats);
   const assaultReady = objective && ownFleets(state, faction).some(fleet => military(fleet) && canAssault(state, faction, fleet, objective) && route(state, faction, fleet, objective.id));
   faction.strategy = { mode: threats.length ? 'defend' : objective ? assaultReady ? 'advance' : 'assemble' : 'develop', rallyId: rally?.id || null, objectiveId: objective?.id || null, turn: state.turn };
@@ -194,6 +235,7 @@ function militaryTurn(state, faction, act) {
     // must still be allowed to concentrate instead of freezing on each flank.
     const reserveNeeded = localThreat && system.id !== rally?.id && friendlyStrength(state, faction, system.id) >= localThreat.required && friendlyStrength(state, faction, system.id, fleet.id) < localThreat.required;
     if (reserveNeeded) continue;
+    if (!threats.length && faction.alignment?.active && !raceTarget && defendAlignment(state, faction, fleet, act)) continue;
     if (objective && canAssault(state, faction, fleet, objective)) {
       const advance = route(state, faction, fleet, objective.id);
       if (advance?.path.length > 1) {
@@ -217,7 +259,7 @@ function anomalyTurn(state, faction, act) {
   for (const system of state.systems.filter(s => locations.has(s.id) || s.owner === faction.id)) {
     if (faction.orders <= 1 || state.winner) break;
     if (!surveyed(system, faction) || !system.anomaly || system.anomaly.resolved || system.owner && system.owner !== faction.id || observedEnemies(state, faction, system.id).length) continue;
-    const choices = ANOMALIES[system.anomaly.id].choices.filter(choice => canPay(faction, choice.cost));
+    const choices = ANOMALIES[system.anomaly.id].choices.filter(choice => canSpend(state, faction, choice.cost));
     const value = choice => (choice.gain?.minerals || 0) * (faction.minerals < 80 ? 1.4 : .65) + (choice.gain?.science || 0) * (faction.research ? 1.1 : .65) + (choice.gain?.credits || 0) * (faction.credits < 70 ? 1.3 : .35) + (choice.ship ? 60 : 0) + (choice.population ? 30 : 0) + (choice.habitability && !system.owner && system.habitability < 50 ? 45 : 0) + (choice.reveal ? 25 : 0);
     choices.sort((a, b) => value(b) - value(a));
     if (choices[0]) act({ type: 'anomaly', systemId: system.id, choiceId: choices[0].id });
@@ -255,11 +297,72 @@ function civilianTurn(state, faction, act) {
   }
 }
 
-function buildAt(state, faction, system, priorities, act) {
+/** Savings are a commitment, including when the treasury has not reached it yet. */
+function resourceReserve(state, faction) {
+  const colonies = state.systems.filter(system => system.owner === faction.id);
+  const committed = colonies.filter(system => system.buildings.includes('beacon') || system.queue?.itemId === 'beacon').length;
+  const nextBeacon = faction.techs.includes('singularity') && committed < 3;
+  const aligning = faction.alignment?.active || colonies.filter(system => system.buildings.includes('beacon')).length >= 3;
+  return {
+    credits: (nextBeacon ? BUILDINGS.beacon.cost.credits : 0) + (aligning ? ALIGNMENT_RULES.cost : 0),
+    minerals: nextBeacon ? BUILDINGS.beacon.cost.minerals : 0,
+  };
+}
+
+function needsAlignmentIncome(state, faction) {
+  return faction.techs.includes('singularity') && getEmpireStats(state, faction.id).beacons >= ALIGNMENT_RULES.sites && getEmpireStats(state, faction.id).creditIncome < ALIGNMENT_RULES.cost;
+}
+
+function canSpend(state, faction, cost = {}) {
+  const reserve = resourceReserve(state, faction);
+  return canPay(faction, cost) && ['credits', 'minerals'].every(key => !(cost[key] > 0) || faction[key] - cost[key] >= reserve[key]);
+}
+
+function actionCost(state, faction, action) {
+  const system = systemOf(state, action.systemId);
+  if (action.type === 'build') return getBuildOptions(state, action.systemId, faction.id, action.replaceBuildingId).find(option => option.id === action.itemId)?.cost;
+  if (action.type === 'develop') return getDevelopmentOptions(state, action.systemId, faction.id).find(option => option.charterType === action.charterType)?.cost;
+  if (action.type === 'colonize') return { credits: 30, minerals: 20 };
+  if (action.type === 'repair') return { minerals: 10 };
+  if (action.type === 'anomaly') return ANOMALIES[system?.anomaly?.id]?.choices.find(choice => choice.id === action.choiceId)?.cost;
+  if (action.type === 'diplomacy') {
+    const cost = getDiplomacyForecast(state, faction.id, action.targetId).actions[action.stance]?.cost;
+    return { credits: cost?.credits || 0 };
+  }
+  return {};
+}
+
+/** Replace low-value infrastructure without dismantling an established role. */
+function replacementCandidates(state, faction, system, itemId, role, emergency = false, incomeRecovery = false) {
+  const protectedIds = new Set(['beacon', CHARTERS[system.charter?.type]?.support, CHARTERS[role]?.support]);
+  const colonies = state.systems.filter(colony => colony.owner === faction.id);
+  if (system.buildings.includes('shipyard') && (colonies.filter(colony => colony.buildings.includes('shipyard')).length <= 1 || role === 'forge' || system.id === faction.strategy?.rallyId)) protectedIds.add('shipyard');
+  const stats = getEmpireStats(state, faction.id);
+  const nativeCapacity = 5 + Math.floor(system.habitability / 25);
+  if (incomeRecovery && system.population >= nativeCapacity - 1) protectedIds.add('habitat');
+  const retainedValue = { mine: stats.mineralIncome < colonies.length * 6 ? 90 : 35, lab: 50, market: stats.creditIncome < (faction.alignment?.active ? 70 : 12) ? 90 : 25, shipyard: 40, factory: 55, forum: stats.maxOrders < 15 ? 45 : 20, habitat: system.population >= getSystemYield(state, system).capacity - 1 ? 65 : 10, bastion: observedEnemies(state, faction, system.id).length ? 100 : 15 };
+  const value = id => retainedValue[id] || 30;
+  return system.buildings.filter(id => !protectedIds.has(id) && id !== itemId)
+    .filter(id => emergency || (id !== 'mine' || stats.mineralIncome - 5 >= Math.max(3, colonies.length * 3)) && (id !== 'market' || stats.creditIncome - 7 >= (faction.alignment?.active ? 60 : 3) || incomeRecovery && itemId === 'habitat' && system.population >= nativeCapacity - 1))
+    .sort((a, b) => value(a) - value(b) || a.localeCompare(b));
+}
+
+function buildAt(state, faction, system, priorities, act, { role = null, emergency = false, replace = false, incomeRecovery = false } = {}) {
   if (faction.orders < 1 || system.queue || system.owner !== faction.id) return false;
-  const options = getBuildOptions(state, system.id, faction.id);
-  const itemId = priorities.find(id => options.some(option => option.id === id && option.enabled));
-  return itemId ? act({ type: 'build', systemId: system.id, itemId }).ok : false;
+  for (const itemId of priorities) {
+    let option = getBuildOptions(state, system.id, faction.id).find(item => item.id === itemId);
+    let replaceBuildingId;
+    if (option?.kind === 'building' && !system.buildings.includes(itemId) && !getInfrastructure(state, system).available && replace) {
+      for (const candidate of replacementCandidates(state, faction, system, itemId, role, emergency, incomeRecovery)) {
+        const replacement = getBuildOptions(state, system.id, faction.id, candidate).find(item => item.id === itemId);
+        if (replacement?.enabled) { option = replacement; replaceBuildingId = candidate; break; }
+      }
+    }
+    const revenueException = incomeRecovery && ['market', 'forum', 'habitat'].includes(itemId) && needsAlignmentIncome(state, faction);
+    if (!option?.enabled || !emergency && !revenueException && itemId !== 'beacon' && !canSpend(state, faction, option.cost)) continue;
+    if (act({ type: 'build', systemId: system.id, itemId, ...(replaceBuildingId ? { replaceBuildingId } : {}) }).ok) return true;
+  }
+  return false;
 }
 
 function emergencyConstruction(state, faction, threats, act) {
@@ -269,32 +372,118 @@ function emergencyConstruction(state, faction, threats, act) {
     const priorities = ['bastion'];
     if (!colony.buildings.includes('shipyard')) priorities.push('shipyard');
     priorities.push(faction.techs.includes('cruisers') ? 'cruiser' : 'frigate');
-    buildAt(state, faction, colony, priorities, act);
+    buildAt(state, faction, colony, priorities, act, { emergency: true, replace: true });
   }
+}
+
+/** Roles use owned survey data and charted borders; hidden fleets never influence them. */
+function colonyRoles(state, faction, colonies) {
+  const roles = new Map(colonies.filter(system => system.charter).map(system => [system.id, system.charter.type]));
+  const available = () => colonies.filter(system => !roles.has(system.id));
+  const choose = (role, score) => {
+    const candidate = available().sort((a, b) => score(b) - score(a) || a.id.localeCompare(b.id))[0];
+    if (candidate) roles.set(candidate.id, role);
+  };
+  const frontier = system => getNeighbors(state, system.id).map(id => systemOf(state, id)).filter(other => other.knownBy.includes(faction.id) && other.owner && other.owner !== faction.id).length;
+  if (colonies.length >= 3 && ![...roles.values()].includes('forge')) choose('forge', system => getSystemYield(state, system).production + (system.buildings.includes('shipyard') ? 8 : 0) + frontier(system) * 3 + (system.id === faction.strategy?.rallyId ? 4 : 0));
+  if (available().length && ![...roles.values()].includes('extraction')) choose('extraction', system => system.richness * 5 - system.science + (system.buildings.includes('mine') ? 2 : 0));
+  if (available().length && ![...roles.values()].includes('academy')) choose('academy', system => system.science * 5 - system.richness + (system.buildings.includes('lab') ? 2 : 0));
+  if (colonies.length >= 4 && available().length && ![...roles.values()].includes('civic')) choose('civic', system => system.population * 2 + system.habitability / 20 + (system.buildings.includes('forum') ? 3 : 0));
+  for (const system of available()) {
+    const roleCounts = role => [...roles.values()].filter(value => value === role).length;
+    const candidates = [
+      ['extraction', system.richness * 2.4 - roleCounts('extraction') * 3],
+      ['academy', system.science * 2.8 + (faction.id === 'choir' ? 3 : 0) - roleCounts('academy') * 3],
+      ['civic', system.population + (faction.id === 'veyr' ? 2 : 0) - roleCounts('civic') * 4],
+    ].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    roles.set(system.id, candidates[0][0]);
+  }
+  return roles;
+}
+
+function beaconConstruction(state, faction, colonies, roles, act) {
+  if (!faction.techs.includes('singularity')) return;
+  const committed = () => colonies.filter(system => system.buildings.includes('beacon') || system.queue?.itemId === 'beacon').length;
+  const score = system => {
+    const output = getSystemYield(state, system);
+    const approaches = getNeighbors(state, system.id).map(id => systemOf(state, id));
+    const hostileBorder = approaches.filter(other => other.knownBy.includes(faction.id) && war(faction, other.owner)).length;
+    return output.production * 5 + Math.min(output.defense, 90) * .2 + friendlyStrength(state, faction, system.id) * .1 - hostileBorder * 18;
+  };
+  const hosts = colonies.filter(system => !system.queue && !system.buildings.includes('beacon') && enemyStrength(state, faction, system.id) === 0).sort((a, b) => score(b) - score(a) || a.id.localeCompare(b.id));
+  for (const host of hosts) {
+    const funding = { ...BUILDINGS.beacon.cost, credits: BUILDINGS.beacon.cost.credits + (faction.alignment?.active ? ALIGNMENT_RULES.cost : 0) };
+    if (committed() >= 3 || faction.orders < 1 || !canPay(faction, funding)) break;
+    buildAt(state, faction, host, ['beacon'], act, { role: roles.get(host.id), replace: true });
+  }
+}
+
+/**
+ * Automatic alignment can repeatedly spend the last 60 credits before an
+ * empire saves for a permanent income fix. Revenue projects may use that
+ * payment, at normal prices, to escape the loop. Housing can temporarily
+ * replace a market, then new population opens room to restore the market.
+ */
+function recoverAlignmentIncome(state, faction, system, role, act) {
+  const options = { role, replace: true, incomeRecovery: true };
+  if (buildAt(state, faction, system, ['market'], act, options)) return;
+  if (!system.charter || system.charter.type === 'civic') {
+    const civic = getDevelopmentOptions(state, system.id, faction.id).find(option => option.charterType === 'civic');
+    if (civic?.enabled && canPay(faction, civic.cost) && act({ type: 'develop', systemId: system.id, charterType: 'civic' }).ok) return;
+  }
+  if (system.population >= getSystemYield(state, system).capacity - 1 && !system.buildings.includes('habitat')) {
+    if (buildAt(state, faction, system, ['habitat'], act, options)) return;
+  }
+  buildAt(state, faction, system, ['forum'], act, options);
 }
 
 function economicTurn(state, faction, act) {
   const colonies = state.systems.filter(system => system.owner === faction.id);
+  const roles = colonyRoles(state, faction, colonies);
+  beaconConstruction(state, faction, colonies, roles, act);
   const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
   const expansion = getVisibleSystems(state, faction.id).some(system => !system.owner && surveyed(system, faction) && system.habitability >= minimum);
   const atAnyWar = Object.values(faction.relations).some(relation => relation.status === 'war');
-  for (const system of colonies.filter(s => !s.queue)) {
+  for (const system of colonies.filter(s => !s.queue).sort((a, b) => getSystemYield(state, b).production - getSystemYield(state, a).production || a.id.localeCompare(b.id))) {
     if (faction.orders < 1 || state.winner) break;
     const stats = getEmpireStats(state, faction.id), fleets = ownFleets(state, faction);
+    const role = roles.get(system.id), support = CHARTERS[role].support;
+    if (needsAlignmentIncome(state, faction)) {
+      recoverAlignmentIncome(state, faction, system, role, act);
+      continue;
+    }
     const settling = fleets.filter(f => f.type === 'colony').length + colonies.filter(s => s.queue?.itemId === 'colony').length;
     const queuedMilitary = colonies.reduce((power, s) => power + (s.queue?.kind === 'ship' ? SHIPS[s.queue.itemId]?.attack || 0 : 0), 0);
-    const desiredMilitary = (faction.id === 'khar' ? 26 : 12) * colonies.length + (atAnyWar ? 50 : 0);
+    const desiredMilitary = (faction.id === 'khar' ? 26 : 12) * colonies.length + (atAnyWar ? 50 : 0) + (faction.alignment?.active ? 36 : 0);
     const priorities = [];
-    if (faction.techs.includes('singularity') && stats.beacons < 3 && faction.minerals > 220) priorities.push('beacon');
-    if (faction.credits < 60 || stats.creditIncome < 4) priorities.push('market');
-    if (stats.mineralIncome < colonies.length * 6) priorities.push('mine');
+    const incomeFloor = faction.alignment?.active || stats.beacons >= 3 ? 65 : 4;
+    const hull = faction.techs.includes('cruisers') ? 'cruiser' : 'frigate';
+    const needsMilitary = stats.military + queuedMilitary < desiredMilitary && stats.creditIncome >= SHIPS[hull].upkeep + incomeFloor;
+    if (stats.creditIncome < incomeFloor) priorities.push('market');
+    if (stats.mineralIncome < colonies.length * 4 && (role === 'extraction' || !getInfrastructure(state, system).used)) priorities.push('mine');
+    if (role === 'forge' && !system.buildings.includes('shipyard')) priorities.push('shipyard');
+    if (atAnyWar && needsMilitary) priorities.push(hull);
     if (expansion && settling < Math.min(2, Math.ceil(colonies.length / 3)) && faction.minerals > 70 && faction.credits > 65) priorities.push('colony');
     if (!fleets.some(f => f.type === 'scout') && !colonies.some(s => s.queue?.itemId === 'scout')) priorities.push('scout');
-    if (stats.military + queuedMilitary < desiredMilitary) priorities.push(faction.techs.includes('cruisers') ? 'cruiser' : 'frigate');
-    priorities.push('factory', 'lab', 'market', 'mine', 'forum', 'habitat');
-    if (colonies.length > 2 && !system.buildings.includes('shipyard') && system.richness >= 3) priorities.push('shipyard');
-    if (atAnyWar) priorities.push('bastion');
-    buildAt(state, faction, system, priorities, act);
+    // New hulls need both construction funding and an affordable future crew.
+    if (needsMilitary) priorities.push(hull);
+    if (buildAt(state, faction, system, priorities, act, { role, replace: true })) continue;
+
+    if (system.buildings.includes(support)) {
+      const development = getDevelopmentOptions(state, system.id, faction.id).find(option => option.charterType === role);
+      // Level II is a mature investment; cash-poor empires still need working capital.
+      if (development?.enabled && canSpend(state, faction, development.cost) && faction.credits - development.cost.credits >= Math.max(resourceReserve(state, faction).credits, development.level === 2 ? 100 : 45) && stats.creditIncome >= 0 && stats.mineralIncome >= colonies.length * 3) {
+        if (act({ type: 'develop', systemId: system.id, charterType: role }).ok) continue;
+      }
+    }
+    const specialization = [support];
+    if (role === 'forge') specialization.push('shipyard');
+    if (system.population >= getSystemYield(state, system).capacity - 1) specialization.push('habitat');
+    // Fill spare capacity with role-specific complements. Never cycle through
+    // all buildings or repeatedly replace one discretionary complement with another.
+    const complements = role === 'extraction' ? ['market', 'factory'] : role === 'academy' ? ['market', 'habitat'] : role === 'forge' ? ['mine', 'bastion'] : ['market', 'lab'];
+    if (buildAt(state, faction, system, specialization, act, { role, replace: !system.buildings.includes(support) })) continue;
+    buildAt(state, faction, system, complements, act, { role });
   }
 }
 
@@ -302,19 +491,26 @@ export function runAI(state, faction) {
   if (!faction || faction.eliminated || state.winner) return;
   const id = faction.id;
   const act = action => command(state, { ...action, factionId: id });
+  const ordinaryAct = action => canSpend(state, faction, actionCost(state, faction, action)) ? act(action) : { ok: false, message: 'Resources committed to the ancient network.' };
   if (!faction.research) {
     const priorities = id === 'khar' ? ['weapons', 'logistics', 'shields', 'cruisers', 'industry', 'physics', 'ecology', 'computing', 'singularity', 'diplomacy', 'command', 'terraforming'] : id === 'choir' ? ['physics', 'logistics', 'computing', 'industry', 'singularity', 'ecology', 'weapons', 'diplomacy', 'shields', 'command', 'cruisers', 'terraforming'] : ['logistics', 'ecology', 'diplomacy', 'industry', 'physics', 'computing', 'weapons', 'singularity', 'command', 'shields', 'cruisers', 'terraforming'];
+    if (needsAlignmentIncome(state, faction)) priorities.unshift('ecology', 'logistics', 'diplomacy', 'industry');
     const options = getResearchOptions(state, id);
     const techId = priorities.find(tech => options.some(option => option.id === tech && option.enabled));
     if (techId) act({ type: 'research', techId });
   }
+  const intervention = threatsToColonies(state, faction).length ? null : raceIntervention(state, faction, true);
+  if (intervention && !war(faction, intervention.race.factionId)) {
+    act({ type: 'diplomacy', targetId: intervention.race.factionId, stance: 'war', reason: `An expedition can reach ${intervention.site.name} before its public Asterion alignment completes.` });
+  }
   for (const proposal of getDiplomaticIntent(state, id)) {
     if (faction.orders < 2) break;
-    act(proposal);
+    if (proposal.stance === 'peace' && intervention?.race.factionId === proposal.targetId) continue;
+    ordinaryAct(proposal);
   }
-  const threats = militaryTurn(state, faction, act);
+  const threats = militaryTurn(state, faction, act, ordinaryAct);
   emergencyConstruction(state, faction, threats, act);
-  civilianTurn(state, faction, act);
-  anomalyTurn(state, faction, act);
+  civilianTurn(state, faction, ordinaryAct);
+  anomalyTurn(state, faction, ordinaryAct);
   economicTurn(state, faction, act);
 }

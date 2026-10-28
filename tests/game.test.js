@@ -219,6 +219,10 @@ test('victory objectives are actionable and a concluded campaign rejects command
   assert.equal(getVictoryProgress(state).transcendence.target, 3);
   for (const system of state.systems.slice(0, 3)) { system.owner = 'player'; system.buildings.push('beacon'); }
   command(state, { type: 'research', techId: 'physics' });
+  assert.equal(state.winner, null, 'three beacons alone no longer trigger immediate transcendence');
+  player(state).techs.push('singularity');
+  player(state).alignment = { progress: 10, sites: ['s0', 's1', 's2'], active: true, started: true, reportedBeacons: ['s0', 's1', 's2'] };
+  command(state, { type: 'research', techId: 'logistics' });
   assert.equal(state.winner, 'player');
   assert.equal(state.victoryType, 'Transcendence');
   const before = structuredClone(state);
@@ -262,4 +266,55 @@ test('JSON saves resume deterministically and malformed saves are rejected', () 
   const prototypeTech = structuredClone(restored);
   prototypeTech.factions[0].techs.push('__proto__');
   assert.equal(validateSave(prototypeTech), false);
+});
+
+function simultaneousAlignment(seed, equalScores = false) {
+  const state = createGame(seed);
+  state.lanes = [];
+  for (const id of ['player', 'veyr']) {
+    const faction = state.factions.find(f => f.id === id);
+    faction.techs = ['singularity']; faction.credits = 10000; faction.minerals = 0;
+    faction.orders = 0; faction.research = { techId: 'physics', progress: 0 };
+    const sites = id === 'player' ? ['s0', 's4', 's5'] : ['s1', 's6', 's7'];
+    for (const site of sites) {
+      const system = state.systems.find(s => s.id === site);
+      Object.assign(system, { owner: id, population: 8, habitability: 90, buildings: ['mine', 'shipyard', 'beacon'], knownBy: [id], exploredBy: [id], anomaly: null });
+    }
+    faction.alignment = { progress: 9, sites, active: true, started: true, reportedBeacons: sites };
+  }
+  for (const faction of state.factions) faction.orders = 0;
+  if (!equalScores) player(state).techs.push('logistics', 'industry', 'computing', 'shields');
+  return state;
+}
+
+test('simultaneous alignment finishes use Legacy score after all factions resolve, independent of faction array order', () => {
+  const first = simultaneousAlignment('alignment-tie'), reordered = structuredClone(first);
+  assert.equal(getEmpireStats(first, 'player').score, 411);
+  assert.equal(getEmpireStats(first, 'veyr').score, 363);
+  reordered.factions.reverse();
+  endTurn(first); endTurn(reordered);
+  for (const state of [first, reordered]) {
+    assert.equal(state.factions.find(f => f.id === 'player').alignment.progress, 10);
+    assert.equal(state.factions.find(f => f.id === 'veyr').alignment.progress, 10);
+    assert.equal(state.winner, 'player');
+    assert.equal(state.victoryType, 'Transcendence');
+    assert.ok(validateSave(state));
+  }
+});
+
+test('exact-score alignment ties use a deterministic seeded draw without consuming combat RNG', () => {
+  const seedHash = seed => { let hash = 2166136261; for (const char of seed) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619); return hash >>> 0; };
+  const winners = new Set();
+  for (const seed of ['tied-race-A', 'tied-race-B', 'tied-race-C', 'tied-race-D']) {
+    const state = simultaneousAlignment(seed, true), restored = JSON.parse(JSON.stringify(state));
+    const rng = state.rng;
+    restored.factions = [restored.factions[1], restored.factions[3], restored.factions[0], restored.factions[2]];
+    assert.equal(getEmpireStats(state, 'player').score, getEmpireStats(state, 'veyr').score);
+    const expected = ['player', 'veyr'].sort((a, b) => seedHash(`${seed}:victory:2:${b}`) - seedHash(`${seed}:victory:2:${a}`) || a.localeCompare(b))[0];
+    endTurn(state); endTurn(restored);
+    assert.equal(state.winner, expected); assert.equal(restored.winner, expected);
+    assert.equal(state.rng, rng); assert.equal(restored.rng, rng);
+    winners.add(state.winner);
+  }
+  assert.equal(winners.size, 2, 'the seeded draw does not always favor a fixed faction');
 });

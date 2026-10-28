@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { FACTIONS, PLANET_TYPES, SHIPS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
+import { getPublicRaces } from './victory.js';
 import './galaxy.css';
 
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -308,6 +309,7 @@ export class GalaxyView {
     this.selectedSystemId = selectedSystemId;
     this.selectedFleetId = selectedFleetId;
     this.systemsById = new Map(state.systems.map(s => [s.id, s]));
+    this.publicBeaconIds = new Set(getPublicRaces(state).flatMap(race => race.sites.map(site => site.id)));
     if (galaxyChanged) this.setBounds(state);
     this.clearGroup(this.dynamicGroup);
     this.labelLayer.replaceChildren();
@@ -356,7 +358,7 @@ export class GalaxyView {
   }
 
   buildStar(system, position, charted, surveyed, selected, reachable) {
-    const owner = surveyed || system.owner === 'player' ? system.owner : null;
+    const owner = charted ? system.owner : null;
     const color = owner ? ownedColor(owner) : surveyed ? PLANET_TYPES[system.type]?.color || '#e4d6bd' : '#c4d3e5';
     const star = new THREE.Sprite(new THREE.SpriteMaterial({ map: this.glow, color, transparent: true, opacity: charted ? 1 : .22, blending: THREE.AdditiveBlending, depthWrite: false }));
     star.position.copy(position); star.position.z = 1;
@@ -397,6 +399,11 @@ export class GalaxyView {
       marker.position.set(position.x - this.unit * 2.5, position.y + this.unit * 2.5, 2);
       this.dynamicGroup.add(marker);
     }
+    if (this.publicBeaconIds.has(system.id)) {
+      const beacon = circle(this.unit * 4.3, '#e5c88c', .65, 6);
+      beacon.position.copy(position); beacon.position.z = 1;
+      this.dynamicGroup.add(beacon);
+    }
   }
 
   buildLabel(system, position, surveyed, selected, reachable) {
@@ -404,18 +411,20 @@ export class GalaxyView {
     element.type = 'button';
     element.className = `galaxy-system-label${selected ? ' is-selected' : ''}${system.owner === 'player' ? ' is-owned' : ''}${!surveyed ? ' is-unsurveyed' : ''}${reachable ? ' is-reachable' : ''}`;
     element.dataset.systemId = system.id;
-    element.style.setProperty('--system-color', surveyed && system.owner ? ownedColor(system.owner) : '#bac8d9');
+    element.style.setProperty('--system-color', system.owner ? ownedColor(system.owner) : '#bac8d9');
     element.setAttribute('aria-pressed', String(selected));
     const name = document.createElement('span'); name.className = 'galaxy-system-name'; name.textContent = system.name;
     element.append(name);
     const status = document.createElement('small'); status.className = 'galaxy-system-status';
-    status.textContent = !surveyed ? 'UNSURVEYED' : system.owner ? FACTIONS[system.owner]?.shortName?.toUpperCase() || 'COLONY' : system.anomaly && !system.anomaly.resolved ? '◇ ANOMALY' : PLANET_TYPES[system.type]?.name?.toUpperCase() || 'SURVEYED';
+    const beacon = this.publicBeaconIds.has(system.id);
+    status.textContent = beacon ? `✦ ${FACTIONS[system.owner]?.shortName?.toUpperCase() || 'RESTORED'} BEACON` : system.owner ? FACTIONS[system.owner]?.shortName?.toUpperCase() || 'COLONY' : !surveyed ? 'UNSURVEYED' : system.anomaly && !system.anomaly.resolved ? '◇ ANOMALY' : PLANET_TYPES[system.type]?.name?.toUpperCase() || 'SURVEYED';
+    if (beacon) element.classList.add('is-beacon');
     element.append(status);
     element.setAttribute('aria-label', `${system.name}, ${status.textContent.toLowerCase()}${reachable ? ', adjacent to selected fleet' : ''}`);
     element.addEventListener('click', event => { event.stopPropagation(); this.onSelect(system.id); });
     element.addEventListener('dblclick', event => { event.stopPropagation(); this.focus(system.id); });
     this.labelLayer.append(element);
-    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : system.owner === 'player' ? 80 : 40 });
+    this.labels.push({ element, position, kind: 'system', systemId: system.id, offsetX: 0, offsetY: 16, priority: selected ? 100 : beacon ? 85 : system.owner === 'player' ? 80 : 40 });
   }
 
   buildFleetLabels(state) {

@@ -20,14 +20,14 @@ export const TECHS = {
   ecology: { id: 'ecology', name: 'Adaptive Biospheres', category: 'Society', cost: 60, requires: [], description: 'Colonize harsh worlds with 30% habitability. Unlocks Habitation Domes.' },
   physics: { id: 'physics', name: 'Resonance Theory', category: 'Physics', cost: 60, requires: [], description: '+2 science per colony. The first step toward understanding the gates.' },
   weapons: { id: 'weapons', name: 'Coherent Lances', category: 'Military', cost: 70, requires: [], description: 'All warships deal 25% more damage.' },
-  industry: { id: 'industry', name: 'Autonomous Industry', category: 'Engineering', cost: 110, requires: ['logistics'], description: 'Unlocks Manufactories, which add 6 production per turn.' },
-  diplomacy: { id: 'diplomacy', name: 'Stellar Accords', category: 'Society', cost: 100, requires: ['ecology'], description: 'Trade treaties earn +4 additional credits each turn. Unlocks Civic Forums.' },
-  shields: { id: 'shields', name: 'Deflector Fields', category: 'Military', cost: 120, requires: ['physics'], description: 'Incoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.' },
-  cruisers: { id: 'cruisers', name: 'Capital Ship Architecture', category: 'Military', cost: 150, requires: ['logistics', 'weapons'], description: 'Unlocks heavily armed cruisers.' },
-  terraforming: { id: 'terraforming', name: 'Worldshaping', category: 'Society', cost: 180, requires: ['ecology', 'industry'], description: 'Colonize any world. All colonies grow 50% faster.' },
-  computing: { id: 'computing', name: 'Quantum Archives', category: 'Physics', cost: 150, requires: ['physics'], description: 'Laboratories produce +4 science. Unlocks the final gate technology.' },
-  command: { id: 'command', name: 'Distributed Command', category: 'Engineering', cost: 180, requires: ['logistics', 'diplomacy'], description: '+2 orders each turn. Warships gain one additional move per turn.' },
-  singularity: { id: 'singularity', name: 'The Asterion Protocol', category: 'Physics', cost: 320, requires: ['computing', 'industry'], description: 'Unlocks Asterion Beacons. Connect three beacons to achieve transcendence.' },
+  industry: { id: 'industry', name: 'Autonomous Industry', category: 'Engineering', cost: 220, requires: ['logistics'], description: 'Unlocks Manufactories, which add 6 production per turn.' },
+  diplomacy: { id: 'diplomacy', name: 'Stellar Accords', category: 'Society', cost: 180, requires: ['ecology'], description: 'Trade treaties earn +4 additional credits each turn. Unlocks Civic Forums.' },
+  shields: { id: 'shields', name: 'Deflector Fields', category: 'Military', cost: 220, requires: ['physics'], description: 'Incoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.' },
+  cruisers: { id: 'cruisers', name: 'Capital Ship Architecture', category: 'Military', cost: 360, requires: ['logistics', 'weapons'], description: 'Unlocks heavily armed cruisers.' },
+  terraforming: { id: 'terraforming', name: 'Worldshaping', category: 'Society', cost: 600, requires: ['ecology', 'industry'], description: 'Colonize any world. All colonies grow 50% faster.' },
+  computing: { id: 'computing', name: 'Quantum Archives', category: 'Physics', cost: 360, requires: ['physics'], description: 'Laboratories produce +4 science. Unlocks the final gate technology.' },
+  command: { id: 'command', name: 'Distributed Command', category: 'Engineering', cost: 500, requires: ['logistics', 'diplomacy'], description: '+2 orders each turn. Warships gain one additional move per turn.' },
+  singularity: { id: 'singularity', name: 'The Asterion Protocol', category: 'Physics', cost: 1000, requires: ['computing', 'industry'], description: 'Unlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.' },
 };
 
 export const BUILDINGS = {
@@ -39,7 +39,7 @@ export const BUILDINGS = {
   factory: { id: 'factory', name: 'Manufactory', icon: '▥', cost: { credits: 35, minerals: 45 }, work: 40, requires: ['industry'], description: '+6 construction production each turn.', production: 6 },
   forum: { id: 'forum', name: 'Civic Forum', icon: '⌂', cost: { credits: 50, minerals: 30 }, work: 40, requires: ['diplomacy'], description: '+1 order each turn and +3 credits.', credits: 3, orders: 1 },
   bastion: { id: 'bastion', name: 'Orbital Bastion', icon: '⛨', cost: { credits: 45, minerals: 60 }, work: 50, requires: ['shields'], description: '+30 colony defense. Invading fleets suffer retaliatory fire.', defense: 30 },
-  beacon: { id: 'beacon', name: 'Asterion Beacon', icon: '✦', cost: { credits: 180, minerals: 180 }, work: 140, requires: ['singularity'], description: 'Restore one node of the ancient network. Three beacons win a transcendence victory.' },
+  beacon: { id: 'beacon', name: 'Asterion Beacon', icon: '✦', cost: { credits: 180, minerals: 180 }, work: 140, requires: ['singularity'], description: 'A public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.' },
 };
 
 export const SHIPS = {

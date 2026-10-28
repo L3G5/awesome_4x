@@ -33,3 +33,4 @@
 .galaxy-fallback-notice { position: absolute; left: 16px; right: 16px; top: 12px; z-index: 10; margin: 0; padding: 9px 12px; border: 1px solid #8e743c; border-radius: 4px; background: #282417ee; color: #e9cd91; font-size: 11px; line-height: 1.5; }
 @media (max-width: 720px) { .galaxy-system-name { font-size: 10px; } .galaxy-system-status { font-size: 7px; } .galaxy-sector-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .galaxy-system-label, .galaxy-fleet { transition: none; } }
+.galaxy-system-label.is-beacon .galaxy-system-status{color:#e1c38a}.galaxy-system-label.is-beacon .galaxy-system-name{color:#eddfbf}

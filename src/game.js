@@ -3,8 +3,11 @@ import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { runAI } from './ai.js';
 import { executeDiplomacy, advanceDiplomacy, validateDiplomacyState } from './diplomacy.js';
 import { captureParticipant, finishParticipant, appendCombatReport, finalizeBriefing, summarizeCombatReports, validateReportState } from './reports.js';
+import { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getConstructionCost, validateDevelopmentSystem } from './development.js';
+import { getAlignmentStatus, advanceAlignment, revealPublicBeacons, validateAlignmentState } from './victory.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
+export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject } from './development.js';
 
 export const SAVE_VERSION = 1;
 export const LAST_TURN = 120;
@@ -48,6 +51,7 @@ function meet(state, firstId, secondId) {
     a.contacts.push(secondId);
     b.contacts.push(firstId);
     if ([firstId, secondId].includes('player')) record(state, `First contact: ${firstId === 'player' ? b.name : a.name}. A diplomatic channel is open.`, 'diplomacy', null, { targetId: firstId === 'player' ? secondId : firstId });
+    revealPublicBeacons(state);
   }
 }
 
@@ -141,11 +145,12 @@ export function getSystemYield(state, system) {
   if (!faction) return { credits: 0, minerals: 0, science: 0, production: 0, growth: 0, capacity: 0, defense: 0 };
   const built = system.buildings.map(id => BUILDINGS[id]);
   const sum = key => built.reduce((total, building) => total + (building[key] || 0), 0);
+  const charter = getCharterBonuses(system);
   return {
-    credits: 3 + system.population * 2 + sum('credits'),
-    minerals: system.richness + Math.floor(system.population / 3) + sum('minerals'),
-    science: system.science + Math.floor(system.population / 2) + sum('science') + (has(faction, 'physics') ? 2 : 0) + (has(faction, 'computing') && system.buildings.includes('lab') ? 4 : 0),
-    production: 4 + system.population + sum('production'),
+    credits: 3 + system.population * 2 + sum('credits') + charter.credits,
+    minerals: system.richness + Math.floor(system.population / 3) + sum('minerals') + charter.minerals,
+    science: system.science + Math.floor(system.population / 2) + sum('science') + (has(faction, 'physics') ? 2 : 0) + (has(faction, 'computing') && system.buildings.includes('lab') ? 4 : 0) + charter.science,
+    production: 4 + system.population + sum('production') + charter.production,
     growth: Math.max(.08, system.habitability / 240) * (system.buildings.includes('habitat') ? 1.4 : 1) * (has(faction, 'terraforming') ? 1.5 : 1),
     capacity: 5 + Math.floor(system.habitability / 25) + (system.buildings.includes('habitat') ? 4 : 0),
     defense: Math.max(0, 12 + system.population * 3 + sum('defense') + (system.originalOwner ? 15 : 0) - system.defenseDamage),
@@ -161,7 +166,7 @@ export function getEmpireStats(state, factionId = 'player') {
   const upkeep = fleets.reduce((total, f) => total + SHIPS[f.type].upkeep * f.ships, 0);
   const tradeIncome = Object.values(faction.relations).filter(r => r.trade).length * (has(faction, 'diplomacy') ? 10 : 6);
   const creditIncome = Math.floor(sum('credits') * (factionId === 'veyr' ? 1.25 : 1)) + tradeIncome - upkeep;
-  const maxOrders = Math.min(18, 4 + colonies.length + (factionId === 'player' ? 1 : 0) + (has(faction, 'logistics') ? 1 : 0) + (has(faction, 'command') ? 2 : 0) + colonies.filter(s => s.buildings.includes('forum')).length);
+  const maxOrders = Math.min(18, 4 + colonies.length + (factionId === 'player' ? 1 : 0) + (has(faction, 'logistics') ? 1 : 0) + (has(faction, 'command') ? 2 : 0) + colonies.filter(s => s.buildings.includes('forum')).length + colonies.reduce((sum, system) => sum + getCharterBonuses(system).orders, 0));
   const population = colonies.reduce((total, s) => total + s.population, 0);
   const military = fleets.reduce((total, f) => total + fleetPower(state, f), 0);
   const beacons = colonies.filter(s => s.buildings.includes('beacon')).length;
@@ -179,24 +184,28 @@ export function getResearchOptions(state, factionId = 'player') {
   });
 }
 
-export function getBuildOptions(state, systemId, factionId = 'player') {
+export function getBuildOptions(state, systemId, factionId = 'player', replaceBuildingId = null) {
   const system = systemOf(state, systemId), faction = factionOf(state, factionId);
   return [...Object.values(BUILDINGS).map(item => ({ ...item, kind: 'building' })), ...Object.values(SHIPS).map(item => ({ ...item, kind: 'ship' }))].map(item => {
+    const cost = getConstructionCost(system, item, item.kind);
     let reason = '';
     if (!system || system.owner !== factionId) reason = 'Requires an owned colony';
     else if (system.queue) reason = 'Construction already in progress';
     else if (item.kind === 'building' && system.buildings.includes(item.id)) reason = 'Already built';
+    else if (replaceBuildingId !== null && (item.kind !== 'building' || !system.buildings.includes(replaceBuildingId) || replaceBuildingId === item.id)) reason = 'Choose an existing building to replace with new infrastructure';
+    else if (item.kind === 'building' && getInfrastructure(state, system).available === 0 && replaceBuildingId === null) reason = 'Infrastructure slots are full. Choose a building to replace';
     else if (item.requires.some(id => !has(faction, id))) reason = `Requires ${item.requires.filter(id => !has(faction, id)).map(id => TECHS[id].name).join(' and ')}`;
     else if (item.kind === 'ship' && !system.buildings.includes('shipyard')) reason = 'Requires an Orbital Shipyard';
-    else if (!canPay(faction, item.cost)) reason = 'Insufficient credits or minerals';
+    else if (!canPay(faction, cost)) reason = 'Insufficient credits or minerals';
     else if (faction.orders < 1) reason = 'No orders remaining';
-    return { ...item, enabled: !reason, reason, turns: system?.owner ? Math.ceil(item.work / getSystemYield(state, system).production) : 0 };
+    return { ...item, cost, replaceBuildingId: item.kind === 'building' ? replaceBuildingId : null, enabled: !reason, reason, turns: system?.owner ? Math.ceil(item.work / getSystemYield(state, system).production) : 0 };
   });
 }
 
 export function getVictoryProgress(state, factionId = 'player') {
   const faction = factionOf(state, factionId), stats = getEmpireStats(state, factionId);
-  return { transcendence: { current: stats.beacons, target: 3, unlocked: has(faction, 'singularity') }, domination: { current: state.systems.filter(s => s.originalOwner && s.owner === factionId).length, target: 4 }, legacy: { score: stats.score, turn: state.turn, finalTurn: LAST_TURN } };
+  const alignment = getAlignmentStatus(state, factionId);
+  return { transcendence: { current: stats.beacons, target: 3, unlocked: has(faction, 'singularity'), alignment: alignment.progress, alignmentTarget: alignment.target, cost: alignment.cost, ready: alignment.ready, reason: alignment.reason, sites: alignment.sites }, domination: { current: state.systems.filter(s => s.originalOwner && s.owner === factionId).length, target: 4 }, legacy: { score: stats.score, turn: state.turn, finalTurn: LAST_TURN } };
 }
 
 export function fleetPower(state, fleet) {
@@ -343,11 +352,21 @@ export function command(state, action) {
     }
     case 'build': {
       if (!system) return fail('Select a colony.');
-      const option = getBuildOptions(state, system.id, factionId).find(item => item.id === action.itemId);
+      const option = getBuildOptions(state, system.id, factionId, action.replaceBuildingId ?? null).find(item => item.id === action.itemId);
       if (!option) return fail('Unknown construction project.');
       if (!option.enabled) return fail(option.reason);
       pay(faction, option.cost); faction.orders--;
       system.queue = { itemId: option.id, kind: option.kind, progress: 0, work: option.work, cost: { ...option.cost } };
+      if (option.replaceBuildingId) system.queue.replaceBuildingId = option.replaceBuildingId;
+      result = success(`${option.name} commissioned at ${system.name}.`); break;
+    }
+    case 'develop': {
+      if (!system) return fail('Select a colony.');
+      const option = getDevelopmentOptions(state, system.id, factionId).find(charter => charter.charterType === action.charterType);
+      if (!option) return fail('Unknown colonial charter.');
+      if (!option.enabled) return fail(option.reason);
+      pay(faction, option.cost); faction.orders--;
+      system.queue = { itemId: option.charterType, kind: 'charter', charterType: option.charterType, charterLevel: option.level, progress: 0, work: option.work, cost: { ...option.cost } };
       result = success(`${option.name} commissioned at ${system.name}.`); break;
     }
     case 'cancelBuild': {
@@ -448,11 +467,17 @@ export function command(state, action) {
 
 export function availableActions(state, context = {}) {
   const factionId = context.factionId || 'player';
-  return { build: context.systemId ? getBuildOptions(state, context.systemId, factionId) : [], research: getResearchOptions(state, factionId), neighbors: context.fleetId && fleetOf(state, context.fleetId) ? getNeighbors(state, fleetOf(state, context.fleetId).systemId) : [] };
+  return { build: context.systemId ? getBuildOptions(state, context.systemId, factionId, context.replaceBuildingId ?? null) : [], development: context.systemId ? getDevelopmentOptions(state, context.systemId, factionId) : [], research: getResearchOptions(state, factionId), neighbors: context.fleetId && fleetOf(state, context.fleetId) ? getNeighbors(state, fleetOf(state, context.fleetId).systemId) : [] };
 }
 
 function checkVictory(state) {
   if (state.winner) return;
+  const qualifiers = [];
+  // A shared resolution phase can finish several alignments. Rank all of its
+  // qualifiers after eliminations, never by their position in factions[].
+  const compareFinish = (first, second) => getEmpireStats(state, second.id).score - getEmpireStats(state, first.id).score
+    || hashSeed(`${state.seed}:victory:${state.turn}:${second.id}`) - hashSeed(`${state.seed}:victory:${state.turn}:${first.id}`)
+    || first.id.localeCompare(second.id);
   for (const faction of state.factions) {
     const colonies = state.systems.filter(s => s.owner === faction.id);
     const arks = state.fleets.some(f => f.owner === faction.id && f.type === 'colony');
@@ -465,14 +490,20 @@ function checkVictory(state) {
     if (colonies.length && !colonies.some(s => s.id === faction.capitalId)) faction.capitalId = colonies[0].id;
     const beacons = colonies.filter(s => s.buildings.includes('beacon')).length;
     const capitals = colonies.filter(s => s.originalOwner).length;
-    if (beacons >= 3 || capitals === 4) { state.winner = faction.id; state.victoryType = beacons >= 3 ? 'Transcendence' : 'Domination'; }
+    const transcendent = has(faction, 'singularity') && beacons >= 3 && (faction.alignment?.progress || 0) >= 10;
+    if (transcendent || capitals === 4) qualifiers.push({ faction, victoryType: transcendent ? 'Transcendence' : 'Domination' });
+  }
+  if (qualifiers.length) {
+    qualifiers.sort((first, second) => compareFinish(first.faction, second.faction));
+    state.winner = qualifiers[0].faction.id;
+    state.victoryType = qualifiers[0].victoryType;
   }
   if (!state.winner && state.turn >= LAST_TURN) {
-    const candidates = state.factions.filter(f => !f.eliminated).sort((a, b) => getEmpireStats(state, b.id).score - getEmpireStats(state, a.id).score);
+    const candidates = state.factions.filter(f => !f.eliminated).sort(compareFinish);
     if (candidates.length) { state.winner = candidates[0].id; state.victoryType = 'Legacy'; }
   }
   if (factionOf(state, 'player').eliminated && !state.winner) {
-    state.winner = [...state.factions].filter(f => !f.eliminated).sort((a, b) => getEmpireStats(state, b.id).score - getEmpireStats(state, a.id).score)[0]?.id || 'none';
+    state.winner = [...state.factions].filter(f => !f.eliminated).sort(compareFinish)[0]?.id || 'none';
     state.victoryType = 'Concord defeated';
   }
   if (state.winner) record(state, `${FACTIONS[state.winner]?.name || 'The galaxy'} achieves ${state.victoryType.toLowerCase()}. The chronicle of this age is complete.`, 'victory');
@@ -505,10 +536,17 @@ export function endTurn(state) {
     if (system.queue) {
       system.queue.progress += output.production;
       if (system.queue.progress >= system.queue.work) {
-        const item = system.queue.kind === 'ship' ? SHIPS[system.queue.itemId] : BUILDINGS[system.queue.itemId];
+        const item = getConstructionProject(system.queue);
         if (system.queue.kind === 'ship') makeFleet(state, system.owner, system.id, item.id);
-        else system.buildings.push(item.id);
-        record(state, `${system.name} completed ${item.name}.`, 'construction', system.owner, { systemId: system.id, itemId: item.id });
+        else if (system.queue.kind === 'charter') system.charter = { type: system.queue.charterType, level: system.queue.charterLevel };
+        else {
+          if (system.queue.replaceBuildingId) {
+            system.buildings = system.buildings.filter(id => id !== system.queue.replaceBuildingId);
+            if (system.charter && CHARTERS[system.charter.type].support === system.queue.replaceBuildingId) delete system.charter;
+          }
+          system.buildings.push(item.id);
+        }
+        record(state, `${system.name} completed ${item.name}.`, 'construction', system.owner, { systemId: system.id, ...(system.queue.kind === 'charter' ? {} : { itemId: item.id }) });
         system.queue = null;
       }
     }
@@ -517,9 +555,10 @@ export function endTurn(state) {
   for (const fleet of state.fleets) {
     const system = systemOf(state, fleet.systemId), faction = factionOf(state, fleet.owner);
     fleet.movesLeft = SHIPS[fleet.type].moves + (has(faction, 'command') && SHIPS[fleet.type].attack > 3 ? 1 : 0);
-    if (system.owner === fleet.owner && !getVisibleFleets(state, fleet.owner, system.id).some(f => atWar(state, fleet.owner, f.owner))) fleet.hp = Math.min(fleet.ships * SHIPS[fleet.type].hp, fleet.hp + (system.buildings.includes('shipyard') ? 8 : 4));
+    if (system.owner === fleet.owner && !getVisibleFleets(state, fleet.owner, system.id).some(f => atWar(state, fleet.owner, f.owner))) fleet.hp = Math.min(fleet.ships * SHIPS[fleet.type].hp, fleet.hp + (system.buildings.includes('shipyard') ? 8 : 4) + getCharterBonuses(system).repair);
   }
   for (const faction of state.factions) faction.orders = faction.eliminated ? 0 : getEmpireStats(state, faction.id).maxOrders;
+  advanceAlignment(state);
   checkVictory(state);
   finalizeBriefing(state, firstLogId, firstReportId);
   return success(`Turn ${state.turn}: a new mandate begins.`);
@@ -548,7 +587,7 @@ function isValidSave(value) {
   for (const system of value.systems) {
     if (!text(system.name) || !member(PLANET_TYPES, system.type) || !['x', 'y', 'habitability', 'richness', 'science', 'population', 'growth', 'defenseDamage'].every(key => Number.isFinite(system[key])) || system.habitability < 0 || system.habitability > 100 || system.population < 0 || system.growth < 0 || (system.owner !== null && !ids.includes(system.owner)) || (system.originalOwner !== null && !ids.includes(system.originalOwner)) || !Array.isArray(system.buildings) || system.buildings.some(id => !member(BUILDINGS, id)) || new Set(system.buildings).size !== system.buildings.length || !Array.isArray(system.knownBy) || !Array.isArray(system.exploredBy) || [...system.knownBy, ...system.exploredBy].some(id => !ids.includes(id))) return false;
     if (system.anomaly && (!member(ANOMALIES, system.anomaly.id) || typeof system.anomaly.resolved !== 'boolean')) return false;
-    if (system.queue && (!['building', 'ship'].includes(system.queue.kind) || !member(system.queue.kind === 'building' ? BUILDINGS : SHIPS, system.queue.itemId) || !Number.isFinite(system.queue.progress) || system.queue.progress < 0 || !Number.isFinite(system.queue.work) || system.queue.work <= 0 || system.queue.progress >= system.queue.work || !system.queue.cost || !Object.entries(system.queue.cost).every(([key, n]) => ['credits', 'minerals'].includes(key) && Number.isFinite(n) && n >= 0))) return false;
+    if (!validateDevelopmentSystem(system)) return false;
   }
   if (new Set(value.fleets.map(f => f.id)).size !== value.fleets.length) return false;
   for (const fleet of value.fleets) if (!/^f[1-9][0-9]*$/.test(fleet.id) || !member(SHIPS, fleet.type) || !ids.includes(fleet.owner) || !systemIds.has(fleet.systemId) || !Number.isInteger(fleet.ships) || fleet.ships < 1 || fleet.ships > 12 || !Number.isFinite(fleet.hp) || fleet.hp <= 0 || fleet.hp > SHIPS[fleet.type].hp * fleet.ships || !Number.isFinite(fleet.movesLeft) || fleet.movesLeft < 0 || !text(fleet.name)) return false;
@@ -556,5 +595,6 @@ function isValidSave(value) {
   if (value.log.some(entry => !Number.isInteger(entry.id) || !Number.isInteger(entry.turn) || !text(entry.type) || !text(entry.text))) return false;
   if (!validateDiplomacyState(value)) return false;
   if (!validateReportState(value)) return false;
+  if (!validateAlignmentState(value)) return false;
   return true;
 }

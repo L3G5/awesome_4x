@@ -210,6 +210,18 @@
             <div><h3>Production &amp; growth</h3><p>A colony produces 4 construction work plus its population each turn. A Manufactory adds 6 more. Habitability affects growth and population capacity. Habitation Domes add 4 capacity and improve growth by 40%.</p></div>
           </div>
           <p>Each colony builds <strong>one project at a time</strong>, and each improvement can be built once per colony. Costs are paid when you commission the project. Cancelling refunds the unused fraction of its credits and minerals; production already spent is not refunded.</p>
+          <h3>Make room for a purpose</h3>
+          <p>Every building, including a Beacon, occupies one infrastructure slot. Colonies have <strong>two slots</strong>, increasing to three at population 3, four at population 6, and five at population 9. Ships and charters do not occupy additional slots.</p>
+          <p>When slots are full, choose a building to replace in the construction dialog. The old building keeps working until its replacement finishes. Cancelling the project keeps the old building. Population loss never demolishes infrastructure, and existing campaigns retain buildings already above the new limit.</p>
+          <h3>Give a world a charter</h3>
+          <p>A colony may have one charter, with two levels. Establishing level I requires <strong>population 4, Deep-space Logistics, and the supporting building</strong>; it costs 120 credits, 60 minerals, 60 work, and one order. Upgrading to level II requires population 8 and Autonomous Industry, costing 300 credits, 100 minerals, 100 work, and one order.</p>
+          <div class="table-scroll" role="region" aria-label="Colony charters" tabindex="0"><table><caption>Benefits per charter level; the construction dialog shows this world’s exact values.</caption><thead><tr><th scope="col">Charter / support</th><th scope="col">Benefits per level</th></tr></thead><tbody>
+            <tr><th scope="row">Extraction / Orbital Extractor</th><td>Mineral income increases by 2 plus the world’s ore richness.</td></tr>
+            <tr><th scope="row">Academy / Research Enclave</th><td>Science income increases by 2 plus the world’s native science.</td></tr>
+            <tr><th scope="row">Forge / Manufactory</th><td>Production increases by 4 plus one per four population, rounded down. Military ship mineral costs fall by 10% per level, with the final price rounded up. Automatic orbital repair gains 2 hull per cycle.</td></tr>
+            <tr><th scope="row">Civic / Civic Forum</th><td>One additional empire order, within the 18-order limit, and 2 credits plus one per two population, rounded down.</td></tr>
+          </tbody></table></div>
+          <p>Switching specialties commissions a new level-I charter. Your existing charter works until the new one finishes, then its investment is replaced without a refund. Replacing its supporting building removes the charter when construction completes. Captured charters remain in place. Charters have no recurring upkeep.</p>
           <h3>Build for the next constraint</h3>
           <p>An Extractor is useful when minerals limit your expansion. An Exchange Port supports credit income. A Research Enclave produces science. An Orbital Shipyard enables local ship construction and doubles the speed of fleet repairs in orbit.</p>
           <details>
@@ -255,14 +267,14 @@
                   <tr><th scope="row">Adaptive Biospheres</th><td>60</td><td>No prerequisite. 30% colonization threshold; Habitation Domes.</td></tr>
                   <tr><th scope="row">Resonance Theory</th><td>60</td><td>No prerequisite. +2 science per colony.</td></tr>
                   <tr><th scope="row">Coherent Lances</th><td>70</td><td>No prerequisite. +25% warship damage.</td></tr>
-                  <tr><th scope="row">Autonomous Industry</th><td>110</td><td>Deep-space Logistics. Unlocks Manufactories.</td></tr>
-                  <tr><th scope="row">Stellar Accords</th><td>100</td><td>Adaptive Biospheres. +4 credits per trade treaty; Civic Forums.</td></tr>
-                  <tr><th scope="row">Deflector Fields</th><td>120</td><td>Resonance Theory. −20% incoming fleet damage; Orbital Bastions.</td></tr>
-                  <tr><th scope="row">Capital Ship Architecture</th><td>150</td><td>Deep-space Logistics and Coherent Lances. Unlocks cruisers.</td></tr>
-                  <tr><th scope="row">Worldshaping</th><td>180</td><td>Adaptive Biospheres and Autonomous Industry. Settle any world; +50% colony growth.</td></tr>
-                  <tr><th scope="row">Quantum Archives</th><td>150</td><td>Resonance Theory. +4 science per Research Enclave.</td></tr>
-                  <tr><th scope="row">Distributed Command</th><td>180</td><td>Deep-space Logistics and Stellar Accords. +2 orders; warships gain a move each turn.</td></tr>
-                  <tr><th scope="row">The Asterion Protocol</th><td>320</td><td>Quantum Archives and Autonomous Industry. Unlocks Asterion Beacons.</td></tr>
+                  <tr><th scope="row">Autonomous Industry</th><td>220</td><td>Deep-space Logistics. Unlocks Manufactories.</td></tr>
+                  <tr><th scope="row">Stellar Accords</th><td>180</td><td>Adaptive Biospheres. +4 credits per trade treaty; Civic Forums.</td></tr>
+                  <tr><th scope="row">Deflector Fields</th><td>220</td><td>Resonance Theory. −20% incoming fleet damage; Orbital Bastions.</td></tr>
+                  <tr><th scope="row">Capital Ship Architecture</th><td>360</td><td>Deep-space Logistics and Coherent Lances. Unlocks cruisers.</td></tr>
+                  <tr><th scope="row">Worldshaping</th><td>600</td><td>Adaptive Biospheres and Autonomous Industry. Settle any world; +50% colony growth.</td></tr>
+                  <tr><th scope="row">Quantum Archives</th><td>360</td><td>Resonance Theory. +4 science per Research Enclave.</td></tr>
+                  <tr><th scope="row">Distributed Command</th><td>500</td><td>Deep-space Logistics and Stellar Accords. +2 orders; warships gain a move each turn.</td></tr>
+                  <tr><th scope="row">The Asterion Protocol</th><td>1000</td><td>Quantum Archives and Autonomous Industry. Unlocks Asterion Beacons.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -333,9 +345,11 @@
           <div class="section-heading"><span class="section-number">08</span><h2 id="victory-title">A lasting civilization</h2></div>
           <p class="lede">Turn a growing empire into an outcome. Make your long-term objective part of every major investment.</p>
           <h3>Restore the ancient network</h3>
-          <p>Research <strong>the Asterion Protocol</strong>, then own <strong>three colonies with Asterion Beacons</strong> to achieve a transcendence victory. Each Beacon costs 180 credits and 180 minerals and requires 140 construction production.</p>
-          <p>This path needs more than science. Establish enough colonies and income to build the network, improve their production, and protect the worlds on which you are constructing Beacons.</p>
-          <div class="callout"><p><strong>Plan the whole project.</strong> Three Beacons together require 540 credits and 540 minerals, before the cost of the colonies and infrastructure that build them.</p></div>
+          <p>Research <strong>the Asterion Protocol</strong>, hold <strong>three colonies with Asterion Beacons</strong>, and complete <strong>ten alignment cycles</strong> to achieve transcendence. Each Beacon costs 180 credits and 180 minerals, requires 140 work, and uses one infrastructure slot.</p>
+          <p>Alignment advances once per completed cycle and costs <strong>60 credits</strong> after ordinary income arrives. A hostile military fleet over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts it. Each interrupted cycle loses one alignment step, to a minimum of zero. Civilian ships alone cannot blockade the network. Captured beacons still require the Protocol. The network retains its three participating worlds; a spare fills a vacancy if ownership or a beacon is lost. A spare cannot bypass an existing participant’s blockade.</p>
+          <p>The Empire view shows the public beacon signals and alignment progress of civilizations you have contacted. Their beacon locations become charted, but environmental surveys and foreign fleets still require an expedition or local sensors. The Empire navigation badge shows the leading rival’s progress. A new rival alignment or a rival reaching eight steps opens your briefing; from five steps, the galaxy view also highlights the race. Use these signals to decide whether to accelerate your own network, defend its worlds, or interrupt a rival.</p>
+          <div class="callout"><p><strong>Plan the whole project.</strong> Three Beacons require 540 credits and 540 minerals, plus at least 600 credits for successful alignment. Budget for the colonies, infrastructure, and fleets that protect them.</p></div>
+          <p>If multiple civilizations finish alignment in the same cycle, the one with the higher Legacy score wins. An exact score tie uses a deterministic draw from the galaxy seed.</p>
           <h3>Unite the original capitals</h3>
           <p>A <strong>domination victory</strong> requires ownership of all four original capitals: Solace, Veyr Prime, Kharos, and Lumen. These specific worlds remain the objectives even if an empire relocates its government.</p>
           <h3>Leave the greatest legacy</h3>

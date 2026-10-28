@@ -14,14 +14,18 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 - `getVisibleFleets(state, factionId, systemId?)`: all own fleets plus foreign fleets at systems with own sensors. Optional system ID narrows the result. Both intelligence helpers are exported from `src/intelligence.js` and re-exported by `game.js` for UI/AI sharing.
 - `getEmpireStats(state, factionId = 'player')`: stocks and income, colony/population/fleet counts, upkeep, military, orders/maxOrders, score, beacons and explored-system count.
 - `getSystemYield(state, system)`: `{credits,minerals,science,production,growth,capacity,defense}`.
-- `getBuildOptions(state, systemId, factionId = 'player')`: building and ship definitions extended with `{kind,enabled,reason,turns}`.
+- `getBuildOptions(state, systemId, factionId = 'player', replaceBuildingId = null)`: building and ship definitions extended with `{kind,enabled,reason,turns,replaceBuildingId}` and the actual discounted cost. A fourth-argument existing building allows infrastructure replacement; ships cannot replace buildings.
+- `getInfrastructure(state, system)`: `{used,capacity,available,overCapacity}` for infrastructure slots.
+- `getDevelopmentOptions(state, systemId, factionId = 'player')`: charter choices with actual costs, prerequisites, output totals and deltas (contract below).
+- `getCharterBonuses(system, charter = system.charter)`: pure `{credits,minerals,science,production,orders,militaryDiscount,repair}`.
+- `getConstructionProject(queue)`: a displayable building, ship or charter project including its paid `cost`, `work`, `progress`, name and icon; null for no project. Queue item IDs are no longer all in `BUILDINGS`/`SHIPS`.
 - `getResearchOptions(state, factionId = 'player')`: tech definitions extended with `{completed,active,enabled,reason}`.
 - `getVictoryProgress(state, factionId = 'player')`: `{transcendence:{current,target,unlocked},domination:{current,target},legacy:{score,turn,finalTurn}}`.
 - `fleetPower(state, fleet)`: modified fleet attack.
 - `estimateCombat(state, fleetId, targetId)`: `{attack,defense,garrison,odds,unknown}` or null. Without target sensors, `unknown:true`, `odds:'Unscouted'`, and `defense`/`garrison` are null. With target sensors, `unknown:false` and numeric strength/defense are exact. Never coerce unknown defense to zero for a preview or AI decision.
 - `estimateInvasion(state, fleetId)`: pure current-system bombardment forecast, documented below. It never consumes RNG or queries a remote target.
 - `getCombatReport(state, reportId)`: a stored player-involved combat snapshot or null if missing/expired. Re-exported by `game.js` from `src/reports.js`.
-- `availableActions(state, {systemId?,fleetId?,factionId?})`: `{build,research,neighbors}`.
+- `availableActions(state, {systemId?,fleetId?,factionId?,replaceBuildingId?})`: `{build,development,research,neighbors}`.
 
 ## Commands
 
@@ -35,7 +39,8 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 | --- | --- | --- |
 | `move` | `fleetId`, `targetId` | One connected jump; survey and potential fleet combat |
 | `colonize` | `fleetId` | Settle an eligible world; consumes ark, 30 credits and 20 minerals |
-| `build` | `systemId`, `itemId` | Pay upfront and start the colony's single queue |
+| `build` | `systemId`, `itemId`, optional `replaceBuildingId` | Pay upfront and start the colony's single queue; replace only when complete |
+| `develop` | `systemId`, `charterType` | Establish, promote or switch the colony's charter using the same queue |
 | `cancelBuild` | `systemId` | Refund unused fraction of resource costs |
 | `research` | `techId` | Set research project, preserving prior investment as science |
 | `anomaly` | `systemId`, `choiceId` | Resolve an anomaly with a present expedition or owned colony |
@@ -56,6 +61,7 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
     type: 'terran', habitability: 90, richness: 3, science: 2,
     owner: 'player', originalOwner: 'player', // originalOwner only for four original capitals
     population: 4, growth: 0, buildings: ['mine', 'shipyard'], defenseDamage: 0,
+    charter: null, // optional; or {type:'extraction'|'academy'|'forge'|'civic',level:1|2}
     queue: null, // or {itemId,kind:'building'|'ship',progress,work,cost:{credits,minerals}}
     anomaly: null, // or {id:'archive',resolved:false,resolvedBy?:'player'}
     knownBy: ['player'], exploredBy: ['player']
@@ -83,6 +89,61 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 Income statistics are net of upkeep. Research consumes science stock into current progress; unused science is banked. Population is integer plus fractional `growth`. Fleets move instantly; combat is deterministic from saved RNG. Neutral borders require trade access. An explored system remains charted with remembered planet information; sovereignty is public once charted. Foreign fleet location/strength and exact colony defenses require current presence-based sensors. Interception log entries are historical reports, never live surveillance. These rules apply to AI and player alike. Optional `strategy.mode` is one of `defend`, `assemble`, `advance`, or `develop`; rally/objective IDs are existing system IDs or null, and its turn cannot be in the future.
 
 At zero credits with negative income, bankruptcy removes exactly one ship from the fleet with greatest per-ship upkeep. This is administrative removal, unaffected by shields; remaining HP is capped to the surviving fleet's capacity.
+
+## Colonial development
+
+`src/development.js` owns pure infrastructure, charter, project-display and development-validation helpers; all UI-facing helpers and `CHARTERS` are re-exported from `game.js`. `CHARTERS` is keyed by `extraction`, `academy`, `forge`, `civic`, each with `{id,name,icon,support,description}`.
+
+Infrastructure capacity is `min(5, 2 + floor(population / 3))`. Every installed building, including an Asterion Beacon, uses one slot. Ships and charters use no extra slot. Existing buildings are never demolished when population declines; older over-capacity colonies and ordinary projects already queued before this rule remain valid and complete normally. Over-capacity worlds can replace a building, but cannot add an additional one.
+
+At full capacity, pass `replaceBuildingId` both to the build preview and the `build` command. The old building remains operational while construction proceeds. Completion removes that building and installs the new one; cancellation leaves the old building untouched. Replacing the supporting building of an operating charter removes that charter **at completion**, including its bonuses. Queue state stores the optional replacement ID only for a building project.
+
+One optional completed charter is stored as `system.charter = {type,level}`. It survives conquest and population loss as long as its supporting building remains. New commissioning rules:
+
+| Project | Population | Technology | Infrastructure | Upfront credits/minerals | Work |
+| --- | ---: | --- | --- | --- | ---: |
+| Level I or switch to a different type | 4 | Logistics | Target type's supporting building | 120 / 60 | 60 |
+| Promote the current charter to level II | 8 | Logistics + Industry | Supporting building and existing level I | 300 / 100 | 100 |
+
+All charter commissions consume one order and occupy the ordinary colony construction queue. Existing bonuses continue during promotion or switching and change only on completion. Switching from any level to another type establishes that type at level I. There is no ongoing charter upkeep in this prototype.
+
+| Charter | Supporting building | Bonus per level |
+| --- | --- | --- |
+| Extraction | `mine` | `2 + system.richness` minerals |
+| Academy | `lab` | `2 + system.science` science |
+| Forge | `factory` | `4 + floor(population/4)` production; 10% military ship mineral discount; +2 automatic orbital repair |
+| Civic | `forum` | +1 order; `2 + floor(population/2)` credits |
+
+Forge discounts apply only to frigate/cruiser minerals, capped at 20% by level II and rounded upward. Credits, civilian ship costs and buildings are unchanged. Forge repair augments ordinary automatic repair only in an unblocked owned colony, and remains capped by surviving fleet hull capacity. Civilization bonuses apply to the resulting colony outputs as usual; empire orders retain their existing cap.
+
+Each development option returns:
+
+```js
+{id:'forge',charterType:'forge',level:1,kind:'charter',support:'factory',
+ name:'Forge Charter I',icon:'▥',description:'...',
+ cost:{credits:120,minerals:60},work:60,turns:4,
+ enabled:true,reason:'',completed:false,switching:true,promoting:false,
+ bonuses:{credits:0,minerals:0,science:0,production:5,orders:0,militaryDiscount:0.1,repair:2},
+ delta:{/* target totals minus current charter bonuses, including losses */}}
+```
+
+`bonuses` are target total outputs, not only improvement; `delta` accounts for any old charter being replaced. Bonuses tied to population use current population. Preview helpers mutate nothing.
+
+Charter queues use `{kind:'charter',itemId:charterType,charterType,charterLevel,progress,work,cost}`. Ordinary building queues may add `replaceBuildingId`. The queue always stores the price actually paid, including a Forge discount, so cancellation refunds `floor(paidCost * (1 - progress/work))` per resource. A captured colony keeps its completed charter, but its former owner's queued project is cancelled under the existing conquest rule.
+
+`getConstructionProject` handles all queue kinds and labels charter levels I/II. Charter completion logs carry `systemId` without `itemId`; existing report navigation remains compatible. Development validation checks charter/support consistency and new queue fields without rechecking population or technology prerequisites for already completed/commissioned work. Older version-1 saves without development fields remain valid.
+
+## Asterion alignment
+
+Transcendence requires the Asterion Protocol, at least three owned beacon worlds, and ten completed alignment cycles. Beacon count alone never wins. `src/victory.js` exports `getAlignmentStatus(state,factionId)`, `advanceAlignment(state)`, `getPublicRaces(state,observerId)`, `revealPublicBeacons(state)`, and `validateAlignmentState(state)`.
+
+The turn engine calls `advanceAlignment` once after income, construction and orbital repairs, before its final victory check. A qualifying cycle costs 60 credits and adds one alignment; a missing beacon, hostile military blockade at a participating beacon, missing Protocol or insufficient credits prevents the charge and reduces existing alignment by one. Completing the third beacon during construction can qualify that same full cycle. Ordinary commands cannot advance alignment, and duplicate calls for a cycle cannot charge twice.
+
+`getVictoryProgress(...).transcendence` retains `{current,target:3,unlocked}` and adds `{alignment,alignmentTarget:10,cost:60,ready,reason,sites}`. The private `getAlignmentStatus` describes the named empire's own operational obstacles. For rivals, use `getPublicRaces` instead: contacted empires broadcast beacon locations, participation and alignment progress without revealing hidden fleets, funds or interruption reasons.
+
+Optional saved fields are `faction.alignment = {progress,sites,active,started,reportedBeacons}` and `state.alignmentUpdatedTurn`. `sites` selects up to three participants; an extra fourth beacon does not silently replace a blockaded participant. Capturing or replacing a participating beacon allows another owned beacon to join, but interrupts advancement if fewer than three remain. First-contact and completed-construction hooks chart broadcast beacon locations without surveying their planets or granting fleet sensors. Optional fields validate under save version 1; older saves start alignment from zero.
+
+If several empires qualify in the same resolution phase, the highest current Legacy score wins after every faction's elimination/capital updates have resolved. Exact-score ties use the highest deterministic `hashSeed(seed + ':victory:' + turn + ':' + factionId)` draw, with faction ID as a final collision fallback. The draw consumes no gameplay RNG and is independent of faction array order. The same score/draw ordering resolves the turn-limit score victory. Domination achieved by an individual command is still checked immediately.
 
 ## Validation
 
