@@ -109,6 +109,21 @@ test('cancelling construction refunds only unused resources', () => {
   assert.equal(player(state).credits, credits - 15);
 });
 
+test('an imported research queue cannot repeat an already completed technology', () => {
+  const state = createGame('research-save-validation');
+  player(state).techs = ['logistics'];
+  player(state).research = { techId: 'logistics', progress: 0 };
+  player(state).science = 55;
+  const before = structuredClone(state);
+  assert.equal(validateSave(state), false);
+  assert.deepEqual(state, before, 'validation does not alter the saved campaign');
+  player(state).research = { techId: 'physics', progress: 0 };
+  assert.equal(validateSave(state), true);
+  endTurn(state);
+  assert.equal(player(state).techs.filter(id => id === 'logistics').length, 1);
+  assert.equal(validateSave(state), true);
+});
+
 test('research prerequisites are enforced and switching preserves invested science', () => {
   const state = createGame();
   assert.equal(command(state, { type: 'research', techId: 'singularity' }).ok, false);

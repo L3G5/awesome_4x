@@ -19,6 +19,35 @@ async function nextCycle(page) {
   if(await page.locator('.modal').count())await page.locator('.modal .close-modal').click();
 }
 
+test('a capped civic upgrade discloses zero usable orders while preserving the legal credit investment',async({page})=>{
+  const state=createGame('capped-development'),p=state.factions[0],home=state.systems[0];
+  for(const [index,world] of [home,...state.systems.slice(4,11)].entries()){
+    Object.assign(world,{owner:'player',population:8,buildings:index===0?['forum','lab','factory']:[],queue:null});
+    if(!world.knownBy.includes('player'))world.knownBy.push('player');
+    if(!world.exploredBy.includes('player'))world.exploredBy.push('player');
+  }
+  home.charter={type:'civic',level:1};
+  Object.assign(p,{techs:['logistics','industry','diplomacy','command'],credits:2000,minerals:2000,orders:18});
+  await load(page,state);
+  await page.locator('[data-action="development-menu"]').click();
+  const civic=page.locator('[data-action="develop"][data-charter="civic"]');
+  await expect(civic).toBeEnabled();
+  await expect(civic.locator('.order-effect')).toContainText('18 → 18');
+  await expect(civic.locator('.order-effect')).toContainText('+0 usable orders');
+  await expect(civic).toContainText('+6 credits');
+  await page.screenshot({path:'test-results/capped-civic-development.png'});
+  await civic.click();
+  let current=await page.evaluate(()=>window.__asterion.getState());
+  expect(current.factions[0].credits).toBe(1700);
+  expect(current.factions[0].minerals).toBe(1900);
+  while(current.systems[0].queue){
+    await nextCycle(page);
+    current=await page.evaluate(()=>window.__asterion.getState());
+  }
+  expect(current.systems[0].charter).toEqual({type:'civic',level:2});
+  expect(current.factions[0].orders).toBe(18);
+});
+
 test('a full colony replaces infrastructure on completion and establishes a persistent specialty',async({page})=>{
   const state=createGame('development-browser'),p=state.factions[0],home=state.systems[0];
   p.techs=['logistics','industry'];p.credits=800;p.minerals=500;

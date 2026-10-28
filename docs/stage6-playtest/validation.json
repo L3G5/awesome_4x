@@ -1,0 +1,83 @@
+{
+  "checkedAfterCampaignOnly": true,
+  "valid": true,
+  "turn": 67,
+  "seed": "ASTERION",
+  "winner": "player",
+  "victoryType": "Transcendence",
+  "stats": {
+    "credits": 5493,
+    "minerals": 722,
+    "science": 665,
+    "creditIncome": 191,
+    "mineralIncome": 79,
+    "scienceIncome": 116,
+    "production": 131,
+    "upkeep": 35,
+    "colonies": 8,
+    "population": 74,
+    "ships": 14,
+    "military": 293.8,
+    "orders": 17,
+    "maxOrders": 17,
+    "uncappedOrders": 17,
+    "orderLimit": 18,
+    "score": 765,
+    "beacons": 3,
+    "explored": 38
+  },
+  "runtimeErrors": [],
+  "playerBattleReportsDuringPlay": 0,
+  "latePublicLog": [
+    {
+      "turn": 67,
+      "type": "victory",
+      "text": "The Concord achieves transcendence. The chronicle of this age is complete."
+    },
+    {
+      "turn": 67,
+      "type": "alignment",
+      "text": "Veyr Consortium reaches 5/10 Asterion alignment."
+    },
+    {
+      "turn": 67,
+      "type": "alignment",
+      "text": "The Concord reaches 10/10 Asterion alignment."
+    },
+    {
+      "turn": 66,
+      "type": "war",
+      "text": "Khar Dominion declared war on Veyr Consortium."
+    },
+    {
+      "turn": 66,
+      "type": "alignment",
+      "text": "The Luminous Choir’s Asterion alignment is interrupted (3/10)."
+    },
+    {
+      "turn": 65,
+      "type": "alignment",
+      "text": "The Concord reaches 8/10 Asterion alignment."
+    },
+    {
+      "turn": 64,
+      "type": "alignment",
+      "text": "Khar Dominion begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits."
+    },
+    {
+      "turn": 64,
+      "type": "alignment",
+      "text": "Khar Dominion has restored an Asterion Beacon at Aurelia (3 owned)."
+    },
+    {
+      "turn": 64,
+      "type": "construction",
+      "text": "Sundrift completed Sovereign."
+    },
+    {
+      "turn": 64,
+      "type": "construction",
+      "text": "Solace completed Sovereign."
+    }
+  ]
+}

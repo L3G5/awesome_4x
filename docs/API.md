@@ -12,7 +12,7 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 - `getVisibleSystems(state, factionId = 'player')`: charted systems. Check `exploredBy.includes(factionId)` before showing survey detail.
 - `hasSensors(state, factionId, systemId)`: whether an own colony or fleet is present in the exact system. Charting/surveying does not provide live sensors.
 - `getVisibleFleets(state, factionId, systemId?)`: all own fleets plus foreign fleets at systems with own sensors. Optional system ID narrows the result. Both intelligence helpers are exported from `src/intelligence.js` and re-exported by `game.js` for UI/AI sharing.
-- `getEmpireStats(state, factionId = 'player')`: stocks and income, colony/population/fleet counts, upkeep, military, orders/maxOrders, score, beacons and explored-system count.
+- `getEmpireStats(state, factionId = 'player')`: stocks and income, colony/population/fleet counts, upkeep, military, orders/maxOrders, uncappedOrders/orderLimit, score, beacons and explored-system count.
 - `getSystemYield(state, system)`: `{credits,minerals,science,production,growth,capacity,defense}`.
 - `getBuildOptions(state, systemId, factionId = 'player', replaceBuildingId = null)`: building and ship definitions extended with `{kind,enabled,reason,turns,replaceBuildingId}` and the actual discounted cost. A fourth-argument existing building allows infrastructure replacement; ships cannot replace buildings.
 - `getInfrastructure(state, system)`: `{used,capacity,available,overCapacity}` for infrastructure slots.
@@ -115,6 +115,8 @@ All charter commissions consume one order and occupy the ordinary colony constru
 | Civic | `forum` | +1 order; `2 + floor(population/2)` credits |
 
 Forge discounts apply only to frigate/cruiser minerals, capped at 20% by level II and rounded upward. Credits, civilian ship costs and buildings are unchanged. Forge repair augments ordinary automatic repair only in an unblocked owned colony, and remains capped by surviving fleet hull capacity. Civilization bonuses apply to the resulting colony outputs as usual; empire orders retain their existing cap.
+
+`getOrderCapacity(state,factionId='player')` returns `{total,uncapped,limit:18}` from colonies, faction/technology bonuses, buildings and charters. `getOrderChange(state,factionId='player',nominal=0)` returns `{current,projected,nominal,change,limit}`. Both are pure exports of `development.js` and `game.js`. Construction and development options expose this as `orderEffect`; ordinary `delta.orders` remains the nominal charter change. Building replacement includes both the removed building's order contribution and the loss of its supported Civic charter. These are current-state forecasts, not promises about future colony gains or losses. Keeping the uncapped capacity is essential: removing three nominal orders from a capacity of 21 leaves the usable mandate at 18, while removing them from 19 reduces it to 16. This refactoring does not change the original order formula or forbid a legal investment whose order gain is capped.
 
 Each development option returns:
 
@@ -272,3 +274,13 @@ Successful capture snapshots which observers had charted the world before owners
 Received text and participant names are frozen at receipt, including anonymous identities. They never acquire later knowledge. Player dispatches append ordinary logs with `publicAffairId`, safe `targetId` and optional `systemId`; these feed the normal cycle briefing. The log reference may outlive the retained dispatch but remains below that observer's issued-ID counter. The optional `state.publicAffairs={version:1,observers:{...}}` ledger remains compatible with older version-1 saves. Validation checks exact fields, bounded storage, issued IDs, chronology, known identities, published deadlines and generated text; unexpected private payload fields are rejected.
 
 The UI uses these views for foreign relationships, received announcements, five-cycle map markers, world records, and the cause of a stored course's closed border. It never derives an unobserved battle from a transfer. Route execution and costs remain unchanged.
+
+## AI investment forecasts
+
+`getInvestmentForecast(state,factionId,systemId,option)` is exported by `src/ai.js` for policy inspection. It returns `worthwhile`, `horizon`, `completion`, `productiveCycles`, `remainingResearch`, `plannedCredits`, `creditNeed`, `incomeShortfall`, accumulated marginal `output`, and weighted `benefit`/`price`. This is an AI heuristic, not a restriction on player construction or a conversion rule between resources.
+
+Optional Research Enclaves, Exchange Ports, Civic Forums, Academy charters and Civic charters use the forecast. It holds population constant, accounts for already-paid projects and current commissioned research, and limits the horizon to 24 cycles, the remaining campaign duration, or a contacted active public alignment's remaining steps plus two interruption cycles. The public finish estimate is a planning risk; interruption may make the actual campaign longer.
+
+Science beyond remaining unfunded technology demand has no forecast value. Order gains use the true empire cap, including queued sources and imminent completed Command research. Credit demand is bounded by owned beacon hosts, needed hulls at existing yards and one eligible support investment per colony, sharing available work and minerals. Recurring income also matters when it must support a concrete planned crew; existing treasury does not automatically satisfy that ongoing requirement. Replacements include displaced output. Emergency defense, wartime minimum readiness, alignment-income recovery and infrastructure supporting a preserved discovery remain exceptions. Existing paid queues are not cancelled by this policy.
+
+`scripts/investment-benchmark.mjs` compares the policy with the pinned version-0.6 AI inside a shared frozen engine. Its compact result in `docs/results/stage7-investment.json` records source hashes, the generated Halcyon planning scenario, eight paired all-AI campaigns, JSON restoration checks and uninstrumented CPU probes. “Zero under forecast” describes the policy assumptions; it does not prove that every counted historical purchase was globally useless.

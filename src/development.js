@@ -39,6 +39,26 @@ export function getCharterBonuses(system, charter = system?.charter) {
   return bonuses;
 }
 
+export const ORDER_LIMIT = 18;
+
+/** The uncapped total matters when replacing infrastructure above the cap. */
+export function getOrderCapacity(state, factionId = 'player') {
+  const faction = state.factions.find(candidate => candidate.id === factionId);
+  if (!faction) return { total: 0, uncapped: 0, limit: ORDER_LIMIT };
+  const colonies = state.systems.filter(system => system.owner === factionId);
+  const uncapped = 4 + colonies.length + (factionId === 'player' ? 1 : 0)
+    + (faction.techs.includes('logistics') ? 1 : 0) + (faction.techs.includes('command') ? 2 : 0)
+    + colonies.reduce((sum, system) => sum + system.buildings.reduce((n, id) => n + (BUILDINGS[id].orders || 0), 0) + getCharterBonuses(system).orders, 0);
+  return { total: Math.min(ORDER_LIMIT, uncapped), uncapped, limit: ORDER_LIMIT };
+}
+
+/** Forecast one proposed change against today's whole-empire mandate. */
+export function getOrderChange(state, factionId = 'player', nominal = 0) {
+  const capacity = getOrderCapacity(state, factionId);
+  const projected = Math.max(0, Math.min(capacity.limit, capacity.uncapped + nominal));
+  return { current: capacity.total, projected, nominal, change: projected - capacity.total, limit: capacity.limit };
+}
+
 export function getDevelopmentOptions(state, systemId, factionId = 'player') {
   const system = state.systems.find(candidate => candidate.id === systemId);
   const faction = state.factions.find(candidate => candidate.id === factionId);
@@ -60,7 +80,7 @@ export function getDevelopmentOptions(state, systemId, factionId = 'player') {
     else if (level === 2 && !faction.techs.includes('industry')) reason = `Requires ${TECHS.industry.name}`;
     else if (faction.credits < cost.credits || faction.minerals < cost.minerals) reason = 'Insufficient credits or minerals';
     else if (faction.orders < 1) reason = 'No orders remaining';
-    return { ...charter, charterType: charter.id, level, name: `${charter.name} ${levelName(level)}`, kind: 'charter', cost, work, bonuses, delta, completed, switching: Boolean(system?.charter && !sameType(system, charter.id)), promoting: Boolean(sameType(system || {}, charter.id) && system.charter.level === 1), enabled: !reason, reason, turns: production > 0 ? Math.ceil(work / production) : 0 };
+    return { ...charter, charterType: charter.id, level, name: `${charter.name} ${levelName(level)}`, kind: 'charter', cost, work, bonuses, delta, orderEffect: getOrderChange(state, factionId, delta.orders), completed, switching: Boolean(system?.charter && !sameType(system, charter.id)), promoting: Boolean(sameType(system || {}, charter.id) && system.charter.level === 1), enabled: !reason, reason, turns: production > 0 ? Math.ceil(work / production) : 0 };
   });
 }
 

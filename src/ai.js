@@ -3,7 +3,7 @@
  * sensors. Every action goes through the same command rules as the player.
  * Imports are only called during a turn, so game.js may safely import runAI.
  */
-import { command, getNeighbors, getVisibleSystems, getEmpireStats, getBuildOptions, getResearchOptions, estimateCombat, fleetPower, getSystemYield, getInfrastructure, getDevelopmentOptions, CHARTERS, LAST_TURN } from './game.js';
+import { command, getNeighbors, getVisibleSystems, getEmpireStats, getBuildOptions, getResearchOptions, estimateCombat, fleetPower, getSystemYield, getInfrastructure, getDevelopmentOptions, getOrderChange, CHARTERS, LAST_TURN } from './game.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { ANOMALIES, SHIPS, BUILDINGS, TECHS } from './content.js';
 import { getDiplomaticIntent, getDiplomacyForecast } from './diplomacy.js';
@@ -441,6 +441,142 @@ function actionCost(state, faction, action) {
   return {};
 }
 
+const researchDemand = faction => Math.max(0, Object.values(TECHS).filter(tech => !faction.techs.includes(tech.id)).reduce((sum, tech) => sum + tech.cost, 0) - (faction.research?.progress || 0) - faction.science);
+
+function investmentHorizon(state, faction) {
+  // A public alignment is a risk to a project's payback, not a promised finish.
+  // Two extra cycles allow a brief interruption without assuming endless wars.
+  const races = getPublicRaces(state, faction.id).filter(race => race.active && race.progress > 0);
+  return Math.max(0, Math.min(24, LAST_TURN - state.turn, ...races.map(race => race.target - race.progress + 2)));
+}
+
+function completedInvestment(system, project) {
+  if (project.kind === 'charter') return { ...system, queue: null, charter: { type: project.charterType, level: project.charterLevel || project.level } };
+  const replacement = project.replaceBuildingId;
+  return { ...system, queue: null, buildings: [...system.buildings.filter(id => id !== replacement), project.itemId || project.id], charter: replacement === CHARTERS[system.charter?.type]?.support ? null : system.charter };
+}
+
+/** Credit demand is bounded by owned hosts, yards, resources and work. */
+function ownedCreditPlans(state, faction, horizon, stats, candidateSystemId, candidate) {
+  const colonies = state.systems.filter(system => system.owner === faction.id), roles = colonyRoles(state, faction, colonies);
+  let minerals = Math.max(0, faction.minerals - candidate.cost.minerals) + stats.mineralIncome * horizon, credits = 0, militaryUpkeep = 0;
+  const reserve = cost => {
+    if ((cost.minerals || 0) > minerals) return false;
+    minerals -= cost.minerals || 0; credits += cost.credits || 0; return true;
+  };
+  const delay = system => system.queue ? Math.ceil((system.queue.work - system.queue.progress) / getSystemYield(state, system).production) : 0;
+  const work = new Map(colonies.map(system => [system.id, Math.max(0, (horizon - delay(system)) * getSystemYield(state, system).production - (system.id === candidateSystemId ? candidate.work : 0))]));
+  const completionOf = (system, amount) => Math.ceil(horizon - (work.get(system.id) - amount) / getSystemYield(state, system).production);
+  const commit = (system, item) => {
+    if (work.get(system.id) <= item.work || !reserve(item.cost)) return false;
+    work.set(system.id, work.get(system.id) - item.work); return true;
+  };
+  const beaconCompletions = colonies.filter(system => system.buildings.includes('beacon')).map(() => 0);
+  if (faction.techs.includes('singularity')) {
+    for (const system of colonies.filter(system => !system.buildings.includes('beacon')).sort((a, b) => Number(b.queue?.itemId === 'beacon') - Number(a.queue?.itemId === 'beacon') || delay(a) - delay(b) || a.id.localeCompare(b.id))) {
+      if (beaconCompletions.length >= ALIGNMENT_RULES.sites) break;
+      const queued = system.queue?.itemId === 'beacon';
+      const completion = queued ? delay(system) : completionOf(system, BUILDINGS.beacon.work);
+      if (completion < horizon && (queued || commit(system, BUILDINGS.beacon))) beaconCompletions.push(completion);
+    }
+    if (beaconCompletions.length >= ALIGNMENT_RULES.sites) credits += ALIGNMENT_RULES.cost * Math.min(ALIGNMENT_RULES.target + 2, Math.max(0, horizon - Math.max(...beaconCompletions)));
+  }
+  const hull = faction.techs.includes('cruisers') ? 'cruiser' : 'frigate', item = SHIPS[hull];
+  const queuedPower = colonies.filter(system => system.queue?.kind === 'ship').reduce((sum, system) => sum + fleetPower(state, { owner: faction.id, type: system.queue.itemId, ships: 1 }), 0);
+  const desired = (faction.id === 'khar' ? 26 : 12) * colonies.length + (Object.values(faction.relations).some(relation => relation.status === 'war') ? 50 : 0) + (faction.alignment?.active ? 36 : 0);
+  let missingHulls = Math.ceil(Math.max(0, desired - stats.military - queuedPower) / fleetPower(state, { owner: faction.id, type: hull, ships: 1 }));
+  for (const system of colonies.filter(system => system.buildings.includes('shipyard'))) {
+    // At most two replacement hulls per existing yard; no hypothetical navy.
+    const cost = getBuildOptions(state, system.id, faction.id).find(option => option.id === hull).cost;
+    for (let count = 1; count <= 2 && missingHulls > 0; count++) {
+      const completion = completionOf(system, item.work);
+      if (completion >= horizon || !commit(system, { work: item.work, cost })) break;
+      credits += item.upkeep * (horizon - completion);
+      militaryUpkeep += item.upkeep;
+      missingHulls--;
+    }
+  }
+  // One plausible support building or charter per owned world. Pure revenue
+  // projects cannot invent a need for more revenue; paid queues cost no more.
+  for (const system of colonies) {
+    if (system.id === candidateSystemId) continue;
+    const future = system.queue && system.queue.kind !== 'ship' ? completedInvestment(system, system.queue) : system;
+    const role = roles.get(system.id), support = CHARTERS[role].support;
+    if (role === 'academy' && researchDemand(faction) <= stats.scienceIncome * (delay(system) + 6)) continue;
+    if (role === 'civic' && getOrderChange(state, faction.id, 1).change === 0) continue;
+    const projected = { ...state, systems: state.systems.map(location => location.id === system.id ? { ...future, queue: null } : location) };
+    const option = future.buildings.includes(support)
+      ? getDevelopmentOptions(projected, system.id, faction.id).find(candidate => candidate.charterType === role)
+      : getBuildOptions(projected, system.id, faction.id).find(candidate => candidate.id === support);
+    if (!option || option.completed || option.work / getSystemYield(state, future).production + delay(system) >= horizon) continue;
+    if (option.kind === 'charter' && (future.population < (option.level === 2 ? 8 : 4) || !faction.techs.includes('logistics') || option.level === 2 && !faction.techs.includes('industry'))) continue;
+    if (option.kind === 'building' && (option.requires.some(id => !faction.techs.includes(id)) || !getInfrastructure(state, future).available)) continue;
+    commit(system, option);
+  }
+  return { credits, incomeFloor: militaryUpkeep ? militaryUpkeep + (faction.alignment?.active || stats.beacons >= ALIGNMENT_RULES.sites ? 65 : 4) : 0 };
+}
+
+/** Pure AI policy forecast; it neither changes prices nor restricts the player. */
+export function getInvestmentForecast(state, factionId, systemId, option) {
+  const faction = factionOf(state, factionId), system = systemOf(state, systemId);
+  if (!faction || system?.owner !== factionId || !option || !['building', 'charter'].includes(option.kind)) return { worthwhile: false, reason: 'No owned investment' };
+  const stats = getEmpireStats(state, factionId), horizon = investmentHorizon(state, faction);
+  const completion = Math.ceil(option.work / Math.max(1, getSystemYield(state, system).production));
+  const remainingResearch = researchDemand(faction), output = { credits: 0, minerals: 0, science: 0, production: 0, orders: 0 };
+  const events = state.systems.filter(location => location.owner === factionId && location.queue).map(location => ({ system: location, turn: Math.ceil((location.queue.work - location.queue.progress) / getSystemYield(state, location).production) }));
+  let projected = { ...state, systems: [...state.systems] }, demand = remainingResearch, baselineDemand = remainingResearch, futureIncome = 0, futureCreditIncome = stats.creditIncome, queuedUpkeep = 0;
+  let currentResearch = faction.research ? Math.max(0, TECHS[faction.research.techId].cost - faction.research.progress - faction.science) : null;
+  for (let cycle = 1; cycle <= horizon; cycle++) {
+    const baseline = getEmpireStats(projected, factionId);
+    futureCreditIncome = baseline.creditIncome - queuedUpkeep;
+    futureIncome += futureCreditIncome;
+    let scienceChange = 0;
+    if (cycle > completion) {
+      const proposed = { ...projected, systems: projected.systems.map(location => location.id === systemId ? completedInvestment(location, option) : location) };
+      const after = getEmpireStats(proposed, factionId);
+      for (const [key, income] of [['credits', 'creditIncome'], ['minerals', 'mineralIncome'], ['production', 'production']]) output[key] += after[income] - baseline[income];
+      output.orders += getOrderChange(projected, factionId, option.orderEffect?.nominal || 0).change;
+      scienceChange = after.scienceIncome - baseline.scienceIncome;
+      output.science += scienceChange >= 0 ? Math.min(scienceChange, Math.max(0, demand - baseline.scienceIncome)) : -Math.min(-scienceChange, baselineDemand);
+    }
+    demand = Math.max(0, demand - baseline.scienceIncome - scienceChange);
+    baselineDemand = Math.max(0, baselineDemand - baseline.scienceIncome);
+    if (currentResearch !== null) {
+      currentResearch = Math.max(0, currentResearch - baseline.scienceIncome);
+      if (currentResearch === 0) {
+        // Only the already-commissioned research is predictable. In particular,
+        // imminent Distributed Command can fill the mandate before a Forum.
+        projected = { ...projected, factions: projected.factions.map(owner => owner.id === factionId ? { ...owner, techs: [...owner.techs, faction.research.techId] } : owner) };
+        currentResearch = null;
+      }
+    }
+    for (const event of events.filter(event => event.turn === cycle)) {
+      if (event.system.queue.kind === 'ship') queuedUpkeep += SHIPS[event.system.queue.itemId].upkeep;
+      else projected = { ...projected, systems: projected.systems.map(location => location.id === event.system.id ? completedInvestment(location, event.system.queue) : location) };
+    }
+  }
+  const plans = ownedCreditPlans(state, faction, horizon, stats, systemId, option), plannedCredits = plans.credits;
+  const incomeShortfall = plans.incomeFloor > 0 ? Math.max(0, plans.incomeFloor - futureCreditIncome) : 0;
+  // Existing hull policy requires sustainable crews even with cash in reserve.
+  // A revenue project enabling those funded hulls has operational value; paid
+  // revenue queues already contribute to futureCreditIncome, avoiding repeats.
+  const creditNeed = Math.max(0, plannedCredits + option.cost.credits - faction.credits - futureIncome, incomeShortfall > 0 ? output.credits : 0);
+  const usefulCredits = output.credits < 0 ? (creditNeed > 0 ? output.credits : 0) : Math.min(output.credits, creditNeed);
+  const creditWeight = creditNeed > 0 ? 1 : .25, mineralWeight = stats.mineralIncome < stats.colonies * 6 ? 1.5 : 1;
+  // These are ranking weights, not exchange rates. Minerals are still paid
+  // independently, and a rich treasury cannot buy an unavailable ore budget.
+  const benefit = usefulCredits * creditWeight + output.minerals * mineralWeight + output.science * 2 + output.production * .5 + output.orders * 12;
+  const price = option.cost.credits * creditWeight + option.cost.minerals * mineralWeight + option.work * .2;
+  return { worthwhile: benefit > price, horizon, completion, productiveCycles: Math.max(0, horizon - completion), remainingResearch, plannedCredits, creditNeed, incomeShortfall, output, benefit, price };
+}
+
+function worthwhileInvestment(state, faction, system, option) {
+  if (!(option.kind === 'charter' ? ['academy', 'civic'].includes(option.charterType) : ['lab', 'market', 'forum'].includes(option.id))) return true;
+  const discovery = getDiscoveryView(state, system.id, faction.id);
+  if (discovery?.phase === 'maturing' && ANOMALIES[discovery.id].support === option.id) return true;
+  return getInvestmentForecast(state, faction.id, system.id, option).worthwhile;
+}
+
 /** Replace low-value infrastructure without dismantling an established role. */
 function replacementCandidates(state, faction, system, itemId, role, emergency = false, incomeRecovery = false) {
   const protectedIds = new Set(['beacon', CHARTERS[system.charter?.type]?.support, CHARTERS[role]?.support]);
@@ -451,7 +587,7 @@ function replacementCandidates(state, faction, system, itemId, role, emergency =
   const stats = getEmpireStats(state, faction.id);
   const nativeCapacity = 5 + Math.floor(system.habitability / 25);
   if (incomeRecovery && system.population >= nativeCapacity - 1) protectedIds.add('habitat');
-  const retainedValue = { mine: stats.mineralIncome < colonies.length * 6 ? 90 : 35, lab: 50, market: stats.creditIncome < (faction.alignment?.active ? 70 : 12) ? 90 : 25, shipyard: 40, factory: 55, forum: stats.maxOrders < 15 ? 45 : 20, habitat: system.population >= getSystemYield(state, system).capacity - 1 ? 65 : 10, bastion: observedEnemies(state, faction, system.id).length ? 100 : 15 };
+  const retainedValue = { mine: stats.mineralIncome < colonies.length * 6 ? 90 : 35, lab: 50, market: stats.creditIncome < (faction.alignment?.active ? 70 : 12) ? 90 : 25, shipyard: 40, factory: 55, forum: getOrderChange(state, faction.id, -1).change < 0 ? 45 : 20, habitat: system.population >= getSystemYield(state, system).capacity - 1 ? 65 : 10, bastion: observedEnemies(state, faction, system.id).length ? 100 : 15 };
   const value = id => retainedValue[id] || 30;
   return system.buildings.filter(id => !protectedIds.has(id) && id !== itemId)
     .filter(id => emergency || (id !== 'mine' || stats.mineralIncome - 5 >= Math.max(3, colonies.length * 3)) && (id !== 'market' || stats.creditIncome - 7 >= (faction.alignment?.active ? 60 : 3) || incomeRecovery && itemId === 'habitat' && system.population >= nativeCapacity - 1))
@@ -463,14 +599,16 @@ function buildAt(state, faction, system, priorities, act, { role = null, emergen
   for (const itemId of priorities) {
     let option = getBuildOptions(state, system.id, faction.id).find(item => item.id === itemId);
     let replaceBuildingId;
+    const revenueException = incomeRecovery && ['market', 'forum', 'habitat'].includes(itemId) && needsAlignmentIncome(state, faction);
+    const valuable = candidate => emergency || revenueException || worthwhileInvestment(state, faction, system, candidate);
     if (option?.kind === 'building' && !system.buildings.includes(itemId) && !getInfrastructure(state, system).available && replace) {
       for (const candidate of replacementCandidates(state, faction, system, itemId, role, emergency, incomeRecovery)) {
         const replacement = getBuildOptions(state, system.id, faction.id, candidate).find(item => item.id === itemId);
-        if (replacement?.enabled) { option = replacement; replaceBuildingId = candidate; break; }
+        if (replacement?.enabled && valuable(replacement)) { option = replacement; replaceBuildingId = candidate; break; }
       }
     }
-    const revenueException = incomeRecovery && ['market', 'forum', 'habitat'].includes(itemId) && needsAlignmentIncome(state, faction);
     if (!option?.enabled || !emergency && !revenueException && itemId !== 'beacon' && !canSpend(state, faction, option.cost)) continue;
+    if (!valuable(option)) continue;
     if (act({ type: 'build', systemId: system.id, itemId, ...(replaceBuildingId ? { replaceBuildingId } : {}) }).ok) return true;
   }
   return false;
@@ -634,7 +772,7 @@ function economicTurn(state, faction, act) {
     if (system.buildings.includes(support)) {
       const development = getDevelopmentOptions(state, system.id, faction.id).find(option => option.charterType === role);
       // Level II is a mature investment; cash-poor empires still need working capital.
-      if (development?.enabled && canSpend(state, faction, development.cost) && faction.credits - development.cost.credits >= Math.max(resourceReserve(state, faction).credits, development.level === 2 ? 100 : 45) && stats.creditIncome >= 0 && stats.mineralIncome >= colonies.length * 3) {
+      if (development?.enabled && canSpend(state, faction, development.cost) && faction.credits - development.cost.credits >= Math.max(resourceReserve(state, faction).credits, development.level === 2 ? 100 : 45) && stats.creditIncome >= 0 && stats.mineralIncome >= colonies.length * 3 && worthwhileInvestment(state, faction, system, development)) {
         if (act({ type: 'develop', systemId: system.id, charterType: role }).ok) continue;
       }
     }

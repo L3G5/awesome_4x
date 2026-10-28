@@ -1,0 +1,1645 @@
+{
+  "schemaVersion": 1,
+  "baselineRevision": "c4b33668964b42165c0d46edc5881498c661e572",
+  "engineRevision": null,
+  "engineSource": "working-tree snapshot",
+  "headWhenRun": "c4b33668964b42165c0d46edc5881498c661e572",
+  "changedEngineFilesSinceHead": [
+    "src/ai.js",
+    "src/development.js",
+    "src/game.js"
+  ],
+  "hashes": {
+    "script": "773d236eb392041a00d0d6314f2db907af1b68760a6ad65abc59e3ffd404398f",
+    "baselineAI": "3ef12265af9ad274d5ee80a27db3d65aef4472e5185e389c159aad9d1dee3c59",
+    "candidateAI": "27ddf3d7bd7f931f2b388eb65544574ab2c31e1e4efa3d0c52cc259f1abdd9c4",
+    "sharedEngine": {
+      "src/content.js": "383c7b57adc4ba7c434549dc697c6a3b80a34f02a12085d1280706c3609ad855",
+      "src/development.js": "9d3f8e4c37bb480125eca59dc20511f07ba00da5ce12cc7e19b365f9b1e4ba49",
+      "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+      "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+      "src/game.js": "812accfaee69ff98147f965ec98066a9c963966a7aa89c4574750726e4a1d04b",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+    }
+  },
+  "interpretation": [
+    "Eight deterministic seed pairs; all four factions, including the player, use each variant. This is not a benchmark against human decisions or proof of overall faction balance.",
+    "The dependency-complete engine is identical for both variants; only ai.js differs. Identical audit hooks observe successful commands without changing state.",
+    "Zero under forecast means no useful science, order, or credit output under the bounded policy assumptions, excluding discovery support and alignment-income recovery. This does not prove the purchase is globally useless: a public race may be interrupted and new future plans may emerge.",
+    "Planning holds population constant, includes paid construction and current research, and uses at most 24 cycles or a public active alignment remaining plus two interruption cycles. It does not predict subsequent research choices or future conquest."
+  ],
+  "checks": {
+    "validCampaigns": 16,
+    "invalidSaves": 0,
+    "negativeResourceStates": 0,
+    "jsonReloadReplayChecks": 32,
+    "replayTurns": [
+      20,
+      40
+    ]
+  },
+  "summary": {
+    "before": {
+      "campaigns": 8,
+      "finishMedian": 71.5,
+      "protocolMedian": 49,
+      "protocolCount": 32,
+      "firstAlignmentMedian": 63,
+      "alignmentCount": 24,
+      "purchases": 651,
+      "zeroUnderForecast": 383,
+      "winners": {
+        "player": 4,
+        "veyr": 2,
+        "khar": 1,
+        "choir": 1
+      }
+    },
+    "after": {
+      "campaigns": 8,
+      "finishMedian": 67,
+      "protocolMedian": 48,
+      "protocolCount": 31,
+      "firstAlignmentMedian": 60,
+      "alignmentCount": 26,
+      "purchases": 249,
+      "zeroUnderForecast": 0,
+      "winners": {
+        "player": 3,
+        "veyr": 2,
+        "khar": 0,
+        "choir": 3
+      }
+    }
+  },
+  "fixture": {
+    "source": "ASTERION, baseline AI, ordinary all-faction AI rounds to turn 60. Cancel Halcyon Civic II through the normal command to return to the same planning point for each variant.",
+    "initialEmpire": {
+      "credits": 4030,
+      "minerals": 96,
+      "science": 0,
+      "creditIncome": 255,
+      "mineralIncome": 96,
+      "scienceIncome": 129,
+      "production": 129,
+      "upkeep": 14,
+      "colonies": 9,
+      "population": 81,
+      "ships": 8,
+      "military": 93.8,
+      "orders": 18,
+      "maxOrders": 18,
+      "uncappedOrders": 19,
+      "orderLimit": 18,
+      "score": 577,
+      "beacons": 1,
+      "explored": 38
+    },
+    "originalQueue": {
+      "itemId": "civic",
+      "kind": "charter",
+      "charterType": "civic",
+      "charterLevel": 2,
+      "progress": 16,
+      "work": 100,
+      "cost": {
+        "credits": 300,
+        "minerals": 100
+      }
+    },
+    "variants": {
+      "before": {
+        "before": {
+          "credits": 4282,
+          "minerals": 180,
+          "orders": 18
+        },
+        "forecast": {
+          "worthwhile": false,
+          "horizon": 24,
+          "completion": 7,
+          "productiveCycles": 17,
+          "remainingResearch": 243,
+          "plannedCredits": 857,
+          "creditNeed": 0,
+          "incomeShortfall": 0,
+          "output": {
+            "credits": 136,
+            "minerals": 0,
+            "science": 0,
+            "production": 0,
+            "orders": 0
+          },
+          "benefit": 0,
+          "price": 195
+        },
+        "queue": {
+          "itemId": "civic",
+          "kind": "charter",
+          "charterType": "civic",
+          "charterLevel": 2,
+          "progress": 0,
+          "work": 100,
+          "cost": {
+            "credits": 300,
+            "minerals": 100
+          }
+        },
+        "after": {
+          "credits": 3942,
+          "minerals": 45,
+          "orders": 16
+        }
+      },
+      "after": {
+        "before": {
+          "credits": 4282,
+          "minerals": 180,
+          "orders": 18
+        },
+        "forecast": {
+          "worthwhile": false,
+          "horizon": 24,
+          "completion": 7,
+          "productiveCycles": 17,
+          "remainingResearch": 243,
+          "plannedCredits": 857,
+          "creditNeed": 0,
+          "incomeShortfall": 0,
+          "output": {
+            "credits": 136,
+            "minerals": 0,
+            "science": 0,
+            "production": 0,
+            "orders": 0
+          },
+          "benefit": 0,
+          "price": 195
+        },
+        "queue": null,
+        "after": {
+          "credits": 4242,
+          "minerals": 145,
+          "orders": 17
+        }
+      }
+    }
+  },
+  "cpu": {
+    "method": "Identical generated baseline checkpoints; audit hooks disabled; state cloning excluded; four warmups then twenty endTurn calls per variant/checkpoint. Includes rival AI and simulation, excludes renderer. Hardware and JIT affect timings.",
+    "records": [
+      {
+        "turn": 20,
+        "variant": "before",
+        "colonies": 15,
+        "samples": 20,
+        "medianMs": 4.45,
+        "p95Ms": 4.765,
+        "maxMs": 4.878
+      },
+      {
+        "turn": 20,
+        "variant": "after",
+        "colonies": 15,
+        "samples": 20,
+        "medianMs": 4.621,
+        "p95Ms": 4.914,
+        "maxMs": 6.195
+      },
+      {
+        "turn": 40,
+        "variant": "before",
+        "colonies": 28,
+        "samples": 20,
+        "medianMs": 3.921,
+        "p95Ms": 4.416,
+        "maxMs": 5.492
+      },
+      {
+        "turn": 40,
+        "variant": "after",
+        "colonies": 28,
+        "samples": 20,
+        "medianMs": 4.837,
+        "p95Ms": 5.34,
+        "maxMs": 6.498
+      },
+      {
+        "turn": 60,
+        "variant": "before",
+        "colonies": 33,
+        "samples": 20,
+        "medianMs": 4.578,
+        "p95Ms": 6.209,
+        "maxMs": 6.462
+      },
+      {
+        "turn": 60,
+        "variant": "after",
+        "colonies": 33,
+        "samples": 20,
+        "medianMs": 4.768,
+        "p95Ms": 5.08,
+        "maxMs": 6.291
+      }
+    ]
+  },
+  "campaigns": [
+    {
+      "seed": "ASTERION",
+      "variant": "before",
+      "turn": 72,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 98,
+        "zeroUnderForecast": 60,
+        "zeroCost": {
+          "credits": 5590,
+          "minerals": 2550
+        },
+        "byItem": {
+          "lab": {
+            "total": 20,
+            "zeroUnderForecast": 3
+          },
+          "market": {
+            "total": 32,
+            "zeroUnderForecast": 32
+          },
+          "forum": {
+            "total": 10,
+            "zeroUnderForecast": 4
+          },
+          "academy": {
+            "total": 21,
+            "zeroUnderForecast": 11
+          },
+          "civic": {
+            "total": 15,
+            "zeroUnderForecast": 10
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 48,
+          "firstAlignmentTurn": 63,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 171.3,
+          "credits": 5035,
+          "minerals": 449
+        },
+        "veyr": {
+          "protocolTurn": 47,
+          "firstAlignmentTurn": 63,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 2,
+          "alignment": 4,
+          "active": false,
+          "military": 98.8,
+          "credits": 9857,
+          "minerals": 400
+        },
+        "khar": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": 64,
+          "techs": 12,
+          "colonies": 7,
+          "beacons": 4,
+          "alignment": 9,
+          "active": true,
+          "military": 185.4,
+          "credits": 1889,
+          "minerals": 528
+        },
+        "choir": {
+          "protocolTurn": 41,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 7,
+          "beacons": 3,
+          "alignment": 1,
+          "active": true,
+          "military": 0,
+          "credits": 4377,
+          "minerals": 195
+        }
+      }
+    },
+    {
+      "seed": "ASTERION",
+      "variant": "after",
+      "turn": 65,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 36,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 17,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 8,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 6,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 5,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 43,
+          "firstAlignmentTurn": 57,
+          "techs": 12,
+          "colonies": 11,
+          "beacons": 3,
+          "alignment": 9,
+          "active": true,
+          "military": 186.3,
+          "credits": 3354,
+          "minerals": 926
+        },
+        "veyr": {
+          "protocolTurn": 49,
+          "firstAlignmentTurn": 65,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 1,
+          "active": true,
+          "military": 87.5,
+          "credits": 5487,
+          "minerals": 210
+        },
+        "khar": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": 59,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 3,
+          "alignment": 7,
+          "active": true,
+          "military": 96.3,
+          "credits": 1719,
+          "minerals": 999
+        },
+        "choir": {
+          "protocolTurn": 40,
+          "firstAlignmentTurn": 56,
+          "techs": 12,
+          "colonies": 7,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 93.8,
+          "credits": 1697,
+          "minerals": 578
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-1",
+      "variant": "before",
+      "turn": 76,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 96,
+        "zeroUnderForecast": 61,
+        "zeroCost": {
+          "credits": 4980,
+          "minerals": 2390
+        },
+        "byItem": {
+          "lab": {
+            "total": 21,
+            "zeroUnderForecast": 5
+          },
+          "market": {
+            "total": 34,
+            "zeroUnderForecast": 34
+          },
+          "forum": {
+            "total": 9,
+            "zeroUnderForecast": 4
+          },
+          "academy": {
+            "total": 22,
+            "zeroUnderForecast": 10
+          },
+          "civic": {
+            "total": 10,
+            "zeroUnderForecast": 8
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 45,
+          "firstAlignmentTurn": 60,
+          "techs": 12,
+          "colonies": 8,
+          "beacons": 2,
+          "alignment": 1,
+          "active": false,
+          "military": 191.3,
+          "credits": 4538,
+          "minerals": 364
+        },
+        "veyr": {
+          "protocolTurn": 52,
+          "firstAlignmentTurn": 67,
+          "techs": 12,
+          "colonies": 15,
+          "beacons": 4,
+          "alignment": 10,
+          "active": true,
+          "military": 302.5,
+          "credits": 9494,
+          "minerals": 383
+        },
+        "khar": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": 70,
+          "techs": 12,
+          "colonies": 5,
+          "beacons": 3,
+          "alignment": 7,
+          "active": true,
+          "military": 34.5,
+          "credits": 3889,
+          "minerals": 89
+        },
+        "choir": {
+          "protocolTurn": 41,
+          "firstAlignmentTurn": 67,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 63.8,
+          "credits": 4106,
+          "minerals": 293
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-1",
+      "variant": "after",
+      "turn": 66,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 32,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 17,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 3,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 8,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 44,
+          "firstAlignmentTurn": 56,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 18.8,
+          "credits": 3294,
+          "minerals": 760
+        },
+        "veyr": {
+          "protocolTurn": 48,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 4,
+          "alignment": 3,
+          "active": true,
+          "military": 68.8,
+          "credits": 5708,
+          "minerals": 419
+        },
+        "khar": {
+          "protocolTurn": 52,
+          "firstAlignmentTurn": null,
+          "techs": 10,
+          "colonies": 3,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 0,
+          "credits": 1568,
+          "minerals": 43
+        },
+        "choir": {
+          "protocolTurn": 39,
+          "firstAlignmentTurn": 57,
+          "techs": 12,
+          "colonies": 16,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 186.3,
+          "credits": 3538,
+          "minerals": 537
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-2",
+      "variant": "before",
+      "turn": 71,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 73,
+        "zeroUnderForecast": 36,
+        "zeroCost": {
+          "credits": 2390,
+          "minerals": 1220
+        },
+        "byItem": {
+          "lab": {
+            "total": 20,
+            "zeroUnderForecast": 2
+          },
+          "market": {
+            "total": 27,
+            "zeroUnderForecast": 26
+          },
+          "forum": {
+            "total": 6,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 12,
+            "zeroUnderForecast": 4
+          },
+          "civic": {
+            "total": 8,
+            "zeroUnderForecast": 4
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 52,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 182.5,
+          "credits": 4746,
+          "minerals": 952
+        },
+        "veyr": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": 70,
+          "techs": 12,
+          "colonies": 8,
+          "beacons": 3,
+          "alignment": 2,
+          "active": true,
+          "military": 137.5,
+          "credits": 6512,
+          "minerals": 134
+        },
+        "khar": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 11,
+          "beacons": 4,
+          "alignment": 10,
+          "active": true,
+          "military": 207,
+          "credits": 2743,
+          "minerals": 108
+        },
+        "choir": {
+          "protocolTurn": 42,
+          "firstAlignmentTurn": null,
+          "techs": 12,
+          "colonies": 5,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 15,
+          "credits": 2495,
+          "minerals": 91
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-2",
+      "variant": "after",
+      "turn": 66,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 32,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 18,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 5,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 5,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 48,
+          "firstAlignmentTurn": 57,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 182.5,
+          "credits": 3533,
+          "minerals": 1412
+        },
+        "veyr": {
+          "protocolTurn": 48,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 7,
+          "beacons": 3,
+          "alignment": 5,
+          "active": true,
+          "military": 167.5,
+          "credits": 3912,
+          "minerals": 401
+        },
+        "khar": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": null,
+          "techs": 12,
+          "colonies": 7,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 100.6,
+          "credits": 1813,
+          "minerals": 166
+        },
+        "choir": {
+          "protocolTurn": 41,
+          "firstAlignmentTurn": 58,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 3,
+          "alignment": 9,
+          "active": true,
+          "military": 30,
+          "credits": 1265,
+          "minerals": 328
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-3",
+      "variant": "before",
+      "turn": 74,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 75,
+        "zeroUnderForecast": 48,
+        "zeroCost": {
+          "credits": 3140,
+          "minerals": 1660
+        },
+        "byItem": {
+          "lab": {
+            "total": 20,
+            "zeroUnderForecast": 8
+          },
+          "market": {
+            "total": 28,
+            "zeroUnderForecast": 28
+          },
+          "forum": {
+            "total": 5,
+            "zeroUnderForecast": 2
+          },
+          "academy": {
+            "total": 14,
+            "zeroUnderForecast": 5
+          },
+          "civic": {
+            "total": 8,
+            "zeroUnderForecast": 5
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 51,
+          "firstAlignmentTurn": 65,
+          "techs": 12,
+          "colonies": 12,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 167.5,
+          "credits": 4497,
+          "minerals": 867
+        },
+        "veyr": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": 66,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 3,
+          "alignment": 9,
+          "active": true,
+          "military": 186.3,
+          "credits": 6450,
+          "minerals": 285
+        },
+        "khar": {
+          "protocolTurn": 71,
+          "firstAlignmentTurn": 71,
+          "techs": 10,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 4,
+          "active": true,
+          "military": 323.4,
+          "credits": 1768,
+          "minerals": 1007
+        },
+        "choir": {
+          "protocolTurn": 38,
+          "firstAlignmentTurn": 57,
+          "techs": 12,
+          "colonies": 2,
+          "beacons": 0,
+          "alignment": 0,
+          "active": false,
+          "military": 30,
+          "credits": 3708,
+          "minerals": 67
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-3",
+      "variant": "after",
+      "turn": 71,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 27,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 14,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 6,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 3,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 12,
+          "beacons": 4,
+          "alignment": 10,
+          "active": true,
+          "military": 206.3,
+          "credits": 2603,
+          "minerals": 1024
+        },
+        "veyr": {
+          "protocolTurn": 46,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 108.8,
+          "credits": 4889,
+          "minerals": 275
+        },
+        "khar": {
+          "protocolTurn": 69,
+          "firstAlignmentTurn": null,
+          "techs": 10,
+          "colonies": 10,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 271.7,
+          "credits": 1544,
+          "minerals": 1120
+        },
+        "choir": {
+          "protocolTurn": 36,
+          "firstAlignmentTurn": 54,
+          "techs": 12,
+          "colonies": 3,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 0,
+          "credits": 2276,
+          "minerals": 123
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-4",
+      "variant": "before",
+      "turn": 71,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 81,
+        "zeroUnderForecast": 44,
+        "zeroCost": {
+          "credits": 1495,
+          "minerals": 1060
+        },
+        "byItem": {
+          "lab": {
+            "total": 21,
+            "zeroUnderForecast": 2
+          },
+          "market": {
+            "total": 35,
+            "zeroUnderForecast": 35
+          },
+          "forum": {
+            "total": 10,
+            "zeroUnderForecast": 4
+          },
+          "academy": {
+            "total": 12,
+            "zeroUnderForecast": 2
+          },
+          "civic": {
+            "total": 3,
+            "zeroUnderForecast": 1
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 58,
+          "firstAlignmentTurn": null,
+          "techs": 11,
+          "colonies": 8,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 63.8,
+          "credits": 5680,
+          "minerals": 62
+        },
+        "veyr": {
+          "protocolTurn": 49,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 12,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 132.5,
+          "credits": 9207,
+          "minerals": 1065
+        },
+        "khar": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 13,
+          "beacons": 4,
+          "alignment": 8,
+          "active": true,
+          "military": 405.4,
+          "credits": 3177,
+          "minerals": 381
+        },
+        "choir": {
+          "protocolTurn": 40,
+          "firstAlignmentTurn": null,
+          "techs": 12,
+          "colonies": 3,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 0,
+          "credits": 3744,
+          "minerals": 46
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-4",
+      "variant": "after",
+      "turn": 66,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 34,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 18,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 5,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 7,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": null,
+          "techs": 11,
+          "colonies": 9,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 108.8,
+          "credits": 3640,
+          "minerals": 83
+        },
+        "veyr": {
+          "protocolTurn": 46,
+          "firstAlignmentTurn": 57,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 102.5,
+          "credits": 5827,
+          "minerals": 1128
+        },
+        "khar": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 11,
+          "beacons": 4,
+          "alignment": 5,
+          "active": true,
+          "military": 316.3,
+          "credits": 1663,
+          "minerals": 672
+        },
+        "choir": {
+          "protocolTurn": 39,
+          "firstAlignmentTurn": null,
+          "techs": 12,
+          "colonies": 4,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 15,
+          "credits": 2547,
+          "minerals": 198
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-5",
+      "variant": "before",
+      "turn": 72,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 82,
+        "zeroUnderForecast": 50,
+        "zeroCost": {
+          "credits": 3590,
+          "minerals": 1780
+        },
+        "byItem": {
+          "lab": {
+            "total": 22,
+            "zeroUnderForecast": 6
+          },
+          "market": {
+            "total": 30,
+            "zeroUnderForecast": 30
+          },
+          "forum": {
+            "total": 8,
+            "zeroUnderForecast": 4
+          },
+          "academy": {
+            "total": 13,
+            "zeroUnderForecast": 4
+          },
+          "civic": {
+            "total": 9,
+            "zeroUnderForecast": 6
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 49,
+          "firstAlignmentTurn": 63,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 132.5,
+          "credits": 3951,
+          "minerals": 506
+        },
+        "veyr": {
+          "protocolTurn": 66,
+          "firstAlignmentTurn": null,
+          "techs": 9,
+          "colonies": 7,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 78.8,
+          "credits": 4477,
+          "minerals": 272
+        },
+        "khar": {
+          "protocolTurn": 49,
+          "firstAlignmentTurn": 61,
+          "techs": 12,
+          "colonies": 8,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 17.3,
+          "credits": 3773,
+          "minerals": 139
+        },
+        "choir": {
+          "protocolTurn": 43,
+          "firstAlignmentTurn": 66,
+          "techs": 12,
+          "colonies": 11,
+          "beacons": 4,
+          "alignment": 7,
+          "active": true,
+          "military": 108.8,
+          "credits": 3747,
+          "minerals": 125
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-5",
+      "variant": "after",
+      "turn": 72,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 30,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 14,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 8,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 47,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 93.8,
+          "credits": 3136,
+          "minerals": 765
+        },
+        "veyr": {
+          "protocolTurn": 52,
+          "firstAlignmentTurn": 61,
+          "techs": 12,
+          "colonies": 7,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 171.3,
+          "credits": 3470,
+          "minerals": 1371
+        },
+        "khar": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": 72,
+          "techs": 12,
+          "colonies": 8,
+          "beacons": 3,
+          "alignment": 1,
+          "active": true,
+          "military": 51.8,
+          "credits": 2153,
+          "minerals": 153
+        },
+        "choir": {
+          "protocolTurn": 39,
+          "firstAlignmentTurn": 65,
+          "techs": 12,
+          "colonies": 9,
+          "beacons": 4,
+          "alignment": 8,
+          "active": true,
+          "military": 171.3,
+          "credits": 3184,
+          "minerals": 73
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-6",
+      "variant": "before",
+      "turn": 60,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 78,
+        "zeroUnderForecast": 42,
+        "zeroCost": {
+          "credits": 2795,
+          "minerals": 1410
+        },
+        "byItem": {
+          "lab": {
+            "total": 18,
+            "zeroUnderForecast": 2
+          },
+          "market": {
+            "total": 29,
+            "zeroUnderForecast": 29
+          },
+          "forum": {
+            "total": 7,
+            "zeroUnderForecast": 3
+          },
+          "academy": {
+            "total": 17,
+            "zeroUnderForecast": 4
+          },
+          "civic": {
+            "total": 7,
+            "zeroUnderForecast": 4
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 49,
+          "firstAlignmentTurn": null,
+          "techs": 11,
+          "colonies": 10,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 120,
+          "credits": 3602,
+          "minerals": 162
+        },
+        "veyr": {
+          "protocolTurn": 47,
+          "firstAlignmentTurn": null,
+          "techs": 11,
+          "colonies": 7,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 158.8,
+          "credits": 5733,
+          "minerals": 145
+        },
+        "khar": {
+          "protocolTurn": 53,
+          "firstAlignmentTurn": null,
+          "techs": 11,
+          "colonies": 8,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 120.7,
+          "credits": 2333,
+          "minerals": 105
+        },
+        "choir": {
+          "protocolTurn": 33,
+          "firstAlignmentTurn": 51,
+          "techs": 12,
+          "colonies": 8,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 45,
+          "credits": 2808,
+          "minerals": 498
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-6",
+      "variant": "after",
+      "turn": 68,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 34,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 19,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 7,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 5,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 3,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 49,
+          "firstAlignmentTurn": 59,
+          "techs": 12,
+          "colonies": 12,
+          "beacons": 4,
+          "alignment": 10,
+          "active": true,
+          "military": 215,
+          "credits": 3876,
+          "minerals": 1237
+        },
+        "veyr": {
+          "protocolTurn": 45,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 11,
+          "beacons": 3,
+          "alignment": 7,
+          "active": true,
+          "military": 186.3,
+          "credits": 5086,
+          "minerals": 556
+        },
+        "khar": {
+          "protocolTurn": 50,
+          "firstAlignmentTurn": 59,
+          "techs": 12,
+          "colonies": 11,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 202.7,
+          "credits": 2793,
+          "minerals": 1087
+        },
+        "choir": {
+          "protocolTurn": 34,
+          "firstAlignmentTurn": 44,
+          "techs": 12,
+          "colonies": 2,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 15,
+          "credits": 1916,
+          "minerals": 232
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-7",
+      "variant": "before",
+      "turn": 71,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 68,
+        "zeroUnderForecast": 42,
+        "zeroCost": {
+          "credits": 2275,
+          "minerals": 1270
+        },
+        "byItem": {
+          "lab": {
+            "total": 16,
+            "zeroUnderForecast": 3
+          },
+          "market": {
+            "total": 29,
+            "zeroUnderForecast": 29
+          },
+          "forum": {
+            "total": 8,
+            "zeroUnderForecast": 4
+          },
+          "academy": {
+            "total": 11,
+            "zeroUnderForecast": 4
+          },
+          "civic": {
+            "total": 4,
+            "zeroUnderForecast": 2
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 47,
+          "firstAlignmentTurn": 62,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 3,
+          "alignment": 10,
+          "active": true,
+          "military": 78.8,
+          "credits": 4729,
+          "minerals": 676
+        },
+        "veyr": {
+          "protocolTurn": 59,
+          "firstAlignmentTurn": null,
+          "techs": 9,
+          "colonies": 5,
+          "beacons": 1,
+          "alignment": 0,
+          "active": false,
+          "military": 63.8,
+          "credits": 5741,
+          "minerals": 59
+        },
+        "khar": {
+          "protocolTurn": 58,
+          "firstAlignmentTurn": 69,
+          "techs": 12,
+          "colonies": 14,
+          "beacons": 3,
+          "alignment": 3,
+          "active": true,
+          "military": 247.3,
+          "credits": 4254,
+          "minerals": 124
+        },
+        "choir": {
+          "protocolTurn": 41,
+          "firstAlignmentTurn": 64,
+          "techs": 12,
+          "colonies": 4,
+          "beacons": 2,
+          "alignment": 0,
+          "active": false,
+          "military": 30,
+          "credits": 3851,
+          "minerals": 72
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-7",
+      "variant": "after",
+      "turn": 70,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "purchases": {
+        "total": 24,
+        "zeroUnderForecast": 0,
+        "zeroCost": {
+          "credits": 0,
+          "minerals": 0
+        },
+        "byItem": {
+          "lab": {
+            "total": 14,
+            "zeroUnderForecast": 0
+          },
+          "market": {
+            "total": 0,
+            "zeroUnderForecast": 0
+          },
+          "forum": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          },
+          "academy": {
+            "total": 4,
+            "zeroUnderForecast": 0
+          },
+          "civic": {
+            "total": 2,
+            "zeroUnderForecast": 0
+          }
+        }
+      },
+      "factions": {
+        "player": {
+          "protocolTurn": 43,
+          "firstAlignmentTurn": 56,
+          "techs": 12,
+          "colonies": 4,
+          "beacons": 0,
+          "alignment": 0,
+          "active": false,
+          "military": 45,
+          "credits": 3216,
+          "minerals": 43
+        },
+        "veyr": {
+          "protocolTurn": null,
+          "firstAlignmentTurn": null,
+          "techs": 5,
+          "colonies": 0,
+          "beacons": 0,
+          "alignment": 0,
+          "active": false,
+          "military": 0,
+          "credits": 1545,
+          "minerals": 6
+        },
+        "khar": {
+          "protocolTurn": 52,
+          "firstAlignmentTurn": 63,
+          "techs": 12,
+          "colonies": 16,
+          "beacons": 4,
+          "alignment": 8,
+          "active": true,
+          "military": 490.2,
+          "credits": 3105,
+          "minerals": 845
+        },
+        "choir": {
+          "protocolTurn": 38,
+          "firstAlignmentTurn": 61,
+          "techs": 12,
+          "colonies": 10,
+          "beacons": 5,
+          "alignment": 10,
+          "active": true,
+          "military": 167.5,
+          "credits": 2571,
+          "minerals": 588
+        }
+      }
+    }
+  ]
+}

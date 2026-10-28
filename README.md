@@ -26,7 +26,11 @@ The [campaign benchmark report](docs/campaign-benchmark.html) records 80 determi
 
 The version 0.5.0 [discovery measurements](docs/results/stage5-discoveries.json) record 40 campaigns at commit `af9d817` and the source fingerprints used. Run `node scripts/campaign-benchmark.mjs --discoveries` to measure preservation, restoration and salvage under passive and balanced player policies; use that release revision for exact reproduction.
 
-The [wartime readiness comparison](docs/results/stage6-readiness.json) runs 32 campaigns with deterministic replays, holding the whole engine fixed while changing only the AI module. Reproduce with `node scripts/readiness-benchmark.mjs`; `--engine-ref` selects a historical release. Its definitions distinguish wartime observations, missing forces, queued replacements and economic limitations.
+The [wartime readiness comparison](docs/results/stage6-readiness.json) runs 32 campaigns with deterministic replays, holding the whole engine fixed while changing only the AI module. Reproduce with `node scripts/readiness-benchmark.mjs --engine-ref c4b3366`; omit `--engine-ref` to measure the current engine. Its definitions distinguish wartime observations, missing forces, queued replacements and economic limitations.
+
+The [investment comparison](docs/results/stage7-investment.json) measures bounded economic forecasts against the version-0.6 AI. Run `node scripts/investment-benchmark.mjs` for its generated planning fixture, eight paired campaigns, replay checks and CPU probes. The forecast's investment values are planning assumptions rather than proof of human difficulty or optimal play.
+
+The [human-style midgame playtest](docs/stage6-playtest.html) records a legitimate cycle-40 campaign played through the version-0.6 interface to victory at cycle 67, with decisions, screenshots and the exported save. It documents useful production constraints and the quiet final countdown; it is one observed strategy, not a difficulty estimate.
 
 ## Deployment
 

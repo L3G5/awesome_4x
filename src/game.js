@@ -3,14 +3,14 @@ import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { runAI } from './ai.js';
 import { executeDiplomacy, advanceDiplomacy, validateDiplomacyState } from './diplomacy.js';
 import { captureParticipant, finishParticipant, appendCombatReport, finalizeBriefing, summarizeCombatReports, validateReportState } from './reports.js';
-import { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getConstructionCost, validateDevelopmentSystem } from './development.js';
+import { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getConstructionCost, getOrderCapacity, getOrderChange, validateDevelopmentSystem } from './development.js';
 import { getAlignmentStatus, advanceAlignment, revealPublicBeacons, validateAlignmentState } from './victory.js';
 import { getRoutePreview, continuePlannedRoute, updateRouteAfterMove, reconcileRoutes, validateNavigationState } from './navigation.js';
 import { placeDiscoveries, observeDiscovery, observeDiscoveries, getDiscoveryBuildReason, recordDiscoveryConstruction, executeDiscovery, mergeDiscoveryHeritage, advanceDiscoveries, validateDiscoveryState } from './discoveries.js';
 import { recordSovereigntyTransfer, validatePublicAffairsState } from './public-affairs.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
-export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject } from './development.js';
+export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getOrderCapacity, getOrderChange } from './development.js';
 export { getRoutePreview, getRouteStatus } from './navigation.js';
 export { getPublicRelationships, getPublicDispatches, getKnownTransfers } from './public-affairs.js';
 
@@ -172,11 +172,11 @@ export function getEmpireStats(state, factionId = 'player') {
   const upkeep = fleets.reduce((total, f) => total + SHIPS[f.type].upkeep * f.ships, 0);
   const tradeIncome = Object.values(faction.relations).filter(r => r.trade).length * (has(faction, 'diplomacy') ? 10 : 6);
   const creditIncome = Math.floor(sum('credits') * (factionId === 'veyr' ? 1.25 : 1)) + tradeIncome - upkeep;
-  const maxOrders = Math.min(18, 4 + colonies.length + (factionId === 'player' ? 1 : 0) + (has(faction, 'logistics') ? 1 : 0) + (has(faction, 'command') ? 2 : 0) + colonies.filter(s => s.buildings.includes('forum')).length + colonies.reduce((sum, system) => sum + getCharterBonuses(system).orders, 0));
+  const orderCapacity = getOrderCapacity(state, factionId), maxOrders = orderCapacity.total;
   const population = colonies.reduce((total, s) => total + s.population, 0);
   const military = fleets.reduce((total, f) => total + fleetPower(state, f), 0);
   const beacons = colonies.filter(s => s.buildings.includes('beacon')).length;
-  return { credits: faction.credits, minerals: faction.minerals, science: faction.science, creditIncome, mineralIncome: sum('minerals'), scienceIncome: Math.floor(sum('science') * (factionId === 'choir' ? 1.25 : 1)), production: sum('production'), upkeep, colonies: colonies.length, population, ships: fleets.reduce((n, f) => n + f.ships, 0), military: round(military), orders: faction.orders, maxOrders, score: colonies.length * 20 + population * 2 + faction.techs.length * 12 + beacons * 80 + Math.floor(military / 4), beacons, explored: state.systems.filter(s => s.exploredBy.includes(factionId)).length };
+  return { credits: faction.credits, minerals: faction.minerals, science: faction.science, creditIncome, mineralIncome: sum('minerals'), scienceIncome: Math.floor(sum('science') * (factionId === 'choir' ? 1.25 : 1)), production: sum('production'), upkeep, colonies: colonies.length, population, ships: fleets.reduce((n, f) => n + f.ships, 0), military: round(military), orders: faction.orders, maxOrders, uncappedOrders: orderCapacity.uncapped, orderLimit: orderCapacity.limit, score: colonies.length * 20 + population * 2 + faction.techs.length * 12 + beacons * 80 + Math.floor(military / 4), beacons, explored: state.systems.filter(s => s.exploredBy.includes(factionId)).length };
 }
 
 export function getResearchOptions(state, factionId = 'player') {
@@ -205,7 +205,9 @@ export function getBuildOptions(state, systemId, factionId = 'player', replaceBu
     else if (getDiscoveryBuildReason(state, system, item.id, factionId)) reason = getDiscoveryBuildReason(state, system, item.id, factionId);
     else if (!canPay(faction, cost)) reason = 'Insufficient credits or minerals';
     else if (faction.orders < 1) reason = 'No orders remaining';
-    return { ...item, cost, replaceBuildingId: item.kind === 'building' ? replaceBuildingId : null, enabled: !reason, reason, turns: system?.owner ? Math.ceil(item.work / getSystemYield(state, system).production) : 0 };
+    const removesCharter = replaceBuildingId && system?.charter && CHARTERS[system.charter.type].support === replaceBuildingId;
+    const orderDelta = item.kind === 'building' ? (item.orders || 0) - (BUILDINGS[replaceBuildingId]?.orders || 0) - (removesCharter ? getCharterBonuses(system).orders : 0) : 0;
+    return { ...item, cost, replaceBuildingId: item.kind === 'building' ? replaceBuildingId : null, orderEffect: getOrderChange(state, factionId, orderDelta), enabled: !reason, reason, turns: system?.owner ? Math.ceil(item.work / getSystemYield(state, system).production) : 0 };
   });
 }
 
@@ -612,7 +614,7 @@ function isValidSave(value) {
   if (value.winner !== null && !ids.includes(value.winner)) return false;
   for (const faction of value.factions) {
     if (!text(faction.name) || !text(faction.color) || !/^#[0-9a-f]{6}$/i.test(faction.color) || typeof faction.eliminated !== 'boolean' || !['credits', 'minerals', 'science', 'orders'].every(key => Number.isFinite(faction[key]) && faction[key] >= 0) || !Array.isArray(faction.techs) || faction.techs.some(id => !member(TECHS, id)) || new Set(faction.techs).size !== faction.techs.length || !Array.isArray(faction.contacts) || faction.contacts.some(id => !ids.includes(id)) || !systemIds.has(faction.capitalId) || !faction.relations) return false;
-    if (faction.research && (!member(TECHS, faction.research.techId) || !Number.isFinite(faction.research.progress) || faction.research.progress < 0 || faction.research.progress >= TECHS[faction.research.techId].cost)) return false;
+    if (faction.research && (!member(TECHS, faction.research.techId) || faction.techs.includes(faction.research.techId) || !Number.isFinite(faction.research.progress) || faction.research.progress < 0 || faction.research.progress >= TECHS[faction.research.techId].cost)) return false;
     if (faction.strategy !== undefined && (!faction.strategy || !['defend', 'assemble', 'advance', 'develop'].includes(faction.strategy.mode) || (faction.strategy.rallyId !== null && !systemIds.has(faction.strategy.rallyId)) || (faction.strategy.objectiveId !== null && !systemIds.has(faction.strategy.objectiveId)) || !Number.isInteger(faction.strategy.turn) || faction.strategy.turn < 1 || faction.strategy.turn > value.turn)) return false;
     for (const other of ids.filter(id => id !== faction.id)) { const r = faction.relations[other]; if (!r || !['peace', 'war'].includes(r.status) || !Number.isFinite(r.trust) || typeof r.trade !== 'boolean' || !Number.isFinite(r.treatyTurn)) return false; }
   }
