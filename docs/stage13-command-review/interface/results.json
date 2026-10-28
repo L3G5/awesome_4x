@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "name": "Current orbit sequence and pure inspection",
+      "text": "ENGAGEMENT PLAN\nVanguard 3\n4 ships · 136 / 136 hull\n\nOnly this formation attacks. Nearby friendly fleets do not combine their fire.\n\nVISIBLE OPPONENT ORDER\nVanguard 6\nVeyr · 4 frigates · 136 / 136 hull\nColony Ark 5\nVeyr · 1 colony ship · 24 / 24 hull\n\nEach exchange lasts up to four rounds. If your formation survives, it faces the next opponent, even if the previous defender also survives. Destruction ends the attack.\n\nEngage · 1 order + 1 move"
+    },
+    {
+      "name": "Hidden opposition, arrival, actual sequential exchanges and historical participant portraits",
+      "unknownInvariant": true,
+      "unknown": {
+        "systemId": "s28",
+        "systemName": "Haven",
+        "context": "arrival",
+        "selected": {
+          "id": "f3",
+          "name": "Vanguard 3",
+          "owner": "player",
+          "type": "frigate",
+          "ships": 4,
+          "hp": 136,
+          "maxHp": 136
+        },
+        "observed": false,
+        "opponents": null,
+        "otherFriendly": [],
+        "hostileColony": false
+      },
+      "arrival": "arrival",
+      "arrivalCost": true,
+      "reportInvariant": true,
+      "reportArtCount": 4,
+      "outcomes": [
+        "contested",
+        "defender-destroyed"
+      ],
+      "historyHasAncient": false
+    },
+    {
+      "name": "Refugee dialog 1280",
+      "text": "Bring them home →\n\nSolace gains 1 population: 8 → 9.\n\n9 / 8 population after arrival. Refugees can exceed the natural-growth limit. Their population remains; natural growth pauses at or above the limit.\n\n◈ 20 credits · 1 order"
+    },
+    {
+      "name": "Refugee dialog 390",
+      "text": "Bring them home →\n\nSolace gains 1 population: 8 → 9.\n\n9 / 8 population after arrival. Refugees can exceed the natural-growth limit. Their population remains; natural growth pauses at or above the limit.\n\n◈ 20 credits · 1 order"
+    },
+    {
+      "name": "Garden at 95%",
+      "text": "Wake the caretakers →\n\nHabitability rises from 95% to 100% (+5 points). Gain 20 science.\n\n1 order"
+    },
+    {
+      "name": "Garden at 100%",
+      "text": "Wake the caretakers →\n\nHabitability is already 100%; this choice adds no habitability. Gain 20 science.\n\n1 order"
+    }
+  ],
+  "errors": [],
+  "method": "Independent source/engine review and six browser checks on live dev http://127.0.0.1:5190 using explicitly synthetic boundary fixtures. Read-only game inspection; no campaign source edits. Historical report comparison excludes current navigation actions, which correctly depend on surviving selectable fleets.",
+  "sourceHashes": {
+    "src/combat-preview.js": "ad31122fd22866d40e4a82b082875556130014176b6de128dd7745eb91507764",
+    "src/combat-ui.js": "379670eb4feebc34612f5a740a8fc1741cbf5e3abf80421553a7a835b0e834d2",
+    "src/report-ui.js": "3579063b178e641f09c40ca068d932238b4987ee8999950cfeee1fa0ee38236a",
+    "src/discovery-ui.js": "665beba05fba932732b9822110917f0c4a4fe3c7492ae6eb87d49e8f9fce4b05",
+    "src/main.js": "4c441ce3119d84748dcd7940e6a379e199618a1136d056ff4ca969ddcf4b98c8",
+    "src/game.js": "530029ef4d981d88e8d30f9e046d955ff704d85379d24b42e69ce78c9df1c0e9"
+  }
+}

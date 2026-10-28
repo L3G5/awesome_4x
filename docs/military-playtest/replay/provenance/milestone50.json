@@ -1,0 +1,90 @@
+{
+  "seed": "IRON-COVENANT-10",
+  "version": "0.10.0",
+  "revision": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+  "turn": 50,
+  "outcome": "milestone, no victory claimed",
+  "foundingSystemsHeld": 2,
+  "foundingSystemsRequired": 4,
+  "own": {
+    "credits": 1844,
+    "minerals": 513,
+    "science": 0,
+    "orders": 18,
+    "techs": [
+      "logistics",
+      "weapons",
+      "industry",
+      "physics",
+      "shields",
+      "cruisers",
+      "ecology",
+      "diplomacy",
+      "command",
+      "computing"
+    ],
+    "research": {
+      "techId": "singularity",
+      "progress": 353
+    },
+    "contacts": [
+      "veyr",
+      "choir",
+      "khar"
+    ],
+    "relations": {
+      "veyr": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 46,
+        "lastBorderCount": 1,
+        "grievance": 3,
+        "tradeEndsAt": 0,
+        "truceUntil": 51,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 29,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0,
+        "truceUntil": 34,
+        "warStartColonies": 3
+      },
+      "choir": {
+        "status": "peace",
+        "trust": 63,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      }
+    },
+    "alignment": {
+      "progress": 0,
+      "sites": [],
+      "active": false,
+      "started": false,
+      "reportedBeacons": []
+    }
+  },
+  "colonies": 9,
+  "observedIncome": {
+    "credits": 160,
+    "minerals": 102,
+    "science": 141
+  },
+  "ships": 13,
+  "ordinaryUIOnly": true,
+  "notes": [
+    "Khar limited war19\u201329 gainedCaldera after initialdefeat",
+    "Veyr declared35; peace46 aftercapitalcapture",
+    "Earlier Battle report finding retracted: invalidnumericCSSselector, quotedselectorworks",
+    "No fullsave or hiddenforeignstate inspected forplay decisions"
+  ]
+}

@@ -1,6 +1,7 @@
 import './style.css';
 import './workspace.css';
 import './fleet-operations.css';
+import './command-clarity.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
@@ -8,6 +9,8 @@ import { renderDiplomacyPage } from './diplomacy-ui.js';
 import { renderColonyTable } from './empire-ui.js';
 import { renderWorkspaceInspector } from './workspace-ui.js';
 import { renderShipPortrait } from './ship-ui.js';
+import { renderEngagementPreview } from './combat-ui.js';
+import { getDefenseOrder } from './combat-preview.js';
 import { renderSplitDialog, renderColonyRepairSummary, renderFleetReadiness } from './fleet-ui.js';
 import { getFleetReadiness, getReadyFleets } from './game.js';
 import { formatHull } from './hull-format.js';
@@ -131,6 +134,8 @@ function renderInspector() {
   html += renderDiscoverySummary(state,system);
   if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}>${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull</small></span>${f.owner==='player'?renderFleetReadiness(state,f):''}</button>`).join('')}</div></section>`;
   const selectedFleet=fleetById(selectedFleetId);
+  if(getDefenseOrder(state,system.id).length>1)html+='<section class="panel-section"><p class="formation-order-note">Your formations defend separately in the order shown above, including civilian ships. An attacker that survives an exchange proceeds to its next opposing formation; destruction ends its attack.</p></section>';
+  if(selectedFleet)html+=renderEngagementPreview(state,selectedFleet.id,system.id);
   html += renderColonyRepairSummary(state,system);
   const invasion=selectedFleet?.systemId===system.id ? estimateInvasion(state,selectedFleet.id) : null;
   if(invasion) html+=`<section class="panel-section"><div class="invasion-preview"><div class="section-label">Invasion forecast</div><strong>${invasion.defense} colony defenses</strong><br>Your volley: ${invasion.damageMin}–${invasion.damageMax} defense damage<br>Retaliation: ${invasion.retaliation} hull${invasion.shielded?' · Shields applied':''}<br>${invasion.captureGuaranteed?'Capture expected with this volley.':invasion.capturePossible?'This volley may capture the colony.':'Further bombardment is required.'}<br>Cost: 1 order + 1 move</div></section>`;
@@ -160,8 +165,8 @@ function renderFleet() {
   } else if (different) {
     const reason = movementReason(fleet,target), hostileColony = target.owner && target.owner!=='player' && player().relations[target.owner].status==='war';
     const hostileFleet = getVisibleFleets(state,'player',target.id).some(f=>f.owner!=='player' && player().relations[f.owner].status==='war');
-    const war = hostileColony || hostileFleet;
-    detail = reason || `${home.name} → ${target.name} · 1 order${war?` · ${estimateCombat(state,fleet.id,target.id).odds} engagement`:!hasSensors(state,'player',target.id)?' · Fleet presence unknown':''}`;
+    const approach = hostileFleet?`${estimateCombat(state,fleet.id,target.id).odds} engagement`:!hasSensors(state,'player',target.id)?'Fleet presence unknown':hostileColony?'Invasion is a separate action':'';
+    detail = reason || `${home.name} → ${target.name} · 1 order${approach?` · ${approach}`:''}`;
     actions = `<button class="primary" data-action="move" data-target="${target.id}" ${reason?'disabled':''}>${hostileFleet?'Engage':hostileColony?'Enter orbit':'Move'} →</button><button class="ghost small-button" data-system-select="${home.id}" title="Back to fleet">↶</button>`;
   } else {
     if (fleet.type==='colony' && !home.owner) actions += `<button class="primary" data-action="colonize">Settle world</button>`;

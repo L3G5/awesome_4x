@@ -1,0 +1,52 @@
+{
+  "source": "Previously recorded observer-safe UI data, not raw checkpoint or current campaign state.",
+  "event": {
+    "time": "2026-10-28T22:03:31.612Z",
+    "cycle": "Cycle 47",
+    "kind": "interaction",
+    "action": {
+      "click": "#inspector [data-action=anomaly]"
+    },
+    "status": "Pathfinder 66 arrived at Meridian.",
+    "modal": "×\nFIELD EXPEDITION · MERIDIAN\n✦\nA Thousand Sleeping Voices\n\nA drifting ark carries refugees in failing cryopods. Their destination has been dust for centuries.\n\nBring them home →\n\nSpend 20 credits; your capital gains 1 population.\n\n◈ 20 credits · 1 order\nRestore their navigation →\n\nGain 25 science and 15 credits from their grateful archivist.\n\n1 order\n\nEach choice leaves a permanent record. Restorations use ordinary construction; cancelling keeps the plan but never reopens the salvage choice.\n\nTHE STORY OF THIS WORLD\n\nYour expedition has yet to leave its mark here."
+  },
+  "decision": {
+    "time": "2026-10-28T22:03:47.019Z",
+    "cycle": "Cycle 47",
+    "kind": "decision",
+    "text": "Cycle47: Meridian repeats the refugee story found earlier. Solace is already8/8population, so choose Restore their navigation for25science15credits rather than a nominal+1capitalpopulation. The choice text still promises+1without stating the cap; I am avoiding that wasted reward using my own colony information."
+  },
+  "ownCapital": {
+    "id": "s0",
+    "name": "Solace",
+    "x": 29,
+    "y": 29,
+    "owner": "player",
+    "surveyed": true,
+    "sensor": true,
+    "type": "terran",
+    "habitability": 90,
+    "richness": 3,
+    "science": 2,
+    "population": 8,
+    "growth": 0,
+    "buildings": [
+      "mine",
+      "shipyard",
+      "lab",
+      "factory"
+    ],
+    "charter": {
+      "type": "forge",
+      "level": 1
+    },
+    "queue": null,
+    "defenseDamage": 0,
+    "anomaly": null
+  },
+  "artifacts": {
+    "record.json": "25c5887c258c5c1313a93470ee4e1f38a0eebeb89416fb642fdd2e8dd9f86592",
+    "observations.ndjson": "87732bc24fc7e91f390bbfca98fef4897357867be0f0bc4872d10d3289d57965",
+    "cycle47-refugees-capped-capital-choice.png": "4ca80f2878c9db594f96febf5e1812bcc456420b5afa077f6db4b7241ce1eba4"
+  }
+}

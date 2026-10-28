@@ -1,0 +1,160 @@
+{
+  "generatedAt": "2026-10-28T22:22:29.355Z",
+  "method": "Read-only source audit plus explicitly synthetic boundary fixtures. Every tested effect used ordinary command/endTurn/runAI entry points. No current campaign checkpoint or hidden state was inspected. Actual human evidence is recorded DOM, screenshot and safe observer projection only.",
+  "sourceDirectory": "/tmp/asterion-stage12-diplomacy",
+  "sources": {
+    "src/game.js": "530029ef4d981d88e8d30f9e046d955ff704d85379d24b42e69ce78c9df1c0e9",
+    "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "src/discovery-ui.js": "f86767d4f816a510c93a8e89480b6b8bf7336f8ce9ff41dcc6ffbdcd0f90b9ef",
+    "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "tests/discoveries.test.js": "a84bae658da6e843f710ebd6a5ba1826bdc33c5c82246b3b3854046183c4ed34"
+  },
+  "cases": [
+    {
+      "name": "Full capital accepts refugees above natural-growth capacity",
+      "fixture": "Synthetic boundary setup; ordinary anomaly and endTurn commands.",
+      "choice": {
+        "description": "Spend 20 credits; your capital gains 1 population.",
+        "enabled": true
+      },
+      "before": {
+        "population": 8,
+        "yield": {
+          "credits": 19,
+          "minerals": 10,
+          "science": 6,
+          "production": 12,
+          "growth": 0.375,
+          "capacity": 8,
+          "defense": 51
+        },
+        "infrastructure": {
+          "used": 2,
+          "capacity": 4,
+          "available": 2,
+          "overCapacity": 0
+        },
+        "credits": 140,
+        "orders": 6
+      },
+      "after": {
+        "population": 9,
+        "yield": {
+          "credits": 21,
+          "minerals": 11,
+          "science": 6,
+          "production": 13,
+          "growth": 0.375,
+          "capacity": 8,
+          "defense": 54
+        },
+        "infrastructure": {
+          "used": 2,
+          "capacity": 5,
+          "available": 3,
+          "overCapacity": 0
+        },
+        "credits": 120,
+        "orders": 5
+      },
+      "nextTurn": {
+        "population": 9,
+        "capacity": 8,
+        "growth": 0
+      },
+      "history": {
+        "paid": {
+          "credits": 20
+        },
+        "gained": {},
+        "population": {
+          "systemId": "s0",
+          "systemName": "Solace",
+          "amount": 1
+        }
+      },
+      "reloadExact": true
+    },
+    {
+      "name": "Garden at 95%",
+      "choice": {
+        "description": "Habitability rises by 25 points; gain 20 science.",
+        "enabled": true,
+        "nominalHabitability": 25
+      },
+      "actual": {
+        "paid": {},
+        "gained": {
+          "science": 20
+        },
+        "habitability": 5
+      }
+    },
+    {
+      "name": "Garden at 100%",
+      "choice": {
+        "description": "Habitability rises by 25 points; gain 20 science.",
+        "enabled": true,
+        "nominalHabitability": 25
+      },
+      "actual": {
+        "paid": {},
+        "gained": {
+          "science": 20
+        },
+        "habitability": 0
+      }
+    },
+    {
+      "name": "Echo when all systems are already charted",
+      "choice": {
+        "description": "Chart every star within two jumps of this system.",
+        "enabled": true
+      },
+      "actual": {
+        "paid": {},
+        "gained": {},
+        "charted": 0
+      }
+    },
+    {
+      "name": "Escort needs neither a shipyard nor technology",
+      "choice": {
+        "description": "An intact frigate joins your expedition.",
+        "enabled": true
+      },
+      "fleet": {
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "movesLeft": 1
+      }
+    },
+    {
+      "name": "Ark-surviving empire without an owned capital: AI pays for zero population",
+      "fixture": "Synthetic valid no-colony/remaining-Ark setup; all technologies complete, 1000 credits and minerals (reserves satisfied), own fleets have no moves, Ark in foreign territory; ordinary runAI command path.",
+      "choice": {
+        "description": "Spend 20 credits; your capital gains 1 population.",
+        "enabled": true
+      },
+      "creditsBefore": 1000,
+      "creditsAfter": 980,
+      "actual": {
+        "paid": {
+          "credits": 20
+        },
+        "gained": {},
+        "population": {
+          "systemId": "s0",
+          "systemName": "Solace",
+          "amount": 0
+        }
+      }
+    }
+  ],
+  "sourceRevision": "d50ed50cb076157ba09fb6e5dd4d0c06652a06ef",
+  "engineFilesMatch123cee1": true,
+  "scriptSha256": "f5c460ec1960edd803ae6fde6f7fdcefb247424c1a66063871056102c315a55b"
+}

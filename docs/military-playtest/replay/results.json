@@ -1,0 +1,1216 @@
+{
+  "sourceRevision": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+  "frozenBuild": {
+    "version": "0.10.0",
+    "commit": "60fd9f8e85edfee92ed40ee29c9b8c314e140da3",
+    "builtAt": "2026-10-28T21:00:47.386Z"
+  },
+  "engineSourceHashes": {
+    "src/game.js": "ab80c74a0156c0ccc7605d1328728260c86523f900f11b151d3aedbabbae940f",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/ai.js": "3ca642157337672207dc1fe82ab001a942a79524abc97ef17db6a02986ac4869",
+    "src/diplomacy.js": "18e630440874fb6c12834dce195a44f975a931bfa1a106b440bf8786337222b1",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/discoveries.js": "dacb400cc9c49662e8d1793340e71cad62a3a1c81ee0cd432609f5a3fe974f2b",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/reports.js": "1f33caaa251e333b175fe590dc5f4d7058cca0e71a6c2c994f9fd3bab187e312",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385"
+  },
+  "seed": "IRON-COVENANT-10",
+  "method": "Actual UI campaign; this offline verification replays only recorded successful UI actions from the same seeded new campaign. Initial three-command browser recovery is explicitly excluded once, with no reroll or strategic change. No raw exported state was read for gameplay decisions. Source annotations are fallible aids: precise selector/selection-based normalizations are attached per command. Actual UI exports are unchanged; intermediate replay states are not passed off as actual exports.",
+  "recordSha256": "25c5887c258c5c1313a93470ee4e1f38a0eebeb89416fb642fdd2e8dd9f86592",
+  "observationsSha256": "87732bc24fc7e91f390bbfca98fef4897357867be0f0bc4872d10d3289d57965",
+  "successfulCommands": 340,
+  "endTurns": 56,
+  "normalizationCount": 18,
+  "jsonReloadChecks": 340,
+  "validNonnegativeAfterEveryCommand": true,
+  "exactFinalSerializedMatch": true,
+  "finalCanonicalSha256": "b8db525d48b552e41f9c1dbbc62f5da6c637b746f77d4959632fa00d51c20014",
+  "checkpoints": [
+    {
+      "eventIndex": 45,
+      "file": "actual-exports/cycle1.json",
+      "turn": 1,
+      "sha256": "d9d7a85f551e6d95d25dacb8552ac718263aebeedd4ef8d0e5bf711b3e4dd537",
+      "canonicalSha256": "1c29846623888de4b90ea35a0ac6e22f0c8329325aa0661d7738da4bbb63b0cf",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 188,
+      "file": "actual-exports/cycle10.json",
+      "turn": 10,
+      "sha256": "312dc3418456bba61b347d889c4e89a387c46a6b772cfc33e49e0545d7e6a434",
+      "canonicalSha256": "451d7c3d793a275be827e4e898bfbd6ad3e0166d89e7b61b04f9dd5f7031570d",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 318,
+      "file": "actual-exports/cycle20.json",
+      "turn": 20,
+      "sha256": "5a7715292fb9af76c6ccfe298b0ffb235dcd108dcce5f4255a8691baf0f5f48e",
+      "canonicalSha256": "1e3016cd098f23c4af15c5bdbfb3406c4cbf5d5ff303e3586b3ca9b19af3f5af",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 462,
+      "file": "actual-exports/cycle29.json",
+      "turn": 29,
+      "sha256": "25fdd7398529cbc398e1e706ded4c4734a119ff6566b376f604c0cece6472117",
+      "canonicalSha256": "bba4930803c2499b0e75d3417fc90b36974eab2fca21c01a54511f77b42b2e9c",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 480,
+      "file": "actual-exports/cycle30.json",
+      "turn": 30,
+      "sha256": "1a98e49703b69e784875b3534416051d25b0cf16cde7ceabbe2c5f55f38e377b",
+      "canonicalSha256": "053933fb471ff85a4be3e2f94da762ada851348c5232844799a720f19814cdfd",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 563,
+      "file": "actual-exports/cycle36.json",
+      "turn": 36,
+      "sha256": "840ce1d6770e720723823d5ed4b352ca0a3d3cedef8102cd7325627782c124e6",
+      "canonicalSha256": "83fc305d18bd132c5f9bd69c338d14c4d9f05bc0431568333cbbf3d0b904ab9c",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 626,
+      "file": "actual-exports/cycle39.json",
+      "turn": 39,
+      "sha256": "66bcfc880e7a440afe8ad3707d37f7be3218c07077e56a59a9781fddd3bd74bd",
+      "canonicalSha256": "5f0ef87d3dc771d394a059b0f5f5635ef08ad894e74111b8126f42cd8a281763",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 644,
+      "file": "actual-exports/cycle40.json",
+      "turn": 40,
+      "sha256": "e464c5515503c60c883c8c4cb2e2dd792c98caf98ef15603ee703318863a326f",
+      "canonicalSha256": "7940dcc5d4c016ea84e97dc3213d93a0f078ac6deb7af9924d277392f42f8d1c",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 692,
+      "file": "actual-exports/cycle42.json",
+      "turn": 42,
+      "sha256": "3f5ccb8a7b0bb8aba7bc7c531eeb8c84db5c6c446880b618e456b63a7981b991",
+      "canonicalSha256": "e2dbf67d1b0c78dcb7b4db6362de1f2005e0f5b0e2fb2a08773a5bc922a14f9b",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 774,
+      "file": "actual-exports/cycle46.json",
+      "turn": 46,
+      "sha256": "7cebbe17e8054a4ae248a640053ceac83c57ce1a03bb76b6080cf862b0ac7cad",
+      "canonicalSha256": "cca087af5aa86a488dedfaaa2a81e58fc00dcc1fe266d7bc44325002cdf91c9a",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 848,
+      "file": "actual-exports/cycle50.json",
+      "turn": 50,
+      "sha256": "c8735d1ad657b59b4081d5d0598538854ef768d6daebbdadc4a741166dce9eb3",
+      "canonicalSha256": "53f0fa2f0f495c84e973c0847891a6bb55e3dc9e4bd13dd4c231f582b1fbf52c",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 859,
+      "file": "actual-exports/cycle50.json",
+      "turn": 50,
+      "sha256": "c8735d1ad657b59b4081d5d0598538854ef768d6daebbdadc4a741166dce9eb3",
+      "canonicalSha256": "53f0fa2f0f495c84e973c0847891a6bb55e3dc9e4bd13dd4c231f582b1fbf52c",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 972,
+      "file": "actual-exports/cycle55.json",
+      "turn": 55,
+      "sha256": "f43cffaf6a72be7a2c422f0988ab6931acc0d895afd1df925aabbc8485053f8e",
+      "canonicalSha256": "2f3a8e7fcd1724bf58ab7a3b5e1ecf7f853f31707b73102a4e4c815aa565569a",
+      "exactSerializedMatch": true
+    },
+    {
+      "eventIndex": 1020,
+      "file": "actual-exports/cycle57.json",
+      "turn": 57,
+      "sha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "canonicalSha256": "b8db525d48b552e41f9c1dbbc62f5da6c637b746f77d4959632fa00d51c20014",
+      "exactSerializedMatch": true
+    }
+  ],
+  "final": {
+    "label": "Actual final victory",
+    "turn": 57,
+    "credits": 2892,
+    "minerals": 1005,
+    "science": 0,
+    "orders": 16,
+    "research": {
+      "techId": "terraforming",
+      "progress": 441
+    },
+    "techs": 11,
+    "worlds": 12,
+    "population": 104,
+    "capitalCount": 4,
+    "ships": 15,
+    "winner": "player",
+    "victoryType": "Domination"
+  },
+  "cycleSummaries": [
+    {
+      "label": "After completed cycle",
+      "turn": 2,
+      "credits": 91,
+      "minerals": 72,
+      "science": 0,
+      "orders": 7,
+      "research": {
+        "techId": "logistics",
+        "progress": 55
+      },
+      "techs": 0,
+      "worlds": 2,
+      "population": 5,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 3,
+      "credits": 82,
+      "minerals": 144,
+      "science": 9,
+      "orders": 8,
+      "research": null,
+      "techs": 1,
+      "worlds": 2,
+      "population": 5,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 4,
+      "credits": 75,
+      "minerals": 156,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "weapons",
+        "progress": 70
+      },
+      "techs": 1,
+      "worlds": 2,
+      "population": 7,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 5,
+      "credits": 66,
+      "minerals": 169,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "weapons",
+        "progress": 70
+      },
+      "techs": 1,
+      "worlds": 2,
+      "population": 8,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 6,
+      "credits": 44,
+      "minerals": 127,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "weapons",
+        "progress": 70
+      },
+      "techs": 1,
+      "worlds": 2,
+      "population": 9,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 7,
+      "credits": 69,
+      "minerals": 140,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "weapons",
+        "progress": 70
+      },
+      "techs": 1,
+      "worlds": 2,
+      "population": 9,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 8,
+      "credits": 70,
+      "minerals": 128,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "weapons",
+        "progress": 70
+      },
+      "techs": 1,
+      "worlds": 2,
+      "population": 10,
+      "capitalCount": 1,
+      "ships": 3,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 9,
+      "credits": 103,
+      "minerals": 232,
+      "science": 10,
+      "orders": 8,
+      "research": null,
+      "techs": 2,
+      "worlds": 2,
+      "population": 11,
+      "capitalCount": 1,
+      "ships": 4,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 10,
+      "credits": 112,
+      "minerals": 216,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 2,
+      "population": 11,
+      "capitalCount": 1,
+      "ships": 4,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 11,
+      "credits": 146,
+      "minerals": 235,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 2,
+      "population": 12,
+      "capitalCount": 1,
+      "ships": 4,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 12,
+      "credits": 182,
+      "minerals": 254,
+      "science": 0,
+      "orders": 8,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 2,
+      "population": 12,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 13,
+      "credits": 117,
+      "minerals": 153,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 3,
+      "population": 13,
+      "capitalCount": 1,
+      "ships": 4,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 14,
+      "credits": 157,
+      "minerals": 177,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 3,
+      "population": 13,
+      "capitalCount": 1,
+      "ships": 4,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 15,
+      "credits": 197,
+      "minerals": 201,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 3,
+      "population": 15,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 16,
+      "credits": 214,
+      "minerals": 190,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 3,
+      "population": 15,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 17,
+      "credits": 231,
+      "minerals": 179,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 3,
+      "population": 16,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 18,
+      "credits": 275,
+      "minerals": 204,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "industry",
+        "progress": 220
+      },
+      "techs": 2,
+      "worlds": 3,
+      "population": 17,
+      "capitalCount": 1,
+      "ships": 6,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 19,
+      "credits": 294,
+      "minerals": 195,
+      "science": 16,
+      "orders": 9,
+      "research": null,
+      "techs": 3,
+      "worlds": 3,
+      "population": 17,
+      "capitalCount": 1,
+      "ships": 7,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 20,
+      "credits": 266,
+      "minerals": 131,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "physics",
+        "progress": 60
+      },
+      "techs": 3,
+      "worlds": 3,
+      "population": 18,
+      "capitalCount": 1,
+      "ships": 7,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 21,
+      "credits": 260,
+      "minerals": 138,
+      "science": 16,
+      "orders": 10,
+      "research": null,
+      "techs": 4,
+      "worlds": 4,
+      "population": 22,
+      "capitalCount": 1,
+      "ships": 4,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 22,
+      "credits": 335,
+      "minerals": 187,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "shields",
+        "progress": 220
+      },
+      "techs": 4,
+      "worlds": 3,
+      "population": 20,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 23,
+      "credits": 362,
+      "minerals": 178,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "shields",
+        "progress": 220
+      },
+      "techs": 4,
+      "worlds": 3,
+      "population": 20,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 24,
+      "credits": 269,
+      "minerals": 109,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "shields",
+        "progress": 220
+      },
+      "techs": 4,
+      "worlds": 3,
+      "population": 20,
+      "capitalCount": 1,
+      "ships": 5,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 25,
+      "credits": 321,
+      "minerals": 135,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "shields",
+        "progress": 220
+      },
+      "techs": 4,
+      "worlds": 3,
+      "population": 22,
+      "capitalCount": 1,
+      "ships": 7,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 26,
+      "credits": 313,
+      "minerals": 82,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "shields",
+        "progress": 220
+      },
+      "techs": 4,
+      "worlds": 3,
+      "population": 22,
+      "capitalCount": 1,
+      "ships": 7,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 27,
+      "credits": 365,
+      "minerals": 109,
+      "science": 4,
+      "orders": 9,
+      "research": null,
+      "techs": 5,
+      "worlds": 3,
+      "population": 23,
+      "capitalCount": 1,
+      "ships": 8,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 28,
+      "credits": 367,
+      "minerals": 69,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 3,
+      "population": 23,
+      "capitalCount": 1,
+      "ships": 8,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 29,
+      "credits": 419,
+      "minerals": 96,
+      "science": 0,
+      "orders": 9,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 3,
+      "population": 23,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 30,
+      "credits": 451,
+      "minerals": 54,
+      "science": 0,
+      "orders": 10,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 4,
+      "population": 27,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 31,
+      "credits": 510,
+      "minerals": 92,
+      "science": 0,
+      "orders": 10,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 4,
+      "population": 27,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 32,
+      "credits": 494,
+      "minerals": 50,
+      "science": 0,
+      "orders": 10,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 4,
+      "population": 27,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 33,
+      "credits": 528,
+      "minerals": 58,
+      "science": 0,
+      "orders": 10,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 4,
+      "population": 28,
+      "capitalCount": 1,
+      "ships": 11,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 34,
+      "credits": 544,
+      "minerals": 59,
+      "science": 0,
+      "orders": 11,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 5,
+      "population": 29,
+      "capitalCount": 1,
+      "ships": 11,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 35,
+      "credits": 577,
+      "minerals": 70,
+      "science": 0,
+      "orders": 11,
+      "research": {
+        "techId": "cruisers",
+        "progress": 360
+      },
+      "techs": 5,
+      "worlds": 5,
+      "population": 29,
+      "capitalCount": 1,
+      "ships": 11,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 36,
+      "credits": 635,
+      "minerals": 116,
+      "science": 53,
+      "orders": 11,
+      "research": null,
+      "techs": 6,
+      "worlds": 5,
+      "population": 29,
+      "capitalCount": 1,
+      "ships": 11,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 37,
+      "credits": 628,
+      "minerals": 77,
+      "science": 47,
+      "orders": 11,
+      "research": null,
+      "techs": 7,
+      "worlds": 5,
+      "population": 30,
+      "capitalCount": 1,
+      "ships": 11,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 38,
+      "credits": 623,
+      "minerals": 46,
+      "science": 0,
+      "orders": 11,
+      "research": {
+        "techId": "diplomacy",
+        "progress": 180
+      },
+      "techs": 7,
+      "worlds": 5,
+      "population": 31,
+      "capitalCount": 1,
+      "ships": 12,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 39,
+      "credits": 689,
+      "minerals": 72,
+      "science": 0,
+      "orders": 12,
+      "research": {
+        "techId": "diplomacy",
+        "progress": 180
+      },
+      "techs": 7,
+      "worlds": 6,
+      "population": 42,
+      "capitalCount": 1,
+      "ships": 9,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 40,
+      "credits": 750,
+      "minerals": 93,
+      "science": 52,
+      "orders": 12,
+      "research": null,
+      "techs": 8,
+      "worlds": 6,
+      "population": 43,
+      "capitalCount": 1,
+      "ships": 11,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 41,
+      "credits": 798,
+      "minerals": 83,
+      "science": 0,
+      "orders": 15,
+      "research": {
+        "techId": "command",
+        "progress": 500
+      },
+      "techs": 8,
+      "worlds": 7,
+      "population": 50,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 42,
+      "credits": 862,
+      "minerals": 94,
+      "science": 0,
+      "orders": 15,
+      "research": {
+        "techId": "command",
+        "progress": 500
+      },
+      "techs": 8,
+      "worlds": 7,
+      "population": 50,
+      "capitalCount": 1,
+      "ships": 8,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 43,
+      "credits": 981,
+      "minerals": 170,
+      "science": 0,
+      "orders": 15,
+      "research": {
+        "techId": "command",
+        "progress": 500
+      },
+      "techs": 8,
+      "worlds": 7,
+      "population": 52,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 44,
+      "credits": 973,
+      "minerals": 82,
+      "science": 0,
+      "orders": 15,
+      "research": {
+        "techId": "command",
+        "progress": 500
+      },
+      "techs": 8,
+      "worlds": 7,
+      "population": 53,
+      "capitalCount": 1,
+      "ships": 10,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 45,
+      "credits": 1053,
+      "minerals": 110,
+      "science": 0,
+      "orders": 16,
+      "research": {
+        "techId": "command",
+        "progress": 500
+      },
+      "techs": 8,
+      "worlds": 8,
+      "population": 58,
+      "capitalCount": 1,
+      "ships": 12,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 46,
+      "credits": 1212,
+      "minerals": 198,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "computing",
+        "progress": 360
+      },
+      "techs": 9,
+      "worlds": 8,
+      "population": 58,
+      "capitalCount": 1,
+      "ships": 12,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 47,
+      "credits": 1426,
+      "minerals": 297,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "computing",
+        "progress": 360
+      },
+      "techs": 9,
+      "worlds": 9,
+      "population": 70,
+      "capitalCount": 2,
+      "ships": 13,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 48,
+      "credits": 1528,
+      "minerals": 311,
+      "science": 73,
+      "orders": 18,
+      "research": null,
+      "techs": 10,
+      "worlds": 9,
+      "population": 73,
+      "capitalCount": 2,
+      "ships": 13,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 49,
+      "credits": 1686,
+      "minerals": 412,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "singularity",
+        "progress": 1000
+      },
+      "techs": 10,
+      "worlds": 9,
+      "population": 73,
+      "capitalCount": 2,
+      "ships": 13,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 50,
+      "credits": 1844,
+      "minerals": 513,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "singularity",
+        "progress": 1000
+      },
+      "techs": 10,
+      "worlds": 9,
+      "population": 74,
+      "capitalCount": 2,
+      "ships": 13,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 51,
+      "credits": 2004,
+      "minerals": 615,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "singularity",
+        "progress": 1000
+      },
+      "techs": 10,
+      "worlds": 9,
+      "population": 74,
+      "capitalCount": 2,
+      "ships": 14,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 52,
+      "credits": 2135,
+      "minerals": 682,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "singularity",
+        "progress": 1000
+      },
+      "techs": 10,
+      "worlds": 9,
+      "population": 75,
+      "capitalCount": 2,
+      "ships": 14,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 53,
+      "credits": 2236,
+      "minerals": 699,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "singularity",
+        "progress": 1000
+      },
+      "techs": 10,
+      "worlds": 9,
+      "population": 76,
+      "capitalCount": 2,
+      "ships": 13,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 54,
+      "credits": 2329,
+      "minerals": 671,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "singularity",
+        "progress": 1000
+      },
+      "techs": 10,
+      "worlds": 10,
+      "population": 83,
+      "capitalCount": 3,
+      "ships": 13,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 55,
+      "credits": 2502,
+      "minerals": 783,
+      "science": 90,
+      "orders": 18,
+      "research": null,
+      "techs": 11,
+      "worlds": 10,
+      "population": 84,
+      "capitalCount": 3,
+      "ships": 15,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 56,
+      "credits": 2695,
+      "minerals": 879,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "terraforming",
+        "progress": 441
+      },
+      "techs": 11,
+      "worlds": 11,
+      "population": 96,
+      "capitalCount": 3,
+      "ships": 14,
+      "winner": null,
+      "victoryType": null
+    },
+    {
+      "label": "After completed cycle",
+      "turn": 57,
+      "credits": 2892,
+      "minerals": 1005,
+      "science": 0,
+      "orders": 18,
+      "research": {
+        "techId": "terraforming",
+        "progress": 441
+      },
+      "techs": 11,
+      "worlds": 11,
+      "population": 97,
+      "capitalCount": 3,
+      "ships": 15,
+      "winner": null,
+      "victoryType": null
+    }
+  ],
+  "pageErrors": [],
+  "driverErrorCount": 21,
+  "excludedBrowserRecovery": {
+    "initialNewCampaignEvent": 6,
+    "initialThreeCommandEvents": [
+      10,
+      12,
+      15
+    ],
+    "persistentNewCampaignEvent": 23,
+    "sameSeed": true,
+    "sameOpeningCommands": true
+  },
+  "commandsSha256": "44e938b4dee2d1fbea587703e638d1b8dc65dc0ffad8af1bf51098f2654d0a87"
+}

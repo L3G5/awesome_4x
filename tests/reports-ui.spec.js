@@ -30,6 +30,11 @@ test('visible opposition at a neutral star previews combat and reports actual lo
   await page.locator(`[data-system-select="${targetId}"]`).click();
   await expect(page.locator('[data-action="move"]')).toContainText('Engage');
   await expect(page.locator('#fleet-bar')).toContainText('engagement');
+  await expect(page.locator('.engagement-selected')).toContainText(fleet.name);
+  await expect(page.locator('.engagement-scope')).toContainText('Only this formation attacks');
+  await expect(page.locator('.engagement-order li')).toHaveCount(1);
+  await expect(page.locator('.engagement-order li')).toHaveAttribute('data-opponent-id',enemy.id);
+  expect(await page.evaluate(()=>window.__asterion.getState())).toEqual(JSON.parse(JSON.stringify(state)));
   await page.locator('[data-action="move"]').click();
   await expect(page.locator('.combat-report')).toBeVisible();
   const current=await page.evaluate(()=>window.__asterion.getState());
@@ -37,6 +42,8 @@ test('visible opposition at a neutral star previews combat and reports actual lo
   expect(ours.shipsBefore-ours.shipsAfter).toBeGreaterThan(0);
   await expect(page.locator('.combat-side[data-owner="player"]')).toContainText(`${ours.shipsBefore} → ${ours.shipsAfter}`);
   await expect(page.locator('.combat-summary')).toHaveText(report.summary);
+  await expect(page.locator('.combat-fleet-art .ship-portrait')).toHaveCount(2);
+  await expect(page.locator('.combat-scope')).toContainText('one attacking formation');
   await page.locator('.modal [data-action="close-modal"]').last().click();
   await page.reload();
   await page.locator('[data-page="journal"]').click();

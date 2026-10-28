@@ -1,0 +1,63 @@
+{
+  "sourcePath": "/tmp/asterion-iron-covenant/checkpoints/cycle42.json",
+  "sourceSha256": "3f5ccb8a7b0bb8aba7bc7c531eeb8c84db5c6c446880b618e456b63a7981b991",
+  "sourceTurn": 42,
+  "report": {
+    "kind": "fleet",
+    "systemId": "s13",
+    "participants": [
+      {
+        "role": "attacker",
+        "fleetId": "f54",
+        "owner": "veyr",
+        "name": "Vanguard 54",
+        "type": "frigate",
+        "shipsBefore": 3,
+        "hullBefore": 102,
+        "shipsAfter": 0,
+        "hullAfter": 0
+      },
+      {
+        "role": "defender",
+        "fleetId": "f28",
+        "owner": "player",
+        "name": "Vanguard 28",
+        "type": "frigate",
+        "shipsBefore": 3,
+        "hullBefore": 95.4,
+        "shipsAfter": 1,
+        "hullAfter": 11.2
+      }
+    ],
+    "outcome": "attacker-destroyed",
+    "summary": "Battle at Sable: Veyr lost 3 ships and 102 hull; Concord lost 2 ships and 84.2 hull. Attacking fleet destroyed.",
+    "id": 11,
+    "turn": 41
+  },
+  "currentOwnFleetsAtSable": [
+    {
+      "id": "f28",
+      "name": "Vanguard 28",
+      "owner": "player",
+      "systemId": "s13",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 19.2,
+      "movesLeft": 1
+    },
+    {
+      "id": "f60",
+      "name": "Sovereign 60",
+      "owner": "player",
+      "systemId": "s13",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 1
+    }
+  ],
+  "reportText": "×\nCONCORD OPERATIONS · CYCLE 41\nEngagement at Sable\n\nBattle at Sable: Veyr lost 3 ships and 102 hull; Concord lost 2 ships and 84.2 hull. Attacking fleet destroyed.\n\nVEYR · ATTACKER\n▴\nVanguard 54\n\nFrigate task force\n\n3 → 0\nShips remaining\n3\nShips lost\nHull 102 → 0\nDestroyed\nCONCORD · DEFENDER\n▴\nVanguard 28\n\nFrigate task force\n\n3 → 1\nShips remaining\n2\nShips lost\nHull 95.4 → 11.2\nSurvived\nInspect system\nSelect Vanguard 28\nOpen diplomacy\nReturn to command →",
+  "currentOrbitText": "THE CONCORD\nSable\n\nOcean world · Frontier system\n\nAn unbroken sea, rich with unfamiliar life.\n\n77%\nHABITABILITY\n12/12\nPOPULATION\n22\nPRODUCTION\nCOLONY PRODUCTION\n22 / CYCLE\n◆\nSovereign\n\n1 cycles to completion\n\n×\nINFRASTRUCTURE\n4 / 5 SLOTS\n◇ Orbital Extractor\n◎ Habitation Domes\n▥ Manufactory\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n◇\nExtraction Charter I\n\nA specialized colonial economy.\n\nManage →\n\n+7 minerals\n\n+27 credits · +21 minerals · +11 science\n\nPUBLIC RECORD · CYCLE 38\n\nThe Concord took control of this world from Veyr Consortium.\n\nIN ORBIT\n2 FLEETS\nVanguard 28\nFrigate · 19.2 / 34 hull\nReady\n1 jump\nSovereign 60\nCruiser · 85 / 85 hull\nReady\n1 jump\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\n8 hull recovery at current damage, shared by 1 formation.\n\nVanguard 28\n+8 hull\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nThalassa ↗\nAster ↗\nHesper ↗\nCinder ↗\nAntares ↗",
+  "buttonsWork": true,
+  "method": "Only the authorized historical cycle42 checkpoint was imported. The Chronicle report11 and current Sable inspector were viewed; no game commands or turn advancement. No other ongoing-campaign files read."
+}

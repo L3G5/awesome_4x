@@ -1,0 +1,6120 @@
+[
+  {
+    "eventIndex": 26,
+    "time": "2026-10-28T21:08:10.644Z",
+    "turnBefore": 1,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Solace.",
+    "uiReceipt": "Research Enclave commissioned at Solace."
+  },
+  {
+    "eventIndex": 28,
+    "time": "2026-10-28T21:08:10.853Z",
+    "turnBefore": 1,
+    "selector": "[data-action=research][data-tech=logistics]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "logistics"
+    },
+    "action": {
+      "type": "research",
+      "techId": "logistics"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Deep-space Logistics.",
+    "uiReceipt": "Research directed toward Deep-space Logistics."
+  },
+  {
+    "eventIndex": 31,
+    "time": "2026-10-28T21:08:11.652Z",
+    "turnBefore": 1,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s20"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s20"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Sundrift.",
+    "uiReceipt": "Pathfinder 1 arrived at Sundrift."
+  },
+  {
+    "eventIndex": 34,
+    "time": "2026-10-28T21:08:36.149Z",
+    "turnBefore": 1,
+    "selector": "[data-action=anomaly-choice][data-choice=ship]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s20",
+      "choiceId": "ship"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s20",
+      "choiceId": "ship"
+    },
+    "normalizations": [],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 37,
+    "time": "2026-10-28T21:08:38.291Z",
+    "turnBefore": 1,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f2",
+      "targetId": "s20"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f2",
+      "targetId": "s20"
+    },
+    "normalizations": [],
+    "result": "Colony Ark 2 arrived at Sundrift.",
+    "uiReceipt": "Colony Ark 2 arrived at Sundrift."
+  },
+  {
+    "eventIndex": 39,
+    "time": "2026-10-28T21:08:38.865Z",
+    "turnBefore": 1,
+    "selector": "[data-action=colonize-confirm]",
+    "originalAnnotation": {
+      "type": "colonize",
+      "fleetId": "f2"
+    },
+    "action": {
+      "type": "colonize",
+      "fleetId": "f2"
+    },
+    "normalizations": [],
+    "result": "Colony founded at Sundrift.",
+    "uiReceipt": "Colony founded at Sundrift."
+  },
+  {
+    "eventIndex": 44,
+    "time": "2026-10-28T21:09:02.199Z",
+    "turnBefore": 1,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s28"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s28"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Haven.",
+    "uiReceipt": "Vanguard 3 arrived at Haven."
+  },
+  {
+    "eventIndex": 46,
+    "time": "2026-10-28T21:09:03.795Z",
+    "turnBefore": 1,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 2: a new mandate begins.",
+    "uiReceipt": "◈\n91+11\nCREDITS\n◇\n72+12\nMINERALS\n✧\n0+7\nSCIENCE\n⌘\n7 / 7\nORDERS"
+  },
+  {
+    "eventIndex": 48,
+    "time": "2026-10-28T21:10:40.966Z",
+    "turnBefore": 2,
+    "selector": "[data-action=anomaly-choice][data-choice=ore]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s28",
+      "choiceId": "ore"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s28",
+      "choiceId": "ore"
+    },
+    "normalizations": [],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 52,
+    "time": "2026-10-28T21:10:43.468Z",
+    "turnBefore": 2,
+    "selector": "[data-action=build][data-item=mine]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "mine"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "mine"
+    },
+    "normalizations": [],
+    "result": "Orbital Extractor commissioned at Sundrift.",
+    "uiReceipt": "Orbital Extractor commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 54,
+    "time": "2026-10-28T21:10:44.437Z",
+    "turnBefore": 2,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Kepler.",
+    "uiReceipt": "Pathfinder 1 arrived at Kepler."
+  },
+  {
+    "eventIndex": 56,
+    "time": "2026-10-28T21:10:57.354Z",
+    "turnBefore": 2,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s7"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s7"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Nacre.",
+    "uiReceipt": "Pathfinder 1 arrived at Nacre."
+  },
+  {
+    "eventIndex": 59,
+    "time": "2026-10-28T21:10:59.176Z",
+    "turnBefore": 2,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s36"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s36"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Peregrine.",
+    "uiReceipt": "Vanguard 3 arrived at Peregrine."
+  },
+  {
+    "eventIndex": 62,
+    "time": "2026-10-28T21:11:01.006Z",
+    "turnBefore": 2,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s33"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s33"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Halcyon.",
+    "uiReceipt": "Last Light of Sundrift arrived at Halcyon."
+  },
+  {
+    "eventIndex": 67,
+    "time": "2026-10-28T21:13:54.730Z",
+    "turnBefore": 2,
+    "selector": "[data-action=anomaly-choice][data-choice=study]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s36",
+      "choice": "study"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s36",
+      "choiceId": "study"
+    },
+    "normalizations": [
+      "choice renamed choiceId to match actual UI command."
+    ],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 68,
+    "time": "2026-10-28T21:13:55.018Z",
+    "turnBefore": 2,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 3: a new mandate begins.",
+    "uiReceipt": "◈\n82+11\nCREDITS\n◇\n144+12\nMINERALS\n✧\n9+7\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 70,
+    "time": "2026-10-28T21:13:59.686Z",
+    "turnBefore": 3,
+    "selector": "[data-action=research][data-tech=weapons]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "weapons"
+    },
+    "action": {
+      "type": "research",
+      "techId": "weapons"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Coherent Lances.",
+    "uiReceipt": "Research directed toward Coherent Lances."
+  },
+  {
+    "eventIndex": 74,
+    "time": "2026-10-28T21:14:00.330Z",
+    "turnBefore": 3,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s23"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s23"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Tethys.",
+    "uiReceipt": "Vanguard 3 arrived at Tethys."
+  },
+  {
+    "eventIndex": 77,
+    "time": "2026-10-28T21:14:01.823Z",
+    "turnBefore": 3,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s12"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s12"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Eidolon.",
+    "uiReceipt": "Pathfinder 1 arrived at Eidolon."
+  },
+  {
+    "eventIndex": 80,
+    "time": "2026-10-28T21:14:03.169Z",
+    "turnBefore": 3,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s0"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s0"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Solace.",
+    "uiReceipt": "Last Light of Sundrift arrived at Solace."
+  },
+  {
+    "eventIndex": 84,
+    "time": "2026-10-28T21:14:26.601Z",
+    "turnBefore": 3,
+    "selector": "[data-action=anomaly-choice][data-choice=welcome]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s12",
+      "choice": "welcome"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s12",
+      "choiceId": "welcome"
+    },
+    "normalizations": [
+      "choice renamed choiceId to match actual UI command."
+    ],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 86,
+    "time": "2026-10-28T21:14:27.348Z",
+    "turnBefore": 3,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s25"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s25"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Elysian.",
+    "uiReceipt": "Pathfinder 1 arrived at Elysian."
+  },
+  {
+    "eventIndex": 87,
+    "time": "2026-10-28T21:14:27.901Z",
+    "turnBefore": 3,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 4: a new mandate begins.",
+    "uiReceipt": "◈\n75+15\nCREDITS\n◇\n156+13\nMINERALS\n✧\n0+8\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 90,
+    "time": "2026-10-28T21:14:33.854Z",
+    "turnBefore": 4,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s38"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s38"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Zenith.",
+    "uiReceipt": "Pathfinder 1 arrived at Zenith."
+  },
+  {
+    "eventIndex": 93,
+    "time": "2026-10-28T21:14:35.262Z",
+    "turnBefore": 4,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s10"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s10"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Ashfall.",
+    "uiReceipt": "Vanguard 3 arrived at Ashfall."
+  },
+  {
+    "eventIndex": 96,
+    "time": "2026-10-28T21:14:36.667Z",
+    "turnBefore": 4,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s41"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s41"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Asterion.",
+    "uiReceipt": "Last Light of Sundrift arrived at Asterion."
+  },
+  {
+    "eventIndex": 99,
+    "time": "2026-10-28T21:14:50.515Z",
+    "turnBefore": 4,
+    "selector": "[data-action=diplomacy][data-stance=trade][data-target=veyr]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "trade"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "trade"
+    },
+    "normalizations": [],
+    "result": "Trade established between The Concord and Veyr Consortium. Borders are open; existing grievances remain.",
+    "uiReceipt": "Trade established between The Concord and Veyr Consortium. Borders are open; existing grievances remain."
+  },
+  {
+    "eventIndex": 103,
+    "time": "2026-10-28T21:14:52.027Z",
+    "turnBefore": 4,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s30"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s30"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Caelum.",
+    "uiReceipt": "Pathfinder 1 arrived at Caelum."
+  },
+  {
+    "eventIndex": 104,
+    "time": "2026-10-28T21:14:52.397Z",
+    "turnBefore": 4,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 5: a new mandate begins.",
+    "uiReceipt": "◈\n66+23\nCREDITS\n◇\n169+13\nMINERALS\n✧\n0+14\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 107,
+    "time": "2026-10-28T21:15:04.381Z",
+    "turnBefore": 5,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s17"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s17"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Orison.",
+    "uiReceipt": "Pathfinder 1 arrived at Orison."
+  },
+  {
+    "eventIndex": 110,
+    "time": "2026-10-28T21:15:05.895Z",
+    "turnBefore": 5,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Hesper.",
+    "uiReceipt": "Vanguard 3 arrived at Hesper."
+  },
+  {
+    "eventIndex": 113,
+    "time": "2026-10-28T21:15:07.116Z",
+    "turnBefore": 5,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s28"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s28"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Haven.",
+    "uiReceipt": "Last Light of Sundrift arrived at Haven."
+  },
+  {
+    "eventIndex": 118,
+    "time": "2026-10-28T21:15:22.536Z",
+    "turnBefore": 5,
+    "selector": "[data-action=build][data-item=colony]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    "normalizations": [],
+    "result": "Colony Ark commissioned at Solace.",
+    "uiReceipt": "Colony Ark commissioned at Solace."
+  },
+  {
+    "eventIndex": 123,
+    "time": "2026-10-28T21:15:39.162Z",
+    "turnBefore": 5,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s9"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s9"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Velorum.",
+    "uiReceipt": "Pathfinder 1 arrived at Velorum."
+  },
+  {
+    "eventIndex": 124,
+    "time": "2026-10-28T21:15:39.564Z",
+    "turnBefore": 5,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 6: a new mandate begins.",
+    "uiReceipt": "◈\n44+25\nCREDITS\n◇\n127+13\nMINERALS\n✧\n0+14\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 127,
+    "time": "2026-10-28T21:15:56.211Z",
+    "turnBefore": 6,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s14"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s14"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Ilyra.",
+    "uiReceipt": "Pathfinder 1 arrived at Ilyra."
+  },
+  {
+    "eventIndex": 130,
+    "time": "2026-10-28T21:15:57.694Z",
+    "turnBefore": 6,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Sable.",
+    "uiReceipt": "Vanguard 3 arrived at Sable."
+  },
+  {
+    "eventIndex": 134,
+    "time": "2026-10-28T21:16:02.342Z",
+    "turnBefore": 6,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s6"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s6"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Aurelia.",
+    "uiReceipt": "Pathfinder 1 arrived at Aurelia."
+  },
+  {
+    "eventIndex": 135,
+    "time": "2026-10-28T21:16:02.629Z",
+    "turnBefore": 6,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 7: a new mandate begins.",
+    "uiReceipt": "◈\n69+25\nCREDITS\n◇\n140+18\nMINERALS\n✧\n0+14\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 138,
+    "time": "2026-10-28T21:16:11.863Z",
+    "turnBefore": 7,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s11"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s11"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Carina.",
+    "uiReceipt": "Pathfinder 1 arrived at Carina."
+  },
+  {
+    "eventIndex": 141,
+    "time": "2026-10-28T21:16:13.176Z",
+    "turnBefore": 7,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Thalassa.",
+    "uiReceipt": "Vanguard 3 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 145,
+    "time": "2026-10-28T21:16:14.504Z",
+    "turnBefore": 7,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Sundrift.",
+    "uiReceipt": "Research Enclave commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 148,
+    "time": "2026-10-28T21:16:30.191Z",
+    "turnBefore": 7,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Stillwater.",
+    "uiReceipt": "Pathfinder 1 arrived at Stillwater."
+  },
+  {
+    "eventIndex": 149,
+    "time": "2026-10-28T21:16:30.721Z",
+    "turnBefore": 7,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 8: a new mandate begins.",
+    "uiReceipt": "◈\n70+33\nCREDITS\n◇\n128+19\nMINERALS\n✧\n0+14\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 154,
+    "time": "2026-10-28T21:17:10.964Z",
+    "turnBefore": 8,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Corvus.",
+    "uiReceipt": "Pathfinder 1 arrived at Corvus."
+  },
+  {
+    "eventIndex": 158,
+    "time": "2026-10-28T21:17:53.358Z",
+    "turnBefore": 8,
+    "selector": "[data-action=anomaly-choice][data-choice=salvage]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s24",
+      "choice": "salvage"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s24",
+      "choiceId": "salvage"
+    },
+    "normalizations": [
+      "choice renamed choiceId to match actual UI command."
+    ],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 160,
+    "time": "2026-10-28T21:17:53.838Z",
+    "turnBefore": 8,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s37"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s37"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Morrow.",
+    "uiReceipt": "Pathfinder 1 arrived at Morrow."
+  },
+  {
+    "eventIndex": 163,
+    "time": "2026-10-28T21:17:55.085Z",
+    "turnBefore": 8,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Sable.",
+    "uiReceipt": "Vanguard 3 arrived at Sable."
+  },
+  {
+    "eventIndex": 164,
+    "time": "2026-10-28T21:17:55.591Z",
+    "turnBefore": 8,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 9: a new mandate begins.",
+    "uiReceipt": "◈\n103+34\nCREDITS\n◇\n232+19\nMINERALS\n✧\n10+15\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 166,
+    "time": "2026-10-28T21:18:12.509Z",
+    "turnBefore": 9,
+    "selector": "[data-action=research][data-tech=industry]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "industry"
+    },
+    "action": {
+      "type": "research",
+      "techId": "industry"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Autonomous Industry.",
+    "uiReceipt": "Research directed toward Autonomous Industry."
+  },
+  {
+    "eventIndex": 171,
+    "time": "2026-10-28T21:18:13.650Z",
+    "turnBefore": 9,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Solace.",
+    "uiReceipt": "Vanguard commissioned at Solace."
+  },
+  {
+    "eventIndex": 174,
+    "time": "2026-10-28T21:18:21.116Z",
+    "turnBefore": 9,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f18",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f18",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 175,
+    "time": "2026-10-28T21:18:21.855Z",
+    "turnBefore": 9,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 178,
+    "time": "2026-10-28T21:18:23.398Z",
+    "turnBefore": 9,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Hesper.",
+    "uiReceipt": "Vanguard 3 arrived at Hesper."
+  },
+  {
+    "eventIndex": 181,
+    "time": "2026-10-28T21:18:24.988Z",
+    "turnBefore": 9,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s36"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s36"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Peregrine.",
+    "uiReceipt": "Last Light of Sundrift arrived at Peregrine."
+  },
+  {
+    "eventIndex": 184,
+    "time": "2026-10-28T21:18:26.228Z",
+    "turnBefore": 9,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Corvus.",
+    "uiReceipt": "Pathfinder 1 arrived at Corvus."
+  },
+  {
+    "eventIndex": 186,
+    "time": "2026-10-28T21:18:26.500Z",
+    "turnBefore": 9,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Stillwater.",
+    "uiReceipt": "Pathfinder 1 arrived at Stillwater."
+  },
+  {
+    "eventIndex": 187,
+    "time": "2026-10-28T21:18:26.767Z",
+    "turnBefore": 9,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 10: a new mandate begins.",
+    "uiReceipt": "◈\n112+34\nCREDITS\n◇\n216+19\nMINERALS\n✧\n0+15\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 191,
+    "time": "2026-10-28T21:19:02.820Z",
+    "turnBefore": 10,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s29"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s29"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Aldebaran.",
+    "uiReceipt": "Pathfinder 1 arrived at Aldebaran."
+  },
+  {
+    "eventIndex": 194,
+    "time": "2026-10-28T21:19:04.253Z",
+    "turnBefore": 10,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s10"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s10"
+    },
+    "normalizations": [],
+    "result": "Vanguard 3 arrived at Ashfall.",
+    "uiReceipt": "Vanguard 3 arrived at Ashfall."
+  },
+  {
+    "eventIndex": 197,
+    "time": "2026-10-28T21:19:05.533Z",
+    "turnBefore": 10,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s23"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s23"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Tethys.",
+    "uiReceipt": "Last Light of Sundrift arrived at Tethys."
+  },
+  {
+    "eventIndex": 199,
+    "time": "2026-10-28T21:19:06.599Z",
+    "turnBefore": 10,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 200,
+    "time": "2026-10-28T21:19:06.951Z",
+    "turnBefore": 10,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 11: a new mandate begins.",
+    "uiReceipt": "◈\n146+36\nCREDITS\n◇\n235+19\nMINERALS\n✧\n0+16\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 202,
+    "time": "2026-10-28T21:19:14.893Z",
+    "turnBefore": 11,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 205,
+    "time": "2026-10-28T21:19:16.292Z",
+    "turnBefore": 11,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s10"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s10"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Ashfall.",
+    "uiReceipt": "Last Light of Sundrift arrived at Ashfall."
+  },
+  {
+    "eventIndex": 206,
+    "time": "2026-10-28T21:19:24.519Z",
+    "turnBefore": 11,
+    "selector": "[data-action=merge]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f13",
+      "targetFleetId": "f3"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f13",
+      "targetFleetId": "f3"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 208,
+    "time": "2026-10-28T21:19:24.872Z",
+    "turnBefore": 11,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 12: a new mandate begins.",
+    "uiReceipt": "◈\n182+34\nCREDITS\n◇\n254+19\nMINERALS\n✧\n0+21\nSCIENCE\n⌘\n8 / 8\nORDERS"
+  },
+  {
+    "eventIndex": 211,
+    "time": "2026-10-28T21:19:37.997Z",
+    "turnBefore": 12,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f18"
+    },
+    "normalizations": [],
+    "result": "Colony Ark 18 reached Ashfall in 1 jump.",
+    "uiReceipt": "Colony Ark 18 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 213,
+    "time": "2026-10-28T21:19:38.346Z",
+    "turnBefore": 12,
+    "selector": "[data-action=colonize-confirm]",
+    "originalAnnotation": {
+      "type": "colonize",
+      "fleetId": "f18"
+    },
+    "action": {
+      "type": "colonize",
+      "fleetId": "f18"
+    },
+    "normalizations": [],
+    "result": "Colony founded at Ashfall.",
+    "uiReceipt": "Colony founded at Ashfall."
+  },
+  {
+    "eventIndex": 215,
+    "time": "2026-10-28T21:19:38.537Z",
+    "turnBefore": 12,
+    "selector": "[data-action=build][data-item=shipyard]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "shipyard"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "shipyard"
+    },
+    "normalizations": [],
+    "result": "Orbital Shipyard commissioned at Ashfall.",
+    "uiReceipt": "Orbital Shipyard commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 219,
+    "time": "2026-10-28T21:19:39.920Z",
+    "turnBefore": 12,
+    "selector": "[data-action=build][data-item=shipyard]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "shipyard"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "shipyard"
+    },
+    "normalizations": [],
+    "result": "Orbital Shipyard commissioned at Sundrift.",
+    "uiReceipt": "Orbital Shipyard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 223,
+    "time": "2026-10-28T21:19:52.790Z",
+    "turnBefore": 12,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Solace.",
+    "uiReceipt": "Vanguard commissioned at Solace."
+  },
+  {
+    "eventIndex": 227,
+    "time": "2026-10-28T21:19:54.587Z",
+    "turnBefore": 12,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f22",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f22",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 228,
+    "time": "2026-10-28T21:19:55.320Z",
+    "turnBefore": 12,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 230,
+    "time": "2026-10-28T21:19:55.916Z",
+    "turnBefore": 12,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 13: a new mandate begins.",
+    "uiReceipt": "◈\n117+40\nCREDITS\n◇\n153+24\nMINERALS\n✧\n0+25\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 232,
+    "time": "2026-10-28T21:20:06.996Z",
+    "turnBefore": 13,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 235,
+    "time": "2026-10-28T21:20:12.987Z",
+    "turnBefore": 13,
+    "selector": "[data-action=end-turn-confirm]",
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 14: a new mandate begins.",
+    "uiReceipt": "Turn 14: a new mandate begins."
+  },
+  {
+    "eventIndex": 237,
+    "time": "2026-10-28T21:20:13.876Z",
+    "turnBefore": 14,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 238,
+    "time": "2026-10-28T21:20:14.409Z",
+    "turnBefore": 14,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 15: a new mandate begins.",
+    "uiReceipt": "◈\n197+42\nCREDITS\n◇\n201+24\nMINERALS\n✧\n0+26\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 240,
+    "time": "2026-10-28T21:20:33.691Z",
+    "turnBefore": 15,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f22"
+    },
+    "normalizations": [],
+    "result": "Vanguard 22 reached Ashfall in 1 jump.",
+    "uiReceipt": "Vanguard 22 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 242,
+    "time": "2026-10-28T21:20:34.732Z",
+    "turnBefore": 15,
+    "selector": "[data-action=merge][data-target=f22]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f13",
+      "targetFleetId": "f22"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f13",
+      "targetFleetId": "f22"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 246,
+    "time": "2026-10-28T21:20:55.175Z",
+    "turnBefore": 15,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Solace.",
+    "uiReceipt": "Vanguard commissioned at Solace."
+  },
+  {
+    "eventIndex": 250,
+    "time": "2026-10-28T21:20:56.745Z",
+    "turnBefore": 15,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f25",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f25",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 251,
+    "time": "2026-10-28T21:20:57.480Z",
+    "turnBefore": 15,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 253,
+    "time": "2026-10-28T21:20:58.171Z",
+    "turnBefore": 15,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 16: a new mandate begins.",
+    "uiReceipt": "◈\n214+42\nCREDITS\n◇\n190+24\nMINERALS\n✧\n0+26\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 255,
+    "time": "2026-10-28T21:21:06.726Z",
+    "turnBefore": 16,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 258,
+    "time": "2026-10-28T21:21:08.362Z",
+    "turnBefore": 16,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Hesper.",
+    "uiReceipt": "Last Light of Sundrift arrived at Hesper."
+  },
+  {
+    "eventIndex": 263,
+    "time": "2026-10-28T21:21:09.971Z",
+    "turnBefore": 16,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Sundrift.",
+    "uiReceipt": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 264,
+    "time": "2026-10-28T21:21:10.484Z",
+    "turnBefore": 16,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 17: a new mandate begins.",
+    "uiReceipt": "◈\n231+44\nCREDITS\n◇\n179+25\nMINERALS\n✧\n0+26\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 268,
+    "time": "2026-10-28T21:21:36.365Z",
+    "turnBefore": 17,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 271,
+    "time": "2026-10-28T21:21:38.085Z",
+    "turnBefore": 17,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Sable.",
+    "uiReceipt": "Last Light of Sundrift arrived at Sable."
+  },
+  {
+    "eventIndex": 272,
+    "time": "2026-10-28T21:21:38.451Z",
+    "turnBefore": 17,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 18: a new mandate begins.",
+    "uiReceipt": "◈\n275+44\nCREDITS\n◇\n204+26\nMINERALS\n✧\n0+27\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 275,
+    "time": "2026-10-28T21:21:57.031Z",
+    "turnBefore": 18,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Thalassa.",
+    "uiReceipt": "Last Light of Sundrift arrived at Thalassa."
+  },
+  {
+    "eventIndex": 277,
+    "time": "2026-10-28T21:21:58.120Z",
+    "turnBefore": 18,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f25"
+    },
+    "normalizations": [],
+    "result": "Vanguard 25 reached Ashfall in 1 jump.",
+    "uiReceipt": "Vanguard 25 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 280,
+    "time": "2026-10-28T21:21:58.563Z",
+    "turnBefore": 18,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Ashfall.",
+    "uiReceipt": "Vanguard commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 284,
+    "time": "2026-10-28T21:22:00.634Z",
+    "turnBefore": 18,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f28",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f28",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 285,
+    "time": "2026-10-28T21:22:01.325Z",
+    "turnBefore": 18,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 287,
+    "time": "2026-10-28T21:22:02.036Z",
+    "turnBefore": 18,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 19: a new mandate begins.",
+    "uiReceipt": "◈\n294+42\nCREDITS\n◇\n195+26\nMINERALS\n✧\n16+27\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 289,
+    "time": "2026-10-28T21:22:24.383Z",
+    "turnBefore": 19,
+    "selector": "[data-action=research][data-tech=physics]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "physics"
+    },
+    "action": {
+      "type": "research",
+      "techId": "physics"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Resonance Theory.",
+    "uiReceipt": "Research directed toward Resonance Theory."
+  },
+  {
+    "eventIndex": 293,
+    "time": "2026-10-28T21:22:25.525Z",
+    "turnBefore": 19,
+    "selector": "[data-action=build][data-item=factory]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "factory"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "factory"
+    },
+    "normalizations": [],
+    "result": "Manufactory commissioned at Solace.",
+    "uiReceipt": "Manufactory commissioned at Solace."
+  },
+  {
+    "eventIndex": 296,
+    "time": "2026-10-28T21:22:25.991Z",
+    "turnBefore": 19,
+    "selector": "[data-action=build][data-item=factory]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "factory"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "factory"
+    },
+    "normalizations": [],
+    "result": "Manufactory commissioned at Sundrift.",
+    "uiReceipt": "Manufactory commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 300,
+    "time": "2026-10-28T21:22:34.447Z",
+    "turnBefore": 19,
+    "selector": "[data-action=war-confirm][data-target=khar]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "war"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "war"
+    },
+    "normalizations": [],
+    "result": "The Concord declared war on Khar Dominion.",
+    "uiReceipt": "The Concord declared war on Khar Dominion."
+  },
+  {
+    "eventIndex": 305,
+    "time": "2026-10-28T21:22:36.631Z",
+    "turnBefore": 19,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s8"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f13",
+      "targetId": "s8"
+    },
+    "normalizations": [],
+    "result": "Last Light of Sundrift arrived at Caldera.",
+    "uiReceipt": "Last Light of Sundrift arrived at Caldera."
+  },
+  {
+    "eventIndex": 308,
+    "time": "2026-10-28T21:22:48.252Z",
+    "turnBefore": 19,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 encountered 1 hostile ship at Stillwater and withdrew to Aldebaran. One order and one jump were spent; no survey was conducted.",
+    "uiReceipt": "Pathfinder 1 encountered 1 hostile ship at Stillwater and withdrew to Aldebaran. One order and one jump were spent; no survey was conducted."
+  },
+  {
+    "eventIndex": 313,
+    "time": "2026-10-28T21:23:10.211Z",
+    "turnBefore": 19,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 25 arrived at Hesper.",
+    "uiReceipt": "Vanguard 25 arrived at Hesper."
+  },
+  {
+    "eventIndex": 315,
+    "time": "2026-10-28T21:23:11.305Z",
+    "turnBefore": 19,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 317,
+    "time": "2026-10-28T21:23:16.714Z",
+    "turnBefore": 19,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 20: a new mandate begins.",
+    "uiReceipt": "◈\n266+44\nCREDITS\n◇\n131+26\nMINERALS\n✧\n0+28\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 321,
+    "time": "2026-10-28T21:23:31.204Z",
+    "turnBefore": 20,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": null,
+    "action": {
+      "type": "attack",
+      "fleetId": "f13"
+    },
+    "normalizations": [
+      "Missing semantic annotation: exact clicked attack control and preceding selected fleet identify this command."
+    ],
+    "result": "Invasion of Caldera: 24 defense damage; 0 defenses remain. Concord lost 0 ships and 6.7 hull to retaliation. Caldera captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 329,
+    "time": "2026-10-28T21:24:23.613Z",
+    "turnBefore": 20,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Caldera.",
+    "uiReceipt": "Research Enclave commissioned at Caldera."
+  },
+  {
+    "eventIndex": 332,
+    "time": "2026-10-28T21:24:25.101Z",
+    "turnBefore": 20,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 25 arrived at Sable.",
+    "uiReceipt": "Vanguard 25 arrived at Sable."
+  },
+  {
+    "eventIndex": 334,
+    "time": "2026-10-28T21:24:25.868Z",
+    "turnBefore": 20,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 339,
+    "time": "2026-10-28T21:24:28.572Z",
+    "turnBefore": 20,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s28"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s28"
+    },
+    "normalizations": [],
+    "result": "Vanguard 32 arrived at Haven.",
+    "uiReceipt": "Vanguard 32 arrived at Haven."
+  },
+  {
+    "eventIndex": 341,
+    "time": "2026-10-28T21:24:28.694Z",
+    "turnBefore": 20,
+    "selector": "[data-action=diplomacy][data-stance=gift][data-target=veyr]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "gift"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "gift"
+    },
+    "normalizations": [],
+    "result": "The Concord sent a 35-credit gift to Veyr Consortium. Trust improves; border grievances remain.",
+    "uiReceipt": "The Concord sent a 35-credit gift to Veyr Consortium. Trust improves; border grievances remain."
+  },
+  {
+    "eventIndex": 342,
+    "time": "2026-10-28T21:24:28.946Z",
+    "turnBefore": 20,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 21: a new mandate begins.",
+    "uiReceipt": "◈\n260+61\nCREDITS\n◇\n138+37\nMINERALS\n✧\n16+41\nSCIENCE\n⌘\n10 / 10\nORDERS"
+  },
+  {
+    "eventIndex": 345,
+    "time": "2026-10-28T21:25:33.942Z",
+    "turnBefore": 21,
+    "selector": "[data-action=research][data-tech=shields]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "action": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Deflector Fields.",
+    "uiReceipt": "Research directed toward Deflector Fields."
+  },
+  {
+    "eventIndex": 350,
+    "time": "2026-10-28T21:25:36.056Z",
+    "turnBefore": 21,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 25 arrived at Hesper.",
+    "uiReceipt": "Vanguard 25 arrived at Hesper."
+  },
+  {
+    "eventIndex": 352,
+    "time": "2026-10-28T21:25:37.114Z",
+    "turnBefore": 21,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 reached Ashfall in 1 jump.",
+    "uiReceipt": "Vanguard 28 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 355,
+    "time": "2026-10-28T21:25:38.712Z",
+    "turnBefore": 21,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s36"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s36"
+    },
+    "normalizations": [],
+    "result": "Vanguard 32 arrived at Peregrine.",
+    "uiReceipt": "Vanguard 32 arrived at Peregrine."
+  },
+  {
+    "eventIndex": 358,
+    "time": "2026-10-28T21:25:40.241Z",
+    "turnBefore": 21,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 encountered 1 hostile ship at Stillwater and withdrew to Aldebaran. One order and one jump were spent; no survey was conducted.",
+    "uiReceipt": "Pathfinder 1 encountered 1 hostile ship at Stillwater and withdrew to Aldebaran. One order and one jump were spent; no survey was conducted."
+  },
+  {
+    "eventIndex": 360,
+    "time": "2026-10-28T21:26:01.616Z",
+    "turnBefore": 21,
+    "selector": "[data-action=cancel-build][data-system=s8]",
+    "originalAnnotation": null,
+    "action": {
+      "type": "cancelBuild",
+      "systemId": "s8"
+    },
+    "normalizations": [
+      "Missing semantic annotation: cancellation selector contains system ID."
+    ],
+    "result": "Project cancelled. Unspent materials returned.",
+    "uiReceipt": "Project cancelled. Unspent materials returned."
+  },
+  {
+    "eventIndex": 362,
+    "time": "2026-10-28T21:26:10.250Z",
+    "turnBefore": 21,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 22: a new mandate begins.",
+    "uiReceipt": "◈\n335+52\nCREDITS\n◇\n187+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 367,
+    "time": "2026-10-28T21:26:55.952Z",
+    "turnBefore": 22,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s10"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f25",
+      "targetId": "s10"
+    },
+    "normalizations": [],
+    "result": "Vanguard 25 arrived at Ashfall.",
+    "uiReceipt": "Vanguard 25 arrived at Ashfall."
+  },
+  {
+    "eventIndex": 369,
+    "time": "2026-10-28T21:26:56.931Z",
+    "turnBefore": 22,
+    "selector": "[data-action=merge][data-target=f25]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f25"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f25"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 370,
+    "time": "2026-10-28T21:26:57.254Z",
+    "turnBefore": 22,
+    "selector": "[data-action=merge][data-target=f35]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f35"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f35"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 373,
+    "time": "2026-10-28T21:26:57.619Z",
+    "turnBefore": 22,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Ashfall.",
+    "uiReceipt": "Vanguard commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 376,
+    "time": "2026-10-28T21:26:59.008Z",
+    "turnBefore": 22,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s23"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s23"
+    },
+    "normalizations": [],
+    "result": "Vanguard 32 arrived at Tethys.",
+    "uiReceipt": "Vanguard 32 arrived at Tethys."
+  },
+  {
+    "eventIndex": 378,
+    "time": "2026-10-28T21:26:59.535Z",
+    "turnBefore": 22,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 23: a new mandate begins.",
+    "uiReceipt": "◈\n362+52\nCREDITS\n◇\n178+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 381,
+    "time": "2026-10-28T21:27:13.606Z",
+    "turnBefore": 23,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s10"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s10"
+    },
+    "normalizations": [],
+    "result": "Vanguard 32 arrived at Ashfall.",
+    "uiReceipt": "Vanguard 32 arrived at Ashfall."
+  },
+  {
+    "eventIndex": 383,
+    "time": "2026-10-28T21:27:14.645Z",
+    "turnBefore": 23,
+    "selector": "[data-action=merge][data-target=f32]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f32"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f32"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 386,
+    "time": "2026-10-28T21:27:15.912Z",
+    "turnBefore": 23,
+    "selector": "[data-action=develop][data-charter=forge]",
+    "originalAnnotation": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterId": "forge"
+    },
+    "action": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "normalizations": [
+      "charterId renamed charterType to match data-charter UI dispatch."
+    ],
+    "result": "Forge Charter I commissioned at Solace.",
+    "uiReceipt": "Forge Charter I commissioned at Solace."
+  },
+  {
+    "eventIndex": 390,
+    "time": "2026-10-28T21:27:16.615Z",
+    "turnBefore": 23,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Sundrift.",
+    "uiReceipt": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 391,
+    "time": "2026-10-28T21:27:17.104Z",
+    "turnBefore": 23,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 24: a new mandate begins.",
+    "uiReceipt": "◈\n269+52\nCREDITS\n◇\n109+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 393,
+    "time": "2026-10-28T21:27:28.295Z",
+    "turnBefore": 24,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 25: a new mandate begins.",
+    "uiReceipt": "◈\n321+52\nCREDITS\n◇\n135+27\nMINERALS\n✧\n0+36\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 396,
+    "time": "2026-10-28T21:28:12.054Z",
+    "turnBefore": 25,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Sundrift.",
+    "uiReceipt": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 400,
+    "time": "2026-10-28T21:28:14.444Z",
+    "turnBefore": 25,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f39",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f39",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 401,
+    "time": "2026-10-28T21:28:15.176Z",
+    "turnBefore": 25,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 403,
+    "time": "2026-10-28T21:28:16.498Z",
+    "turnBefore": 25,
+    "selector": "[data-action=merge][data-target=f38]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f38"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f38"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 405,
+    "time": "2026-10-28T21:28:16.703Z",
+    "turnBefore": 25,
+    "selector": "[data-action=build][data-item=factory]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "factory"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "factory"
+    },
+    "normalizations": [],
+    "result": "Manufactory commissioned at Ashfall.",
+    "uiReceipt": "Manufactory commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 407,
+    "time": "2026-10-28T21:28:17.216Z",
+    "turnBefore": 25,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Hesper.",
+    "uiReceipt": "Vanguard 28 arrived at Hesper."
+  },
+  {
+    "eventIndex": 409,
+    "time": "2026-10-28T21:28:17.590Z",
+    "turnBefore": 25,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 26: a new mandate begins.",
+    "uiReceipt": "◈\n313+52\nCREDITS\n◇\n82+27\nMINERALS\n✧\n0+36\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 412,
+    "time": "2026-10-28T21:28:36.214Z",
+    "turnBefore": 26,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Sable.",
+    "uiReceipt": "Vanguard 28 arrived at Sable."
+  },
+  {
+    "eventIndex": 414,
+    "time": "2026-10-28T21:28:37.210Z",
+    "turnBefore": 26,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 415,
+    "time": "2026-10-28T21:28:37.838Z",
+    "turnBefore": 26,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 27: a new mandate begins.",
+    "uiReceipt": "◈\n365+52\nCREDITS\n◇\n109+27\nMINERALS\n✧\n4+36\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 417,
+    "time": "2026-10-28T21:29:04.789Z",
+    "turnBefore": 27,
+    "selector": "[data-action=research][data-tech=cruisers]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "action": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Capital Ship Architecture.",
+    "uiReceipt": "Research directed toward Capital Ship Architecture."
+  },
+  {
+    "eventIndex": 420,
+    "time": "2026-10-28T21:29:05.792Z",
+    "turnBefore": 27,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 423,
+    "time": "2026-10-28T21:29:07.361Z",
+    "turnBefore": 27,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Thalassa.",
+    "uiReceipt": "Vanguard 28 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 427,
+    "time": "2026-10-28T21:29:08.538Z",
+    "turnBefore": 27,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Solace.",
+    "uiReceipt": "Vanguard commissioned at Solace."
+  },
+  {
+    "eventIndex": 431,
+    "time": "2026-10-28T21:29:09.167Z",
+    "turnBefore": 27,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Sundrift.",
+    "uiReceipt": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 435,
+    "time": "2026-10-28T21:29:11.490Z",
+    "turnBefore": 27,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f40",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f40",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 436,
+    "time": "2026-10-28T21:29:12.284Z",
+    "turnBefore": 27,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 437,
+    "time": "2026-10-28T21:29:12.741Z",
+    "turnBefore": 27,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 28: a new mandate begins.",
+    "uiReceipt": "◈\n367+52\nCREDITS\n◇\n69+27\nMINERALS\n✧\n0+36\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 439,
+    "time": "2026-10-28T21:29:19.864Z",
+    "turnBefore": 28,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 441,
+    "time": "2026-10-28T21:29:21.437Z",
+    "turnBefore": 28,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f39"
+    },
+    "normalizations": [],
+    "result": "Vanguard 39 reached Ashfall in 1 jump.",
+    "uiReceipt": "Vanguard 39 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 444,
+    "time": "2026-10-28T21:29:23.291Z",
+    "turnBefore": 28,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s8"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s8"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Caldera.",
+    "uiReceipt": "Vanguard 28 arrived at Caldera."
+  },
+  {
+    "eventIndex": 445,
+    "time": "2026-10-28T21:29:34.410Z",
+    "turnBefore": 28,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 29: a new mandate begins.",
+    "uiReceipt": "◈\n419+48\nCREDITS\n◇\n96+27\nMINERALS\n✧\n0+36\nSCIENCE\n⌘\n9 / 9\nORDERS"
+  },
+  {
+    "eventIndex": 449,
+    "time": "2026-10-28T21:30:23.318Z",
+    "turnBefore": 29,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f28",
+      "systemId": "s8"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f28",
+      "systemId": "s8"
+    },
+    "normalizations": [],
+    "result": "Invasion of Caldera: 24 defense damage; 0 defenses remain. Concord lost 0 ships and 5.4 hull to retaliation. Caldera captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 453,
+    "time": "2026-10-28T21:30:42.470Z",
+    "turnBefore": 29,
+    "selector": "[data-action=peace-response][data-stance=acceptPeace]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "acceptPeace",
+      "offerId": "peace-1"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "acceptPeace",
+      "offerId": "peace-1"
+    },
+    "normalizations": [],
+    "result": "Peace accepted. You receive 60 credits; war is forbidden until turn 34.",
+    "uiReceipt": "Peace accepted. You receive 60 credits; war is forbidden until turn 34."
+  },
+  {
+    "eventIndex": 459,
+    "time": "2026-10-28T21:31:05.305Z",
+    "turnBefore": 29,
+    "selector": "[data-action=split-confirm]",
+    "originalAnnotation": {
+      "type": "split",
+      "fleetId": "f28",
+      "ships": 2
+    },
+    "action": {
+      "type": "split",
+      "fleetId": "f28",
+      "ships": 2
+    },
+    "normalizations": [],
+    "result": "2 ships detached as Vanguard 46.",
+    "uiReceipt": "2 ships detached as Vanguard 46."
+  },
+  {
+    "eventIndex": 464,
+    "time": "2026-10-28T21:32:42.563Z",
+    "turnBefore": 29,
+    "selector": "[data-action=anomaly-choice][data-choice=preserve]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s8",
+      "choice": "preserve"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s8",
+      "choiceId": "preserve"
+    },
+    "normalizations": [
+      "choice renamed choiceId to match actual UI command."
+    ],
+    "result": "Discovery preserved. Its colony research can now mature.",
+    "uiReceipt": "Discovery preserved. Its colony research can now mature."
+  },
+  {
+    "eventIndex": 466,
+    "time": "2026-10-28T21:32:43.188Z",
+    "turnBefore": 29,
+    "selector": "[data-action=build][data-item=shipyard]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "shipyard"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "shipyard"
+    },
+    "normalizations": [],
+    "result": "Orbital Shipyard commissioned at Caldera.",
+    "uiReceipt": "Orbital Shipyard commissioned at Caldera."
+  },
+  {
+    "eventIndex": 470,
+    "time": "2026-10-28T21:32:44.115Z",
+    "turnBefore": 29,
+    "selector": "[data-action=build][data-item=mine]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "mine"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "mine"
+    },
+    "normalizations": [],
+    "result": "Orbital Extractor commissioned at Ashfall.",
+    "uiReceipt": "Orbital Extractor commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 472,
+    "time": "2026-10-28T21:32:44.969Z",
+    "turnBefore": 29,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 39 arrived at Hesper.",
+    "uiReceipt": "Vanguard 39 arrived at Hesper."
+  },
+  {
+    "eventIndex": 474,
+    "time": "2026-10-28T21:32:45.996Z",
+    "turnBefore": 29,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 477,
+    "time": "2026-10-28T21:33:12.554Z",
+    "turnBefore": 29,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Stillwater.",
+    "uiReceipt": "Pathfinder 1 arrived at Stillwater."
+  },
+  {
+    "eventIndex": 479,
+    "time": "2026-10-28T21:33:13.225Z",
+    "turnBefore": 29,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 30: a new mandate begins.",
+    "uiReceipt": "◈\n451+59\nCREDITS\n◇\n54+38\nMINERALS\n✧\n0+44\nSCIENCE\n⌘\n10 / 10\nORDERS"
+  },
+  {
+    "eventIndex": 484,
+    "time": "2026-10-28T21:35:57.910Z",
+    "turnBefore": 30,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 39 arrived at Sable.",
+    "uiReceipt": "Vanguard 39 arrived at Sable."
+  },
+  {
+    "eventIndex": 486,
+    "time": "2026-10-28T21:35:58.894Z",
+    "turnBefore": 30,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f40"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 reached Ashfall in 1 jump.",
+    "uiReceipt": "Vanguard 40 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 488,
+    "time": "2026-10-28T21:35:59.550Z",
+    "turnBefore": 30,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 31: a new mandate begins.",
+    "uiReceipt": "◈\n510+59\nCREDITS\n◇\n92+43\nMINERALS\n✧\n0+44\nSCIENCE\n⌘\n10 / 10\nORDERS"
+  },
+  {
+    "eventIndex": 497,
+    "time": "2026-10-28T21:39:05.954Z",
+    "turnBefore": 31,
+    "selector": "[data-action=build][data-item=colony]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    "normalizations": [],
+    "result": "Colony Ark commissioned at Solace.",
+    "uiReceipt": "Colony Ark commissioned at Solace."
+  },
+  {
+    "eventIndex": 500,
+    "time": "2026-10-28T21:39:07.101Z",
+    "turnBefore": 31,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Ashfall.",
+    "uiReceipt": "Research Enclave commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 502,
+    "time": "2026-10-28T21:39:07.708Z",
+    "turnBefore": 31,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 arrived at Hesper.",
+    "uiReceipt": "Vanguard 40 arrived at Hesper."
+  },
+  {
+    "eventIndex": 505,
+    "time": "2026-10-28T21:39:09.314Z",
+    "turnBefore": 31,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Vanguard 39 arrived at Thalassa.",
+    "uiReceipt": "Vanguard 39 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 506,
+    "time": "2026-10-28T21:39:09.682Z",
+    "turnBefore": 31,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 32: a new mandate begins.",
+    "uiReceipt": "◈\n494+59\nCREDITS\n◇\n50+43\nMINERALS\n✧\n0+44\nSCIENCE\n⌘\n10 / 10\nORDERS"
+  },
+  {
+    "eventIndex": 508,
+    "time": "2026-10-28T21:39:55.973Z",
+    "turnBefore": 32,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s8"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s8"
+    },
+    "normalizations": [],
+    "result": "Vanguard 39 arrived at Caldera.",
+    "uiReceipt": "Vanguard 39 arrived at Caldera."
+  },
+  {
+    "eventIndex": 510,
+    "time": "2026-10-28T21:39:56.770Z",
+    "turnBefore": 32,
+    "selector": "[data-action=merge][data-target=f39]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f39"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f39"
+    },
+    "normalizations": [],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 513,
+    "time": "2026-10-28T21:39:58.437Z",
+    "turnBefore": 32,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 arrived at Sable.",
+    "uiReceipt": "Vanguard 40 arrived at Sable."
+  },
+  {
+    "eventIndex": 518,
+    "time": "2026-10-28T21:40:00.190Z",
+    "turnBefore": 32,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Sundrift.",
+    "uiReceipt": "Vanguard commissioned at Sundrift."
+  },
+  {
+    "eventIndex": 519,
+    "time": "2026-10-28T21:40:00.498Z",
+    "turnBefore": 32,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 33: a new mandate begins.",
+    "uiReceipt": "◈\n528+60\nCREDITS\n◇\n58+43\nMINERALS\n✧\n0+50\nSCIENCE\n⌘\n10 / 10\nORDERS"
+  },
+  {
+    "eventIndex": 525,
+    "time": "2026-10-28T21:41:45.087Z",
+    "turnBefore": 33,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f49",
+      "targetId": "s28"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f49",
+      "targetId": "s28"
+    },
+    "normalizations": [],
+    "result": "Colony Ark 49 arrived at Haven.",
+    "uiReceipt": "Colony Ark 49 arrived at Haven."
+  },
+  {
+    "eventIndex": 527,
+    "time": "2026-10-28T21:41:45.292Z",
+    "turnBefore": 33,
+    "selector": "[data-action=colonize-confirm]",
+    "originalAnnotation": {
+      "type": "colonize",
+      "fleetId": "f49"
+    },
+    "action": {
+      "type": "colonize",
+      "fleetId": "f49"
+    },
+    "normalizations": [],
+    "result": "Colony founded at Haven.",
+    "uiReceipt": "Colony founded at Haven."
+  },
+  {
+    "eventIndex": 529,
+    "time": "2026-10-28T21:41:45.619Z",
+    "turnBefore": 33,
+    "selector": "[data-action=build][data-item=mine]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "mine"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "mine"
+    },
+    "normalizations": [],
+    "result": "Orbital Extractor commissioned at Haven.",
+    "uiReceipt": "Orbital Extractor commissioned at Haven."
+  },
+  {
+    "eventIndex": 533,
+    "time": "2026-10-28T21:41:47.879Z",
+    "turnBefore": 33,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s26"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s26"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 arrived at Aster.",
+    "uiReceipt": "Vanguard 40 arrived at Aster."
+  },
+  {
+    "eventIndex": 537,
+    "time": "2026-10-28T21:45:34.892Z",
+    "turnBefore": 33,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 34: a new mandate begins.",
+    "uiReceipt": "◈\n544+64\nCREDITS\n◇\n59+46\nMINERALS\n✧\n0+54\nSCIENCE\n⌘\n11 / 11\nORDERS"
+  },
+  {
+    "eventIndex": 539,
+    "time": "2026-10-28T21:45:43.056Z",
+    "turnBefore": 34,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s1"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s1"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 arrived at Veyr Prime.",
+    "uiReceipt": "Vanguard 40 arrived at Veyr Prime."
+  },
+  {
+    "eventIndex": 545,
+    "time": "2026-10-28T21:46:02.259Z",
+    "turnBefore": 34,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Caldera.",
+    "uiReceipt": "Vanguard commissioned at Caldera."
+  },
+  {
+    "eventIndex": 550,
+    "time": "2026-10-28T21:46:04.889Z",
+    "turnBefore": 34,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f52",
+      "destinationId": "s10"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f52",
+      "destinationId": "s10"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Ashfall. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Ashfall. Continue when ready."
+  },
+  {
+    "eventIndex": 551,
+    "time": "2026-10-28T21:46:05.715Z",
+    "turnBefore": 34,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 552,
+    "time": "2026-10-28T21:46:13.544Z",
+    "turnBefore": 34,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 35: a new mandate begins.",
+    "uiReceipt": "◈\n577+58\nCREDITS\n◇\n70+46\nMINERALS\n✧\n0+54\nSCIENCE\n⌘\n11 / 11\nORDERS"
+  },
+  {
+    "eventIndex": 553,
+    "time": "2026-10-28T21:46:30.339Z",
+    "turnBefore": 35,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 561,
+    "time": "2026-10-28T21:46:52.367Z",
+    "turnBefore": 35,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Thalassa.",
+    "uiReceipt": "Vanguard 28 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 562,
+    "time": "2026-10-28T21:46:52.709Z",
+    "turnBefore": 35,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 36: a new mandate begins.",
+    "uiReceipt": "◈\n635+58\nCREDITS\n◇\n116+46\nMINERALS\n✧\n53+54\nSCIENCE\n⌘\n11 / 11\nORDERS"
+  },
+  {
+    "eventIndex": 567,
+    "time": "2026-10-28T21:47:46.909Z",
+    "turnBefore": 36,
+    "selector": "[data-action=research][data-tech=ecology]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "ecology"
+    },
+    "action": {
+      "type": "research",
+      "techId": "ecology"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Adaptive Biospheres.",
+    "uiReceipt": "Research directed toward Adaptive Biospheres."
+  },
+  {
+    "eventIndex": 572,
+    "time": "2026-10-28T21:47:48.347Z",
+    "turnBefore": 36,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Ashfall.",
+    "uiReceipt": "Sovereign commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 575,
+    "time": "2026-10-28T21:47:57.826Z",
+    "turnBefore": 36,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 578,
+    "time": "2026-10-28T21:47:59.480Z",
+    "turnBefore": 36,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s8"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s8"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Caldera.",
+    "uiReceipt": "Pathfinder 1 arrived at Caldera."
+  },
+  {
+    "eventIndex": 580,
+    "time": "2026-10-28T21:47:59.920Z",
+    "turnBefore": 36,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Thalassa.",
+    "uiReceipt": "Pathfinder 1 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 582,
+    "time": "2026-10-28T21:48:00.404Z",
+    "turnBefore": 36,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 37: a new mandate begins.",
+    "uiReceipt": "◈\n628+60\nCREDITS\n◇\n77+46\nMINERALS\n✧\n47+55\nSCIENCE\n⌘\n11 / 11\nORDERS"
+  },
+  {
+    "eventIndex": 584,
+    "time": "2026-10-28T21:48:04.787Z",
+    "turnBefore": 37,
+    "selector": "[data-action=research][data-tech=diplomacy]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "diplomacy"
+    },
+    "action": {
+      "type": "research",
+      "techId": "diplomacy"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Stellar Accords.",
+    "uiReceipt": "Research directed toward Stellar Accords."
+  },
+  {
+    "eventIndex": 588,
+    "time": "2026-10-28T21:48:06.331Z",
+    "turnBefore": 37,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Sable.",
+    "uiReceipt": "Pathfinder 1 arrived at Sable."
+  },
+  {
+    "eventIndex": 590,
+    "time": "2026-10-28T21:48:23.047Z",
+    "turnBefore": 37,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Hesper.",
+    "uiReceipt": "Pathfinder 1 arrived at Hesper."
+  },
+  {
+    "eventIndex": 594,
+    "time": "2026-10-28T21:48:42.806Z",
+    "turnBefore": 37,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Sable.",
+    "uiReceipt": "Vanguard 28 arrived at Sable."
+  },
+  {
+    "eventIndex": 597,
+    "time": "2026-10-28T21:48:44.195Z",
+    "turnBefore": 37,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f52"
+    },
+    "normalizations": [],
+    "result": "Vanguard 52 reached Ashfall in 1 jump.",
+    "uiReceipt": "Vanguard 52 reached Ashfall in 1 jump."
+  },
+  {
+    "eventIndex": 599,
+    "time": "2026-10-28T21:48:45.296Z",
+    "turnBefore": 37,
+    "selector": "[data-action=merge][data-target=f52]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f40",
+      "targetId": "f52"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f40",
+      "targetFleetId": "f52"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 603,
+    "time": "2026-10-28T21:48:51.469Z",
+    "turnBefore": 37,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Solace.",
+    "uiReceipt": "Sovereign commissioned at Solace."
+  },
+  {
+    "eventIndex": 604,
+    "time": "2026-10-28T21:48:51.910Z",
+    "turnBefore": 37,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 38: a new mandate begins.",
+    "uiReceipt": "◈\n623+60\nCREDITS\n◇\n46+51\nMINERALS\n✧\n0+55\nSCIENCE\n⌘\n11 / 11\nORDERS"
+  },
+  {
+    "eventIndex": 606,
+    "time": "2026-10-28T21:49:13.177Z",
+    "turnBefore": 38,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Invasion of Sable: 48 defense damage; 0 defenses remain. Concord lost 0 ships and 10.8 hull to retaliation. Sable captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 609,
+    "time": "2026-10-28T21:49:34.142Z",
+    "turnBefore": 38,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 611,
+    "time": "2026-10-28T21:49:34.432Z",
+    "turnBefore": 38,
+    "selector": "[data-action=build][data-item=shipyard]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "shipyard"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "shipyard"
+    },
+    "normalizations": [],
+    "result": "Orbital Shipyard commissioned at Sable.",
+    "uiReceipt": "Orbital Shipyard commissioned at Sable."
+  },
+  {
+    "eventIndex": 614,
+    "time": "2026-10-28T21:49:35.909Z",
+    "turnBefore": 38,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 arrived at Hesper.",
+    "uiReceipt": "Vanguard 40 arrived at Hesper."
+  },
+  {
+    "eventIndex": 617,
+    "time": "2026-10-28T21:49:37.243Z",
+    "turnBefore": 38,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Sable.",
+    "uiReceipt": "Pathfinder 1 arrived at Sable."
+  },
+  {
+    "eventIndex": 619,
+    "time": "2026-10-28T21:49:37.702Z",
+    "turnBefore": 38,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s26"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s26"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 arrived at Aster.",
+    "uiReceipt": "Pathfinder 1 arrived at Aster."
+  },
+  {
+    "eventIndex": 622,
+    "time": "2026-10-28T21:49:45.358Z",
+    "turnBefore": 38,
+    "selector": "[data-action=merge][data-target=f57]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f46",
+      "targetId": "f57"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f46",
+      "targetFleetId": "f57"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 623,
+    "time": "2026-10-28T21:49:45.792Z",
+    "turnBefore": 38,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 39: a new mandate begins.",
+    "uiReceipt": "◈\n689+91\nCREDITS\n◇\n72+71\nMINERALS\n✧\n0+65\nSCIENCE\n⌘\n12 / 12\nORDERS"
+  },
+  {
+    "eventIndex": 628,
+    "time": "2026-10-28T21:50:10.232Z",
+    "turnBefore": 39,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 629,
+    "time": "2026-10-28T21:50:10.395Z",
+    "turnBefore": 39,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Battle at Sable: Concord lost 0 ships and 24.2 hull; Veyr lost 1 ship and 16.2 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 631,
+    "time": "2026-10-28T21:50:33.913Z",
+    "turnBefore": 39,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f28"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f28"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 633,
+    "time": "2026-10-28T21:50:46.047Z",
+    "turnBefore": 39,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f40"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f40"
+    },
+    "normalizations": [],
+    "result": "Invasion of Hesper: 32 defense damage; 1 defenses remain. Concord lost 0 ships and 7.4 hull to retaliation. Invading fleet survives; colony holds.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 637,
+    "time": "2026-10-28T21:50:47.365Z",
+    "turnBefore": 39,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 1 encountered 2 hostile ships at Veyr Prime and withdrew to Aster. One order and one jump were spent; no survey was conducted.",
+    "uiReceipt": "Pathfinder 1 encountered 2 hostile ships at Veyr Prime and withdrew to Aster. One order and one jump were spent; no survey was conducted."
+  },
+  {
+    "eventIndex": 642,
+    "time": "2026-10-28T21:50:59.266Z",
+    "turnBefore": 39,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Caldera.",
+    "uiReceipt": "Research Enclave commissioned at Caldera."
+  },
+  {
+    "eventIndex": 643,
+    "time": "2026-10-28T21:50:59.713Z",
+    "turnBefore": 39,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 40: a new mandate begins.",
+    "uiReceipt": "◈\n750+89\nCREDITS\n◇\n93+72\nMINERALS\n✧\n52+65\nSCIENCE\n⌘\n12 / 12\nORDERS"
+  },
+  {
+    "eventIndex": 646,
+    "time": "2026-10-28T21:51:45.883Z",
+    "turnBefore": 40,
+    "selector": "[data-action=research][data-tech=command]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "command"
+    },
+    "action": {
+      "type": "research",
+      "techId": "command"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Distributed Command.",
+    "uiReceipt": "Research directed toward Distributed Command."
+  },
+  {
+    "eventIndex": 649,
+    "time": "2026-10-28T21:51:47.099Z",
+    "turnBefore": 40,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f40"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f40"
+    },
+    "normalizations": [],
+    "result": "Invasion of Hesper: 1 defense damage; 0 defenses remain. Concord lost 0 ships and 3.2 hull to retaliation. Hesper captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 655,
+    "time": "2026-10-28T21:52:22.355Z",
+    "turnBefore": 40,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Sable.",
+    "uiReceipt": "Sovereign commissioned at Sable."
+  },
+  {
+    "eventIndex": 659,
+    "time": "2026-10-28T21:52:24.023Z",
+    "turnBefore": 40,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Sovereign 60 arrived at Hesper.",
+    "uiReceipt": "Sovereign 60 arrived at Hesper."
+  },
+  {
+    "eventIndex": 664,
+    "time": "2026-10-28T21:52:26.394Z",
+    "turnBefore": 40,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f58",
+      "destinationId": "s13"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f58",
+      "destinationId": "s13"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 6 jumps to Sable. Continue when ready.",
+    "uiReceipt": "Route plotted: 6 jumps to Sable. Continue when ready."
+  },
+  {
+    "eventIndex": 665,
+    "time": "2026-10-28T21:52:27.132Z",
+    "turnBefore": 40,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 666,
+    "time": "2026-10-28T21:52:27.583Z",
+    "turnBefore": 40,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 41: a new mandate begins.",
+    "uiReceipt": "◈\n798+115\nCREDITS\n◇\n83+76\nMINERALS\n✧\n0+77\nSCIENCE\n⌘\n15 / 15\nORDERS"
+  },
+  {
+    "eventIndex": 671,
+    "time": "2026-10-28T21:53:16.769Z",
+    "turnBefore": 41,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 675,
+    "time": "2026-10-28T21:53:18.288Z",
+    "turnBefore": 41,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Sovereign 60 arrived at Sable.",
+    "uiReceipt": "Sovereign 60 arrived at Sable."
+  },
+  {
+    "eventIndex": 678,
+    "time": "2026-10-28T21:53:18.868Z",
+    "turnBefore": 41,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f40",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 40 arrived at Sable.",
+    "uiReceipt": "Vanguard 40 arrived at Sable."
+  },
+  {
+    "eventIndex": 680,
+    "time": "2026-10-28T21:53:19.773Z",
+    "turnBefore": 41,
+    "selector": "[data-action=merge][data-target=f40]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetId": "f40"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f40"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 685,
+    "time": "2026-10-28T21:53:40.139Z",
+    "turnBefore": 41,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Ashfall.",
+    "uiReceipt": "Vanguard commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 689,
+    "time": "2026-10-28T21:53:41.499Z",
+    "turnBefore": 41,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Haven.",
+    "uiReceipt": "Research Enclave commissioned at Haven."
+  },
+  {
+    "eventIndex": 690,
+    "time": "2026-10-28T21:53:41.880Z",
+    "turnBefore": 41,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 42: a new mandate begins.",
+    "uiReceipt": "◈\n862+119\nCREDITS\n◇\n94+76\nMINERALS\n✧\n0+77\nSCIENCE\n⌘\n15 / 15\nORDERS"
+  },
+  {
+    "eventIndex": 696,
+    "time": "2026-10-28T21:54:50.627Z",
+    "turnBefore": 42,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 697,
+    "time": "2026-10-28T21:54:51.158Z",
+    "turnBefore": 42,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 43: a new mandate begins.",
+    "uiReceipt": "◈\n981+117\nCREDITS\n◇\n170+77\nMINERALS\n✧\n0+84\nSCIENCE\n⌘\n15 / 15\nORDERS"
+  },
+  {
+    "eventIndex": 699,
+    "time": "2026-10-28T21:55:20.328Z",
+    "turnBefore": 43,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 704,
+    "time": "2026-10-28T21:55:36.566Z",
+    "turnBefore": 43,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f63",
+      "targetId": "s5"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f63",
+      "targetId": "s5"
+    },
+    "normalizations": [],
+    "result": "Vanguard 63 arrived at Hesper.",
+    "uiReceipt": "Vanguard 63 arrived at Hesper."
+  },
+  {
+    "eventIndex": 707,
+    "time": "2026-10-28T21:55:37.960Z",
+    "turnBefore": 43,
+    "selector": "[data-action=merge][data-target=f64]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f60",
+      "targetId": "f64"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f60",
+      "targetFleetId": "f64"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 710,
+    "time": "2026-10-28T21:55:38.525Z",
+    "turnBefore": 43,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Sable.",
+    "uiReceipt": "Vanguard commissioned at Sable."
+  },
+  {
+    "eventIndex": 712,
+    "time": "2026-10-28T21:55:39.213Z",
+    "turnBefore": 43,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s26"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s26"
+    },
+    "normalizations": [],
+    "result": "Battle at Aster: Concord lost 0 ships and 11.1 hull; Veyr lost 1 ship and 34 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 717,
+    "time": "2026-10-28T21:56:17.358Z",
+    "turnBefore": 43,
+    "selector": "[data-action=build][data-item=factory]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "factory"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "factory"
+    },
+    "normalizations": [],
+    "result": "Manufactory commissioned at Caldera.",
+    "uiReceipt": "Manufactory commissioned at Caldera."
+  },
+  {
+    "eventIndex": 722,
+    "time": "2026-10-28T21:56:18.569Z",
+    "turnBefore": 43,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s10",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Ashfall.",
+    "uiReceipt": "Sovereign commissioned at Ashfall."
+  },
+  {
+    "eventIndex": 724,
+    "time": "2026-10-28T21:56:19.000Z",
+    "turnBefore": 43,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 44: a new mandate begins.",
+    "uiReceipt": "◈\n973+119\nCREDITS\n◇\n82+77\nMINERALS\n✧\n0+84\nSCIENCE\n⌘\n15 / 15\nORDERS"
+  },
+  {
+    "eventIndex": 725,
+    "time": "2026-10-28T21:57:13.982Z",
+    "turnBefore": 44,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 729,
+    "time": "2026-10-28T21:57:15.472Z",
+    "turnBefore": 44,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f63",
+      "targetId": "s13"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f63",
+      "targetId": "s13"
+    },
+    "normalizations": [],
+    "result": "Vanguard 63 arrived at Sable.",
+    "uiReceipt": "Vanguard 63 arrived at Sable."
+  },
+  {
+    "eventIndex": 731,
+    "time": "2026-10-28T21:57:16.577Z",
+    "turnBefore": 44,
+    "selector": "[data-action=merge][data-target=f63]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetId": "f63"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f63"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 734,
+    "time": "2026-10-28T21:57:17.268Z",
+    "turnBefore": 44,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f60"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f60"
+    },
+    "normalizations": [],
+    "result": "Invasion of Aster: 27 defense damage; 0 defenses remain. Concord lost 0 ships and 6 hull to retaliation. Aster captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 736,
+    "time": "2026-10-28T21:58:15.044Z",
+    "turnBefore": 44,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f60"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f60"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 738,
+    "time": "2026-10-28T21:58:15.186Z",
+    "turnBefore": 44,
+    "selector": "[data-action=build][data-item=lab]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s26",
+      "itemId": "lab"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s26",
+      "itemId": "lab"
+    },
+    "normalizations": [],
+    "result": "Research Enclave commissioned at Aster.",
+    "uiReceipt": "Research Enclave commissioned at Aster."
+  },
+  {
+    "eventIndex": 742,
+    "time": "2026-10-28T21:58:16.369Z",
+    "turnBefore": 44,
+    "selector": "[data-action=build][data-item=scout]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "scout"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "scout"
+    },
+    "normalizations": [],
+    "result": "Pathfinder commissioned at Solace.",
+    "uiReceipt": "Pathfinder commissioned at Solace."
+  },
+  {
+    "eventIndex": 744,
+    "time": "2026-10-28T21:58:16.890Z",
+    "turnBefore": 44,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 45: a new mandate begins.",
+    "uiReceipt": "◈\n1,053+129\nCREDITS\n◇\n110+88\nMINERALS\n✧\n0+96\nSCIENCE\n⌘\n16 / 16\nORDERS"
+  },
+  {
+    "eventIndex": 748,
+    "time": "2026-10-28T21:59:01.513Z",
+    "turnBefore": 45,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s1"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f60",
+      "targetId": "s1"
+    },
+    "normalizations": [],
+    "result": "Battle at Veyr Prime: Concord lost 0 ships and 13.2 hull; Veyr lost 1 ship and 34 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 754,
+    "time": "2026-10-28T21:59:36.052Z",
+    "turnBefore": 45,
+    "selector": "[data-action=anomaly-choice][data-choice=harvest]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s8",
+      "choiceId": "harvest"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s8",
+      "choiceId": "harvest"
+    },
+    "normalizations": [],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 757,
+    "time": "2026-10-28T21:59:37.323Z",
+    "turnBefore": 45,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 reached Sable in 1 jump.",
+    "uiReceipt": "Sovereign 58 reached Sable in 1 jump."
+  },
+  {
+    "eventIndex": 759,
+    "time": "2026-10-28T21:59:38.415Z",
+    "turnBefore": 45,
+    "selector": "[data-action=merge][data-target=f68]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetId": "f68"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f28",
+      "targetFleetId": "f68"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 761,
+    "time": "2026-10-28T21:59:38.841Z",
+    "turnBefore": 45,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s26"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s26"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Aster.",
+    "uiReceipt": "Vanguard 28 arrived at Aster."
+  },
+  {
+    "eventIndex": 767,
+    "time": "2026-10-28T22:00:03.656Z",
+    "turnBefore": 45,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s28"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s28"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Haven.",
+    "uiReceipt": "Pathfinder 66 arrived at Haven."
+  },
+  {
+    "eventIndex": 769,
+    "time": "2026-10-28T22:00:04.002Z",
+    "turnBefore": 45,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s15"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s15"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Kepler.",
+    "uiReceipt": "Pathfinder 66 arrived at Kepler."
+  },
+  {
+    "eventIndex": 771,
+    "time": "2026-10-28T22:00:04.114Z",
+    "turnBefore": 45,
+    "selector": "[data-action=research][data-tech=computing]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "computing"
+    },
+    "action": {
+      "type": "research",
+      "techId": "computing"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Quantum Archives.",
+    "uiReceipt": "Research directed toward Quantum Archives."
+  },
+  {
+    "eventIndex": 772,
+    "time": "2026-10-28T22:00:25.247Z",
+    "turnBefore": 45,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 46: a new mandate begins.",
+    "uiReceipt": "◈\n1,212+129\nCREDITS\n◇\n198+88\nMINERALS\n✧\n0+96\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 779,
+    "time": "2026-10-28T22:01:02.192Z",
+    "turnBefore": 46,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f60"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f60"
+    },
+    "normalizations": [],
+    "result": "Battle at Veyr Prime: Concord lost 0 ships and 12.8 hull; Veyr lost 1 ship and 34 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 781,
+    "time": "2026-10-28T22:01:08.207Z",
+    "turnBefore": 46,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f60"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f60"
+    },
+    "normalizations": [],
+    "result": "Invasion of Veyr Prime: 63 defense damage; 0 defenses remain. Concord lost 0 ships and 14.1 hull to retaliation. Veyr Prime captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 787,
+    "time": "2026-10-28T22:01:42.212Z",
+    "turnBefore": 46,
+    "selector": "[data-action=peace-response][data-stance=acceptPeace]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "acceptPeace"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "acceptPeace"
+    },
+    "normalizations": [],
+    "result": "Peace accepted. You receive 60 credits; war is forbidden until turn 51.",
+    "uiReceipt": "Peace accepted. You receive 60 credits; war is forbidden until turn 51."
+  },
+  {
+    "eventIndex": 792,
+    "time": "2026-10-28T22:01:44.375Z",
+    "turnBefore": 46,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s1"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f28",
+      "targetId": "s1"
+    },
+    "normalizations": [],
+    "result": "Vanguard 28 arrived at Veyr Prime.",
+    "uiReceipt": "Vanguard 28 arrived at Veyr Prime."
+  },
+  {
+    "eventIndex": 796,
+    "time": "2026-10-28T22:01:45.873Z",
+    "turnBefore": 46,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s26"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s26"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Aster.",
+    "uiReceipt": "Sovereign 58 arrived at Aster."
+  },
+  {
+    "eventIndex": 798,
+    "time": "2026-10-28T22:01:46.423Z",
+    "turnBefore": 46,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s1"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s1"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Veyr Prime.",
+    "uiReceipt": "Sovereign 58 arrived at Veyr Prime."
+  },
+  {
+    "eventIndex": 799,
+    "time": "2026-10-28T22:03:07.720Z",
+    "turnBefore": 46,
+    "selector": "[data-action=merge][data-target=f60]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetId": "f60"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetFleetId": "f60"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 803,
+    "time": "2026-10-28T22:03:09.366Z",
+    "turnBefore": 46,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s7"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s7"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Nacre.",
+    "uiReceipt": "Pathfinder 66 arrived at Nacre."
+  },
+  {
+    "eventIndex": 805,
+    "time": "2026-10-28T22:03:09.816Z",
+    "turnBefore": 46,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s12"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s12"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Eidolon.",
+    "uiReceipt": "Pathfinder 66 arrived at Eidolon."
+  },
+  {
+    "eventIndex": 807,
+    "time": "2026-10-28T22:03:10.301Z",
+    "turnBefore": 46,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 47: a new mandate begins.",
+    "uiReceipt": "◈\n1,426+152\nCREDITS\n◇\n297+99\nMINERALS\n✧\n0+110\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 809,
+    "time": "2026-10-28T22:03:17.711Z",
+    "turnBefore": 47,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s4"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s4"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Meridian.",
+    "uiReceipt": "Pathfinder 66 arrived at Meridian."
+  },
+  {
+    "eventIndex": 813,
+    "time": "2026-10-28T22:03:47.051Z",
+    "turnBefore": 47,
+    "selector": "[data-action=anomaly-choice][data-choice=supplies]",
+    "originalAnnotation": {
+      "type": "anomaly",
+      "systemId": "s4",
+      "choiceId": "supplies"
+    },
+    "action": {
+      "type": "anomaly",
+      "systemId": "s4",
+      "choiceId": "supplies"
+    },
+    "normalizations": [],
+    "result": "Expedition resolved.",
+    "uiReceipt": "Expedition resolved."
+  },
+  {
+    "eventIndex": 815,
+    "time": "2026-10-28T22:03:47.529Z",
+    "turnBefore": 47,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s9"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s9"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Velorum.",
+    "uiReceipt": "Pathfinder 66 arrived at Velorum."
+  },
+  {
+    "eventIndex": 820,
+    "time": "2026-10-28T22:04:12.455Z",
+    "turnBefore": 47,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f70",
+      "destinationId": "s8"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f70",
+      "destinationId": "s8"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Caldera. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Caldera. Continue when ready."
+  },
+  {
+    "eventIndex": 821,
+    "time": "2026-10-28T22:04:13.290Z",
+    "turnBefore": 47,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f70"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f70"
+    },
+    "normalizations": [],
+    "result": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 826,
+    "time": "2026-10-28T22:05:05.314Z",
+    "turnBefore": 47,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Caldera.",
+    "uiReceipt": "Sovereign commissioned at Caldera."
+  },
+  {
+    "eventIndex": 827,
+    "time": "2026-10-28T22:05:05.676Z",
+    "turnBefore": 47,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 48: a new mandate begins.",
+    "uiReceipt": "◈\n1,528+158\nCREDITS\n◇\n311+101\nMINERALS\n✧\n73+140\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 829,
+    "time": "2026-10-28T22:05:36.847Z",
+    "turnBefore": 48,
+    "selector": "[data-action=research][data-tech=singularity]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "singularity"
+    },
+    "action": {
+      "type": "research",
+      "techId": "singularity"
+    },
+    "normalizations": [],
+    "result": "Research directed toward The Asterion Protocol.",
+    "uiReceipt": "Research directed toward The Asterion Protocol."
+  },
+  {
+    "eventIndex": 833,
+    "time": "2026-10-28T22:05:38.932Z",
+    "turnBefore": 48,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f70"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f70"
+    },
+    "normalizations": [],
+    "result": "Sovereign 70 reached Caldera in 2 jumps.",
+    "uiReceipt": "Sovereign 70 reached Caldera in 2 jumps."
+  },
+  {
+    "eventIndex": 837,
+    "time": "2026-10-28T22:05:40.906Z",
+    "turnBefore": 48,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s17"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s17"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Orison.",
+    "uiReceipt": "Pathfinder 66 arrived at Orison."
+  },
+  {
+    "eventIndex": 839,
+    "time": "2026-10-28T22:06:01.820Z",
+    "turnBefore": 48,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s30"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s30"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Caelum.",
+    "uiReceipt": "Pathfinder 66 arrived at Caelum."
+  },
+  {
+    "eventIndex": 841,
+    "time": "2026-10-28T22:06:02.245Z",
+    "turnBefore": 48,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 49: a new mandate begins.",
+    "uiReceipt": "◈\n1,686+158\nCREDITS\n◇\n412+101\nMINERALS\n✧\n0+140\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 843,
+    "time": "2026-10-28T22:06:07.171Z",
+    "turnBefore": 49,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s22"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s22"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Ophion.",
+    "uiReceipt": "Pathfinder 66 arrived at Ophion."
+  },
+  {
+    "eventIndex": 845,
+    "time": "2026-10-28T22:06:16.444Z",
+    "turnBefore": 49,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s3"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s3"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Lumen.",
+    "uiReceipt": "Pathfinder 66 arrived at Lumen."
+  },
+  {
+    "eventIndex": 847,
+    "time": "2026-10-28T22:06:16.897Z",
+    "turnBefore": 49,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 50: a new mandate begins.",
+    "uiReceipt": "◈\n1,844+160\nCREDITS\n◇\n513+102\nMINERALS\n✧\n0+141\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 869,
+    "time": "2026-10-28T22:10:17.259Z",
+    "turnBefore": 50,
+    "selector": "[data-action=plan-route]",
+    "originalAnnotation": {
+      "type": "planRoute",
+      "fleetId": "f58",
+      "destinationId": "s8"
+    },
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f58",
+      "destinationId": "s8"
+    },
+    "normalizations": [],
+    "result": "Route plotted: 4 jumps to Caldera. Continue when ready.",
+    "uiReceipt": "Route plotted: 4 jumps to Caldera. Continue when ready."
+  },
+  {
+    "eventIndex": 870,
+    "time": "2026-10-28T22:10:17.993Z",
+    "turnBefore": 50,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiReceipt": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "eventIndex": 874,
+    "time": "2026-10-28T22:10:19.796Z",
+    "turnBefore": 50,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s35"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s35"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Seraph.",
+    "uiReceipt": "Pathfinder 66 arrived at Seraph."
+  },
+  {
+    "eventIndex": 876,
+    "time": "2026-10-28T22:10:33.959Z",
+    "turnBefore": 50,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s27"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s27"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Nyx.",
+    "uiReceipt": "Pathfinder 66 arrived at Nyx."
+  },
+  {
+    "eventIndex": 877,
+    "time": "2026-10-28T22:10:34.247Z",
+    "turnBefore": 50,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 51: a new mandate begins.",
+    "uiReceipt": "◈\n2,004+156\nCREDITS\n◇\n615+102\nMINERALS\n✧\n0+141\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 879,
+    "time": "2026-10-28T22:10:46.076Z",
+    "turnBefore": 51,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s19"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s19"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Bellatrix.",
+    "uiReceipt": "Pathfinder 66 arrived at Bellatrix."
+  },
+  {
+    "eventIndex": 883,
+    "time": "2026-10-28T22:11:29.979Z",
+    "turnBefore": 51,
+    "selector": "[data-action=continue-route]",
+    "originalAnnotation": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 reached Caldera in 2 jumps.",
+    "uiReceipt": "Sovereign 58 reached Caldera in 2 jumps."
+  },
+  {
+    "eventIndex": 884,
+    "time": "2026-10-28T22:11:30.377Z",
+    "turnBefore": 51,
+    "selector": "[data-action=merge][data-target=f70]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetId": "f70"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetFleetId": "f70"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 885,
+    "time": "2026-10-28T22:11:30.671Z",
+    "turnBefore": 51,
+    "selector": "[data-action=merge][data-target=f71]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetId": "f71"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetFleetId": "f71"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 888,
+    "time": "2026-10-28T22:11:31.200Z",
+    "turnBefore": 51,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Caldera.",
+    "uiReceipt": "Vanguard commissioned at Caldera."
+  },
+  {
+    "eventIndex": 889,
+    "time": "2026-10-28T22:11:31.548Z",
+    "turnBefore": 51,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 52: a new mandate begins.",
+    "uiReceipt": "◈\n2,135+158\nCREDITS\n◇\n682+102\nMINERALS\n✧\n0+141\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 893,
+    "time": "2026-10-28T22:12:04.715Z",
+    "turnBefore": 52,
+    "selector": "[data-action=war-confirm][data-target=khar]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "war"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "war"
+    },
+    "normalizations": [],
+    "result": "The Concord declared war on Khar Dominion.",
+    "uiReceipt": "The Concord declared war on Khar Dominion."
+  },
+  {
+    "eventIndex": 898,
+    "time": "2026-10-28T22:12:06.476Z",
+    "turnBefore": 52,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Battle at Stillwater: Concord lost 2 ships and 200.8 hull; Khar lost 8 ships and 272 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 904,
+    "time": "2026-10-28T22:12:52.872Z",
+    "turnBefore": 52,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s2"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s2"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Kharos.",
+    "uiReceipt": "Sovereign 58 arrived at Kharos."
+  },
+  {
+    "eventIndex": 908,
+    "time": "2026-10-28T22:13:04.922Z",
+    "turnBefore": 52,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s32"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s32"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Iona.",
+    "uiReceipt": "Pathfinder 66 arrived at Iona."
+  },
+  {
+    "eventIndex": 910,
+    "time": "2026-10-28T22:13:41.028Z",
+    "turnBefore": 52,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s40"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s40"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Terminus.",
+    "uiReceipt": "Pathfinder 66 arrived at Terminus."
+  },
+  {
+    "eventIndex": 915,
+    "time": "2026-10-28T22:13:42.503Z",
+    "turnBefore": 52,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s13",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Sable.",
+    "uiReceipt": "Sovereign commissioned at Sable."
+  },
+  {
+    "eventIndex": 917,
+    "time": "2026-10-28T22:13:42.779Z",
+    "turnBefore": 52,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 53: a new mandate begins.",
+    "uiReceipt": "◈\n2,236+166\nCREDITS\n◇\n699+102\nMINERALS\n✧\n0+141\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 922,
+    "time": "2026-10-28T22:17:45.066Z",
+    "turnBefore": 53,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Battle at Kharos: Concord lost 0 ships and 0 hull; Khar lost 1 ship and 24 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 924,
+    "time": "2026-10-28T22:17:45.248Z",
+    "turnBefore": 53,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Invasion of Kharos: 51 defense damage; 0 defenses remain. Concord lost 0 ships and 11.4 hull to retaliation. Kharos captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 926,
+    "time": "2026-10-28T22:17:50.580Z",
+    "turnBefore": 53,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 927,
+    "time": "2026-10-28T22:17:50.739Z",
+    "turnBefore": 53,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 930,
+    "time": "2026-10-28T22:17:51.059Z",
+    "turnBefore": 53,
+    "selector": "[data-action=build][data-item=frigate]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s2",
+      "itemId": "frigate"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s2",
+      "itemId": "frigate"
+    },
+    "normalizations": [],
+    "result": "Vanguard commissioned at Kharos.",
+    "uiReceipt": "Vanguard commissioned at Kharos."
+  },
+  {
+    "eventIndex": 932,
+    "time": "2026-10-28T22:17:52.121Z",
+    "turnBefore": 53,
+    "selector": "[data-action=merge][data-target=f74]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f46",
+      "targetId": "f74"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f46",
+      "targetFleetId": "f74"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 935,
+    "time": "2026-10-28T22:17:52.527Z",
+    "turnBefore": 53,
+    "selector": "[data-action=split-confirm]",
+    "originalAnnotation": {
+      "type": "split",
+      "fleetId": "f46",
+      "ships": 2
+    },
+    "action": {
+      "type": "split",
+      "fleetId": "f46",
+      "ships": 2
+    },
+    "normalizations": [],
+    "result": "2 ships detached as Vanguard 75.",
+    "uiReceipt": "2 ships detached as Vanguard 75."
+  },
+  {
+    "eventIndex": 938,
+    "time": "2026-10-28T22:17:58.425Z",
+    "turnBefore": 53,
+    "selector": "[data-action=build][data-item=cruiser]",
+    "originalAnnotation": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "cruiser"
+    },
+    "action": {
+      "type": "build",
+      "systemId": "s8",
+      "itemId": "cruiser"
+    },
+    "normalizations": [],
+    "result": "Sovereign commissioned at Caldera.",
+    "uiReceipt": "Sovereign commissioned at Caldera."
+  },
+  {
+    "eventIndex": 940,
+    "time": "2026-10-28T22:17:58.801Z",
+    "turnBefore": 53,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f75",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f75",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Vanguard 75 arrived at Stillwater.",
+    "uiReceipt": "Vanguard 75 arrived at Stillwater."
+  },
+  {
+    "eventIndex": 942,
+    "time": "2026-10-28T22:17:59.361Z",
+    "turnBefore": 53,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f75",
+      "targetId": "s2"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f75",
+      "targetId": "s2"
+    },
+    "normalizations": [],
+    "result": "Vanguard 75 arrived at Kharos.",
+    "uiReceipt": "Vanguard 75 arrived at Kharos."
+  },
+  {
+    "eventIndex": 946,
+    "time": "2026-10-28T22:18:00.648Z",
+    "turnBefore": 53,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s27"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s27"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Nyx.",
+    "uiReceipt": "Pathfinder 66 arrived at Nyx."
+  },
+  {
+    "eventIndex": 948,
+    "time": "2026-10-28T22:18:00.983Z",
+    "turnBefore": 53,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s35"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s35"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Seraph.",
+    "uiReceipt": "Pathfinder 66 arrived at Seraph."
+  },
+  {
+    "eventIndex": 953,
+    "time": "2026-10-28T22:18:20.737Z",
+    "turnBefore": 53,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 54: a new mandate begins.",
+    "uiReceipt": "◈\n2,329+183\nCREDITS\n◇\n671+112\nMINERALS\n✧\n0+157\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 957,
+    "time": "2026-10-28T22:18:33.547Z",
+    "turnBefore": 54,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s3"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s3"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Lumen.",
+    "uiReceipt": "Pathfinder 66 arrived at Lumen."
+  },
+  {
+    "eventIndex": 959,
+    "time": "2026-10-28T22:18:45.109Z",
+    "turnBefore": 54,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s35"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f66",
+      "targetId": "s35"
+    },
+    "normalizations": [],
+    "result": "Pathfinder 66 arrived at Seraph.",
+    "uiReceipt": "Pathfinder 66 arrived at Seraph."
+  },
+  {
+    "eventIndex": 963,
+    "time": "2026-10-28T22:18:45.314Z",
+    "turnBefore": 54,
+    "selector": "[data-action=war-confirm][data-target=choir]",
+    "originalAnnotation": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "war"
+    },
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "war"
+    },
+    "normalizations": [],
+    "result": "The Concord declared war on The Luminous Choir. The active trade treaty was broken; the betrayal deepens their grievance.",
+    "uiReceipt": "The Concord declared war on The Luminous Choir. The active trade treaty was broken; the betrayal deepens their grievance."
+  },
+  {
+    "eventIndex": 968,
+    "time": "2026-10-28T22:18:46.899Z",
+    "turnBefore": 54,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Stillwater.",
+    "uiReceipt": "Sovereign 58 arrived at Stillwater."
+  },
+  {
+    "eventIndex": 970,
+    "time": "2026-10-28T22:18:47.276Z",
+    "turnBefore": 54,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s11"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s11"
+    },
+    "normalizations": [],
+    "result": "Battle at Carina: Concord lost 0 ships and 52.7 hull; Choir lost 3 ships and 92.2 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 971,
+    "time": "2026-10-28T22:19:01.295Z",
+    "turnBefore": 54,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 55: a new mandate begins.",
+    "uiReceipt": "◈\n2,502+169\nCREDITS\n◇\n783+112\nMINERALS\n✧\n90+158\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 973,
+    "time": "2026-10-28T22:19:08.643Z",
+    "turnBefore": 55,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Invasion of Carina: 45 defense damage; 0 defenses remain. Concord lost 0 ships and 10.1 hull to retaliation. Carina captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 975,
+    "time": "2026-10-28T22:19:08.822Z",
+    "turnBefore": 55,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 976,
+    "time": "2026-10-28T22:19:08.982Z",
+    "turnBefore": 55,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 977,
+    "time": "2026-10-28T22:19:09.145Z",
+    "turnBefore": 55,
+    "selector": "[data-action=repair]",
+    "originalAnnotation": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "repair",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Emergency repairs completed.",
+    "uiReceipt": "Emergency repairs completed."
+  },
+  {
+    "eventIndex": 979,
+    "time": "2026-10-28T22:19:09.429Z",
+    "turnBefore": 55,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s19"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s19"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Bellatrix.",
+    "uiReceipt": "Sovereign 58 arrived at Bellatrix."
+  },
+  {
+    "eventIndex": 982,
+    "time": "2026-10-28T22:19:09.856Z",
+    "turnBefore": 55,
+    "selector": "[data-action=merge][data-target=f76]",
+    "originalAnnotation": {
+      "type": "merge",
+      "fleetId": "f75",
+      "targetId": "f76"
+    },
+    "action": {
+      "type": "merge",
+      "fleetId": "f75",
+      "targetFleetId": "f76"
+    },
+    "normalizations": [
+      "merge targetId renamed targetFleetId to match data-target UI dispatch."
+    ],
+    "result": "Fleets combined into one task force.",
+    "uiReceipt": "Fleets combined into one task force."
+  },
+  {
+    "eventIndex": 986,
+    "time": "2026-10-28T22:19:11.460Z",
+    "turnBefore": 55,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s21"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s21"
+    },
+    "normalizations": [],
+    "result": "Sovereign 78 arrived at Thalassa.",
+    "uiReceipt": "Sovereign 78 arrived at Thalassa."
+  },
+  {
+    "eventIndex": 988,
+    "time": "2026-10-28T22:19:11.830Z",
+    "turnBefore": 55,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s8"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s8"
+    },
+    "normalizations": [],
+    "result": "Sovereign 78 arrived at Caldera.",
+    "uiReceipt": "Sovereign 78 arrived at Caldera."
+  },
+  {
+    "eventIndex": 990,
+    "time": "2026-10-28T22:19:12.001Z",
+    "turnBefore": 55,
+    "selector": "[data-action=research][data-tech=terraforming]",
+    "originalAnnotation": {
+      "type": "research",
+      "techId": "terraforming"
+    },
+    "action": {
+      "type": "research",
+      "techId": "terraforming"
+    },
+    "normalizations": [],
+    "result": "Research directed toward Worldshaping.",
+    "uiReceipt": "Research directed toward Worldshaping."
+  },
+  {
+    "eventIndex": 992,
+    "time": "2026-10-28T22:19:30.749Z",
+    "turnBefore": 55,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 56: a new mandate begins.",
+    "uiReceipt": "◈\n2,695+197\nCREDITS\n◇\n879+126\nMINERALS\n✧\n0+176\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 1000,
+    "time": "2026-10-28T22:19:51.391Z",
+    "turnBefore": 56,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s27"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s27"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Nyx.",
+    "uiReceipt": "Sovereign 58 arrived at Nyx."
+  },
+  {
+    "eventIndex": 1002,
+    "time": "2026-10-28T22:19:51.687Z",
+    "turnBefore": 56,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s35"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s35"
+    },
+    "normalizations": [],
+    "result": "Battle at Seraph: Concord lost 0 ships and 13.5 hull; Choir lost 1 ship and 28.1 hull. Attacking fleet survives; defending fleet destroyed.",
+    "uiReceipt": "1 combat report recorded."
+  },
+  {
+    "eventIndex": 1008,
+    "time": "2026-10-28T22:20:09.030Z",
+    "turnBefore": 56,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s16"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s16"
+    },
+    "normalizations": [],
+    "result": "Sovereign 78 arrived at Stillwater.",
+    "uiReceipt": "Sovereign 78 arrived at Stillwater."
+  },
+  {
+    "eventIndex": 1010,
+    "time": "2026-10-28T22:20:09.432Z",
+    "turnBefore": 56,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s11"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f78",
+      "targetId": "s11"
+    },
+    "normalizations": [],
+    "result": "Sovereign 78 arrived at Carina.",
+    "uiReceipt": "Sovereign 78 arrived at Carina."
+  },
+  {
+    "eventIndex": 1011,
+    "time": "2026-10-28T22:20:09.740Z",
+    "turnBefore": 56,
+    "selector": null,
+    "originalAnnotation": {
+      "type": "endTurn"
+    },
+    "action": {
+      "type": "endTurn"
+    },
+    "normalizations": [],
+    "result": "Turn 57: a new mandate begins.",
+    "uiReceipt": "◈\n2,892+195\nCREDITS\n◇\n1,005+126\nMINERALS\n✧\n0+177\nSCIENCE\n⌘\n18 / 18\nORDERS"
+  },
+  {
+    "eventIndex": 1015,
+    "time": "2026-10-28T22:20:17.286Z",
+    "turnBefore": 57,
+    "selector": "[data-action=move]",
+    "originalAnnotation": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s3"
+    },
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s3"
+    },
+    "normalizations": [],
+    "result": "Sovereign 58 arrived at Lumen.",
+    "uiReceipt": "Sovereign 58 arrived at Lumen."
+  },
+  {
+    "eventIndex": 1018,
+    "time": "2026-10-28T22:20:23.817Z",
+    "turnBefore": 57,
+    "selector": "[data-action=attack]",
+    "originalAnnotation": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "action": {
+      "type": "attack",
+      "fleetId": "f58"
+    },
+    "normalizations": [],
+    "result": "Invasion of Lumen: 51 defense damage; 0 defenses remain. Concord lost 0 ships and 11.4 hull to retaliation. Lumen captured; invading fleet survives.",
+    "uiReceipt": "1 combat report recorded."
+  }
+]

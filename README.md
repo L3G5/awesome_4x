@@ -46,6 +46,8 @@ The [diplomatic consent audit](docs/diplomacy-audit/index.html) reproduces the a
 
 The [trade consent review](docs/stage12-treaty-review/index.html) verifies funded proposals, exact response costs, stale imports, binding peace terms and keyboard focus at three widths. The [complete-campaign lifecycle audit](docs/trade-lifecycle-audit.html) checks 24 passive-policy campaigns with 75 exact reload comparisons and no unauthorized treaty openings. Its pinned portable runner preserves the distinction between actual response treasury deltas and receipt-based expiry obligations.
 
+The [complete military playtest](docs/military-playtest/report.html) follows an unedited, UI-only campaign through Domination at cycle 57 on version 0.10. Its self-contained pinned engine replay reproduces 340 commands, 14 export-event comparisons and 340 JSON-reload checks exactly. Actual exports, original receipts and all transcript normalizations are preserved. The [command clarity review](docs/stage13-command-review/index.html) connects that evidence to observer-safe engagement order, historical ship portraits and attainable discovery rewards.
+
 ## Deployment
 
 GitHub Actions builds the static game, runs simulation tests and deploys `dist/` to GitHub Pages. Relative asset paths support repository subpaths. The workflow needs `contents: read`, `pages: write` and `id-token: write`.

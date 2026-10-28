@@ -7,6 +7,23 @@ const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&
 const symbols={observatory:'✧',reef:'◇'};
 const resourceText=cost=>Object.entries(cost||{}).filter(([,amount])=>amount>0).map(([key,amount])=>`${key==='credits'?'◈':key==='minerals'?'◇':key==='science'?'✧':''} ${amount} ${key}`).join(' · ');
 
+function choiceDescription(option) {
+  const population=option.effectsPreview?.population,habitability=option.effectsPreview?.habitability;
+  const gains=Object.entries(option.gain||{}).filter(([,amount])=>amount>0).map(([key,amount])=>`${amount} ${key}`).join(' and ');
+  let description;
+  if(population)description=population.amount?`${population.systemName} gains ${population.amount} population: ${population.before} → ${population.after}.`:'Your capital is not an owned colony, so this choice adds no population.';
+  else if(habitability)description=habitability.amount?`Habitability rises from ${habitability.before}% to ${habitability.after}% (+${habitability.amount} points).`:`Habitability is already ${habitability.after}%; this choice adds no habitability.`;
+  else return option.description;
+  return description+(gains?` Gain ${gains}.`:'');
+}
+
+function effectDetails(option) {
+  const population=option.effectsPreview?.population;
+  if(population?.amount)return `<p class="discovery-effect-preview"><strong>${population.after} / ${population.capacity} population after arrival.</strong> ${population.overCapacity?'Refugees can exceed the natural-growth limit. Their population remains; natural growth pauses at or above the limit.':'Refugees arrive immediately, including when the natural-growth limit has been reached.'}</p>`;
+  if(option.reveal)return '<p class="discovery-effect-preview">Already charted stars add no new chart information.</p>';
+  return '';
+}
+
 export function renderDiscoverySummary(state,system) {
   const view=getDiscoveryView(state,system.id);
   if(!view)return '';
@@ -42,7 +59,7 @@ export function renderDiscoveryDialog(state,systemId,replaceBuildingId=null) {
     html+=`<div class="replacement-control"><label for="discovery-replacement">Restored sites use one infrastructure slot (${slots.used}/${slots.capacity} occupied)</label><select id="discovery-replacement" data-system="${systemId}"><option value="">${slots.available?'Use an open slot':'Choose infrastructure to replace…'}</option>${system.buildings.map(id=>`<option value="${id}" ${replaceBuildingId===id?'selected':''}>Replace ${escape(BUILDINGS[id].name)}</option>`).join('')}</select></div>`;
     if(replaceBuildingId)html+=`<div class="callout replacement-warning">${escape(BUILDINGS[replaceBuildingId].name)} continues working until restoration is complete, then is removed. Any charter it supports is also removed.</div>`;
   }
-  html+=options.map(option=>`<button class="choice-card discovery-choice" data-action="anomaly-choice" data-system="${systemId}" data-choice="${option.id}" ${replaceBuildingId&&option.kind==='restore'?`data-replace="${replaceBuildingId}"`:''} ${option.enabled?'':'disabled'}><b>${escape(option.label)} →</b><p>${escape(option.description)}</p>${option.continuation?`<p class="discovery-choice-future">${escape(option.continuation)}</p>`:''}<div class="discovery-choice-cost">${resourceText(option.cost)?`${escape(resourceText(option.cost))} · `:''}1 order${option.work?` · ${option.work} work · ${option.turns} cycles`:''}</div>${option.reason?`<p class="build-reason">${escape(option.reason)}</p>`:''}</button>`).join('');
+  html+=options.map(option=>`<button class="choice-card discovery-choice" data-action="anomaly-choice" data-system="${systemId}" data-choice="${option.id}" ${replaceBuildingId&&option.kind==='restore'?`data-replace="${replaceBuildingId}"`:''} ${option.enabled?'':'disabled'}><b>${escape(option.label)} →</b><p>${escape(choiceDescription(option))}</p>${effectDetails(option)}${option.continuation?`<p class="discovery-choice-future">${escape(option.continuation)}</p>`:''}<div class="discovery-choice-cost">${resourceText(option.cost)?`${escape(resourceText(option.cost))} · `:''}1 order${option.work?` · ${option.work} work · ${option.turns} cycles`:''}</div>${option.reason?`<p class="build-reason">${escape(option.reason)}</p>`:''}</button>`).join('');
   if(!view.canInteract && !view.stale && !['resolved','maturing'].includes(view.phase))html+=`<p class="empty-note">${system.owner&&system.owner!=='player'?'Only this world’s sovereign can make a choice.':'An expedition must be present, or this world must belong to you, to make a choice.'}</p>`;
   if(options.length)html+='<p class="empty-note discovery-permanence">Each choice leaves a permanent record. Restorations use ordinary construction; cancelling keeps the plan but never reopens the salvage choice.</p>';
   return html+renderHistory(view);
