@@ -90,3 +90,30 @@ test('Russian import and finished conclusion preserve the original save',async({
  expect(await exportCampaign(page)).toBe(first);
  expect(await page.evaluate(()=>window.__asterion.getState())).toEqual(saved);
 });
+
+test('Russian ordinary peace explains all binding terms and keeps its exact paid effect', async ({ page }) => {
+  const state = JSON.parse(await fs.readFile(new URL('../docs/military-playtest/replay/actual-exports/cycle40.json', import.meta.url), 'utf8'));
+  await page.setViewportSize({ width: 390, height: 1000 });
+  await page.addInitScript(({ state, SAVE, LANGUAGE }) => {
+    if (localStorage.getItem('peace-localization-loaded')) return;
+    localStorage.setItem(SAVE, JSON.stringify(state)); localStorage.setItem(LANGUAGE, 'ru');
+    localStorage.setItem('peace-localization-loaded', 'true');
+  }, { state, SAVE, LANGUAGE });
+  await page.goto('./'); await page.locator('[data-page="diplomacy"]').click();
+  await page.locator('[data-rival="khar"] [data-action="peace-confirmation"]').click();
+  const terms = page.locator('.modal .modal-lead');
+  await expect(terms).toContainText('Заплатить 60 кредитов');
+  await expect(terms).toContainText('Война запрещена на 5 циклов');
+  await expect(terms).toContainText('известную нейтральную систему');
+  await expect(terms).toContainText('остаётся на месте без возможности перемещения');
+  expect(await terms.innerText()).not.toMatch(/[a-z]/i);
+  expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
+  const toggle = page.locator('.modal [data-action="language"]');
+  await toggle.click(); await expect(terms).toContainText('Pay 60 credits');
+  await toggle.click(); await expect(terms).toContainText('Заплатить 60 кредитов');
+  await page.locator('[data-action="diplomatic-confirm"]').click();
+  expect(command(state, { type: 'diplomacy', targetId: 'khar', stance: 'peace' }).ok).toBe(true);
+  expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
+  await page.reload(); expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+});

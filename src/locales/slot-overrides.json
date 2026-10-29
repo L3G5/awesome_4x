@@ -1164,5 +1164,41 @@
     "1": {
       "kind": "name"
     }
+  },
+  "Pay {0} credits to end the war. War is forbidden for {1} cycles. {2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "text"
+    }
+  },
+  "Receive {0} credits. End the war and establish a {1}-cycle truce. {2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "text"
+    }
+  },
+  "Reserve {0} credits for a player decision. The war continues until acceptance. Offer expires on turn {1}; refusal or expiry refunds the credits. Acceptance creates a {2}-cycle truce. {3}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "text"
+    }
   }
 }

@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { translateText } from '../src/localization.js';
 import { russian } from '../src/locales/ru.js';
+import { readFileSync } from 'node:fs';
+import { getDiplomacyForecast } from '../src/diplomacy.js';
 
 test('English text, unknown names and punctuation are preserved', () => {
   for (const text of ['  Cycle 01\n', 'Solace', '<img src=x onerror=alert(1)>', 'MY $& SEED']) {
@@ -73,4 +75,17 @@ test('accessible map statuses and protected-seed surrounding fragments translate
   assert.equal(translateText('first, another unknown phrase', 'ru'), 'first, another unknown phrase');
   assert.equal(translateText('Diplomacy context', 'ru'), 'Контекст раздела «Дипломатия»');
   assert.equal(translateText('Diplomacy, 2 pending diplomatic proposals', 'ru'), 'Дипломатия, предложения, ожидающие ответа: 2');
+});
+
+test('composed peace terms translate every withdrawal fallback and retain all quantities', () => {
+  const state = JSON.parse(readFileSync(new URL('../docs/military-playtest/replay/actual-exports/cycle40.json', import.meta.url)));
+  const outgoing = getDiplomacyForecast(state, 'player', 'khar');
+  const incoming = getDiplomacyForecast(state, 'khar', 'player');
+  for (const terms of [outgoing.actions.peace.effect, outgoing.actions.acceptPeace.effect, incoming.actions.peace.effect]) {
+    const translated = translateText(terms, 'ru');
+    assert.doesNotMatch(translated, /[a-z]/i);
+    assert.deepEqual(translated.match(/\d+/g), terms.match(/\d+/g));
+    assert.match(translated, /известную нейтральную систему/);
+    assert.match(translated, /остаётся на месте без возможности перемещения/);
+  }
 });

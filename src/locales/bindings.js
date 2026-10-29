@@ -724,7 +724,7 @@ export const bindings = {
   "Reserve {0} credits for a player decision. The war continues until acceptance. Offer expires on turn {1}; refusal or expiry refunds the credits. Acceptance creates a {2}-cycle truce. {3}": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "number"
       },
       "1": {
         "kind": "number"
@@ -733,20 +733,20 @@ export const bindings = {
         "kind": "number"
       },
       "3": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
   "Pay {0} credits to end the war. War is forbidden for {1} cycles. {2}": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "number"
       },
       "1": {
         "kind": "number"
       },
       "2": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -776,7 +776,7 @@ export const bindings = {
         "kind": "number"
       },
       "2": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
