@@ -89,3 +89,6 @@ export const ANOMALIES = {
 };
 
 export const SYSTEM_NAMES = ['Solace', 'Veyr Prime', 'Kharos', 'Lumen', 'Meridian', 'Hesper', 'Aurelia', 'Nacre', 'Caldera', 'Velorum', 'Ashfall', 'Carina', 'Eidolon', 'Sable', 'Ilyra', 'Kepler', 'Stillwater', 'Orison', 'Cinder', 'Bellatrix', 'Sundrift', 'Thalassa', 'Ophion', 'Tethys', 'Corvus', 'Elysian', 'Aster', 'Nyx', 'Haven', 'Aldebaran', 'Caelum', 'Vesper', 'Iona', 'Halcyon', 'Antares', 'Seraph', 'Peregrine', 'Morrow', 'Zenith', 'Eos', 'Terminus', 'Asterion'];
+
+/** Shared by construction, previews and strict save validation. */
+export const STARLANE_PROJECT = Object.freeze({ id: 'starlane', kind: 'starlane', name: 'Starlane restoration', icon: '⌁', cost: Object.freeze({ credits: 60, minerals: 70 }), work: 48 });

@@ -524,6 +524,7 @@ function investmentHorizon(state, faction) {
 }
 
 function completedInvestment(system, project) {
+  if (project.kind === 'starlane') return { ...system, queue: null };
   if (project.kind === 'charter') return { ...system, queue: null, charter: { type: project.charterType, level: project.charterLevel || project.level } };
   const replacement = project.replaceBuildingId;
   return { ...system, queue: null, buildings: [...system.buildings.filter(id => id !== replacement), project.itemId || project.id], charter: replacement === CHARTERS[system.charter?.type]?.support ? null : system.charter };

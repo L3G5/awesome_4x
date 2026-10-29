@@ -1098,5 +1098,71 @@
         "Chronicle"
       ]
     }
+  },
+  "Commission a project at {0}": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "{0} cycle remaining": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Restoration is already underway at {0}": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "Starlane restoration commissioned at {0}.": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "The dormant lane between {0} and {1} is restored. All empires can use it under ordinary border and movement rules.": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "name"
+    }
+  },
+  "Restored in cycle {0}": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Restoration underway at {0}": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "{0} fewer movement orders per crossing.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} work": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} cycles at current production": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} cycles remaining at current production": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Dormant starlane detected between {0} and {1}. Colonize either endpoint and research Deep-space Logistics to restore it.": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "name"
+    }
   }
 }

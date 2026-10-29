@@ -2,7 +2,7 @@ import { ANOMALIES, BUILDINGS, SHIPS, TECHS } from './content.js';
 import { getInfrastructure, getCharterBonuses } from './development.js';
 import { getVisibleFleets, hasSensors } from './intelligence.js';
 import { getSystemYield } from './game.js';
-import { seededRandom } from './galaxy-generation.js';
+import { seededRandom, graphDistances } from './galaxy-generation.js';
 
 const TARGET = 3;
 const factionOf = (state, id) => state.factions.find(faction => faction.id === id);
@@ -39,9 +39,31 @@ export function placeDiscoveries(state, initialSurveyIds = []) {
   };
   const ordinary = Object.keys(ANOMALIES).filter(id => !ANOMALIES[id].multiStage);
   const deck = shuffle([...ordinary, ...shuffle(ordinary).slice(0, 2), 'observatory', 'reef']);
-  const sites = shuffle(state.systems.filter(system => !system.originalOwner && !initialSurveyIds.includes(system.id)));
+  const candidates = state.systems.filter(system => !system.originalOwner && !initialSurveyIds.includes(system.id));
+  const distances = state.factions.map(faction => graphDistances(state.lanes, faction.capitalId));
+  // Each empire gets a reachable exploration opportunity, without fixing its
+  // story or reward. The remaining sites still vary across the whole galaxy.
+  const anchors = [];
+  for (const [index] of state.factions.entries()) {
+    const local = shuffle(candidates.filter(system => !anchors.includes(system) && distances[index].get(system.id) <= 3
+      && distances.every((distance, other) => other === index || distances[index].get(system.id) < distance.get(system.id))));
+    if (!local.length) throw new Error('A starting region needs a nearby discovery opportunity.');
+    anchors.push(local[0]);
+  }
+  const selected = [...anchors];
+  const nearby = distances.map(distance => anchors.filter(system => distance.get(system.id) <= 2).length);
+  let skippedDense = 0;
+  for (const system of shuffle(candidates.filter(system => !anchors.includes(system)))) {
+    if (selected.length === deck.length) break;
+    const localTo = distances.map((distance, index) => distance.get(system.id) <= 2 ? index : -1).filter(index => index >= 0);
+    if (localTo.some(index => nearby[index] >= 3)) { skippedDense++; continue; }
+    selected.push(system); localTo.forEach(index => nearby[index]++);
+  }
+  if (selected.length !== deck.length) throw new Error('A galaxy needs ten discoveries without an excessive early cluster.');
+  const sites = shuffle(selected);
   for (const system of state.systems) system.anomaly = null;
   for (const [index, id] of deck.entries()) sites[index].anomaly = { id, resolved: false };
+  return { skippedDense, nearby };
 }
 
 /** Knowledge changes only with a current expedition or colony, after survey. */

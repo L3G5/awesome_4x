@@ -1,0 +1,25 @@
+Empire colony rendering handoff
+
+Changed only src/empire-ui.js, new src/empire-colonies.css, and new tests/empire-colonies.test.js in the shared main workspace. No staging or commits.
+
+Structure
+• Same renderColonyTable(state, sort, direction) API and data-colony attribute.
+• Added data-colony-row=ID, tabindex=-1, aria-labelledby=colony-world-ID and aria-describedby=colony-construction-ID on each owned colony row.
+• World names are Inspect buttons (existing data-action=inspect, data-system=ID, accessible Inspect NAME label). No duplicate far-right Inspect control.
+• Project/remaining time or idle status is in the same sticky first cell. The idle row includes data-action=empire-build-menu and its system ID. Busy queues never show Commission, including a defensive fallback for an unrecognized project display name. There is no cancellation action in the table.
+• Commission remains available for opening comparisons at zero funds/orders; it is disabled for a finished/eliminated empire. Inspect remains available.
+• Row headers expose only the world's name as their accessible header name. The programmatic row focus also describes its current construction status.
+
+CSS
+Import empire-colonies.css after style.css. The table retains all four sortable yields, including the credits/minerals columns hidden by the previous <=900px rule. No parallel mobile card markup. The sticky identity/status/action column stays available while scrolling numeric columns. Removing separate Construction and action columns reduces the table minimum from 760px to 660px.
+
+Tradeoff
+Rows use more vertical space to keep the name, current work and action together. In exchange, players can reach Inspect/Commission without crossing the comparison table, and the shared semantic table retains all comparisons. On narrow screens only the secondary comparison columns require a horizontal swipe. No automatic construction, new reminders or duplicate detail panels were added.
+
+Validation
+Seven focused node renderer tests pass: owned/idle actions, busy ship/charter/unknown queues, comparison access at zero funds/orders, terminal disabling, sorting/tie behavior/all four yields, full-state immutability and escaping. Command: node --test tests/empire-colonies.test.js.
+
+Four Chromium component cases (1440/390, EN and a proposed RU-copy preview) pass. Inspect and Commission remain entirely inside the visible comparison region at both horizontal extremes; all four yield cells retain table-cell display; rowheader names and row focus work; page width stays bounded; full campaign state remains unchanged. component-results.json and the paired PNGs retain evidence. These cases inject the current renderer/CSS into the pinned 0.22 baseline shell; they do not claim the root-owned new event/dialog integration has been tested. RU's new Commission text was supplied explicitly for layout preview, not as a claim that the final Russian catalog is integrated.
+
+Root integration remains
+Handle empire-build-menu without leaving Empire; preserve original row/sort/scroll and restore row/opener focus after commit/cancel. Add the four exact English strings in new-strings.json to the Russian catalog/bindings. Root owns main.js and CSS import, as agreed.

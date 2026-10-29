@@ -1,5 +1,7 @@
 import './style.css';
 import './workspace.css';
+import './empire-colonies.css';
+import './starlanes.css';
 import './fleet-operations.css';
 import './command-clarity.css';
 import './defense.css';
@@ -15,6 +17,8 @@ import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
 import { renderDiplomacyPage } from './diplomacy-ui.js';
+import { renderStarlaneInspector } from './starlanes-ui.js';
+import { getKnownStarlanes } from './starlanes.js';
 import { renderColonyTable } from './empire-ui.js';
 import { renderWorkspaceInspector } from './workspace-ui.js';
 import { renderShipPortrait } from './ship-ui.js';
@@ -72,6 +76,7 @@ revealPublicBeacons(state);
 let selectedSystemId = state.factions.find(f => f.id === 'player').capitalId;
 let selectedFleetId = state.fleets.find(f => f.owner === 'player' && f.type === 'scout')?.id || null;
 if(state.fleets.find(f=>f.id===selectedFleetId)?.route)selectedSystemId=state.fleets.find(f=>f.id===selectedFleetId).systemId;
+let constructionOrigin = null;
 let colonySort = 'name', colonySortDirection = 'asc';
 let selectedRivalId = null;
 let page = 'galaxy', researchFilter = 'All', logFilter = 'All', modalType = null, lastFocus = null, previousTurn = state.turn;
@@ -83,7 +88,7 @@ const dossierRivalId = () => player().contacts.includes(selectedRivalId) ? selec
 $('#app').innerHTML = `<div class="app-shell">
   <header class="topbar"><div class="brand"><div class="brand-mark">${icon('mark',34)}</div><div><h1>ASTERION REACH</h1><small>THE STARS REMEMBER</small></div></div><div class="resources" id="resources"></div><div class="top-actions"><button class="language-toggle" data-action="language" translate="no">Русский</button><button data-action="briefing" id="briefing-button" aria-label="Latest cycle briefing" title="Latest cycle briefing">${icon('journal')}</button><a href="./guide.html" target="_blank" rel="noopener" aria-label="Open field guide" title="Field guide (?)">${icon('help')}</a><button data-action="menu" aria-label="Game menu" title="Game menu">${icon('menu')}</button></div></header>
   <nav class="rail" aria-label="Command views">${[['galaxy','Galaxy'],['research','Research'],['diplomacy','Diplomacy'],['empire','Empire'],['journal','Chronicle']].map(([id,label],i)=>`<button data-page="${id}" class="${id==='galaxy'?'active':''}" title="${label} (${i+1})">${icon(id)}<span>${label}</span></button>`).join('')}<div class="rail-bottom"><button data-action="home" title="Focus homeworld (H)">${icon('home')}<span>Home</span></button></div></nav>
-  <main class="main-stage"><div class="galaxy-page" id="galaxy-page"><div class="map-canvas" id="galaxy" aria-label="Interactive galaxy map"></div><div class="map-heading"><div class="eyebrow">CONCORD EXPLORATION AUTHORITY</div><h2>The Asterion Reach</h2><p id="map-meta"></p></div><div class="map-tools"><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="zoom-out" aria-label="Zoom out">−</button><button data-action="reset-view" title="Fit galaxy" aria-label="Fit galaxy">⌖</button></div><div class="map-message" id="mandate"></div><div class="map-caption">PER ASPERA, AD ASTRA</div><div class="map-legend"><span><i></i>CONCORD</span><span><i style="background:#d9bd7c"></i>CHARTED</span><span><i style="background:#596a82"></i>UNKNOWN</span><span class="founding-legend">⌂ FOUNDING WORLD</span></div><div class="fleet-bar" id="fleet-bar"></div></div><div class="workspace-page" id="workspace-page" hidden></div></main>
+  <main class="main-stage"><div class="galaxy-page" id="galaxy-page"><div class="map-canvas" id="galaxy" aria-label="Interactive galaxy map"></div><div class="map-heading"><div class="eyebrow">CONCORD EXPLORATION AUTHORITY</div><h2>The Asterion Reach</h2><p id="map-meta"></p></div><div class="map-tools"><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="zoom-out" aria-label="Zoom out">−</button><button data-action="reset-view" title="Fit galaxy" aria-label="Fit galaxy">⌖</button></div><div class="map-message" id="mandate"></div><div class="map-caption">PER ASPERA, AD ASTRA</div><div class="map-legend"><span><i></i>CONCORD</span><span><i style="background:#d9bd7c"></i>CHARTED</span><span><i style="background:#596a82"></i>UNKNOWN</span><span class="founding-legend">⌂ FOUNDING WORLD</span><span class="dormant-legend" hidden>DORMANT LANE</span></div><div class="fleet-bar" id="fleet-bar"></div></div><div class="workspace-page" id="workspace-page" hidden></div></main>
   <aside class="inspector" aria-label="System inspector"><div class="inspector-content" id="inspector"></div><div class="turn-panel"><div class="turn-meta"><b id="turn-number"></b><span id="turn-year"></span></div><button class="primary end-turn" data-action="end-turn" id="end-turn"><span>End cycle →</span><kbd>SPACE</kbd></button><div class="turn-hint" id="turn-hint"></div></div></aside>
   <footer class="statusbar"><span class="status-message" id="status-message">Your mandate begins among the stars.</span><span class="version">ASTERION REACH <span class="green">/</span> EARLY ACCESS ${__APP_VERSION__}</span><span id="save-status">LOCAL CAMPAIGN</span></footer></div><div id="modal-root"></div><div class="toast-stack" id="toasts" role="status" aria-live="polite"></div><input class="sr-only" type="file" id="import-save" accept="application/json,.json" aria-label="Import campaign save" tabindex="-1" />`;
 
@@ -143,6 +148,7 @@ function render() {
   diplomacyButton.querySelector('.nav-badge')?.remove();
   if (incomingOffers.length) diplomacyButton.insertAdjacentHTML('beforeend', `<b class="nav-badge">${incomingOffers.length}</b>`);
   renderInspector(); renderFleet(); renderPage(); galaxy.update(state, selectedSystemId, selectedFleetId);
+  $('.dormant-legend').hidden=!getKnownStarlanes(state).some(lane=>!lane.opened);
 }
 function renderInspector() {
   $('.inspector').setAttribute('aria-label',page==='galaxy'?'System inspector':`${page==='journal'?'Chronicle':page[0].toUpperCase()+page.slice(1)} context`);
@@ -161,6 +167,7 @@ function renderInspector() {
   html += renderBeaconInspector(state,system);
   html += renderSovereigntyNote(state,system.id);
   html += renderDiscoverySummary(state,system);
+  html += renderStarlaneInspector(state,system.id);
   if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}>${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}${renderDefenseBadge(f)}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull</small></span>${f.owner==='player'?renderFleetReadiness(state,f):''}</button>`).join('')}</div></section>`;
   const selectedFleet=fleetById(selectedFleetId);
   html+=renderMergeSummary(state,selectedFleetId,system.id);
@@ -245,7 +252,20 @@ function focusCommandResult(selector) {
   target.setAttribute('tabindex','-1'); target.focus();
 }
 function buildMenu(systemId,tab='building',replaceBuildingId=null) {
+  if(modalType!=='build')constructionOrigin={page,systemId,scrollTop:$('#workspace-page').scrollTop,scrollLeft:$('.colony-scroll')?.scrollLeft||0};
   openModal('build',renderConstructionMenu(state,systemId,tab,replaceBuildingId),true);
+}
+function finishConstruction(keyboard,systemId) {
+  const origin=constructionOrigin;
+  closeModal();
+  if(origin?.page==='empire'&&page==='empire'){
+    $('#workspace-page').scrollTop=origin.scrollTop;
+    const comparison=$('.colony-scroll');if(comparison)comparison.scrollLeft=origin.scrollLeft;
+    const row=document.querySelector(`[data-colony-row="${systemId||origin.systemId}"]`);
+    row?.focus({preventScroll:true});
+    if(systemId&&systemId!==origin.systemId)row?.scrollIntoView({block:'nearest'});
+  }else if(keyboard)focusCommandResult('#inspector .production-row');
+  constructionOrigin=null;
 }
 function showAnomaly(systemId,replaceBuildingId=null) {
   openModal('anomaly',renderDiscoveryDialog(state,systemId,replaceBuildingId),true);
@@ -341,7 +361,7 @@ function advanceTurn(force=false) {
     const newOffer=getActiveDiplomacyOffers(state).find(offer=>offer.to==='player' && offer.createdTurn>=previousTurn);
     const raceAlert=getPublicRaces(state).some(race=>{const before=previousRaces.find(r=>r.factionId===race.factionId);return race.factionId!=='player' && (race.progress>0 && !before?.progress || race.progress>=8 && (before?.progress||0)<8);});
     const transferBlocksRoute=entry=>{const world=systemById(entry.systemId);return world?.owner && world.owner!=='player' && !player().relations[world.owner].trade && player().relations[world.owner].status!=='war' && state.fleets.some(fleet=>fleet.owner==='player' && fleet.route?.path.slice(1).includes(entry.systemId));};
-    const publicAlert=briefing?.entries.some(entry=>entry.type==='war' || entry.publicAffairId && entry.type==='sovereignty' && transferBlocksRoute(entry));
+    const publicAlert=briefing?.entries.some(entry=>entry.type==='war' || entry.type==='starlane' || entry.publicAffairId && entry.type==='sovereignty' && transferBlocksRoute(entry));
     if(briefing?.reportIds.length || raceAlert || publicAlert)showCycleBriefing();
     else if(newOffer) newOffer.kind==='trade'?showTradeOffer(newOffer.id):showPeaceOffer(newOffer.id);
   }
@@ -404,11 +424,14 @@ document.addEventListener('click',event=>{
     case 'zoom-out':galaxy.zoom(-1);break;
     case 'reset-view':galaxy.reset();break;
     case 'inspect':selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);if(event.detail===0)focusCommandResult('#inspector .system-header h2');break;
+    case 'empire-build-menu':
     case 'build-menu':buildMenu(el.dataset.system);break;
+    case 'starlane-menu':buildMenu(el.dataset.system,'starlane');break;
+    case 'restore-lane':if(dispatch({type:'restoreLane',systemId:el.dataset.system,laneId:el.dataset.lane}))finishConstruction(event.detail===0,el.dataset.system);break;
     case 'development-menu':buildMenu(el.dataset.system,'charter');break;
     case 'construction-tab':buildMenu(el.dataset.system,el.dataset.tab);$('.modal .construction-tabs .active')?.focus();break;
-    case 'develop':if(dispatch({type:'develop',systemId:el.dataset.system,charterType:el.dataset.charter})){closeModal();if(event.detail===0)focusCommandResult('#inspector .production-row');}break;
-    case 'build':if(dispatch({type:'build',systemId:el.dataset.system,itemId:el.dataset.item,replaceBuildingId:el.dataset.replace||null})){closeModal();if(event.detail===0)focusCommandResult('#inspector .production-row');}break;
+    case 'develop':if(dispatch({type:'develop',systemId:el.dataset.system,charterType:el.dataset.charter}))finishConstruction(event.detail===0,el.dataset.system);break;
+    case 'build':if(dispatch({type:'build',systemId:el.dataset.system,itemId:el.dataset.item,replaceBuildingId:el.dataset.replace||null}))finishConstruction(event.detail===0,el.dataset.system);break;
     case 'cancel-build':dispatch({type:'cancelBuild',systemId:el.dataset.system});break;
     case 'research':if(dispatch({type:'research',techId:el.dataset.tech})&&event.detail===0)focusCommandResult('#workspace-page .callout');break;
     case 'plan-route':if(dispatch({type:'planRoute',fleetId:selectedFleetId,destinationId:el.dataset.destination}))galaxy.focusRoute?.(fleetById(selectedFleetId)?.route?.path);break;
@@ -455,6 +478,7 @@ document.addEventListener('click',event=>{
     case 'new-game-confirm':state=createGame($('#galaxy-seed').value.trim()||'ASTERION');selectedSystemId='s0';selectedFleetId=state.fleets.find(f=>f.owner==='player'&&f.type==='scout').id;closeModal();setPage('galaxy');save();render();galaxy.reset();showWelcome();break;
   }
 });
+document.addEventListener('change',event=>{if(event.target.id==='starlane-builder'){buildMenu(event.target.value,'starlane');$('#starlane-builder')?.focus();}});
 document.addEventListener('keydown',event=>{
   if (modalType) {
     if (event.key==='Escape'){event.preventDefault();closeModal();}

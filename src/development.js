@@ -1,4 +1,4 @@
-import { BUILDINGS, SHIPS, TECHS } from './content.js';
+import { BUILDINGS, SHIPS, TECHS, STARLANE_PROJECT } from './content.js';
 
 export const CHARTERS = Object.freeze({
   extraction: Object.freeze({ id: 'extraction', name: 'Extraction Charter', icon: '◇', support: 'mine', description: 'Develop native ore deposits. Each level adds 2 plus the world’s ore richness to mineral income.' }),
@@ -87,6 +87,7 @@ export function getDevelopmentOptions(state, systemId, factionId = 'player') {
 /** Use this for every queue label; queue.itemId is not always a building/ship. */
 export function getConstructionProject(queue) {
   if (!queue) return null;
+  if (queue.kind === 'starlane') return { ...STARLANE_PROJECT, laneId: queue.laneId, cost: { ...queue.cost }, work: queue.work, progress: queue.progress };
   if (queue.kind === 'charter') {
     const charter = CHARTERS[queue.charterType];
     if (!charter) return null;
@@ -110,8 +111,10 @@ export function validateDevelopmentSystem(system) {
     if (system.charter !== undefined && system.charter !== null && (!validCharter(system.charter) || !system.buildings.includes(CHARTERS[system.charter.type].support) || Object.keys(system.charter).some(key => !['type', 'level'].includes(key)))) return false;
     const queue = system.queue;
     if (!queue) return true;
-    if (!['building', 'ship', 'charter'].includes(queue.kind) || !Number.isFinite(queue.progress) || queue.progress < 0 || !Number.isFinite(queue.work) || queue.work <= 0 || queue.progress >= queue.work || !queue.cost || typeof queue.cost !== 'object' || Array.isArray(queue.cost) || !Object.entries(queue.cost).every(([key, value]) => ['credits', 'minerals'].includes(key) && Number.isFinite(value) && value >= 0)) return false;
-    if (queue.kind === 'charter') {
+    if (!['building', 'ship', 'charter', 'starlane'].includes(queue.kind) || !Number.isFinite(queue.progress) || queue.progress < 0 || !Number.isFinite(queue.work) || queue.work <= 0 || queue.progress >= queue.work || !queue.cost || typeof queue.cost !== 'object' || Array.isArray(queue.cost) || !Object.entries(queue.cost).every(([key, value]) => ['credits', 'minerals'].includes(key) && Number.isFinite(value) && value >= 0)) return false;
+    if (queue.kind === 'starlane') {
+      if (queue.itemId !== STARLANE_PROJECT.id || !/^l[01]$/.test(queue.laneId) || queue.work !== STARLANE_PROJECT.work || ['credits', 'minerals'].some(key => queue.cost[key] !== STARLANE_PROJECT.cost[key]) || queue.charterType !== undefined || queue.charterLevel !== undefined || queue.replaceBuildingId !== undefined) return false;
+    } else if (queue.kind === 'charter') {
       if (!member(CHARTERS, queue.charterType) || queue.itemId !== queue.charterType || ![1, 2].includes(queue.charterLevel) || !system.buildings.includes(CHARTERS[queue.charterType].support) || queue.replaceBuildingId !== undefined || !['credits', 'minerals'].every(key => Number.isFinite(queue.cost[key]))) return false;
       if (queue.charterLevel === 2 && (system.charter?.type !== queue.charterType || system.charter.level !== 1)) return false;
       if (queue.charterLevel === 1 && system.charter?.type === queue.charterType) return false;
@@ -119,6 +122,7 @@ export function validateDevelopmentSystem(system) {
       if (!member(queue.kind === 'ship' ? SHIPS : BUILDINGS, queue.itemId) || queue.charterType !== undefined || queue.charterLevel !== undefined) return false;
       if (queue.replaceBuildingId !== undefined && (queue.kind !== 'building' || !member(BUILDINGS, queue.replaceBuildingId) || !system.buildings.includes(queue.replaceBuildingId) || queue.replaceBuildingId === queue.itemId)) return false;
     }
+    if (queue.kind !== 'starlane' && queue.laneId !== undefined) return false;
     return true;
   } catch { return false; }
 }

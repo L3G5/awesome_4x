@@ -1,3 +1,5 @@
+import { getStarlaneOptions } from './starlanes.js';
+import { renderStarlaneProjects } from './starlanes-ui.js';
 import { BUILDINGS } from './content.js';
 import { renderShipPortrait } from './ship-ui.js';
 import { CHARTERS, getCharterBonuses } from './development.js';
@@ -40,7 +42,8 @@ export function renderConstructionMenu(state, systemId, tab='building', replaceB
   const system = state.systems.find(s=>s.id===systemId), slots = getInfrastructure(state,system), output=getSystemYield(state,system);
   const current = system.charter && CHARTERS[system.charter.type];
   const oldBuilding = replaceBuildingId && BUILDINGS[replaceBuildingId];
-  let html = `<div class="eyebrow">COLONIAL COMMISSION · ${escape(system.name)}</div><h2 id="modal-title">Shape this world's future</h2><p class="modal-lead">${slots.used} / ${slots.capacity} infrastructure slots · ${output.production} production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.</p><div class="filter-tabs construction-tabs">${[['building','Infrastructure'],['charter','Colony charter'],['ship','Ships']].map(([kind,label])=>`<button data-action="construction-tab" data-system="${systemId}" data-tab="${kind}" class="${kind===tab?'active':''}" aria-pressed="${kind===tab}">${label}</button>`).join('')}</div>`;
+  let html = `<div class="eyebrow">COLONIAL COMMISSION · ${escape(system.name)}</div><h2 id="modal-title">Shape this world's future</h2><p class="modal-lead">${slots.used} / ${slots.capacity} infrastructure slots · ${output.production} production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.</p><div class="filter-tabs construction-tabs">${[['building','Infrastructure'],['charter','Colony charter'],['ship','Ships'],...(getStarlaneOptions(state,systemId).length?[['starlane','Starlanes']]:[])].map(([kind,label])=>`<button data-action="construction-tab" data-system="${systemId}" data-tab="${kind}" class="${kind===tab?'active':''}" aria-pressed="${kind===tab}">${label}</button>`).join('')}</div>`;
+  if (tab==='starlane') return html+renderStarlaneProjects(state,systemId);
   if (tab==='charter') {
     html += `<div class="charter-intro"><strong>${system.charter?escape(charterLabel(system)):'One world. One specialty.'}</strong><p>A charter uses existing infrastructure and no extra slot. Level I requires population 4 and Deep-space Logistics. Level II requires population 8 and Autonomous Industry. Current benefits continue while a new charter is commissioned.</p></div><div class="build-grid charter-grid">`;
     html += getDevelopmentOptions(state,systemId).map(option=>{

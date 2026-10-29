@@ -37,6 +37,8 @@ test('each start has two informed resource choices, an immediate colony and a re
       totals.push(prospects.reduce((sum, system) => sum + system.richness + system.science, 0));
       const distance = graphDistances(state.lanes, faction.capitalId);
       assert(state.systems.some(system => !system.owner && !prospects.includes(system) && system.habitability >= 50 && distance.get(system.id) <= 3));
+      assert(state.systems.some(system => system.anomaly && distance.get(system.id) <= 3), `${seed}: ${faction.id} needs a nearby discovery`);
+      assert(state.systems.filter(system => system.anomaly && distance.get(system.id) <= 2).length <= 3, `${seed}: ${faction.id} has too many nearby discoveries`);
     }
     assert(Math.max(...totals) - Math.min(...totals) <= 4);
   }

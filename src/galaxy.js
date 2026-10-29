@@ -5,6 +5,7 @@ import { getPublicRaces } from './victory.js';
 import { getConquestView } from './conquest.js';
 import { getRoutePreview, getRouteStatus } from './navigation.js';
 import { getDiscoveryView } from './discoveries.js';
+import { getKnownStarlanes } from './starlanes.js';
 import { getKnownTransfers } from './public-affairs.js';
 import './galaxy.css';
 
@@ -450,6 +451,19 @@ export class GalaxyView {
       const direction = pb.clone().sub(pa).normalize().multiplyScalar(this.unit * 1.35);
       pa.add(direction); pb.sub(direction);
       buckets[key].push(pa.x, pa.y, -.5, pb.x, pb.y, -.5);
+    }
+    const dormant = [];
+    for (const lane of getKnownStarlanes(state).filter(candidate => !candidate.opened)) {
+      const [a, b] = lane.endpoints.map(id => this.world(this.systemsById.get(id)));
+      const inset = b.clone().sub(a).normalize().multiplyScalar(this.unit * 1.6);
+      a.add(inset); b.sub(inset);
+      dormant.push(a.x, a.y, -.6, b.x, b.y, -.6);
+    }
+    if (dormant.length) {
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(dormant, 3));
+      const lines = new THREE.LineSegments(geometry, new THREE.LineDashedMaterial({ color: '#cfb47a', opacity: .55, transparent: true, depthWrite: false, dashSize: this.unit * .8, gapSize: this.unit * .7 }));
+      lines.computeLineDistances(); this.dynamicGroup.add(lines);
     }
     const style = { known: ['#6c849a', .28], owned: ['#68d9cd', .5], reachable: ['#a0eee0', .8], unknown: ['#67738d', .08] };
     for (const [key, values] of Object.entries(buckets)) if (values.length) {

@@ -1255,40 +1255,6 @@ export const bindings = {
       }
     }
   ],
-  "{2} / {3} population": [
-    {
-      "2": {
-        "kind": "number"
-      },
-      "3": {
-        "kind": "number"
-      }
-    }
-  ],
-  "{5} / {6} slots": [
-    {
-      "5": {
-        "kind": "number"
-      },
-      "6": {
-        "kind": "number"
-      }
-    }
-  ],
-  "Inspect {10}": [
-    {
-      "10": {
-        "kind": "name"
-      }
-    }
-  ],
-  "{1} cycles remaining": [
-    {
-      "1": {
-        "kind": "number"
-      }
-    }
-  ],
   "{3} hull": [
     {
       "3": {
@@ -1554,6 +1520,16 @@ export const bindings = {
       }
     }
   ],
+  "Dormant starlane detected between {0} and {1}. Colonize either endpoint and research Deep-space Logistics to restore it.": [
+    {
+      "0": {
+        "kind": "name"
+      },
+      "1": {
+        "kind": "name"
+      }
+    }
+  ],
   "{0} lost {1} ship{2} and {3} hull": [
     {
       "0": {
@@ -1706,6 +1682,13 @@ export const bindings = {
       }
     }
   ],
+  "Starlane restoration commissioned at {0}.": [
+    {
+      "0": {
+        "kind": "name"
+      }
+    }
+  ],
   "Research directed toward {0}.": [
     {
       "0": {
@@ -1783,6 +1766,16 @@ export const bindings = {
       },
       "1": {
         "kind": "fragment"
+      }
+    }
+  ],
+  "The dormant lane between {0} and {1} is restored. All empires can use it under ordinary border and movement rules.": [
+    {
+      "0": {
+        "kind": "name"
+      },
+      "1": {
+        "kind": "name"
       }
     }
   ],
@@ -3082,6 +3075,34 @@ export const bindings = {
         ]
       },
       "2": {
+        "kind": "name"
+      }
+    }
+  ],
+  "Restored in cycle {0}": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "Restoration underway at {0}": [
+    {
+      "0": {
+        "kind": "name"
+      }
+    }
+  ],
+  "{0} cycles remaining at current production": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "Restoration is already underway at {0}": [
+    {
+      "0": {
         "kind": "name"
       }
     }
@@ -4695,6 +4716,41 @@ export const bindings = {
     }
   ],
   "Diplomacy, {0} pending diplomatic proposals": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "Commission a project at {0}": [
+    {
+      "0": {
+        "kind": "name"
+      }
+    }
+  ],
+  "{0} cycle remaining": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "{0} fewer movement orders per crossing.": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "{0} work": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "{0} cycles at current production": [
     {
       "0": {
         "kind": "number"

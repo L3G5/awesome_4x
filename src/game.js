@@ -12,6 +12,8 @@ import { getSplitPreview, getColonyRepairForecast } from './fleet-management.js'
 import { captureFleetReadiness, reconcileFleetReadiness, validateFleetReadiness } from './fleet-readiness.js';
 import { getDefenseLeadPreview, orderDefenders, validateDefenseState } from './defense.js';
 import { generateGalaxyLayout, prepareStartingWorlds, MAP_VERSION } from './galaxy-generation.js';
+import { generateAncientLanes, getDormantSignalDestinations, getKnownStarlanes, getStarlaneOptions, completeStarlane, validateStarlaneState } from './starlanes.js';
+export { getKnownStarlanes, getStarlaneOptions } from './starlanes.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getOrderCapacity, getOrderChange } from './development.js';
@@ -73,6 +75,7 @@ function chart(state, systemId, factionId) {
 }
 
 function survey(state, systemId, factionId) {
+  const previousLanes = new Set(getKnownStarlanes(state, factionId).map(lane => lane.id));
   const system = systemOf(state, systemId);
   chart(state, systemId, factionId);
   if (!system.exploredBy.includes(factionId)) {
@@ -81,6 +84,11 @@ function survey(state, systemId, factionId) {
     if (factionId === 'player' && state.turn > 1) record(state, `Survey complete at ${system.name}: ${PLANET_TYPES[system.type].name} world, ${system.habitability}% habitability.`, 'survey', null, { systemId });
   }
   for (const neighbor of getNeighbors(state, systemId)) chart(state, neighbor, factionId);
+  for (const destination of getDormantSignalDestinations(state, systemId)) chart(state, destination, factionId);
+  if (state.turn > 1) for (const lane of getKnownStarlanes(state, factionId).filter(candidate => !candidate.opened && !previousLanes.has(candidate.id))) {
+    const [first, second] = lane.endpoints.map(id => systemOf(state, id));
+    record(state, `Dormant starlane detected between ${first.name} and ${second.name}. Colonize either endpoint and research Deep-space Logistics to restore it.`, 'starlane', factionId, { systemId });
+  }
   for (const fleet of getVisibleFleets(state, factionId, systemId)) meet(state, factionId, fleet.owner);
   observeDiscovery(state, systemId, factionId);
 }
@@ -113,6 +121,7 @@ export function createGame(seed = 'ASTERION') {
     state.systems.push({ id: `s${index}`, name: SYSTEM_NAMES[index], x: round(x), y: round(y), type, habitability, richness: home ? 3 : 1 + Math.floor(random(state) * 5), science: home ? 2 : 1 + Math.floor(random(state) * 4), owner: home ? ids[index] : null, originalOwner: home ? ids[index] : null, population: home ? 4 : 0, growth: 0, buildings: home ? ['mine', 'shipyard'] : [], queue: null, defenseDamage: 0, anomaly: null, knownBy: [], exploredBy: [] });
   }
   state.lanes = layout.lanes;
+  state.ancientLanes = generateAncientLanes(state);
   const openings = prepareStartingWorlds(state);
   placeDiscoveries(state, openings.flatMap(opening => opening.prospects));
   for (const faction of state.factions) {
@@ -432,6 +441,15 @@ export function command(state, action) {
       system.queue = { itemId: option.charterType, kind: 'charter', charterType: option.charterType, charterLevel: option.level, progress: 0, work: option.work, cost: { ...option.cost } };
       result = success(`${option.name} commissioned at ${system.name}.`); break;
     }
+    case 'restoreLane': {
+      if (!system) return fail('Select a colony.');
+      const option = getStarlaneOptions(state, system.id, factionId).find(lane => lane.id === action.laneId);
+      if (!option) return fail('Survey a dormant starlane endpoint first.');
+      if (!option.enabled) return fail(option.reason);
+      pay(faction, option.cost); faction.orders--;
+      system.queue = { itemId: 'starlane', kind: 'starlane', laneId: option.id, progress: 0, work: option.work, cost: { ...option.cost } };
+      result = success(`Starlane restoration commissioned at ${system.name}.`); break;
+    }
     case 'cancelBuild': {
       if (!system || system.owner !== factionId || !system.queue) return fail('No owned construction project to cancel.');
       // Unspent work is refunded. Cancelling cannot generate resources.
@@ -622,6 +640,13 @@ export function endTurn(state) {
       if (system.queue.progress >= system.queue.work) {
         const item = getConstructionProject(system.queue);
         if (system.queue.kind === 'ship') makeFleet(state, system.owner, system.id, item.id);
+        else if (system.queue.kind === 'starlane') {
+          const lane = completeStarlane(state, system);
+          if (getKnownStarlanes(state).some(known => known.id === lane.id)) {
+            const [first, second] = lane.endpoints.map(id => systemOf(state, id));
+            record(state, `The dormant lane between ${first.name} and ${second.name} is restored. All empires can use it under ordinary border and movement rules.`, 'starlane', null, { systemId: system.id });
+          }
+        }
         else if (system.queue.kind === 'charter') system.charter = { type: system.queue.charterType, level: system.queue.charterLevel };
         else {
           if (system.queue.replaceBuildingId) {
@@ -630,7 +655,7 @@ export function endTurn(state) {
           }
           system.buildings.push(item.id);
         }
-        record(state, `${system.name} completed ${item.name}.`, 'construction', system.owner, { systemId: system.id, ...(system.queue.kind === 'charter' ? {} : { itemId: item.id }) });
+        if (system.queue.kind !== 'starlane') record(state, `${system.name} completed ${item.name}.`, 'construction', system.owner, { systemId: system.id, ...(system.queue.kind === 'charter' ? {} : { itemId: item.id }) });
         system.queue = null;
       }
     }
@@ -694,6 +719,7 @@ function isValidSave(value) {
   if (!validateDiplomacyState(value)) return false;
   if (!validateReportState(value)) return false;
   if (!validateAlignmentState(value)) return false;
+  if (!validateStarlaneState(value)) return false;
   if (!validateNavigationState(value)) return false;
   if (!validateFleetReadiness(value)) return false;
   if (!validateDefenseState(value)) return false;

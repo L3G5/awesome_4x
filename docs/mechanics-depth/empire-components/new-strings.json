@@ -1,0 +1,24 @@
+[
+  {
+    "english": "Commission",
+    "russianSuggestion": "Заказать проект"
+  },
+  {
+    "english": "Commission a project at {0}",
+    "russianSuggestion": "Заказать проект в системе {0}",
+    "slots": {
+      "0": "system name"
+    }
+  },
+  {
+    "english": "{0} cycle remaining",
+    "russianSuggestion": "Циклов до завершения: {0}",
+    "slots": {
+      "0": "number"
+    }
+  },
+  {
+    "english": "Construction in progress",
+    "russianSuggestion": "Идёт строительство"
+  }
+]
