@@ -58,7 +58,7 @@ export const bindings = {
         "kind": "number"
       },
       "10": {
-        "kind": "list"
+        "kind": "text"
       }
     }
   ],
@@ -154,14 +154,14 @@ export const bindings = {
         ]
       },
       "3": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
   "The Concord · Cycle {7}": [
     {
       "7": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -311,7 +311,7 @@ export const bindings = {
         "kind": "name"
       },
       "1": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -439,7 +439,7 @@ export const bindings = {
   "Change: {0}": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -479,7 +479,7 @@ export const bindings = {
   "Its benefits are then removed.{1}{2} Cancelling construction keeps the existing infrastructure.": [
     {
       "1": {
-        "kind": "number"
+        "kind": "text"
       },
       "2": {
         "kind": "enum",
@@ -509,7 +509,7 @@ export const bindings = {
         "kind": "number"
       },
       "13": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -523,7 +523,7 @@ export const bindings = {
   "Requires population {0}": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -596,14 +596,14 @@ export const bindings = {
   "{4} · Proposals use 1 order": [
     {
       "4": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
   "Trade income +{0} credits / cycle · Open borders": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -843,7 +843,7 @@ export const bindings = {
         ]
       },
       "5": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -884,7 +884,7 @@ export const bindings = {
         ]
       },
       "3": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -1149,7 +1149,7 @@ export const bindings = {
   "{0} Send an expedition for an updated report.": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -1200,7 +1200,7 @@ export const bindings = {
   "{0} This record retains what your expedition learned. Return to the system to observe its current state.": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -1231,10 +1231,10 @@ export const bindings = {
   "{8}1 order{9}": [
     {
       "8": {
-        "kind": "number"
+        "kind": "text"
       },
       "9": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -1251,7 +1251,7 @@ export const bindings = {
   "Sort colonies by {2}": [
     {
       "2": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -1454,7 +1454,7 @@ export const bindings = {
         ]
       },
       "4": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -1500,7 +1500,7 @@ export const bindings = {
         "kind": "number"
       },
       "2": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -1520,14 +1520,14 @@ export const bindings = {
         "kind": "number"
       },
       "3": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
   "First contact: {0}. A diplomatic channel is open.": [
     {
       "0": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -1741,7 +1741,7 @@ export const bindings = {
         "kind": "number"
       },
       "7": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -1942,7 +1942,7 @@ export const bindings = {
         "kind": "number"
       },
       "1": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -1985,6 +1985,16 @@ export const bindings = {
     }
   ],
   "Cycle {0} briefing · {1} dispatches": [
+    {
+      "0": {
+        "kind": "number"
+      },
+      "1": {
+        "kind": "number"
+      }
+    }
+  ],
+  "{0} charted systems · {1} surveyed · seed": [
     {
       "0": {
         "kind": "number"
@@ -2046,7 +2056,7 @@ export const bindings = {
   "Empire{0}": [
     {
       "0": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -2063,7 +2073,7 @@ export const bindings = {
   "Diplomacy{0}": [
     {
       "0": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -2084,7 +2094,7 @@ export const bindings = {
   "{0} context": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -2132,7 +2142,7 @@ export const bindings = {
   "{7} · {8} hull": [
     {
       "7": {
-        "kind": "name"
+        "kind": "text"
       },
       "8": {
         "kind": "number"
@@ -2229,7 +2239,7 @@ export const bindings = {
         "kind": "name"
       },
       "2": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -2419,7 +2429,7 @@ export const bindings = {
         "kind": "number"
       },
       "1": {
-        "kind": "fragment"
+        "kind": "text"
       },
       "2": {
         "kind": "enum",
@@ -2471,7 +2481,7 @@ export const bindings = {
   "Worlds need at least {1}% habitability with your current technology.": [
     {
       "1": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -2617,7 +2627,7 @@ export const bindings = {
         "kind": "name"
       },
       "2": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -2994,7 +3004,7 @@ export const bindings = {
         "kind": "fragment"
       },
       "6": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -3277,7 +3287,7 @@ export const bindings = {
         "kind": "number"
       },
       "5": {
-        "kind": "number"
+        "kind": "text"
       }
     }
   ],
@@ -3305,7 +3315,7 @@ export const bindings = {
   "Open borders and +{0} credits each cycle from trade.": [
     {
       "0": {
-        "kind": "fragment"
+        "kind": "text"
       }
     }
   ],
@@ -3914,7 +3924,7 @@ export const bindings = {
         "kind": "number"
       },
       "7": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -3954,7 +3964,7 @@ export const bindings = {
         "kind": "number"
       },
       "7": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -3994,7 +4004,7 @@ export const bindings = {
         "kind": "number"
       },
       "7": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -4034,7 +4044,7 @@ export const bindings = {
         "kind": "number"
       },
       "7": {
-        "kind": "name"
+        "kind": "text"
       }
     }
   ],
@@ -4499,6 +4509,189 @@ export const bindings = {
     {
       "0": {
         "kind": "number"
+      }
+    }
+  ],
+  "{0} upkeep": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "cycles {0}–{1}": [
+    {
+      "0": {
+        "kind": "number"
+      },
+      "1": {
+        "kind": "number"
+      }
+    }
+  ],
+  "{0} dispatches": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "rival alignment {0} of {1}": [
+    {
+      "0": {
+        "kind": "number"
+      },
+      "1": {
+        "kind": "number"
+      }
+    }
+  ],
+  "route preview jump {0} of {1}": [
+    {
+      "0": {
+        "kind": "number"
+      },
+      "1": {
+        "kind": "number"
+      }
+    }
+  ],
+  "plotted course jump {0} of {1}": [
+    {
+      "0": {
+        "kind": "number"
+      },
+      "1": {
+        "kind": "number"
+      }
+    }
+  ],
+  "{0} beacon": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "concord",
+          "veyr",
+          "khar",
+          "choir"
+        ]
+      }
+    }
+  ],
+  "The Silent Archive: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Recover their knowledge",
+          "Salvage the vault"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "A Thousand Sleeping Voices: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Bring them home",
+          "Restore their navigation"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "The Hollow Sun: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Redirect the foundries",
+          "Finish the ancient escort"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "Garden Between Stars: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Wake the caretakers",
+          "Harvest the exotic compounds"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "Echo of the First Gate: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Map the resonance",
+          "Reach through the echo"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "A Banner in the Dark: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Claim the lost treasury",
+          "Study the reactor"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "The Last Observatory: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Take the timing core",
+          "Let the observatory finish",
+          "Keep the sky here",
+          "Publish the last atlas"
+        ]
+      },
+      "1": {
+        "kind": "text"
+      }
+    }
+  ],
+  "The Patient Reef: {0}. {1}": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Quarry the lattice",
+          "Feed the root",
+          "Grow a living foundry",
+          "Harvest its final bloom"
+        ]
+      },
+      "1": {
+        "kind": "text"
       }
     }
   ]

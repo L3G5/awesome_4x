@@ -13,8 +13,14 @@ function alternatives(node){
 function describe(node,source){
  const options=alternatives(node);if(options)return {kind:'enum',options};
  if(node?.type==='CallExpression' && node.callee?.type==='Identifier' && ['escape','esc'].includes(node.callee.name))return describe(node.arguments[0],source);
+ if(node?.type==='TemplateLiteral')return {kind:'text'};
+ if(node?.type==='ConditionalExpression'){
+  const a=describe(node.consequent,source),b=describe(node.alternate,source);
+  return a.kind==='number' && b.kind==='number'?{kind:'number'}:{kind:'text'};
+ }
  const code=source.slice(node.start,node.end);
- if(/\b(?:reason|message|detail|explanation|summary|description|text|note|suffix|benefits|effect)\b/i.test(code))return {kind:'text'};
+ if(/\b(?:reason|message|detail|explanation|summary|description|text|note|suffix|benefits|effect|outcome)\b/i.test(code))return {kind:'text'};
+ if(/Summary\(/.test(code))return {kind:'text'};
  if(/\.map\(|\.join\(/.test(code))return {kind:'list'};
  if(/(?:\.name|\.shortName|\.role|\.label|\.title)\b|^(?:name|label|role|factionName|systemName)$/.test(code))return {kind:'name'};
  if(/(?:\bMath\.|\b(?:num|signed|formatHull)\(|\.length\b|\.toFixed\(|\.padStart\(|(?:^|\.)(?:turn|expiresTurn|createdTurn|truceTurns|credits|minerals|science|orders|population|capacity|production|upkeep|ships|hp|movesLeft|jumps|progress|target|beacons|cost|damage|round|rounds|count|total|amount|income|work|cycles|turns|current|completed|hullAfter|retaliation|hit|volley|firepower|defense|defenseAfter|habitability|richness)\b)/i.test(code))return {kind:'number'};

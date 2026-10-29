@@ -12,6 +12,7 @@ function slotPattern(entry, key, slot) {
   if (entry?.kind === 'enum') return `(?:${entry.options.map(escapeRegExp).join('|')})`;
   if (entry?.kind === 'number') return '[+−\\-<>≥≤]?[\\d., /%–−\\-]+';
   if (entry?.kind === 'text') return '.*?';
+  if (entry?.kind === 'name') return '[^,.!?;·]*?';
   return fragmentPattern;
 }
 const templates = Object.entries(russian).filter(([key]) => /\{\d+\}/.test(key)).flatMap(([key, value]) => {
@@ -64,14 +65,14 @@ export function translateText(value, language = 'en', depth = 0) {
       }
     }
     // Full authored sentences take precedence over the independently composed summary fields.
-    if (translated === undefined) translated = matchTemplate(text, language, depth, 20);
+    if (translated === undefined) translated = matchTemplate(text, language, depth);
     if (translated === undefined && /\s[·+]\s/.test(text)) {
       const parts = text.split(/(\s+·\s+|\s+\+\s+)/);
       const result = parts.map(part => translateText(part, language, depth + 1)).join('');
       if (result !== text) translated = result;
     }
     if (translated === undefined) {
-      const decorated = text.match(/^([◇⌁✧▥◎⌂⛨✦▲▴△◆⬡↳↓↑✓●]+\s*)?(.+?)(\s*[→↗←]+)?$/);
+      const decorated = text.match(/^([·◇⌁✧▥◎⌂⛨✦▲▴△◆⬡↳↓↑✓●]+\s*)?(.+?)(\s*[·→↗←]+)?$/);
       if (decorated && (decorated[1] || decorated[3])) {
         const middle = translateText(decorated[2], language, depth + 1);
         if (middle !== decorated[2]) translated = (decorated[1] || '') + middle + (decorated[3] || '');
@@ -82,7 +83,15 @@ export function translateText(value, language = 'en', depth = 0) {
       const result = parts.map(part => translateText(part, language, depth + 1)).join(' ');
       if (result !== text) translated = result;
     }
-    if (translated === undefined) translated = matchTemplate(text, language, depth);
+    if (translated === undefined && text.includes(' and ')) {
+      const parts = text.split(' and '), values = parts.map(part => translateText(part, language, depth + 1));
+      if (values.every((value, index) => value !== parts[index])) translated = values.join(' и ');
+    }
+    if (translated === undefined && text.includes(', ')) {
+      const parts = text.split(', '), values = parts.map(part => translateText(part, language, depth + 1));
+      // The first field may be a system name. Every following authored status must be translated.
+      if (values.slice(1).every((value, index) => value !== parts[index + 1])) translated = values.join(', ');
+    }
     if (translated === undefined) {
       translated = text;
       if (depth === 0) misses.add(text);

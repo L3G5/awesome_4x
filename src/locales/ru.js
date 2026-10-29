@@ -1,4 +1,4 @@
-// Russian interface catalog. Numbered slots capture canonical rendered values.
+// Russian presentation strings. Canonical save data remains English.
 export const russian = {
   "Pathfinder {0}": "Следопыт {0}",
   "Colony Ark {0}": "Колониальный ковчег {0}",
@@ -1518,5 +1518,27 @@ export const russian = {
   "Gained {0} science and {1} minerals.": "Получено: наука — {0}, минералы — {1}.",
   "Gained {0} credits and {1} minerals.": "Получено: кредиты — {0}, минералы — {1}.",
   "{0} rounds": "Раундов: {0}",
-  "{0} round": "Раундов: {0}"
+  "{0} round": "Раундов: {0}",
+  "{0} charted systems · {1} surveyed · seed": "Систем на карте: {0} · обследовано: {1} · код генерации:",
+  "Funding is covered.": "Средств достаточно.",
+  "Its benefits are then removed. Cancelling construction keeps the existing infrastructure.": "После этого её преимущества исчезнут. При отмене строительства существующая инфраструктура сохранится.",
+  "{0} upkeep": "Содержание: {0}",
+  "cycles {0}–{1}": "циклы {0}–{1}",
+  "{0} dispatches": "Донесения: {0}",
+  "founding world": "мир-основатель",
+  "adjacent to selected fleet": "рядом с выбранным флотом",
+  "destination": "цель маршрута",
+  "rival alignment {0} of {1}": "синхронизация соперника: {0} из {1}",
+  "route preview jump {0} of {1}": "просмотр маршрута: прыжок {0} из {1}",
+  "plotted course jump {0} of {1}": "проложенный курс: прыжок {0} из {1}",
+  "name": "название",
+  "{0} beacon": "Маяк: {0}",
+  "The Silent Archive: {0}. {1}": "Безмолвный архив: {0}. {1}",
+  "A Thousand Sleeping Voices: {0}. {1}": "Тысяча спящих голосов: {0}. {1}",
+  "The Hollow Sun: {0}. {1}": "Полое солнце: {0}. {1}",
+  "Garden Between Stars: {0}. {1}": "Сад между звёздами: {0}. {1}",
+  "Echo of the First Gate: {0}. {1}": "Эхо первых врат: {0}. {1}",
+  "A Banner in the Dark: {0}. {1}": "Знамя во тьме: {0}. {1}",
+  "The Last Observatory: {0}. {1}": "Последняя обсерватория: {0}. {1}",
+  "The Patient Reef: {0}. {1}": "Терпеливый риф: {0}. {1}"
 };

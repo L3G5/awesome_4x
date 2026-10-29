@@ -415,7 +415,7 @@
       "kind": "number"
     },
     "7": {
-      "kind": "name"
+      "kind": "text"
     }
   },
   "Battle at {0}: {1} lost {2} ship and {3} hull; {4} lost {5} ships and {6} hull. {7}": {
@@ -453,7 +453,7 @@
       "kind": "number"
     },
     "7": {
-      "kind": "name"
+      "kind": "text"
     }
   },
   "Battle at {0}: {1} lost {2} ships and {3} hull; {4} lost {5} ship and {6} hull. {7}": {
@@ -491,7 +491,7 @@
       "kind": "number"
     },
     "7": {
-      "kind": "name"
+      "kind": "text"
     }
   },
   "Battle at {0}: {1} lost {2} ships and {3} hull; {4} lost {5} ships and {6} hull. {7}": {
@@ -529,7 +529,7 @@
       "kind": "number"
     },
     "7": {
-      "kind": "name"
+      "kind": "text"
     }
   },
   "{0} restored beacon · Transcendence recorded": {
@@ -915,6 +915,167 @@
     },
     "2": {
       "kind": "number"
+    }
+  },
+  "{0} charted systems · {1} surveyed · seed": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} upkeep": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "cycles {0}–{1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} dispatches": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "rival alignment {0} of {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "route preview jump {0} of {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "plotted course jump {0} of {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} beacon": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "concord",
+        "veyr",
+        "khar",
+        "choir"
+      ]
+    }
+  },
+  "The Silent Archive: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Recover their knowledge",
+        "Salvage the vault"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "A Thousand Sleeping Voices: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Bring them home",
+        "Restore their navigation"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "The Hollow Sun: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Redirect the foundries",
+        "Finish the ancient escort"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "Garden Between Stars: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Wake the caretakers",
+        "Harvest the exotic compounds"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "Echo of the First Gate: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Map the resonance",
+        "Reach through the echo"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "A Banner in the Dark: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Claim the lost treasury",
+        "Study the reactor"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "The Last Observatory: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Take the timing core",
+        "Let the observatory finish",
+        "Keep the sky here",
+        "Publish the last atlas"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "The Patient Reef: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Quarry the lattice",
+        "Feed the root",
+        "Grow a living foundry",
+        "Harvest its final bloom"
+      ]
+    },
+    "1": {
+      "kind": "text"
     }
   }
 }
