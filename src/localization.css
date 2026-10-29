@@ -1,7 +1,8 @@
 .language-toggle { font-size: 11px; white-space: nowrap; letter-spacing: 0; }
 .modal-language { position: absolute; right: 54px; top: 14px; z-index: 1; padding: 6px 10px; }
 html[lang="ru"] { --heading: Georgia, 'Times New Roman', serif; }
-html[lang="ru"] .rail button { overflow-wrap: anywhere; font-size: 9px; }
+html[lang="ru"] .rail button { font-size: 9px; letter-spacing: 0; }
+html[lang="ru"] .rail button > span { white-space: nowrap; }
 html[lang="ru"] .resource label { letter-spacing: 0; }
 html[lang="ru"] .brand small { letter-spacing: .12em; }
 @media (max-width: 1180px) {

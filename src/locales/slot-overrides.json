@@ -1077,5 +1077,26 @@
     "1": {
       "kind": "text"
     }
+  },
+  "Diplomacy, {0} pending diplomatic proposal": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Diplomacy, {0} pending diplomatic proposals": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} context": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Research",
+        "Diplomacy",
+        "Empire",
+        "Chronicle"
+      ]
+    }
   }
 }

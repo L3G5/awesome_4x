@@ -71,4 +71,6 @@ test('accessible map statuses and protected-seed surrounding fragments translate
   assert.equal(translateText('Deep-space Logistics and Coherent Lances', 'ru'), 'Логистика дальнего космоса и Когерентные копья');
   assert.equal(translateText('this sentence and an unknown phrase', 'ru'), 'this sentence and an unknown phrase');
   assert.equal(translateText('first, another unknown phrase', 'ru'), 'first, another unknown phrase');
+  assert.equal(translateText('Diplomacy context', 'ru'), 'Контекст раздела «Дипломатия»');
+  assert.equal(translateText('Diplomacy, 2 pending diplomatic proposals', 'ru'), 'Дипломатия, предложения, ожидающие ответа: 2');
 });

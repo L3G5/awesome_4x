@@ -2053,13 +2053,6 @@ export const bindings = {
       }
     }
   ],
-  "Empire{0}": [
-    {
-      "0": {
-        "kind": "text"
-      }
-    }
-  ],
   ", rival alignment {0} of {1}": [
     {
       "0": {
@@ -2067,13 +2060,6 @@ export const bindings = {
       },
       "1": {
         "kind": "number"
-      }
-    }
-  ],
-  "Diplomacy{0}": [
-    {
-      "0": {
-        "kind": "text"
       }
     }
   ],
@@ -2094,7 +2080,13 @@ export const bindings = {
   "{0} context": [
     {
       "0": {
-        "kind": "text"
+        "kind": "enum",
+        "options": [
+          "Research",
+          "Diplomacy",
+          "Empire",
+          "Chronicle"
+        ]
       }
     }
   ],
@@ -4692,6 +4684,20 @@ export const bindings = {
       },
       "1": {
         "kind": "text"
+      }
+    }
+  ],
+  "Diplomacy, {0} pending diplomatic proposal": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
+  "Diplomacy, {0} pending diplomatic proposals": [
+    {
+      "0": {
+        "kind": "number"
       }
     }
   ]

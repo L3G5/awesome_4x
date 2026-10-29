@@ -612,7 +612,6 @@ export const russian = {
   "Detached formation": "Отделённое соединение",
   "Develop": "Развивать",
   "Diplomacy": "Дипломатия",
-  "Diplomacy{0}": "Дипломатия{0}",
   "Diplomatic status": "Дипломатический статус",
   "Divide {1}": "Разделить: {1}",
   "Domination": "Господство",
@@ -625,7 +624,6 @@ export const russian = {
   "Empire income / cycle": "Доход империи / цикл",
   "Empire orders / cycle": "Приказы империи / цикл",
   "Empire orders:": "Приказы империи:",
-  "Empire{0}": "Империя{0}",
   "End cycle →": "Завершить цикл →",
   "End trade": "Прекратить торговлю",
   "Ended": "Завершено",
@@ -1540,5 +1538,7 @@ export const russian = {
   "Echo of the First Gate: {0}. {1}": "Эхо первых врат: {0}. {1}",
   "A Banner in the Dark: {0}. {1}": "Знамя во тьме: {0}. {1}",
   "The Last Observatory: {0}. {1}": "Последняя обсерватория: {0}. {1}",
-  "The Patient Reef: {0}. {1}": "Терпеливый риф: {0}. {1}"
+  "The Patient Reef: {0}. {1}": "Терпеливый риф: {0}. {1}",
+  "Diplomacy, {0} pending diplomatic proposal": "Дипломатия, предложения, ожидающие ответа: {0}",
+  "Diplomacy, {0} pending diplomatic proposals": "Дипломатия, предложения, ожидающие ответа: {0}"
 };
