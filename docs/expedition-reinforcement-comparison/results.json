@@ -1,0 +1,5165 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T01:14:41.700Z",
+  "runtime": "v22.23.1",
+  "engineRevision": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "baselineAIRevision": "e749df166e469bfae7fcbe971f9c50b5f09b776a",
+  "fixedPlayerAIRevision": "e749df166e469bfae7fcbe971f9c50b5f09b776a",
+  "hashes": {
+    "runnerSha256": "e1b27fd81c6cfc7d14343c862b3501c2945070a8d8dd3dbe32c4b292c8dfeab0",
+    "sourceGraphs": {
+      "before-observed": {
+        "src/ai.js": "e991710f8c1b6f2ec20846077deea7d94b1b852d5b55aee5b65216c14bc73b75",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "0474f5e4419f675fc5eaf79e41a0e037049661a7f555c758e07884b7492fe8e9",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "e991710f8c1b6f2ec20846077deea7d94b1b852d5b55aee5b65216c14bc73b75",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/victory.js": "4f403087115b7eb33477b823a584fbfc576f3041af37149234e7b7b0a77e8b4a"
+      },
+      "before-raw": {
+        "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      },
+      "after-observed": {
+        "src/ai.js": "072ba000586c4380a235f601d2fd7c2dbd93c4b60b9d0da0dd5a12ae1ec33501",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "0474f5e4419f675fc5eaf79e41a0e037049661a7f555c758e07884b7492fe8e9",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "e991710f8c1b6f2ec20846077deea7d94b1b852d5b55aee5b65216c14bc73b75",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/victory.js": "4f403087115b7eb33477b823a584fbfc576f3041af37149234e7b7b0a77e8b4a"
+      },
+      "after-raw": {
+        "src/ai.js": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/player-ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      }
+    },
+    "rawDifferingFiles": [
+      "src/ai.js"
+    ],
+    "fixedPlayerPolicyFunctionSha256": "1f0769225c58eb76aa3336d633230fc374701b4170b122dc9397905a0dfac274",
+    "instrumentationPatchesSha256": "c7a95582ede6a79d7350575f99242a2b7ebfa41b5c39b6b5bde59026d421da00"
+  },
+  "method": {
+    "design": "8 established seeds × 2 fixed player policies × 2 rival AI variants = 32 measured configurations. All engine dependencies come from one committed revision; only rival src/ai.js changes. There are 16 seed-policy pairs, not 32 independent pairs.",
+    "player": "Passive issues no commands. Balanced chooses from one fixed research priority, then runs exact baseline e749df1 AI copied into src/player-ai.js in both variants. Player observations may change as rivals change, but its policy code does not adopt this new absorption policy. All commands use ordinary rules, orders and costs.",
+    "instrumentation": "Read-only callbacks in scratch copies mark the exact new accepted-preflight/merge site and the existing expedition departure site. The normal act wrapper records actual results. Identical hooks bracket actual fleet duels and inspect each alignment resolution. No callbacks return decisions to the policy, call random, edit campaign state or add saved fields. Exact source replacement/append operations are retained in instrumentation-patches.json.",
+    "absorption": "New absorptions count successful ordinary merge commands issued by reinforceIntervention, never generic same-location merges. Accepted preflights are counted separately and must equal successful absorptions. Each costs exactly one order, preserves current movement, summed ships/hull, resources, upkeep and RNG; actual candidate route/cost/arrivalCycles must equal the accepted projection and be no worse than its pre-merge ETA. Recorded ETA is a current-condition policy estimate, not a guaranteed future arrival.",
+    "movement": "Expedition departures count commands issued by advanceIntervention for rival fleets. Successful jumps require a living fleet at the intended next system afterward. Reached participating sites require the surviving expedition at its selected rival public participant site after that departure; they do not imply an undefended site or an eventual blockade. Unique arrivals key owner/fleet/target empire/site. Player departures are separate.",
+    "engagements": "Fleet duels count actual battle() calls, including fights outside player sensors. Expedition/reinforced duel subsets refer to surviving IDs previously observed departing/absorbing in this run, including their later defensive fights. These are retrospective measurement sets, never inputs to AI. Invasions, upkeep removals and other non-duel losses are outside this metric.",
+    "blockade": "A blockade faction-cycle is one advanceAlignment resolution whose own status gives the hostile-warship denial reason. Declines require actual progress reduction; interruptions require an active-to-inactive transition at that resolution. These include all factions and all blockers, with a separate subset where a previously reinforced rival formation is physically present. No historical report or post-cycle guess is used to infer interruption cause.",
+    "verification": "Every measured initial and completed-round state validates with finite nonnegative balances. A separate uninstrumented run from the same seed must match the entire JSON after every full round and at finish. Cycles 20/40/60, if reached, also replay the next raw round from a JSON reload. Trajectory hashes summarize the exact compared sequence. Validation replays are not additional outcome samples. A winning command can end without incrementing the cycle.",
+    "limitations": "Eight fixed seeds and two automated policies are a regression and policy probe, not human win-rate estimates. No player adoption, difficulty, optimal force assembly or guaranteed raid success is inferred. New merges can consume orders otherwise used later and alter subsequent battles/RNG/strategy. Outcomes are descriptive paired results. Zero-event runs remain zero; no extra hindsight seeds or synthetic events enter this cohort. The two previously derived WATCH local forks and synthetic ETA boundary are outside this cohort and covered by separate focused evidence/tests."
+  },
+  "seeds": [
+    "ASTERION",
+    "stage4-audit-1",
+    "stage4-audit-2",
+    "stage4-audit-3",
+    "stage4-audit-4",
+    "stage4-audit-5",
+    "stage4-audit-6",
+    "stage4-audit-7"
+  ],
+  "policies": {
+    "passive": "No player commands.",
+    "balanced": {
+      "description": "Fixed research priority followed by exact baseline AI; ordinary commands only.",
+      "researchPriority": [
+        "logistics",
+        "ecology",
+        "physics",
+        "industry",
+        "diplomacy",
+        "weapons",
+        "computing",
+        "shields",
+        "singularity",
+        "command",
+        "cruisers",
+        "terraforming"
+      ]
+    }
+  },
+  "checks": {
+    "measuredConfigurations": 32,
+    "rawValidationReplays": 32,
+    "measuredCompletedCycles": 2250,
+    "measuredStateChecks": 2282,
+    "rawStateChecks": 2282,
+    "completeRoundEqualityChecks": 2250,
+    "finalStateEqualityChecks": 32,
+    "jsonReloadNextRoundChecks": 96,
+    "invalidStates": 0,
+    "negativeOrNonfiniteBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "summary": {
+    "before": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3
+        },
+        "metrics": {
+          "acceptedPreflights": 0,
+          "expeditionAbsorptions": 0,
+          "absorptionOrders": 0,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 163,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 0,
+          "expeditionDepartures": 106,
+          "successfulExpeditionJumps": 98,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 15,
+          "uniqueExpeditionsArrived": 15,
+          "reinforcedArrivals": 0,
+          "playerExpeditionDepartures": 0,
+          "fleetDuels": 90,
+          "expeditionFleetDuels": 25,
+          "reinforcedFleetDuels": 0,
+          "blockadeFactionCycles": 32,
+          "blockadeProgressDeclines": 32,
+          "blockadeInterruptions": 13,
+          "reinforcedBlockadeFactionCycles": 0
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 2,
+          "veyr": 3,
+          "khar": 1,
+          "choir": 2
+        },
+        "metrics": {
+          "acceptedPreflights": 0,
+          "expeditionAbsorptions": 0,
+          "absorptionOrders": 0,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 148,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 46,
+          "expeditionDepartures": 95,
+          "successfulExpeditionJumps": 86,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 11,
+          "uniqueExpeditionsArrived": 11,
+          "reinforcedArrivals": 0,
+          "playerExpeditionDepartures": 31,
+          "fleetDuels": 95,
+          "expeditionFleetDuels": 40,
+          "reinforcedFleetDuels": 0,
+          "blockadeFactionCycles": 29,
+          "blockadeProgressDeclines": 26,
+          "blockadeInterruptions": 14,
+          "reinforcedBlockadeFactionCycles": 0
+        }
+      }
+    },
+    "after": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 71,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 4,
+          "choir": 2
+        },
+        "metrics": {
+          "acceptedPreflights": 1,
+          "expeditionAbsorptions": 1,
+          "absorptionOrders": 1,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 173,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 0,
+          "expeditionDepartures": 120,
+          "successfulExpeditionJumps": 110,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 18,
+          "uniqueExpeditionsArrived": 18,
+          "reinforcedArrivals": 2,
+          "playerExpeditionDepartures": 0,
+          "fleetDuels": 96,
+          "expeditionFleetDuels": 31,
+          "reinforcedFleetDuels": 4,
+          "blockadeFactionCycles": 41,
+          "blockadeProgressDeclines": 39,
+          "blockadeInterruptions": 16,
+          "reinforcedBlockadeFactionCycles": 8
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 2,
+          "veyr": 3,
+          "khar": 1,
+          "choir": 2
+        },
+        "metrics": {
+          "acceptedPreflights": 2,
+          "expeditionAbsorptions": 2,
+          "absorptionOrders": 2,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 146,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 46,
+          "expeditionDepartures": 95,
+          "successfulExpeditionJumps": 86,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 11,
+          "uniqueExpeditionsArrived": 11,
+          "reinforcedArrivals": 0,
+          "playerExpeditionDepartures": 31,
+          "fleetDuels": 95,
+          "expeditionFleetDuels": 40,
+          "reinforcedFleetDuels": 4,
+          "blockadeFactionCycles": 29,
+          "blockadeProgressDeclines": 26,
+          "blockadeInterruptions": 14,
+          "reinforcedBlockadeFactionCycles": 0
+        }
+      }
+    }
+  },
+  "paired": {
+    "passive": [
+      {
+        "seed": "ASTERION",
+        "beforeWinner": "choir",
+        "afterWinner": "choir",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 66,
+        "afterFinish": 66,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 0,
+        "afterArrivals": 0,
+        "beforeBlockadeDeclines": 0,
+        "afterBlockadeDeclines": 0
+      },
+      {
+        "seed": "stage4-audit-1",
+        "beforeWinner": "choir",
+        "afterWinner": "choir",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 69,
+        "afterFinish": 69,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 1,
+        "afterArrivals": 1,
+        "beforeBlockadeDeclines": 3,
+        "afterBlockadeDeclines": 3
+      },
+      {
+        "seed": "stage4-audit-2",
+        "beforeWinner": "choir",
+        "afterWinner": "veyr",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 68,
+        "afterFinish": 78,
+        "finishDelta": 10,
+        "sameFinalState": false,
+        "absorptions": 1,
+        "beforeArrivals": 1,
+        "afterArrivals": 4,
+        "beforeBlockadeDeclines": 2,
+        "afterBlockadeDeclines": 9
+      },
+      {
+        "seed": "stage4-audit-3",
+        "beforeWinner": "khar",
+        "afterWinner": "khar",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 85,
+        "afterFinish": 85,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 8,
+        "afterArrivals": 8,
+        "beforeBlockadeDeclines": 12,
+        "afterBlockadeDeclines": 12
+      },
+      {
+        "seed": "stage4-audit-4",
+        "beforeWinner": "veyr",
+        "afterWinner": "veyr",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 72,
+        "afterFinish": 72,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 1,
+        "afterArrivals": 1,
+        "beforeBlockadeDeclines": 6,
+        "afterBlockadeDeclines": 6
+      },
+      {
+        "seed": "stage4-audit-5",
+        "beforeWinner": "khar",
+        "afterWinner": "khar",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 70,
+        "afterFinish": 70,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 0,
+        "afterArrivals": 0,
+        "beforeBlockadeDeclines": 0,
+        "afterBlockadeDeclines": 0
+      },
+      {
+        "seed": "stage4-audit-6",
+        "beforeWinner": "khar",
+        "afterWinner": "khar",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 78,
+        "afterFinish": 78,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 3,
+        "afterArrivals": 3,
+        "beforeBlockadeDeclines": 7,
+        "afterBlockadeDeclines": 7
+      },
+      {
+        "seed": "stage4-audit-7",
+        "beforeWinner": "khar",
+        "afterWinner": "khar",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 70,
+        "afterFinish": 70,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 1,
+        "afterArrivals": 1,
+        "beforeBlockadeDeclines": 2,
+        "afterBlockadeDeclines": 2
+      }
+    ],
+    "balanced": [
+      {
+        "seed": "ASTERION",
+        "beforeWinner": "choir",
+        "afterWinner": "choir",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 63,
+        "afterFinish": 63,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 0,
+        "afterArrivals": 0,
+        "beforeBlockadeDeclines": 0,
+        "afterBlockadeDeclines": 0
+      },
+      {
+        "seed": "stage4-audit-1",
+        "beforeWinner": "veyr",
+        "afterWinner": "veyr",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 73,
+        "afterFinish": 73,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 1,
+        "beforeArrivals": 2,
+        "afterArrivals": 2,
+        "beforeBlockadeDeclines": 4,
+        "afterBlockadeDeclines": 4
+      },
+      {
+        "seed": "stage4-audit-2",
+        "beforeWinner": "player",
+        "afterWinner": "player",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 65,
+        "afterFinish": 65,
+        "finishDelta": 0,
+        "sameFinalState": false,
+        "absorptions": 1,
+        "beforeArrivals": 2,
+        "afterArrivals": 2,
+        "beforeBlockadeDeclines": 3,
+        "afterBlockadeDeclines": 3
+      },
+      {
+        "seed": "stage4-audit-3",
+        "beforeWinner": "veyr",
+        "afterWinner": "veyr",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 72,
+        "afterFinish": 72,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 1,
+        "afterArrivals": 1,
+        "beforeBlockadeDeclines": 4,
+        "afterBlockadeDeclines": 4
+      },
+      {
+        "seed": "stage4-audit-4",
+        "beforeWinner": "khar",
+        "afterWinner": "khar",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 72,
+        "afterFinish": 72,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 1,
+        "afterArrivals": 1,
+        "beforeBlockadeDeclines": 5,
+        "afterBlockadeDeclines": 5
+      },
+      {
+        "seed": "stage4-audit-5",
+        "beforeWinner": "veyr",
+        "afterWinner": "veyr",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 72,
+        "afterFinish": 72,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 2,
+        "afterArrivals": 2,
+        "beforeBlockadeDeclines": 4,
+        "afterBlockadeDeclines": 4
+      },
+      {
+        "seed": "stage4-audit-6",
+        "beforeWinner": "player",
+        "afterWinner": "player",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 70,
+        "afterFinish": 70,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 2,
+        "afterArrivals": 2,
+        "beforeBlockadeDeclines": 4,
+        "afterBlockadeDeclines": 4
+      },
+      {
+        "seed": "stage4-audit-7",
+        "beforeWinner": "choir",
+        "afterWinner": "choir",
+        "beforeVictory": "Transcendence",
+        "afterVictory": "Transcendence",
+        "beforeFinish": 71,
+        "afterFinish": 71,
+        "finishDelta": 0,
+        "sameFinalState": true,
+        "absorptions": 0,
+        "beforeArrivals": 1,
+        "afterArrivals": 1,
+        "beforeBlockadeDeclines": 2,
+        "afterBlockadeDeclines": 2
+      }
+    ]
+  },
+  "runs": [
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 66,
+      "completedCycles": 65,
+      "rounds": 65,
+      "finalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "rawFinalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "trajectorySha256": "7084d1f7d0bc57610359a4b406f243526618f4ea4d7286a9c5da53f393b1814c",
+      "rawTrajectorySha256": "7084d1f7d0bc57610359a4b406f243526618f4ea4d7286a9c5da53f393b1814c",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 15,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 5,
+          "khar": 6,
+          "choir": 4
+        },
+        "expeditionDepartures": 5,
+        "successfulExpeditionJumps": 4,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 0,
+        "uniqueExpeditionsArrived": 0,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 11,
+        "expeditionFleetDuels": 1,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 0,
+        "blockadeProgressDeclines": 0,
+        "blockadeInterruptions": 0,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [],
+        "blockadeExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 69,
+      "completedCycles": 68,
+      "rounds": 68,
+      "finalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "rawFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "trajectorySha256": "1c6ed7a122d873939cf1dae50aa4ec1536a6f6d662a67e9b4656878445da0195",
+      "rawTrajectorySha256": "1c6ed7a122d873939cf1dae50aa4ec1536a6f6d662a67e9b4656878445da0195",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 21,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 10,
+          "khar": 3,
+          "choir": 8
+        },
+        "expeditionDepartures": 10,
+        "successfulExpeditionJumps": 9,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 10,
+        "expeditionFleetDuels": 3,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 3,
+        "blockadeProgressDeclines": 3,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 3
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 60,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s25",
+            "targetSystemId": "s38",
+            "targetFactionId": "choir",
+            "nextSystemId": "s38",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 123.6,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 68,
+      "completedCycles": 67,
+      "rounds": 67,
+      "finalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016",
+      "rawFinalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016",
+      "trajectorySha256": "89f7c12c9e7a36ebf04ff183d9785a0fe2af0492188573fc2e5ae1e2ebe80dc4",
+      "rawTrajectorySha256": "89f7c12c9e7a36ebf04ff183d9785a0fe2af0492188573fc2e5ae1e2ebe80dc4",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 21,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 11,
+          "khar": 5,
+          "choir": 5
+        },
+        "expeditionDepartures": 8,
+        "successfulExpeditionJumps": 7,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 13,
+        "expeditionFleetDuels": 4,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 2,
+        "blockadeProgressDeclines": 2,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 58,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s8",
+            "targetSystemId": "s16",
+            "targetFactionId": "choir",
+            "nextSystemId": "s16",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 42.4,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 59,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s16",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f48",
+                "factionId": "veyr",
+                "systemId": "s16",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 60,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s16",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f48",
+                "factionId": "veyr",
+                "systemId": "s16",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 85,
+      "completedCycles": 84,
+      "rounds": 84,
+      "finalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "rawFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "trajectorySha256": "7965af0a94fe06e0a12922b1352caa330b3f245f883520d22c39e3b256e6c1cc",
+      "rawTrajectorySha256": "7965af0a94fe06e0a12922b1352caa330b3f245f883520d22c39e3b256e6c1cc",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 21,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 8,
+          "khar": 8,
+          "choir": 5
+        },
+        "expeditionDepartures": 45,
+        "successfulExpeditionJumps": 43,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 8,
+        "uniqueExpeditionsArrived": 8,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 12,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 12,
+        "blockadeProgressDeclines": 12,
+        "blockadeInterruptions": 5,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 8,
+          "khar": 0,
+          "choir": 4
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 59,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s6",
+            "targetSystemId": "s14",
+            "targetFactionId": "choir",
+            "nextSystemId": "s14",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 167.2,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 60,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s25",
+            "targetSystemId": "s38",
+            "targetFactionId": "choir",
+            "nextSystemId": "s38",
+            "arrivalCycles": 1,
+            "ships": 6,
+            "hull": 204,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 67,
+            "factionId": "khar",
+            "fleetId": "f52",
+            "fromSystemId": "s21",
+            "targetSystemId": "s8",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s8",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 71,
+            "factionId": "khar",
+            "fleetId": "f56",
+            "fromSystemId": "s21",
+            "targetSystemId": "s8",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s8",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 20.7,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 72,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s21",
+            "targetSystemId": "s8",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s8",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 170,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 76,
+            "factionId": "choir",
+            "fleetId": "f64",
+            "fromSystemId": "s17",
+            "targetSystemId": "s38",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s38",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 60,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f41",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f41",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 68,
+            "factionId": "veyr",
+            "before": 9,
+            "after": 8,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f52",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 69,
+            "factionId": "veyr",
+            "before": 8,
+            "after": 7,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f52",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 70,
+            "factionId": "veyr",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f52",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 72,
+            "factionId": "veyr",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "rawFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "trajectorySha256": "a9eb14e16d981b322ef8a1e5eab60dd829c312b1e533afd4547baaa578290905",
+      "rawTrajectorySha256": "a9eb14e16d981b322ef8a1e5eab60dd829c312b1e533afd4547baaa578290905",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 15,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 7,
+          "khar": 3,
+          "choir": 5
+        },
+        "expeditionDepartures": 15,
+        "successfulExpeditionJumps": 15,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 6,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 6,
+        "blockadeProgressDeclines": 6,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 6
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 63,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 3,
+            "hull": 87.5,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 64,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 68,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 69,
+            "factionId": "choir",
+            "before": 2,
+            "after": 1,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 70,
+      "completedCycles": 69,
+      "rounds": 69,
+      "finalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "rawFinalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "trajectorySha256": "8c1b7cedff93b9d38ddb10361ded39ddef4147de91da36d0c3662e0ec6eaa36d",
+      "rawTrajectorySha256": "8c1b7cedff93b9d38ddb10361ded39ddef4147de91da36d0c3662e0ec6eaa36d",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 22,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 11,
+          "khar": 7,
+          "choir": 4
+        },
+        "expeditionDepartures": 4,
+        "successfulExpeditionJumps": 3,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 0,
+        "uniqueExpeditionsArrived": 0,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 12,
+        "expeditionFleetDuels": 1,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 0,
+        "blockadeProgressDeclines": 0,
+        "blockadeInterruptions": 0,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [],
+        "blockadeExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 78,
+      "completedCycles": 77,
+      "rounds": 77,
+      "finalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "rawFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "trajectorySha256": "5958dfc4e6c3c46f85fde7b2ad714d153416ac1a3b5c49af178bd166ad49092a",
+      "rawTrajectorySha256": "5958dfc4e6c3c46f85fde7b2ad714d153416ac1a3b5c49af178bd166ad49092a",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 25,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 11,
+          "khar": 12,
+          "choir": 2
+        },
+        "expeditionDepartures": 13,
+        "successfulExpeditionJumps": 11,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 3,
+        "uniqueExpeditionsArrived": 3,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 22,
+        "expeditionFleetDuels": 6,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 7,
+        "blockadeProgressDeclines": 7,
+        "blockadeInterruptions": 4,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 3,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 53,
+            "factionId": "khar",
+            "fleetId": "f42",
+            "fromSystemId": "s11",
+            "targetSystemId": "s6",
+            "targetFactionId": "choir",
+            "nextSystemId": "s6",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 53.3,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "fleetId": "f60",
+            "fromSystemId": "s21",
+            "targetSystemId": "s34",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s34",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 71,
+            "factionId": "choir",
+            "fleetId": "f63",
+            "fromSystemId": "s35",
+            "targetSystemId": "s3",
+            "targetFactionId": "khar",
+            "nextSystemId": "s3",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 68,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 54,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f42",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 55,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f42",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f44",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "veyr",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f60",
+                "factionId": "khar",
+                "systemId": "s34",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "khar",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f63",
+                "factionId": "choir",
+                "systemId": "s3",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "veyr",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f60",
+                "factionId": "khar",
+                "systemId": "s34",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 72,
+            "factionId": "khar",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f63",
+                "factionId": "choir",
+                "systemId": "s3",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 70,
+      "completedCycles": 69,
+      "rounds": 69,
+      "finalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "rawFinalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "trajectorySha256": "e276e2b9d8a5e1ae4339384ec5556608b400d93d6ab15f079491105ccf808035",
+      "rawTrajectorySha256": "e276e2b9d8a5e1ae4339384ec5556608b400d93d6ab15f079491105ccf808035",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 23,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 3,
+          "khar": 14,
+          "choir": 6
+        },
+        "expeditionDepartures": 6,
+        "successfulExpeditionJumps": 6,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 4,
+        "expeditionFleetDuels": 0,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 2,
+        "blockadeProgressDeclines": 2,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 60,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s19",
+            "targetSystemId": "s14",
+            "targetFactionId": "choir",
+            "nextSystemId": "s14",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 136,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 63,
+      "completedCycles": 62,
+      "rounds": 62,
+      "finalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "rawFinalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "trajectorySha256": "66a65764692037abf2d2be31836f58f902adf429e343148cc01aa2da9fd8e103",
+      "rawTrajectorySha256": "66a65764692037abf2d2be31836f58f902adf429e343148cc01aa2da9fd8e103",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 14,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 5,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 5,
+          "veyr": 7,
+          "khar": 4,
+          "choir": 3
+        },
+        "expeditionDepartures": 4,
+        "successfulExpeditionJumps": 1,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 0,
+        "uniqueExpeditionsArrived": 0,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 7,
+        "expeditionFleetDuels": 4,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 0,
+        "blockadeProgressDeclines": 0,
+        "blockadeInterruptions": 0,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [],
+        "blockadeExamples": []
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 73,
+      "completedCycles": 72,
+      "rounds": 72,
+      "finalStateSha256": "250ee90bf1b7cb1b9fb41a44889236d9375d2b292e013c26eff3be16db557b56",
+      "rawFinalStateSha256": "250ee90bf1b7cb1b9fb41a44889236d9375d2b292e013c26eff3be16db557b56",
+      "trajectorySha256": "036ddeeee038e2326492584ce949749e70abaa96e1c0c337f8c823e66bf7df5a",
+      "rawTrajectorySha256": "036ddeeee038e2326492584ce949749e70abaa96e1c0c337f8c823e66bf7df5a",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 22,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 7,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 7,
+          "veyr": 11,
+          "khar": 3,
+          "choir": 8
+        },
+        "expeditionDepartures": 6,
+        "successfulExpeditionJumps": 6,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 10,
+        "fleetDuels": 13,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 4,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 3,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 3,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 1
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 61,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s10",
+            "targetSystemId": "s15",
+            "targetFactionId": "player",
+            "nextSystemId": "s15",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 238,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s15",
+            "targetSystemId": "s7",
+            "targetFactionId": "player",
+            "nextSystemId": "s7",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 231.2,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 62,
+            "factionId": "player",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s15",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "player",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s15",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "player",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s7",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "finishTurn": 65,
+      "completedCycles": 64,
+      "rounds": 64,
+      "finalStateSha256": "1409341f74df731044700514c3b9be8102828938a445e10ec4f4eab03e257aa8",
+      "rawFinalStateSha256": "1409341f74df731044700514c3b9be8102828938a445e10ec4f4eab03e257aa8",
+      "trajectorySha256": "4510d307c02d283c236863b7f5dfeac9b5a9ee3912d2253e782c2e663026710b",
+      "rawTrajectorySha256": "4510d307c02d283c236863b7f5dfeac9b5a9ee3912d2253e782c2e663026710b",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 18,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 6,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 6,
+          "veyr": 5,
+          "khar": 9,
+          "choir": 4
+        },
+        "expeditionDepartures": 19,
+        "successfulExpeditionJumps": 19,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 10,
+        "expeditionFleetDuels": 3,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 3,
+        "blockadeProgressDeclines": 3,
+        "blockadeInterruptions": 2,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 1,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 57,
+            "factionId": "khar",
+            "fleetId": "f53",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 167.3,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s21",
+            "targetSystemId": "s29",
+            "targetFactionId": "khar",
+            "nextSystemId": "s29",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 136,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 58,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 59,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s29",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "1d268d43eec997294d36bed97ec55936ed0168058c8028ace175ff3026404788",
+      "rawFinalStateSha256": "1d268d43eec997294d36bed97ec55936ed0168058c8028ace175ff3026404788",
+      "trajectorySha256": "345a0a32c44c2d66838cea44d22309df2978df6e9af9f2d96572919661f58d12",
+      "rawTrajectorySha256": "345a0a32c44c2d66838cea44d22309df2978df6e9af9f2d96572919661f58d12",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 16,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 6,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 6,
+          "veyr": 8,
+          "khar": 4,
+          "choir": 4
+        },
+        "expeditionDepartures": 14,
+        "successfulExpeditionJumps": 13,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 7,
+        "fleetDuels": 9,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 4,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 2,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 2,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s15",
+            "targetSystemId": "s28",
+            "targetFactionId": "player",
+            "nextSystemId": "s28",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 238,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "player",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s28",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "player",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s28",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "rawFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "trajectorySha256": "450d1d58316dc280d2756b7bda460481944bb3de1430be8c6b12be36346fa611",
+      "rawTrajectorySha256": "450d1d58316dc280d2756b7bda460481944bb3de1430be8c6b12be36346fa611",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 17,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 3,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 3,
+          "veyr": 5,
+          "khar": 8,
+          "choir": 4
+        },
+        "expeditionDepartures": 11,
+        "successfulExpeditionJumps": 8,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 2,
+        "fleetDuels": 16,
+        "expeditionFleetDuels": 8,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 5,
+        "blockadeProgressDeclines": 5,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 5
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 63,
+            "factionId": "khar",
+            "fleetId": "f53",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 71.5,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 64,
+            "factionId": "choir",
+            "before": 8,
+            "after": 7,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 68,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "3b7a54e649beeb76285fa32006369a337890bd8a4fb888da30e10e8d4b2aab8e",
+      "rawFinalStateSha256": "3b7a54e649beeb76285fa32006369a337890bd8a4fb888da30e10e8d4b2aab8e",
+      "trajectorySha256": "6c48d8710bd79b8f53c0bd5b06cd38c059774daf1a7d668bd640b94ff0b25ca9",
+      "rawTrajectorySha256": "6c48d8710bd79b8f53c0bd5b06cd38c059774daf1a7d668bd640b94ff0b25ca9",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 20,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 5,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 5,
+          "veyr": 9,
+          "khar": 3,
+          "choir": 8
+        },
+        "expeditionDepartures": 7,
+        "successfulExpeditionJumps": 7,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 14,
+        "expeditionFleetDuels": 3,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 7,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 3,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 2,
+          "veyr": 1,
+          "khar": 0,
+          "choir": 4
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "fleetId": "f51",
+            "fromSystemId": "s25",
+            "targetSystemId": "s33",
+            "targetFactionId": "player",
+            "nextSystemId": "s33",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 170,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 64,
+            "factionId": "khar",
+            "fleetId": "f49",
+            "fromSystemId": "s8",
+            "targetSystemId": "s5",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s5",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 68,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 62,
+            "factionId": "player",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f51",
+                "factionId": "choir",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "player",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f51",
+                "factionId": "choir",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "veyr",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f49",
+                "factionId": "khar",
+                "systemId": "s5",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 1,
+            "after": 0,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f67",
+                "factionId": "player",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "choir",
+            "before": 0,
+            "after": 0,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f67",
+                "factionId": "player",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "choir",
+            "before": 0,
+            "after": 0,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f67",
+                "factionId": "player",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "finishTurn": 70,
+      "completedCycles": 69,
+      "rounds": 69,
+      "finalStateSha256": "18a003b4eae9ab08a149a4b081e9c520384cd1afd1955deda6bfc3027ba67886",
+      "rawFinalStateSha256": "18a003b4eae9ab08a149a4b081e9c520384cd1afd1955deda6bfc3027ba67886",
+      "trajectorySha256": "e02c40ba361b54fa850bae6c1bf85697eaba559626ea833306d7f754a43c8df5",
+      "rawTrajectorySha256": "e02c40ba361b54fa850bae6c1bf85697eaba559626ea833306d7f754a43c8df5",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 19,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 11,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 11,
+          "veyr": 8,
+          "khar": 10,
+          "choir": 1
+        },
+        "expeditionDepartures": 14,
+        "successfulExpeditionJumps": 13,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 12,
+        "fleetDuels": 15,
+        "expeditionFleetDuels": 6,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 4,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 2,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 1,
+          "choir": 3
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 52,
+            "factionId": "khar",
+            "fleetId": "f56",
+            "fromSystemId": "s11",
+            "targetSystemId": "s6",
+            "targetFactionId": "choir",
+            "nextSystemId": "s6",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 65,
+            "factionId": "veyr",
+            "fleetId": "f66",
+            "fromSystemId": "s29",
+            "targetSystemId": "s37",
+            "targetFactionId": "khar",
+            "nextSystemId": "s37",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 52,
+            "factionId": "choir",
+            "before": 8,
+            "after": 7,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s30",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 53,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s30",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 54,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s30",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "khar",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f66",
+                "factionId": "veyr",
+                "systemId": "s37",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 71,
+      "completedCycles": 70,
+      "rounds": 70,
+      "finalStateSha256": "399bf0b8aeda2006fc4b21e92697907729818a610077c4e27c9849e011c64793",
+      "rawFinalStateSha256": "399bf0b8aeda2006fc4b21e92697907729818a610077c4e27c9849e011c64793",
+      "trajectorySha256": "2757559ba9d79c1eed067acab9b45aee5e494e276ab6e7625ca0909893078a73",
+      "rawTrajectorySha256": "2757559ba9d79c1eed067acab9b45aee5e494e276ab6e7625ca0909893078a73",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 22,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 3,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 3,
+          "veyr": 3,
+          "khar": 13,
+          "choir": 6
+        },
+        "expeditionDepartures": 20,
+        "successfulExpeditionJumps": 19,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 11,
+        "expeditionFleetDuels": 6,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 2,
+        "blockadeProgressDeclines": 2,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 2,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s28",
+            "targetSystemId": "s0",
+            "targetFactionId": "player",
+            "nextSystemId": "s0",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 205.4,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 66,
+            "factionId": "player",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s0",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "player",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s0",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "ASTERION",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 66,
+      "completedCycles": 65,
+      "rounds": 65,
+      "finalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "rawFinalStateSha256": "d53918a4453a4fd292a85b6ad35d4a43cae9b5411858db61b466d623ac32eebe",
+      "trajectorySha256": "7084d1f7d0bc57610359a4b406f243526618f4ea4d7286a9c5da53f393b1814c",
+      "rawTrajectorySha256": "7084d1f7d0bc57610359a4b406f243526618f4ea4d7286a9c5da53f393b1814c",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 15,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 5,
+          "khar": 6,
+          "choir": 4
+        },
+        "expeditionDepartures": 5,
+        "successfulExpeditionJumps": 4,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 0,
+        "uniqueExpeditionsArrived": 0,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 11,
+        "expeditionFleetDuels": 1,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 0,
+        "blockadeProgressDeclines": 0,
+        "blockadeInterruptions": 0,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [],
+        "blockadeExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-1",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 69,
+      "completedCycles": 68,
+      "rounds": 68,
+      "finalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "rawFinalStateSha256": "7b6358c4bc83f20d5f7134fc2e0395b711a93a3784e77d00bcfc79c2d5c06dbf",
+      "trajectorySha256": "1c6ed7a122d873939cf1dae50aa4ec1536a6f6d662a67e9b4656878445da0195",
+      "rawTrajectorySha256": "1c6ed7a122d873939cf1dae50aa4ec1536a6f6d662a67e9b4656878445da0195",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 21,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 10,
+          "khar": 3,
+          "choir": 8
+        },
+        "expeditionDepartures": 10,
+        "successfulExpeditionJumps": 9,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 10,
+        "expeditionFleetDuels": 3,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 3,
+        "blockadeProgressDeclines": 3,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 3
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 60,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s25",
+            "targetSystemId": "s38",
+            "targetFactionId": "choir",
+            "nextSystemId": "s38",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 123.6,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 78,
+      "completedCycles": 77,
+      "rounds": 77,
+      "finalStateSha256": "ff790b6594966ef27ea614354a239b811751410d130a016399f97732d924b9d9",
+      "rawFinalStateSha256": "ff790b6594966ef27ea614354a239b811751410d130a016399f97732d924b9d9",
+      "trajectorySha256": "d4c1651536c51a6b112e131658b412d2953aeac64264280298b6599e76ed4cf0",
+      "rawTrajectorySha256": "d4c1651536c51a6b112e131658b412d2953aeac64264280298b6599e76ed4cf0",
+      "metrics": {
+        "acceptedPreflights": 1,
+        "expeditionAbsorptions": 1,
+        "absorptionOrders": 1,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 31,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 13,
+          "khar": 10,
+          "choir": 8
+        },
+        "expeditionDepartures": 22,
+        "successfulExpeditionJumps": 19,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 4,
+        "uniqueExpeditionsArrived": 4,
+        "reinforcedArrivals": 2,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 19,
+        "expeditionFleetDuels": 10,
+        "reinforcedFleetDuels": 4,
+        "blockadeFactionCycles": 11,
+        "blockadeProgressDeclines": 9,
+        "blockadeInterruptions": 4,
+        "reinforcedBlockadeFactionCycles": 8,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 3,
+          "khar": 0,
+          "choir": 8
+        },
+        "absorptions": [
+          {
+            "turn": 58,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "mateId": "f48",
+            "systemId": "s8",
+            "targetFactionId": "choir",
+            "targetSystemId": "s16",
+            "ordersBefore": 17,
+            "movesBefore": 2,
+            "mateMoves": 2,
+            "shipsBefore": 4,
+            "mateShips": 2,
+            "hullBefore": 116.2,
+            "mateHull": 68,
+            "before": {
+              "path": [
+                "s8",
+                "s16"
+              ],
+              "routeCost": 3.5,
+              "arrivalCycles": 1
+            },
+            "projected": {
+              "path": [
+                "s8",
+                "s16"
+              ],
+              "routeCost": 3.5,
+              "arrivalCycles": 1
+            },
+            "rngBeforePreflight": 1198750022,
+            "rngAfterPreflight": 1198750022,
+            "ordersAfter": 16,
+            "movesAfter": 2,
+            "shipsAfter": 6,
+            "hullAfter": 184.2,
+            "actual": {
+              "path": [
+                "s8",
+                "s16"
+              ],
+              "routeCost": 3.5,
+              "arrivalCycles": 1
+            },
+            "rngAfterMerge": 1198750022
+          }
+        ],
+        "arrivalExamples": [
+          {
+            "turn": 58,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s8",
+            "targetSystemId": "s16",
+            "targetFactionId": "choir",
+            "nextSystemId": "s16",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 134.8,
+            "reinforced": true,
+            "combat": true
+          },
+          {
+            "turn": 62,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 30.8,
+            "reinforced": true,
+            "combat": true
+          },
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "fleetId": "f56",
+            "fromSystemId": "s2",
+            "targetSystemId": "s16",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s16",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 46.2,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 70,
+            "factionId": "khar",
+            "fleetId": "f56",
+            "fromSystemId": "s13",
+            "targetSystemId": "s5",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s5",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 43.7,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 59,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s16",
+                "reinforced": true
+              }
+            ]
+          },
+          {
+            "turn": 60,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s16",
+                "reinforced": true
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s22",
+                "reinforced": true
+              }
+            ]
+          },
+          {
+            "turn": 64,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s22",
+                "reinforced": true
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 2,
+            "after": 1,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s22",
+                "reinforced": true
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "veyr",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s16",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-3",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 85,
+      "completedCycles": 84,
+      "rounds": 84,
+      "finalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "rawFinalStateSha256": "ee4c256e846a1d874a5624979b419c1d38183668bb8034682bcec9745e8ae312",
+      "trajectorySha256": "7965af0a94fe06e0a12922b1352caa330b3f245f883520d22c39e3b256e6c1cc",
+      "rawTrajectorySha256": "7965af0a94fe06e0a12922b1352caa330b3f245f883520d22c39e3b256e6c1cc",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 21,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 8,
+          "khar": 8,
+          "choir": 5
+        },
+        "expeditionDepartures": 45,
+        "successfulExpeditionJumps": 43,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 8,
+        "uniqueExpeditionsArrived": 8,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 12,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 12,
+        "blockadeProgressDeclines": 12,
+        "blockadeInterruptions": 5,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 8,
+          "khar": 0,
+          "choir": 4
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 59,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s6",
+            "targetSystemId": "s14",
+            "targetFactionId": "choir",
+            "nextSystemId": "s14",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 167.2,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 60,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s25",
+            "targetSystemId": "s38",
+            "targetFactionId": "choir",
+            "nextSystemId": "s38",
+            "arrivalCycles": 1,
+            "ships": 6,
+            "hull": 204,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 67,
+            "factionId": "khar",
+            "fleetId": "f52",
+            "fromSystemId": "s21",
+            "targetSystemId": "s8",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s8",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 71,
+            "factionId": "khar",
+            "fleetId": "f56",
+            "fromSystemId": "s21",
+            "targetSystemId": "s8",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s8",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 20.7,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 72,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s21",
+            "targetSystemId": "s8",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s8",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 170,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 76,
+            "factionId": "choir",
+            "fleetId": "f64",
+            "fromSystemId": "s17",
+            "targetSystemId": "s38",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s38",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 60,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f41",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s38",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f41",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 68,
+            "factionId": "veyr",
+            "before": 9,
+            "after": 8,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f52",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 69,
+            "factionId": "veyr",
+            "before": 8,
+            "after": 7,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f52",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 70,
+            "factionId": "veyr",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f52",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 72,
+            "factionId": "veyr",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s8",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-4",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "rawFinalStateSha256": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+      "trajectorySha256": "a9eb14e16d981b322ef8a1e5eab60dd829c312b1e533afd4547baaa578290905",
+      "rawTrajectorySha256": "a9eb14e16d981b322ef8a1e5eab60dd829c312b1e533afd4547baaa578290905",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 15,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 7,
+          "khar": 3,
+          "choir": 5
+        },
+        "expeditionDepartures": 15,
+        "successfulExpeditionJumps": 15,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 6,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 6,
+        "blockadeProgressDeclines": 6,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 6
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 63,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 3,
+            "hull": 87.5,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 64,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 68,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 69,
+            "factionId": "choir",
+            "before": 2,
+            "after": 1,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-5",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 70,
+      "completedCycles": 69,
+      "rounds": 69,
+      "finalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "rawFinalStateSha256": "cd27c625e8fcc16fc8d9024029e795f70d9ecb401e7c8495c5531c7fd8f233d6",
+      "trajectorySha256": "8c1b7cedff93b9d38ddb10361ded39ddef4147de91da36d0c3662e0ec6eaa36d",
+      "rawTrajectorySha256": "8c1b7cedff93b9d38ddb10361ded39ddef4147de91da36d0c3662e0ec6eaa36d",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 22,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 11,
+          "khar": 7,
+          "choir": 4
+        },
+        "expeditionDepartures": 4,
+        "successfulExpeditionJumps": 3,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 0,
+        "uniqueExpeditionsArrived": 0,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 12,
+        "expeditionFleetDuels": 1,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 0,
+        "blockadeProgressDeclines": 0,
+        "blockadeInterruptions": 0,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [],
+        "blockadeExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-6",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 78,
+      "completedCycles": 77,
+      "rounds": 77,
+      "finalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "rawFinalStateSha256": "492a4dc4de57b0e11840523e267192f10ce124f448a9a8f0ed5a09880630ad0e",
+      "trajectorySha256": "5958dfc4e6c3c46f85fde7b2ad714d153416ac1a3b5c49af178bd166ad49092a",
+      "rawTrajectorySha256": "5958dfc4e6c3c46f85fde7b2ad714d153416ac1a3b5c49af178bd166ad49092a",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 25,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 11,
+          "khar": 12,
+          "choir": 2
+        },
+        "expeditionDepartures": 13,
+        "successfulExpeditionJumps": 11,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 3,
+        "uniqueExpeditionsArrived": 3,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 22,
+        "expeditionFleetDuels": 6,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 7,
+        "blockadeProgressDeclines": 7,
+        "blockadeInterruptions": 4,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 3,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 53,
+            "factionId": "khar",
+            "fleetId": "f42",
+            "fromSystemId": "s11",
+            "targetSystemId": "s6",
+            "targetFactionId": "choir",
+            "nextSystemId": "s6",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 53.3,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "fleetId": "f60",
+            "fromSystemId": "s21",
+            "targetSystemId": "s34",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s34",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 71,
+            "factionId": "choir",
+            "fleetId": "f63",
+            "fromSystemId": "s35",
+            "targetSystemId": "s3",
+            "targetFactionId": "khar",
+            "nextSystemId": "s3",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 68,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 54,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f42",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 55,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f42",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f44",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "veyr",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f60",
+                "factionId": "khar",
+                "systemId": "s34",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "khar",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f63",
+                "factionId": "choir",
+                "systemId": "s3",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "veyr",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f60",
+                "factionId": "khar",
+                "systemId": "s34",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 72,
+            "factionId": "khar",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f63",
+                "factionId": "choir",
+                "systemId": "s3",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-7",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 70,
+      "completedCycles": 69,
+      "rounds": 69,
+      "finalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "rawFinalStateSha256": "1398577f6552a7365957bc1cee4853f92d56658d197e8833c1790f69cf187a48",
+      "trajectorySha256": "e276e2b9d8a5e1ae4339384ec5556608b400d93d6ab15f079491105ccf808035",
+      "rawTrajectorySha256": "e276e2b9d8a5e1ae4339384ec5556608b400d93d6ab15f079491105ccf808035",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 23,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 0,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 0,
+          "veyr": 3,
+          "khar": 14,
+          "choir": 6
+        },
+        "expeditionDepartures": 6,
+        "successfulExpeditionJumps": 6,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 4,
+        "expeditionFleetDuels": 0,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 2,
+        "blockadeProgressDeclines": 2,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 60,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s19",
+            "targetSystemId": "s14",
+            "targetFactionId": "choir",
+            "nextSystemId": "s14",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 136,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s14",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "ASTERION",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 63,
+      "completedCycles": 62,
+      "rounds": 62,
+      "finalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "rawFinalStateSha256": "fa04cfea6264116bf1223ca845f7ca45630a359291d8531ecbda92d8103a1372",
+      "trajectorySha256": "66a65764692037abf2d2be31836f58f902adf429e343148cc01aa2da9fd8e103",
+      "rawTrajectorySha256": "66a65764692037abf2d2be31836f58f902adf429e343148cc01aa2da9fd8e103",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 14,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 5,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 5,
+          "veyr": 7,
+          "khar": 4,
+          "choir": 3
+        },
+        "expeditionDepartures": 4,
+        "successfulExpeditionJumps": 1,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 0,
+        "uniqueExpeditionsArrived": 0,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 7,
+        "expeditionFleetDuels": 4,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 0,
+        "blockadeProgressDeclines": 0,
+        "blockadeInterruptions": 0,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [],
+        "blockadeExamples": []
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-1",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 73,
+      "completedCycles": 72,
+      "rounds": 72,
+      "finalStateSha256": "250ee90bf1b7cb1b9fb41a44889236d9375d2b292e013c26eff3be16db557b56",
+      "rawFinalStateSha256": "250ee90bf1b7cb1b9fb41a44889236d9375d2b292e013c26eff3be16db557b56",
+      "trajectorySha256": "71a4951eef43620f0c150b169bdc1358e0bc12d8ce57765d50bdee2f955603c8",
+      "rawTrajectorySha256": "71a4951eef43620f0c150b169bdc1358e0bc12d8ce57765d50bdee2f955603c8",
+      "metrics": {
+        "acceptedPreflights": 1,
+        "expeditionAbsorptions": 1,
+        "absorptionOrders": 1,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 21,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 7,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 1
+        },
+        "ordinaryMergesByFaction": {
+          "player": 7,
+          "veyr": 11,
+          "khar": 3,
+          "choir": 7
+        },
+        "expeditionDepartures": 6,
+        "successfulExpeditionJumps": 6,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 10,
+        "fleetDuels": 13,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 3,
+        "blockadeFactionCycles": 4,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 3,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 3,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 1
+        },
+        "absorptions": [
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "fleetId": "f12",
+            "mateId": "f63",
+            "systemId": "s3",
+            "targetFactionId": "player",
+            "targetSystemId": "s20",
+            "ordersBefore": 17,
+            "movesBefore": 1,
+            "mateMoves": 2,
+            "shipsBefore": 4,
+            "mateShips": 1,
+            "hullBefore": 136,
+            "mateHull": 34,
+            "before": {
+              "path": [
+                "s3",
+                "s30",
+                "s17",
+                "s9",
+                "s4",
+                "s12",
+                "s20"
+              ],
+              "routeCost": 11,
+              "arrivalCycles": 4
+            },
+            "projected": {
+              "path": [
+                "s3",
+                "s30",
+                "s17",
+                "s9",
+                "s4",
+                "s12",
+                "s20"
+              ],
+              "routeCost": 11,
+              "arrivalCycles": 4
+            },
+            "rngBeforePreflight": 782139446,
+            "rngAfterPreflight": 782139446,
+            "ordersAfter": 16,
+            "movesAfter": 1,
+            "shipsAfter": 5,
+            "hullAfter": 170,
+            "actual": {
+              "path": [
+                "s3",
+                "s30",
+                "s17",
+                "s9",
+                "s4",
+                "s12",
+                "s20"
+              ],
+              "routeCost": 11,
+              "arrivalCycles": 4
+            },
+            "rngAfterMerge": 782139446
+          }
+        ],
+        "arrivalExamples": [
+          {
+            "turn": 61,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s10",
+            "targetSystemId": "s15",
+            "targetFactionId": "player",
+            "nextSystemId": "s15",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 238,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s15",
+            "targetSystemId": "s7",
+            "targetFactionId": "player",
+            "nextSystemId": "s7",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 231.2,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 62,
+            "factionId": "player",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s15",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "player",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s15",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "player",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s7",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "finishTurn": 65,
+      "completedCycles": 64,
+      "rounds": 64,
+      "finalStateSha256": "d39939a6cba44599fda502aac875e1354a5cd952deaaa2f9cca1b3113ae9c6f3",
+      "rawFinalStateSha256": "d39939a6cba44599fda502aac875e1354a5cd952deaaa2f9cca1b3113ae9c6f3",
+      "trajectorySha256": "c4989638dbbc59b89a853f1f7e48070e1e100c6d4d6fa2db65c34c763606a4d3",
+      "rawTrajectorySha256": "c4989638dbbc59b89a853f1f7e48070e1e100c6d4d6fa2db65c34c763606a4d3",
+      "metrics": {
+        "acceptedPreflights": 1,
+        "expeditionAbsorptions": 1,
+        "absorptionOrders": 1,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 17,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 6,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 1,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 6,
+          "veyr": 5,
+          "khar": 8,
+          "choir": 4
+        },
+        "expeditionDepartures": 19,
+        "successfulExpeditionJumps": 19,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 10,
+        "expeditionFleetDuels": 3,
+        "reinforcedFleetDuels": 1,
+        "blockadeFactionCycles": 3,
+        "blockadeProgressDeclines": 3,
+        "blockadeInterruptions": 2,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 1,
+          "choir": 2
+        },
+        "absorptions": [
+          {
+            "turn": 63,
+            "factionId": "khar",
+            "fleetId": "f53",
+            "mateId": "f66",
+            "systemId": "s15",
+            "targetFactionId": "player",
+            "targetSystemId": "s41",
+            "ordersBefore": 17,
+            "movesBefore": 1,
+            "mateMoves": 2,
+            "shipsBefore": 5,
+            "mateShips": 2,
+            "hullBefore": 170,
+            "mateHull": 65.1,
+            "before": {
+              "path": [
+                "s15",
+                "s28",
+                "s41"
+              ],
+              "routeCost": 7,
+              "arrivalCycles": 2
+            },
+            "projected": {
+              "path": [
+                "s15",
+                "s28",
+                "s41"
+              ],
+              "routeCost": 7,
+              "arrivalCycles": 2
+            },
+            "rngBeforePreflight": 1570367680,
+            "rngAfterPreflight": 1570367680,
+            "ordersAfter": 16,
+            "movesAfter": 1,
+            "shipsAfter": 7,
+            "hullAfter": 235.1,
+            "actual": {
+              "path": [
+                "s15",
+                "s28",
+                "s41"
+              ],
+              "routeCost": 7,
+              "arrivalCycles": 2
+            },
+            "rngAfterMerge": 1570367680
+          }
+        ],
+        "arrivalExamples": [
+          {
+            "turn": 57,
+            "factionId": "khar",
+            "fleetId": "f53",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 167.3,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s21",
+            "targetSystemId": "s29",
+            "targetFactionId": "khar",
+            "nextSystemId": "s29",
+            "arrivalCycles": 1,
+            "ships": 4,
+            "hull": 136,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 58,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 59,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s29",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-3",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "1d268d43eec997294d36bed97ec55936ed0168058c8028ace175ff3026404788",
+      "rawFinalStateSha256": "1d268d43eec997294d36bed97ec55936ed0168058c8028ace175ff3026404788",
+      "trajectorySha256": "345a0a32c44c2d66838cea44d22309df2978df6e9af9f2d96572919661f58d12",
+      "rawTrajectorySha256": "345a0a32c44c2d66838cea44d22309df2978df6e9af9f2d96572919661f58d12",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 16,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 6,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 6,
+          "veyr": 8,
+          "khar": 4,
+          "choir": 4
+        },
+        "expeditionDepartures": 14,
+        "successfulExpeditionJumps": 13,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 7,
+        "fleetDuels": 9,
+        "expeditionFleetDuels": 5,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 4,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 2,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 2,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 2
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 64,
+            "factionId": "veyr",
+            "fleetId": "f6",
+            "fromSystemId": "s15",
+            "targetSystemId": "s28",
+            "targetFactionId": "player",
+            "nextSystemId": "s28",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 238,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 62,
+            "factionId": "choir",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s38",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "player",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s28",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "player",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f6",
+                "factionId": "veyr",
+                "systemId": "s28",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-4",
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "rawFinalStateSha256": "685bfe0c2c5364a3d2813bea45a074124e4f3481a564eeaf46f44949104d79a1",
+      "trajectorySha256": "450d1d58316dc280d2756b7bda460481944bb3de1430be8c6b12be36346fa611",
+      "rawTrajectorySha256": "450d1d58316dc280d2756b7bda460481944bb3de1430be8c6b12be36346fa611",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 17,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 3,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 3,
+          "veyr": 5,
+          "khar": 8,
+          "choir": 4
+        },
+        "expeditionDepartures": 11,
+        "successfulExpeditionJumps": 8,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 2,
+        "fleetDuels": 16,
+        "expeditionFleetDuels": 8,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 5,
+        "blockadeProgressDeclines": 5,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 5
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 63,
+            "factionId": "khar",
+            "fleetId": "f53",
+            "fromSystemId": "s14",
+            "targetSystemId": "s22",
+            "targetFactionId": "choir",
+            "nextSystemId": "s22",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 71.5,
+            "reinforced": false,
+            "combat": true
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 64,
+            "factionId": "choir",
+            "before": 8,
+            "after": 7,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "choir",
+            "before": 5,
+            "after": 4,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 68,
+            "factionId": "choir",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f53",
+                "factionId": "khar",
+                "systemId": "s22",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-5",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 72,
+      "completedCycles": 71,
+      "rounds": 71,
+      "finalStateSha256": "3b7a54e649beeb76285fa32006369a337890bd8a4fb888da30e10e8d4b2aab8e",
+      "rawFinalStateSha256": "3b7a54e649beeb76285fa32006369a337890bd8a4fb888da30e10e8d4b2aab8e",
+      "trajectorySha256": "6c48d8710bd79b8f53c0bd5b06cd38c059774daf1a7d668bd640b94ff0b25ca9",
+      "rawTrajectorySha256": "6c48d8710bd79b8f53c0bd5b06cd38c059774daf1a7d668bd640b94ff0b25ca9",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 20,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 5,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 5,
+          "veyr": 9,
+          "khar": 3,
+          "choir": 8
+        },
+        "expeditionDepartures": 7,
+        "successfulExpeditionJumps": 7,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 14,
+        "expeditionFleetDuels": 3,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 7,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 3,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 2,
+          "veyr": 1,
+          "khar": 0,
+          "choir": 4
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 61,
+            "factionId": "choir",
+            "fleetId": "f51",
+            "fromSystemId": "s25",
+            "targetSystemId": "s33",
+            "targetFactionId": "player",
+            "nextSystemId": "s33",
+            "arrivalCycles": 1,
+            "ships": 5,
+            "hull": 170,
+            "reinforced": false,
+            "combat": false
+          },
+          {
+            "turn": 64,
+            "factionId": "khar",
+            "fleetId": "f49",
+            "fromSystemId": "s8",
+            "targetSystemId": "s5",
+            "targetFactionId": "veyr",
+            "nextSystemId": "s5",
+            "arrivalCycles": 1,
+            "ships": 2,
+            "hull": 68,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 62,
+            "factionId": "player",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f51",
+                "factionId": "choir",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 63,
+            "factionId": "player",
+            "before": 3,
+            "after": 2,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f51",
+                "factionId": "choir",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "veyr",
+            "before": 4,
+            "after": 3,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f49",
+                "factionId": "khar",
+                "systemId": "s5",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 65,
+            "factionId": "choir",
+            "before": 1,
+            "after": 0,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f67",
+                "factionId": "player",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "choir",
+            "before": 0,
+            "after": 0,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f67",
+                "factionId": "player",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "choir",
+            "before": 0,
+            "after": 0,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f67",
+                "factionId": "player",
+                "systemId": "s33",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-6",
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "finishTurn": 70,
+      "completedCycles": 69,
+      "rounds": 69,
+      "finalStateSha256": "18a003b4eae9ab08a149a4b081e9c520384cd1afd1955deda6bfc3027ba67886",
+      "rawFinalStateSha256": "18a003b4eae9ab08a149a4b081e9c520384cd1afd1955deda6bfc3027ba67886",
+      "trajectorySha256": "e02c40ba361b54fa850bae6c1bf85697eaba559626ea833306d7f754a43c8df5",
+      "rawTrajectorySha256": "e02c40ba361b54fa850bae6c1bf85697eaba559626ea833306d7f754a43c8df5",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 19,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 11,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 11,
+          "veyr": 8,
+          "khar": 10,
+          "choir": 1
+        },
+        "expeditionDepartures": 14,
+        "successfulExpeditionJumps": 13,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 2,
+        "uniqueExpeditionsArrived": 2,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 12,
+        "fleetDuels": 15,
+        "expeditionFleetDuels": 6,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 4,
+        "blockadeProgressDeclines": 4,
+        "blockadeInterruptions": 2,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 1,
+          "choir": 3
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 52,
+            "factionId": "khar",
+            "fleetId": "f56",
+            "fromSystemId": "s11",
+            "targetSystemId": "s6",
+            "targetFactionId": "choir",
+            "nextSystemId": "s6",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": true
+          },
+          {
+            "turn": 65,
+            "factionId": "veyr",
+            "fleetId": "f66",
+            "fromSystemId": "s29",
+            "targetSystemId": "s37",
+            "targetFactionId": "khar",
+            "nextSystemId": "s37",
+            "arrivalCycles": 1,
+            "ships": 1,
+            "hull": 85,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 52,
+            "factionId": "choir",
+            "before": 8,
+            "after": 7,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s30",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 53,
+            "factionId": "choir",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s30",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 54,
+            "factionId": "choir",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f3",
+                "factionId": "player",
+                "systemId": "s30",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              },
+              {
+                "fleetId": "f56",
+                "factionId": "khar",
+                "systemId": "s6",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 66,
+            "factionId": "khar",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f66",
+                "factionId": "veyr",
+                "systemId": "s37",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "policy": "balanced",
+      "seed": "stage4-audit-7",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 71,
+      "completedCycles": 70,
+      "rounds": 70,
+      "finalStateSha256": "399bf0b8aeda2006fc4b21e92697907729818a610077c4e27c9849e011c64793",
+      "rawFinalStateSha256": "399bf0b8aeda2006fc4b21e92697907729818a610077c4e27c9849e011c64793",
+      "trajectorySha256": "2757559ba9d79c1eed067acab9b45aee5e494e276ab6e7625ca0909893078a73",
+      "rawTrajectorySha256": "2757559ba9d79c1eed067acab9b45aee5e494e276ab6e7625ca0909893078a73",
+      "metrics": {
+        "acceptedPreflights": 0,
+        "expeditionAbsorptions": 0,
+        "absorptionOrders": 0,
+        "failedAbsorptions": 0,
+        "movementRegressions": 0,
+        "etaRegressions": 0,
+        "ordinaryMerges": 22,
+        "failedOrdinaryMerges": 0,
+        "playerOrdinaryMerges": 3,
+        "absorptionByFaction": {
+          "player": 0,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "ordinaryMergesByFaction": {
+          "player": 3,
+          "veyr": 3,
+          "khar": 13,
+          "choir": 6
+        },
+        "expeditionDepartures": 20,
+        "successfulExpeditionJumps": 19,
+        "failedExpeditionMoves": 0,
+        "reachedParticipatingSites": 1,
+        "uniqueExpeditionsArrived": 1,
+        "reinforcedArrivals": 0,
+        "playerExpeditionDepartures": 0,
+        "fleetDuels": 11,
+        "expeditionFleetDuels": 6,
+        "reinforcedFleetDuels": 0,
+        "blockadeFactionCycles": 2,
+        "blockadeProgressDeclines": 2,
+        "blockadeInterruptions": 1,
+        "reinforcedBlockadeFactionCycles": 0,
+        "blockadeByVictim": {
+          "player": 2,
+          "veyr": 0,
+          "khar": 0,
+          "choir": 0
+        },
+        "absorptions": [],
+        "arrivalExamples": [
+          {
+            "turn": 65,
+            "factionId": "khar",
+            "fleetId": "f9",
+            "fromSystemId": "s28",
+            "targetSystemId": "s0",
+            "targetFactionId": "player",
+            "nextSystemId": "s0",
+            "arrivalCycles": 1,
+            "ships": 7,
+            "hull": 205.4,
+            "reinforced": false,
+            "combat": false
+          }
+        ],
+        "blockadeExamples": [
+          {
+            "turn": 66,
+            "factionId": "player",
+            "before": 7,
+            "after": 6,
+            "interruptedActiveNetwork": true,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s0",
+                "reinforced": false
+              }
+            ]
+          },
+          {
+            "turn": 67,
+            "factionId": "player",
+            "before": 6,
+            "after": 5,
+            "interruptedActiveNetwork": false,
+            "blockers": [
+              {
+                "fleetId": "f9",
+                "factionId": "khar",
+                "systemId": "s0",
+                "reinforced": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "reproduction": "node scripts/expedition-reinforcement-benchmark.mjs --repo /path/to/repository --out /tmp/expedition-reinforcement-comparison"
+}

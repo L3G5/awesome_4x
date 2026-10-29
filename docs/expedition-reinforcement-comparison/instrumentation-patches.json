@@ -1,0 +1,100 @@
+{
+  "before-observed": {
+    "src/ai.js": [
+      {
+        "before": "const act = action => command(state, { ...action, factionId: id });",
+        "after": "const act = action => {\n    const auditAction = { ...action, factionId: id };\n    const auditBefore = globalThis.expeditionReinforcementObserver?.beforeCommand(state, auditAction);\n    const auditResult = command(state, auditAction);\n    globalThis.expeditionReinforcementObserver?.afterCommand(state, auditAction, auditBefore, auditResult);\n    return auditResult;\n  };"
+      },
+      {
+        "before": "    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });",
+        "after": "    globalThis.expeditionReinforcementObserver?.departure(state, faction, candidate);\n    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });"
+      },
+      {
+        "append": "\nexport const __benchmarkQueries = { interventionCandidate, threatsToColonies };\n"
+      }
+    ],
+    "src/player-ai.js": [
+      {
+        "before": "const act = action => command(state, { ...action, factionId: id });",
+        "after": "const act = action => {\n    const auditAction = { ...action, factionId: id };\n    const auditBefore = globalThis.expeditionReinforcementObserver?.beforeCommand(state, auditAction);\n    const auditResult = command(state, auditAction);\n    globalThis.expeditionReinforcementObserver?.afterCommand(state, auditAction, auditBefore, auditResult);\n    return auditResult;\n  };"
+      },
+      {
+        "before": "    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });",
+        "after": "    globalThis.expeditionReinforcementObserver?.departure(state, faction, candidate);\n    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });"
+      },
+      {
+        "append": "\nexport const __benchmarkQueries = { interventionCandidate, threatsToColonies };\n"
+      }
+    ],
+    "src/game.js": [
+      {
+        "before": "  const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');",
+        "after": "  const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');\n  const auditBattle = globalThis.expeditionReinforcementObserver?.beforeBattle(state, attacker, defender);"
+      },
+      {
+        "before": "  if (attacker.owner === 'player' || defender.owner === 'player') {",
+        "after": "  globalThis.expeditionReinforcementObserver?.afterBattle(state, auditBattle, attacker, defender);\n  if (attacker.owner === 'player' || defender.owner === 'player') {"
+      }
+    ],
+    "src/victory.js": [
+      {
+        "before": "    faction.alignment = { progress, sites: status.sites, active: status.ready, started: previous.started || status.ready, reportedBeacons: worlds.map(world => world.id) };",
+        "after": "    faction.alignment = { progress, sites: status.sites, active: status.ready, started: previous.started || status.ready, reportedBeacons: worlds.map(world => world.id) };\n    globalThis.expeditionReinforcementObserver?.alignment(state, faction, previous, status);"
+      }
+    ]
+  },
+  "before-raw": {},
+  "after-observed": {
+    "src/ai.js": [
+      {
+        "before": "const act = action => command(state, { ...action, factionId: id });",
+        "after": "const act = action => {\n    const auditAction = { ...action, factionId: id };\n    const auditBefore = globalThis.expeditionReinforcementObserver?.beforeCommand(state, auditAction);\n    const auditResult = command(state, auditAction);\n    globalThis.expeditionReinforcementObserver?.afterCommand(state, auditAction, auditBefore, auditResult);\n    return auditResult;\n  };"
+      },
+      {
+        "before": "    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });",
+        "after": "    globalThis.expeditionReinforcementObserver?.departure(state, faction, candidate);\n    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });"
+      },
+      {
+        "before": "function reinforceIntervention(state, faction, candidate, act) {",
+        "after": "function reinforceIntervention(state, faction, candidate, act) {\n  const auditPreflightRng = state.rng;"
+      },
+      {
+        "before": "    return act({ type: 'merge', fleetId: fleet.id, targetFleetId: mate.id }).ok;",
+        "after": "    globalThis.expeditionReinforcementObserver?.acceptedPreflight(state, faction, candidate, mate, next, auditPreflightRng);\n    return act({ type: 'merge', fleetId: fleet.id, targetFleetId: mate.id }).ok;"
+      },
+      {
+        "append": "\nexport const __benchmarkQueries = { interventionCandidate, threatsToColonies };\n"
+      }
+    ],
+    "src/player-ai.js": [
+      {
+        "before": "const act = action => command(state, { ...action, factionId: id });",
+        "after": "const act = action => {\n    const auditAction = { ...action, factionId: id };\n    const auditBefore = globalThis.expeditionReinforcementObserver?.beforeCommand(state, auditAction);\n    const auditResult = command(state, auditAction);\n    globalThis.expeditionReinforcementObserver?.afterCommand(state, auditAction, auditBefore, auditResult);\n    return auditResult;\n  };"
+      },
+      {
+        "before": "    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });",
+        "after": "    globalThis.expeditionReinforcementObserver?.departure(state, faction, candidate);\n    const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });"
+      },
+      {
+        "append": "\nexport const __benchmarkQueries = { interventionCandidate, threatsToColonies };\n"
+      }
+    ],
+    "src/game.js": [
+      {
+        "before": "  const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');",
+        "after": "  const aStart = captureParticipant(attacker, 'attacker'), dStart = captureParticipant(defender, 'defender');\n  const auditBattle = globalThis.expeditionReinforcementObserver?.beforeBattle(state, attacker, defender);"
+      },
+      {
+        "before": "  if (attacker.owner === 'player' || defender.owner === 'player') {",
+        "after": "  globalThis.expeditionReinforcementObserver?.afterBattle(state, auditBattle, attacker, defender);\n  if (attacker.owner === 'player' || defender.owner === 'player') {"
+      }
+    ],
+    "src/victory.js": [
+      {
+        "before": "    faction.alignment = { progress, sites: status.sites, active: status.ready, started: previous.started || status.ready, reportedBeacons: worlds.map(world => world.id) };",
+        "after": "    faction.alignment = { progress, sites: status.sites, active: status.ready, started: previous.started || status.ready, reportedBeacons: worlds.map(world => world.id) };\n    globalThis.expeditionReinforcementObserver?.alignment(state, faction, previous, status);"
+      }
+    ]
+  },
+  "after-raw": {}
+}
