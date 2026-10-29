@@ -1,0 +1,64 @@
+{
+  "sourcePin": "source-pin.json",
+  "pageErrors": [],
+  "cases": [
+    {
+      "id": "player-command-victory",
+      "kind": "Controlled valid domination fixture; actual ordinary UI attack",
+      "winnerBeforeUndo": "player",
+      "sameTurn": true,
+      "exactStateRestored": true,
+      "selectedAttackerControlsRestored": true,
+      "screenshot": "player-command-victory-undo.png"
+    },
+    {
+      "id": "same-turn-AI-victory",
+      "kind": "Controlled valid near-domination fixture; actual ordinary UI End Cycle",
+      "turnBefore": 1,
+      "turnAfter": 1,
+      "winner": "veyr",
+      "historyCleared": true,
+      "reloadExact": true,
+      "screenshot": "same-turn-ai-victory-boundary.png"
+    },
+    {
+      "id": "modal-keyboard-editable",
+      "kind": "Actual default seed with ordinary free research; uncommitted seed input",
+      "editableCtrlZPreservesCampaign": true,
+      "modalUndoInFocusTrap": true,
+      "noneditableCmdZUndoesAndClosesModal": true
+    },
+    {
+      "id": "invalid-import",
+      "kind": "Two invalid file fixtures: malformed JSON and invalid campaign structure",
+      "historyAndCampaignUnchanged": true,
+      "originalUndoStillWorks": true
+    },
+    {
+      "id": "history-quota",
+      "kind": "Constructed Storage.setItem fault for history key only; ordinary campaign writes remain enabled",
+      "width": 390,
+      "latestCampaignSaved": true,
+      "tabOnlyStatusAndMenuTruthful": true,
+      "inMemoryUndoWorks": true,
+      "reloadRetainsCampaignWithoutUndo": true,
+      "screenshot": "quota-truthful-ui-390.png"
+    },
+    {
+      "id": "bootstrap-orphan-history",
+      "kind": "Constructed storage-fault fixture: valid old hold→resume history with head exactly initial ASTERION; canonical save absent or malformed",
+      "canonicalSave": "absent",
+      "newCampaignWelcomeShown": true,
+      "unexpectedOldUndoAttached": true,
+      "screenshot": "bootstrap-missing-save-orphan-history.png"
+    },
+    {
+      "id": "bootstrap-orphan-history",
+      "kind": "Constructed storage-fault fixture: valid old hold→resume history with head exactly initial ASTERION; canonical save absent or malformed",
+      "canonicalSave": "malformed",
+      "newCampaignWelcomeShown": true,
+      "unexpectedOldUndoAttached": true,
+      "screenshot": "bootstrap-invalid-save-orphan-history.png"
+    }
+  ]
+}

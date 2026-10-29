@@ -1,0 +1,23 @@
+{
+  "commit": "2414a9b9df56148d290aba7e84726931df3ada90",
+  "baseURL": "http://127.0.0.1:33313",
+  "kind": "Constructed orphan history storage-fault fixtures; actual browser bootstrap",
+  "results": [
+    {
+      "canonicalSave": "absent",
+      "welcomeNewCampaign": true,
+      "undoEnabled": true,
+      "modalUndoCount": 1,
+      "sameFreshState": true,
+      "screenshot": "bootstrap-missing-save-orphan-history.png"
+    },
+    {
+      "canonicalSave": "malformed",
+      "welcomeNewCampaign": true,
+      "undoEnabled": true,
+      "modalUndoCount": 1,
+      "sameFreshState": true,
+      "screenshot": "bootstrap-invalid-save-orphan-history.png"
+    }
+  ]
+}

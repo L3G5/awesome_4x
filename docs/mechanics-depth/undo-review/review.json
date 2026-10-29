@@ -1,0 +1,31 @@
+{
+  "originalCommit": "2414a9b9df56148d290aba7e84726931df3ada90",
+  "originalURL": "http://127.0.0.1:33313",
+  "independentAcceptancePaths": 5,
+  "additionalConstructedBootstrapCases": 2,
+  "pageErrors": 0,
+  "productionEditsByReviewer": 0,
+  "findings": [
+    {
+      "id": "P2-BOOTSTRAP-ORPHAN-HISTORY",
+      "severity": "P2",
+      "confidence": "high",
+      "status": "Corrected and independently verified on final frozen635e8256",
+      "source": "src/main.js initial load / TurnHistory.restore",
+      "condition": "No valid canonical campaign, but leftover history head exactly matches the freshly generated default state",
+      "result": "New-campaign welcome exposes an old Undo stack before any new action",
+      "proposedCorrection": "Only restore history when !isNew",
+      "evidence": "bootstrap-original.json",
+      "correctionEvidence": "correction-results.json"
+    }
+  ],
+  "sourcePin": "source-pin.json",
+  "acceptance": "acceptance-results.json",
+  "unitTestCommit": "cbe24e55044ec7cad36e77dd6f75b8de1f71739a",
+  "limits": "Victory and failure fixtures are constructed valid states. This report does not claim natural campaign outcomes or exhaustive UI coverage.",
+  "finalCommit": "635e8256af87327aa8a4eab92bb6d95baede5fe5",
+  "finalURL": "http://127.0.0.1:41371",
+  "finalFocusedChecks": 3,
+  "finalFocusedPageErrors": 0,
+  "unresolvedBlockingFindings": 0
+}

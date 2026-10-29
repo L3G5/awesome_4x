@@ -1,0 +1,59 @@
+{
+  "candidate": {
+    "commit": "635e8256af87327aa8a4eab92bb6d95baede5fe5",
+    "baseURL": "http://127.0.0.1:41371",
+    "htmlSha256": "b7bbba1173aa9a5329c7fb8e437bb3060cc9eddd8762b2b6d27ee502f8c12629",
+    "assets": [
+      {
+        "path": "./assets/index-C1XYaWju.js",
+        "sha256": "467260c1bfb131fd75e6c03021149393ad96682303588c441b4c3590189477f6"
+      },
+      {
+        "path": "./assets/index-nkioJQR0.css",
+        "sha256": "319148a0324a50d165d5f3c01eed746bb5ce3b3d4e9c00f2e62b293a1203a0de"
+      }
+    ],
+    "sourceSha256": {
+      "src/main.js": "a068862f2a7d18c21e248ea7b5b36bd3d80b9b8ed034ec4e19fb5a44fe063b78",
+      "src/turn-history.js": "a4a9d99083441c9174e9d03be7c543912e0787d7a47b888f7c9cba47b7d644e2",
+      "src/undo.css": "6e07e3a160a7f2c38715bc64f35726d5873b7dd8057ce691fd3bbcbd26cd704e",
+      "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c",
+      "src/mobile-inspection.css": "d58d35d9e70107f8f956fa679b4ebd6f5545621fa92e2d59f5875b16b30fdd01",
+      "src/localization.css": "3f76ab43313c576d3cb5223b22fcf7221299fa860b9f8fcdcbddb0838ae1abfb",
+      "src/localization.js": "6d232eaeb3f31a7587574d939869152675ff8baba34c1caacb8aacfe9225e766",
+      "src/locales/ru.js": "121557b041bc1a787b3bbbdec0909dcf341874f9144dc6658442c8602986eae3",
+      "src/locales/bindings.js": "21031141ae10f23256b6349d5444949c5c9ef4921cd59c594d7ff10fd28c7d8e",
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/galaxy.js": "f869777aaafa6d199d630ca8fb918bde65f5a3cac8f227e05ee9e9bf5427dfe3",
+      "tests/turn-history.test.js": "38f715634cea7fbfbb6176c14e00f7e88b06187e0aa62a0cd4f49642d2a7e1c0",
+      "tests/undo-ui.spec.js": "5bb21fe84ee4246c864c8b8ed1d875ad8eb6f6990f5499f0b0932a4e84b24dab",
+      "src/locales/slot-overrides.json": "c9eb6a37b0c4c09f6d2f579c00a28be7af768b710aeb64e96b6623a709e8204f"
+    },
+    "suppliedDistribution": "/tmp/asterion-v023-final-1azeukzd/dist",
+    "suppliedDistributionMatchesFetchedAssets": true
+  },
+  "pageErrors": [],
+  "results": [
+    {
+      "canonicalSave": "absent",
+      "undoInitiallyEnabled": false,
+      "newWelcomeShown": true,
+      "orphanHistoryRejected": true,
+      "validHistoryRetainedAndUnwindsExactly": null
+    },
+    {
+      "canonicalSave": "malformed",
+      "undoInitiallyEnabled": false,
+      "newWelcomeShown": true,
+      "orphanHistoryRejected": true,
+      "validHistoryRetainedAndUnwindsExactly": null
+    },
+    {
+      "canonicalSave": "valid",
+      "undoInitiallyEnabled": true,
+      "newWelcomeShown": false,
+      "orphanHistoryRejected": null,
+      "validHistoryRetainedAndUnwindsExactly": true
+    }
+  ]
+}

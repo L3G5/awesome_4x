@@ -1,0 +1,29 @@
+{
+  "commit": "2414a9b9df56148d290aba7e84726931df3ada90",
+  "baseURL": "http://127.0.0.1:33313",
+  "htmlSha256": "dd9c70379f4a714ca0580bdbf17b26f2ac5cd3cc10d97188a79f5bf061bb5785",
+  "assets": [
+    {
+      "path": "./assets/index-B-uMV5x0.js",
+      "sha256": "aa72dd8878c25128cd7576ed7560f2425e4482e22c8deb786b719941459b1671"
+    },
+    {
+      "path": "./assets/index-D-e1hN88.css",
+      "sha256": "078c9444c91dcff5775f806303be44e38f1024ed38c2a13cb9856f1e9d2005db"
+    }
+  ],
+  "sha256": {
+    "src/main.js": "0816e6cbafa1cb9cba3a52f89f868b2d2b915202e4eb35b2bd3f88000e9c085c",
+    "src/turn-history.js": "a4a9d99083441c9174e9d03be7c543912e0787d7a47b888f7c9cba47b7d644e2",
+    "src/undo.css": "ce1e13635da7aef655e87e1b15a6cdc461278626ffcbafe92ceebf35ad6d5012",
+    "src/localization.js": "6d232eaeb3f31a7587574d939869152675ff8baba34c1caacb8aacfe9225e766",
+    "src/locales/ru.js": "98cb5df78df5ccbc7c34e50f8b976931f93fa783af236db48d3f05c555e1cb90",
+    "src/locales/bindings.js": "133d9ad3317bedcdb506c5e630d57326a44d3e4276125f5c8b56b772b7f06ddb",
+    "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+    "src/galaxy.js": "f869777aaafa6d199d630ca8fb918bde65f5a3cac8f227e05ee9e9bf5427dfe3",
+    "src/mobile-inspection.css": "730393d3afa2d9d0743f1847d28f79fe5e3fa33d98ad855df8448ca5e1e98041",
+    "tests/turn-history.test.js": "38f715634cea7fbfbb6176c14e00f7e88b06187e0aa62a0cd4f49642d2a7e1c0"
+  },
+  "suppliedDistribution": "/tmp/asterion-v023-undo-88sfi6wx/dist",
+  "suppliedDistributionMatchesFetchedAssets": true
+}
