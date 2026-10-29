@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "seed": "ASTERION",
+  "synthetic": false,
+  "method": "Fresh campaign, default fleet selection, actual touch on an unobscured map system label. No state injection, movement or paid action.",
+  "target": {
+    "id": "s9",
+    "name": "Velorum\nUNSURVEYED",
+    "x": 215,
+    "y": 303.34375,
+    "hit": true
+  },
+  "before": {
+    "world": "Solace",
+    "fleet": "f1",
+    "barHeight": 120,
+    "mapHeight": 523.265625
+  },
+  "after": {
+    "world": "Velorum",
+    "fleet": "f1",
+    "barHeight": 266,
+    "mapHeight": 523.265625,
+    "barFractionOfMap": 0.5083460240676043,
+    "inspectorTop": 619.265625
+  },
+  "afterEscape": {
+    "barHeight": 101
+  },
+  "stateUnchanged": true,
+  "pageErrors": []
+}

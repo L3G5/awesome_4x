@@ -1,0 +1,86 @@
+{
+  "viewport": {
+    "width": 320,
+    "height": 844
+  },
+  "documentWidth": 320,
+  "scrollY": 0,
+  "focus": {
+    "tag": "BUTTON",
+    "id": "end-turn",
+    "action": "end-turn"
+  },
+  "world": "Your archives",
+  "bar": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0,
+      "inViewport": true
+    },
+    "classes": "fleet-bar is-inspecting",
+    "text": "A galaxy of possibilities.Select a fleet in orbit to explore the frontier.Fleet roster →"
+  },
+  "map": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "right": 0,
+    "bottom": 0,
+    "inViewport": true
+  },
+  "inspector": {
+    "x": 48,
+    "y": 618.265625,
+    "width": 272,
+    "height": 626.578125,
+    "right": 320,
+    "bottom": 1244.84375,
+    "inViewport": false
+  },
+  "undo": {
+    "x": 238.890625,
+    "y": 1148.84375,
+    "width": 63.109375,
+    "height": 60,
+    "right": 302,
+    "bottom": 1208.84375,
+    "inViewport": false
+  },
+  "end": {
+    "x": 66,
+    "y": 1148.84375,
+    "width": 164.890625,
+    "height": 60,
+    "right": 230.890625,
+    "bottom": 1208.84375,
+    "inViewport": false
+  },
+  "endText": {
+    "x": 84,
+    "y": 1164.84375,
+    "width": 80.625,
+    "height": 28,
+    "right": 164.625,
+    "bottom": 1192.84375,
+    "inViewport": false
+  },
+  "kbd": {
+    "x": 164.625,
+    "y": 1168.84375,
+    "width": 48.265625,
+    "height": 20,
+    "right": 212.890625,
+    "bottom": 1188.84375,
+    "inViewport": false
+  },
+  "modal": null,
+  "modalUndo": null,
+  "modalLanguage": null,
+  "modalClose": null,
+  "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\nChoose a research direction. Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.\nAll\nEngineering\nSociety\nPhysics\nMilitary\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nAction undone. You can revise your orders before ending this cycle."
+}

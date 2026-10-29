@@ -1,0 +1,18 @@
+Final independent mobile/Undo acceptance — PASS within the stated scope
+
+Frozen source: 635e8256af87327aa8a4eab92bb6d95baede5fe5
+URL: http://127.0.0.1:41371; version 0.23.0.
+Exact delivered JS/CSS SHA-256 pins: build-before.json and build-after.json, which match.
+
+Four bounded actual-touch cases pass: 390×844 English/Russian, 320×844 Russian, 640×390 Russian. No save injection, source copies, campaign/lifecycle rerun or runtime state mutation is used. Expected paid movement is derived from the ordinary engine command; snapshots compare complete saves. All 4 cases report zero page errors.
+
+Fresh actual map-label taps inspect a world with no selected fleet or route preview. The compact roster bar remains 52px. Explicit fleet selection still enables destination selection and normal paid movement. Close returns to inspection without changing the committed state. Both ordinary Undo and menu-header Undo restore the complete pre-action state.
+
+Reported corrections accepted:
+- 640×390: the map grid track now reserves its 350px minimum, so the inspector no longer overlaps the fleet controls. Native Move/Close taps work. The additional landscape-touch script records an unobscured Move hit target, normal paid effect and unchanged post-move state after Close.
+- 320RU: the mobile Space badge is hidden; the document's physical scroll width is 320px. End cycle and Undo fit as separate controls. The translated arrival toast now occupies y12–57 and does not overlap Undo; it is a temporary notification at the top of the viewport. The menu's Undo/language/Close header controls fit without collision.
+- Modal Undo: Research is restored with its visible heading focused. Heading bounds are y135–166 at 390RU, y135–197 at 320RU and y130–161 at 640RU. Ordinary bottom Undo also leaves a visible meaningful target focused.
+
+Undo reachability: after map actions the End cycle/Undo row can be below the current viewport. It remains reachable by ordinary vertical scrolling, and Menu provides a header Undo while a dialog is open. The check physically scrolls and taps rather than claiming Undo is always onscreen. Subpixel containment uses a 1px tolerance; physical horizontal overflow is measured separately.
+
+No remaining material issue observed in these covered flows. Earlier 2414a9b layout/focus failures and the 0.265px driver assertion are preserved in the parent evidence folder, with their bounded recheck. This acceptance does not claim universal layout coverage or test every Undo command; the parent maintains the broader engine/browser suites.

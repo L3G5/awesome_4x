@@ -1,0 +1,3838 @@
+[
+  {
+    "tag": "en-390x844",
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Solace",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 554.265625,
+          "width": 99.421875,
+          "height": 52,
+          "right": 157.421875,
+          "bottom": 606.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Fleet roster →"
+      },
+      "map": {
+        "x": 48,
+        "y": 95,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 618.265625,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 342,
+        "height": 1668.15625,
+        "right": 390,
+        "bottom": 2286.421875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 2198.421875,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 2250.421875,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 2198.421875,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 2250.421875,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 2217.421875,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 2231.421875,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 2214.421875,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 2234.421875,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nFleet roster →\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n3 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nColony Ark 2\nColony ship · 24 / 24 hull\nReady\n1 jump\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\n● AUTOSAVED"
+    },
+    "worldTap": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 323,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 231.265625,
+          "width": 99.421875,
+          "height": 52,
+          "right": 157.421875,
+          "bottom": 283.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Fleet roster →"
+      },
+      "map": {
+        "x": 48,
+        "y": -228,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 295.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 295.265625,
+        "width": 342,
+        "height": 517,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 724.265625,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 724.265625,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 743.265625,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 757.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 740.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nFleet roster →\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\n● AUTOSAVED"
+    },
+    "explicit": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 323,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 178.265625,
+          "width": 322,
+          "height": 105,
+          "right": 380,
+          "bottom": 283.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -228,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 295.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 295.265625,
+        "width": 342,
+        "height": 517,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 724.265625,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 724.265625,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 743.265625,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 757.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 740.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\n● AUTOSAVED"
+    },
+    "afterMove": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 323,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 163.265625,
+          "width": 322,
+          "height": 120,
+          "right": 380,
+          "bottom": 283.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -228,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 295.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 295.265625,
+        "width": 342,
+        "height": 646,
+        "right": 390,
+        "bottom": 941.265625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 853.265625,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 853.265625,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 872.265625,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 886.265625,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 869.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 889.265625,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n5 orders remaining · 1 colony\nPathfinder 1 arrived at Sundrift.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift."
+    },
+    "turn": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 452,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 34.265625,
+          "width": 322,
+          "height": 120,
+          "right": 380,
+          "bottom": 154.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -357,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 166.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 166.265625,
+        "width": 342,
+        "height": 646,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 724.265625,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 724.265625,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 743.265625,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 757.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 740.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n5 orders remaining · 1 colony\nPathfinder 1 arrived at Sundrift.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift."
+    },
+    "afterUndo": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 323,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 178.265625,
+          "width": 322,
+          "height": 105,
+          "right": 380,
+          "bottom": 283.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -228,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 295.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 295.265625,
+        "width": 342,
+        "height": 517,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 724.265625,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 724.265625,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 743.265625,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 757.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 740.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift.\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "undoRestoredExactState": true,
+    "closed": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 323,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "fleet-roster"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 231.265625,
+          "width": 99.421875,
+          "height": 52,
+          "right": 157.421875,
+          "bottom": 283.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Fleet roster →"
+      },
+      "map": {
+        "x": 48,
+        "y": -228,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 295.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 295.265625,
+        "width": 342,
+        "height": 517,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 724.265625,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 724.265625,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 743.265625,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 757.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 740.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nFleet roster →\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift.\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "modal": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "close-modal"
+      },
+      "world": "Your archives",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "A galaxy of possibilities.Select a fleet in orbit to explore the frontier.Fleet roster →"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 342,
+        "height": 844.53125,
+        "right": 390,
+        "bottom": 1462.796875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 1374.796875,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 1426.796875,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1374.796875,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 1426.796875,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1393.796875,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 1407.796875,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 1390.796875,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 1410.796875,
+        "inViewport": false
+      },
+      "modal": {
+        "x": 12,
+        "y": 97.46875,
+        "width": 366,
+        "height": 649.046875,
+        "right": 378,
+        "bottom": 746.515625,
+        "inViewport": true
+      },
+      "modalUndo": {
+        "x": 28,
+        "y": 112.46875,
+        "width": 63.109375,
+        "height": 31,
+        "right": 91.109375,
+        "bottom": 143.46875,
+        "inViewport": true
+      },
+      "modalLanguage": {
+        "x": 258.203125,
+        "y": 112.46875,
+        "width": 64.796875,
+        "height": 29,
+        "right": 323,
+        "bottom": 141.46875,
+        "inViewport": true
+      },
+      "modalClose": {
+        "x": 332,
+        "y": 113.46875,
+        "width": 30,
+        "height": 30,
+        "right": 362,
+        "bottom": 143.46875,
+        "inViewport": true
+      },
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\nResonance Theory · 0 / 60 science · 15 cycles remaining\nAll\nEngineering\nSociety\nPhysics\nMilitary\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nIn progress\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nCOMMISSIONED RESEARCH\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\n0 / 60 science · 15 cycles at current output\n\nTHIS BREAKTHROUGH OPENS\nDeflector Fields\nResearch becomes available\nQuantum Archives\nResearch becomes available\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nResearch directed toward Resonance Theory.\n● AUTOSAVED\n×\nРусский\nCAMPAIGN CONTROL\nA moment among the stars\n\nCycle 1 · ASTERION · The Concord\n\n↓ Export campaign\n↑ Import campaign\nRead the field guide ↗\nBegin a new campaign\n\nProgress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.\n\nUndo restores actions within this cycle. Ending the cycle, importing a save or starting a campaign clears undo history.\n\nWarn before ending a cycle with unused orders\nReturn to the Reach\n↶ Undo"
+    },
+    "afterModalUndo": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Your archives",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "A galaxy of possibilities.Select a fleet in orbit to explore the frontier.Fleet roster →"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 342,
+        "height": 597.578125,
+        "right": 390,
+        "bottom": 1215.84375,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 308.890625,
+        "y": 1127.84375,
+        "width": 63.109375,
+        "height": 52,
+        "right": 372,
+        "bottom": 1179.84375,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1127.84375,
+        "width": 234.890625,
+        "height": 52,
+        "right": 300.890625,
+        "bottom": 1179.84375,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1146.84375,
+        "width": 89.046875,
+        "height": 14,
+        "right": 173.046875,
+        "bottom": 1160.84375,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 234.625,
+        "y": 1143.84375,
+        "width": 48.265625,
+        "height": 20,
+        "right": 282.890625,
+        "bottom": 1163.84375,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\nChoose a research direction. Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.\nAll\nEngineering\nSociety\nPhysics\nMilitary\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "modalUndoRestoredExactState": true,
+    "pass": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "ru-390x844",
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Solace",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 554.265625,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": 606.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": 95,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 618.265625,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 342,
+        "height": 1814.390625,
+        "right": 390,
+        "bottom": 2432.65625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 2334.65625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 2395.65625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 2334.65625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 2395.65625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 2350.65625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 2379.65625,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 2355.15625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 2375.15625,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nКОНКОРД\nSolace\n\nМир земного типа · Система-основатель\n\nУмеренные океаны и широкие материковые шельфы.\n\n90%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n4/8\nНАСЕЛЕНИЕ\n8\nПРОИЗВОДСТВО\nПРОИЗВОДСТВО КОЛОНИИ\n8 ЗА ЦИКЛ\n\nВаши строители ждут нового проекта.\n\n+ Заказать проект\nИНФРАСТРУКТУРА\nЯЧЕЙКИ: 2 / 3\n◇ Орбитальный экстрактор\n⌁ Орбитальная верфь\n\nСвободные ячейки: 1. С ростом населения открываются новые ячейки, максимум — пять.\n\n⌂\nБез хартии\n\nЗакрепите за этим миром постоянную специализацию.\n\nРазвивать →\n\nКредиты: +11 · минералы: +9 · наука: +4\n\nМИР-ОСНОВАТЕЛЬ\n⌂\n\nПостоянная цель для победы через господство. Контроль над всеми четырьмя мирами-основателями приносит победу в кампании.\n\nОснователь\nКонкорд\nТекущий контроль\nКонкорд\n\nПеренос административной столицы не меняет эту цель.\n\nНА ОРБИТЕ\nФЛОТОВ: 3\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 2\nКолониальный ковчег 2\nКолониальный корабль · прочность: 24 / 24\nГотов\nПрыжков: 1\nАвангард 3\nФрегат · прочность: 34 / 34\nГотов\nПрыжков: 1\nПРИОРИТЕТ В ОБОРОНЕ\n\nСтандартный порядок соединений\n\nВаши соединения обороняются по отдельности в указанном выше порядке. Уцелевший атакующий может добраться и до следующих защитников.\n\nВыберите выше одно из своих боевых соединений, чтобы назначить или снять приоритет обороны. Каждое изменение стоит один приказ.\n\nОРБИТАЛЬНОЕ ОБСЛУЖИВАНИЕ\n8 ПРОЧНОСТИ ЗА ЦИКЛ\n\nВсе ваши флоты в этой системе полностью отремонтированы.\n\nКорабли одной колонии делят её ремонтные мощности. Разделение и объединение флотов не увеличивает общий объём ремонта.\nСВЯЗАННЫЕ СИСТЕМЫ\nSundrift ↗\nAntares ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "worldTap": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 344,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 210.265625,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": 262.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": -249,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 274.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 274.265625,
+        "width": 342,
+        "height": 538,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 714.265625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 714.265625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 730.265625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 759.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 734.765625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 754.765625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "explicit": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 344,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 97.265625,
+          "width": 322,
+          "height": 165,
+          "right": 380,
+          "bottom": 262.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -249,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 274.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 274.265625,
+        "width": 342,
+        "height": 538,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 714.265625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 714.265625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 730.265625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 759.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 734.765625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 754.765625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n1\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "afterMove": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 344,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 126.265625,
+          "width": 322,
+          "height": 136,
+          "right": 380,
+          "bottom": 262.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -249,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 274.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 274.265625,
+        "width": 342,
+        "height": 668,
+        "right": 390,
+        "bottom": 942.265625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 844.265625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 844.265625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 860.265625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 889.265625,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 864.765625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 884.765625,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nНА ОРБИТЕ\nФЛОТОВ: 1\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 1\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 5 · Колонии: 1\nPathfinder 1 arrived at Sundrift.\n● АВТОСОХРАНЕНИЕ\nPathfinder 1 arrived at Sundrift."
+    },
+    "turn": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 474,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": -3.734375,
+          "width": 322,
+          "height": 136,
+          "right": 380,
+          "bottom": 132.265625,
+          "inViewport": false
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -379,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 144.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 144.265625,
+        "width": 342,
+        "height": 668,
+        "right": 390,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 714.265625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 714.265625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 730.265625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 759.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 734.765625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 754.765625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nНА ОРБИТЕ\nФЛОТОВ: 1\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 1\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 5 · Колонии: 1\nPathfinder 1 arrived at Sundrift.\n● АВТОСОХРАНЕНИЕ\nPathfinder 1 arrived at Sundrift."
+    },
+    "afterUndo": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 329,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 112.265625,
+          "width": 322,
+          "height": 165,
+          "right": 380,
+          "bottom": 277.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -234,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 289.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 289.265625,
+        "width": 342,
+        "height": 538,
+        "right": 390,
+        "bottom": 827.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 729.265625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 790.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 729.265625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 790.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 745.265625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 774.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 749.765625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 769.765625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n1\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nДействие отменено. До завершения цикла вы можете изменить свои приказы.\n● АВТОСОХРАНЕНИЕ\nPathfinder 1 arrived at Sundrift.\nДействие отменено. До завершения цикла вы можете изменить свои приказы."
+    },
+    "undoRestoredExactState": true,
+    "closed": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 328,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "fleet-roster"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 226.265625,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": 278.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": -233,
+        "width": 342,
+        "height": 523.265625,
+        "right": 390,
+        "bottom": 290.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 290.265625,
+        "width": 342,
+        "height": 538,
+        "right": 390,
+        "bottom": 828.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 730.265625,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 791.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 730.265625,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 791.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 746.265625,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 750.765625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 770.765625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nДействие отменено. До завершения цикла вы можете изменить свои приказы.\n● АВТОСОХРАНЕНИЕ\nPathfinder 1 arrived at Sundrift.\nДействие отменено. До завершения цикла вы можете изменить свои приказы."
+    },
+    "modal": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "close-modal"
+      },
+      "world": "Ваши архивы",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Галактика возможностей.Выберите флот на орбите, чтобы исследовать пограничные системы.Список флотов →"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 342,
+        "height": 874.53125,
+        "right": 390,
+        "bottom": 1492.796875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 1394.796875,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 1455.796875,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1394.796875,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 1455.796875,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1410.796875,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 1439.796875,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 1415.296875,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 1435.296875,
+        "inViewport": false
+      },
+      "modal": {
+        "x": 12,
+        "y": 94.46875,
+        "width": 366,
+        "height": 655.046875,
+        "right": 378,
+        "bottom": 749.515625,
+        "inViewport": true
+      },
+      "modalUndo": {
+        "x": 28,
+        "y": 109.46875,
+        "width": 90.25,
+        "height": 31,
+        "right": 118.25,
+        "bottom": 140.46875,
+        "inViewport": true
+      },
+      "modalLanguage": {
+        "x": 265.390625,
+        "y": 109.46875,
+        "width": 57.609375,
+        "height": 28,
+        "right": 323,
+        "bottom": 137.46875,
+        "inViewport": true
+      },
+      "modalClose": {
+        "x": 332,
+        "y": 110.46875,
+        "width": 30,
+        "height": 30,
+        "right": 362,
+        "bottom": 140.46875,
+        "inViewport": true
+      },
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\nАРХИВЫ КОНКОРДА\nЗа пределами известного\n\nЗаново откройте науки, некогда связывавшие звёзды. Каждый прорыв открывает вашей цивилизации новое будущее.\n\nТеория резонанса · Наука: 0 / 60 · осталось циклов: 15\nВсе\nИнженерия\nОбщество\nФизика\nВоенное дело\nФИЗИКА\n✧ 60\nТеория резонанса\n\n+2 науки на колонию. Первый шаг к пониманию врат.\n\nФундаментальная наука\nВ процессе\nИНЖЕНЕРИЯ\n✧ 55\nЛогистика дальнего космоса\n\n+1 приказ каждый ход. Позволяет восстанавливать неактивные звёздные пути и открывает автоматизированную промышленность и более крупные корпуса.\n\nФундаментальная наука\nИсследовать →\nОБЩЕСТВО\n✧ 60\nАдаптивные биосферы\n\nПозволяет заселять суровые миры с пригодностью для жизни от 30%. Открывает Жилые купола.\n\nФундаментальная наука\nИсследовать →\nВОЕННОЕ ДЕЛО\n✧ 70\nКогерентные копья\n\nВсе боевые корабли наносят на 25% больше урона.\n\nФундаментальная наука\nИсследовать →\nИНЖЕНЕРИЯ\n✧ 220\nАвтономная промышленность\n\nОткрывает Мануфактуры, добавляющие 6 к производству за ход.\n\nТребуется: Логистика дальнего космоса\nИсследовать →\nОБЩЕСТВО\n✧ 180\nЗвёздные соглашения\n\nТорговые договоры приносят на 4 кредита за ход больше. Открывает Гражданские форумы.\n\nТребуется: Адаптивные биосферы\nИсследовать →\nВОЕННОЕ ДЕЛО\n✧ 220\nДефлекторные поля\n\nВходящий урон флотам снижен на 20%. Открывает Орбитальные бастионы.\n\nТребуется: Теория резонанса\nИсследовать →\nВОЕННОЕ ДЕЛО\n✧ 360\nПроектирование крупных кораблей\n\nОткрывает тяжело вооружённые крейсеры.\n\nТребуется: Логистика дальнего космоса + Когерентные копья\nИсследовать →\nОБЩЕСТВО\n✧ 600\nПреобразование миров\n\nПозволяет заселять любые миры. Население всех колоний растёт на 50% быстрее.\n\nТребуется: Адаптивные биосферы + Автономная промышленность\nИсследовать →\nФИЗИКА\n✧ 360\nКвантовые архивы\n\nЛаборатории производят на 4 науки больше. Открывает последнюю технологию врат.\n\nТребуется: Теория резонанса\nИсследовать →\nИНЖЕНЕРИЯ\n✧ 500\nРаспределённое командование\n\n+2 приказа за ход. Боевые корабли получают дополнительное перемещение за ход.\n\nТребуется: Логистика дальнего космоса + Звёздные соглашения\nИсследовать →\nФИЗИКА\n✧ 1000\nПротокол «Астерион»\n\nОткрывает Маяки Asterion. Для трансценденции синхронизируйте три своих незаблокированных мира с маяками в течение 10 циклов, расходуя по 60 кредитов за цикл.\n\nТребуется: Квантовые архивы + Автономная промышленность\nИсследовать →\nНАУЧНЫЙ СОВЕТ КОНКОРДА\nВаши архивы\n\nОсвоено наук: 0 из 12\n\n+4\nнауки за цикл\nВ запасе: 0\nНАЗНАЧЕННОЕ ИССЛЕДОВАНИЕ\nТеория резонанса\n\n+2 науки на колонию. Первый шаг к пониманию врат.\n\nНаука: 0 / 60 · Циклов при текущем объёме производства: 15\n\nЭТОТ ПРОРЫВ ОТКРЫВАЕТ\nДефлекторные поля\nСтановится доступно исследование\nКвантовые архивы\nСтановится доступно исследование\nНАУЧНЫЕ МИРЫ\nSolace\n4 науки за цикл\n↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nНачато исследование: Теория резонанса.\n● АВТОСОХРАНЕНИЕ\n×\nEnglish\nУПРАВЛЕНИЕ КАМПАНИЕЙ\nМгновение среди звёзд\n\nЦикл 1 · ASTERION · Конкорд\n\n↓ Экспорт кампании\n↑ Импорт кампании\nОткрыть полевое руководство ↗\nНачать новую кампанию\n\nПрогресс автоматически сохраняется в этом браузере после каждого действия. Экспортируйте резервную копию, чтобы перенести кампанию на другое устройство.\n\nОтмена возвращает действия в пределах текущего цикла. Завершение цикла, импорт сохранения или начало кампании очищает историю отмены.\n\nПредупреждать о неиспользованных приказах перед завершением цикла\nВернуться в Предел\n↶ Отменить"
+    },
+    "afterModalUndo": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Ваши архивы",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Галактика возможностей.Выберите флот на орбите, чтобы исследовать пограничные системы.Список флотов →"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 342,
+        "height": 606.578125,
+        "right": 390,
+        "bottom": 1224.84375,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 281.75,
+        "y": 1126.84375,
+        "width": 90.25,
+        "height": 61,
+        "right": 372,
+        "bottom": 1187.84375,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1126.84375,
+        "width": 207.75,
+        "height": 61,
+        "right": 273.75,
+        "bottom": 1187.84375,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1142.84375,
+        "width": 117.796875,
+        "height": 29,
+        "right": 201.796875,
+        "bottom": 1171.84375,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 201.796875,
+        "y": 1147.34375,
+        "width": 53.953125,
+        "height": 20,
+        "right": 255.75,
+        "bottom": 1167.34375,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\nАРХИВЫ КОНКОРДА\nЗа пределами известного\n\nЗаново откройте науки, некогда связывавшие звёзды. Каждый прорыв открывает вашей цивилизации новое будущее.\n\nВыберите направление исследований. Наука накапливается в запасе, пока вы не выберете проект. Выбор или смена проекта не расходует приказы.\nВсе\nИнженерия\nОбщество\nФизика\nВоенное дело\nИНЖЕНЕРИЯ\n✧ 55\nЛогистика дальнего космоса\n\n+1 приказ каждый ход. Позволяет восстанавливать неактивные звёздные пути и открывает автоматизированную промышленность и более крупные корпуса.\n\nФундаментальная наука\nИсследовать →\nОБЩЕСТВО\n✧ 60\nАдаптивные биосферы\n\nПозволяет заселять суровые миры с пригодностью для жизни от 30%. Открывает Жилые купола.\n\nФундаментальная наука\nИсследовать →\nФИЗИКА\n✧ 60\nТеория резонанса\n\n+2 науки на колонию. Первый шаг к пониманию врат.\n\nФундаментальная наука\nИсследовать →\nВОЕННОЕ ДЕЛО\n✧ 70\nКогерентные копья\n\nВсе боевые корабли наносят на 25% больше урона.\n\nФундаментальная наука\nИсследовать →\nИНЖЕНЕРИЯ\n✧ 220\nАвтономная промышленность\n\nОткрывает Мануфактуры, добавляющие 6 к производству за ход.\n\nТребуется: Логистика дальнего космоса\nИсследовать →\nОБЩЕСТВО\n✧ 180\nЗвёздные соглашения\n\nТорговые договоры приносят на 4 кредита за ход больше. Открывает Гражданские форумы.\n\nТребуется: Адаптивные биосферы\nИсследовать →\nВОЕННОЕ ДЕЛО\n✧ 220\nДефлекторные поля\n\nВходящий урон флотам снижен на 20%. Открывает Орбитальные бастионы.\n\nТребуется: Теория резонанса\nИсследовать →\nВОЕННОЕ ДЕЛО\n✧ 360\nПроектирование крупных кораблей\n\nОткрывает тяжело вооружённые крейсеры.\n\nТребуется: Логистика дальнего космоса + Когерентные копья\nИсследовать →\nОБЩЕСТВО\n✧ 600\nПреобразование миров\n\nПозволяет заселять любые миры. Население всех колоний растёт на 50% быстрее.\n\nТребуется: Адаптивные биосферы + Автономная промышленность\nИсследовать →\nФИЗИКА\n✧ 360\nКвантовые архивы\n\nЛаборатории производят на 4 науки больше. Открывает последнюю технологию врат.\n\nТребуется: Теория резонанса\nИсследовать →\nИНЖЕНЕРИЯ\n✧ 500\nРаспределённое командование\n\n+2 приказа за ход. Боевые корабли получают дополнительное перемещение за ход.\n\nТребуется: Логистика дальнего космоса + Звёздные соглашения\nИсследовать →\nФИЗИКА\n✧ 1000\nПротокол «Астерион»\n\nОткрывает Маяки Asterion. Для трансценденции синхронизируйте три своих незаблокированных мира с маяками в течение 10 циклов, расходуя по 60 кредитов за цикл.\n\nТребуется: Квантовые архивы + Автономная промышленность\nИсследовать →\nНАУЧНЫЙ СОВЕТ КОНКОРДА\nВаши архивы\n\nОсвоено наук: 0 из 12\n\n+4\nнауки за цикл\nВ запасе: 0\nНАПРАВЛЕНИЕ ИССЛЕДОВАНИЙ\n\nВыберите проект в архивах. Накопленная наука будет вложена в него; смена исследования не расходует приказы.\n\nНАУЧНЫЕ МИРЫ\nSolace\n4 науки за цикл\n↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nДействие отменено. До завершения цикла вы можете изменить свои приказы.\n● АВТОСОХРАНЕНИЕ\nДействие отменено. До завершения цикла вы можете изменить свои приказы."
+    },
+    "modalUndoRestoredExactState": true,
+    "pass": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "en-320x844",
+    "initial": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Solace",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 554.265625,
+          "width": 99.421875,
+          "height": 52,
+          "right": 157.421875,
+          "bottom": 606.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Fleet roster →"
+      },
+      "map": {
+        "x": 48,
+        "y": 95,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 618.265625,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 272,
+        "height": 1738.203125,
+        "right": 320,
+        "bottom": 2356.46875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 2260.46875,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 2320.46875,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 2260.46875,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 2320.46875,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 2276.46875,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 2304.46875,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 2280.46875,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 2300.46875,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nFleet roster →\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n3 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nColony Ark 2\nColony ship · 24 / 24 hull\nReady\n1 jump\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\n● AUTOSAVED"
+    },
+    "worldTap": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 375,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 179.265625,
+          "width": 99.421875,
+          "height": 52,
+          "right": 157.421875,
+          "bottom": 231.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Fleet roster →"
+      },
+      "map": {
+        "x": 48,
+        "y": -280,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 243.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 243.265625,
+        "width": 272,
+        "height": 569,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 716.265625,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 716.265625,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 732.265625,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 736.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 756.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nFleet roster →\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\n● AUTOSAVED"
+    },
+    "explicit": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 375,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 67.265625,
+          "width": 252,
+          "height": 164,
+          "right": 310,
+          "bottom": 231.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -280,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 243.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 243.265625,
+        "width": 272,
+        "height": 569,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 716.265625,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 716.265625,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 732.265625,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 736.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 756.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\n● AUTOSAVED"
+    },
+    "afterMove": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 375,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 111.265625,
+          "width": 252,
+          "height": 120,
+          "right": 310,
+          "bottom": 231.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -280,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 243.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 243.265625,
+        "width": 272,
+        "height": 698,
+        "right": 320,
+        "bottom": 941.265625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 845.265625,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 845.265625,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 861.265625,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 889.265625,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 865.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 885.265625,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n5 orders remaining · 1 colony\nPathfinder 1 arrived at Sundrift.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift."
+    },
+    "turn": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 504,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": -17.734375,
+          "width": 252,
+          "height": 120,
+          "right": 310,
+          "bottom": 102.265625,
+          "inViewport": false
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -409,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 114.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 114.265625,
+        "width": 272,
+        "height": 698,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 716.265625,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 716.265625,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 732.265625,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 736.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 756.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n5 orders remaining · 1 colony\nPathfinder 1 arrived at Sundrift.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift."
+    },
+    "afterUndo": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 375,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 67.265625,
+          "width": 252,
+          "height": 164,
+          "right": 310,
+          "bottom": 231.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -280,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 243.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 243.265625,
+        "width": 272,
+        "height": 569,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 716.265625,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 716.265625,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 732.265625,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 736.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 756.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\n×\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift.\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "undoRestoredExactState": true,
+    "closed": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 375,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "fleet-roster"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 179.265625,
+          "width": 99.421875,
+          "height": 52,
+          "right": 157.421875,
+          "bottom": 231.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Fleet roster →"
+      },
+      "map": {
+        "x": 48,
+        "y": -280,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 243.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 243.265625,
+        "width": 272,
+        "height": 569,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 716.265625,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 716.265625,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 776.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 732.265625,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 760.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 736.265625,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 756.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nFleet roster →\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift.\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "modal": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "close-modal"
+      },
+      "world": "Your archives",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "A galaxy of possibilities.Select a fleet in orbit to explore the frontier.Fleet roster →"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 272,
+        "height": 873.53125,
+        "right": 320,
+        "bottom": 1491.796875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 1395.796875,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 1455.796875,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1395.796875,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 1455.796875,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1411.796875,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 1439.796875,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 1415.796875,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 1435.796875,
+        "inViewport": false
+      },
+      "modal": {
+        "x": 12,
+        "y": 83.96875,
+        "width": 296,
+        "height": 676.046875,
+        "right": 308,
+        "bottom": 760.015625,
+        "inViewport": true
+      },
+      "modalUndo": {
+        "x": 28,
+        "y": 98.96875,
+        "width": 63.109375,
+        "height": 31,
+        "right": 91.109375,
+        "bottom": 129.96875,
+        "inViewport": true
+      },
+      "modalLanguage": {
+        "x": 188.203125,
+        "y": 98.96875,
+        "width": 64.796875,
+        "height": 29,
+        "right": 253,
+        "bottom": 127.96875,
+        "inViewport": true
+      },
+      "modalClose": {
+        "x": 262,
+        "y": 99.96875,
+        "width": 30,
+        "height": 30,
+        "right": 292,
+        "bottom": 129.96875,
+        "inViewport": true
+      },
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\nResonance Theory · 0 / 60 science · 15 cycles remaining\nAll\nEngineering\nSociety\nPhysics\nMilitary\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nIn progress\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nCOMMISSIONED RESEARCH\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\n0 / 60 science · 15 cycles at current output\n\nTHIS BREAKTHROUGH OPENS\nDeflector Fields\nResearch becomes available\nQuantum Archives\nResearch becomes available\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nResearch directed toward Resonance Theory.\n● AUTOSAVED\n×\nРусский\nCAMPAIGN CONTROL\nA moment among the stars\n\nCycle 1 · ASTERION · The Concord\n\n↓ Export campaign\n↑ Import campaign\nRead the field guide ↗\nBegin a new campaign\n\nProgress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.\n\nUndo restores actions within this cycle. Ending the cycle, importing a save or starting a campaign clears undo history.\n\nWarn before ending a cycle with unused orders\nReturn to the Reach\n↶ Undo"
+    },
+    "afterModalUndo": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Your archives",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "A galaxy of possibilities.Select a fleet in orbit to explore the frontier.Fleet roster →"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 272,
+        "height": 626.578125,
+        "right": 320,
+        "bottom": 1244.84375,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 238.890625,
+        "y": 1148.84375,
+        "width": 63.109375,
+        "height": 60,
+        "right": 302,
+        "bottom": 1208.84375,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1148.84375,
+        "width": 164.890625,
+        "height": 60,
+        "right": 230.890625,
+        "bottom": 1208.84375,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1164.84375,
+        "width": 80.625,
+        "height": 28,
+        "right": 164.625,
+        "bottom": 1192.84375,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 164.625,
+        "y": 1168.84375,
+        "width": 48.265625,
+        "height": 20,
+        "right": 212.890625,
+        "bottom": 1188.84375,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\nChoose a research direction. Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.\nAll\nEngineering\nSociety\nPhysics\nMilitary\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "modalUndoRestoredExactState": true,
+    "pass": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "ru-320x844",
+    "initial": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Solace",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 554.265625,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": 606.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": 95,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 618.265625,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 48,
+        "y": 618.265625,
+        "width": 272,
+        "height": 1966.390625,
+        "right": 320,
+        "bottom": 2584.65625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 211.75,
+        "y": 2485.65625,
+        "width": 90.25,
+        "height": 62,
+        "right": 302,
+        "bottom": 2547.65625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 2485.65625,
+        "width": 137.75,
+        "height": 62,
+        "right": 203.75,
+        "bottom": 2547.65625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 2501.65625,
+        "width": 72.453125,
+        "height": 30,
+        "right": 156.453125,
+        "bottom": 2531.65625,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 156.453125,
+        "y": 2506.65625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 210.40625,
+        "bottom": 2526.65625,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nКОНКОРД\nSolace\n\nМир земного типа · Система-основатель\n\nУмеренные океаны и широкие материковые шельфы.\n\n90%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n4/8\nНАСЕЛЕНИЕ\n8\nПРОИЗВОДСТВО\nПРОИЗВОДСТВО КОЛОНИИ\n8 ЗА ЦИКЛ\n\nВаши строители ждут нового проекта.\n\n+ Заказать проект\nИНФРАСТРУКТУРА\nЯЧЕЙКИ: 2 / 3\n◇ Орбитальный экстрактор\n⌁ Орбитальная верфь\n\nСвободные ячейки: 1. С ростом населения открываются новые ячейки, максимум — пять.\n\n⌂\nБез хартии\n\nЗакрепите за этим миром постоянную специализацию.\n\nРазвивать →\n\nКредиты: +11 · минералы: +9 · наука: +4\n\nМИР-ОСНОВАТЕЛЬ\n⌂\n\nПостоянная цель для победы через господство. Контроль над всеми четырьмя мирами-основателями приносит победу в кампании.\n\nОснователь\nКонкорд\nТекущий контроль\nКонкорд\n\nПеренос административной столицы не меняет эту цель.\n\nНА ОРБИТЕ\nФЛОТОВ: 3\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 2\nКолониальный ковчег 2\nКолониальный корабль · прочность: 24 / 24\nГотов\nПрыжков: 1\nАвангард 3\nФрегат · прочность: 34 / 34\nГотов\nПрыжков: 1\nПРИОРИТЕТ В ОБОРОНЕ\n\nСтандартный порядок соединений\n\nВаши соединения обороняются по отдельности в указанном выше порядке. Уцелевший атакующий может добраться и до следующих защитников.\n\nВыберите выше одно из своих боевых соединений, чтобы назначить или снять приоритет обороны. Каждое изменение стоит один приказ.\n\nОРБИТАЛЬНОЕ ОБСЛУЖИВАНИЕ\n8 ПРОЧНОСТИ ЗА ЦИКЛ\n\nВсе ваши флоты в этой системе полностью отремонтированы.\n\nКорабли одной колонии делят её ремонтные мощности. Разделение и объединение флотов не увеличивает общий объём ремонта.\nСВЯЗАННЫЕ СИСТЕМЫ\nSundrift ↗\nAntares ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "worldTap": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 390,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 164.265625,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": 216.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": -295,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 228.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 228.265625,
+        "width": 272,
+        "height": 584,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 211.75,
+        "y": 713.265625,
+        "width": 90.25,
+        "height": 62,
+        "right": 302,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 713.265625,
+        "width": 137.75,
+        "height": 62,
+        "right": 203.75,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 729.265625,
+        "width": 72.453125,
+        "height": 30,
+        "right": 156.453125,
+        "bottom": 759.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 156.453125,
+        "y": 734.265625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 210.40625,
+        "bottom": 754.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "explicit": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 390,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 51.265625,
+          "width": 252,
+          "height": 165,
+          "right": 310,
+          "bottom": 216.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -295,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 228.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 228.265625,
+        "width": 272,
+        "height": 584,
+        "right": 320,
+        "bottom": 812.265625,
+        "inViewport": true
+      },
+      "undo": {
+        "x": 211.75,
+        "y": 713.265625,
+        "width": 90.25,
+        "height": 62,
+        "right": 302,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 713.265625,
+        "width": 137.75,
+        "height": 62,
+        "right": 203.75,
+        "bottom": 775.265625,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 729.265625,
+        "width": 72.453125,
+        "height": 30,
+        "right": 156.453125,
+        "bottom": 759.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 156.453125,
+        "y": 734.265625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 210.40625,
+        "bottom": 754.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n1\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "afterMove": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 390,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 80.265625,
+          "width": 252,
+          "height": 136,
+          "right": 310,
+          "bottom": 216.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -295,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 228.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 228.265625,
+        "width": 272,
+        "height": 714,
+        "right": 320,
+        "bottom": 942.265625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 211.75,
+        "y": 843.265625,
+        "width": 90.25,
+        "height": 62,
+        "right": 302,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 843.265625,
+        "width": 137.75,
+        "height": 62,
+        "right": 203.75,
+        "bottom": 905.265625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 859.265625,
+        "width": 72.453125,
+        "height": 30,
+        "right": 156.453125,
+        "bottom": 889.265625,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 156.453125,
+        "y": 864.265625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 210.40625,
+        "bottom": 884.265625,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nНА ОРБИТЕ\nФЛОТОВ: 1\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 1\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 5 · Колонии: 1\nPathfinder 1 arrived at Sundrift.\n● АВТОСОХРАНЕНИЕ\nPathfinder 1 arrived at Sundrift."
+    },
+    "turn": {
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "documentWidth": 320,
+      "scrollY": 451,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 19.265625,
+          "width": 252,
+          "height": 136,
+          "right": 310,
+          "bottom": 155.265625,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -356,
+        "width": 272,
+        "height": 523.265625,
+        "right": 320,
+        "bottom": 167.265625,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 167.265625,
+        "width": 272,
+        "height": 714,
+        "right": 320,
+        "bottom": 881.265625,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 211.75,
+        "y": 782.265625,
+        "width": 90.25,
+        "height": 62,
+        "right": 302,
+        "bottom": 844.265625,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 782.265625,
+        "width": 137.75,
+        "height": 62,
+        "right": 203.75,
+        "bottom": 844.265625,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 798.265625,
+        "width": 72.453125,
+        "height": 30,
+        "right": 156.453125,
+        "bottom": 828.265625,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 156.453125,
+        "y": 803.265625,
+        "width": 53.953125,
+        "height": 20,
+        "right": 210.40625,
+        "bottom": 823.265625,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Sundrift\n\nРазведчик · Кораблей: 1 · Прыжков: 1 · Прочность: 18 / 18 · Выберите звезду, чтобы проложить прыжок или курс.\n\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nНА ОРБИТЕ\nФЛОТОВ: 1\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 1\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 5 · Колонии: 1\nPathfinder 1 arrived at Sundrift.\n● АВТОСОХРАНЕНИЕ\nPathfinder 1 arrived at Sundrift."
+    },
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(r.turn.undo.inViewport)\n",
+    "pageErrors": []
+  },
+  {
+    "tag": "ru-640x390",
+    "initial": {
+      "viewport": {
+        "width": 640,
+        "height": 390
+      },
+      "documentWidth": 640,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Solace",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": 376,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": 428,
+          "inViewport": false
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": 90,
+        "width": 592,
+        "height": 350,
+        "right": 640,
+        "bottom": 440,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": 331.796875,
+        "width": 592,
+        "height": 1677.15625,
+        "right": 640,
+        "bottom": 2008.953125,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 531.75,
+        "y": 1919.953125,
+        "width": 90.25,
+        "height": 52,
+        "right": 622,
+        "bottom": 1971.953125,
+        "inViewport": false
+      },
+      "end": {
+        "x": 66,
+        "y": 1919.953125,
+        "width": 457.75,
+        "height": 52,
+        "right": 523.75,
+        "bottom": 1971.953125,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 84,
+        "y": 1938.453125,
+        "width": 124.1875,
+        "height": 15,
+        "right": 208.1875,
+        "bottom": 1953.453125,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 451.796875,
+        "y": 1935.953125,
+        "width": 53.953125,
+        "height": 20,
+        "right": 505.75,
+        "bottom": 1955.953125,
+        "inViewport": false
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nКОНКОРД\nSolace\n\nМир земного типа · Система-основатель\n\nУмеренные океаны и широкие материковые шельфы.\n\n90%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n4/8\nНАСЕЛЕНИЕ\n8\nПРОИЗВОДСТВО\nПРОИЗВОДСТВО КОЛОНИИ\n8 ЗА ЦИКЛ\n\nВаши строители ждут нового проекта.\n\n+ Заказать проект\nИНФРАСТРУКТУРА\nЯЧЕЙКИ: 2 / 3\n◇ Орбитальный экстрактор\n⌁ Орбитальная верфь\n\nСвободные ячейки: 1. С ростом населения открываются новые ячейки, максимум — пять.\n\n⌂\nБез хартии\n\nЗакрепите за этим миром постоянную специализацию.\n\nРазвивать →\n\nКредиты: +11 · минералы: +9 · наука: +4\n\nМИР-ОСНОВАТЕЛЬ\n⌂\n\nПостоянная цель для победы через господство. Контроль над всеми четырьмя мирами-основателями приносит победу в кампании.\n\nОснователь\nКонкорд\nТекущий контроль\nКонкорд\n\nПеренос административной столицы не меняет эту цель.\n\nНА ОРБИТЕ\nФЛОТОВ: 3\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 2\nКолониальный ковчег 2\nКолониальный корабль · прочность: 24 / 24\nГотов\nПрыжков: 1\nАвангард 3\nФрегат · прочность: 34 / 34\nГотов\nПрыжков: 1\nПРИОРИТЕТ В ОБОРОНЕ\n\nСтандартный порядок соединений\n\nВаши соединения обороняются по отдельности в указанном выше порядке. Уцелевший атакующий может добраться и до следующих защитников.\n\nВыберите выше одно из своих боевых соединений, чтобы назначить или снять приоритет обороны. Каждое изменение стоит один приказ.\n\nОРБИТАЛЬНОЕ ОБСЛУЖИВАНИЕ\n8 ПРОЧНОСТИ ЗА ЦИКЛ\n\nВсе ваши флоты в этой системе полностью отремонтированы.\n\nКорабли одной колонии делят её ремонтные мощности. Разделение и объединение флотов не увеличивает общий объём ремонта.\nСВЯЗАННЫЕ СИСТЕМЫ\nSundrift ↗\nAntares ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "worldTap": {
+      "viewport": {
+        "width": 640,
+        "height": 390
+      },
+      "documentWidth": 640,
+      "scrollY": 492,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": -116,
+          "width": 119.90625,
+          "height": 52,
+          "right": 177.90625,
+          "bottom": -64,
+          "inViewport": false
+        },
+        "classes": "fleet-bar is-inspecting",
+        "text": "Список флотов →"
+      },
+      "map": {
+        "x": 48,
+        "y": -402,
+        "width": 592,
+        "height": 350,
+        "right": 640,
+        "bottom": -52,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": -160.203125,
+        "width": 592,
+        "height": 518,
+        "right": 640,
+        "bottom": 357.796875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 531.75,
+        "y": 268.796875,
+        "width": 90.25,
+        "height": 52,
+        "right": 622,
+        "bottom": 320.796875,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 268.796875,
+        "width": 457.75,
+        "height": 52,
+        "right": 523.75,
+        "bottom": 320.796875,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 287.296875,
+        "width": 124.1875,
+        "height": 15,
+        "right": 208.1875,
+        "bottom": 302.296875,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 451.796875,
+        "y": 284.796875,
+        "width": 53.953125,
+        "height": 20,
+        "right": 505.75,
+        "bottom": 304.796875,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nOrison\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\nIona\nНЕ ИССЛЕДОВАНО\nHalcyon\nНЕ ИССЛЕДОВАНО\nAntares\nЗЕМНОГО ТИПА\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "explicit": {
+      "viewport": {
+        "width": 640,
+        "height": 390
+      },
+      "documentWidth": 640,
+      "scrollY": 485,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 58,
+          "y": -163,
+          "width": 572,
+          "height": 106,
+          "right": 630,
+          "bottom": -57,
+          "inViewport": false
+        },
+        "classes": "fleet-bar",
+        "text": "×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 48,
+        "y": -395,
+        "width": 592,
+        "height": 350,
+        "right": 640,
+        "bottom": -45,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 48,
+        "y": -153.203125,
+        "width": 592,
+        "height": 518,
+        "right": 640,
+        "bottom": 364.796875,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 531.75,
+        "y": 275.796875,
+        "width": 90.25,
+        "height": 52,
+        "right": 622,
+        "bottom": 327.796875,
+        "inViewport": true
+      },
+      "end": {
+        "x": 66,
+        "y": 275.796875,
+        "width": 457.75,
+        "height": 52,
+        "right": 523.75,
+        "bottom": 327.796875,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 84,
+        "y": 294.296875,
+        "width": 124.1875,
+        "height": 15,
+        "right": 208.1875,
+        "bottom": 309.296875,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 451.796875,
+        "y": 291.796875,
+        "width": 53.953125,
+        "height": 20,
+        "right": 505.75,
+        "bottom": 311.796875,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n1\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nOrison\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\nIona\nНЕ ИССЛЕДОВАНО\nHalcyon\nНЕ ИССЛЕДОВАНО\nAntares\nЗЕМНОГО ТИПА\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\nПРОБЕЛ\n↶ Отменить\nПриказы: 6 · Колонии: 1\nВаш мандат начинается среди звёзд.\n● АВТОСОХРАНЕНИЕ"
+    },
+    "error": "TimeoutError: locator.tap: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=\"move\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"primary\" data-target=\"s20\" data-action=\"move\">Переместить →</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h2>Sundrift</h2> from <aside class=\"inspector\" aria-label=\"Сведения о системе\">…</aside> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h2>Sundrift</h2> from <aside class=\"inspector\" aria-label=\"Сведения о системе\">…</aside> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <h2>Sundrift</h2> from <aside class=\"inspector\" aria-label=\"Сведения о системе\">…</aside> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying tap action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+    "pageErrors": []
+  },
+  {
+    "tag": "en-844x390",
+    "initial": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 0,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Solace",
+      "bar": {
+        "rect": {
+          "x": 70,
+          "y": 522,
+          "width": 500,
+          "height": 80,
+          "right": 570,
+          "bottom": 602,
+          "inViewport": false
+        },
+        "classes": "fleet-bar",
+        "text": "Pathfinder 1 / Solace\n\nScout · 1 ship · 2 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 56,
+        "y": 68,
+        "width": 528,
+        "height": 552,
+        "right": 584,
+        "bottom": 620,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 584,
+        "y": 68,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 620,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 534,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 580,
+        "inViewport": false
+      },
+      "end": {
+        "x": 607,
+        "y": 534,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 580,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 625,
+        "y": 550,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 564,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Solace\n\nScout · 1 ship · 2 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n3 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nColony Ark 2\nColony ship · 24 / 24 hull\nReady\n1 jump\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED"
+    },
+    "worldTap": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 260,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 70,
+          "y": 216,
+          "width": 500,
+          "height": 126,
+          "right": 570,
+          "bottom": 342,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "Pathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 56,
+        "y": -192,
+        "width": 528,
+        "height": 552,
+        "right": 584,
+        "bottom": 360,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 584,
+        "y": -192,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 360,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 274,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 320,
+        "inViewport": true
+      },
+      "end": {
+        "x": 607,
+        "y": 274,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 320,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 625,
+        "y": 290,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 304,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED"
+    },
+    "explicit": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 241,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 70,
+          "y": 235,
+          "width": 500,
+          "height": 126,
+          "right": 570,
+          "bottom": 361,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "Pathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 56,
+        "y": -173,
+        "width": 528,
+        "height": 552,
+        "right": 584,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 584,
+        "y": -173,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 293,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "end": {
+        "x": 607,
+        "y": 293,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 625,
+        "y": 309,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 323,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED"
+    },
+    "afterMove": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 241,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 70,
+          "y": 281,
+          "width": 500,
+          "height": 80,
+          "right": 570,
+          "bottom": 361,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "Pathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 56,
+        "y": -173,
+        "width": 528,
+        "height": 552,
+        "right": 584,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 584,
+        "y": -173,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 293,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "end": {
+        "x": 607,
+        "y": 293,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 625,
+        "y": 309,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 323,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n5 orders remaining · 1 colony\nPathfinder 1 arrived at Sundrift.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift."
+    },
+    "turn": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 241,
+      "focus": {
+        "tag": "BODY",
+        "id": ""
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 70,
+          "y": 281,
+          "width": 500,
+          "height": 80,
+          "right": 570,
+          "bottom": 361,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "Pathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 56,
+        "y": -173,
+        "width": 528,
+        "height": 552,
+        "right": 584,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 584,
+        "y": -173,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 293,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "end": {
+        "x": 607,
+        "y": 293,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 625,
+        "y": 309,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 323,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Sundrift\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n5 orders remaining · 1 colony\nPathfinder 1 arrived at Sundrift.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift."
+    },
+    "afterUndo": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 241,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Sundrift",
+      "bar": {
+        "rect": {
+          "x": 70,
+          "y": 235,
+          "width": 500,
+          "height": 126,
+          "right": 570,
+          "bottom": 361,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "Pathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥"
+      },
+      "map": {
+        "x": 56,
+        "y": -173,
+        "width": 528,
+        "height": 552,
+        "right": 584,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "inspector": {
+        "x": 584,
+        "y": -173,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 379,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 293,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "end": {
+        "x": 607,
+        "y": 293,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 339,
+        "inViewport": true
+      },
+      "endText": {
+        "x": 625,
+        "y": 309,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 323,
+        "inViewport": true
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Solace\n\nSolace → Sundrift · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\nUNCLAIMED FRONTIER\nSundrift\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n44%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nPathfinder 1 arrived at Sundrift.\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "undoRestoredExactState": true,
+    "modal": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 8,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "close-modal"
+      },
+      "world": "Your archives",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×Pathfinder 1 / SolaceSolace → Sundrift · 1 order · Fleet presence unknownMove →↶Hold position⌁ 3⇥△⬡▴"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 584,
+        "y": 60,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 612,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 526,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 572,
+        "inViewport": false
+      },
+      "end": {
+        "x": 607,
+        "y": 526,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 572,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 625,
+        "y": 542,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 556,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": {
+        "x": 112,
+        "y": 19.5,
+        "width": 620,
+        "height": 351,
+        "right": 732,
+        "bottom": 370.5,
+        "inViewport": true
+      },
+      "modalUndo": {
+        "x": 128,
+        "y": 34.5,
+        "width": 63.109375,
+        "height": 31,
+        "right": 191.109375,
+        "bottom": 65.5,
+        "inViewport": true
+      },
+      "modalLanguage": {
+        "x": 612.203125,
+        "y": 34.5,
+        "width": 64.796875,
+        "height": 29,
+        "right": 677,
+        "bottom": 63.5,
+        "inViewport": true
+      },
+      "modalClose": {
+        "x": 686,
+        "y": 35.5,
+        "width": 30,
+        "height": 30,
+        "right": 716,
+        "bottom": 65.5,
+        "inViewport": true
+      },
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\n✧\nResonance Theory · 0 / 60 science · 15 cycles remaining\nAll\nEngineering\nSociety\nPhysics\nMilitary\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nIn progress\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nCOMMISSIONED RESEARCH\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\n0 / 60 science · 15 cycles at current output\n\nTHIS BREAKTHROUGH OPENS\nDeflector Fields\nResearch becomes available\nQuantum Archives\nResearch becomes available\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nResearch directed toward Resonance Theory.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\n×\nРусский\nCAMPAIGN CONTROL\nA moment among the stars\n\nCycle 1 · ASTERION · The Concord\n\n↓ Export campaign\n↑ Import campaign\nRead the field guide ↗\nBegin a new campaign\n\nProgress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.\n\nUndo restores actions within this cycle. Ending the cycle, importing a save or starting a campaign clears undo history.\n\nWarn before ending a cycle with unused orders\nReturn to the Reach\n↶ Undo"
+    },
+    "afterModalUndo": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 844,
+      "scrollY": 8,
+      "focus": {
+        "tag": "BUTTON",
+        "id": "end-turn",
+        "action": "end-turn"
+      },
+      "world": "Your archives",
+      "bar": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0,
+          "inViewport": true
+        },
+        "classes": "fleet-bar",
+        "text": "×Pathfinder 1 / SolaceSolace → Sundrift · 1 order · Fleet presence unknownMove →↶Hold position⌁ 3⇥△⬡▴"
+      },
+      "map": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "inspector": {
+        "x": 584,
+        "y": 60,
+        "width": 260,
+        "height": 552,
+        "right": 844,
+        "bottom": 612,
+        "inViewport": false
+      },
+      "undo": {
+        "x": 758.890625,
+        "y": 526,
+        "width": 63.109375,
+        "height": 46,
+        "right": 822,
+        "bottom": 572,
+        "inViewport": false
+      },
+      "end": {
+        "x": 607,
+        "y": 526,
+        "width": 143.890625,
+        "height": 46,
+        "right": 750.890625,
+        "bottom": 572,
+        "inViewport": false
+      },
+      "endText": {
+        "x": 625,
+        "y": 542,
+        "width": 89.046875,
+        "height": 14,
+        "right": 714.046875,
+        "bottom": 556,
+        "inViewport": false
+      },
+      "kbd": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "modal": null,
+      "modalUndo": null,
+      "modalLanguage": null,
+      "modalClose": null,
+      "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\n✧\nChoose a research direction. Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.\nAll\nEngineering\nSociety\nPhysics\nMilitary\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nAction undone. You can revise your orders before ending this cycle."
+    },
+    "modalUndoRestoredExactState": true,
+    "pass": true,
+    "pageErrors": []
+  }
+]

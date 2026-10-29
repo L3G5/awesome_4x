@@ -1,0 +1,16 @@
+Frozen mobile/Undo review: 2414a9b9df56148d290aba7e84726931df3ada90
+URL: http://127.0.0.1:33313. Build/assets pinned before/after. No source copies.
+
+The original mobile inspection complaint is corrected at 390/320px: no automatic active fleet/route panel; a compact 52px roster button remains. Deliberate fleet selection permits normal targeting and paid movement; closing returns to inspection without changing state. English/Russian Undo restores the complete pre-move state and research state from the menu-header action. At 390px the modal header has no control collision; Undo is reachable beside End cycle after normal vertical scrolling and retains a meaningful focus target after use.
+
+This candidate is not a clean final acceptance because the following layout/focus problems were observed:
+
+1. Material functional issue at 640×390 Russian. The mobile grid reserves 62dvh≈242px for the map but its main-stage minimum is 350px. The inspector therefore overlaps the fleet card and intercepts native Move taps. The original timeout and screenshot are retained in results.json and ru-640x390-ERROR.png. Source correction f829784 gives the grid track its own 350px minimum; the new 640×390 actual-touch regression passes. Final frozen acceptance is recorded separately when available.
+
+2. At 320px Russian, the Space badge extends 6.66px beyond End cycle's right edge, leaving only 1.34px before Undo. An arrival toast spans y772–816 while Undo spans y782.27–844.27, obscuring its upper 33.73px. Pointer events pass through the toast, but the label is visually covered. recheck-ru-320x844-turn.png/JSON retain precise geometry; turn-after-toast shows the unobscured controls. The arrival toast is also English in Russian presentation, a lower-priority missing message template. The parent is correcting badge/toast presentation separately.
+
+The first 320RU attempt stopped on an overly strict viewport assertion: a button bottom at 844.265625 was classified outside an 844px viewport. This is a driver tolerance issue, not meaningful physical overflow. bounded-recheck.mjs allows 1px rounding tolerance, waits for the recorded toast to expire, and then verifies real touch Undo and complete state restoration. The original failed attempt remains unchanged.
+
+3. Modal Undo restores state and the Research page, but focuses an offscreen End cycle button with preventScroll. After choosing Physics, opening Menu and tapping its header Undo, End cycle's top is1127.84px English390/1126.84px Russian390, with window scrollY0 and an844px viewport. This is a keyboard context issue even though the restored state is correct. A visible restored page heading/result is a better fallback when the chosen Undo/End-cycle focus target is offscreen. Ordinary bottom Undo already leaves its fallback in view and need not change.
+
+Portrait 390EN/RU, 320EN and the 320RU bounded recheck pass paid effect/Undo/state checks. An 844×390 English sample also passes ordinary movement and Undo; it uses the existing wider-than 660px layout and default selection, outside the compact-mode guarantee. All completed cases report zero page errors. This is targeted mobile/Undo visual coverage, not a full lifecycle or campaign rerun.

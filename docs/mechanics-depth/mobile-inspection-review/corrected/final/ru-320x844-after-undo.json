@@ -1,0 +1,121 @@
+{
+  "viewport": {
+    "width": 320,
+    "height": 844
+  },
+  "documentWidth": 320,
+  "scrollY": 374,
+  "focus": {
+    "tag": "BUTTON",
+    "id": "end-turn",
+    "action": "end-turn"
+  },
+  "world": "Sundrift",
+  "bar": {
+    "rect": {
+      "x": 58,
+      "y": 67.265625,
+      "width": 252,
+      "height": 165,
+      "right": 310,
+      "bottom": 232.265625,
+      "inViewport": true
+    },
+    "classes": "fleet-bar",
+    "text": "×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥"
+  },
+  "map": {
+    "x": 48,
+    "y": -279,
+    "width": 272,
+    "height": 523.265625,
+    "right": 320,
+    "bottom": 244.265625,
+    "inViewport": false
+  },
+  "inspector": {
+    "x": 48,
+    "y": 244.265625,
+    "width": 272,
+    "height": 584,
+    "right": 320,
+    "bottom": 828.265625,
+    "inViewport": true
+  },
+  "undo": {
+    "x": 211.75,
+    "y": 729.265625,
+    "width": 90.25,
+    "height": 62,
+    "right": 302,
+    "bottom": 791.265625,
+    "inViewport": true
+  },
+  "end": {
+    "x": 66,
+    "y": 729.265625,
+    "width": 137.75,
+    "height": 62,
+    "right": 203.75,
+    "bottom": 791.265625,
+    "inViewport": true
+  },
+  "endText": {
+    "x": 84,
+    "y": 745.265625,
+    "width": 101.75,
+    "height": 30,
+    "right": 185.75,
+    "bottom": 775.265625,
+    "inViewport": true
+  },
+  "kbd": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "right": 0,
+    "bottom": 0,
+    "inViewport": true
+  },
+  "modal": null,
+  "modalUndo": null,
+  "modalLanguage": null,
+  "modalClose": null,
+  "activeRect": {
+    "x": 66,
+    "y": 729.265625,
+    "width": 137.75,
+    "height": 62,
+    "right": 203.75,
+    "bottom": 791.265625,
+    "inViewport": true
+  },
+  "toasts": [
+    {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "text": "Следопыт 1 прибыл в систему Sundrift."
+    },
+    {
+      "rect": {
+        "x": 16,
+        "y": 12,
+        "width": 288,
+        "height": 79,
+        "right": 304,
+        "bottom": 91,
+        "inViewport": true
+      },
+      "text": "Действие отменено. До завершения цикла вы можете изменить свои приказы."
+    }
+  ],
+  "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n1\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\n×\nСледопыт 1 / Solace\n\nSolace → Sundrift · 1 приказ · Наличие флотов неизвестно\n\nПереместить →\n↶\nУдерживать позицию\n⌁ 3\n⇥\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\n↶ Отменить\nПриказы: 6 · Колонии: 1\nДействие отменено. До завершения цикла вы можете изменить свои приказы.\n● АВТОСОХРАНЕНИЕ\nДействие отменено. До завершения цикла вы можете изменить свои приказы."
+}

@@ -1,0 +1,60 @@
+{
+  "scope": "Read-only default mobile-flow reproduction; no product changes tested.",
+  "files": [
+    {
+      "path": "01-fresh-default.json",
+      "bytes": 4499,
+      "sha256": "b4c5c6965a1ae995a15248c882d2303dd8a21c173d0c1670da5c0776938ea077"
+    },
+    {
+      "path": "01-fresh-default.png",
+      "bytes": 192829,
+      "sha256": "aad4e55846278aee6b83af1afd24360a7eca8ec8e6ab9f61e65ac25815a9a278"
+    },
+    {
+      "path": "02-world-tap.json",
+      "bytes": 2338,
+      "sha256": "41987a85e859b54c3f9bb7b196148243006b90e7ba26dd296c068f6f5c83af68"
+    },
+    {
+      "path": "02-world-tap.png",
+      "bytes": 169593,
+      "sha256": "78fe175c3ef9621fe4e092689cf86ad62beb574f9de4953485513ee7251d8be0"
+    },
+    {
+      "path": "03-escape-workaround.json",
+      "bytes": 1988,
+      "sha256": "73bd1e90bccb4a0b22e5bb71eb3abf5ebdce0275476842a690b61516063d8582"
+    },
+    {
+      "path": "03-escape-workaround.png",
+      "bytes": 195750,
+      "sha256": "16f4e07761dcbf37c016fe237ee04eec5e5304f69135ba96624c1f00ddd3065e"
+    },
+    {
+      "path": "build-pin.json",
+      "bytes": 483,
+      "sha256": "faba4806073da61624f655abde179c7be3abc11fa89fe18d05ff76fef3612256"
+    },
+    {
+      "path": "report.txt",
+      "bytes": 3140,
+      "sha256": "6ba967fc857cd705eba38f8b8c205333ca4f648129c497d282b69b0f63e36cbc"
+    },
+    {
+      "path": "reproduce.mjs",
+      "bytes": 4243,
+      "sha256": "62826230317657f177ae8fbc80bd1074feb853bc5eeac28e45768a39f5304c85"
+    },
+    {
+      "path": "results.json",
+      "bytes": 721,
+      "sha256": "017f1a83b1998c1831ac631c1b33fc34e52ab17794d47fdbcf5f1a719a1da428"
+    },
+    {
+      "path": "tap-candidates.json",
+      "bytes": 222,
+      "sha256": "559fda51fdf34cd7096df63184e578ba982e03f7bdc51a264a8dd30bca8e058e"
+    }
+  ]
+}

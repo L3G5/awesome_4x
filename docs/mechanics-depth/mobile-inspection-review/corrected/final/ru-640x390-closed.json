@@ -1,0 +1,121 @@
+{
+  "viewport": {
+    "width": 640,
+    "height": 390
+  },
+  "documentWidth": 640,
+  "scrollY": 152,
+  "focus": {
+    "tag": "BUTTON",
+    "id": "",
+    "action": "fleet-roster"
+  },
+  "world": "Sundrift",
+  "bar": {
+    "rect": {
+      "x": 58,
+      "y": 224,
+      "width": 119.90625,
+      "height": 52,
+      "right": 177.90625,
+      "bottom": 276,
+      "inViewport": true
+    },
+    "classes": "fleet-bar is-inspecting",
+    "text": "Список флотов →"
+  },
+  "map": {
+    "x": 48,
+    "y": -62,
+    "width": 592,
+    "height": 350,
+    "right": 640,
+    "bottom": 288,
+    "inViewport": false
+  },
+  "inspector": {
+    "x": 48,
+    "y": 288,
+    "width": 592,
+    "height": 513,
+    "right": 640,
+    "bottom": 801,
+    "inViewport": false
+  },
+  "undo": {
+    "x": 531.75,
+    "y": 717,
+    "width": 90.25,
+    "height": 47,
+    "right": 622,
+    "bottom": 764,
+    "inViewport": false
+  },
+  "end": {
+    "x": 66,
+    "y": 717,
+    "width": 457.75,
+    "height": 47,
+    "right": 523.75,
+    "bottom": 764,
+    "inViewport": false
+  },
+  "endText": {
+    "x": 84,
+    "y": 733,
+    "width": 124.1875,
+    "height": 15,
+    "right": 208.1875,
+    "bottom": 748,
+    "inViewport": false
+  },
+  "kbd": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "right": 0,
+    "bottom": 0,
+    "inViewport": true
+  },
+  "modal": null,
+  "modalUndo": null,
+  "modalLanguage": null,
+  "modalClose": null,
+  "activeRect": {
+    "x": 64,
+    "y": 230,
+    "width": 107.90625,
+    "height": 40,
+    "right": 171.90625,
+    "bottom": 270,
+    "inViewport": true
+  },
+  "toasts": [
+    {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0,
+        "inViewport": true
+      },
+      "text": "Следопыт 1 прибыл в систему Sundrift."
+    },
+    {
+      "rect": {
+        "x": 32,
+        "y": 12,
+        "width": 576,
+        "height": 45,
+        "right": 608,
+        "bottom": 57,
+        "inViewport": true
+      },
+      "text": "Действие отменено. До завершения цикла вы можете изменить свои приказы."
+    }
+  ],
+  "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\n↶ Отменить\nПриказы: 6 · Колонии: 1\nДействие отменено. До завершения цикла вы можете изменить свои приказы.\n● АВТОСОХРАНЕНИЕ\nДействие отменено. До завершения цикла вы можете изменить свои приказы."
+}

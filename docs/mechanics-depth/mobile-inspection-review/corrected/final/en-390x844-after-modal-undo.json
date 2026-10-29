@@ -1,0 +1,108 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "documentWidth": 390,
+  "scrollY": 0,
+  "focus": {
+    "tag": "H2",
+    "id": ""
+  },
+  "world": "Your archives",
+  "bar": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0,
+      "inViewport": true
+    },
+    "classes": "fleet-bar is-inspecting",
+    "text": "A galaxy of possibilities.Select a fleet in orbit to explore the frontier.Fleet roster →"
+  },
+  "map": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "right": 0,
+    "bottom": 0,
+    "inViewport": true
+  },
+  "inspector": {
+    "x": 48,
+    "y": 618.265625,
+    "width": 342,
+    "height": 591.578125,
+    "right": 390,
+    "bottom": 1209.84375,
+    "inViewport": false
+  },
+  "undo": {
+    "x": 308.890625,
+    "y": 1127.84375,
+    "width": 63.109375,
+    "height": 46,
+    "right": 372,
+    "bottom": 1173.84375,
+    "inViewport": false
+  },
+  "end": {
+    "x": 66,
+    "y": 1127.84375,
+    "width": 234.890625,
+    "height": 46,
+    "right": 300.890625,
+    "bottom": 1173.84375,
+    "inViewport": false
+  },
+  "endText": {
+    "x": 84,
+    "y": 1143.84375,
+    "width": 89.046875,
+    "height": 14,
+    "right": 173.046875,
+    "bottom": 1157.84375,
+    "inViewport": false
+  },
+  "kbd": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "right": 0,
+    "bottom": 0,
+    "inViewport": true
+  },
+  "modal": null,
+  "modalUndo": null,
+  "modalLanguage": null,
+  "modalClose": null,
+  "activeRect": {
+    "x": 63,
+    "y": 134,
+    "width": 312,
+    "height": 34,
+    "right": 375,
+    "bottom": 168,
+    "inViewport": true
+  },
+  "toasts": [
+    {
+      "rect": {
+        "x": 19.5,
+        "y": 12,
+        "width": 351,
+        "height": 60,
+        "right": 370.5,
+        "bottom": 72,
+        "inViewport": true
+      },
+      "text": "Action undone. You can revise your orders before ending this cycle."
+    }
+  ],
+  "body": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n6 / 6\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\nChoose a research direction. Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.\nAll\nEngineering\nSociety\nPhysics\nMilitary\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 01\n2400 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nAction undone. You can revise your orders before ending this cycle.\n● AUTOSAVED\nAction undone. You can revise your orders before ending this cycle."
+}
