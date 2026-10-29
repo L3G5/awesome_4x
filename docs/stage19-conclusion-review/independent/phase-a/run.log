@@ -1,0 +1,9 @@
+{"name":"watch-desktop","status":"pass","checks":9}
+{"name":"iron-narrow","status":"pass","checks":5}
+{"name":"legacy-network","status":"pass","checks":3}
+{"name":"loss-empty","status":"fail","checks":0,"error":"The input did not match the regular expression /Lumen Choir/. Input:\n\n'The Luminous Choir · Recorded victor'\n"}
+{"name":"stale-history","status":"pass","checks":2}
+{"name":"race-privacy","status":"pass","checks":2}
+{"name":"ordinary-ending","status":"pass","checks":2}
+{"name":"fallback","status":"pass","checks":1}
+{"passed":7,"failed":1}

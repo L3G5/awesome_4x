@@ -1,0 +1,15 @@
+
+> asterion-reach@0.18.0 test:browser
+> playwright test tests/conclusion-ui.spec.js --grep loss with|tied public
+
+
+Running 2 tests using 1 worker
+
+(node:542382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:542382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/conclusion-ui.spec.js:106:1 › a loss with no retained history shows the recorded victor and own holdings without a fabricated timeline (2.6s)
+  ✓  2 tests/conclusion-ui.spec.js:124:1 › the actual tied public race explains Legacy and seeded ties without exposing private rival scores (3.0s)
+
+  2 passed (6.7s)

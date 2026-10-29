@@ -1,0 +1,71 @@
+
+> asterion-reach@0.18.0 test:browser
+> playwright test tests/conclusion-ui.spec.js tests/development-ui.spec.js
+
+
+Running 12 tests using 1 worker
+
+(node:541307) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:541307) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/conclusion-ui.spec.js:28:1 › the completed WATCH campaign reopens, links retained reports and exports its exact saved outcome (3.7s)
+  ✓   2 tests/conclusion-ui.spec.js:65:1 › the actual military ending remains usable at 390 pixels and labels its capped retained history (2.0s)
+  ✓   3 tests/conclusion-ui.spec.js:88:1 › an older recorded Transcendence remains authoritative without inventing missing alignment progress (1.7s)
+  ✘   4 tests/conclusion-ui.spec.js:105:1 › a loss with no retained history shows the recorded victor and own holdings without a fabricated timeline (6.9s)
+(node:541567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:541567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 tests/conclusion-ui.spec.js:123:1 › the actual tied public race explains Legacy and seeded ties without exposing private rival scores (3.2s)
+  ✓   6 tests/conclusion-ui.spec.js:146:1 › a normal advancing cycle opens the new conclusion with its exact authoritative win state (3.6s)
+  ✓   7 tests/development-ui.spec.js:22:1 › a capped civic upgrade discloses zero usable orders while preserving the legal credit investment (4.7s)
+  ✓   8 tests/development-ui.spec.js:51:1 › a full colony replaces infrastructure on completion and establishes a persistent specialty (7.7s)
+  ✓   9 tests/development-ui.spec.js:100:1 › a forge displays and charges the discounted military ship price (2.4s)
+  ✓  10 tests/development-ui.spec.js:117:1 › public beacon signals show an interrupted race without revealing hidden fleets (3.8s)
+  ✓  11 tests/development-ui.spec.js:144:1 › a beacon blockade loses an alignment step and a player fleet can restore the race (4.6s)
+  ✓  12 tests/development-ui.spec.js:177:1 › a rival nearing alignment completion opens a briefing and highlights its public network (2.0s)
+
+
+  1) tests/conclusion-ui.spec.js:105:1 › a loss with no retained history shows the recorded victor and own holdings without a fabricated timeline 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('.conclusion-victor')
+    Expected substring: [32m"[7mLumen Choi[27mr"[39m
+    Received string:    [31m"[7mThe Luminous Choir · Recorded victo[27mr"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('.conclusion-victor')[22m
+    [2m    9 × locator resolved to <p class="conclusion-victor">…</p>[22m
+    [2m      - unexpected value "The Luminous Choir · Recorded victor"[22m
+
+
+      109 |   await load(page, state); await reopenFromMenu(page);
+      110 |   await expect(page.locator('.conclusion-heading')).toContainText('CAMPAIGN CONCLUDED');
+    > 111 |   await expect(page.locator('.conclusion-victor')).toContainText('Lumen Choir');
+          |                                                    ^
+      112 |   await expect(page.locator('.conclusion-empty')).toContainText('No moments');
+      113 |   await expect(page.locator('.conclusion-moment')).toHaveCount(0);
+      114 |   await holdings(page, { colonies: 5, population: 43, ships: 17, techs: 11, score: 698 });
+        at /tmp/asterion-stage19-conclusion/tests/conclusion-ui.spec.js:111:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/conclusion-ui-a-loss-with--172be-thout-a-fabricated-timeline/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/conclusion-ui-a-loss-with--172be-thout-a-fabricated-timeline/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/conclusion-ui-a-loss-with--172be-thout-a-fabricated-timeline/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/conclusion-ui-a-loss-with--172be-thout-a-fabricated-timeline/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/conclusion-ui.spec.js:105:1 › a loss with no retained history shows the recorded victor and own holdings without a fabricated timeline 
+  11 passed (48.9s)

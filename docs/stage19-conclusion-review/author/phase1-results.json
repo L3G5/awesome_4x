@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-10-29T01:02:08.991Z",
+  "method": "Author visual review only; four pure inspection cases, no game commands and no campaign mutations. Browser actions: menu, conclusion, scroll, Escape. Root owns independent integration/action tests.",
+  "sourceHashes": {
+    "conclusion-ui.js": "fc4b81a91001fe72984ab624cd72599f0d8abb98cf2a116ce5f582dd8c386d63",
+    "conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+    "conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "main.js": "79969b5016303778387c4a1b74fe6f050488adbb53ce58acd1fdd7095fcfdbe2",
+    "victory-ui.js": "5c02e63ecd6e57d7750d6e6a7caa38214e09a956189170aaef3fe975fc2d1f27",
+    "style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+  },
+  "results": [
+    {
+      "name": "watch-1280",
+      "width": 1280,
+      "provenance": "Actual exported completed campaign",
+      "originalPath": "/tmp/asterion-stage19-conclusion/docs/watch-playtest/checkpoints/cycle60.json",
+      "originalSha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "fixtureJsonSha256": "d9cdd751b9a6af62aca35ed7fc631d4967679339e13a230add40ff8d58f0fda9",
+      "passed": true,
+      "holdings": [
+        5,
+        43,
+        17,
+        11,
+        698
+      ],
+      "noHorizontalOverflow": true,
+      "inspectionPure": true,
+      "reducedMotion": true
+    },
+    {
+      "name": "watch-390",
+      "width": 390,
+      "provenance": "Actual exported completed campaign",
+      "originalPath": "/tmp/asterion-stage19-conclusion/docs/watch-playtest/checkpoints/cycle60.json",
+      "originalSha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "fixtureJsonSha256": "d9cdd751b9a6af62aca35ed7fc631d4967679339e13a230add40ff8d58f0fda9",
+      "passed": true,
+      "holdings": [
+        5,
+        43,
+        17,
+        11,
+        698
+      ],
+      "noHorizontalOverflow": true,
+      "inspectionPure": true,
+      "reducedMotion": true
+    },
+    {
+      "name": "military-1280",
+      "width": 1280,
+      "provenance": "Actual exported completed campaign",
+      "originalPath": "/tmp/asterion-stage19-conclusion/docs/military-playtest/replay/actual-exports/cycle57.json",
+      "originalSha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "fixtureJsonSha256": "b8db525d48b552e41f9c1dbbc62f5da6c637b746f77d4959632fa00d51c20014",
+      "passed": true,
+      "holdings": [
+        12,
+        104,
+        15,
+        11,
+        745
+      ],
+      "noHorizontalOverflow": true,
+      "inspectionPure": true,
+      "reducedMotion": true
+    },
+    {
+      "name": "legacy-390",
+      "width": 390,
+      "provenance": "Actual completed WATCH60 copy with only player alignment metadata omitted. Not a historical export.",
+      "originalPath": null,
+      "originalSha256": null,
+      "fixtureJsonSha256": "4ebbb054b3d9a285205285ad2f1cbf92389857abc7992665dd9d9a203b5a5cf6",
+      "passed": true,
+      "holdings": [
+        5,
+        43,
+        17,
+        11,
+        698
+      ],
+      "noHorizontalOverflow": true,
+      "inspectionPure": true,
+      "reducedMotion": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+
+> asterion-reach@0.19.0 test:browser
+> playwright test tests/trade-offers-ui.spec.js tests/workspace-ui.spec.js
+
+
+Running 6 tests using 1 worker
+
+(node:547862) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:547862) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/trade-offers-ui.spec.js:33:1 › an incoming trade proposal keeps borders closed until the player accepts the funded terms (3.5s)
+  ✓  2 tests/trade-offers-ui.spec.js:65:1 › declining refunds the proposer and leaves a later player-initiated treaty available (1.7s)
+  ✓  3 tests/trade-offers-ui.spec.js:85:1 › an expired imported proposal stays out of badges and cards without changing the save during inspection (2.7s)
+  ✓  4 tests/trade-offers-ui.spec.js:98:1 › zero-order trade terms keep keyboard focus inside the readable dialog (1.7s)
+  ✓  5 tests/trade-offers-ui.spec.js:117:1 › the verified military campaign shows binding peace terms and preserves its recorded settlement and garrison split (4.2s)
+  ✓  6 tests/workspace-ui.spec.js:4:1 › command context follows its workspace without disclosing uncontacted civilizations or changing the campaign (2.3s)
+
+  6 passed (17.3s)

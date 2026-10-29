@@ -1,0 +1,21 @@
+{
+  "uiCommit": "5d8129f",
+  "phase1": {
+    "results": "phase1-results.json",
+    "screenshots": "phase1/",
+    "script": "phase1/visual.mjs",
+    "sourceSnapshots": "sources-phase1/",
+    "cases": 4
+  },
+  "final": {
+    "results": "final-results.json",
+    "script": "final-navigation.mjs",
+    "sourceSnapshots": "sources-final/",
+    "cases": 2
+  },
+  "changedSources": [
+    "conclusion-ui.js",
+    "main.js"
+  ],
+  "changes": "conclusion-ui.js changes Inspect galaxy to conclusion-galaxy and clarifies reports involve the civilization; main.js adds explicit galaxy navigation. Source hashes identify exact phase, not an inferred historical revision."
+}

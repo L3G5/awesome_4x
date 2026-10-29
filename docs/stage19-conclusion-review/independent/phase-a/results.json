@@ -1,0 +1,474 @@
+{
+  "scope": "Independent review of integrated UI/main/victory-ui. Reviewer authored conclusion.js; this is not an independent review of that core helper.",
+  "started": "2026-10-29T01:08:16.267Z",
+  "repo": "/tmp/asterion-stage19-conclusion",
+  "base": "http://127.0.0.1:5206",
+  "commit": "8073c49ecabd47b1b81f0f0a5eb492e3edf084b3",
+  "initialSourceHashes": {
+    "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+    "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+    "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+    "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+    "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+  },
+  "fixtures": {
+    "watch60": {
+      "file": "docs/watch-playtest/checkpoints/cycle60.json",
+      "sha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec"
+    },
+    "watch51": {
+      "file": "docs/watch-playtest/checkpoints/cycle51.json",
+      "sha256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698"
+    },
+    "watch56": {
+      "file": "docs/watch-playtest/checkpoints/cycle56.json",
+      "sha256": "8dbe53b4cbbf205bd50a1edf55496e7ce4a407a4973828673318578ad9210333"
+    },
+    "iron57": {
+      "file": "docs/military-playtest/replay/actual-exports/cycle57.json",
+      "sha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397"
+    }
+  },
+  "cases": [
+    {
+      "name": "watch-desktop",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "Actual WATCH imported through the file picker and restore confirmation without state changes",
+        "Saved winner, own holdings and Legacy are correct",
+        "Retained history counts and incomplete-history limitation are explicit",
+        "Close control receives initial focus and Tab/Shift+Tab wrap within the modal",
+        "Retained report link opens its recorded engagement",
+        "Remembered expedition link opens its observer-safe record",
+        "Conclusion export preserves the full exact actual saved state",
+        "Conclusion → Chronicle → conclusion → Inspect galaxy returns to the actual map",
+        "Reload and menu reopening preserve the completed campaign"
+      ],
+      "screenshots": [
+        "watch-desktop-top.png"
+      ],
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "iron-narrow",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "Actual military ending shows the final four-world sovereignty and own metrics",
+        "390-pixel modal remains within viewport with no horizontal content overflow",
+        "Keyboard focus reaches the footer and scrolls the long conclusion",
+        "Founding-world link leaves the ending and selects Lumen on the map",
+        "Escape returns focus to the menu opener"
+      ],
+      "screenshots": [
+        "iron-narrow-top.png",
+        "iron-narrow-bottom.png"
+      ],
+      "bounds": {
+        "left": 12,
+        "right": 378,
+        "top": 42.203125,
+        "bottom": 801.796875,
+        "width": 390,
+        "height": 844,
+        "contentWidth": 364,
+        "scrollWidth": 364,
+        "scrollHeight": 2124,
+        "clientHeight": 758
+      },
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "legacy-network",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "Synthetic legacy save preserves Transcendence without inventing alignment or participants",
+        "Empire and public race show missing progress rather than inferred 10/10",
+        "Beacon inspection also preserves unknown legacy progress"
+      ],
+      "screenshots": [
+        "legacy-network-ending.png",
+        "legacy-network-beacon.png"
+      ],
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "loss-empty",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [],
+      "screenshots": [
+        "loss-empty-failure.png"
+      ],
+      "status": "fail",
+      "driverError": {
+        "message": "The input did not match the regular expression /Lumen Choir/. Input:\n\n'The Luminous Choir · Recorded victor'\n",
+        "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Lumen Choir/. Input:\n\n'The Luminous Choir · Recorded victor'\n\n    at file:///tmp/asterion-stage19-independent-review/review.mjs:73:172\n    at async run (file:///tmp/asterion-stage19-independent-review/review.mjs:33:8)\n    at async file:///tmp/asterion-stage19-independent-review/review.mjs:71:1"
+      },
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "stale-history",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "Pruned report references retain the historical text without dead report buttons",
+        "Safe system fallback still opens Haven"
+      ],
+      "screenshots": [
+        "stale-history-ending.png"
+      ],
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "race-privacy",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "Actual tied race displays public progress, the qualification rule and only own Legacy",
+        "Changing every rival Legacy by 40 plus private treasuries leaves public-race HTML byte-identical"
+      ],
+      "screenshots": [
+        "race-privacy-public.png"
+      ],
+      "foreignScores": [
+        {
+          "id": "veyr",
+          "before": 426,
+          "after": 466
+        },
+        {
+          "id": "khar",
+          "before": 186,
+          "after": 226
+        },
+        {
+          "id": "choir",
+          "before": 724,
+          "after": 764
+        }
+      ],
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "ordinary-ending",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": false,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "An ordinary end-cycle command opens the new ending and exactly matches the fixed engine result from an explicit near-finish fixture",
+        "The completed map disables another cycle and replaces the live funding mandate"
+      ],
+      "screenshots": [
+        "ordinary-ending-ending.png"
+      ],
+      "finalTurn": 57,
+      "finalRng": 771715808,
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    },
+    {
+      "name": "fallback",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "fallback": true,
+      "sourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      ],
+      "checks": [
+        "Forced WebGL failure keeps the conclusion and tactical-chart return usable without page errors"
+      ],
+      "screenshots": [
+        "fallback-ending.png",
+        "fallback-map.png"
+      ],
+      "status": "pass",
+      "finalSourceHashes": {
+        "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+        "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+        "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+        "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+        "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+        "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+        "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+        "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+        "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+      }
+    }
+  ],
+  "finished": "2026-10-29T01:08:33.136Z",
+  "finalSourceHashes": {
+    "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+    "src/victory-ui.js": "97f008e5e14bcf9bcfd33efcc665510dec180e2dcf20e96ca15ff60bee82362a",
+    "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+    "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+    "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+  },
+  "passed": 7,
+  "failed": 1
+}

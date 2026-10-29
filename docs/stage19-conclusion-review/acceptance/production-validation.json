@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-10-29T01:23:01.912875+00:00",
+  "version": "0.19.0",
+  "rules": {
+    "passed": 375,
+    "failed": 0
+  },
+  "productionBrowser": {
+    "uniqueCasesPassed": 64,
+    "firstRunPassed": 58,
+    "firstRunExitCode": 143,
+    "firstRunLimitation": "The process ended with SIGTERM; cause not established. No failed case appeared before interruption. This is not reported as one completed full run.",
+    "remainingRunPassed": 6,
+    "remainingRunSeconds": 17.3,
+    "sameImmutableBuild": true
+  },
+  "independentInteraction": {
+    "cases": 8,
+    "checks": 25,
+    "scope": "Reviewer authored conclusion.js; independent of integrated interface and main/victory-ui changes."
+  },
+  "independentProductionVisual": {
+    "cases": 2,
+    "viewports": [
+      1280,
+      390
+    ],
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "fonts": [
+      "DM Sans Variable",
+      "Marcellus"
+    ]
+  },
+  "sourceHashes": {
+    "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+    "src/victory-ui.js": "075469c60b1fcf5d59a7abfcafdde9b34840a3ebccbdb4931727620104221634",
+    "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+    "src/conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+    "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "package.json": "701f1e34b4a443ea23c849e67040da8110fbf179dc45de3b612d0c8d0b396048"
+  },
+  "inputHashes": {
+    "watch60": {
+      "file": "docs/watch-playtest/checkpoints/cycle60.json",
+      "sha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec"
+    },
+    "watch51": {
+      "file": "docs/watch-playtest/checkpoints/cycle51.json",
+      "sha256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698"
+    },
+    "watch56": {
+      "file": "docs/watch-playtest/checkpoints/cycle56.json",
+      "sha256": "8dbe53b4cbbf205bd50a1edf55496e7ce4a407a4973828673318578ad9210333"
+    },
+    "iron57": {
+      "file": "docs/military-playtest/replay/actual-exports/cycle57.json",
+      "sha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397"
+    }
+  },
+  "buildMetadata": {
+    "version": "0.19.0",
+    "commit": "8073c49ecabd47b1b81f0f0a5eb492e3edf084b3",
+    "builtAt": "2026-10-29T01:10:47.445Z"
+  },
+  "compiled": [
+    {
+      "file": "index.html",
+      "sha256": "120bee2bd1e01afb4eedb63233156be3f3ea6807adcecf273c3da7c72f6a1f2b",
+      "bytes": 876,
+      "servedBytesMatch": true
+    },
+    {
+      "file": "build-info.json",
+      "sha256": "ef04e4a6ee7aa27bc53f190a16ef8e5508f085265227e229187b6bd1bcac6080",
+      "bytes": 122,
+      "servedBytesMatch": true
+    },
+    {
+      "file": "assets/index-ChfLk_8y.js",
+      "sha256": "e48145fcb3790fcf9b2c94bd811af974f575007580570637a72ec3a0aad12db1",
+      "bytes": 880061,
+      "servedBytesMatch": true
+    },
+    {
+      "file": "assets/index-SmGXpBaN.css",
+      "sha256": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef",
+      "bytes": 75867,
+      "servedBytesMatch": true
+    }
+  ],
+  "javascriptGzipKB": 246.32,
+  "gzipMeasurement": "Vite build output",
+  "reviewLimitations": "Original UI author and independent development phases used fallback fonts because Vite rejected shared font filesystem paths. Separate immutable production follow-up confirms intended fonts. Prior driver naming errors remain preserved as errors, not product regressions."
+}

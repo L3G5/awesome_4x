@@ -7,6 +7,7 @@ import './combat-rounds.css';
 import './conquest.css';
 import './investment.css';
 import './reinforcement.css';
+import './conclusion.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
@@ -20,6 +21,7 @@ import { renderDefenseControls, renderDefenseBadge } from './defense-ui.js';
 import { renderSplitDialog, renderColonyRepairSummary, renderFleetReadiness } from './fleet-ui.js';
 import { getMergePreview, getReinforcementPreview } from './reinforcement.js';
 import { renderReinforcementPanel, renderMergeControls, renderMergeSummary, renderMergeDialog } from './reinforcement-ui.js';
+import { renderCampaignConclusion } from './conclusion-ui.js';
 import { getFleetReadiness, getReadyFleets } from './game.js';
 import { formatHull } from './hull-format.js';
 import { renderPublicDispatchLinks, renderSovereigntyNote } from './public-affairs-ui.js';
@@ -112,8 +114,8 @@ function render() {
   $('#map-meta').innerHTML = `<span class="live-dot"></span>${getVisibleSystems(state).length} charted systems · ${stats.explored} surveyed · seed ${escape(state.seed)}`;
   const alignment = getAlignmentStatus(state,'player');
   const rivalRace = getPublicRaces(state).filter(r=>r.factionId!=='player'&&r.progress>0).sort((a,b)=>b.progress-a.progress)[0];
-  const mandate = rivalRace?.progress>=5 && rivalRace.progress>=alignment.progress ? ['A RIVAL AWAKENS THE NETWORK',`${rivalRace.name} has reached ${rivalRace.progress}/${rivalRace.target} alignment. Review its public beacon signals in Empire.`] : stats.colonies<2 ? ['YOUR FIRST MANDATE','Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Beacons restored · alignment ${alignment.progress}/${alignment.target}. ${alignment.ready?`Protect the network and fund ${alignment.cost} credits each cycle.`:alignment.reason}`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
-  $('#mandate').innerHTML = `<strong>${escape(mandate[0])}</strong>${escape(mandate[1])}${rivalRace?.progress>=5?'<button class="small-button ghost" data-action="review-network">Review network →</button>':''}`;
+  const mandate = state.winner ? ['THE CHRONICLE IS COMPLETE',`${FACTIONS[state.winner]?.name||'The galaxy'} · ${state.victoryType} · Cycle ${state.turn}. Review the conclusion or inspect the final galaxy.`] : rivalRace?.progress>=5 && rivalRace.progress>=alignment.progress ? ['A RIVAL AWAKENS THE NETWORK',`${rivalRace.name} has reached ${rivalRace.progress}/${rivalRace.target} alignment. Review its public beacon signals in Empire.`] : stats.colonies<2 ? ['YOUR FIRST MANDATE','Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Beacons restored · alignment ${alignment.progress}/${alignment.target}. ${alignment.ready?`Protect the network and fund ${alignment.cost} credits each cycle.`:alignment.reason}`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
+  $('#mandate').innerHTML = `<strong>${escape(mandate[0])}</strong>${escape(mandate[1])}${state.winner?'<button class="small-button ghost" data-action="show-conclusion">Review this age →</button>':rivalRace?.progress>=5?'<button class="small-button ghost" data-action="review-network">Review network →</button>':''}`;
   const empireButton=$('[data-page="empire"]');
   empireButton.querySelector('.nav-badge')?.remove();
   empireButton.setAttribute('aria-label',`Empire${rivalRace?`, rival alignment ${rivalRace.progress} of ${rivalRace.target}`:''}`);
@@ -210,7 +212,7 @@ function renderPage() {
     const victory=getVictoryProgress(state);
     html=`<div class="page-top"><div><div class="eyebrow">MANY WORLDS. ONE HORIZON.</div><h2>The Concord</h2><p>Make a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.</p></div><div class="page-symbol">⌘</div></div><div class="empire-overview"><div class="overview-card"><div class="eyebrow">COLONIZED WORLDS</div><strong>${stats.colonies}</strong><p>${stats.population} billion citizens across the Reach</p></div><div class="overview-card"><div class="eyebrow">FLEET POWER</div><strong>${num(stats.military)}</strong><p>${stats.ships} ships · ${stats.upkeep} credits upkeep / cycle</p></div><div class="overview-card"><div class="eyebrow">LEGACY SCORE</div><strong>${num(stats.score)}</strong><p>Highest score at cycle ${victory.legacy.finalTurn} wins</p></div></div>${renderColonyTable(state,colonySort,colonySortDirection)}<div class="victory-grid">${renderAlignmentCard(state)}${renderConquestCard(state)}</div><section class="network-section"><div class="section-label">The awakening network</div>${renderPublicRaces(state)}</section><div class="panel-section" style="margin-top:22px;padding-left:0;padding-right:0"><div class="section-label">Fleet registry</div><div class="fleet-list">${state.fleets.filter(f=>f.owner==='player').map(f=>`<button class="fleet-row" data-fleet="${f.id}">${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)} ×${f.ships}${renderDefenseBadge(f)}<small>${escape(systemById(f.systemId).name)} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull · ${fleetPower(state,f)} combat power</small></span>${renderFleetReadiness(state,f)}</button>`).join('')}</div></div>`;
   } else if (page==='journal') {
-    html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p></div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','research','combat','diplomacy','war','sovereignty'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><div><p>${escape(l.text)}</p>${l.reportId && getCombatReport(state,l.reportId)?`<button class="small-button" style="margin-top:10px" data-action="combat-report" data-report="${l.reportId}">Battle report →</button>`:''}${l.type==='discovery' && l.systemId && getDiscoveryView(state,l.systemId)?`<button class="small-button" style="margin-top:10px" data-action="anomaly" data-system="${l.systemId}">Expedition record →</button>`:''}${l.publicAffairId?`<div class="public-affair-links">${renderPublicDispatchLinks({...l,systemName:systemById(l.systemId)?.name})}</div>`:''}</div></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
+    html=`<div class="page-top"><div><div class="eyebrow">THE RECORD OF AN AGE</div><h2>Your chronicle</h2><p>Every discovery, every world, every promise. The story of your civilization, one cycle at a time.</p>${state.winner?'<button class="small-button" data-action="show-conclusion">Review this age →</button>':''}</div><div class="page-symbol">☷</div></div><div class="filter-tabs">${['All','discovery','construction','research','combat','diplomacy','war','sovereignty'].map(c=>`<button data-log-filter="${c}" class="${logFilter===c?'active':''}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}</div>${state.log.filter(l=>logFilter==='All'||l.type===logFilter).map(l=>`<article class="log-item"><div><time>CYCLE ${String(l.turn).padStart(2,'0')}</time><div class="log-type">${escape(l.type)}</div></div><div><p>${escape(l.text)}</p>${l.reportId && getCombatReport(state,l.reportId)?`<button class="small-button" style="margin-top:10px" data-action="combat-report" data-report="${l.reportId}">Battle report →</button>`:''}${l.type==='discovery' && l.systemId && getDiscoveryView(state,l.systemId)?`<button class="small-button" style="margin-top:10px" data-action="anomaly" data-system="${l.systemId}">Expedition record →</button>`:''}${l.publicAffairId?`<div class="public-affair-links">${renderPublicDispatchLinks({...l,systemName:systemById(l.systemId)?.name})}</div>`:''}</div></article>`).join('')||'<p class="empty-note">This chapter has yet to be written.</p>'}`;
   }
   $('#workspace-page').innerHTML=html;
 }
@@ -218,7 +220,7 @@ function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
   $('#toasts').replaceChildren();
   modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><div class="modal-content">${html}</div></section></div>`;
-  const focusTarget=type==='combat-report'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'});
+  const focusTarget=type==='combat-report'||type==='conclusion'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'||type==='conclusion'});
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
 function buildMenu(systemId,tab='building',replaceBuildingId=null) {
@@ -251,7 +253,7 @@ function showFleetHeritage(fleetId) {
   openModal('heritage',`<div class="eyebrow">CONCORD FLEET HERITAGE</div><h2 id="modal-title">${escape(fleet.name)}</h2><div class="heritage-portrait">${renderShipPortrait(fleet.type,fleet.owner,true)}</div><p class="modal-lead">The discoveries carried forward by this task force. These records survive mergers; they do not imply that every original hull remains.</p><div class="discovery-history">${(fleet.heritage||[]).map(entry=>`<article class="discovery-history-entry"><div class="discovery-history-meta">RECOVERED IN CYCLE ${entry.turn} · ${escape(FACTIONS[entry.factionId].shortName)}</div><h3>${escape(entry.name)}</h3><p>Recovered from ${escape(systemById(entry.systemId).name)}. The expedition's story remains with this fleet.</p><button class="small-button ghost" data-action="heritage-origin" data-system="${entry.systemId}">Read the expedition record →</button></article>`).join('')}</div>`);
 }
 function showMenu() {
-  openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · ${escape(state.seed)} · The Concord</p><div class="menu-grid"><button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
+  openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · ${escape(state.seed)} · The Concord</p><div class="menu-grid">${state.winner?'<button data-action="show-conclusion">Review this age</button>':''}<button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
 }
 function briefingKey() {
   return state.lastBriefing ? `${state.seed}:${state.lastBriefing.turn}:${state.lastBriefing.entries[0]?.id || 0}` : '';
@@ -324,9 +326,9 @@ function advanceTurn(force=false) {
   }
 }
 function showVictory() {
-  const won=state.winner==='player';
-  openModal('victory',`<div class="eyebrow">THE END OF AN AGE · CYCLE ${state.turn}</div><h2 id="modal-title">${won?'The stars remember your name.':'A new power shapes the Reach.'}</h2><p class="modal-lead">${escape(FACTIONS[state.winner]?.name||'The galaxy')} · ${escape(state.victoryType)}<br>Your legacy: ${getEmpireStats(state).score} points, ${getEmpireStats(state).colonies} worlds, ${player().techs.length} discoveries.</p><p class="empty-note">Your chronicle and galaxy remain available to inspect. Export the campaign from the menu to preserve this age.</p><div class="modal-actions"><button data-action="close-modal">View the galaxy</button><button class="primary" data-action="new-game-menu">A new beginning</button></div>`);
+  if(state.winner)openModal('conclusion',renderCampaignConclusion(state),true);
 }
+
 function exportSave() {
   const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
   a.href=url; a.download=`asterion-reach-cycle-${state.turn}.json`; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); toast('Campaign exported. Keep this file as your backup.');
@@ -344,12 +346,15 @@ document.addEventListener('click',event=>{
   const el=event.target.closest('button,a'); if (!el||el.disabled) return;
   if (el.dataset.page) return setPage(el.dataset.page);
   if (el.dataset.fleet) { if(modalType==='fleet-roster')closeModal(); return selectFleet(el.dataset.fleet); }
-  if (el.dataset.systemSelect) return selectSystem(el.dataset.systemSelect);
+  if (el.dataset.systemSelect) { if(modalType==='conclusion')closeModal(); return selectSystem(el.dataset.systemSelect); }
   if (el.dataset.researchFilter) { researchFilter=el.dataset.researchFilter;return renderPage(); }
   if (el.dataset.logFilter) {logFilter=el.dataset.logFilter;return renderPage();}
   const action=el.dataset.action;
   switch(action){
     case 'menu':showMenu();break;
+    case 'show-conclusion':showVictory();break;
+    case 'conclusion-chronicle':closeModal();setPage('journal');break;
+    case 'conclusion-galaxy':closeModal();setPage('galaxy');break;
     case 'briefing':showCycleBriefing();break;
     case 'review-network':setPage('empire');$('.network-section')?.scrollIntoView({block:'start'});break;
     case 'combat-report':showReports([Number(el.dataset.report)]);break;

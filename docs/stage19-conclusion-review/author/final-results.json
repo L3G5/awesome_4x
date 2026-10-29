@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-10-29T01:03:51.592Z",
+  "method": "Two final targeted author checks after conclusion-galaxy navigation and civilization wording changes. These do not relabel or repeat the four earlier phase-1 cases.",
+  "sourceHashes": {
+    "conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+    "conclusion.css": "b94eeab1d0fee7fa9e956be0834f4e535fd4c8b8ad56c90a29647fe34d6c8980",
+    "conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+    "victory-ui.js": "5c02e63ecd6e57d7750d6e6a7caa38214e09a956189170aaef3fe975fc2d1f27",
+    "style.css": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+  },
+  "results": [
+    {
+      "width": 1280,
+      "passed": true,
+      "chronicleOrigin": true,
+      "inspectReturnsToGalaxy": true,
+      "closeInitialFocus": true,
+      "keyboardNextAction": true,
+      "noHorizontalOverflow": true,
+      "inspectionPure": true
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "chronicleOrigin": true,
+      "inspectReturnsToGalaxy": true,
+      "closeInitialFocus": true,
+      "keyboardNextAction": true,
+      "noHorizontalOverflow": true,
+      "inspectionPure": true
+    }
+  ]
+}
