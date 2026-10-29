@@ -1,0 +1,473 @@
+{
+  "request": 6,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41371/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n366+88\nCREDITS\n◇\n142+36\nMINERALS\n✧\n0+45\nSCIENCE\n⌘\n10 / 10\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nMeridian\nVOLCANIC\nHesper\nBARREN\nAurelia\nVOLCANIC\nCaldera\nGLACIAL\nVelorum\nGLACIAL\nCarina\nVEYR\nIlyra\nKHAR\nOrison\nGLACIAL\nCinder\nOCEAN\nSundrift\nGLACIAL\nThalassa\nCHOIR\nOphion\nARID\nTethys\nKHAR\nAster\nVEYR\nNyx\nGLACIAL\nHaven\nTERRAN\nAldebaran\nARID\nIona\nVOLCANIC\nHalcyon\nCONCORD\nAntares\nCONCORD\nSeraph\nBARREN\nPeregrine\nARID\nMorrow\nTERRAN\nZenith\nVOLCANIC\nEos\nVOLCANIC\nTerminus\nUNSURVEYED\nAsterion\nCONCORD\n▴\n△\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n41 charted systems · 37 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n4 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nLast Light of Haven / Halcyon\n\nHalcyon → Haven · 1 order · Fleet presence unknown · Holding position\n\nMove →\n↶\nResume\nHeritage ✦\n⌁ 3\n⇥\n△\n▴\n▴\nUNCLAIMED FRONTIER\nHaven\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n88%\nHABITABILITY\n1\nORE RICHNESS\n1\nSCIENCE\nEXPEDITION RECORD\n✦\nThe Hollow Sun\n\nLast observed in cycle 21. Send an expedition for an updated report.\n\nFinish the ancient escort · cycle 2\n\nRead expedition record →\nORBITAL APPROACH\nLast Light of Haven\n1 ship · 34 / 34 hull\n\nOnly this formation attacks. Nearby friendly fleets do not combine their fire.\n\nFleet presence unknown. Arrival can trigger combat.\n\nEnter orbit · 1 order + 1 move\nCONNECTED SYSTEMS\nHalcyon ↗\nZenith ↗\nCycle 25\n2424 CE\nEND CYCLE →\n↶ Undo\n10 orders remaining · 4 colonies\nCycle 25: 1 dispatches available in your briefing.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED",
+  "inspector": "UNCLAIMED FRONTIER\nHaven\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n88%\nHABITABILITY\n1\nORE RICHNESS\n1\nSCIENCE\nEXPEDITION RECORD\n✦\nThe Hollow Sun\n\nLast observed in cycle 21. Send an expedition for an updated report.\n\nFinish the ancient escort · cycle 2\n\nRead expedition record →\nORBITAL APPROACH\nLast Light of Haven\n1 ship · 34 / 34 hull\n\nOnly this formation attacks. Nearby friendly fleets do not combine their fire.\n\nFleet presence unknown. Arrival can trigger combat.\n\nEnter orbit · 1 order + 1 move\nCONNECTED SYSTEMS\nHalcyon ↗\nZenith ↗",
+  "resources": "◈\n366+88\nCREDITS\n◇\n142+36\nMINERALS\n✧\n0+45\nSCIENCE\n⌘\n10 / 10\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Meridian\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nBARREN",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aurelia\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Caldera\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s8"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Carina\nVEYR",
+      "attributes": {
+        "data-system-id": "s11"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ilyra\nKHAR",
+      "attributes": {
+        "data-system-id": "s14"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder\nOCEAN",
+      "attributes": {
+        "data-system-id": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Thalassa\nCHOIR",
+      "attributes": {
+        "data-system-id": "s21"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ophion\nARID",
+      "attributes": {
+        "data-system-id": "s22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Tethys\nKHAR",
+      "attributes": {
+        "data-system-id": "s23"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aster\nVEYR",
+      "attributes": {
+        "data-system-id": "s26"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Nyx\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s27"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aldebaran\nARID",
+      "attributes": {
+        "data-system-id": "s29"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nCONCORD",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Seraph\nBARREN",
+      "attributes": {
+        "data-system-id": "s35"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Peregrine\nARID",
+      "attributes": {
+        "data-system-id": "s36"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Morrow\nTERRAN",
+      "attributes": {
+        "data-system-id": "s37"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eos\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s39"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Terminus\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s40"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f7"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Move →",
+      "attributes": {
+        "data-action": "move",
+        "data-target": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "↶",
+      "attributes": {
+        "data-system-select": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Resume",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Heritage ✦",
+      "attributes": {
+        "data-action": "fleet-heritage",
+        "data-fleet-target": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Read expedition record →",
+      "attributes": {
+        "data-action": "anomaly",
+        "data-system": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon ↗",
+      "attributes": {
+        "data-system-select": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith ↗",
+      "attributes": {
+        "data-system-select": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "↶ Undo",
+      "attributes": {
+        "data-action": "undo",
+        "id": "undo-action"
+      },
+      "disabled": true
+    }
+  ]
+}

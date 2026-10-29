@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASTERION: ordinary continuation, cycles 24–27</title>
+<style>
+:root{color-scheme:dark;background:#101a25;color:#e4ebf1;font:17px/1.6 system-ui,sans-serif}body{max-width:900px;margin:3rem auto;padding:0 1.25rem 3rem}h1,h2{line-height:1.2;color:white}a{color:#9bd9f4}code{font-size:.86em;overflow-wrap:anywhere}.scope{padding:1rem;background:#1a2c3e;border-left:4px solid #9bd9f4}li{margin:.65rem 0}table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{padding:.6rem;text-align:left;border-bottom:1px solid #3d4c5d;vertical-align:top}
+</style>
+<main>
+<h1>ASTERION: ordinary continuation, cycles 24–27</h1>
+<p class="scope">This separate three-cycle continuation resumes the <a href="../default-campaign/index.html">sealed cycle 24 prefix</a> and stops at cycle 27. It is not a complete campaign. The browser closed at request 10. The recorded actions use the visible UI, with no grants or Undo commands.</p>
+
+<h2>Independent replay</h2>
+<p>The <a href="replay-derived/results.json">derived audit</a> accepts all eight reconstructed game commands, including three end turns. All eight JSON reload comparisons pass, all nine visible observations agree (36 resource/income checks), and all nine replayed states validate. The <a href="ui/actual-cycle27.json">final export</a>, taken at request 9 receipt 33, matches the complete replay state and exact UI export bytes. There are zero replay rejections and zero page errors.</p>
+<p>The <a href="ui/initial-cycle24.json">imported cycle 24 save</a> matches both the <a href="../default-campaign/ui/actual-cycle24.json">sealed original</a> and its committed bytes at <code>b5d6cee09a48160898b7f6ab9145135eeb22af22</code>. Its canonical state hash also matches the <a href="../default-campaign/replay-derived/through-request88/results.json">earlier completed replay</a>. This audit replays only the continuation; it does not rerun or modify the sealed prefix.</p>
+
+<h2>Recorded decisions and actions</h2>
+<ul>
+<li>At cycle 24, the player inspected the existing colony commitments and research, then retained the occupied queues while Quantum Archives approached completion. The first end turn completed normally.</li>
+<li>The player compared Haven with already surveyed Sundrift and recorded a preference for nearby Sundrift's three native science. Ecology already made the world eligible. The player funded an Ark at Solace through ordinary construction rather than forcing a distant expedition or lane restoration (<a href="ui/006-cycle25-haven-prospect.json">visible comparison</a>).</li>
+<li>After Quantum Archives completed, the player selected the Asterion Protocol and commissioned a lab at Halcyon, whose factory had finished (<a href="ui/007-cycle26-archives-complete.json">research observation</a>).</li>
+<li>At cycle 27 the <a href="ui/008-cycle27-new-ark.json">visible fleet row</a> identified newly constructed Colony Ark 31 as <code>f31</code>. The player moved it one jump from Solace to Sundrift and confirmed ordinary paid colonization, establishing a fifth colony (<a href="ui/009-cycle27-fifth-colony.json">final observation</a>, <a href="ui/009-cycle27-fifth-colony.png">screenshot</a>). The replay uses the normal movement and settlement commands without free orders or resources.</li>
+</ul>
+
+<h2>Retained driver failure</h2>
+<p>The <a href="ui/actions.jsonl">unaltered receipt log</a> contains one driver failure at request 4: the absent <code>data-build-tab</code> selector timed out. The preceding end turn, Empire navigation and Solace menu opening had succeeded and remain in the evidence. The <a href="ui/004-after-error.json">failure observation</a> is preserved; request 5 used the correct <code>construction-tab</code> selector (<a href="ui/005-cycle25-capital-ship-options.json">observation</a>). Only successful receipts become replay commands; the failed selector and unexecuted tail contribute none.</p>
+
+<h2>Source and reproduction</h2>
+<p>Actual play used frozen <a href="ui/served-build-1.json">build <code>635e8256af87327aa8a4eab92bb6d95baede5fe5</code></a> at <code>http://127.0.0.1:41371</code>. Every file in its engine import graph is byte-identical at release candidate <code>b9af2b96203c941cff261ccc8b2984c0432438a9</code>; this comparison concerns mechanics, not identical UI files.</p>
+<p>Run <code>node docs/mechanics-depth/final-play/replay.mjs</code> from the repository root with Node 22+ and Git. The <a href="replay.mjs">audit script</a> requires those pinned commits and the sealed prefix evidence locally, reconstructs source into a temporary directory, and removes it afterward. It uses no browser, npm install, network or current working tree engine. Its starting point is the previously verified normal UI export. See <a href="replay-derived/normalized-commands.json">receipt-grounded commands</a>, <a href="replay-derived/results.json">source/evidence hashes and checks</a>, <a href="meta.json">artifact inventory</a>, and the original <a href="driver.mjs">UI driver</a>.</p>
+<p>This audit establishes checkpoint and reload continuity. It does not measure enjoyment, establish optimal play, conclude the campaign, or report unobserved foreign or future state.</p>
+</main>
+</html>

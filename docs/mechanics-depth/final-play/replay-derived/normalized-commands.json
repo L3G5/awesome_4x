@@ -1,0 +1,92 @@
+[
+  {
+    "request": 4,
+    "receipt": 6,
+    "turnBefore": 24,
+    "action": {
+      "type": "endTurn"
+    },
+    "basis": "Completed normal UI end/confirmation receipt.",
+    "ok": true
+  },
+  {
+    "request": 7,
+    "receipt": 16,
+    "turnBefore": 25,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony",
+      "replaceBuildingId": null
+    },
+    "basis": "Completed build selector and preceding colony-row menu selection.",
+    "ok": true
+  },
+  {
+    "request": 7,
+    "receipt": 17,
+    "turnBefore": 25,
+    "action": {
+      "type": "endTurn"
+    },
+    "basis": "Completed normal UI end/confirmation receipt.",
+    "ok": true
+  },
+  {
+    "request": 8,
+    "receipt": 20,
+    "turnBefore": 26,
+    "action": {
+      "type": "research",
+      "techId": "singularity"
+    },
+    "basis": "Completed research selector.",
+    "ok": true
+  },
+  {
+    "request": 8,
+    "receipt": 23,
+    "turnBefore": 26,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "basis": "Completed build selector and preceding colony-row menu selection.",
+    "ok": true
+  },
+  {
+    "request": 8,
+    "receipt": 24,
+    "turnBefore": 26,
+    "action": {
+      "type": "endTurn"
+    },
+    "basis": "Completed normal UI end/confirmation receipt.",
+    "ok": true
+  },
+  {
+    "request": 9,
+    "receipt": 29,
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f31",
+      "targetId": "s20"
+    },
+    "basis": "Own fleet ID resolved from preceding visible fleet-row name; target from completed system selection.",
+    "ok": true
+  },
+  {
+    "request": 9,
+    "receipt": 31,
+    "turnBefore": 27,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f31"
+    },
+    "basis": "Completed ordinary colonization confirmation for selected own Ark.",
+    "ok": true
+  }
+]

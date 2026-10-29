@@ -1,0 +1,191 @@
+{
+  "scope": "Three-cycle ordinary continuation from the previously verified/sealed cycle24 export to cycle27; not a complete campaign or another replay of the earlier prefix.",
+  "method": "Only completed UI receipts and visible observations supply commands/own fleet IDs. Original request payloads and failed tails never supply commands. Temporary pinned engine sources are removed; no source copies or private foreign state are emitted.",
+  "source": {
+    "playedCommit": "635e8256af87327aa8a4eab92bb6d95baede5fe5",
+    "buildInfo": "ui/served-build-1.json",
+    "releaseCommit": "b9af2b96203c941cff261ccc8b2984c0432438a9",
+    "releaseEngineGraphUnchanged": true,
+    "unchangedEngineFiles": 16,
+    "sourceFileSha256": {
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/content.js": "598c2cfcd370924b1d06a19e647f14fa37937aafac4b05cdbbd50c67cdb6d00c",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "0b5a8d0bc19178d9c6ef48fc897e4a5cfeb14d1ec4f7f49f71678dff8a67e027",
+      "src/diplomacy.js": "c5c3f613a983e7d1c32b6f4d142cb0a55f3eba497418c4e42ec0c4fa686492a8",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "3fad6d144fe9457e2742f278c49248618f50e24d9cdf024f59de9eeec98fbf9d",
+      "src/development.js": "29fb685645c41d38bcfb29325a178c1c69eb378aa1ab71f5ceded0773eaa944d",
+      "src/galaxy-generation.js": "beea8b14db1e9907d211bdc10d06bb05d6d13705ba64582780ee881dc5c3e393",
+      "src/starlanes.js": "387f988fae4023f550de3e15c0a46c034f05cf0f0edda29570db7fbdc3c5bed6",
+      "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+      "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+      "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe"
+    }
+  },
+  "startingCheckpoint": {
+    "file": "ui/initial-cycle24.json",
+    "sha256": "8416e932b1c0af48f6505a0c62a02a2794e3be1f571f25a4f3bcdd3e6d695a5b",
+    "sealedPrefixFile": "../default-campaign/ui/actual-cycle24.json",
+    "sealedPrefixCommit": "b5d6cee09a48160898b7f6ab9145135eeb22af22",
+    "equalsSealedPrefixBytes": true,
+    "equalsPriorVerifiedReplayHash": true,
+    "priorAuditFile": "../default-campaign/replay-derived/through-request88/results.json",
+    "priorAuditSha256": "5c32bdd16bcb91a8e256a8c5aaea0c12d4082d0021139fbb50dc780243cc259c",
+    "publicBeaconReconciliationNoop": true
+  },
+  "counts": {
+    "successfulUiReceipts": 34,
+    "gameCommands": 8,
+    "endTurns": 3,
+    "reloadChecks": 8,
+    "validatedStates": 9,
+    "observations": 9,
+    "visibleResourceChecks": 36,
+    "driverErrors": 1,
+    "pageErrors": 0
+  },
+  "allCommandsAccepted": true,
+  "allReloadChecksEqual": true,
+  "allVisibleObservationsEqual": true,
+  "checkpoint": {
+    "file": "ui/actual-cycle27.json",
+    "request": 9,
+    "receipt": 33,
+    "turn": 27,
+    "fullStateEqual": true,
+    "uiExportBytesEqual": true,
+    "sha256": "eb2ad521c35b85d9d695926f6463c132f2058b7fe4779633468b33d121a25a95",
+    "bytes": 72296
+  },
+  "observations": [
+    {
+      "request": 1,
+      "file": "ui/001-initial-cycle24.json",
+      "turn": 24,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 2,
+      "file": "ui/002-cycle24-colony-comparison.json",
+      "turn": 24,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 3,
+      "file": "ui/003-cycle24-research.json",
+      "turn": 24,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 4,
+      "file": "ui/004-after-error.json",
+      "turn": 25,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 5,
+      "file": "ui/005-cycle25-capital-ship-options.json",
+      "turn": 25,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 6,
+      "file": "ui/006-cycle25-haven-prospect.json",
+      "turn": 25,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 7,
+      "file": "ui/007-cycle26-archives-complete.json",
+      "turn": 26,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 8,
+      "file": "ui/008-cycle27-new-ark.json",
+      "turn": 27,
+      "visibleCycleAndResourcesEqual": true
+    },
+    {
+      "request": 9,
+      "file": "ui/009-cycle27-fifth-colony.json",
+      "turn": 27,
+      "visibleCycleAndResourcesEqual": true
+    }
+  ],
+  "driverFailures": [
+    {
+      "request": 4,
+      "reason": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[data-build-tab=\"ship\"]')\n",
+      "handling": "Preceding successful end turn/Empire/open-menu receipts retained. Missing data-build-tab selector and unexecuted tail excluded; next request uses construction-tab."
+    }
+  ],
+  "closeRequest": 10,
+  "limitations": "Checkpoint/reload continuity is not enjoyment, strategy optimality, independent human testing, or a campaign conclusion. No grants or Undo commands appear in completed receipts.",
+  "fileSha256": {
+    "replay.mjs": "9feecf2423ea433cffdb4594292a81fe4f42226ba3d04b45775b8b41d9abef36",
+    "driver.mjs": "992ba5bed2a02fb228e0f9ac7162b2e0aa511fc1a8ccb5d33d85063f24d5a284"
+  },
+  "evidenceFiles": {
+    "ui/actions.jsonl": {
+      "bytes": 11299,
+      "sha256": "9e4b1a0a4e97af5e2f637a4e1972de2a69329502c29543413dd8aad730588693"
+    },
+    "ui/served-build-1.json": {
+      "bytes": 122,
+      "sha256": "1ab3994ef8d2f95cb97cc3ad9ef027d37a3ec79438aa61314d20d5ca420dbd56"
+    },
+    "ui/initial-cycle24.json": {
+      "bytes": 70893,
+      "sha256": "8416e932b1c0af48f6505a0c62a02a2794e3be1f571f25a4f3bcdd3e6d695a5b"
+    },
+    "ui/001-initial-cycle24.json": {
+      "bytes": 13861,
+      "sha256": "014c51cbd3293cdd261698812f272f7aa474a257390717b7cbbe0d792c049392"
+    },
+    "ui/002-cycle24-colony-comparison.json": {
+      "bytes": 10123,
+      "sha256": "046e2c51c4c06ff33004be18969d3828d0da4dd161efd29a7b545fa73c310859"
+    },
+    "ui/003-cycle24-research.json": {
+      "bytes": 9392,
+      "sha256": "447b341064e90355ed3fbcb87a2169489fec0067811555d237642a622ba6383c"
+    },
+    "ui/004-after-error.json": {
+      "bytes": 16361,
+      "sha256": "19909debb431adf763311e43ad7870f7585ec4df8c4b5d092cbd973d7cc133ad"
+    },
+    "ui/005-cycle25-capital-ship-options.json": {
+      "bytes": 13288,
+      "sha256": "a09cb17111e7500324c08ad25f9a0683bff40728d9486877eb35852e43d0ecd3"
+    },
+    "ui/006-cycle25-haven-prospect.json": {
+      "bytes": 11764,
+      "sha256": "d3cb0d83bc3300123620dde64eb8ed1505585a10f692b042cf8793eab325e3d7"
+    },
+    "ui/007-cycle26-archives-complete.json": {
+      "bytes": 9294,
+      "sha256": "03c3ba8ed25e136dbabafe3c4278f55addd33ff36b02abd283fe1ed4f6c06d3d"
+    },
+    "ui/008-cycle27-new-ark.json": {
+      "bytes": 14364,
+      "sha256": "ad4a404bc375fd879bc66925a2ea3a02daa6fe9501eb74b39936e2366e0ccdc2"
+    },
+    "ui/actual-cycle27.json": {
+      "bytes": 72296,
+      "sha256": "eb2ad521c35b85d9d695926f6463c132f2058b7fe4779633468b33d121a25a95"
+    },
+    "ui/009-cycle27-fifth-colony.json": {
+      "bytes": 9007,
+      "sha256": "d07c045292188d72164d1182d4dc18db10ed1a0fab0fcdd6215d32ff64ec4d0b"
+    },
+    "driver.mjs": {
+      "bytes": 4592,
+      "sha256": "992ba5bed2a02fb228e0f9ac7162b2e0aa511fc1a8ccb5d33d85063f24d5a284"
+    }
+  }
+}
