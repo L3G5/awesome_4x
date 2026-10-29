@@ -23,7 +23,7 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 - `getVictoryProgress(state, factionId = 'player')`: `{transcendence:{current,target,unlocked},domination:{current,target},legacy:{score,turn,finalTurn}}`.
 - `fleetPower(state, fleet)`: modified fleet attack.
 - `estimateCombat(state, fleetId, targetId)`: `{attack,defense,garrison,odds,unknown}` or null. Without target sensors, `unknown:true`, `odds:'Unscouted'`, and `defense`/`garrison` are null. With target sensors, `unknown:false` and numeric strength/defense are exact. Never coerce unknown defense to zero for a preview or AI decision.
-- `estimateInvasion(state, fleetId)`: pure current-system bombardment forecast, documented below. It never consumes RNG or queries a remote target.
+- `estimateInvasion(state, fleetId)`: pure current-system bombardment forecast, documented below. It never consumes RNG or queries a remote target. Its `hullAfter` is the existing exact post-retaliation hull calculation; use `hullAfter > 0` for survival, since subtracting rounded display retaliation can be wrong at fractional hull boundaries.
 - `getCombatReport(state, reportId)`: a stored player-involved combat snapshot or null if missing/expired. Re-exported by `game.js` from `src/reports.js`.
 - `getFleetReadiness(state, fleetId, factionId = 'player')`: pure `{held,ready,reason,movesLeft}` for an owned fleet. Foreign/missing fleets return the same neutral unavailable result.
 - `getReadyFleets(state, factionId = 'player')`: owned fleets awaiting orders in stable campaign order; requires a move, an order, no hold, and an active campaign/empire.
@@ -139,6 +139,12 @@ Each development option returns:
 Charter queues use `{kind:'charter',itemId:charterType,charterType,charterLevel,progress,work,cost}`. Ordinary building queues may add `replaceBuildingId`. The queue always stores the price actually paid, including a Forge discount, so cancellation refunds `floor(paidCost * (1 - progress/work))` per resource. A captured colony keeps its completed charter, but its former owner's queued project is cancelled under the existing conquest rule.
 
 `getConstructionProject` handles all queue kinds and labels charter levels I/II. Charter completion logs carry `systemId` without `itemId`; existing report navigation remains compatible. Development validation checks charter/support consistency and new queue fields without rechecking population or technology prerequisites for already completed/commissioned work. Older version-1 saves without development fields remain valid.
+
+## Player alignment funding outlook
+
+`getAlignmentOutlook(state)` in `src/alignment-outlook.js` is a detached player-only planning view. It returns null for completed campaigns or a missing/eliminated player. Otherwise it returns `treasury`, existing net ordinary `creditIncome`, `upkeep`, clamped `creditsAfterIncome`, `cost`, `fundingCovered`, `shortfall`, `networkReady`, `networkReason`, `ready`, `reason`, and nullable `creditsAfterAlignment`. Current income already includes fleet upkeep; it is not subtracted twice. Structural network checks reuse the instantaneous status on copied own treasury values. A blocked or incomplete network never receives a projected payment; `creditsAfterAlignment` is null unless current structural conditions and after-income funding qualify.
+
+This view holds current income and network conditions fixed. It does not run rival turns, advance treaties, finish research/construction, predict captures, mutate saves or consume RNG. In particular, a known trade expiry can change actual next-cycle income; the interface labels this assumption explicitly. The real alignment resolver still evaluates its unchanged instantaneous helper after actual income and completions. Finished network panels display the saved record without a future funding estimate.
 
 ## Asterion alignment
 

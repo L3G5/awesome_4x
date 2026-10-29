@@ -1,0 +1,10 @@
+
+Running 1 test using 1 worker
+
+(node:567771) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:567771) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/development-ui.spec.js:144:1 › a beacon blockade loses an alignment step and a player fleet can restore the race (4.8s)
+
+  1 passed (5.9s)

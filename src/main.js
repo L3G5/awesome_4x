@@ -8,6 +8,7 @@ import './conquest.css';
 import './investment.css';
 import './reinforcement.css';
 import './conclusion.css';
+import './planning-feedback.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
@@ -22,6 +23,8 @@ import { renderSplitDialog, renderColonyRepairSummary, renderFleetReadiness } fr
 import { getMergePreview, getReinforcementPreview } from './reinforcement.js';
 import { renderReinforcementPanel, renderMergeControls, renderMergeSummary, renderMergeDialog } from './reinforcement-ui.js';
 import { renderCampaignConclusion } from './conclusion-ui.js';
+import { getAlignmentOutlook } from './alignment-outlook.js';
+import { alignmentOutlookSummary } from './alignment-outlook-ui.js';
 import { getFleetReadiness, getReadyFleets } from './game.js';
 import { formatHull } from './hull-format.js';
 import { renderPublicDispatchLinks, renderSovereigntyNote } from './public-affairs-ui.js';
@@ -103,7 +106,9 @@ function dispatch(action) {
 }
 function render() {
   const p = player(), stats = getEmpireStats(state);
-  $('#resources').innerHTML = [['credits','◈','Credits',stats.credits,stats.creditIncome],['minerals','◇','Minerals',stats.minerals,stats.mineralIncome],['science','✧','Science',stats.science,stats.scienceIncome],['orders','⌘','Orders',stats.orders,null]].map(([key,symbol,label,value,delta])=>`<div class="resource ${key}" title="${label}: ${num(value)}${delta!==null?`; ${signed(delta)} per cycle${key==='credits'?` after ${stats.upkeep} fleet upkeep`:''}`:` of ${stats.maxOrders} available this cycle`}"><span class="symbol" aria-hidden="true">${symbol}</span><div><strong>${num(value)}${key==='orders'?`<small style="color:#6f8996"> / ${stats.maxOrders}</small>`:''}</strong>${delta!==null?`<span class="delta ${delta<0?'negative':''}">${signed(delta)}</span>`:''}<label>${label}</label></div></div>`).join('');
+  const outlook = getAlignmentOutlook(state);
+  const showIncomeScope = !state.winner && (stats.beacons > 0 || p.alignment?.started);
+  $('#resources').innerHTML = [['credits','◈','Credits',stats.credits,stats.creditIncome],['minerals','◇','Minerals',stats.minerals,stats.mineralIncome],['science','✧','Science',stats.science,stats.scienceIncome],['orders','⌘','Orders',stats.orders,null]].map(([key,symbol,label,value,delta])=>`<div class="resource ${key}" title="${label}: ${num(value)}${delta!==null?`; ${signed(delta)} per cycle${key==='credits'?` after ${stats.upkeep} fleet upkeep, before alignment payments`:''}`:` of ${stats.maxOrders} available this cycle`}"><span class="symbol" aria-hidden="true">${symbol}</span><div><strong>${num(value)}${key==='orders'?`<small style="color:#6f8996"> / ${stats.maxOrders}</small>`:''}</strong>${delta!==null?`<span class="delta ${delta<0?'negative':''}">${signed(delta)}</span>`:''}<label>${label}</label>${key==='credits' && showIncomeScope?'<small class="credit-income-scope">income before alignment</small>':''}</div></div>`).join('');
   $('#turn-number').textContent = `Cycle ${String(state.turn).padStart(2,'0')}`; $('#turn-year').textContent = `${2400 + state.turn - 1} CE`;
   $('#turn-hint').textContent = state.winner ? 'The chronicle of this age is complete.' : `${stats.orders} orders remaining · ${stats.colonies} ${stats.colonies===1?'colony':'colonies'}`;
   $('#end-turn').disabled = !!state.winner;
@@ -114,8 +119,9 @@ function render() {
   $('#map-meta').innerHTML = `<span class="live-dot"></span>${getVisibleSystems(state).length} charted systems · ${stats.explored} surveyed · seed ${escape(state.seed)}`;
   const alignment = getAlignmentStatus(state,'player');
   const rivalRace = getPublicRaces(state).filter(r=>r.factionId!=='player'&&r.progress>0).sort((a,b)=>b.progress-a.progress)[0];
-  const mandate = state.winner ? ['THE CHRONICLE IS COMPLETE',`${FACTIONS[state.winner]?.name||'The galaxy'} · ${state.victoryType} · Cycle ${state.turn}. Review the conclusion or inspect the final galaxy.`] : rivalRace?.progress>=5 && rivalRace.progress>=alignment.progress ? ['A RIVAL AWAKENS THE NETWORK',`${rivalRace.name} has reached ${rivalRace.progress}/${rivalRace.target} alignment. Review its public beacon signals in Empire.`] : stats.colonies<2 ? ['YOUR FIRST MANDATE','Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Beacons restored · alignment ${alignment.progress}/${alignment.target}. ${alignment.ready?`Protect the network and fund ${alignment.cost} credits each cycle.`:alignment.reason}`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
-  $('#mandate').innerHTML = `<strong>${escape(mandate[0])}</strong>${escape(mandate[1])}${state.winner?'<button class="small-button ghost" data-action="show-conclusion">Review this age →</button>':rivalRace?.progress>=5?'<button class="small-button ghost" data-action="review-network">Review network →</button>':''}`;
+  const rivalMandate = Boolean(rivalRace?.progress>=5 && rivalRace.progress>=alignment.progress);
+  const mandate = state.winner ? ['THE CHRONICLE IS COMPLETE',`${FACTIONS[state.winner]?.name||'The galaxy'} · ${state.victoryType} · Cycle ${state.turn}. Review the conclusion or inspect the final galaxy.`] : rivalMandate ? ['A RIVAL AWAKENS THE NETWORK',`${rivalRace.name} has reached ${rivalRace.progress}/${rivalRace.target} alignment. Review its public beacon signals in Empire.`] : stats.colonies<2 ? ['YOUR FIRST MANDATE','Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Beacons restored · alignment ${alignment.progress}/${alignment.target}. ${alignmentOutlookSummary(outlook) || alignment.reason}`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
+  $('#mandate').innerHTML = `<strong>${escape(mandate[0])}</strong>${escape(mandate[1])}${state.winner?'<button class="small-button ghost" data-action="show-conclusion">Review this age →</button>':rivalMandate?'<button class="small-button ghost" data-action="review-network">Review network →</button>':stats.beacons>0?'<button class="small-button ghost" data-action="review-alignment">Review your funding →</button>':''}`;
   const empireButton=$('[data-page="empire"]');
   empireButton.querySelector('.nav-badge')?.remove();
   empireButton.setAttribute('aria-label',`Empire${rivalRace?`, rival alignment ${rivalRace.progress} of ${rivalRace.target}`:''}`);
@@ -151,7 +157,7 @@ function renderInspector() {
   if(selectedFleet)html+=renderEngagementPreview(state,selectedFleet.id,system.id);
   html += renderColonyRepairSummary(state,system);
   const invasion=selectedFleet?.systemId===system.id ? estimateInvasion(state,selectedFleet.id) : null;
-  if(invasion) html+=`<section class="panel-section"><div class="invasion-preview"><div class="section-label">Invasion forecast</div><strong>${invasion.defense} colony defenses</strong><br>Your volley: ${invasion.damageMin}–${invasion.damageMax} defense damage<br>Retaliation: ${invasion.retaliation} hull${invasion.shielded?' · Shields applied':''}<br>${invasion.captureGuaranteed?'Capture expected with this volley.':invasion.capturePossible?'This volley may capture the colony.':'Further bombardment is required.'}<br>Cost: 1 order + 1 move</div></section>`;
+  if(invasion) html+=`<section class="panel-section"><div class="invasion-preview"><div class="section-label">Invasion forecast</div><strong>${invasion.defense} colony defenses</strong><br>Your volley: ${invasion.damageMin}–${invasion.damageMax} defense damage<br>Retaliation: ${invasion.retaliation} hull${invasion.shielded?' · Shields applied':''}<br><span class="invasion-survival${invasion.hullAfter <= 0?' lethal':''}">${invasion.hullAfter <= 0?'Retaliation will destroy this formation; it cannot capture the colony.':invasion.captureGuaranteed?'Capture expected with this volley.':invasion.capturePossible?'This volley may capture the colony.':'Further bombardment is required.'}</span>Hull after retaliation: ${invasion.hullAfter.toLocaleString(undefined,{maximumFractionDigits:1})}<br>Cost: 1 order + 1 move</div></section>`;
   const neighbors = getNeighbors(state,system.id).map(systemById).filter(s=>s.knownBy.includes('player'));
   html += `<section class="panel-section"><div class="section-label">Connected systems</div><div class="building-pills">${neighbors.map(s=>`<button class="small-button ghost" data-system-select="${s.id}">${escape(s.name)} ↗</button>`).join('')}</div></section>`;
   $('#inspector').innerHTML = html;
@@ -357,6 +363,7 @@ document.addEventListener('click',event=>{
     case 'conclusion-galaxy':closeModal();setPage('galaxy');break;
     case 'briefing':showCycleBriefing();break;
     case 'review-network':setPage('empire');$('.network-section')?.scrollIntoView({block:'start'});break;
+    case 'review-alignment':setPage('empire');($('.alignment-outlook') || $('.alignment-card'))?.scrollIntoView({block:'start'});break;
     case 'combat-report':showReports([Number(el.dataset.report)]);break;
     case 'colony-sort':colonySortDirection=colonySort===el.dataset.sort?(colonySortDirection==='asc'?'desc':'asc'):el.dataset.sort==='name'?'asc':'desc';colonySort=el.dataset.sort;renderPage();document.querySelector(`[data-action="colony-sort"][data-sort="${colonySort}"]`)?.focus();break;
     case 'report-inspect':closeModal();selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);break;

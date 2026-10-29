@@ -1,0 +1,446 @@
+{
+  "reviewer": "Independent funding implementation review; no implementation authorship.",
+  "provenance": {
+    "checkpoint": "/home/leg/projects/awesome_4x/docs/watch-playtest/checkpoints/cycle51.json",
+    "checkpointSHA256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698",
+    "baselineURL": "http://127.0.0.1:5212"
+  },
+  "core": [
+    {
+      "name": "actual-watch51",
+      "notes": "Actual unmodified UI checkpoint; inspection only.",
+      "inputHash": "a62351368447288ff8fae89e896f9dd54d8ed2bdef80b29f95531d6b44899be6",
+      "outlook": {
+        "treasury": 954,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 1029,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": true,
+        "networkReason": "",
+        "ready": true,
+        "reason": "",
+        "creditsAfterAlignment": 969
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": true,
+        "reason": "",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 969,
+        "progress": 2,
+        "stateHash": "02eeb4d4e27d6f06539a89942cc7b434b5db022a92de861684ff63c79dabd06a",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "786f677dfffec29107a58c20dbc29961672934e8a66a2a5c94a57d709f786b07",
+      "contextHash": "e2888b5ac250f0efb9e69f720738d931c992477570ecfb00ca6c173e404fad52"
+    },
+    {
+      "name": "synthetic-credit50",
+      "notes": "Synthetic: only own credits change from954 to50.",
+      "inputHash": "cd92df0f5a281da1ba742f48758cd375c2fbb39e9e341942a03297c58497e782",
+      "outlook": {
+        "treasury": 50,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 125,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": true,
+        "networkReason": "",
+        "ready": true,
+        "reason": "",
+        "creditsAfterAlignment": 65
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Alignment requires 60 credits after ordinary income each cycle.",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 65,
+        "progress": 2,
+        "stateHash": "3b53c71c9feb3b327c15bfe40e22a84fb817ebdde5b38293db43a396cbe2189f",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "5484751f69912244a965d0afcb05cdafa31a4bba4ab4732b80255e3bd4d751cd",
+      "contextHash": "e2888b5ac250f0efb9e69f720738d931c992477570ecfb00ca6c173e404fad52"
+    },
+    {
+      "name": "synthetic-upkeep-deficit",
+      "notes": "Synthetic: own credits70 and two additional12-cruiser formations; existing+75 ordinary income becomes−21.",
+      "inputHash": "c66f2ec34ffa26d4b27662c926991faa7432cf6b9c2738d59084352c796b3735",
+      "outlook": {
+        "treasury": 70,
+        "creditIncome": -21,
+        "upkeep": 121,
+        "creditsAfterIncome": 49,
+        "cost": 60,
+        "fundingCovered": false,
+        "shortfall": 11,
+        "networkReady": true,
+        "networkReason": "",
+        "ready": false,
+        "reason": "Alignment requires 60 credits after ordinary income each cycle.",
+        "creditsAfterAlignment": null
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": true,
+        "reason": "",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 49,
+        "progress": 0,
+        "stateHash": "fc6df9dc3fc5ccc96a12c9f43403957be52cd649f82c70bbfdd460d3dbf5a2d8",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "06121fca7ee3d16b63f7f9f7a213a7d646ae1135b3661f3f433c72bfd478572a",
+      "contextHash": "11279cd4dec226109bbdbca7052bc24578ebe8e86292529e4a28e6bb1214c8b7"
+    },
+    {
+      "name": "synthetic-clamped-deficit",
+      "notes": "Synthetic upkeep fixture with own credits5; after-income budget clamps tozero.",
+      "inputHash": "1f058cc0bb49993936e4cb51ca409d6d1edc44dd214f3b2b6f54cd49212a9cf4",
+      "outlook": {
+        "treasury": 5,
+        "creditIncome": -21,
+        "upkeep": 121,
+        "creditsAfterIncome": 0,
+        "cost": 60,
+        "fundingCovered": false,
+        "shortfall": 60,
+        "networkReady": true,
+        "networkReason": "",
+        "ready": false,
+        "reason": "Alignment requires 60 credits after ordinary income each cycle.",
+        "creditsAfterAlignment": null
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Alignment requires 60 credits after ordinary income each cycle.",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 0,
+        "progress": 0,
+        "stateHash": "3aeb51be69248d2eb49e8d4fea830949977a7d081a2403597d655b8361a62a2e",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "e82a7fbe39ff95837b6b5546cab0e2526aea7bcfae9fcffb19d5c016f5cc4e8e",
+      "contextHash": "c3a0419385273ad38ad2bcff534f2def46a1d4abc69e1e6ecd1ca72d22bea5d1"
+    },
+    {
+      "name": "synthetic-covered-blockade",
+      "notes": "Synthetic affordable fixture with one visible hostile Veyr frigate overSolace and mutualwar.",
+      "inputHash": "a85e923557ce781b00e9c016018500e6244c72dc1dd93d78e5666800c642c06f",
+      "outlook": {
+        "treasury": 50,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 125,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": false,
+        "networkReason": "Hostile warships block alignment at Solace.",
+        "ready": false,
+        "reason": "Hostile warships block alignment at Solace.",
+        "creditsAfterAlignment": null
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Hostile warships block alignment at Solace.",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 125,
+        "progress": 0,
+        "stateHash": "fc4799d3f2860692b98c8a6e9ab06c1888a2e4a88493b6862c3e0b2f84147b7c",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "0e42bdb869744ad68ac565b34e0aea289ee82fb16caa62b19d743b7fbdf4f8fe",
+      "contextHash": "4249eb764f7141b017d67d52fd833f0e4104ccaa9324e4324349d08dea57aae0"
+    },
+    {
+      "name": "synthetic-missing-protocol",
+      "notes": "Synthetic affordable fixture with Protocol removed.",
+      "inputHash": "7b41925c2310eb5b31b1122e02771c269557954975239d544edd0f510f9f8f9b",
+      "outlook": {
+        "treasury": 50,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 125,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": false,
+        "networkReason": "Research the Asterion Protocol.",
+        "ready": false,
+        "reason": "Research the Asterion Protocol.",
+        "creditsAfterAlignment": null
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Research the Asterion Protocol.",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 125,
+        "progress": 0,
+        "stateHash": "9bc44ae4dc45fb155c50ced04a2cc9dd238dacdfc55b787f120c718e81deaddc",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "3940b0ee8071507c7e87691ed6d6f694caa1937e675dbc317663ff010e1d2dcb",
+      "contextHash": "8c94b3550b0cd21effd87d4c4c381f174df36a534654b71df39e63a8f75b987b"
+    },
+    {
+      "name": "synthetic-two-sites",
+      "notes": "Synthetic affordable fixture with one beacon removed.",
+      "inputHash": "8e40d5347c226eec33531b804f20a353959d9eae1c20b7d03d6c0c4fd25de68c",
+      "outlook": {
+        "treasury": 50,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 125,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": false,
+        "networkReason": "Complete Asterion Beacons on three owned worlds (2/3).",
+        "ready": false,
+        "reason": "Complete Asterion Beacons on three owned worlds (2/3).",
+        "creditsAfterAlignment": null
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 2,
+        "sites": [
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Complete Asterion Beacons on three owned worlds (2/3).",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 125,
+        "progress": 0,
+        "stateHash": "448fb6e62167627d041d33f2e7c853a336ec52ae03a126e50102b2b653339dbf",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "78ba42912f7980a354235b2f45eefac0ed5d5533b66382bd93dd1b456beb1cf4",
+      "contextHash": "c91b65d9da7f63d4cd5ff2d1b5e1575d5f3c6119885a6718b8d14bccdd7c1ace"
+    },
+    {
+      "name": "synthetic-treaty-expiry",
+      "notes": "Synthetic affordable fixture with already-noticed mutualChoir treaty expiry on52. Current estimate65; actual next-cycle treasury55.",
+      "inputHash": "bec7421b915ad4083be21de32dfa196fc752f1d3bdfed8acc7cce579e56579eb",
+      "outlook": {
+        "treasury": 50,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 125,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": true,
+        "networkReason": "",
+        "ready": true,
+        "reason": "",
+        "creditsAfterAlignment": 65
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Alignment requires 60 credits after ordinary income each cycle.",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 55,
+        "progress": 2,
+        "stateHash": "0ceeb43d06f63474a7bfcc9c7ffcdd8d6c162e591df87e6228669bb3f81c0cbe",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "5484751f69912244a965d0afcb05cdafa31a4bba4ab4732b80255e3bd4d751cd",
+      "contextHash": "e2888b5ac250f0efb9e69f720738d931c992477570ecfb00ca6c173e404fad52"
+    },
+    {
+      "name": "synthetic-private-rivals",
+      "notes": "Synthetic affordable fixture changes only remote private rival economies, remote fleets and queues; public signals unchanged.",
+      "inputHash": "993a0816fef94766eb21c795cbd7efd175dc9e2eb2d3950c9afd2c5f86b88c9e",
+      "outlook": {
+        "treasury": 50,
+        "creditIncome": 75,
+        "upkeep": 25,
+        "creditsAfterIncome": 125,
+        "cost": 60,
+        "fundingCovered": true,
+        "shortfall": 0,
+        "networkReady": true,
+        "networkReason": "",
+        "ready": true,
+        "reason": "",
+        "creditsAfterAlignment": 65
+      },
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 1,
+        "target": 10,
+        "beacons": 3,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": false,
+        "reason": "Alignment requires 60 credits after ordinary income each cycle.",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": {
+        "turn": 52,
+        "credits": 65,
+        "progress": 2,
+        "stateHash": "1bf2043f2985c0ee9a2df65d30cb5fc93a437187c2525c6e0028d57ccf192401",
+        "resultHash": "eaa3808ebbd0a7969a075c54723ac4c39503d71e63a6b756085de8d246e11998"
+      },
+      "cardHash": "5484751f69912244a965d0afcb05cdafa31a4bba4ab4732b80255e3bd4d751cd",
+      "contextHash": "e2888b5ac250f0efb9e69f720738d931c992477570ecfb00ca6c173e404fad52"
+    },
+    {
+      "name": "actual-watch60-finished",
+      "notes": "Actual unmodified completed UI checkpoint.",
+      "inputHash": "d9cdd751b9a6af62aca35ed7fc631d4967679339e13a230add40ff8d58f0fda9",
+      "outlook": null,
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 10,
+        "target": 10,
+        "beacons": 4,
+        "sites": [
+          "s20",
+          "s0",
+          "s28"
+        ],
+        "ready": true,
+        "reason": "",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": null,
+      "cardHash": "7ba0f6419b8d3e381b439825fcd0cb6259eae797667638524c36955be1628d66",
+      "contextHash": "c75d1653e6e993436b3ecc50cc3586432594343de8659dd4b48b8622b79df6af"
+    },
+    {
+      "name": "synthetic-finished-legacy",
+      "notes": "Synthetic completed checkpoint with optional legacy alignment records removed; saved result retained.",
+      "inputHash": "8e8efd79fa2b5644b389d654c2c8b60aa7b4ebba96340dc95ae6d6071ca02c63",
+      "outlook": null,
+      "instantaneous": {
+        "factionId": "player",
+        "progress": 0,
+        "target": 10,
+        "beacons": 4,
+        "sites": [
+          "s0",
+          "s20",
+          "s28"
+        ],
+        "ready": true,
+        "reason": "",
+        "cost": 60
+      },
+      "unchanged": true,
+      "continuation": null,
+      "cardHash": "60754a44b803c675b8a68bbaa47e375a1f205a75a4335d57bedfae61a483b024",
+      "contextHash": "a3727d59c953ec365cedc574cdf066d6aae2e2c4e008b7c11b74cc5fd5461d39"
+    }
+  ],
+  "browser": [],
+  "errors": []
+}

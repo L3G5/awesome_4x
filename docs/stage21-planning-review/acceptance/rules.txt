@@ -1,0 +1,2450 @@
+
+> asterion-reach@0.20.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: three-beacon funding survives tempting ordinary projects and counts queued sites
+ok 1 - three-beacon funding survives tempting ordinary projects and counts queued sites
+  ---
+  duration_ms: 36.530743
+  type: 'test'
+  ...
+# Subtest: a fourth beacon is not commissioned when three are already queued or complete
+ok 2 - a fourth beacon is not commissioned when three are already queued or complete
+  ---
+  duration_ms: 22.965012
+  type: 'test'
+  ...
+# Subtest: an observed emergency can use beacon savings at normal defense costs
+ok 3 - an observed emergency can use beacon savings at normal defense costs
+  ---
+  duration_ms: 9.350358
+  type: 'test'
+  ...
+# Subtest: native resources and staging give developed colonies different charters
+ok 4 - native resources and staging give developed colonies different charters
+  ---
+  duration_ms: 23.397429
+  type: 'test'
+  ...
+# Subtest: replacement creates beacon space without dismantling a charter or the last shipyard
+ok 5 - replacement creates beacon space without dismantling a charter or the last shipyard
+  ---
+  duration_ms: 13.834665
+  type: 'test'
+  ...
+# Subtest: an active alignment keeps its next funding payment through ordinary purchases
+ok 6 - an active alignment keeps its next funding payment through ordinary purchases
+  ---
+  duration_ms: 36.292187
+  type: 'test'
+  ...
+# Subtest: income recovery escapes automatic alignment charges without grants or dismantling beacons
+ok 7 - income recovery escapes automatic alignment charges without grants or dismantling beacons
+  ---
+  duration_ms: 386.891493
+  type: 'test'
+  ...
+# Subtest: hidden foreign fleet changes leave economic choices and paid costs identical
+ok 8 - hidden foreign fleet changes leave economic choices and paid costs identical
+  ---
+  duration_ms: 26.77622
+  type: 'test'
+  ...
+# Subtest: an achievable public alignment prompts intervention through charted lanes
+ok 9 - an achievable public alignment prompts intervention through charted lanes
+  ---
+  duration_ms: 15.240131
+  type: 'test'
+  ...
+# Subtest: public race responses respect travel time, truces and observed overwhelming defenders
+ok 10 - public race responses respect travel time, truces and observed overwhelming defenders
+  ---
+  duration_ms: 30.136749
+  type: 'test'
+  ...
+# Subtest: a public beacon reveals its location without revealing its hidden defensive fleet to the AI
+ok 11 - a public beacon reveals its location without revealing its hidden defensive fleet to the AI
+  ---
+  duration_ms: 27.505132
+  type: 'test'
+  ...
+# Subtest: an aligning empire stations an available force at its participating beacon
+ok 12 - an aligning empire stations an available force at its participating beacon
+  ---
+  duration_ms: 20.878704
+  type: 'test'
+  ...
+# Subtest: AI preserves both viable owned discoveries and pays their opening costs
+ok 13 - AI preserves both viable owned discoveries and pays their opening costs
+  ---
+  duration_ms: 38.738357
+  type: 'test'
+  ...
+# Subtest: AI waits for preservation research on a viable colony rather than exhausting it
+ok 14 - AI waits for preservation research on a viable colony rather than exhausting it
+  ---
+  duration_ms: 6.938572
+  type: 'test'
+  ...
+# Subtest: AI builds missing maturation support and the preserved site actually matures
+ok 15 - AI builds missing maturation support and the preserved site actually matures
+  ---
+  duration_ms: 15.470842
+  type: 'test'
+  ...
+# Subtest: a local Ark preserves a viable settlement opportunity while a lone scout takes salvage
+ok 16 - a local Ark preserves a viable settlement opportunity while a lone scout takes salvage
+  ---
+  duration_ms: 25.461896
+  type: 'test'
+  ...
+# Subtest: a scout leaves a nearby viable site intact while its empire researches preservation
+ok 17 - a scout leaves a nearby viable site intact while its empire researches preservation
+  ---
+  duration_ms: 13.668103
+  type: 'test'
+  ...
+# Subtest: an Ark modestly prefers a remembered discovery over an equally distant ordinary world
+ok 18 - an Ark modestly prefers a remembered discovery over an equally distant ordinary world
+  ---
+  duration_ms: 33.585271
+  type: 'test'
+  ...
+# Subtest: mature sites restore for complementary long-term output at exact ordinary prices
+ok 19 - mature sites restore for complementary long-term output at exact ordinary prices
+  ---
+  duration_ms: 18.926236
+  type: 'test'
+  ...
+# Subtest: late discoveries prefer the final portable reward to a site that cannot repay itself
+ok 20 - late discoveries prefer the final portable reward to a site that cannot repay itself
+  ---
+  duration_ms: 13.278735
+  type: 'test'
+  ...
+# Subtest: an empire with no research remaining does not restore an observatory for unusable science
+ok 21 - an empire with no research remaining does not restore an observatory for unusable science
+  ---
+  duration_ms: 15.069201
+  type: 'test'
+  ...
+# Subtest: a full colony replaces expendable infrastructure without losing its charter, beacon or last shipyard
+ok 22 - a full colony replaces expendable infrastructure without losing its charter, beacon or last shipyard
+  ---
+  duration_ms: 5.31564
+  type: 'test'
+  ...
+# Subtest: a mature site with only protected slots takes harvest instead of destroying its colony role
+ok 23 - a mature site with only protected slots takes harvest instead of destroying its colony role
+  ---
+  duration_ms: 6.847902
+  type: 'test'
+  ...
+# Subtest: stage-specific restoration prices preserve the next beacon budget, including replacement
+ok 24 - stage-specific restoration prices preserve the next beacon budget, including replacement
+  ---
+  duration_ms: 17.606842
+  type: 'test'
+  ...
+# Subtest: cancelled restoration rebuilds through normal paid construction without reopening salvage
+ok 25 - cancelled restoration rebuilds through normal paid construction without reopening salvage
+  ---
+  duration_ms: 9.381947
+  type: 'test'
+  ...
+# Subtest: a captured restoration entitlement is rebuilt by the new owner at normal cost
+ok 26 - a captured restoration entitlement is rebuilt by the new owner at normal cost
+  ---
+  duration_ms: 6.41849
+  type: 'test'
+  ...
+# Subtest: unseen remote maturation and history never alter AI orders, purchases or treasury
+ok 27 - unseen remote maturation and history never alter AI orders, purchases or treasury
+  ---
+  duration_ms: 25.141497
+  type: 'test'
+  ...
+# Subtest: both exact WATCH local forks absorb one frigate and preserve their ordinary departure and ETA
+ok 28 - both exact WATCH local forks absorb one frigate and preserve their ordinary departure and ETA
+  ---
+  duration_ms: 213.348325
+  type: 'test'
+  ...
+# Subtest: full runAI integrates one paid absorption without changing the selected mission or current jump budget
+ok 29 - full runAI integrates one paid absorption without changing the selected mission or current jump budget
+  ---
+  duration_ms: 10.414785
+  type: 'test'
+  ...
+# Subtest: spare orders preserve all current jumps, including a one-hop arrival
+ok 30 - spare orders preserve all current jumps, including a one-hop arrival
+  ---
+  duration_ms: 22.857359
+  type: 'test'
+  ...
+# Subtest: low movement, capacity, wrong ownership/class/location and civilians never become expedition mates
+ok 31 - low movement, capacity, wrong ownership/class/location and civilians never become expedition mates
+  ---
+  duration_ms: 36.116309
+  type: 'test'
+  ...
+# Subtest: only one deterministic mate is absorbed per departure; another local mate is not swept up
+ok 32 - only one deterministic mate is absorbed per departure; another local mate is not swept up
+  ---
+  duration_ms: 5.248785
+  type: 'test'
+  ...
+# Subtest: a covered observed home threat still prevents absorption without changing expedition movement
+ok 33 - a covered observed home threat still prevents absorption without changing expedition movement
+  ---
+  duration_ms: 5.279463
+  type: 'test'
+  ...
+# Subtest: a newly observed threat at an intermediate boundary skips only the new absorption
+ok 34 - a newly observed threat at an intermediate boundary skips only the new absorption
+  ---
+  duration_ms: 6.179574
+  type: 'test'
+  ...
+# Subtest: the independent weighted-route counterexample rejects a slower merged candidate before payment
+ok 35 - the independent weighted-route counterexample rejects a slower merged candidate before payment
+  ---
+  duration_ms: 14.167776
+  type: 'test'
+  ...
+# Subtest: a qualifying intermediate reinforcement can join, but contact/combat still stops the same cycle
+ok 36 - a qualifying intermediate reinforcement can join, but contact/combat still stops the same cycle
+  ---
+  duration_ms: 12.287866
+  type: 'test'
+  ...
+# Subtest: arrival and invalidated missions do not opportunistically assemble extra forces
+ok 37 - arrival and invalidated missions do not opportunistically assemble extra forces
+  ---
+  duration_ms: 16.920259
+  type: 'test'
+  ...
+# Subtest: hidden foreign forces and research cannot alter local absorption, target or clear movement
+ok 38 - hidden foreign forces and research cannot alter local absorption, target or clear movement
+  ---
+  duration_ms: 7.683002
+  type: 'test'
+  ...
+# Subtest: Command permits four charted hops in two cycles at normal order and movement costs
+ok 39 - Command permits four charted hops in two cycles at normal order and movement costs
+  ---
+  duration_ms: 86.102609
+  type: 'test'
+  ...
+# Subtest: ETA uses remaining movement and reserves the declaration order
+ok 40 - ETA uses remaining movement and reserves the declaration order
+  ---
+  duration_ms: 23.077461
+  type: 'test'
+  ...
+# Subtest: the selected expedition crosses hostile transit colonies and holds its beacon without invading
+ok 41 - the selected expedition crosses hostile transit colonies and holds its beacon without invading
+  ---
+  duration_ms: 45.876553
+  type: 'test'
+  ...
+# Subtest: a selected feasible expedition persists when another fleet later becomes closer
+ok 42 - a selected feasible expedition persists when another fleet later becomes closer
+  ---
+  duration_ms: 48.705637
+  type: 'test'
+  ...
+# Subtest: merging cannot consume the selected expedition or reduce its current movement
+ok 43 - merging cannot consume the selected expedition or reduce its current movement
+  ---
+  duration_ms: 14.452369
+  type: 'test'
+  ...
+# Subtest: hidden fleet changes cannot alter departure, chosen target or the clear observed prefix
+ok 44 - hidden fleet changes cannot alter departure, chosen target or the clear observed prefix
+  ---
+  duration_ms: 15.823961
+  type: 'test'
+  ...
+# Subtest: a newly encountered battle stops further expedition movement that cycle
+ok 45 - a newly encountered battle stops further expedition movement that cycle
+  ---
+  duration_ms: 9.01419
+  type: 'test'
+  ...
+# Subtest: an expedition destroyed on contact cannot continue or retain a live mission
+ok 46 - an expedition destroyed on contact cannot continue or retain a live mission
+  ---
+  duration_ms: 10.542986
+  type: 'test'
+  ...
+# Subtest: known overwhelming guards, closed borders and truces remain binding
+ok 47 - known overwhelming guards, closed borders and truces remain binding
+  ---
+  duration_ms: 50.647635
+  type: 'test'
+  ...
+# Subtest: a stale mission is reconsidered when access or the existing race threshold changes
+ok 48 - a stale mission is reconsidered when access or the existing race threshold changes
+  ---
+  duration_ms: 69.944343
+  type: 'test'
+  ...
+# Subtest: player destruction of an assigned fleet leaves an immediately valid reloadable save
+ok 49 - player destruction of an assigned fleet leaves an immediately valid reloadable save
+  ---
+  duration_ms: 25.977229
+  type: 'test'
+  ...
+# Subtest: player capture of an expedition target remains valid before the next AI replan
+ok 50 - player capture of an expedition target remains valid before the next AI replan
+  ---
+  duration_ms: 52.382757
+  type: 'test'
+  ...
+# Subtest: a serialized expedition produces exactly the same next full cycle
+ok 51 - a serialized expedition produces exactly the same next full cycle
+  ---
+  duration_ms: 48.174034
+  type: 'test'
+  ...
+# Subtest: optional expedition metadata rejects malformed or foreign fleet assignments
+ok 52 - optional expedition metadata rejects malformed or foreign fleet assignments
+  ---
+  duration_ms: 30.391865
+  type: 'test'
+  ...
+# Subtest: a rich capped empire declines Civic II and surplus Forums without changing player rules
+ok 53 - a rich capped empire declines Civic II and surplus Forums without changing player rules
+  ---
+  duration_ms: 157.556953
+  type: 'test'
+  ...
+# Subtest: uncapped order gains remain valuable but already-paid Forums can fill the cap first
+ok 54 - uncapped order gains remain valuable but already-paid Forums can fill the cap first
+  ---
+  duration_ms: 19.273485
+  type: 'test'
+  ...
+# Subtest: replacing a Forum above the cap loses no effective order until the real buffer is exhausted
+ok 55 - replacing a Forum above the cap loses no effective order until the real buffer is exhausted
+  ---
+  duration_ms: 16.87835
+  type: 'test'
+  ...
+# Subtest: commissioned Command research can fill the order cap before a Civic upgrade finishes
+ok 56 - commissioned Command research can fill the order cap before a Civic upgrade finishes
+  ---
+  duration_ms: 21.095629
+  type: 'test'
+  ...
+# Subtest: late Academy science is rejected when research completes before construction
+ok 57 - late Academy science is rejected when research completes before construction
+  ---
+  duration_ms: 14.246565
+  type: 'test'
+  ...
+# Subtest: a mature native science specialization still pays for Academy II while research remains
+ok 58 - a mature native science specialization still pays for Academy II while research remains
+  ---
+  duration_ms: 7.950111
+  type: 'test'
+  ...
+# Subtest: no remaining research means no new laboratory or Academy project
+ok 59 - no remaining research means no new laboratory or Academy project
+  ---
+  duration_ms: 37.99087
+  type: 'test'
+  ...
+# Subtest: banked science and research already invested are each deducted exactly once
+ok 60 - banked science and research already invested are each deducted exactly once
+  ---
+  duration_ms: 25.273072
+  type: 'test'
+  ...
+# Subtest: paid research construction counts toward demand before commissioning another upgrade
+ok 61 - paid research construction counts toward demand before commissioning another upgrade
+  ---
+  duration_ms: 23.128356
+  type: 'test'
+  ...
+# Subtest: an imminent contacted alignment and the campaign limit shorten optional payback
+ok 62 - an imminent contacted alignment and the campaign limit shorten optional payback
+  ---
+  duration_ms: 37.43388
+  type: 'test'
+  ...
+# Subtest: surplus income projects are declined, but a genuine crew deficit still gets a market
+ok 63 - surplus income projects are declined, but a genuine crew deficit still gets a market
+  ---
+  duration_ms: 40.420209
+  type: 'test'
+  ...
+# Subtest: replacement forecasts charge the lost native production and minerals
+ok 64 - replacement forecasts charge the lost native production and minerals
+  ---
+  duration_ms: 31.241803
+  type: 'test'
+  ...
+# Subtest: a rich empire still funds recurring income that enables a credible new crew
+ok 65 - a rich empire still funds recurring income that enables a credible new crew
+  ---
+  duration_ms: 33.114011
+  type: 'test'
+  ...
+# Subtest: investment forecasts are pure and ignore unseen rival research, wealth, queues and fleets
+ok 66 - investment forecasts are pure and ignore unseen rival research, wealth, queues and fleets
+  ---
+  duration_ms: 19.537308
+  type: 'test'
+  ...
+# Subtest: a paid queue remains intact when its science becomes obsolete
+ok 67 - a paid queue remains intact when its science becomes obsolete
+  ---
+  duration_ms: 8.268467
+  type: 'test'
+  ...
+# Subtest: a fleetless empire at known war rebuilds before its third-beacon savings despite losing all frontier sensors
+ok 68 - a fleetless empire at known war rebuilds before its third-beacon savings despite losing all frontier sensors
+  ---
+  duration_ms: 42.703033
+  type: 'test'
+  ...
+# Subtest: peaceful empires retain beacon reserves and do not use the wartime exception
+ok 69 - peaceful empires retain beacon reserves and do not use the wartime exception
+  ---
+  duration_ms: 26.227325
+  type: 'test'
+  ...
+# Subtest: a retained war relation with a fallen opponent does not consume beacon savings on readiness
+ok 70 - a retained war relation with a fallen opponent does not consume beacon savings on readiness
+  ---
+  duration_ms: 11.657047
+  type: 'test'
+  ...
+# Subtest: readiness commissions at most two affordable hulls per AI turn even with six idle yards
+ok 71 - readiness commissions at most two affordable hulls per AI turn even with six idle yards
+  ---
+  duration_ms: 8.80068
+  type: 'test'
+  ...
+# Subtest: queued military and existing cruisers count toward the bounded minimum
+ok 72 - queued military and existing cruisers count toward the bounded minimum
+  ---
+  duration_ms: 39.316708
+  type: 'test'
+  ...
+# Subtest: the last minimum hull restores normal beacon reserves instead of creating an endless military exception
+ok 73 - the last minimum hull restores normal beacon reserves instead of creating an endless military exception
+  ---
+  duration_ms: 76.909906
+  type: 'test'
+  ...
+# Subtest: once minimum readiness exists a normally funded beacon takes priority over additional hulls
+ok 74 - once minimum readiness exists a normally funded beacon takes priority over additional hulls
+  ---
+  duration_ms: 29.364004
+  type: 'test'
+  ...
+# Subtest: an affordable rear yard is preferred over a more productive known wartime border yard
+ok 75 - an affordable rear yard is preferred over a more productive known wartime border yard
+  ---
+  duration_ms: 30.406202
+  type: 'test'
+  ...
+# Subtest: readiness preserves the next alignment payment at the exact normal ship-price boundary
+ok 76 - readiness preserves the next alignment payment at the exact normal ship-price boundary
+  ---
+  duration_ms: 37.505304
+  type: 'test'
+  ...
+# Subtest: future upkeep of queued civilian ships cannot make a readiness hull break sustainable alignment
+ok 77 - future upkeep of queued civilian ships cannot make a readiness hull break sustainable alignment
+  ---
+  duration_ms: 21.241091
+  type: 'test'
+  ...
+# Subtest: loss of every shipyard permits one paid replacement yard without dismantling charter support
+ok 78 - loss of every shipyard permits one paid replacement yard without dismantling charter support
+  ---
+  duration_ms: 31.265818
+  type: 'test'
+  ...
+# Subtest: unseen hostile fleet size and movement do not change rebuilding decisions
+ok 79 - unseen hostile fleet size and movement do not change rebuilding decisions
+  ---
+  duration_ms: 50.52685
+  type: 'test'
+  ...
+# Subtest: a favorable final colony never sends a force through an observed overwhelming blockade
+ok 80 - a favorable final colony never sends a force through an observed overwhelming blockade
+  ---
+  duration_ms: 33.590481
+  type: 'test'
+  ...
+# Subtest: reinforcement routing takes a safe detour around an observed intermediate blockade
+ok 81 - reinforcement routing takes a safe detour around an observed intermediate blockade
+  ---
+  duration_ms: 26.304449
+  type: 'test'
+  ...
+# Subtest: wartime task forces rally, merge and relieve a blockade they cannot defeat individually
+ok 82 - wartime task forces rally, merge and relieve a blockade they cannot defeat individually
+  ---
+  duration_ms: 37.689018
+  type: 'test'
+  ...
+# Subtest: an observed threat to a colony takes priority over an easy unrelated conquest
+ok 83 - an observed threat to a colony takes priority over an easy unrelated conquest
+  ---
+  duration_ms: 19.877133
+  type: 'test'
+  ...
+# Subtest: several inadequate border garrisons can concentrate even when every origin is threatened
+ok 84 - several inadequate border garrisons can concentrate even when every origin is threatened
+  ---
+  duration_ms: 25.579175
+  type: 'test'
+  ...
+# Subtest: an outmatched fleet retreats from shared orbit to an observed safe friendly system
+ok 85 - an outmatched fleet retreats from shared orbit to an observed safe friendly system
+  ---
+  duration_ms: 22.868641
+  type: 'test'
+  ...
+# Subtest: five ships do not override the strength assessment against a much larger enemy
+ok 86 - five ships do not override the strength assessment against a much larger enemy
+  ---
+  duration_ms: 21.145272
+  type: 'test'
+  ...
+# Subtest: moving and strengthening invisible foreign fleets does not change AI decisions
+ok 87 - moving and strengthening invisible foreign fleets does not change AI decisions
+  ---
+  duration_ms: 44.455959
+  type: 'test'
+  ...
+# Subtest: threatened colony construction prioritizes defense and pays normal costs
+ok 88 - threatened colony construction prioritizes defense and pays normal costs
+  ---
+  duration_ms: 16.149218
+  type: 'test'
+  ...
+# Subtest: an intercepted scout spends one attempt and never probes the same hidden destination twice in a turn
+ok 89 - an intercepted scout spends one attempt and never probes the same hidden destination twice in a turn
+  ---
+  duration_ms: 31.000262
+  type: 'test'
+  ...
+# Subtest: a full AI turn preserves save validity and the shared resource/order constraints
+ok 90 - a full AI turn preserves save validity and the shared resource/order constraints
+  ---
+  duration_ms: 101.140641
+  type: 'test'
+  ...
+# Subtest: WATCH51 funding example uses 50 +75 -60 without changing the instantaneous status or resolver
+ok 91 - WATCH51 funding example uses 50 +75 -60 without changing the instantaneous status or resolver
+  ---
+  duration_ms: 333.988736
+  type: 'test'
+  ...
+# Subtest: an after-income deficit distinguishes funding from an otherwise ready network and charges nothing
+ok 92 - an after-income deficit distinguishes funding from an otherwise ready network and charges nothing
+  ---
+  duration_ms: 24.815347
+  type: 'test'
+  ...
+# Subtest: a treasury above 60 can still fall short after current upkeep, without subtracting upkeep twice
+ok 93 - a treasury above 60 can still fall short after current upkeep, without subtracting upkeep twice
+  ---
+  duration_ms: 14.389741
+  type: 'test'
+  ...
+# Subtest: an exhausted treasury clamps to zero without projecting an alignment charge or attrition command
+ok 94 - an exhausted treasury clamps to zero without projecting an alignment charge or attrition command
+  ---
+  duration_ms: 9.802372
+  type: 'test'
+  ...
+# Subtest: current blockade, missing Protocol and missing sites prevent projected payment despite ample credits
+ok 95 - current blockade, missing Protocol and missing sites prevent projected payment despite ample credits
+  ---
+  duration_ms: 41.177133
+  type: 'test'
+  ...
+# Subtest: structural refusal keeps its exact reason even when funding also falls short
+ok 96 - structural refusal keeps its exact reason even when funding also falls short
+  ---
+  duration_ms: 16.475027
+  type: 'test'
+  ...
+# Subtest: the real resolver still charges once, and ordinary commands do not turn the outlook into payment
+ok 97 - the real resolver still charges once, and ordinary commands do not turn the outlook into payment
+  ---
+  duration_ms: 11.102832
+  type: 'test'
+  ...
+# Subtest: last-step completion returns a budget until the ordinary turn wins, then every completed outlook is null
+ok 98 - last-step completion returns a budget until the ordinary turn wins, then every completed outlook is null
+  ---
+  duration_ms: 16.577058
+  type: 'test'
+  ...
+# Subtest: missing or eliminated players have no outlook; an unstarted or paused alignment still has a budget
+ok 99 - missing or eliminated players have no outlook; an unstarted or paused alignment still has a budget
+  ---
+  duration_ms: 12.227933
+  type: 'test'
+  ...
+# Subtest: projection accepts deeply frozen input, returns detached values and preserves exact JSON continuation
+ok 100 - projection accepts deeply frozen input, returns detached values and preserves exact JSON continuation
+  ---
+  duration_ms: 159.404744
+  type: 'test'
+  ...
+# Subtest: hidden foreign economy, research, fleets and queues cannot change the player-only current outlook
+ok 101 - hidden foreign economy, research, fleets and queues cannot change the player-only current outlook
+  ---
+  duration_ms: 8.561394
+  type: 'test'
+  ...
+# Subtest: an already-noticed trade expiry demonstrates why current-conditions income is not a promised next treasury
+ok 102 - an already-noticed trade expiry demonstrates why current-conditions income is not a promised next treasury
+  ---
+  duration_ms: 285.897244
+  type: 'test'
+  ...
+# Subtest: visible target order matches actual reports, including continuation after a contested four-round exchange
+ok 103 - visible target order matches actual reports, including continuation after a contested four-round exchange
+  ---
+  duration_ms: 26.185517
+  type: 'test'
+  ...
+# Subtest: an attacker destroyed in the first exchange never reaches later visible targets
+ok 104 - an attacker destroyed in the first exchange never reaches later visible targets
+  ---
+  duration_ms: 12.037978
+  type: 'test'
+  ...
+# Subtest: arrival scope names only the selected attacker and the sensor-visible enemy sequence
+ok 105 - arrival scope names only the selected attacker and the sensor-visible enemy sequence
+  ---
+  duration_ms: 9.579766
+  type: 'test'
+  ...
+# Subtest: remembered charts never reveal opposition, even when hidden fleets and defenses change
+ok 106 - remembered charts never reveal opposition, even when hidden fleets and defenses change
+  ---
+  duration_ms: 5.632782
+  type: 'test'
+  ...
+# Subtest: a live empty observation is distinct from unknown opposition and disappears when sensors leave
+ok 107 - a live empty observation is distinct from unknown opposition and disappears when sensors leave
+  ---
+  duration_ms: 5.17083
+  type: 'test'
+  ...
+# Subtest: foreign, civilian, missing, unknown and nonadjacent selections have one neutral result
+ok 108 - foreign, civilian, missing, unknown and nonadjacent selections have one neutral result
+  ---
+  duration_ms: 12.923051
+  type: 'test'
+  ...
+# Subtest: defense order includes civilians and remains independent of Hold, readiness and display sorting
+ok 109 - defense order includes civilians and remains independent of Hold, readiness and display sorting
+  ---
+  duration_ms: 8.52174
+  type: 'test'
+  ...
+# Subtest: preview and defense snapshots are pure, copied and contain no orders, plans, heritage or research
+ok 110 - preview and defense snapshots are pure, copied and contain no orders, plans, heritage or research
+  ---
+  duration_ms: 20.730667
+  type: 'test'
+  ...
+# Subtest: all thirteen ordinary command and complete next-cycle outcomes match the archived pre-trace engine
+ok 111 - all thirteen ordinary command and complete next-cycle outcomes match the archived pre-trace engine
+  ---
+  duration_ms: 311.993487
+  type: 'test'
+  ...
+# Subtest: simultaneous last shots are recorded even when both formations die in the first round
+ok 112 - simultaneous last shots are recorded even when both formations die in the first round
+  ---
+  duration_ms: 6.061193
+  type: 'test'
+  ...
+# Subtest: a contested exchange records exactly four paired rounds and declining firepower after casualties
+ok 113 - a contested exchange records exactly four paired rounds and declining firepower after casualties
+  ---
+  duration_ms: 6.915098
+  type: 'test'
+  ...
+# Subtest: actual weapons, faction and incoming shield factors are frozen with outgoing rolls
+ok 114 - actual weapons, faction and incoming shield factors are frozen with outgoing rolls
+  ---
+  duration_ms: 5.085971
+  type: 'test'
+  ...
+# Subtest: raw outgoing overkill remains distinct from shield reduction and clamped actual hull loss
+ok 115 - raw outgoing overkill remains distinct from shield reduction and clamped actual hull loss
+  ---
+  duration_ms: 12.433397
+  type: 'test'
+  ...
+# Subtest: zero-fire rounds preserve minimum fractional hull and legacy explicit ship counts exactly
+ok 116 - zero-fire rounds preserve minimum fractional hull and legacy explicit ship counts exactly
+  ---
+  duration_ms: 66.882924
+  type: 'test'
+  ...
+# Subtest: a surviving lead and later Ark have distinct traces chained through the actual attacker
+ok 117 - a surviving lead and later Ark have distinct traces chained through the actual attacker
+  ---
+  duration_ms: 12.985138
+  type: 'test'
+  ...
+# Subtest: future snapshots stay deeply immutable through repair, renaming, new research and JSON replay
+ok 118 - future snapshots stay deeply immutable through repair, renaming, new research and JSON replay
+  ---
+  duration_ms: 25.65737
+  type: 'test'
+  ...
+# Subtest: traces remain absent from AI-only duels and invasions, without revealing hidden forces
+ok 119 - traces remain absent from AI-only duels and invasions, without revealing hidden forces
+  ---
+  duration_ms: 26.672547
+  type: 'test'
+  ...
+# Subtest: optional missing traces preserve old v1 reports and cannot be fabricated on invasion reports
+ok 120 - optional missing traces preserve old v1 reports and cannot be fabricated on invasion reports
+  ---
+  duration_ms: 13.036173
+  type: 'test'
+  ...
+# Subtest: malformed, unbounded, discontinuous or arithmetically inconsistent traces are rejected
+ok 121 - malformed, unbounded, discontinuous or arithmetically inconsistent traces are rejected
+  ---
+  duration_ms: 39.038989
+  type: 'test'
+  ...
+# Subtest: report retention bounds round storage to fifty reports and two hundred exchanges
+ok 122 - report retention bounds round storage to fifty reports and two hundred exchanges
+  ---
+  duration_ms: 16.371012
+  type: 'test'
+  ...
+# Subtest: a conclusion requires a recorded winner and an existing player
+ok 123 - a conclusion requires a recorded winner and an existing player
+  ---
+  duration_ms: 34.117736
+  type: 'test'
+  ...
+# Subtest: the actual WATCH cycle 60 export retains its result, own holdings and recorded network
+ok 124 - the actual WATCH cycle 60 export retains its result, own holdings and recorded network
+  ---
+  duration_ms: 37.798571
+  type: 'test'
+  ...
+# Subtest: the actual IRON cycle 57 export reports final founding control and bounded retained history
+ok 125 - the actual IRON cycle 57 export reports final founding control and bounded retained history
+  ---
+  duration_ms: 14.898472
+  type: 'test'
+  ...
+# Subtest: a recorded loss names the canonical victor without revealing their private holdings
+ok 126 - a recorded loss names the canonical victor without revealing their private holdings
+  ---
+  duration_ms: 14.457629
+  type: 'test'
+  ...
+# Subtest: legacy version 1 Transcendence retains its outcome without invented alignment or participants
+ok 127 - legacy version 1 Transcendence retains its outcome without invented alignment or participants
+  ---
+  duration_ms: 13.170173
+  type: 'test'
+  ...
+# Subtest: saved zero progress and recorded participants are distinct from missing metadata or replacement candidates
+ok 128 - saved zero progress and recorded participants are distinct from missing metadata or replacement candidates
+  ---
+  duration_ms: 3.173778
+  type: 'test'
+  ...
+# Subtest: empty and legacy optional histories remain empty instead of reconstructing missing events
+ok 129 - empty and legacy optional histories remain empty instead of reconstructing missing events
+  ---
+  duration_ms: 16.471701
+  type: 'test'
+  ...
+# Subtest: pruned histories use only retained ranges and preserve category diversity despite repeated hull completions
+ok 130 - pruned histories use only retained ranges and preserve category diversity despite repeated hull completions
+  ---
+  duration_ms: 13.642145
+  type: 'test'
+  ...
+# Subtest: stale references preserve actual text and only offer retained reports or accessible system links
+ok 131 - stale references preserve actual text and only offer retained reports or accessible system links
+  ---
+  duration_ms: 3.28127
+  type: 'test'
+  ...
+# Subtest: discovery links require the observer-safe discovery view, while charting alone permits only a world link
+ok 132 - discovery links require the observer-safe discovery view, while charting alone permits only a world link
+  ---
+  duration_ms: 6.431475
+  type: 'test'
+  ...
+# Subtest: frozen saves can be projected repeatedly and every returned nested value is an independent copy
+ok 133 - frozen saves can be projected repeatedly and every returned nested value is an independent copy
+  ---
+  duration_ms: 9.311144
+  type: 'test'
+  ...
+# Subtest: hidden rival economies, research, worlds and forces neither change nor supply the completed view
+ok 134 - hidden rival economies, research, worlds and forces neither change nor supply the completed view
+  ---
+  duration_ms: 18.041454
+  type: 'test'
+  ...
+# Subtest: the exact actual cycle55 export identifies all four worlds, Concord three and Lumen under Choir
+ok 135 - the exact actual cycle55 export identifies all four worlds, Concord three and Lumen under Choir
+  ---
+  duration_ms: 25.566421
+  type: 'test'
+  ...
+# Subtest: charting and diplomatic contact do not identify an unsurveyed founding world
+ok 136 - charting and diplomatic contact do not identify an unsurveyed founding world
+  ---
+  duration_ms: 18.78933
+  type: 'test'
+  ...
+# Subtest: ownership alone recognizes an unsurveyed world and keeps own control exact
+ok 137 - ownership alone recognizes an unsurveyed world and keeps own control exact
+  ---
+  duration_ms: 13.052053
+  type: 'test'
+  ...
+# Subtest: uncontacted founders and sovereigns stay anonymous, distinct from genuinely unowned worlds
+ok 138 - uncontacted founders and sovereigns stay anonymous, distinct from genuinely unowned worlds
+  ---
+  duration_ms: 9.858587
+  type: 'test'
+  ...
+# Subtest: hidden ownership, founder status, names, positions, fleets and research cannot change the view
+ok 139 - hidden ownership, founder status, names, positions, fleets and research cannot change the view
+  ---
+  duration_ms: 5.483183
+  type: 'test'
+  ...
+# Subtest: projection snapshots are pure, independent copies with stable order
+ok 140 - projection snapshots are pure, independent copies with stable order
+  ---
+  duration_ms: 10.229911
+  type: 'test'
+  ...
+# Subtest: all governments receive their own knowledge scope rather than the player observer scope
+ok 141 - all governments receive their own knowledge scope rather than the player observer scope
+  ---
+  duration_ms: 12.218736
+  type: 'test'
+  ...
+# Subtest: ordinary movement recognizes a surveyed founding world and uses its normal local contacts
+ok 142 - ordinary movement recognizes a surveyed founding world and uses its normal local contacts
+  ---
+  duration_ms: 13.326224
+  type: 'test'
+  ...
+# Subtest: ordinary capture and recapture preserve the fixed founding identity across capital relocation
+ok 143 - ordinary capture and recapture preserve the fixed founding identity across capital relocation
+  ---
+  duration_ms: 55.673174
+  type: 'test'
+  ...
+# Subtest: one remaining order buys a lead without consuming resources, movement or RNG
+ok 144 - one remaining order buys a lead without consuming resources, movement or RNG
+  ---
+  duration_ms: 50.48966
+  type: 'test'
+  ...
+# Subtest: zero remaining orders cannot assign, and naturally first military defenders need no payment
+ok 145 - zero remaining orders cannot assign, and naturally first military defenders need no payment
+  ---
+  duration_ms: 20.319018
+  type: 'test'
+  ...
+# Subtest: colonization retains the last order before optional defense preparation
+ok 146 - colonization retains the last order before optional defense preparation
+  ---
+  duration_ms: 7.021386
+  type: 'test'
+  ...
+# Subtest: earlier military combat and economic construction keep priority over the final assignment
+ok 147 - earlier military combat and economic construction keep priority over the final assignment
+  ---
+  duration_ms: 41.061317
+  type: 'test'
+  ...
+# Subtest: assignment uses final co-location after an Ark is consumed, not a pre-turn candidate list
+ok 148 - assignment uses final co-location after an Ark is consumed, not a pre-turn candidate list
+  ---
+  duration_ms: 45.047834
+  type: 'test'
+  ...
+# Subtest: only one assignment is made, prioritizing a locally observed war threat above Ark protection
+ok 149 - only one assignment is made, prioritizing a locally observed war threat above Ark protection
+  ---
+  duration_ms: 49.200231
+  type: 'test'
+  ...
+# Subtest: Ark protection outranks other mixed formations without a local war threat
+ok 150 - Ark protection outranks other mixed formations without a local war threat
+  ---
+  duration_ms: 27.232282
+  type: 'test'
+  ...
+# Subtest: observed hostile sovereignty is a local threat, but a peaceful visiting fleet is not
+ok 151 - observed hostile sovereignty is a local threat, but a peaceful visiting fleet is not
+  ---
+  duration_ms: 27.338191
+  type: 'test'
+  ...
+# Subtest: existing lead survives better reinforcements and routine damage without repeated assignment costs
+ok 152 - existing lead survives better reinforcements and routine damage without repeated assignment costs
+  ---
+  duration_ms: 6.907363
+  type: 'test'
+  ...
+# Subtest: candidate hull outranks nominal firepower, then strength and stable fleet ID break ties
+ok 153 - candidate hull outranks nominal firepower, then strength and stable fleet ID break ties
+  ---
+  duration_ms: 35.82219
+  type: 'test'
+  ...
+# Subtest: hidden rival fleets cannot change which local formation receives the remaining order
+ok 154 - hidden rival fleets cannot change which local formation receives the remaining order
+  ---
+  duration_ms: 24.168579
+  type: 'test'
+  ...
+# Subtest: identical seeds and JSON reloads preserve the exact assignment and next AI result
+ok 155 - identical seeds and JSON reloads preserve the exact assignment and next AI result
+  ---
+  duration_ms: 76.28547
+  type: 'test'
+  ...
+# Subtest: lead assignment and removal spend one order without changing movement, resources, route, Hold or fleet order
+ok 156 - lead assignment and removal spend one order without changing movement, resources, route, Hold or fleet order
+  ---
+  duration_ms: 24.043126
+  type: 'test'
+  ...
+# Subtest: a new lead replaces only the same owner and orbit assignment
+ok 157 - a new lead replaces only the same owner and orbit assignment
+  ---
+  duration_ms: 9.808463
+  type: 'test'
+  ...
+# Subtest: same-lead assignment and clearing a nonlead are exact free no-ops at zero orders
+ok 158 - same-lead assignment and clearing a nonlead are exact free no-ops at zero orders
+  ---
+  duration_ms: 18.448193
+  type: 'test'
+  ...
+# Subtest: foreign, missing and civilian previews are neutral; ended and eliminated commands reject even no-ops
+ok 159 - foreign, missing and civilian previews are neutral; ended and eliminated commands reject even no-ops
+  ---
+  duration_ms: 29.251515
+  type: 'test'
+  ...
+# Subtest: ordering promotes each local lead only within its government slots and never mutates the input
+ok 160 - ordering promotes each local lead only within its government slots and never mutates the input
+  ---
+  duration_ms: 0.704005
+  type: 'test'
+  ...
+# Subtest: move and attack use the previewed defensive order, including continuation after a surviving lead
+ok 161 - move and attack use the previewed defensive order, including continuation after a surviving lead
+  ---
+  duration_ms: 26.737258
+  type: 'test'
+  ...
+# Subtest: default no-lead exchanges preserve pre-feature casualties, RNG, costs and report shape
+ok 162 - default no-lead exchanges preserve pre-feature casualties, RNG, costs and report shape
+  ---
+  duration_ms: 43.850979
+  type: 'test'
+  ...
+# Subtest: physical movement and route continuation clear a lead; planning, failed movement and repair preserve it
+ok 163 - physical movement and route continuation clear a lead; planning, failed movement and repair preserve it
+  ---
+  duration_ms: 30.324249
+  type: 'test'
+  ...
+# Subtest: a civilian interception preserves its explicit false metadata because no physical departure occurs
+ok 164 - a civilian interception preserves its explicit false metadata because no physical departure occurs
+  ---
+  duration_ms: 10.506328
+  type: 'test'
+  ...
+# Subtest: split leaves the original lead and merge transfers either input lead to the survivor
+ok 165 - split leaves the original lead and merge transfers either input lead to the survivor
+  ---
+  duration_ms: 24.14208
+  type: 'test'
+  ...
+# Subtest: treaty withdrawal clears only departing leads and preserves an existing destination lead
+ok 166 - treaty withdrawal clears only departing leads and preserves an existing destination lead
+  ---
+  duration_ms: 6.685029
+  type: 'test'
+  ...
+# Subtest: a stranded withdrawal has no physical destination and retains the defensive lead
+ok 167 - a stranded withdrawal has no physical destination and retains the defensive lead
+  ---
+  duration_ms: 17.680308
+  type: 'test'
+  ...
+# Subtest: a surviving lead faces repeated attackers while combat clears Hold independently
+ok 168 - a surviving lead faces repeated attackers while combat clears Hold independently
+  ---
+  duration_ms: 19.2386
+  type: 'test'
+  ...
+# Subtest: only an actual defending lead enters historical snapshots, which survive later lead changes and fleet loss
+ok 169 - only an actual defending lead enters historical snapshots, which survive later lead changes and fleet loss
+  ---
+  duration_ms: 6.176338
+  type: 'test'
+  ...
+# Subtest: v1 saves allow absent and false lead fields but reject malformed, civilian or duplicate true leads
+ok 170 - v1 saves allow absent and false lead fields but reject malformed, civilian or duplicate true leads
+  ---
+  duration_ms: 52.959043
+  type: 'test'
+  ...
+# Subtest: unobserved foreign lead assignments do not change an arrival preview
+ok 171 - unobserved foreign lead assignments do not change an arrival preview
+  ---
+  duration_ms: 11.240448
+  type: 'test'
+  ...
+# Subtest: population grants bounded infrastructure slots, and ships do not occupy one
+ok 172 - population grants bounded infrastructure slots, and ships do not occupy one
+  ---
+  duration_ms: 68.679561
+  type: 'test'
+  ...
+# Subtest: replacement keeps old infrastructure and its charter until completion, and cancellation preserves both
+ok 173 - replacement keeps old infrastructure and its charter until completion, and cancellation preserves both
+  ---
+  duration_ms: 25.687557
+  type: 'test'
+  ...
+# Subtest: invalid replacement requests are atomic and never destroy buildings immediately
+ok 174 - invalid replacement requests are atomic and never destroy buildings immediately
+  ---
+  duration_ms: 5.232014
+  type: 'test'
+  ...
+# Subtest: legacy over-capacity worlds and already-paid projects survive population loss and save restoration
+ok 175 - legacy over-capacity worlds and already-paid projects survive population loss and save restoration
+  ---
+  duration_ms: 33.683464
+  type: 'test'
+  ...
+# Subtest: charter prerequisites, costs and orders are enforced atomically while full slots do not block development
+ok 176 - charter prerequisites, costs and orders are enforced atomically while full slots do not block development
+  ---
+  duration_ms: 32.908146
+  type: 'test'
+  ...
+# Subtest: charter promotion needs population eight and industry, and switching preserves the old bonus until completion
+ok 177 - charter promotion needs population eight and industry, and switching preserves the old bonus until completion
+  ---
+  duration_ms: 32.087923
+  type: 'test'
+  ...
+# Subtest: each charter produces its stated native-world and population-dependent bonuses and civic orders
+ok 178 - each charter produces its stated native-world and population-dependent bonuses and civic orders
+  ---
+  duration_ms: 28.892955
+  type: 'test'
+  ...
+# Subtest: forge military discounts round up, apply only to minerals, and cancellation refunds the paid price
+ok 179 - forge military discounts round up, apply only to minerals, and cancellation refunds the paid price
+  ---
+  duration_ms: 8.376578
+  type: 'test'
+  ...
+# Subtest: charter cancellation refunds only unused work and never removes the currently operating charter
+ok 180 - charter cancellation refunds only unused work and never removes the currently operating charter
+  ---
+  duration_ms: 21.04234
+  type: 'test'
+  ...
+# Subtest: forge orbital repairs occur only at an unblocked owned colony
+ok 181 - forge orbital repairs occur only at an unblocked owned colony
+  ---
+  duration_ms: 50.65049
+  type: 'test'
+  ...
+# Subtest: capture preserves completed charters and their support while cancelling the former owner’s queued change
+ok 182 - capture preserves completed charters and their support while cancelling the former owner’s queued change
+  ---
+  duration_ms: 14.249921
+  type: 'test'
+  ...
+# Subtest: new development save fields validate strictly without rejecting old ordinary queues or charter-free saves
+ok 183 - new development save fields validate strictly without rejecting old ordinary queues or charter-free saves
+  ---
+  duration_ms: 9.060716
+  type: 'test'
+  ...
+# Subtest: AI peace creates a funded offer without ending war or moving the player
+ok 184 - AI peace creates a funded offer without ending war or moving the player
+  ---
+  duration_ms: 63.343633
+  type: 'test'
+  ...
+# Subtest: player acceptance transfers escrow, withdraws both fleets, and enforces five cycles of truce
+ok 185 - player acceptance transfers escrow, withdraws both fleets, and enforces five cycles of truce
+  ---
+  duration_ms: 37.363449
+  type: 'test'
+  ...
+# Subtest: declining a peace offer refunds its proposer exactly once and preserves the war
+ok 186 - declining a peace offer refunds its proposer exactly once and preserves the war
+  ---
+  duration_ms: 17.988324
+  type: 'test'
+  ...
+# Subtest: expired offers refund escrow without acceptance or withdrawal, and advancing is idempotent
+ok 187 - expired offers refund escrow without acceptance or withdrawal, and advancing is idempotent
+  ---
+  duration_ms: 23.706957
+  type: 'test'
+  ...
+# Subtest: players cannot answer another recipient’s offer or bypass order costs
+ok 188 - players cannot answer another recipient’s offer or bypass order costs
+  ---
+  duration_ms: 13.622468
+  type: 'test'
+  ...
+# Subtest: player peace forecasts explain refusal and use war age or actual colony losses for acceptance
+ok 189 - player peace forecasts explain refusal and use war age or actual colony losses for acceptance
+  ---
+  duration_ms: 57.151444
+  type: 'test'
+  ...
+# Subtest: observed invading fleets increase willingness, but remote hidden fleets do not influence it
+ok 190 - observed invading fleets increase willingness, but remote hidden fleets do not influence it
+  ---
+  duration_ms: 11.078766
+  type: 'test'
+  ...
+# Subtest: trade cancellation provides three cycles of income and access before deterministic withdrawal
+ok 191 - trade cancellation provides three cycles of income and access before deterministic withdrawal
+  ---
+  duration_ms: 19.176904
+  type: 'test'
+  ...
+# Subtest: direct war may break trade, with a visible betrayal penalty
+ok 192 - direct war may break trade, with a visible betrayal penalty
+  ---
+  duration_ms: 23.428948
+  type: 'test'
+  ...
+# Subtest: a gift and trade do not permanently pacify a strong Khar rival on a disputed frontier
+ok 193 - a gift and trade do not permanently pacify a strong Khar rival on a disputed frontier
+  ---
+  duration_ms: 16.700979
+  type: 'test'
+  ...
+# Subtest: elapsed time alone creates no war policy and hidden armies do not affect AI diplomacy
+ok 194 - elapsed time alone creates no war policy and hidden armies do not affect AI diplomacy
+  ---
+  duration_ms: 18.105633
+  type: 'test'
+  ...
+# Subtest: new public border claims create grievance while a quiet peaceful frontier recovers
+ok 195 - new public border claims create grievance while a quiet peaceful frontier recovers
+  ---
+  duration_ms: 15.884643
+  type: 'test'
+  ...
+# Subtest: peace withdrawal has a deterministic charted neutral fallback for an empire without colonies
+ok 196 - peace withdrawal has a deterministic charted neutral fallback for an empire without colonies
+  ---
+  duration_ms: 14.570419
+  type: 'test'
+  ...
+# Subtest: optional diplomacy save state is backward compatible and rejects malformed new fields
+ok 197 - optional diplomacy save state is backward compatible and rejects malformed new fields
+  ---
+  duration_ms: 31.93043
+  type: 'test'
+  ...
+# Subtest: seeded galaxies contain one of each new discovery without increasing anomaly density
+ok 198 - seeded galaxies contain one of each new discovery without increasing anomaly density
+  ---
+  duration_ms: 81.578568
+  type: 'test'
+  ...
+# Subtest: all original anomaly commands preserve choice IDs and record actual outcomes once
+ok 199 - all original anomaly commands preserve choice IDs and record actual outcomes once
+  ---
+  duration_ms: 82.995003
+  type: 'test'
+  ...
+# Subtest: history records capped habitability, unavailable refugee destinations, and actual new charts
+ok 200 - history records capped habitability, unavailable refugee destinations, and actual new charts
+  ---
+  duration_ms: 34.142001
+  type: 'test'
+  ...
+# Subtest: the recovered escort has a distinctive name and heritage survives merges and destruction
+ok 201 - the recovered escort has a distinctive name and heritage survives merges and destruction
+  ---
+  duration_ms: 12.663167
+  type: 'test'
+  ...
+# Subtest: both new discoveries offer their exact immediate salvage rewards with atomic prerequisites
+ok 202 - both new discoveries offer their exact immediate salvage rewards with atomic prerequisites
+  ---
+  duration_ms: 28.995927
+  type: 'test'
+  ...
+# Subtest: preservation may begin on a neutral world but matures only with a colony and supporting building
+ok 203 - preservation may begin on a neutral world but matures only with a colony and supporting building
+  ---
+  duration_ms: 13.7254
+  type: 'test'
+  ...
+# Subtest: maturation pauses under a hostile warship and resumes without decay or expiry
+ok 204 - maturation pauses under a hostile warship and resumes without decay or expiry
+  ---
+  duration_ms: 16.185907
+  type: 'test'
+  ...
+# Subtest: normal commands never mature a discovery and three full end turns do
+ok 205 - normal commands never mature a discovery and three full end turns do
+  ---
+  duration_ms: 20.869006
+  type: 'test'
+  ...
+# Subtest: final portable rewards resolve once and do not require the restoration technology
+ok 206 - final portable rewards resolve once and do not require the restoration technology
+  ---
+  duration_ms: 25.793856
+  type: 'test'
+  ...
+# Subtest: restoration uses ordinary payment exactly once and cancellation preserves only the entitlement
+ok 207 - restoration uses ordinary payment exactly once and cancellation preserves only the entitlement
+  ---
+  duration_ms: 28.407949
+  type: 'test'
+  ...
+# Subtest: ordinary construction menus cannot bypass discovery gates and can commission a mature site
+ok 208 - ordinary construction menus cannot bypass discovery gates and can commission a mature site
+  ---
+  duration_ms: 7.391699
+  type: 'test'
+  ...
+# Subtest: full infrastructure preserves a ready discovery until explicit replacement is chosen
+ok 209 - full infrastructure preserves a ready discovery until explicit replacement is chosen
+  ---
+  duration_ms: 16.804523
+  type: 'test'
+  ...
+# Subtest: capture preserves restoration rights and history without transferring rewards or replaying a choice
+ok 210 - capture preserves restoration rights and history without transferring rewards or replaying a choice
+  ---
+  duration_ms: 18.828313
+  type: 'test'
+  ...
+# Subtest: replacing an ancient site leaves its restoration entitlement and historical identity
+ok 211 - replacing an ancient site leaves its restoration entitlement and historical identity
+  ---
+  duration_ms: 13.478039
+  type: 'test'
+  ...
+# Subtest: unseen rival choices, maturation and new observers leave remembered discovery views unchanged
+ok 212 - unseen rival choices, maturation and new observers leave remembered discovery views unchanged
+  ---
+  duration_ms: 14.422132
+  type: 'test'
+  ...
+# Subtest: remembered mature choices do not expose remote production or current site completion
+ok 213 - remembered mature choices do not expose remote production or current site completion
+  ---
+  duration_ms: 11.367836
+  type: 'test'
+  ...
+# Subtest: legacy resolved anomalies retain their ending without inventing a choice or reward
+ok 214 - legacy resolved anomalies retain their ending without inventing a choice or reward
+  ---
+  duration_ms: 3.949569
+  type: 'test'
+  ...
+# Subtest: legacy resolvers remember their own remote ending without learning another empire’s outcome
+ok 215 - legacy resolvers remember their own remote ending without learning another empire’s outcome
+  ---
+  duration_ms: 5.031259
+  type: 'test'
+  ...
+# Subtest: in-progress discovery and restoration saves resume deterministically
+ok 216 - in-progress discovery and restoration saves resume deterministically
+  ---
+  duration_ms: 48.313575
+  type: 'test'
+  ...
+# Subtest: optional discovery fields validate bounds, ownership-independent history, and heritage references
+ok 217 - optional discovery fields validate bounds, ownership-independent history, and heritage references
+  ---
+  duration_ms: 16.822747
+  type: 'test'
+  ...
+# Subtest: refugee previews match uncapped arrival below, at and above growth capacity
+ok 218 - refugee previews match uncapped arrival below, at and above growth capacity
+  ---
+  duration_ms: 192.921347
+  type: 'test'
+  ...
+# Subtest: refugee growth capacity follows the shared colony yield including Habitation Domes
+ok 219 - refugee growth capacity follows the shared colony yield including Habitation Domes
+  ---
+  duration_ms: 5.138579
+  type: 'test'
+  ...
+# Subtest: an unavailable capital previews zero without changing legal choice or fee
+ok 220 - an unavailable capital previews zero without changing legal choice or fee
+  ---
+  duration_ms: 5.975874
+  type: 'test'
+  ...
+# Subtest: an unavailable refugee recipient exposes no foreign population or capacity
+ok 221 - an unavailable refugee recipient exposes no foreign population or capacity
+  ---
+  duration_ms: 13.070387
+  type: 'test'
+  ...
+# Subtest: Garden previews actual habitability at the cap and agrees with command history
+ok 222 - Garden previews actual habitability at the cap and agrees with command history
+  ---
+  duration_ms: 41.718033
+  type: 'test'
+  ...
+# Subtest: remembered discovery options reveal no later remote effect data
+ok 223 - remembered discovery options reveal no later remote effect data
+  ---
+  duration_ms: 26.908598
+  type: 'test'
+  ...
+# Subtest: effect previews add no hidden chart targets and preserve atomic cost and order gates
+ok 224 - effect previews add no hidden chart targets and preserve atomic cost and order gates
+  ---
+  duration_ms: 53.911833
+  type: 'test'
+  ...
+# Subtest: AI does not value nonexistent refugee population when its Ark survives the capital
+ok 225 - AI does not value nonexistent refugee population when its Ark survives the capital
+  ---
+  duration_ms: 18.803146
+  type: 'test'
+  ...
+# Subtest: AI retains the existing refugee preference at a full owned capital
+ok 226 - AI retains the existing refugee preference at a full owned capital
+  ---
+  duration_ms: 5.868693
+  type: 'test'
+  ...
+# Subtest: splitting preserves ships, hull, upkeep, firepower and remaining movement for one order
+ok 227 - splitting preserves ships, hull, upkeep, firepower and remaining movement for one order
+  ---
+  duration_ms: 25.015742
+  type: 'test'
+  ...
+# Subtest: spent movement cannot be refreshed by splitting, movement commands, or remerging
+ok 228 - spent movement cannot be refreshed by splitting, movement commands, or remerging
+  ---
+  duration_ms: 10.787462
+  type: 'test'
+  ...
+# Subtest: rival empires use the same split cost and conservation rules without touching player resources
+ok 229 - rival empires use the same split cost and conservation rules without touching player resources
+  ---
+  duration_ms: 12.014835
+  type: 'test'
+  ...
+# Subtest: rejected foreign fleet previews expose no location or planned-route context
+ok 230 - rejected foreign fleet previews expose no location or planned-route context
+  ---
+  duration_ms: 9.176112
+  type: 'test'
+  ...
+# Subtest: severely damaged merged forces retain explicit ship counts and fractional legacy hull
+ok 231 - severely damaged merged forces retain explicit ship counts and fractional legacy hull
+  ---
+  duration_ms: 113.822232
+  type: 'test'
+  ...
+# Subtest: repeated odd-fraction split and merge cycles neither create nor erase hull
+ok 232 - repeated odd-fraction split and merge cycles neither create nor erase hull
+  ---
+  duration_ms: 98.429977
+  type: 'test'
+  ...
+# Subtest: all ordinary hull counts have positive bounded exact allocations, including healthy capacity
+ok 233 - all ordinary hull counts have positive bounded exact allocations, including healthy capacity
+  ---
+  duration_ms: 311.659392
+  type: 'test'
+  ...
+# Subtest: invalid split counts, ownership, Ark operation and unrepresentable hull fail atomically
+ok 234 - invalid split counts, ownership, Ark operation and unrepresentable hull fail atomically
+  ---
+  duration_ms: 74.028572
+  type: 'test'
+  ...
+# Subtest: the original keeps its route and both descendants retain independent historical records
+ok 235 - the original keeps its route and both descendants retain independent historical records
+  ---
+  duration_ms: 5.398895
+  type: 'test'
+  ...
+# Subtest: fleet identifiers remain unique in legacy saves and the save fleet limit is respected
+ok 236 - fleet identifiers remain unique in legacy saves and the save fleet limit is respected
+  ---
+  duration_ms: 10.849949
+  type: 'test'
+  ...
+# Subtest: a colony shares its repair pool by missing hull, excluding healthy and visiting forces
+ok 237 - a colony shares its repair pool by missing hull, excluding healthy and visiting forces
+  ---
+  duration_ms: 5.8665
+  type: 'test'
+  ...
+# Subtest: one-fleet repair rate and both Forge levels preserve their existing colony bonuses
+ok 238 - one-fleet repair rate and both Forge levels preserve their existing colony bonuses
+  ---
+  duration_ms: 3.435919
+  type: 'test'
+  ...
+# Subtest: all existing hostile-presence blockade rules still stop passive recovery
+ok 239 - all existing hostile-presence blockade rules still stop passive recovery
+  ---
+  duration_ms: 24.126711
+  type: 'test'
+  ...
+# Subtest: a blockaded colony performs no passive repair while paid emergency work remains available
+ok 240 - a blockaded colony performs no passive repair while paid emergency work remains available
+  ---
+  duration_ms: 14.12644
+  type: 'test'
+  ...
+# Subtest: proportional splitting and remerging cannot multiply one colony’s recovery
+ok 241 - proportional splitting and remerging cannot multiply one colony’s recovery
+  ---
+  duration_ms: 52.933906
+  type: 'test'
+  ...
+# Subtest: repair applies forecasted allocations, caps almost-full hulls, and survives exact reload replay
+ok 242 - repair applies forecasted allocations, caps almost-full hulls, and survives exact reload replay
+  ---
+  duration_ms: 6.169486
+  type: 'test'
+  ...
+# Subtest: different colonies supply independent repair capacity without foreign or unowned recovery
+ok 243 - different colonies supply independent repair capacity without foreign or unowned recovery
+  ---
+  duration_ms: 5.657018
+  type: 'test'
+  ...
+# Subtest: paid emergency repair still provides only 24 hull for each ordinary paid order
+ok 244 - paid emergency repair still provides only 24 hull for each ordinary paid order
+  ---
+  duration_ms: 5.09093
+  type: 'test'
+  ...
+# Subtest: hold and resume are metadata-only commands, including with no orders or movement
+ok 245 - hold and resume are metadata-only commands, including with no orders or movement
+  ---
+  duration_ms: 46.012055
+  type: 'test'
+  ...
+# Subtest: one pure readiness predicate excludes held, spent and unaffordable movement without hiding fleets
+ok 246 - one pure readiness predicate excludes held, spent and unaffordable movement without hiding fleets
+  ---
+  duration_ms: 18.691688
+  type: 'test'
+  ...
+# Subtest: foreign readiness stays observer-neutral regardless of hidden orders, location, hold or movement
+ok 247 - foreign readiness stays observer-neutral regardless of hidden orders, location, hold or movement
+  ---
+  duration_ms: 12.896522
+  type: 'test'
+  ...
+# Subtest: v1 saves accept absent/boolean holds and preserve them exactly through JSON reload
+ok 248 - v1 saves accept absent/boolean holds and preserve them exactly through JSON reload
+  ---
+  duration_ms: 23.480634
+  type: 'test'
+  ...
+# Subtest: invalid commands leave holds and every other campaign field unchanged
+ok 249 - invalid commands leave holds and every other campaign field unchanged
+  ---
+  duration_ms: 32.861529
+  type: 'test'
+  ...
+# Subtest: holding preserves routes; successful planning/movement resumes and clearing a route does not
+ok 250 - holding preserves routes; successful planning/movement resumes and clearing a route does not
+  ---
+  duration_ms: 27.790816
+  type: 'test'
+  ...
+# Subtest: a spent civilian interception resumes attention even though the ship withdraws to its origin
+ok 251 - a spent civilian interception resumes attention even though the ship withdraws to its origin
+  ---
+  duration_ms: 9.199074
+  type: 'test'
+  ...
+# Subtest: split retains the original garrison and merge retains only the survivor own advisory state
+ok 252 - split retains the original garrison and merge retains only the survivor own advisory state
+  ---
+  duration_ms: 13.028609
+  type: 'test'
+  ...
+# Subtest: repair and pure forecasts preserve a garrison without changing repair eligibility
+ok 253 - repair and pure forecasts preserve a garrison without changing repair eligibility
+  ---
+  duration_ms: 13.158692
+  type: 'test'
+  ...
+# Subtest: actual combat wakes participating fleets but holding never changes rolls, casualties or other state
+ok 254 - actual combat wakes participating fleets but holding never changes rolls, casualties or other state
+  ---
+  duration_ms: 10.862091
+  type: 'test'
+  ...
+# Subtest: a new local hostile colony owner wakes once; acknowledging unchanged hostility is respected
+ok 255 - a new local hostile colony owner wakes once; acknowledging unchanged hostility is respected
+  ---
+  duration_ms: 13.364507
+  type: 'test'
+  ...
+# Subtest: a hostile ship completed locally wakes a held fleet through end-turn reconciliation
+ok 256 - a hostile ship completed locally wakes a held fleet through end-turn reconciliation
+  ---
+  duration_ms: 22.780867
+  type: 'test'
+  ...
+# Subtest: forced treaty withdrawal resumes a held fleet while retaining ordinary relocation and movement rules
+ok 257 - forced treaty withdrawal resumes a held fleet while retaining ordinary relocation and movement rules
+  ---
+  duration_ms: 15.798073
+  type: 'test'
+  ...
+# Subtest: hidden or merely adjacent hostile fleets do not affect garrison attention
+ok 258 - hidden or merely adjacent hostile fleets do not affect garrison attention
+  ---
+  duration_ms: 9.373029
+  type: 'test'
+  ...
+# Subtest: held ordinary campaigns reload exactly and retain the same simulation as unheld campaigns
+ok 259 - held ordinary campaigns reload exactly and retain the same simulation as unheld campaigns
+  ---
+  duration_ms: 408.526387
+  type: 'test'
+  ...
+# Subtest: seeded maps are reproducible, connected, and give every empire an accessible settling world
+ok 260 - seeded maps are reproducible, connected, and give every empire an accessible settling world
+  ---
+  duration_ms: 151.404619
+  type: 'test'
+  ...
+# Subtest: exploration follows lanes, reveals survey detail and consumes movement plus orders
+ok 261 - exploration follows lanes, reveals survey detail and consumes movement plus orders
+  ---
+  duration_ms: 33.803889
+  type: 'test'
+  ...
+# Subtest: colony establishment consumes the ark and founding resources, then produces income
+ok 262 - colony establishment consumes the ark and founding resources, then produces income
+  ---
+  duration_ms: 42.867451
+  type: 'test'
+  ...
+# Subtest: harsh worlds require research and invalid colonization is atomic
+ok 263 - harsh worlds require research and invalid colonization is atomic
+  ---
+  duration_ms: 7.352595
+  type: 'test'
+  ...
+# Subtest: orders prevent unlimited actions and cannot be bypassed by low resources
+ok 264 - orders prevent unlimited actions and cannot be bypassed by low resources
+  ---
+  duration_ms: 10.586767
+  type: 'test'
+  ...
+# Subtest: construction takes turns, cannot duplicate a project, and adds real yield
+ok 265 - construction takes turns, cannot duplicate a project, and adds real yield
+  ---
+  duration_ms: 51.501971
+  type: 'test'
+  ...
+# Subtest: cancelling construction refunds only unused resources
+ok 266 - cancelling construction refunds only unused resources
+  ---
+  duration_ms: 9.294823
+  type: 'test'
+  ...
+# Subtest: an imported research queue cannot repeat an already completed technology
+ok 267 - an imported research queue cannot repeat an already completed technology
+  ---
+  duration_ms: 48.068798
+  type: 'test'
+  ...
+# Subtest: research prerequisites are enforced and switching preserves invested science
+ok 268 - research prerequisites are enforced and switching preserves invested science
+  ---
+  duration_ms: 15.585375
+  type: 'test'
+  ...
+# Subtest: anomalies require an expedition, resolve once, and grant authored effects
+ok 269 - anomalies require an expedition, resolve once, and grant authored effects
+  ---
+  duration_ms: 11.179484
+  type: 'test'
+  ...
+# Subtest: diplomacy is symmetric, trade pays income, and negotiated peace enforces a truce
+ok 270 - diplomacy is symmetric, trade pays income, and negotiated peace enforces a truce
+  ---
+  duration_ms: 17.666823
+  type: 'test'
+  ...
+# Subtest: fleets cannot bypass neutral borders; trade permits peaceful passage
+ok 271 - fleets cannot bypass neutral borders; trade permits peaceful passage
+  ---
+  duration_ms: 9.403166
+  type: 'test'
+  ...
+# Subtest: combat damages both sides, then a surviving force can invade and capture
+ok 272 - combat damages both sides, then a surviving force can invade and capture
+  ---
+  duration_ms: 6.949142
+  type: 'test'
+  ...
+# Subtest: fleets built at shipyards can merge and repairs cannot create missing ships
+ok 273 - fleets built at shipyards can merge and repairs cannot create missing ships
+  ---
+  duration_ms: 27.433428
+  type: 'test'
+  ...
+# Subtest: victory objectives are actionable and a concluded campaign rejects commands
+ok 274 - victory objectives are actionable and a concluded campaign rejects commands
+  ---
+  duration_ms: 3.841306
+  type: 'test'
+  ...
+# Subtest: AI expands, researches, builds industry and completes a campaign without broken state
+ok 275 - AI expands, researches, builds industry and completes a campaign without broken state
+  ---
+  duration_ms: 3408.346442
+  type: 'test'
+  ...
+# Subtest: JSON saves resume deterministically and malformed saves are rejected
+ok 276 - JSON saves resume deterministically and malformed saves are rejected
+  ---
+  duration_ms: 72.575186
+  type: 'test'
+  ...
+# Subtest: simultaneous alignment finishes use Legacy score after all factions resolve, independent of faction array order
+ok 277 - simultaneous alignment finishes use Legacy score after all factions resolve, independent of faction array order
+  ---
+  duration_ms: 7.434819
+  type: 'test'
+  ...
+# Subtest: exact-score alignment ties use a deterministic seeded draw without consuming combat RNG
+ok 278 - exact-score alignment ties use a deterministic seeded draw without consuming combat RNG
+  ---
+  duration_ms: 19.806891
+  type: 'test'
+  ...
+# Subtest: sensors require presence, not old charts or surveys, and the rule applies to every faction
+ok 279 - sensors require presence, not old charts or surveys, and the rule applies to every faction
+  ---
+  duration_ms: 25.765603
+  type: 'test'
+  ...
+# Subtest: moving an unseen enemy cannot change the public fleet list or combat estimate
+ok 280 - moving an unseen enemy cannot change the public fleet list or combat estimate
+  ---
+  duration_ms: 10.258494
+  type: 'test'
+  ...
+# Subtest: a hidden civilian interception spends exactly one order and move and leaves only a fixed report
+ok 281 - a hidden civilian interception spends exactly one order and move and leaves only a fixed report
+  ---
+  duration_ms: 24.190049
+  type: 'test'
+  ...
+# Subtest: a known blockade rejects civilian movement without spending or mutating state
+ok 282 - a known blockade rejects civilian movement without spending or mutating state
+  ---
+  duration_ms: 5.883211
+  type: 'test'
+  ...
+# Subtest: unsurveyed empty systems still admit civilians and warships can enter hidden opposition
+ok 283 - unsurveyed empty systems still admit civilians and warships can enter hidden opposition
+  ---
+  duration_ms: 29.345831
+  type: 'test'
+  ...
+# Subtest: AI does not target a hidden hostile fleet merely because the system is charted
+ok 284 - AI does not target a hidden hostile fleet merely because the system is charted
+  ---
+  duration_ms: 73.889383
+  type: 'test'
+  ...
+# Subtest: AI scouts discover hidden blockades by spending an expedition, not by reading remote fleets
+ok 285 - AI scouts discover hidden blockades by spending an expedition, not by reading remote fleets
+  ---
+  duration_ms: 35.341532
+  type: 'test'
+  ...
+# Subtest: bankruptcy decommissions exactly one ship regardless of shield technology
+ok 286 - bankruptcy decommissions exactly one ship regardless of shield technology
+  ---
+  duration_ms: 91.376119
+  type: 'test'
+  ...
+# Subtest: optional AI strategy metadata validates references and remains compatible with older saves
+ok 287 - optional AI strategy metadata validates references and remains compatible with older saves
+  ---
+  duration_ms: 10.612586
+  type: 'test'
+  ...
+# Subtest: the exact synthetic lethal case exposes zero remaining hull even when the colony loses all defense
+ok 288 - the exact synthetic lethal case exposes zero remaining hull even when the colony loses all defense
+  ---
+  duration_ms: 54.515912
+  type: 'test'
+  ...
+# Subtest: surviving an invasion with defenses remaining is distinct from either capture outcome
+ok 289 - surviving an invasion with defenses remaining is distinct from either capture outcome
+  ---
+  duration_ms: 35.348204
+  type: 'test'
+  ...
+# Subtest: guaranteed capture retains the attacker across ordinary damage rolls, with and without shields
+ok 290 - guaranteed capture retains the attacker across ordinary damage rolls, with and without shields
+  ---
+  duration_ms: 105.398144
+  type: 'test'
+  ...
+# Subtest: possible capture covers both ordinary outcomes while predicting the same surviving hull
+ok 291 - possible capture covers both ordinary outcomes while predicting the same surviving hull
+  ---
+  duration_ms: 52.334175
+  type: 'test'
+  ...
+# Subtest: rounded retaliation cannot be subtracted from fractional input hull to infer survival
+ok 292 - rounded retaliation cannot be subtracted from fractional input hull to infer survival
+  ---
+  duration_ms: 46.254669
+  type: 'test'
+  ...
+# Subtest: post-retaliation hull agrees with ordinary commands on both sides of floating rounding boundaries
+ok 293 - post-retaliation hull agrees with ordinary commands on both sides of floating rounding boundaries
+  ---
+  duration_ms: 39.732895
+  type: 'test'
+  ...
+# Subtest: the forecast remains pure on frozen input and ignores unrelated remote forces and worlds
+ok 294 - the forecast remains pure on frozen input and ignores unrelated remote forces and worlds
+  ---
+  duration_ms: 21.678207
+  type: 'test'
+  ...
+# Subtest: the added field does not widen invasion-preview eligibility or expose remote targets
+ok 295 - the added field does not widen invasion-preview eligibility or expose remote targets
+  ---
+  duration_ms: 12.015285
+  type: 'test'
+  ...
+# Subtest: Forge II separates its five-cycle construction from future one-cycle frigates and paid prices
+ok 296 - Forge II separates its five-cycle construction from future one-cycle frigates and paid prices
+  ---
+  duration_ms: 62.763158
+  type: 'test'
+  ...
+# Subtest: mine replacement removes both its own income and Extraction, and creates one beacon
+ok 297 - mine replacement removes both its own income and Extraction, and creates one beacon
+  ---
+  duration_ms: 40.76806
+  type: 'test'
+  ...
+# Subtest: switching charters accounts for the lost specialization, without adding infrastructure
+ok 298 - switching charters accounts for the lost specialization, without adding infrastructure
+  ---
+  duration_ms: 28.084455
+  type: 'test'
+  ...
+# Subtest: Habitat removal keeps above-capacity citizens and slots while growth pauses
+ok 299 - Habitat removal keeps above-capacity citizens and slots while growth pauses
+  ---
+  duration_ms: 23.913122
+  type: 'test'
+  ...
+# Subtest: Forum and Civic losses show effective capped orders separately from the uncapped mandate
+ok 300 - Forum and Civic losses show effective capped orders separately from the uncapped mandate
+  ---
+  duration_ms: 36.229881
+  type: 'test'
+  ...
+# Subtest: shipyard loss and other structural blockers never advertise usable downstream cycle counts
+ok 301 - shipyard loss and other structural blockers never advertise usable downstream cycle counts
+  ---
+  duration_ms: 15.98412
+  type: 'test'
+  ...
+# Subtest: removing a Forge support removes production, repair and military discounts together
+ok 302 - removing a Forge support removes production, repair and military discounts together
+  ---
+  duration_ms: 14.515076
+  type: 'test'
+  ...
+# Subtest: funds, orders, busy queues and ended campaigns block commissioning but preserve structural comparison
+ok 303 - funds, orders, busy queues and ended campaigns block commissioning but preserve structural comparison
+  ---
+  duration_ms: 39.513875
+  type: 'test'
+  ...
+# Subtest: temporary gates cannot mask structural prerequisites or manufacture a completed snapshot
+ok 304 - temporary gates cannot mask structural prerequisites or manufacture a completed snapshot
+  ---
+  duration_ms: 59.927791
+  type: 'test'
+  ...
+# Subtest: a paid old queue retains its exact receipt, progress and refund after unrelated inspection
+ok 305 - a paid old queue retains its exact receipt, progress and refund after unrelated inspection
+  ---
+  duration_ms: 8.094912
+  type: 'test'
+  ...
+# Subtest: nominal repair capacity remains distinct from current observed blockade and missing hull
+ok 306 - nominal repair capacity remains distinct from current observed blockade and missing hull
+  ---
+  duration_ms: 5.276146
+  type: 'test'
+  ...
+# Subtest: local defense and research bonuses use present conditions, including empire faction rounding
+ok 307 - local defense and research bonuses use present conditions, including empire faction rounding
+  ---
+  duration_ms: 8.812463
+  type: 'test'
+  ...
+# Subtest: ordinary replacement credits old output through completion, then new output next cycle
+ok 308 - ordinary replacement credits old output through completion, then new output next cycle
+  ---
+  duration_ms: 7.442523
+  type: 'test'
+  ...
+# Subtest: growth before completion can change the eventual colony, without making the static projection a date guarantee
+ok 309 - growth before completion can change the eventual colony, without making the static projection a date guarantee
+  ---
+  duration_ms: 13.663194
+  type: 'test'
+  ...
+# Subtest: inspection is pure on frozen inputs, returns detached values and survives JSON reload exactly
+ok 310 - inspection is pure on frozen inputs, returns detached values and survives JSON reload exactly
+  ---
+  duration_ms: 21.952981
+  type: 'test'
+  ...
+# Subtest: foreign/missing previews are denied and hidden rival changes cannot alter an owned comparison
+ok 311 - foreign/missing previews are denied and hidden rival changes cannot alter an owned comparison
+  ---
+  duration_ms: 17.178451
+  type: 'test'
+  ...
+# Subtest: shortest charted routing has numeric deterministic ties and ignores hidden fleet/anomaly state
+ok 312 - shortest charted routing has numeric deterministic ties and ignores hidden fleet/anomaly state
+  ---
+  duration_ms: 40.143793
+  type: 'test'
+  ...
+# Subtest: planning and clearing are free with exhausted budgets, and routes own their path arrays
+ok 313 - planning and clearing are free with exhausted budgets, and routes own their path arrays
+  ---
+  duration_ms: 26.187711
+  type: 'test'
+  ...
+# Subtest: Continue makes ordinary surveys up to movement allowance and returns actual costs
+ok 314 - Continue makes ordinary surveys up to movement allowance and returns actual costs
+  ---
+  duration_ms: 14.493034
+  type: 'test'
+  ...
+# Subtest: Continue respects empire orders independently of fleet moves and clears a completed route
+ok 315 - Continue respects empire orders independently of fleet moves and clears a completed route
+  ---
+  duration_ms: 12.221812
+  type: 'test'
+  ...
+# Subtest: observed hostile first steps reject atomically for civilians and warships while planning remains valid
+ok 316 - observed hostile first steps reject atomically for civilians and warships while planning remains valid
+  ---
+  duration_ms: 49.489181
+  type: 'test'
+  ...
+# Subtest: a visible future blockade caps cost and returns successful partial movement
+ok 317 - a visible future blockade caps cost and returns successful partial movement
+  ---
+  duration_ms: 30.715018
+  type: 'test'
+  ...
+# Subtest: a newly closed border leaves the saved route visible but requires explicit replot to detour
+ok 318 - a newly closed border leaves the saved route visible but requires explicit replot to detour
+  ---
+  duration_ms: 34.665529
+  type: 'test'
+  ...
+# Subtest: hidden interception spends one attempted jump and keeps the original route without survey or sensor oracle
+ok 319 - hidden interception spends one attempted jump and keeps the original route without survey or sensor oracle
+  ---
+  duration_ms: 22.910819
+  type: 'test'
+  ...
+# Subtest: an interception after one successful jump reports both spent moves but only one completed jump
+ok 320 - an interception after one successful jump reports both spent moves but only one completed jump
+  ---
+  duration_ms: 14.842758
+  type: 'test'
+  ...
+# Subtest: hidden battles stop the route immediately and return all reports and actual survival
+ok 321 - hidden battles stop the route immediately and return all reports and actual survival
+  ---
+  duration_ms: 36.260468
+  type: 'test'
+  ...
+# Subtest: explicit rival routes also stop after combat without leaking AI-only battle reports to the player
+ok 322 - explicit rival routes also stop after combat without leaking AI-only battle reports to the player
+  ---
+  duration_ms: 8.315815
+  type: 'test'
+  ...
+# Subtest: first contact stops on neighboring public sovereignty even after a routine survey
+ok 323 - first contact stops on neighboring public sovereignty even after a routine survey
+  ---
+  duration_ms: 13.009363
+  type: 'test'
+  ...
+# Subtest: new unresolved anomalies stop navigation, while remembered unresolved sites do not
+ok 324 - new unresolved anomalies stop navigation, while remembered unresolved sites do not
+  ---
+  duration_ms: 13.449144
+  type: 'test'
+  ...
+# Subtest: newly surveyed multi-stage discoveries and restored sites pause routes through the observer-safe view
+ok 325 - newly surveyed multi-stage discoveries and restored sites pause routes through the observer-safe view
+  ---
+  duration_ms: 25.804165
+  type: 'test'
+  ...
+# Subtest: direct moves advance a matching route, clear a deviation, and leave failed movement untouched
+ok 326 - direct moves advance a matching route, clear a deviation, and leave failed movement untouched
+  ---
+  duration_ms: 6.684508
+  type: 'test'
+  ...
+# Subtest: merging preserves only the selected surviving fleet route
+ok 327 - merging preserves only the selected surviving fleet route
+  ---
+  duration_ms: 11.329525
+  type: 'test'
+  ...
+# Subtest: administrative treaty withdrawal clears routes even when diplomacy advances outside game commands
+ok 328 - administrative treaty withdrawal clears routes even when diplomacy advances outside game commands
+  ---
+  duration_ms: 8.512042
+  type: 'test'
+  ...
+# Subtest: routes persist through twenty deterministic reload cycles without automatic movement or order spending
+ok 329 - routes persist through twenty deterministic reload cycles without automatic movement or order spending
+  ---
+  duration_ms: 278.777523
+  type: 'test'
+  ...
+# Subtest: version-one saves accept optional valid routes but reject malformed, stale, looping and disconnected paths
+ok 330 - version-one saves accept optional valid routes but reject malformed, stale, looping and disconnected paths
+  ---
+  duration_ms: 8.273266
+  type: 'test'
+  ...
+# Subtest: a civic upgrade forecasts and replenishes its actual uncapped mandate gain
+ok 331 - a civic upgrade forecasts and replenishes its actual uncapped mandate gain
+  ---
+  duration_ms: 37.156523
+  type: 'test'
+  ...
+# Subtest: a legal civic upgrade at the cap retains its credit benefit but grants no usable order
+ok 332 - a legal civic upgrade at the cap retains its credit benefit but grants no usable order
+  ---
+  duration_ms: 15.54509
+  type: 'test'
+  ...
+# Subtest: removing a Forum and its Civic II charter accounts for capacity above the cap
+ok 333 - removing a Forum and its Civic II charter accounts for capacity above the cap
+  ---
+  duration_ms: 34.223563
+  type: 'test'
+  ...
+# Subtest: switching from Civic II can consume excess capacity without reducing the current mandate
+ok 334 - switching from Civic II can consume excess capacity without reducing the current mandate
+  ---
+  duration_ms: 6.035826
+  type: 'test'
+  ...
+# Subtest: order forecasts use the selected empire and remain pure
+ok 335 - order forecasts use the selected empire and remain pure
+  ---
+  duration_ms: 5.083246
+  type: 'test'
+  ...
+# Subtest: current foreign relationships obey zero, one and two contact boundaries without writing history
+ok 336 - current foreign relationships obey zero, one and two contact boundaries without writing history
+  ---
+  duration_ms: 49.5103
+  type: 'test'
+  ...
+# Subtest: real first contact reveals the current war without fabricating an earlier broadcast
+ok 337 - real first contact reveals the current war without fabricating an earlier broadcast
+  ---
+  duration_ms: 27.186778
+  type: 'test'
+  ...
+# Subtest: a received declaration masks unknown identities and remains frozen after later contact and reload
+ok 338 - a received declaration masks unknown identities and remains frozen after later contact and reload
+  ---
+  duration_ms: 14.055206
+  type: 'test'
+  ...
+# Subtest: public commitments exclude gifts, negotiation escrow, withdrawal counts and private reasons
+ok 339 - public commitments exclude gifts, negotiation escrow, withdrawal counts and private reasons
+  ---
+  duration_ms: 20.835853
+  type: 'test'
+  ...
+# Subtest: player diplomatic actions retain one bilateral log without duplicate public dispatches
+ok 340 - player diplomatic actions retain one bilateral log without duplicate public dispatches
+  ---
+  duration_ms: 16.247733
+  type: 'test'
+  ...
+# Subtest: charted foreign capture opens sovereign contact without survey, neighbor charts or fleet sensors
+ok 341 - charted foreign capture opens sovereign contact without survey, neighbor charts or fleet sensors
+  ---
+  duration_ms: 26.118782
+  type: 'test'
+  ...
+# Subtest: unknown-world capture sends no ownership event and establishes no observer contact
+ok 342 - unknown-world capture sends no ownership event and establishes no observer contact
+  ---
+  duration_ms: 15.489987
+  type: 'test'
+  ...
+# Subtest: a new beacon chart during capture contact does not reveal the preceding unknown ownership transfer
+ok 343 - a new beacon chart during capture contact does not reveal the preceding unknown ownership transfer
+  ---
+  duration_ms: 19.795751
+  type: 'test'
+  ...
+# Subtest: player captures retain dated map transfers without duplicating their combat report
+ok 344 - player captures retain dated map transfers without duplicating their combat report
+  ---
+  duration_ms: 17.566947
+  type: 'test'
+  ...
+# Subtest: public models are invariant to hidden fleets, budgets, private relations and strategy
+ok 345 - public models are invariant to hidden fleets, budgets, private relations and strategy
+  ---
+  duration_ms: 16.288819
+  type: 'test'
+  ...
+# Subtest: collapse announces only our own government or a contacted civilization
+ok 346 - collapse announces only our own government or a contacted civilization
+  ---
+  duration_ms: 29.16873
+  type: 'test'
+  ...
+# Subtest: normal turn briefings retain foreign public declarations without earlier-action duplicates
+ok 347 - normal turn briefings retain foreign public declarations without earlier-action duplicates
+  ---
+  duration_ms: 47.752997
+  type: 'test'
+  ...
+# Subtest: bounded ledgers preserve historical transfers and old log references across save reloads
+ok 348 - bounded ledgers preserve historical transfers and old log references across save reloads
+  ---
+  duration_ms: 55.416273
+  type: 'test'
+  ...
+# Subtest: legacy saves remain valid and malformed public records fail strict import validation
+ok 349 - legacy saves remain valid and malformed public records fail strict import validation
+  ---
+  duration_ms: 14.807071
+  type: 'test'
+  ...
+# Subtest: actual WATCH40 merge and reinforcement exactly match ordinary commands and the next complete turn
+ok 350 - actual WATCH40 merge and reinforcement exactly match ordinary commands and the next complete turn
+  ---
+  duration_ms: 239.381318
+  type: 'test'
+  ...
+# Subtest: merge predicts exact damaged hull, minimum movement, survivor identity and both histories
+ok 351 - merge predicts exact damaged hull, minimum movement, survivor identity and both histories
+  ---
+  duration_ms: 14.584155
+  type: 'test'
+  ...
+# Subtest: the partner does not transfer its Hold or route, and projection defaults do not write save fields
+ok 352 - the partner does not transfer its Hold or route, and projection defaults do not write save fields
+  ---
+  duration_ms: 8.828102
+  type: 'test'
+  ...
+# Subtest: stable options retain over-cap partners without concealing a legal alternative at zero orders
+ok 353 - stable options retain over-cap partners without concealing a legal alternative at zero orders
+  ---
+  duration_ms: 6.297715
+  type: 'test'
+  ...
+# Subtest: invalid merge pairs expose no target details and match ordinary atomic refusal
+ok 354 - invalid merge pairs expose no target details and match ordinary atomic refusal
+  ---
+  duration_ms: 17.241289
+  type: 'test'
+  ...
+# Subtest: campaign guards have ordinary precedence but leave structurally legal merge explanations intact
+ok 355 - campaign guards have ordinary precedence but leave structurally legal merge explanations intact
+  ---
+  duration_ms: 45.365057
+  type: 'test'
+  ...
+# Subtest: a full or movement-spent military formation may commission an independent ship only at its own yard
+ok 356 - a full or movement-spent military formation may commission an independent ship only at its own yard
+  ---
+  duration_ms: 14.738272
+  type: 'test'
+  ...
+# Subtest: reinforcement quotes use current Forge discounts and ordinary temporary/technology gates
+ok 357 - reinforcement quotes use current Forge discounts and ordinary temporary/technology gates
+  ---
+  duration_ms: 16.662517
+  type: 'test'
+  ...
+# Subtest: completion is independent of the selected fleet and inherits no course, hold, lead or heritage
+ok 358 - completion is independent of the selected fleet and inherits no course, hold, lead or heritage
+  ---
+  duration_ms: 14.026002
+  type: 'test'
+  ...
+# Subtest: busy-queue inspection never reprices or refunds an older paid receipt
+ok 359 - busy-queue inspection never reprices or refunds an older paid receipt
+  ---
+  duration_ms: 13.398119
+  type: 'test'
+  ...
+# Subtest: previews are detached and pure on frozen state, with exact post-command and reload continuation
+ok 360 - previews are detached and pure on frozen state, with exact post-command and reload continuation
+  ---
+  duration_ms: 12.23181
+  type: 'test'
+  ...
+# Subtest: hidden rival metadata and distant fleets do not alter owned options or reveal foreign partners
+ok 361 - hidden rival metadata and distant fleets do not alter owned options or reveal foreign partners
+  ---
+  duration_ms: 5.764619
+  type: 'test'
+  ...
+# Subtest: an explicit non-player observer sees only its own formations and pays identical ordinary costs
+ok 362 - an explicit non-player observer sees only its own formations and pays identical ordinary costs
+  ---
+  duration_ms: 7.607091
+  type: 'test'
+  ...
+# Subtest: move reports preserve actual ship and hull losses and return an immediate meaningful summary
+ok 363 - move reports preserve actual ship and hull losses and return an immediate meaningful summary
+  ---
+  duration_ms: 21.828639
+  type: 'test'
+  ...
+# Subtest: the player receives a defender report, but AI-versus-AI battles create no player reports or combat logs
+ok 364 - the player receives a defender report, but AI-versus-AI battles create no player reports or combat logs
+  ---
+  duration_ms: 15.754731
+  type: 'test'
+  ...
+# Subtest: one attack against several fleets returns each engagement with chained attacker snapshots
+ok 365 - one attack against several fleets returns each engagement with chained attacker snapshots
+  ---
+  duration_ms: 6.650383
+  type: 'test'
+  ...
+# Subtest: invasion forecasts are pure and actual retaliation, shield reduction and capture match their reports
+ok 366 - invasion forecasts are pure and actual retaliation, shield reduction and capture match their reports
+  ---
+  duration_ms: 37.970763
+  type: 'test'
+  ...
+# Subtest: a repelled invasion records destruction and a forecast never promises capture to a fleet that will die
+ok 367 - a repelled invasion records destruction and a forecast never promises capture to a fleet that will die
+  ---
+  duration_ms: 17.002873
+  type: 'test'
+  ...
+# Subtest: invasion preview and reports do not expose remote colonies or unrelated AI wars
+ok 368 - invasion preview and reports do not expose remote colonies or unrelated AI wars
+  ---
+  duration_ms: 20.947161
+  type: 'test'
+  ...
+# Subtest: AI attacks are captured in the cycle briefing, including an early victory before the turn increments
+ok 369 - AI attacks are captured in the cycle briefing, including an early victory before the turn increments
+  ---
+  duration_ms: 86.977192
+  type: 'test'
+  ...
+# Subtest: briefings include new research, construction, diplomacy and warnings once, excluding previous player actions
+ok 370 - briefings include new research, construction, diplomacy and warnings once, excluding previous player actions
+  ---
+  duration_ms: 38.052586
+  type: 'test'
+  ...
+# Subtest: war declarations generated by AI appear in the briefing with a diplomatic navigation target
+ok 371 - war declarations generated by AI appear in the briefing with a diplomatic navigation target
+  ---
+  duration_ms: 23.188839
+  type: 'test'
+  ...
+# Subtest: report storage is bounded, historical links can outlive retention, and saves validate/report round-trip
+ok 372 - report storage is bounded, historical links can outlive retention, and saves validate/report round-trip
+  ---
+  duration_ms: 86.2805
+  type: 'test'
+  ...
+# Subtest: AI trade reserves its normal fee/order without treaty income, trust, access or public announcements
+ok 373 - AI trade reserves its normal fee/order without treaty income, trust, access or public announcements
+  ---
+  duration_ms: 54.096077
+  type: 'test'
+  ...
+# Subtest: acceptance consumes the escrow without paying or charging the recipient and opens bilateral trade once
+ok 374 - acceptance consumes the escrow without paying or charging the recipient and opens bilateral trade once
+  ---
+  duration_ms: 20.440524
+  type: 'test'
+  ...
+# Subtest: a binding trade offer remains acceptable when trust later falls
+ok 375 - a binding trade offer remains acceptable when trust later falls
+  ---
+  duration_ms: 5.703274
+  type: 'test'
+  ...
+# Subtest: decline refunds exactly once and keeps borders closed for five quiet cycles of AI initiation
+ok 376 - decline refunds exactly once and keeps borders closed for five quiet cycles of AI initiation
+  ---
+  duration_ms: 9.999309
+  type: 'test'
+  ...
+# Subtest: trade cooldown never prevents manual player initiation at the original price
+ok 377 - trade cooldown never prevents manual player initiation at the original price
+  ---
+  duration_ms: 5.88778
+  type: 'test'
+  ...
+# Subtest: expiry refunds once and derives its quiet deadline from expiry, including late imported records
+ok 378 - expiry refunds once and derives its quiet deadline from expiry, including late imported records
+  ---
+  duration_ms: 23.335482
+  type: 'test'
+  ...
+# Subtest: stale imported pending escrow cannot trigger a new AI proposal before end-turn expiry reconciliation
+ok 379 - stale imported pending escrow cannot trigger a new AI proposal before end-turn expiry reconciliation
+  ---
+  duration_ms: 87.303762
+  type: 'test'
+  ...
+# Subtest: completed cancellation suppresses AI renewal and the eventual new proposal cannot reopen borders itself
+ok 380 - completed cancellation suppresses AI renewal and the eventual new proposal cannot reopen borders itself
+  ---
+  duration_ms: 20.746827
+  type: 'test'
+  ...
+# Subtest: duplicate, wrong-kind, wrong-recipient, stale and zero-order responses are entirely atomic
+ok 381 - duplicate, wrong-kind, wrong-recipient, stale and zero-order responses are entirely atomic
+  ---
+  duration_ms: 26.46546
+  type: 'test'
+  ...
+# Subtest: war invalidates and refunds a pending trade immediately without an invalid intermediate save
+ok 382 - war invalidates and refunds a pending trade immediately without an invalid intermediate save
+  ---
+  duration_ms: 15.081444
+  type: 'test'
+  ...
+# Subtest: successful game mutations reconcile proposals when a participant collapses
+ok 383 - successful game mutations reconcile proposals when a participant collapses
+  ---
+  duration_ms: 10.317915
+  type: 'test'
+  ...
+# Subtest: participant offer views normalize legacy kindless peace, filter stale data and cannot mutate escrow records
+ok 384 - participant offer views normalize legacy kindless peace, filter stale data and cannot mutate escrow records
+  ---
+  duration_ms: 6.556298
+  type: 'test'
+  ...
+# Subtest: legacy peace consent and direct AI-to-AI trade retain their original costs and behavior
+ok 385 - legacy peace consent and direct AI-to-AI trade retain their original costs and behavior
+  ---
+  duration_ms: 17.36509
+  type: 'test'
+  ...
+# Subtest: new offer kinds and quiet deadlines are narrowly validated without requiring migration of legacy saves
+ok 386 - new offer kinds and quiet deadlines are narrowly validated without requiring migration of legacy saves
+  ---
+  duration_ms: 28.997711
+  type: 'test'
+  ...
+# Subtest: peace denial after the minimum period describes unwillingness without claiming negotiations remain barred
+ok 387 - peace denial after the minimum period describes unwillingness without claiming negotiations remain barred
+  ---
+  duration_ms: 5.644905
+  type: 'test'
+  ...
+# Subtest: alignment forecast is pure and owning three beacons alone cannot win
+ok 388 - alignment forecast is pure and owning three beacons alone cannot win
+  ---
+  duration_ms: 43.977825
+  type: 'test'
+  ...
+# Subtest: each completed cycle charges exactly once and ordinary commands cannot advance alignment
+ok 389 - each completed cycle charges exactly once and ordinary commands cannot advance alignment
+  ---
+  duration_ms: 25.630721
+  type: 'test'
+  ...
+# Subtest: turn processing uses newly earned credits and a beacon completed that cycle
+ok 390 - turn processing uses newly earned credits and a beacon completed that cycle
+  ---
+  duration_ms: 26.103454
+  type: 'test'
+  ...
+# Subtest: transcendence needs ten qualifying full turns and then rejects more turns
+ok 391 - transcendence needs ten qualifying full turns and then rejects more turns
+  ---
+  duration_ms: 23.674436
+  type: 'test'
+  ...
+# Subtest: only hostile warships blockade a participating beacon
+ok 392 - only hostile warships blockade a participating beacon
+  ---
+  duration_ms: 22.944282
+  type: 'test'
+  ...
+# Subtest: blockade pauses payment, regresses progress, and recovery resumes the race
+ok 393 - blockade pauses payment, regresses progress, and recovery resumes the race
+  ---
+  duration_ms: 10.594091
+  type: 'test'
+  ...
+# Subtest: insufficient funding decays to zero without charging or repeated pause notices
+ok 394 - insufficient funding decays to zero without charging or repeated pause notices
+  ---
+  duration_ms: 5.907065
+  type: 'test'
+  ...
+# Subtest: participating sites remain stable through blockades and replace only lost worlds
+ok 395 - participating sites remain stable through blockades and replace only lost worlds
+  ---
+  duration_ms: 14.515796
+  type: 'test'
+  ...
+# Subtest: public broadcasts chart contacted beacon worlds without surveying or granting sensors
+ok 396 - public broadcasts chart contacted beacon worlds without surveying or granting sensors
+  ---
+  duration_ms: 18.26994
+  type: 'test'
+  ...
+# Subtest: first contact charts existing beacon broadcasts through the normal movement command
+ok 397 - first contact charts existing beacon broadcasts through the normal movement command
+  ---
+  duration_ms: 8.087458
+  type: 'test'
+  ...
+# Subtest: public race queries never inspect hidden fleets, money, or denial reasons
+ok 398 - public race queries never inspect hidden fleets, money, or denial reasons
+  ---
+  duration_ms: 9.167276
+  type: 'test'
+  ...
+# Subtest: foreign interruption announcements give no hidden blockade details
+ok 399 - foreign interruption announcements give no hidden blockade details
+  ---
+  duration_ms: 6.16162
+  type: 'test'
+  ...
+# Subtest: alignment saves resume deterministically, including an already paid cycle
+ok 400 - alignment saves resume deterministically, including an already paid cycle
+  ---
+  duration_ms: 53.084336
+  type: 'test'
+  ...
+# Subtest: optional alignment metadata preserves old saves and strictly validates present fields
+ok 401 - optional alignment metadata preserves old saves and strictly validates present fields
+  ---
+  duration_ms: 19.112344
+  type: 'test'
+  ...
+# Subtest: already won legacy saves remain concluded without retroactive charges
+ok 402 - already won legacy saves remain concluded without retroactive charges
+  ---
+  duration_ms: 5.825984
+  type: 'test'
+  ...
+# Subtest: zero-fire Ark attacks preserve exact fractional hull without death or healing
+ok 403 - zero-fire Ark attacks preserve exact fractional hull without death or healing
+  ---
+  duration_ms: 54.083122
+  type: 'test'
+  ...
+# Subtest: zero fire preserves valid explicit ship counts above the hull-derived count
+ok 404 - zero fire preserves valid explicit ship counts above the hull-derived count
+  ---
+  duration_ms: 39.174562
+  type: 'test'
+  ...
+# Subtest: fractional zero-hit reports and the next completed cycle survive exact JSON reload
+ok 405 - fractional zero-hit reports and the next completed cycle survive exact JSON reload
+  ---
+  duration_ms: 146.901577
+  type: 'test'
+  ...
+# Subtest: positive-hit combat retains the exact pre-fix results with and without shields
+ok 406 - positive-hit combat retains the exact pre-fix results with and without shields
+  ---
+  duration_ms: 16.224349
+  type: 'test'
+  ...
+1..406
+# tests 406
+# suites 0
+# pass 406
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4720.864116

@@ -1,0 +1,89 @@
+{
+  "modules": [
+    {
+      "module": "src/game.js",
+      "baselineSha256": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+      "reviewedSha256": "635c8193ecdaa592b4b42de3f502baaeb23e63aedde725187124f0b5279887c0",
+      "onlyForecastReturnChanged": true
+    },
+    {
+      "module": "src/defense.js",
+      "baselineSha256": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+      "reviewedSha256": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/content.js",
+      "baselineSha256": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+      "reviewedSha256": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/fleet-readiness.js",
+      "baselineSha256": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+      "reviewedSha256": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/intelligence.js",
+      "baselineSha256": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "reviewedSha256": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/fleet-management.js",
+      "baselineSha256": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+      "reviewedSha256": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/development.js",
+      "baselineSha256": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+      "reviewedSha256": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/public-affairs.js",
+      "baselineSha256": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "reviewedSha256": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/navigation.js",
+      "baselineSha256": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "reviewedSha256": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/discoveries.js",
+      "baselineSha256": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+      "reviewedSha256": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/reports.js",
+      "baselineSha256": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+      "reviewedSha256": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/victory.js",
+      "baselineSha256": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "reviewedSha256": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/diplomacy.js",
+      "baselineSha256": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+      "reviewedSha256": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+      "onlyForecastReturnChanged": false
+    },
+    {
+      "module": "src/ai.js",
+      "baselineSha256": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+      "reviewedSha256": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+      "onlyForecastReturnChanged": false
+    }
+  ],
+  "allBehaviorSourcesEqualAfterRemovingAddedReturnField": true
+}

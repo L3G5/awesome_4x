@@ -1,0 +1,51 @@
+
+> asterion-reach@0.21.0 test:browser
+> playwright test --shard=2/2 --output=/tmp/asterion-stage21-browser-shard2
+
+
+Running 38 tests using 1 worker, shard 2 of 2
+
+(node:565406) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:565406) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/intelligence-ui.spec.js:4:1 › the command interface conceals remote fleets and charges for a blind interception (2.5s)
+  ✓   2 tests/investment-ui.spec.js:18:1 › an unfunded exhausted mandate can compare Forge throughput by keyboard without committing it (1.9s)
+  ✓   3 tests/investment-ui.spec.js:42:1 › replacement comparison includes the lost Extraction charter and keeps ordinary one-click payment unchanged (3.1s)
+  ✓   4 tests/investment-ui.spec.js:67:1 › narrow replacement details retain above-capacity population and disclose loss of shipbuilding (1.2s)
+  ✓   5 tests/investment-ui.spec.js:96:1 › a capped Civic investment shows unchanged usable orders and remains readable after the campaign ends (1.7s)
+  ✓   6 tests/navigation-ui.spec.js:26:1 › a plotted course spends only deliberate movement and survives a cycle and reload (6.4s)
+  ✓   7 tests/navigation-ui.spec.js:55:1 › route planning conceals a hidden blockade and charges for the intercepted attempt (3.5s)
+  ✓   8 tests/planning-feedback-ui.spec.js:34:1 › after-income funding explains the WATCH50-credit diagnostic and matches an ordinary cycle (2.3s)
+  ✓   9 tests/planning-feedback-ui.spec.js:63:1 › a current treasury above sixty still shows its after-upkeep deficit at a narrow width (912ms)
+  ✓  10 tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with blockade (1.4s)
+  ✓  11 tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with missing Protocol (1.3s)
+  ✓  12 tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with missing site (1.3s)
+  ✓  13 tests/planning-feedback-ui.spec.js:100:37 › a modern finished network has no future funding estimate (1.3s)
+  ✓  14 tests/planning-feedback-ui.spec.js:100:37 › a legacy finished network has no future funding estimate (1.3s)
+  ✓  15 tests/planning-feedback-ui.spec.js:112:1 › private rival economic changes cannot alter the player funding card (2.3s)
+  ✓  16 tests/planning-feedback-ui.spec.js:135:29 › lethal retaliation at 3 hull is explicit and a voluntary ordinary attack remains possible (2.9s)
+  ✓  17 tests/planning-feedback-ui.spec.js:135:29 › lethal retaliation at 4.04 hull is explicit and a voluntary ordinary attack remains possible (3.0s)
+  ✓  18 tests/planning-feedback-ui.spec.js:152:118 › a surviving invasion with 20 defenses keeps the appropriate outcome and projected hull (2.3s)
+  ✓  19 tests/planning-feedback-ui.spec.js:152:118 › a surviving invasion with 8 defenses keeps the appropriate outcome and projected hull (2.3s)
+  ✓  20 tests/public-affairs-ui.spec.js:57:1 › a public capture explains a closed course and diplomacy restores deliberate passage (4.9s)
+  ✓  21 tests/public-affairs-ui.spec.js:95:1 › anonymous announcements stay anonymous after importing a later-contact save (3.1s)
+  ✓  22 tests/public-affairs-ui.spec.js:123:1 › a rival declaration opens the new-cycle public briefing and survives reload (2.9s)
+  ✓  23 tests/reinforcement-ui.spec.js:25:1 › the actual WATCH40 formation merges and commissions in two explicit actions with exact ordinary results (4.9s)
+  ✓  24 tests/reinforcement-ui.spec.js:60:1 › a single compatible partner remains one click when the first local partner would exceed the cap (2.4s)
+  ✓  25 tests/reinforcement-ui.spec.js:79:1 › a narrow keyboard chooser previews the deliberate survivor, course, hold, defensive lead and heritage (2.0s)
+  ✓  26 tests/reinforcement-ui.spec.js:120:1 › a full task force can commission a separate ship at its inspected yard using its last order (2.7s)
+  ✓  27 tests/reinforcement-ui.spec.js:139:36 › an exhausted mandate retains read-only merge choices and disables new commissions (2.2s)
+  ✓  28 tests/reinforcement-ui.spec.js:139:36 › a finished campaign retains read-only merge choices and disables new commissions (2.3s)
+  ✓  29 tests/reports-ui.spec.js:15:1 › visible opposition at a neutral star previews combat and reports actual losses immediately (4.4s)
+  ✓  30 tests/reports-ui.spec.js:55:1 › zero enemy fire keeps a fractional-hull formation alive and the report never displays it as zero (3.4s)
+  ✓  31 tests/reports-ui.spec.js:73:1 › the map roster exposes a fifth remote fleet and selecting it focuses its location (3.1s)
+  ✓  32 tests/reports-ui.spec.js:94:1 › a persistent cycle briefing includes completions, treaty expiry and shortages without old dispatches (3.2s)
+  ✓  33 tests/trade-offers-ui.spec.js:33:1 › an incoming trade proposal keeps borders closed until the player accepts the funded terms (3.3s)
+  ✓  34 tests/trade-offers-ui.spec.js:65:1 › declining refunds the proposer and leaves a later player-initiated treaty available (1.8s)
+  ✓  35 tests/trade-offers-ui.spec.js:85:1 › an expired imported proposal stays out of badges and cards without changing the save during inspection (2.8s)
+  ✓  36 tests/trade-offers-ui.spec.js:98:1 › zero-order trade terms keep keyboard focus inside the readable dialog (1.8s)
+  ✓  37 tests/trade-offers-ui.spec.js:117:1 › the verified military campaign shows binding peace terms and preserves its recorded settlement and garrison split (4.1s)
+  ✓  38 tests/workspace-ui.spec.js:4:1 › command context follows its workspace without disclosing uncontacted civilizations or changing the campaign (2.3s)
+
+  38 passed (1.7m)

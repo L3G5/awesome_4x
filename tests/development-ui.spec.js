@@ -168,7 +168,7 @@ test('a beacon blockade loses an alignment step and a player fleet can restore t
   await nextCycle(page);
   expect(await page.evaluate(()=>window.__asterion.getState().factions[0].alignment.progress)).toBe(6);
   await page.locator('[data-page="empire"]').click();
-  await expect(page.locator('.alignment-status')).toContainText('Alignment requirements met now');
+  await expect(page.locator('.alignment-status')).toContainText('Funding is covered after current income; the network is clear now.');
   await expect(page.locator('[data-race="player"]')).toContainText('Alignment advanced last cycle');
   await page.reload();
   expect(await page.evaluate(()=>window.__asterion.getState().factions[0].alignment.progress)).toBe(6);

@@ -1,0 +1,130 @@
+{
+  "name": "synthetic-finished-legacy",
+  "width": 390,
+  "height": 844,
+  "notes": "Synthetic completed checkpoint with optional legacy alignment records removed; saved result retained.",
+  "creditTitle": "Credits: 897; +78 per cycle after 33 fleet upkeep, before alignment payments",
+  "scopeVisible": false,
+  "mandate": "THE CHRONICLE IS COMPLETEThe Concord · Transcendence · Cycle 60. Review the conclusion or inspect the final galaxy.Review this age →",
+  "card": "✦ Transcendence\n— / 10\n\nThis age has ended. Your final network is available to inspect.\n\nAlignment progress was not recorded in this older save. The saved campaign outcome is preserved.\n\n4 / 3 beacons · Transcendence recorded",
+  "sidebar": "CONCORD ADMINISTRATION\nThe working empire\n\n5 worlds · 43 billion citizens\n\n99\nconstruction work each cycle\n5 idle colonies\nUPCOMING COMPLETIONS\n\nYour construction teams await their next commission.\n\nYOUR BEACON NETWORK\n\n— / 10 alignment\n\nThis age has ended. Review the final network in Empire.\n\nReview the network →",
+  "budget": {},
+  "fonts": {
+    "dmSans": true,
+    "marcellus": true,
+    "creditFont": "\"DM Sans Variable\", system-ui, sans-serif",
+    "headingFont": "Marcellus, Georgia, serif"
+  },
+  "layout": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "document": {
+      "scrollWidth": 390,
+      "clientWidth": 390
+    },
+    "elements": {
+      ".topbar": {
+        "bounds": {
+          "x": 0,
+          "y": -65,
+          "width": 390,
+          "height": 65,
+          "top": -65,
+          "right": 390,
+          "bottom": 0,
+          "left": 0
+        },
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "fontSize": "16px"
+      },
+      ".resources": {
+        "bounds": {
+          "x": 96,
+          "y": -48.5,
+          "width": 202,
+          "height": 31,
+          "top": -48.5,
+          "right": 298,
+          "bottom": -17.5,
+          "left": 96
+        },
+        "scrollWidth": 202,
+        "clientWidth": 202,
+        "fontSize": "16px"
+      },
+      ".resource.credits": {
+        "bounds": {
+          "x": 99.421875,
+          "y": -48.5,
+          "width": 36.34375,
+          "height": 31,
+          "top": -48.5,
+          "right": 135.765625,
+          "bottom": -17.5,
+          "left": 99.421875
+        },
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "fontSize": "16px"
+      },
+      ".alignment-card": {
+        "bounds": {
+          "x": 63,
+          "y": 0.125,
+          "width": 312,
+          "height": 190.0625,
+          "top": 0.125,
+          "right": 375,
+          "bottom": 190.1875,
+          "left": 63
+        },
+        "scrollWidth": 310,
+        "clientWidth": 310,
+        "fontSize": "16px"
+      },
+      ".alignment-outlook": null,
+      ".alignment-budget": null,
+      ".alignment-budget-assumption": null,
+      "#inspector": {
+        "bounds": {
+          "x": 48,
+          "y": 524.265625,
+          "width": 342,
+          "height": 508.984375,
+          "top": 524.265625,
+          "right": 390,
+          "bottom": 1033.25,
+          "left": 48
+        },
+        "scrollWidth": 342,
+        "clientWidth": 342,
+        "fontSize": "16px"
+      },
+      "#workspace-page": {
+        "bounds": {
+          "x": 48,
+          "y": 0,
+          "width": 342,
+          "height": 523.265625,
+          "top": 0,
+          "right": 390,
+          "bottom": 523.265625,
+          "left": 48
+        },
+        "scrollWidth": 342,
+        "clientWidth": 342,
+        "fontSize": "16px"
+      }
+    }
+  },
+  "navigationView": null,
+  "inputHash": "8e8efd79fa2b5644b389d654c2c8b60aa7b4ebba96340dc95ae6d6071ca02c63",
+  "inspectedHash": "8e8efd79fa2b5644b389d654c2c8b60aa7b4ebba96340dc95ae6d6071ca02c63",
+  "unchanged": true,
+  "actualTurn": null,
+  "errors": [],
+  "badResponses": []
+}

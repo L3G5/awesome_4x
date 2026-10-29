@@ -1,0 +1,291 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e10]:
+          - heading "ASTERION REACH" [level=1] [ref=e11]
+          - generic [ref=e12]: THE STARS REMEMBER
+      - generic [ref=e13]:
+        - 'generic "Credits: 978; +19 per cycle after 14 fleet upkeep, before alignment payments" [ref=e14]':
+          - generic [ref=e15]: ◈
+          - generic [ref=e16]:
+            - strong [ref=e17]: "978"
+            - text: "+19"
+            - generic [ref=e18]: Credits
+            - generic [ref=e19]: income before alignment
+        - 'generic "Minerals: 132; +11 per cycle" [ref=e20]':
+          - generic [ref=e21]: ◇
+          - generic [ref=e22]:
+            - strong [ref=e23]: "132"
+            - text: "+11"
+            - generic [ref=e24]: Minerals
+        - 'generic "Science: 22; +11 per cycle" [ref=e25]':
+          - generic [ref=e26]: ✧
+          - generic [ref=e27]:
+            - strong [ref=e28]: "22"
+            - text: "+11"
+            - generic [ref=e29]: Science
+        - 'generic "Orders: 8 of 8 available this cycle" [ref=e30]':
+          - generic [ref=e31]: ⌘
+          - generic [ref=e32]:
+            - strong [ref=e33]: 8 / 8
+            - generic [ref=e34]: Orders
+      - generic [ref=e35]:
+        - button "Latest cycle briefing" [ref=e36] [cursor=pointer]:
+          - img [ref=e37]
+        - link "Open field guide" [ref=e39] [cursor=pointer]:
+          - /url: ./guide.html
+          - img [ref=e40]
+        - button "Game menu" [ref=e43] [cursor=pointer]:
+          - img [ref=e44]
+    - navigation "Command views" [ref=e46]:
+      - button "Galaxy" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+        - generic [ref=e52]: Galaxy
+      - button "Research" [ref=e53] [cursor=pointer]:
+        - img [ref=e54]
+        - generic [ref=e57]: Research
+      - button "Diplomacy" [ref=e58] [cursor=pointer]:
+        - img [ref=e59]
+        - generic [ref=e62]: Diplomacy
+      - button "Empire" [active] [ref=e63] [cursor=pointer]:
+        - img [ref=e64]
+        - generic [ref=e66]: Empire
+      - button "Chronicle" [ref=e67] [cursor=pointer]:
+        - img [ref=e68]
+        - generic [ref=e70]: Chronicle
+      - button "Home" [ref=e72] [cursor=pointer]:
+        - img [ref=e73]
+        - generic [ref=e75]: Home
+    - main [ref=e76]:
+      - text: · · ·
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: MANY WORLDS. ONE HORIZON.
+            - heading "The Concord" [level=2] [ref=e81]
+            - paragraph [ref=e82]: Make a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.
+          - generic [ref=e83]: ⌘
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: COLONIZED WORLDS
+            - strong [ref=e87]: "3"
+            - paragraph [ref=e88]: 12 billion citizens across the Reach
+          - generic [ref=e89]:
+            - generic [ref=e90]: FLEET POWER
+            - strong [ref=e91]: "75"
+            - paragraph [ref=e92]: 8 ships · 14 credits upkeep / cycle
+          - generic [ref=e93]:
+            - generic [ref=e94]: LEGACY SCORE
+            - strong [ref=e95]: "354"
+            - paragraph [ref=e96]: Highest score at cycle 120 wins
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99]: Colonial administration
+            - paragraph [ref=e100]: Output per cycle, before fleet upkeep and trade. Select a column to compare your worlds.
+          - generic [ref=e101]: 3 colonies
+        - region "Colony economy and construction" [ref=e102]:
+          - table [ref=e103]:
+            - rowgroup [ref=e104]:
+              - row "World Specialty ◈ Credits ◇ Minerals ✧ Science ▥ Work Construction Inspect world" [ref=e105]:
+                - columnheader "World" [ref=e106]:
+                  - button "World" [ref=e107] [cursor=pointer]:
+                    - text: World
+                    - generic [ref=e108]: ↑
+                - columnheader "Specialty" [ref=e109]
+                - columnheader "◈ Credits" [ref=e110]:
+                  - button "◈ Credits" [ref=e111] [cursor=pointer]:
+                    - text: ◈ Credits
+                    - generic [ref=e112]: ↕
+                - columnheader "◇ Minerals" [ref=e113]:
+                  - button "◇ Minerals" [ref=e114] [cursor=pointer]:
+                    - text: ◇ Minerals
+                    - generic [ref=e115]: ↕
+                - columnheader "✧ Science" [ref=e116]:
+                  - button "✧ Science" [ref=e117] [cursor=pointer]:
+                    - text: ✧ Science
+                    - generic [ref=e118]: ↕
+                - columnheader "▥ Work" [ref=e119]:
+                  - button "▥ Work" [ref=e120] [cursor=pointer]:
+                    - text: ▥ Work
+                    - generic [ref=e121]: ↕
+                - columnheader "Construction" [ref=e122]
+                - columnheader "Inspect world" [ref=e123]:
+                  - generic [ref=e124]: Inspect world
+            - rowgroup [ref=e125]:
+              - row "Meridian 4 / 8 population Unchartered 1 / 3 slots 11 4 3 8 Idle Inspect Meridian" [ref=e126]:
+                - cell "Meridian 4 / 8 population" [ref=e127]:
+                  - strong [ref=e128]: Meridian
+                  - generic [ref=e129]: 4 / 8 population
+                - cell "Unchartered 1 / 3 slots" [ref=e130]:
+                  - generic [ref=e131]: Unchartered
+                  - generic [ref=e132]: 1 / 3 slots
+                - cell "11" [ref=e133]
+                - cell "4" [ref=e134]
+                - cell "3" [ref=e135]
+                - cell "8" [ref=e136]
+                - cell "Idle" [ref=e137]
+                - cell "Inspect Meridian" [ref=e138]:
+                  - button "Inspect Meridian" [ref=e139] [cursor=pointer]: ↗
+              - row "Solace 4 / 8 population Unchartered 1 / 3 slots 11 4 4 8 Idle Inspect Solace" [ref=e140]:
+                - cell "Solace 4 / 8 population" [ref=e141]:
+                  - strong [ref=e142]: Solace
+                  - generic [ref=e143]: 4 / 8 population
+                - cell "Unchartered 1 / 3 slots" [ref=e144]:
+                  - generic [ref=e145]: Unchartered
+                  - generic [ref=e146]: 1 / 3 slots
+                - cell "11" [ref=e147]
+                - cell "4" [ref=e148]
+                - cell "4" [ref=e149]
+                - cell "8" [ref=e150]
+                - cell "Idle" [ref=e151]
+                - cell "Inspect Solace" [ref=e152]:
+                  - button "Inspect Solace" [ref=e153] [cursor=pointer]: ↗
+              - row "Sundrift 4 / 8 population Unchartered 1 / 3 slots 11 3 4 8 Idle Inspect Sundrift" [ref=e154]:
+                - cell "Sundrift 4 / 8 population" [ref=e155]:
+                  - strong [ref=e156]: Sundrift
+                  - generic [ref=e157]: 4 / 8 population
+                - cell "Unchartered 1 / 3 slots" [ref=e158]:
+                  - generic [ref=e159]: Unchartered
+                  - generic [ref=e160]: 1 / 3 slots
+                - cell "11" [ref=e161]
+                - cell "3" [ref=e162]
+                - cell "4" [ref=e163]
+                - cell "8" [ref=e164]
+                - cell "Idle" [ref=e165]
+                - cell "Inspect Sundrift" [ref=e166]:
+                  - button "Inspect Sundrift" [ref=e167] [cursor=pointer]: ↗
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - heading "✦ Transcendence" [level=3] [ref=e171]
+              - strong [ref=e172]: 6 / 10
+            - paragraph [ref=e173]: Research the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying 60 credits each advancing cycle.
+            - generic "6 of 10 alignment cycles" [ref=e174]
+            - paragraph [ref=e185]: 3 / 3 beacons · Funding is covered after current income; the network is clear now.
+            - generic [ref=e186]:
+              - heading "Funding at current income" [level=4] [ref=e187]
+              - generic [ref=e188]:
+                - generic [ref=e189]:
+                  - term [ref=e190]: Current treasury
+                  - definition [ref=e191]: "978"
+                - generic [ref=e192]:
+                  - term [ref=e193]:
+                    - text: Ordinary income
+                    - generic [ref=e194]: after 14 fleet upkeep
+                  - definition [ref=e195]: "+19"
+                - generic [ref=e196]:
+                  - term [ref=e197]:
+                    - text: Available after income
+                    - generic [ref=e198]: minimum zero
+                  - definition [ref=e199]: "997"
+                - generic [ref=e200]:
+                  - term [ref=e201]: Required per advancing cycle
+                  - definition [ref=e202]: "60"
+              - paragraph [ref=e203]: 937 credits would remain if alignment advances.
+              - paragraph [ref=e204]: Estimate holds current income and network conditions fixed. Rival actions, treaty changes and completed research or construction can change the result.
+            - paragraph [ref=e205]: A hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - heading "⌂ Domination" [level=3] [ref=e208]
+              - strong [ref=e209]: 1 / 4
+            - paragraph [ref=e210]: Hold all four founding worlds at the same time. These objectives stay fixed when an empire moves its administrative capital.
+            - button "Solace Founded by Concord Concord Current control ↗" [ref=e214] [cursor=pointer]:
+              - generic [ref=e215]: ⌂
+              - generic [ref=e216]:
+                - strong [ref=e217]: Solace
+                - generic [ref=e218]: Founded by Concord
+              - generic [ref=e219]:
+                - text: Concord
+                - generic [ref=e220]: Current control ↗
+            - paragraph [ref=e221]: 3 founding worlds remain unidentified. Survey the frontier to locate them.
+            - generic [ref=e222]:
+              - generic [ref=e223]: Confirmed founding-world control
+              - generic [ref=e224]:
+                - generic [ref=e225]: Khar
+                - strong [ref=e226]: 0 / 4 confirmed
+              - generic [ref=e227]:
+                - generic [ref=e228]: Concord
+                - strong [ref=e229]: 1 / 4
+        - generic [ref=e230]:
+          - generic [ref=e231]: The awakening network
+          - paragraph [ref=e232]:
+            - text: If civilizations qualify for victory together, higher Legacy wins. Equal Legacy uses a tie-break determined by the galaxy seed.
+            - strong [ref=e233]: "Your Legacy: 354."
+            - link "Victory rules ↗" [ref=e234] [cursor=pointer]:
+              - /url: ./guide.html#victory
+          - article [ref=e236]:
+            - generic [ref=e237]:
+              - generic [ref=e238]:
+                - generic [ref=e239]: YOUR NETWORK
+                - heading "The Concord" [level=3] [ref=e240]
+              - strong [ref=e241]: 6 / 10
+            - paragraph [ref=e244]: 3 restored beacons · Alignment advanced last cycle
+            - generic [ref=e245]:
+              - button "✦ Solace ↗" [ref=e246] [cursor=pointer]
+              - button "✦ Meridian ↗" [ref=e247] [cursor=pointer]
+              - button "✦ Sundrift ↗" [ref=e248] [cursor=pointer]
+        - generic [ref=e249]:
+          - generic [ref=e250]: Fleet registry
+          - generic [ref=e251]:
+            - button "Pathfinder hull Pathfinder 1 ×1 Solace · 18 / 18 hull · 3 combat power Ready 2 jumps" [ref=e252] [cursor=pointer]:
+              - img "Pathfinder hull" [ref=e253]
+              - generic [ref=e254]:
+                - text: Pathfinder 1 ×1
+                - generic [ref=e255]: Solace · 18 / 18 hull · 3 combat power
+              - generic [ref=e256]:
+                - generic [ref=e257]: Ready
+                - generic [ref=e258]: 2 jumps
+            - button "Colony Ark hull Colony Ark 2 ×1 Solace · 24 / 24 hull · 0 combat power Ready 1 jump" [ref=e259] [cursor=pointer]:
+              - img "Colony Ark hull" [ref=e260]
+              - generic [ref=e261]:
+                - text: Colony Ark 2 ×1
+                - generic [ref=e262]: Solace · 24 / 24 hull · 0 combat power
+              - generic [ref=e263]:
+                - generic [ref=e264]: Ready
+                - generic [ref=e265]: 1 jump
+            - button "Vanguard hull Vanguard 3 ×6 Sundrift · 192.3 / 204 hull · 72 combat power Ready 1 jump" [ref=e266] [cursor=pointer]:
+              - img "Vanguard hull" [ref=e267]
+              - generic [ref=e268]:
+                - text: Vanguard 3 ×6
+                - generic [ref=e269]: Sundrift · 192.3 / 204 hull · 72 combat power
+              - generic [ref=e270]:
+                - generic [ref=e271]: Ready
+                - generic [ref=e272]: 1 jump
+    - complementary "Empire context" [ref=e273]:
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - generic [ref=e276]: CONCORD ADMINISTRATION
+          - heading "The working empire" [level=2] [ref=e277]
+          - paragraph [ref=e278]: 3 worlds · 12 billion citizens
+        - generic [ref=e279]:
+          - strong [ref=e280]: "24"
+          - generic [ref=e281]: construction work each cycle
+          - generic [ref=e282]: 3 idle colonies
+        - generic [ref=e283]:
+          - generic [ref=e284]: Upcoming completions
+          - paragraph [ref=e285]: Your construction teams await their next commission.
+        - generic [ref=e286]:
+          - generic [ref=e287]: Your beacon network
+          - paragraph [ref=e288]: 6 / 10 alignment · 60 credits per advancing cycle
+          - paragraph [ref=e289]: Funding is covered after current income; the network is clear now.
+          - button "Review your funding →" [ref=e290] [cursor=pointer]
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - generic [ref=e293]: Cycle 03
+          - generic [ref=e294]: 2402 CE
+        - button "End cycle → SPACE" [ref=e295] [cursor=pointer]:
+          - generic [ref=e296]: End cycle →
+          - generic [ref=e297]: SPACE
+        - generic [ref=e298]: 8 orders remaining · 3 colonies
+    - contentinfo [ref=e299]:
+      - generic [ref=e300]: "Cycle 3: 1 dispatches available in your briefing."
+      - generic [ref=e301]: ASTERION REACH / EARLY ACCESS 0.21.0
+      - generic [ref=e302]: ● AUTOSAVED
+  - status
+  - button "Import campaign save" [ref=e303]
+```

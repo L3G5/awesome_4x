@@ -1,0 +1,177 @@
+{
+  "name": "synthetic-private-rivals",
+  "width": 1280,
+  "height": 960,
+  "notes": "Synthetic affordable fixture changes only remote private rival economies, remote fleets and queues; public signals unchanged.",
+  "creditTitle": "Credits: 50; +75 per cycle after 25 fleet upkeep, before alignment payments",
+  "scopeVisible": true,
+  "mandate": "THE ANCIENT NETWORK\n3 of 3 Beacons restored · alignment 1/10. Funding is covered after current income; the network is clear now.\nReview network →",
+  "card": "✦ Transcendence\n1 / 10\n\nResearch the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying 60 credits each advancing cycle.\n\n3 / 3 beacons · Funding is covered after current income; the network is clear now.\n\nFunding at current income\nCurrent treasury\n50\nOrdinary income\nafter 25 fleet upkeep\n+75\nAvailable after income\nminimum zero\n125\nRequired per advancing cycle\n60\n\n65 credits would remain if alignment advances.\n\nEstimate holds current income and network conditions fixed. Rival actions, treaty changes and completed research or construction can change the result.\n\nA hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.",
+  "sidebar": "CONCORD ADMINISTRATION\nThe working empire\n\n4 worlds · 34 billion citizens\n\n86\nconstruction work each cycle\n3 idle colonies\nUPCOMING COMPLETIONS\nSundrift\nOrbital Shipyard · 1 cycles\n↗\nYOUR BEACON NETWORK\n\n1 / 10 alignment · 60 credits per advancing cycle\n\nFunding is covered after current income; the network is clear now.\n\nReview the network →",
+  "budget": {
+    "treasury": "50",
+    "income": "+75",
+    "after-income": "125",
+    "cost": "60"
+  },
+  "fonts": {
+    "dmSans": true,
+    "marcellus": true,
+    "creditFont": "\"DM Sans Variable\", system-ui, sans-serif",
+    "headingFont": "Marcellus, Georgia, serif"
+  },
+  "layout": {
+    "viewport": {
+      "width": 1280,
+      "height": 960
+    },
+    "document": {
+      "scrollWidth": 1280,
+      "clientWidth": 1280
+    },
+    "elements": {
+      ".topbar": {
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 76,
+          "top": 0,
+          "right": 1280,
+          "bottom": 76,
+          "left": 0
+        },
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "fontSize": "16px"
+      },
+      ".resources": {
+        "bounds": {
+          "x": 309,
+          "y": 12.296875,
+          "width": 785,
+          "height": 50.390625,
+          "top": 12.296875,
+          "right": 1094,
+          "bottom": 62.6875,
+          "left": 309
+        },
+        "scrollWidth": 785,
+        "clientWidth": 785,
+        "fontSize": "16px"
+      },
+      ".resource.credits": {
+        "bounds": {
+          "x": 471.96875,
+          "y": 12.296875,
+          "width": 120.1875,
+          "height": 50.390625,
+          "top": 12.296875,
+          "right": 592.15625,
+          "bottom": 62.6875,
+          "left": 471.96875
+        },
+        "scrollWidth": 120,
+        "clientWidth": 120,
+        "fontSize": "16px"
+      },
+      ".alignment-card": {
+        "bounds": {
+          "x": 115,
+          "y": 456.34375,
+          "width": 396,
+          "height": 593.5625,
+          "top": 456.34375,
+          "right": 511,
+          "bottom": 1049.90625,
+          "left": 115
+        },
+        "scrollWidth": 394,
+        "clientWidth": 394,
+        "fontSize": "16px"
+      },
+      ".alignment-outlook": {
+        "bounds": {
+          "x": 136,
+          "y": 681.78125,
+          "width": 354,
+          "height": 243.796875,
+          "top": 681.78125,
+          "right": 490,
+          "bottom": 925.578125,
+          "left": 136
+        },
+        "scrollWidth": 354,
+        "clientWidth": 354,
+        "fontSize": "16px"
+      },
+      ".alignment-budget": {
+        "bounds": {
+          "x": 136,
+          "y": 723.78125,
+          "width": 354,
+          "height": 110,
+          "top": 723.78125,
+          "right": 490,
+          "bottom": 833.78125,
+          "left": 136
+        },
+        "scrollWidth": 354,
+        "clientWidth": 354,
+        "fontSize": "11px"
+      },
+      ".alignment-budget-assumption": {
+        "bounds": {
+          "x": 136,
+          "y": 874.578125,
+          "width": 354,
+          "height": 51,
+          "top": 874.578125,
+          "right": 490,
+          "bottom": 925.578125,
+          "left": 136
+        },
+        "scrollWidth": 354,
+        "clientWidth": 354,
+        "fontSize": "10px"
+      },
+      "#inspector": {
+        "bounds": {
+          "x": 957,
+          "y": 76,
+          "width": 323,
+          "height": 704,
+          "top": 76,
+          "right": 1280,
+          "bottom": 780,
+          "left": 957
+        },
+        "scrollWidth": 323,
+        "clientWidth": 323,
+        "fontSize": "16px"
+      },
+      "#workspace-page": {
+        "bounds": {
+          "x": 80,
+          "y": 76,
+          "width": 876,
+          "height": 850,
+          "top": 76,
+          "right": 956,
+          "bottom": 926,
+          "left": 80
+        },
+        "scrollWidth": 876,
+        "clientWidth": 876,
+        "fontSize": "16px"
+      }
+    }
+  },
+  "navigationView": null,
+  "inputHash": "993a0816fef94766eb21c795cbd7efd175dc9e2eb2d3950c9afd2c5f86b88c9e",
+  "inspectedHash": "993a0816fef94766eb21c795cbd7efd175dc9e2eb2d3950c9afd2c5f86b88c9e",
+  "unchanged": true,
+  "actualTurn": null,
+  "errors": [],
+  "badResponses": []
+}

@@ -1,0 +1,25 @@
+
+> asterion-reach@0.21.0 test:browser
+> playwright test tests/planning-feedback-ui.spec.js
+
+
+Running 12 tests using 1 worker
+
+(node:559540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:559540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/planning-feedback-ui.spec.js:34:1 › after-income funding explains the WATCH50-credit diagnostic and matches an ordinary cycle (3.7s)
+  ✓   2 tests/planning-feedback-ui.spec.js:59:1 › a current treasury above sixty still shows its after-upkeep deficit at a narrow width (1.5s)
+  ✓   3 tests/planning-feedback-ui.spec.js:77:70 › covered funding does not imply a payment with blockade (2.3s)
+  ✓   4 tests/planning-feedback-ui.spec.js:77:70 › covered funding does not imply a payment with missing Protocol (1.7s)
+  ✓   5 tests/planning-feedback-ui.spec.js:77:70 › covered funding does not imply a payment with missing site (1.9s)
+  ✓   6 tests/planning-feedback-ui.spec.js:95:37 › a modern finished network has no future funding estimate (2.6s)
+  ✓   7 tests/planning-feedback-ui.spec.js:95:37 › a legacy finished network has no future funding estimate (2.7s)
+  ✓   8 tests/planning-feedback-ui.spec.js:107:1 › private rival economic changes cannot alter the player funding card (4.5s)
+  ✓   9 tests/planning-feedback-ui.spec.js:130:29 › lethal retaliation at 3 hull is explicit and a voluntary ordinary attack remains possible (4.9s)
+  ✓  10 tests/planning-feedback-ui.spec.js:130:29 › lethal retaliation at 4.04 hull is explicit and a voluntary ordinary attack remains possible (5.0s)
+  ✓  11 tests/planning-feedback-ui.spec.js:147:118 › a surviving invasion with 20 defenses keeps the appropriate outcome and projected hull (4.1s)
+  ✓  12 tests/planning-feedback-ui.spec.js:147:118 › a surviving invasion with 8 defenses keeps the appropriate outcome and projected hull (4.2s)
+
+  12 passed (41.4s)

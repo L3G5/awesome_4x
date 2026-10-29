@@ -1,20 +1,24 @@
 import { FACTIONS } from './content.js';
 import { getEmpireStats } from './game.js';
 import { getAlignmentStatus, getPublicRaces } from './victory.js';
+import { getAlignmentOutlook } from './alignment-outlook.js';
+import { alignmentOutlookSummary, renderAlignmentFunding } from './alignment-outlook-ui.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 export function renderAlignmentCard(state) {
   const status = getAlignmentStatus(state,'player');
+  const outlook = getAlignmentOutlook(state);
   const completed = state.winner === 'player' && state.victoryType === 'Transcendence';
   const unknownFinal = Boolean(state.winner && !state.factions.find(f => f.id === 'player').alignment);
   const description = state.winner
     ? 'This age has ended. Your final network is available to inspect.'
     : `Research the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying ${status.cost} credits each advancing cycle.`;
-  const label = completed ? 'Transcendence recorded' : state.winner ? 'Final network state' : status.ready ? 'Alignment requirements met now' : status.reason;
+  const label = completed ? 'Transcendence recorded' : state.winner ? 'Final network state' : alignmentOutlookSummary(outlook) || status.reason;
   return `<div class="victory-card alignment-card"><div class="alignment-title"><h3>✦ Transcendence</h3><strong>${unknownFinal ? '—' : status.progress}<small> / ${status.target}</small></strong></div><p>${description}</p>
     ${unknownFinal ? '<p class="alignment-rules">Alignment progress was not recorded in this older save. The saved campaign outcome is preserved.</p>' : `<div class="alignment-segments" aria-label="${status.progress} of ${status.target} alignment cycles">${Array.from({length:status.target},(_,i)=>`<i class="${i<status.progress?'complete':''}"></i>`).join('')}</div>`}
     <p class="alignment-status">${status.beacons} / 3 beacons · ${escape(label)}</p>
+    ${!state.winner && (status.beacons > 0 || status.progress > 0) ? renderAlignmentFunding(outlook) : ''}
     ${state.winner ? '' : '<p class="alignment-rules">A hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.</p>'}</div>`;
 }
 

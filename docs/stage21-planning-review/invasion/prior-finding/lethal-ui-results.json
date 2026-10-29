@@ -1,0 +1,54 @@
+{
+  "kind": "synthetic controlled fixture; not a played campaign",
+  "inputValid": true,
+  "preview": {
+    "systemId": "s1",
+    "defense": 8,
+    "damageMin": 11,
+    "damageMax": 13,
+    "retaliation": 3,
+    "shielded": false,
+    "capturePossible": false,
+    "captureGuaranteed": false
+  },
+  "displayed": "INVASION FORECAST\n8 colony defenses\nYour volley: 11–13 defense damage\nRetaliation: 3 hull\nFurther bombardment is required.\nCost: 1 order + 1 move",
+  "answer": {
+    "ok": true,
+    "message": "Invasion of Veyr Prime: 8 defense damage; 0 defenses remain. Concord lost 1 ship and 3 hull to retaliation. Invading fleet destroyed; colony holds.",
+    "combatReports": [
+      {
+        "kind": "invasion",
+        "systemId": "s1",
+        "participants": [
+          {
+            "role": "attacker",
+            "fleetId": "f3",
+            "owner": "player",
+            "name": "Vanguard 3",
+            "type": "frigate",
+            "shipsBefore": 1,
+            "hullBefore": 3,
+            "shipsAfter": 0,
+            "hullAfter": 0
+          }
+        ],
+        "outcome": "repelled",
+        "summary": "Invasion of Veyr Prime: 8 defense damage; 0 defenses remain. Concord lost 1 ship and 3 hull to retaliation. Invading fleet destroyed; colony holds.",
+        "invasion": {
+          "ownerBefore": "veyr",
+          "ownerAfter": "veyr",
+          "defenseBefore": 8,
+          "defenseAfter": 0,
+          "damage": 8,
+          "damageRoll": 11,
+          "retaliation": 3,
+          "captured": false
+        },
+        "id": 1,
+        "turn": 2
+      }
+    ]
+  },
+  "actualUiMatchesOrdinaryCommand": true,
+  "errors": []
+}

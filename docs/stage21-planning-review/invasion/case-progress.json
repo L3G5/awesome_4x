@@ -1,0 +1,353 @@
+[
+  {
+    "id": "original-lethal",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 8,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 3,
+      "hullAfter": 0,
+      "shielded": false,
+      "capturePossible": false,
+      "captureGuaranteed": false
+    },
+    "warning": "Retaliation will destroy this formation; it cannot capture the colony.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(255, 177, 165)",
+      "rect": {
+        "left": 1140,
+        "top": 507.03125,
+        "width": 277,
+        "height": 193.1875
+      }
+    },
+    "commandOutcome": "repelled",
+    "captured": false,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "rounded-lethal",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 8,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 4,
+      "hullAfter": 0,
+      "shielded": false,
+      "capturePossible": false,
+      "captureGuaranteed": false
+    },
+    "warning": "Retaliation will destroy this formation; it cannot capture the colony.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(255, 177, 165)",
+      "rect": {
+        "left": 1140,
+        "top": 507.03125,
+        "width": 277,
+        "height": 193.1875
+      }
+    },
+    "commandOutcome": "repelled",
+    "captured": false,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "surviving-bombardment",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 20,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 5.6,
+      "hullAfter": 28.4,
+      "shielded": false,
+      "capturePossible": false,
+      "captureGuaranteed": false
+    },
+    "warning": "Further bombardment is required.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(168, 214, 200)",
+      "rect": {
+        "left": 1140,
+        "top": 525.03125,
+        "width": 277,
+        "height": 175.1875
+      }
+    },
+    "commandOutcome": "bombardment",
+    "captured": false,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "possible-noncapture",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 12,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 4,
+      "hullAfter": 30,
+      "shielded": false,
+      "capturePossible": true,
+      "captureGuaranteed": false
+    },
+    "warning": "This volley may capture the colony.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(168, 214, 200)",
+      "rect": {
+        "left": 1140,
+        "top": 525.03125,
+        "width": 277,
+        "height": 175.1875
+      }
+    },
+    "commandOutcome": "bombardment",
+    "captured": false,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "possible-capture",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 12,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 4,
+      "hullAfter": 30,
+      "shielded": false,
+      "capturePossible": true,
+      "captureGuaranteed": false
+    },
+    "warning": "This volley may capture the colony.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(168, 214, 200)",
+      "rect": {
+        "left": 1140,
+        "top": 525.03125,
+        "width": 277,
+        "height": 175.1875
+      }
+    },
+    "commandOutcome": "captured",
+    "captured": true,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "guaranteed-capture",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 8,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 4,
+      "hullAfter": 30,
+      "shielded": false,
+      "capturePossible": true,
+      "captureGuaranteed": true
+    },
+    "warning": "Capture expected with this volley.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(168, 214, 200)",
+      "rect": {
+        "left": 1140,
+        "top": 525.03125,
+        "width": 277,
+        "height": 175.1875
+      }
+    },
+    "commandOutcome": "captured",
+    "captured": true,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "shield-rounded-lethal",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 8,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 3.2,
+      "hullAfter": 0,
+      "shielded": true,
+      "capturePossible": false,
+      "captureGuaranteed": false
+    },
+    "warning": "Retaliation will destroy this formation; it cannot capture the colony.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(255, 177, 165)",
+      "rect": {
+        "left": 1140,
+        "top": 507.03125,
+        "width": 277,
+        "height": 193.1875
+      }
+    },
+    "commandOutcome": "repelled",
+    "captured": false,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "fractional-survivor",
+    "kind": "controlled synthetic fixture",
+    "viewport": 1440,
+    "preview": {
+      "systemId": "s1",
+      "defense": 8,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 4,
+      "hullAfter": 0.1,
+      "shielded": false,
+      "capturePossible": true,
+      "captureGuaranteed": true
+    },
+    "warning": "Capture expected with this volley.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(168, 214, 200)",
+      "rect": {
+        "left": 1140,
+        "top": 525.03125,
+        "width": 277,
+        "height": 175.1875
+      }
+    },
+    "commandOutcome": "captured",
+    "captured": true,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  },
+  {
+    "id": "narrow-original-lethal",
+    "kind": "controlled synthetic fixture",
+    "viewport": 390,
+    "preview": {
+      "systemId": "s1",
+      "defense": 8,
+      "damageMin": 11,
+      "damageMax": 13,
+      "retaliation": 3,
+      "hullAfter": 0,
+      "shielded": false,
+      "capturePossible": false,
+      "captureGuaranteed": false
+    },
+    "warning": "Retaliation will destroy this formation; it cannot capture the colony.",
+    "layout": {
+      "documentOverflow": false,
+      "previewOverflow": false,
+      "warningOverflow": false,
+      "warningVisible": true,
+      "fontSize": "10px",
+      "lineHeight": "18px",
+      "color": "rgb(255, 177, 165)",
+      "rect": {
+        "left": 66,
+        "top": 400.609375,
+        "width": 306,
+        "height": 193.1875
+      }
+    },
+    "commandOutcome": "repelled",
+    "captured": false,
+    "exactOldEngineEquality": true,
+    "exactReloadEquality": true,
+    "exactBrowserCommandEquality": true,
+    "inspectionPure": true,
+    "errors": []
+  }
+]

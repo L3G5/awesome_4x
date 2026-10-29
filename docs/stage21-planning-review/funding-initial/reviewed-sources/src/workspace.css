@@ -1,0 +1,49 @@
+.narrative-illustration{margin:0;overflow:hidden;background:#0b1320;isolation:isolate}
+.narrative-illustration img{display:block;width:100%;height:100%;object-fit:cover}
+.modal-content>.narrative-illustration{height:210px;margin:0 0 22px;border:1px solid #3c4c5a;border-radius:4px}
+.workspace-context .narrative-illustration{height:190px;border-block:1px solid #354151}
+.context-heading{padding:26px 23px 22px}
+.context-heading h2{font-size:28px;line-height:1.2;color:#efe7d9;margin:12px 0}
+.context-heading p{font-size:12px;line-height:1.7;color:#a1b4c4}
+.context-section{padding:21px 23px;border-top:1px solid var(--line)}
+.context-section .section-label{font-size:10px;line-height:1.5;margin-bottom:14px}
+.context-section h3{font-size:21px;line-height:1.4;margin-bottom:10px;color:#e7dfd0}
+.context-section p{font-size:12px;line-height:1.75;color:#a9bdcb;margin-bottom:12px}
+.context-section p:last-child{margin-bottom:0}
+.context-section .progress-track{margin:14px 0}
+.context-section .wide-button{font-size:11px;margin-top:12px}
+.context-metric{padding:0 23px 24px;display:grid;grid-template-columns:auto 1fr;gap:5px 14px;align-items:end}
+.context-metric strong{grid-row:span 2;font:42px var(--heading);line-height:1;color:var(--accent)}
+.context-metric span{font-size:12px;color:#d6e2e9}
+.context-metric small{font-size:11px;color:#93a9ba}
+.context-quotation{padding:20px 24px;font:italic 18px/1.6 var(--heading);color:#d7c7a8}
+.context-link{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:12px 0;border:0;border-bottom:1px solid #293849;border-radius:0;background:transparent;text-align:left;font-size:12px;line-height:1.5}
+.context-link:last-child{border-bottom:0}
+.context-link:hover:not(:disabled){background:#152635}
+.context-link small{display:block;color:#91aabd;margin-top:4px;font-size:11px;line-height:1.6}
+.context-link>span:last-child{color:var(--accent)}
+.context-list{list-style:none;margin:0;padding:0;font-size:12px;color:#d2e2e9}
+.context-list li{padding:9px 0;border-bottom:1px solid #263545;line-height:1.6}
+.context-list li:last-child{border-bottom:0}
+.context-list small{display:block;color:#96adbd;font-size:11px}
+.rival-card .dossier-button{margin-top:10px;font-size:11px;color:var(--faction)}
+.rival-card .dossier-button[aria-pressed=true]{border-color:var(--faction);background:#192b38}
+.rival-card p{font-size:12px;line-height:1.75}
+.rival-card .leader,.diplomatic-stats{font-size:11px}
+.rival-card .rival-actions button{font-size:12px}
+.rival-card .diplomatic-policy{font-size:11px;line-height:1.65}
+.tech-card p{font-size:12px;line-height:1.7}
+.tech-card .tech-footer{font-size:11px}
+.tech-footer button{font-size:11px}
+.ship-portrait{display:block;object-fit:contain;width:80px;height:50px;flex:none;filter:drop-shadow(0 7px 7px #0004)}
+.fleet-row:has(.ship-portrait){gap:11px;min-height:65px}
+.fleet-row .ship-portrait{width:70px;height:44px;margin-left:-6px}
+.fleet-bar>.ship-portrait{width:84px;height:52px;margin:-6px -5px -6px -8px}
+.ship-build-card{display:block}
+.ship-build-card>.ship-portrait{width:100%;height:112px;margin:0 0 12px}
+.ship-build-card:disabled>.ship-portrait{opacity:.65}
+.heritage-portrait{display:flex;justify-content:center;background:radial-gradient(ellipse at center,#29312c88,transparent 65%);margin:0 0 15px}
+.heritage-portrait>.ship-portrait{width:320px;max-width:100%;height:180px}
+@media(max-width:1050px){.fleet-bar>.ship-portrait{width:62px;height:39px}}
+@media(max-width:660px){.fleet-bar>.ship-portrait{display:none}.ship-build-card>.ship-portrait{height:100px}}
+@media(max-width:660px){.workspace-context .narrative-illustration{height:210px}.modal-content>.narrative-illustration{height:160px}.context-heading{padding-top:22px}.context-section{padding-block:18px}}

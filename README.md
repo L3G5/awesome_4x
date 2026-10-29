@@ -20,6 +20,8 @@ The simulation in `src/game.js` is independent of rendering. Authored content, r
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
+The [planning feedback review](docs/stage21-planning-review/index.html) verifies alignment funding after current income and explicit lethal-retaliation warnings, with unchanged simulation outcomes and independent desktop/narrow checks.
+
 The [expedition reinforcement review](docs/stage20-expedition-review/index.html) connects two replay-derived local opportunities to a bounded AI policy and its independent checks. The [controlled comparison](docs/expedition-reinforcement-comparison/index.html) holds the engine and player policy fixed across 32 configurations; its three absorptions changed one paired winner. Reproduce with `node scripts/expedition-reinforcement-benchmark.mjs --out /tmp/expedition-reinforcement-results`.
 
 The [campaign conclusion review](docs/stage19-conclusion-review/index.html) verifies reopened endings, final holdings, retained historical links and the public victory tie rule against the completed WATCH and military campaigns.

@@ -1,0 +1,28 @@
+.conquest-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.conquest-heading>strong{font:30px var(--heading);color:#e1c998;white-space:nowrap}
+.conquest-heading>strong small{font:11px 'DM Sans Variable',sans-serif;color:#879fac}
+.founding-world-list{margin-top:20px;display:grid;gap:7px}
+.founding-world{display:flex;align-items:center;gap:10px;width:100%;padding:12px 10px;background:#0e1d2a;text-align:left;border-color:#304b5a;min-width:0}
+.founding-emblem{font-size:20px;color:#dbc69a}
+.founding-world-name{flex:1;min-width:0}
+.founding-world-name strong{font-size:12px;color:#d8e4e6;font-weight:500;display:block;overflow-wrap:anywhere}
+.founding-world-name small,.founding-sovereign small{display:block;font-size:8px;line-height:1.6;color:#8da6b6;margin-top:4px}
+.founding-sovereign{font-size:10px;text-align:right;min-width:68px;max-width:46%;overflow-wrap:anywhere;color:#a7b6bf}
+.conquest-card .founding-unknown,.conquest-card .founding-complete{font-size:10px;line-height:1.7;margin:12px 0 0;color:#92a9b8}
+.conquest-standings{margin-top:23px;border-top:1px solid #314855;padding-top:17px}
+.conquest-standings .section-label{font-size:9px;margin-bottom:12px}
+.conquest-standing{display:flex;justify-content:space-between;gap:14px;margin-top:9px;font-size:11px}
+.conquest-standing strong{font-weight:500;color:#cad9df;white-space:nowrap}
+.conquest-standing strong small{font-size:9px;color:#8ea9b9;font-weight:400}
+.conquest-card .conquest-alert{margin:17px 0 0;padding:12px;border-left:2px solid #c49670;background:#382b2329;font-size:11px;line-height:1.75;color:#dcc3a6}
+.founding-inspector p{font-size:11px;line-height:1.75;color:#b5c7cf}
+.founding-inspector .section-label{color:#d4c29b}
+.founding-inspector dl{margin:14px 0}
+.founding-inspector dl>div{display:flex;justify-content:space-between;gap:15px;font-size:10px;margin-top:9px}
+.founding-inspector dt{color:#86a1b2}.founding-inspector dd{color:#d2e1e6;margin:0;text-align:right}
+.founding-inspector .founding-capital-note{font-size:9px;color:#91a8b7}
+.galaxy-founding-icon{color:#e2cda4;margin-right:5px;font-size:12px}
+.galaxy-system-label.is-founding .galaxy-system-name{font-weight:600}
+.map-legend{flex-wrap:wrap;max-width:calc(100% - 56px)}
+.map-legend .founding-legend{color:#c9b68e}
+@media(max-width:660px){.founding-world{padding:11px 9px;gap:8px}.founding-world-name strong{font-size:11px}.founding-sovereign{font-size:9px;min-width:60px}.map-legend{max-width:calc(100% - 32px);row-gap:5px}}
