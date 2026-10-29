@@ -1,5 +1,7 @@
 .close-fleet-controls{display:none}
 @media(max-width:660px){
+  .route-actions{align-self:stretch;flex-wrap:wrap;justify-content:flex-end;max-width:100%}
+  .route-actions .primary{flex:1 0 100%;white-space:normal}
   .app-shell{grid-template-rows:minmax(90px,auto) minmax(350px,62dvh) auto 32px}
   .fleet-bar.is-inspecting{min-height:0;width:max-content;max-width:calc(100% - 20px);right:auto;padding:5px}
   .fleet-bar.is-inspecting .fleet-title{display:none}

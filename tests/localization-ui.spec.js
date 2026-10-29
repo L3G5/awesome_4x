@@ -4,6 +4,7 @@ import { createGame, command, endTurn } from '../src/game.js';
 
 const LANGUAGE='asterion-reach-language-v1', SAVE='asterion-reach-save-v1';
 test('Russian held-route limits and uncertainty remain fully translated after movement', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   const state = createGame('ASTERION');
   expect(command(state, { type: 'planRoute', fleetId: 'f1', destinationId: 's9' }).ok).toBe(true);
   expect(command(state, { type: 'move', fleetId: 'f1', targetId: 's20' }).ok).toBe(true);
@@ -13,10 +14,22 @@ test('Russian held-route limits and uncertainty remain fully translated after mo
     localStorage.setItem(LANGUAGE, 'ru');
   }, { state, SAVE, LANGUAGE });
   await page.goto('./');
+  await page.locator('#fleet-bar [data-action="fleet-roster"]').click();
+  await page.locator('.modal [data-fleet="f1"]').click();
   await expect(page.locator('.route-explanation')).toContainText('Лимит приказов сейчас: 1; остановка при новом контакте, открытии или бое.');
   await expect(page.locator('.route-explanation')).toContainText('Неизвестная вражеская обстановка в точках маршрута: 1.');
   await expect(page.locator('.route-explanation')).not.toContainText('Up to');
   await expect(page.locator('#fleet-bar')).toContainText('Удерживает позицию');
+  expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
+  const bar = await page.locator('#fleet-bar').boundingBox();
+  const next = await page.locator('[data-action="continue-route"]').boundingBox();
+  expect(next.x).toBeGreaterThanOrEqual(bar.x);
+  expect(next.x + next.width).toBeLessThanOrEqual(bar.x + bar.width);
+  await page.locator('[data-action="continue-route"]').click();
+  const moved = structuredClone(state);
+  expect(command(moved, { type: 'continueRoute', fleetId: 'f1' }).ok).toBe(true);
+  expect(await page.evaluate(() => window.__asterion.getState())).toEqual(moved);
+  await page.locator('#undo-action').click();
   expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
 });
 const actual50=new URL('../docs/default-campaign/actual/083-asterion-reach-cycle-50.json',import.meta.url);
