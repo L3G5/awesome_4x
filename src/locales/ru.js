@@ -1610,5 +1610,6 @@ export const russian = {
   "Action undone. You can revise your orders before ending this cycle.": "Действие отменено. До завершения цикла вы можете изменить свои приказы.",
   "● AUTOSAVED · UNDO IN THIS TAB": "● СОХРАНЕНО · ОТМЕНА В ЭТОЙ ВКЛАДКЕ",
   "Undo restores actions within this cycle. Ending the cycle, importing a save or starting a campaign clears undo history.": "Отмена возвращает действия в пределах текущего цикла. Завершение цикла, импорт сохранения или начало кампании очищает историю отмены.",
-  "Undo history is available only in this tab until it closes or reloads.": "История отмены доступна только в этой вкладке до её закрытия или перезагрузки."
+  "Undo history is available only in this tab until it closes or reloads.": "История отмены доступна только в этой вкладке до её закрытия или перезагрузки.",
+  "{0} arrived at {1}.": "{0} прибыл в систему {1}."
 };

@@ -4777,5 +4777,15 @@ export const bindings = {
         "kind": "number"
       }
     }
+  ],
+  "{0} arrived at {1}.": [
+    {
+      "0": {
+        "kind": "name"
+      },
+      "1": {
+        "kind": "name"
+      }
+    }
   ]
 };

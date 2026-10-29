@@ -78,7 +78,7 @@ const isNew = !state;
 state ||= createGame('ASTERION');
 revealPublicBeacons(state);
 const turnHistory = new TurnHistory(validateSave);
-try { turnHistory.restore(localStorage.getItem(UNDO_KEY), state); } catch {}
+try { if (!isNew) turnHistory.restore(localStorage.getItem(UNDO_KEY), state); } catch {}
 let undoPersisted = true;
 let selectedSystemId = state.factions.find(f => f.id === 'player').capitalId;
 const mobileViewport = matchMedia('(max-width:660px)');
@@ -170,7 +170,10 @@ function undoAction() {
   $('#workspace-page').scrollTop = context.workspaceScroll || 0;
   if ($('.colony-scroll')) $('.colony-scroll').scrollLeft = context.colonyScroll || 0;
   $('#inspector').scrollTop = context.inspectorScroll || 0;
-  (turnHistory.size ? $('#undo-action') : $('#end-turn')).focus({ preventScroll: true });
+  const focusTarget = turnHistory.size ? $('#undo-action') : $('#end-turn');
+  const bounds = focusTarget.getBoundingClientRect();
+  if (bounds.top >= -1 && bounds.bottom <= innerHeight + 1) focusTarget.focus({ preventScroll: true });
+  else focusCommandResult(page === 'galaxy' ? selectedFleetId ? '#fleet-bar h3' : '#inspector h2' : '#workspace-page h2');
   toast('Action undone. You can revise your orders before ending this cycle.');
 }
 function dispatch(action) {

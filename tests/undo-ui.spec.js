@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createGame, command, endTurn, getNeighbors } from '../src/game.js';
+import { TurnHistory, applyTurnCommand } from '../src/turn-history.js';
 
 const SAVE = 'asterion-reach-save-v1', HISTORY = 'asterion-reach-undo-v1';
 const read = page => page.evaluate(() => window.__asterion.getState());
@@ -11,6 +12,27 @@ async function load(page, state, language = 'en') {
     localStorage.setItem('undo-fixture-loaded', 'true');
   }, { state, language, SAVE });
   await page.goto('./');
+}
+
+for (const corrupt of [false, true]) {
+  test(`a ${corrupt ? 'malformed' : 'missing'} main save never attaches orphan undo to a new campaign`, async ({ page }) => {
+    const history = new TurnHistory(() => true), original = createGame('ASTERION');
+    let state = applyTurnCommand(original, { type: 'hold', fleetId: 'f1' }, history).state;
+    state = applyTurnCommand(state, { type: 'resume', fleetId: 'f1' }, history).state;
+    expect(state).toEqual(original);
+    await page.addInitScript(({ serialized, corrupt, SAVE, HISTORY }) => {
+      localStorage.setItem(HISTORY, serialized);
+      if (corrupt) localStorage.setItem(SAVE, '{broken');
+      else localStorage.removeItem(SAVE);
+    }, { serialized: history.serialize(state), corrupt, SAVE, HISTORY });
+    await page.goto('./');
+    await expect(page.locator('[data-action="begin"]')).toBeVisible();
+    await expect(page.locator('#undo-action')).toBeDisabled();
+    await expect(page.locator('.modal [data-action="undo"]')).toHaveCount(0);
+    expect(await read(page)).toEqual(original);
+    await page.locator('[data-action="begin"]').click();
+    expect(await page.evaluate(HISTORY => localStorage.getItem(HISTORY), HISTORY)).toBeNull();
+  });
 }
 
 for (const width of [1440, 390]) for (const language of ['en', 'ru']) {
@@ -103,6 +125,19 @@ test('combat report offers undo and repeating combat retains the exact random re
   await page.keyboard.press('Control+z');
   expect(await read(page)).toEqual(original);
   await expect(page.locator('.modal')).toHaveCount(0);
+});
+
+test('mobile modal Undo returns focus to the visible restored workspace', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const original = createGame('ASTERION');
+  await load(page, original, 'ru');
+  await page.locator('[data-page="research"]').click();
+  await page.locator('[data-action="research"][data-tech="physics"]').click();
+  await page.locator('[data-action="menu"]').click();
+  await page.locator('.modal [data-action="undo"]').click();
+  expect(await read(page)).toEqual(original);
+  await expect(page.locator('#workspace-page h2')).toBeFocused();
+  await expect(page.locator('#workspace-page h2')).toBeInViewport();
 });
 
 test('only confirmed End cycle, import and new campaign discard action history', async ({ page }) => {

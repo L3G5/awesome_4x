@@ -7,3 +7,8 @@
   .turn-actions .end-turn kbd { display: none; }
 }
 html[lang="ru"] .turn-actions .end-turn { letter-spacing: .03em; }
+@media (max-width: 660px) {
+  .turn-actions .end-turn kbd { display: none; }
+  .toast-stack { top: 12px; bottom: auto; max-width: calc(100% - 24px); }
+  .toast-stack .toast:not(:last-child) { display: none; }
+}

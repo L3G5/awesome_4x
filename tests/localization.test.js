@@ -4,6 +4,17 @@ import { translateText } from '../src/localization.js';
 import { russian } from '../src/locales/ru.js';
 import { readFileSync } from 'node:fs';
 import { getDiplomacyForecast } from '../src/diplomacy.js';
+import { createGame, command, getNeighbors } from '../src/game.js';
+
+test('ordinary movement and Undo notifications translate as complete Russian messages', () => {
+  const state = createGame('ASTERION'), fleet = state.fleets.find(fleet => fleet.id === 'f1');
+  const target = state.systems.find(world => !world.owner && getNeighbors(state, fleet.systemId).includes(world.id));
+  const result = command(state, { type: 'move', fleetId: fleet.id, targetId: target.id });
+  assert.equal(result.ok, true);
+  assert.equal(translateText(result.message, 'ru'), `Следопыт 1 прибыл в систему ${target.name}.`);
+  assert.equal(translateText('↶ Undo', 'ru'), '↶ Отменить');
+  assert.equal(translateText('Action undone. You can revise your orders before ending this cycle.', 'ru'), 'Действие отменено. До завершения цикла вы можете изменить свои приказы.');
+});
 
 test('English text, unknown names and punctuation are preserved', () => {
   for (const text of ['  Cycle 01\n', 'Solace', '<img src=x onerror=alert(1)>', 'MY $& SEED']) {
