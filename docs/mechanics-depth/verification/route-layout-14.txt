@@ -1,0 +1,29 @@
+[WebServer] (node:785798) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 14 tests using 1 worker
+
+(node:785817) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:785817) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/14] tests/localization-ui.spec.js:6:1 › Russian held-route limits and uncertainty remain fully translated after movement
+[2/14] tests/localization-ui.spec.js:43:2 › language switch preserves campaign, dialog, focus and setting at 1440
+[3/14] tests/localization-ui.spec.js:43:2 › language switch preserves campaign, dialog, focus and setting at 390
+[4/14] tests/localization-ui.spec.js:71:1 › Russian ordinary research and End Cycle have exact English-engine effects
+[5/14] tests/localization-ui.spec.js:92:1 › actual midgame toggles and exports exactly while the field guide stays English
+[6/14] tests/localization-ui.spec.js:107:1 › Russian import and finished conclusion preserve the original save
+[7/14] tests/localization-ui.spec.js:123:1 › Russian ordinary peace explains all binding terms and keeps its exact paid effect
+[8/14] tests/mobile-inspection-ui.spec.js:16:5 › mobile touch inspection › a fresh world tap inspects without an incidental fleet card in en
+[9/14] tests/mobile-inspection-ui.spec.js:37:5 › mobile touch inspection › deliberate targeting pays normally and closing preserves a held course in en
+[10/14] tests/mobile-inspection-ui.spec.js:16:5 › mobile touch inspection › a fresh world tap inspects without an incidental fleet card in ru
+[11/14] tests/mobile-inspection-ui.spec.js:37:5 › mobile touch inspection › deliberate targeting pays normally and closing preserves a held course in ru
+[12/14] tests/mobile-inspection-ui.spec.js:66:1 › entering mobile clears once; explicit keyboard selection and modal Escape retain their meanings
+[13/14] tests/mobile-inspection-ui.spec.js:84:1 › mobile reload, import and new campaign start in inspection
+[14/14] tests/mobile-inspection-ui.spec.js:103:3 › mobile landscape touch › the inspector does not cover deliberate movement controls
+  14 passed (56.4s)
