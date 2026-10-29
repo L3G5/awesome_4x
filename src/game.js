@@ -251,7 +251,7 @@ export function estimateInvasion(state, fleetId) {
   const shielded = has(factionOf(state, fleet.owner), 'shields');
   const hullAfter = Math.max(0, round(fleet.hp - Math.max(4, defense * .28) * (shielded ? .8 : 1)));
   const retaliation = round(fleet.hp - hullAfter);
-  return { systemId: system.id, defense, damageMin, damageMax, retaliation, shielded, capturePossible: hullAfter > 0 && damageMax >= defense, captureGuaranteed: hullAfter > 0 && damageMin >= defense };
+  return { systemId: system.id, defense, damageMin, damageMax, retaliation, hullAfter, shielded, capturePossible: hullAfter > 0 && damageMax >= defense, captureGuaranteed: hullAfter > 0 && damageMin >= defense };
 }
 
 function atWar(state, a, b) { return a !== b && factionOf(state, a).relations[b]?.status === 'war'; }
