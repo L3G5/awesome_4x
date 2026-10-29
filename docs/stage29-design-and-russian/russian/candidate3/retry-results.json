@@ -1,0 +1,116 @@
+[
+  {
+    "tag": "retry-default50-390",
+    "inspectorNames": [
+      {
+        "view": "galaxy",
+        "name": "Сведения о системе"
+      },
+      {
+        "view": "research",
+        "name": "Контекст раздела «Наука»"
+      },
+      {
+        "view": "diplomacy",
+        "name": "Контекст раздела «Дипломатия»"
+      },
+      {
+        "view": "empire",
+        "name": "Контекст раздела «Империя»"
+      },
+      {
+        "view": "journal",
+        "name": "Контекст раздела «Летопись»"
+      }
+    ],
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 6.40625,
+          "right": 40.59375,
+          "width": 34.1875
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 13.328125,
+          "right": 33.65625,
+          "width": 20.328125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 2.046875,
+          "right": 44.9375,
+          "width": 42.890625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.671875,
+          "right": 39.3125,
+          "width": 31.640625
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.09375,
+          "right": 39.890625,
+          "width": 32.796875
+        },
+        "inside": true
+      }
+    ],
+    "normalResearchEffectAndFocus": true,
+    "exportImportReloadExact": true,
+    "docs": [
+      "guide.html",
+      "design/good-4x.html",
+      "design/bad-4x.html"
+    ]
+  }
+]

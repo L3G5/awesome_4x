@@ -1,0 +1,188 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Halcyon",
+      "element": "STRONG"
+    },
+    {
+      "text": "Маяк Asterion",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "STRONG"
+    },
+    {
+      "text": "Nacre",
+      "element": "STRONG"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "Sundrift",
+      "element": "STRONG"
+    },
+    {
+      "text": "Маяки: 2 / 3 · Завершите строительство Маяков Asterion на трёх подконтрольных мирах (2/3).",
+      "element": "P"
+    },
+    {
+      "text": "Средств достаточно. Завершите строительство Маяков Asterion на трёх подконтрольных мирах (2/3).",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Veyr Prime",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Kharos",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Lumen",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Sundrift ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Haven ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Ophion ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "Nacre · прочность: 18 / 18 · боевая мощь: 3.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "Sundrift · прочность: 102 / 102 · боевая мощь: 45",
+      "element": "SMALL"
+    },
+    {
+      "text": "Halcyon · прочность: 85 / 85 · боевая мощь: 38.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Маяк Asterion · циклов: 1",
+      "element": "SMALL",
+      "action": "inspect"
+    },
+    {
+      "text": "Завершите строительство Маяков Asterion на трёх подконтрольных мирах (2/3).",
+      "element": "P"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Halcyon",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Haven",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Nacre",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Sundrift",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Veyr Prime",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Kharos",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Lumen",
+      "tag": "BUTTON",
+      "action": "inspect"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": null
+  }
+}

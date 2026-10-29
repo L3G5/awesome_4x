@@ -1,0 +1,41 @@
+{
+  "version": "0.22.0",
+  "commit": "c3bc8c48860bf036c46e601ba3198b0a689ddd4a",
+  "url": "http://127.0.0.1:41387",
+  "functionalStatus": "pass for observed tasks",
+  "localizationCoverageStatus": "incomplete",
+  "primaryContextsPassed": 6,
+  "primaryFullStateToggleComparisons": 54,
+  "primaryCaptures": 64,
+  "supplementalOfferCasesPassed": 4,
+  "roundtripAttributeStateCasesPassed": 2,
+  "customSeedCasesPassed": 4,
+  "remainingRenderedEnglishLines": 32,
+  "remainingEnglishAttributeVariants": 39,
+  "findings": [
+    {
+      "id": "R1",
+      "title": "Operational compound fragments regressed to English",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "id": "R2",
+      "title": "Battle/history clauses remain English; research completion regressions",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "id": "R3",
+      "title": "Map accessible names and selected tooltips remain English",
+      "severity": "medium",
+      "confidence": "high"
+    }
+  ],
+  "stateMutationObserved": false,
+  "sourceEdited": false,
+  "assetsUnchangedBeforeAfter": true,
+  "phase1ArtifactHashesPreserved": 247,
+  "report": "report.txt",
+  "inventory": "remaining-English.json"
+}

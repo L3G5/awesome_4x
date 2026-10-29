@@ -1,0 +1,1081 @@
+{
+  "Credits: {0}; {1} per cycle after {2} fleet upkeep, before alignment payments": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "Minerals: {0}; {1} per cycle": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Science: {0}; {1} per cycle": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Orders: {0} of {1} available this cycle": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Galaxy ({0})": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Research ({0})": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Diplomacy ({0})": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Empire ({0})": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Chronicle ({0})": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Hold at {0}; free. Movement remains available.": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "{0} credits": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} minerals": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} science": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} production": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} orbital repair": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0}% military mineral saving": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} cycle": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} cycles": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} cycle to build this project": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} cycles to build this project": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Replaced on completion: {0}. Existing benefits continue until then; the old investment is not refunded.": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "Empire orders: {0} → {1} / cycle. {2} usable order.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "/ cycle. {0} usable order.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Empire orders: {0} → {1} / cycle. {2} usable order · {3}-order cap applied.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    }
+  },
+  "Empire orders: {0} → {1} / cycle. {2} usable orders.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "/ cycle. {0} usable orders.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Empire orders: {0} → {1} / cycle. {2} usable orders · {3}-order cap applied.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    }
+  },
+  "◈ {0} ◇ {1} · {2} cycles · {3} order": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    }
+  },
+  "◈ {0} ◇ {1} · {2} cycles": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "◈ {0} ◇ {1} · {2} cycles · {3} upkeep": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    }
+  },
+  "Academy Charter {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Extraction Charter {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Forge Charter {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Civic Charter {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Established level {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Establish level {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Switch to level {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Upgrade to level {0}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "I",
+        "II"
+      ]
+    }
+  },
+  "Trade income +{0} credits / cycle · Open borders · Proposals use {1} order": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Military access · Hostile fleets engage on arrival · Proposals use {0} order": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Closed borders · Proposals use {0} order": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Receive {0} credits and agree to a {1}-cycle mutual truce. Fleets inside each other's territory return to their nearest colony when accepted.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "· {0} round": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Inspect exchanges · {0} round": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "· {0} rounds": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Inspect exchanges · {0} rounds": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Engagement at {0}": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "The battle for {0}": {
+    "0": {
+      "kind": "name"
+    }
+  },
+  "{0} lost {1} ship and {2} hull": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "{0} lost {1} ships and {2} hull": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "Battle at {0}: {1} lost {2} ship and {3} hull; {4} lost {5} ship and {6} hull. {7}": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    },
+    "4": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "5": {
+      "kind": "number"
+    },
+    "6": {
+      "kind": "number"
+    },
+    "7": {
+      "kind": "text"
+    }
+  },
+  "Battle at {0}: {1} lost {2} ship and {3} hull; {4} lost {5} ships and {6} hull. {7}": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    },
+    "4": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "5": {
+      "kind": "number"
+    },
+    "6": {
+      "kind": "number"
+    },
+    "7": {
+      "kind": "text"
+    }
+  },
+  "Battle at {0}: {1} lost {2} ships and {3} hull; {4} lost {5} ship and {6} hull. {7}": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    },
+    "4": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "5": {
+      "kind": "number"
+    },
+    "6": {
+      "kind": "number"
+    },
+    "7": {
+      "kind": "text"
+    }
+  },
+  "Battle at {0}: {1} lost {2} ships and {3} hull; {4} lost {5} ships and {6} hull. {7}": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "2": {
+      "kind": "number"
+    },
+    "3": {
+      "kind": "number"
+    },
+    "4": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    },
+    "5": {
+      "kind": "number"
+    },
+    "6": {
+      "kind": "number"
+    },
+    "7": {
+      "kind": "text"
+    }
+  },
+  "{0} restored beacon · Transcendence recorded": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacon · Final recorded signal": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacon · Alignment advanced last cycle": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacon · Alignment interrupted": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacon · Awaiting alignment": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacons · Transcendence recorded": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacons · Final recorded signal": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacons · Alignment advanced last cycle": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacons · Alignment interrupted": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} restored beacons · Awaiting alignment": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} / {1} beacons · {2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "text"
+    }
+  },
+  "This world participates in {0}’s alignment.": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    }
+  },
+  "A restored node belonging to {0}.": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Concord",
+        "Veyr",
+        "Khar",
+        "Choir"
+      ]
+    }
+  },
+  "/ {0} cycles": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} Beacon": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} Beacons": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Asterion Protocol researched. {0} Beacons required for alignment.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Asterion Protocol not researched. {0} Beacons required for alignment.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} Chronicle entry": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} Chronicle entry · cycle {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} Chronicle entry · cycles {1}–{2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "{0} Chronicle entries": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} Chronicle entries · cycle {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} Chronicle entries · cycles {1}–{2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "{0} battle report": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} battle report · cycle {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} battle report · cycles {1}–{2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "{0} battle reports": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{0} battle reports · cycle {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} battle reports · cycles {1}–{2}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "Cycle {0} · {1} dispatch from the latest turn. This report remains available from the top bar.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Cycle {0} · {1} dispatches from the latest turn. This report remains available from the top bar.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Cycle {0} · {1} dispatch": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} → {1} · {2} charted jumps · Holding position": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "name"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "· {0} jump · {1} order total": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "· {0} jumps · {1} order total": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "· {0} jump · {1} orders total": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "· {0} jumps · {1} orders total": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Opposition unknown at {0} stop.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Opposition unknown at {0} stops.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Planning spends no orders. A new course resumes this fleet. Opposition unknown at {0} stop.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Planning spends no orders. A new course resumes this fleet. Opposition unknown at {0} stops.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} credits.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Paid {0} credits.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} minerals.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Paid {0} minerals.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} science.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Paid {0} science.": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} minerals and {1} science.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} science and {1} credits.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} science and {1} minerals.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "Gained {0} credits and {1} minerals.": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} orders": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "{7} work at {8} production / cycle": {
+    "7": {
+      "kind": "number"
+    },
+    "8": {
+      "kind": "number"
+    }
+  },
+  "Cycle {0} · {1} dispatches": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} → {1} · {2} charted jumps": {
+    "0": {
+      "kind": "name"
+    },
+    "1": {
+      "kind": "name"
+    },
+    "2": {
+      "kind": "number"
+    }
+  },
+  "{0} charted systems · {1} surveyed · seed": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} upkeep": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "cycles {0}–{1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} dispatches": {
+    "0": {
+      "kind": "number"
+    }
+  },
+  "rival alignment {0} of {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "route preview jump {0} of {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "plotted course jump {0} of {1}": {
+    "0": {
+      "kind": "number"
+    },
+    "1": {
+      "kind": "number"
+    }
+  },
+  "{0} beacon": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "concord",
+        "veyr",
+        "khar",
+        "choir"
+      ]
+    }
+  },
+  "The Silent Archive: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Recover their knowledge",
+        "Salvage the vault"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "A Thousand Sleeping Voices: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Bring them home",
+        "Restore their navigation"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "The Hollow Sun: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Redirect the foundries",
+        "Finish the ancient escort"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "Garden Between Stars: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Wake the caretakers",
+        "Harvest the exotic compounds"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "Echo of the First Gate: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Map the resonance",
+        "Reach through the echo"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "A Banner in the Dark: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Claim the lost treasury",
+        "Study the reactor"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "The Last Observatory: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Take the timing core",
+        "Let the observatory finish",
+        "Keep the sky here",
+        "Publish the last atlas"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  },
+  "The Patient Reef: {0}. {1}": {
+    "0": {
+      "kind": "enum",
+      "options": [
+        "Quarry the lattice",
+        "Feed the root",
+        "Grow a living foundry",
+        "Harvest its final bloom"
+      ]
+    },
+    "1": {
+      "kind": "text"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Solace · прочность: 18 / 18 · боевая мощь: 3",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · прочность: 24 / 24 · боевая мощь: 0",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · прочность: 34 / 34 · боевая мощь: 12",
+      "element": "SMALL"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": null
+  }
+}

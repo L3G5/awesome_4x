@@ -1,0 +1,268 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Halcyon",
+      "element": "STRONG"
+    },
+    {
+      "text": "Haven",
+      "element": "STRONG"
+    },
+    {
+      "text": "Academy Charter I",
+      "element": "SPAN"
+    },
+    {
+      "text": "Nacre",
+      "element": "STRONG"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "Forge Charter I",
+      "element": "SPAN"
+    },
+    {
+      "text": "Sundrift",
+      "element": "STRONG"
+    },
+    {
+      "text": "Academy Charter I",
+      "element": "SPAN"
+    },
+    {
+      "text": "3 / 3 beacons · Трансценденция зафиксирована",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Veyr Prime",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Kharos",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Lumen",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "3 restored beacons · Трансценденция зафиксирована",
+      "element": "P"
+    },
+    {
+      "text": "✦ Sundrift ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Haven ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Halcyon ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "1 restored beacon · Последний записанный сигнал",
+      "element": "P"
+    },
+    {
+      "text": "✦ Cinder ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "2 restored beacons · Последний записанный сигнал",
+      "element": "P"
+    },
+    {
+      "text": "✦ Corvus ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Aldebaran ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "3 restored beacons · Последний записанный сигнал",
+      "element": "P"
+    },
+    {
+      "text": "✦ Lumen ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Velorum ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Ophion ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "Nacre · Прочность: 18 / 18 · Боевая мощь: 3.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "Halcyon · Прочность: 170 / 170 · Боевая мощь: 77.5",
+      "element": "SMALL"
+    },
+    {
+      "text": "Haven · Прочность: 12.5 / 85 · Боевая мощь: 38.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "Sundrift · Прочность: 34 / 34 · Боевая мощь: 15",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · Прочность: 85 / 85 · Боевая мощь: 38.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 1,902; +86 per cycle after 19 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 238; +38 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 324; +99 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 13 of 13 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Сортировать колонии по критерию: name",
+      "tag": "BUTTON",
+      "action": "colony-sort"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Halcyon",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Haven",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Nacre",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Sundrift",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Veyr Prime",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Kharos",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Lumen",
+      "tag": "BUTTON",
+      "action": "inspect"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": null
+  }
+}

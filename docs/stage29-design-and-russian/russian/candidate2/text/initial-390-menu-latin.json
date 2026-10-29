@@ -1,0 +1,136 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Asterion Reach",
+      "element": "H2"
+    },
+    {
+      "text": "ASTERION",
+      "element": "SPAN"
+    },
+    {
+      "text": "/ Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Solace",
+      "element": "H2"
+    },
+    {
+      "text": "Sundrift ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Asterion ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Halcyon ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "ASTERION",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Solace, мир-основатель, конкорд",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Haven, не исследовано, рядом с выбранным флотом",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Halcyon, не исследовано, рядом с выбранным флотом",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Следопыт 1, Разведчик, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Колониальный ковчег 2, Колониальный корабль, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Авангард 3, Фрегат, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Удерживать позицию в системе Solace; бесплатно. Перемещение остаётся доступным.",
+      "tag": "BUTTON",
+      "action": "fleet-hold"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": {
+      "width": 364,
+      "scrollWidth": 364
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Asterion",
+      "element": "SPAN"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    },
+    {
+      "text": "Asterion Reach",
+      "element": "H2"
+    },
+    {
+      "text": "5 charted systems · 1 surveyed · код генерации",
+      "element": "P"
+    },
+    {
+      "text": "ASTERION",
+      "element": "SPAN"
+    },
+    {
+      "text": "/ Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Solace",
+      "element": "H2"
+    },
+    {
+      "text": "Sundrift ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Asterion ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Halcyon ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "С океанских просторов Solace Конкорд вновь обращает взор к звёздам.",
+      "element": "P"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Solace, founding world, concord",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Sundrift, unsurveyed, adjacent to selected fleet",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Haven, unsurveyed, adjacent to selected fleet",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Halcyon, unsurveyed, adjacent to selected fleet",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Asterion, unsurveyed, adjacent to selected fleet",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Следопыт 1, Разведчик, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Колониальный ковчег 2, Колониальный корабль, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Авангард 3, Фрегат, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Удерживать позицию в системе Solace; бесплатно. Перемещение остаётся доступным.",
+      "tag": "BUTTON",
+      "action": "fleet-hold"
+    },
+    {
+      "attribute": "title",
+      "text": "Следопыт 1 в системе Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Колониальный ковчег 2 в системе Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Авангард 3 в системе Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": {
+      "width": 618,
+      "scrollWidth": 618
+    }
+  }
+}

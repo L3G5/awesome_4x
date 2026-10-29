@@ -1,0 +1,37 @@
+
+Running 28 tests using 1 worker
+
+(node:628532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:628532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/combat-rounds-ui.spec.js:29:1 › actual four-round exchanges are keyboard-readable and preserve a sequential attack and reload exactly (4.8s)
+  ✓   2 tests/combat-rounds-ui.spec.js:81:1 › narrow historical rounds retain battle-time weapons, doctrine and names after later changes (2.2s)
+  ✓   3 tests/combat-rounds-ui.spec.js:121:1 › older outcome-only reports remain readable without invented rounds (1.9s)
+  ✓   4 tests/commit-focus-ui.spec.js:18:3 › keyboard map selection retains the selected label at 1440px (1.3s)
+  ✓   5 tests/commit-focus-ui.spec.js:34:3 › keyboard Empire inspection focuses its resulting world at 1440px (1.5s)
+  ✓   6 tests/commit-focus-ui.spec.js:47:3 › keyboard research commission focuses the current result at 1440px (1.0s)
+  ✓   7 tests/commit-focus-ui.spec.js:63:3 › keyboard construction commission focuses the paid project at 1440px (2.0s)
+  ✓   8 tests/commit-focus-ui.spec.js:95:3 › keyboard charter commission focuses the paid project at 1440px (1.8s)
+  ✓   9 tests/commit-focus-ui.spec.js:18:3 › keyboard map selection retains the selected label at 390px (1.0s)
+  ✓  10 tests/commit-focus-ui.spec.js:34:3 › keyboard Empire inspection focuses its resulting world at 390px (1.2s)
+  ✓  11 tests/commit-focus-ui.spec.js:47:3 › keyboard research commission focuses the current result at 390px (927ms)
+  ✓  12 tests/commit-focus-ui.spec.js:63:3 › keyboard construction commission focuses the paid project at 390px (1.6s)
+  ✓  13 tests/commit-focus-ui.spec.js:95:3 › keyboard charter commission focuses the paid project at 390px (1.4s)
+  ✓  14 tests/commit-focus-ui.spec.js:114:1 › the hidden importer is skipped by Tab and still opens from the menu (1.3s)
+  ✓  15 tests/commit-focus-ui.spec.js:131:1 › pointer actions retain their existing focus behavior (2.3s)
+  ✓  16 tests/discoveries-ui.spec.js:22:1 › an observatory matures, reserves its restoration after cancellation, and persists its story (8.4s)
+  ✓  17 tests/discoveries-ui.spec.js:78:1 › an exhausted expedition can reach the restoration selector by keyboard (1.9s)
+  ✓  18 tests/discoveries-ui.spec.js:102:1 › a recovered escort keeps its name and fleet heritage after merging (4.7s)
+  ✓  19 tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 1440 (2.6s)
+  ✓  20 tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 390 (2.1s)
+  ✓  21 tests/localization-ui.spec.js:42:1 › Russian ordinary research and End Cycle have exact English-engine effects (2.3s)
+  ✓  22 tests/localization-ui.spec.js:63:1 › actual midgame toggles and exports exactly while the field guide stays English (2.8s)
+  ✓  23 tests/localization-ui.spec.js:78:1 › Russian import and finished conclusion preserve the original save (2.8s)
+  ✓  24 tests/trade-offers-ui.spec.js:33:1 › an incoming trade proposal keeps borders closed until the player accepts the funded terms (3.3s)
+  ✓  25 tests/trade-offers-ui.spec.js:65:1 › declining refunds the proposer and leaves a later player-initiated treaty available (2.0s)
+  ✓  26 tests/trade-offers-ui.spec.js:85:1 › an expired imported proposal stays out of badges and cards without changing the save during inspection (2.8s)
+  ✓  27 tests/trade-offers-ui.spec.js:98:1 › zero-order trade terms keep keyboard focus inside the readable dialog (2.2s)
+  ✓  28 tests/trade-offers-ui.spec.js:121:1 › the verified military campaign shows binding peace terms and preserves its recorded settlement and garrison split (4.2s)
+
+  28 passed (1.2m)

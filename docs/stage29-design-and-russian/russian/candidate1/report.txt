@@ -1,0 +1,73 @@
+Independent Russian UI audit — frozen v0.22.0
+
+The tested language controls preserve the campaign and dialog state correctly. Russian coverage is still incomplete in this candidate: operational fragments, historical records and accessible names contain English. This is not a clean localization sign-off.
+
+Pinned candidate
+URL: http://127.0.0.1:41387
+Commit: c3bc8c48860bf036c46e601ba3198b0a689ddd4a
+Build: 2026-10-29T13:26:30.401Z, version 0.22.0
+JS: assets/index-DtK-d_dm.js
+SHA256: 653aee7d4209dc30c07f3d8a047dfca1eb5f2f10f23b45ed450540d7a5344a8e
+CSS: assets/index-C5m9Co6D.css
+SHA256: ff380d739363d1d4e77229308ea775b49f07e93690467ad55ae3fccc0dfce01a
+
+The metadata and asset hashes were equal before and after observation. All recorded build metadata identifies this same candidate. Sixty-three extracted source files were checked against the supplied source manifest. Fixture-generating engine imports use that extracted commit. The original 247 phase 1 evidence hashes were verified unchanged. No game source files were edited by this reviewer; earlier experience-critique/focus-fix evidence was left untouched.
+
+Coverage and passing checks
+Real Chromium with Playwright, 1440×960 and 390×960, reduced motion, independent browser storage. The initial campaign, actual default50 and actual finished60 were each exercised at both widths. The UI language was changed through the visible header/modal buttons; there was no direct language-setting injection.
+
+All six primary contexts completed successfully. Fifty-four primary language activations checked exact full campaign equality and preservation of the existing focused language control. Construction replacement, expanded investment details and charter-tab selections survived switching. The actual finished campaign's conclusion, briefing and expanded battle exchanges remained accessible and unchanged. Exported JSON matched the complete current campaign; importing it and reloading preserved both the state and Russian preference at each width.
+
+At both widths, English→Russian→English restored the entire body text, collected title/aria-label/alt attributes and full campaign state exactly in a configured replacement dialog. Its existing select node and value remained intact. See roundtrip-results.json.
+
+Four supplemental trade/peace offer cases used explicitly synthetic contact states, with offers created by the ordinary diplomacy commands. Toggling preserved state, dialog node and focus. Accepting in Russian produced exactly the normal command result, including orders, reserved money and settlement/treaty changes. These are interface cases, not additional recorded campaigns.
+
+Additional new-campaign checks used seeds “Science and Orders” and “Credits” at both widths. Seed input values and literal displayed seeds survived switching; the ordinary Credits label still localized. State matched the normal createGame result. Seed protection works in these checked cases, although map/menu compound labels have a separate translation regression below.
+
+guide.html, design/good-4x.html and design/bad-4x.html remain English. The primary page-error collector is empty. No horizontal document/modal overflow was measured in the 64 primary captures. Existing horizontal economy-table scrolling remains intentional; this does not establish broad phone readability or assistive-technology usability.
+
+Remaining findings
+All are high-confidence observations. Severity is medium overall; accessible-name failures directly affect Russian assistive-technology use. No wrong cost, treaty duration, withdrawal behavior or full-state mutation was observed in the tested dialogs. This does not establish that every unseen dynamic string is correct.
+
+R1. Several previously translated operational fragments regressed to English.
+• Map: “42 charted systems · 42 surveyed · код генерации ASTERION”. Phase 1 showed “Систем на карте: 42 · исследовано: 42 · код генерации: ASTERION”.
+• Menu: “Cycle 50 · ASTERION · The Concord”. Phase 1 localized Cycle and Concord while preserving the seed.
+• Funding: “Funding is covered.” precedes the Russian missing-beacon requirement. Phase 1 showed “Средств достаточно.”
+• The replacement warning translates its first sentence, then retains “Its benefits are then removed. Cancelling construction keeps the existing infrastructure.” Both sentences were Russian in phase 1.
+• Ship card costs end in “1 upkeep”, “2 upkeep” or “4 upkeep”; phase 1 showed “Содержание: …”.
+• The right Chronicle context still shows “1 dispatches” / “8 dispatches”.
+Evidence: text/default50-1440-{galaxy,menu,empire,construction,ships,journal}.txt and corresponding screenshots. Narrow copies reproduce the same fragments.
+
+R2. Battle and other history clauses remain English; some research records regressed.
+• Actual finished60's battle summary reads “Battle at Haven: Khar lost 1 ship and 35.9 hull; Concord lost 0 ships and 80.5 hull. Атакующий флот уничтожен.” The same English casualty clauses appear in the briefing, Chronicle and conclusion. The final candidate avoids the earlier wrong-name capture, but it does not translate this clause.
+• Some research records now read “Research complete: Autonomous Industry. …”, “Research complete: Capital Ship Architecture. …” or “Research complete: Coherent Lances. …”. Other entries translate the completion prefix and technology but leave the entire English effect sentence. Their counterparts were fully Russian in phase 1.
+• Actual expedition records still begin “The Last Observatory: Take the timing core.”, “The Silent Archive: Recover their knowledge.” and “The Hollow Sun: Redirect the foundries.” Resource grants now translate; the event/choice prefix does not.
+• Conclusion count spacing and entry/report nouns are fixed, but the battle-report range still says “cycles 55–59”.
+Evidence: text/finished60-1440-{battle-rounds,briefing,journal,conclusion}.txt; text/default50-1440-journal.txt; corresponding 390px captures. Names and numbers in the canonical save remain unchanged.
+
+R3. Galaxy accessible names and a few tooltips are not fully localized.
+• “Solace, founding world, concord” and “Haven, ✦ concord beacon, route preview jump 2 of 2, destination”. Other map labels retain arid/ocean/volcanic/unsurveyed/adjacent-to-selected-fleet descriptors.
+• Locked research tooltips retain English technology conjunctions, e.g. “Требуется: Deep-space Logistics and Coherent Lances”.
+• Colony sort tooltip retains the internal English field name: “Сортировать колонии по критерию: name”.
+Evidence: text/*-latin.json, attribute entries, and remaining-English.json. These are presentation attributes, not English canonical save data. Resource tooltips themselves are now translated correctly.
+
+The complete bounded inventory is remaining-English.json: 32 distinct rendered mixed/English lines and 39 attribute variants. These are diagnostic counts, not a completion percentage. Proper system names, the title, seed values, deliberate English target-language controls and Roman numeral tiers were excluded. Rendered .txt files and screenshots support visible-text claims; the broader text-node inventory can include descendants of closed details and should not be treated as proof that every node is currently visible.
+
+Before/after status of the earlier problems
+Fixed in observed passages:
+• Terran/system-type subtitle; charter names/levels/effect labels and durations; usable-order effect line.
+• Route heading/order totals and network/participating-world labels.
+• Resource tooltips and the explicit “доход до оплаты синхронизации” income scope.
+• Peace-offer summary/withdrawal terms. The prior “Осталось: Fleets…” error is gone; Russian terms correctly state withdrawal and loss of remaining movement.
+• War declaration target and treaty-betrayal suffix. The faction name no longer swallows the remaining sentence.
+• Faction mottos; battle title/attacker/defender/round labels; natural “Крейсерское соединение”.
+• Welcome grammar “Следуйте звёздным путям”; symmetric grievance terminology.
+Partly fixed: conclusion counters/ranges; exploration outcomes; battle summaries.
+Regressed: the operational and research-completion examples explicitly compared in R1/R2.
+Still outstanding: R3 map accessible names and linked tooltip fragments.
+
+Bounded next correction
+Retain the constrained name/number safeguards and the working presentation-only toggle. Add exact coverage for the actual rendered compound fragments above, then test those literal browser strings for complete Russian rendering while preserving numbers/names. A check that merely detects any translated substring would miss these cases. Keep the earlier war/withdrawal counterexamples in the same regression set so that wider matching does not reintroduce the wrong faction capture. Recheck R1/R2 at both widths and R3 through accessible names/tooltips before calling localization coverage complete.
+
+Limits
+This audit covers these tasks and fixtures, not every possible seed, story branch, localization string, browser, screen reader or long campaign. It is a task-based browser and text review with retained evidence. The frozen server was reviewed as supplied; future builds require their own verification.

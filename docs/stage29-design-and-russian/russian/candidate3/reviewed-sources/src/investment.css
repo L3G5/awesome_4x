@@ -1,0 +1,37 @@
+.investment-option{min-width:0;align-self:start}
+.investment-option>.build-card{width:100%;min-height:0}
+.investment-option:has(>.investment-comparison[open]){grid-column:1/-1}
+.investment-comparison{margin-top:6px;border:1px solid #344e5e;border-radius:4px;background:#0e1b28;color:#c8d9df}
+.investment-comparison>summary{padding:11px 13px;font-size:10px;color:#d6c49c;cursor:pointer;line-height:1.6}
+.investment-comparison>summary span{color:#8da5b5;font-size:9px}
+.investment-comparison>summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.investment-comparison[open]>summary{border-bottom:1px solid #304956}
+.investment-content{padding:13px;min-width:0}
+.investment-project{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin:3px 0 12px}
+.investment-project h3{font:21px var(--heading);color:#e0cfad;font-weight:400;margin:0}
+.investment-project>span{font-size:10px;color:#a8c6c4;line-height:1.8}
+.investment-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.investment-layout>section{min-width:0}
+.investment-basis,.investment-note,.investment-replacement,.investment-limit{font-size:10px;line-height:1.8;color:#99b0bf;margin:0 0 13px}
+.investment-duration{padding:13px;background:#172a35;border-left:2px solid #a18e61;margin:14px 0;display:grid;grid-template-columns:1fr 1fr;column-gap:18px;align-items:baseline}
+.investment-duration strong,.investment-duration span,.investment-duration small{display:block;line-height:1.7}
+.investment-duration strong{font-size:12px;color:#e0cfab;font-weight:500}
+.investment-duration span{font-size:10px;color:#c1d3da}
+.investment-duration small{font-size:9px;color:#8ca8b9;margin-top:7px;grid-column:1/-1}
+.investment-replacement{color:#c9b9a0}.investment-replacement strong{font-weight:500;color:#e1cba8}
+.investment-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:10px;margin:15px 0;line-height:1.7}
+.investment-table th,.investment-table td{padding:8px 5px;border-bottom:1px solid #2b424e;vertical-align:top;overflow-wrap:anywhere}
+.investment-table th{font-weight:400;color:#a9bfcb;text-align:left;width:46%}
+.investment-table td{text-align:right;color:#d4e2e7;font-variant-numeric:tabular-nums}
+.investment-table thead th{font-size:8px;text-transform:uppercase;letter-spacing:.04em;color:#7f9dac}
+.investment-table thead th:not(:first-child){width:27%;text-align:right}
+.investment-table td.investment-gain{color:#a1dac7}.investment-table td.investment-loss{color:#e0ad94}
+.investment-empire{padding:12px;border:1px solid #2f4956;margin:16px 0;display:grid;gap:6px;font-size:10px;color:#a7becb}
+.investment-empire strong{font-weight:500;color:#d0dde0}.investment-empire small{font-size:9px;color:#829fae;line-height:1.8}
+.investment-content h4{font:17px var(--heading);font-weight:400;color:#d4c4a4;margin:22px 0 10px}
+.investment-throughput th:first-child{width:38%}.investment-throughput thead th:not(:first-child){width:31%}
+.investment-throughput strong{font-size:10px;font-weight:500;display:block;color:#d8e5e8}
+.investment-throughput td small{display:block;font-size:8px;color:#8ea9b8;margin-top:4px}
+.investment-throughput .throughput-unavailable{font-size:9px;color:#b8a58d}
+.investment-limit{font-size:9px;border-top:1px solid #304753;padding-top:13px;margin-bottom:2px}
+@media(max-width:660px){.investment-layout{grid-template-columns:minmax(0,1fr);gap:0}.investment-project{display:block}.investment-project>span{display:block;margin-top:7px}.investment-duration{grid-template-columns:minmax(0,1fr)}.investment-duration span{margin-top:4px}.investment-table{font-size:11px}.investment-throughput strong{font-size:11px}.investment-comparison>summary{font-size:11px}.investment-content{padding:12px}.investment-basis,.investment-note,.investment-replacement{font-size:10px}}

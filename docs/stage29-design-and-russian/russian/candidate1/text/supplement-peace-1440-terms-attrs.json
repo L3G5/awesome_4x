@@ -1,0 +1,279 @@
+[
+  {
+    "tag": "DIV",
+    "title": "Кредиты: 140; за цикл: +7, с учётом содержания флота (4), до оплаты синхронизации.",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "DIV",
+    "title": "Минералы: 110; за цикл: +9",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "DIV",
+    "title": "Наука: 0; за цикл: +4",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "DIV",
+    "title": "Приказы: 6 из 6, доступных в этом цикле",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "language",
+    "title": "Switch interface to English",
+    "aria": "Switch interface to English",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "briefing",
+    "title": "Завершите цикл, чтобы получить сводку",
+    "aria": "Сводка за последний цикл",
+    "alt": null
+  },
+  {
+    "tag": "A",
+    "title": "Справочник (англ., ?)",
+    "aria": "Открыть справочник (англ.)",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "menu",
+    "title": "Меню игры",
+    "aria": "Меню игры",
+    "alt": null
+  },
+  {
+    "tag": "NAV",
+    "title": "",
+    "aria": "Разделы управления",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Галактика (1)",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Исследования (2)",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Дипломатия (3)",
+    "aria": "Diplomacy, 1 pending diplomatic proposal",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Империя (4)",
+    "aria": "Империя",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Летопись (5)",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "home",
+    "title": "Показать родной мир (H)",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "DIV",
+    "title": "",
+    "aria": "Интерактивная карта галактики",
+    "alt": null
+  },
+  {
+    "tag": "DIV",
+    "title": "",
+    "aria": "Системы и флоты галактики",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "",
+    "aria": "Solace, founding world, concord",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "",
+    "aria": "Veyr Prime, founding world, veyr",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "",
+    "aria": "Sundrift, unsurveyed, adjacent to selected fleet",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "",
+    "aria": "Haven, unsurveyed, adjacent to selected fleet",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "",
+    "aria": "Asterion, unsurveyed, adjacent to selected fleet",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Следопыт 1 · Разведчик · Осталось: 2 прыжки",
+    "aria": "Следопыт 1, Разведчик, система Solace",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Колониальный ковчег 2 · Колониальный корабль · Осталось: 1 прыжок",
+    "aria": "Колониальный ковчег 2, Колониальный корабль, система Solace",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Авангард 3 · Фрегат · Осталось: 1 прыжок",
+    "aria": "Авангард 3, Фрегат, система Veyr Prime",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Следопыт 4 · Разведчик · Осталось: 2 прыжки",
+    "aria": "Следопыт 4, Разведчик, система Veyr Prime",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Колониальный ковчег 5 · Колониальный корабль · Осталось: 1 прыжок",
+    "aria": "Колониальный ковчег 5, Колониальный корабль, система Veyr Prime",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Авангард 6 · Фрегат · Осталось: 1 прыжок",
+    "aria": "Авангард 6, Фрегат, система Veyr Prime",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "zoom-in",
+    "title": "",
+    "aria": "Приблизить",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "zoom-out",
+    "title": "",
+    "aria": "Отдалить",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "reset-view",
+    "title": "Показать всю галактику",
+    "aria": "Показать всю галактику",
+    "alt": null
+  },
+  {
+    "tag": "IMG",
+    "title": "",
+    "aria": null,
+    "alt": "Следопыт Прочность"
+  },
+  {
+    "tag": "BUTTON",
+    "action": "fleet-hold",
+    "title": "Удерживать позицию в системе Solace; бесплатно. Перемещение остаётся доступным.",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "fleet-roster",
+    "title": "Все флоты",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "next-fleet",
+    "title": "Следующий флот (N)",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Следопыт 1 в системе Solace",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Колониальный ковчег 2 в системе Solace",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "title": "Авангард 3 в системе Veyr Prime",
+    "aria": null,
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "rival-dossier",
+    "title": "",
+    "aria": "Открыть досье цивилизации Консорциум Вейр",
+    "alt": null
+  },
+  {
+    "tag": "ASIDE",
+    "title": "",
+    "aria": "Контекст раздела «Дипломатия»",
+    "alt": null
+  },
+  {
+    "tag": "IMG",
+    "title": "",
+    "aria": null,
+    "alt": "Торговые залы из янтарного стекла и орбитальные террасы над миром Вейр."
+  },
+  {
+    "tag": "BUTTON",
+    "action": "close-modal",
+    "title": "",
+    "aria": "Закрыть окно",
+    "alt": null
+  },
+  {
+    "tag": "BUTTON",
+    "action": "language",
+    "title": "Switch interface to English",
+    "aria": "Switch interface to English",
+    "alt": null
+  },
+  {
+    "tag": "INPUT",
+    "title": "",
+    "aria": "Импортировать сохранение кампании",
+    "alt": null
+  }
+]

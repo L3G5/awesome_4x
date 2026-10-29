@@ -1,0 +1,96 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Открывает Маяки Asterion. Для трансценденции синхронизируйте три своих незаблокированных мира с маяками в течение 10 циклов, расходуя по 60 кредитов за цикл.",
+      "element": "P"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Nacre",
+      "element": "SPAN",
+      "action": "inspect"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 1,847; +110 per cycle after 11 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 189; +48 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 0; +98 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 11 of 11 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

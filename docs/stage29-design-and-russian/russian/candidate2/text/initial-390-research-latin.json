@@ -1,0 +1,41 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Открывает Маяки Asterion. Для трансценденции синхронизируйте три своих незаблокированных мира с маяками в течение 10 циклов, расходуя по 60 кредитов за цикл.",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN",
+      "action": "inspect"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

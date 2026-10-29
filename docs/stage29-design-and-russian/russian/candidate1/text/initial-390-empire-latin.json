@@ -1,0 +1,71 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Solace · Прочность: 18 / 18 · Боевая мощь: 3",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · Прочность: 24 / 24 · Боевая мощь: 0",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · Прочность: 34 / 34 · Боевая мощь: 12",
+      "element": "SMALL"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Сортировать колонии по критерию: name",
+      "tag": "BUTTON",
+      "action": "colony-sort"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

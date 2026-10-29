@@ -1,0 +1,131 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Battle at Haven: Khar lost 1 ship and 35.9 hull; Concord lost 0 ships and 80.5 hull. Атакующий флот уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Battle at Haven: Khar lost 0 ships and 34.2 hull; Concord lost 2 ships and 54.1 hull. Атакующий флот уцелел; обороняющийся уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Battle at Haven: Khar lost 3 ships and 102 hull; Concord lost 2 ships and 81.9 hull. Атакующий флот уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Battle at Solace: Concord lost 0 ships and 3.3 hull; Choir lost 1 ship and 18 hull. Атакующий флот уцелел; обороняющийся уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Battle at Halcyon: Choir lost 5 ships and 170 hull; Concord lost 1 ship and 140.5 hull. Атакующий флот уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Цикл 60 · 8 dispatches",
+      "element": "P"
+    },
+    {
+      "text": "Caldera",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Corvus",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Eidolon",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Haven",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Iona",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Meridian",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Peregrine",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Stillwater",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Terminus",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Empire, rival alignment 6 of 10",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": {
+      "width": 364,
+      "scrollWidth": 364
+    }
+  }
+}

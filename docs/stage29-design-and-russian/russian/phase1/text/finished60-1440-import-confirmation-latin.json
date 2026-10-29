@@ -1,0 +1,165 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Битва в системе Haven: «Кхар»: потеряно кораблей — 1, прочности — 35.9 hull; Concord lost 0 ships and 80.5. Атакующий флот уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Битва в системе Haven: «Кхар»: потеряно кораблей — 0, прочности — 34.2 hull; Concord lost 2 ships and 54.1. Атакующий флот уцелел; обороняющийся уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Битва в системе Haven: «Кхар»: потеряно кораблей — 3, прочности — 102 hull; Concord lost 2 ships and 81.9. Атакующий флот уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Битва в системе Solace: «Конкорд»: потеряно кораблей — 0, прочности — 3.3 hull; Choir lost 1 ship and 18. Атакующий флот уцелел; обороняющийся уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Битва в системе Halcyon: «Хор»: потеряно кораблей — 5, прочности — 170 hull; Concord lost 1 ship and 140.5. Атакующий флот уничтожен.",
+      "element": "P"
+    },
+    {
+      "text": "Цикл 60 · 8 dispatches",
+      "element": "P"
+    },
+    {
+      "text": "Caldera",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Corvus",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Eidolon",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Haven",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Iona",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Meridian",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Peregrine",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Stillwater",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "Terminus",
+      "element": "SMALL",
+      "action": "anomaly"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 1,902; +86 per cycle after 19 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 238; +38 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 324; +99 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 13 of 13 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": {
+      "width": 618,
+      "scrollWidth": 618
+    }
+  }
+}

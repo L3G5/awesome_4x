@@ -1,0 +1,14 @@
+
+Running 5 tests using 1 worker
+
+(node:640873) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:640873) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 1440 (2.9s)
+  ✓  2 tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 390 (2.1s)
+  ✓  3 tests/localization-ui.spec.js:42:1 › Russian ordinary research and End Cycle have exact English-engine effects (2.3s)
+  ✓  4 tests/localization-ui.spec.js:63:1 › actual midgame toggles and exports exactly while the field guide stays English (2.9s)
+  ✓  5 tests/localization-ui.spec.js:78:1 › Russian import and finished conclusion preserve the original save (3.1s)
+
+  5 passed (14.5s)

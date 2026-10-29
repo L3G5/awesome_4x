@@ -1,0 +1,25 @@
+{
+  "recordedAt": "2026-10-29T13:09:15.195766+00:00",
+  "startBuild": {
+    "version": "0.21.2",
+    "commit": "46ffa85ba0438cf2d4ec0134431dfa32bb80a947",
+    "builtAt": "2026-10-29T12:58:14.391Z"
+  },
+  "assets": [
+    {
+      "path": "./assets/index-bgEiusEB.js",
+      "sha256": "ea453612731c1816ebf076ad3b382ffc71d9ef0565f82114f5a3a336f7f6712c",
+      "bytes": 1050285
+    },
+    {
+      "path": "./assets/index-C5m9Co6D.css",
+      "sha256": "ff380d739363d1d4e77229308ea775b49f07e93690467ad55ae3fccc0dfce01a",
+      "bytes": 77948
+    }
+  ],
+  "endBuild": {
+    "version": "0.21.2",
+    "commit": "46ffa85ba0438cf2d4ec0134431dfa32bb80a947",
+    "builtAt": "2026-10-29T12:58:14.391Z"
+  }
+}

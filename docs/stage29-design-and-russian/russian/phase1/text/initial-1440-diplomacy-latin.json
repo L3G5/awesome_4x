@@ -1,0 +1,76 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 140; +7 per cycle after 4 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 110; +9 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 0; +4 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 6 of 6 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Дипломатия context",
+      "tag": "ASIDE"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": null
+  }
+}

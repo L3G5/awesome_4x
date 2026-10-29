@@ -1,0 +1,258 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Meridian",
+      "element": "SPAN"
+    },
+    {
+      "text": "Aurelia",
+      "element": "SPAN"
+    },
+    {
+      "text": "Nacre",
+      "element": "SPAN"
+    },
+    {
+      "text": "Velorum",
+      "element": "SPAN"
+    },
+    {
+      "text": "Ashfall",
+      "element": "SPAN"
+    },
+    {
+      "text": "Eidolon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Kepler",
+      "element": "SPAN"
+    },
+    {
+      "text": "Orison",
+      "element": "SPAN"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SPAN"
+    },
+    {
+      "text": "Ophion",
+      "element": "SPAN"
+    },
+    {
+      "text": "Tethys",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Peregrine",
+      "element": "SPAN"
+    },
+    {
+      "text": "Asterion Reach",
+      "element": "H2"
+    },
+    {
+      "text": "ASTERION",
+      "element": "SPAN"
+    },
+    {
+      "text": "/ Nacre",
+      "element": "SPAN"
+    },
+    {
+      "text": "Nacre → Solace · прыжков по известному маршруту: 3 · Удерживает позицию",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "Nacre",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Kepler",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Solace",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Solace",
+      "element": "H2"
+    },
+    {
+      "text": "Sundrift ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Asterion ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Halcyon ↗",
+      "element": "BUTTON"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Solace, мир-основатель, конкорд, просмотр маршрута: прыжок 3 из 3, цель маршрута",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Meridian, Безжизненный, рядом с выбранным флотом",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Aurelia, Кхар",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Nacre, конкорд",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Velorum, Хор",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Ashfall, Засушливый",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Eidolon, Вулканический",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Kepler, Океанический, рядом с выбранным флотом, просмотр маршрута: прыжок 1 из 3",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Orison, Хор",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Sundrift, ✦ конкорд МАЯК",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Ophion, ✦ Хор МАЯК",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Tethys, Океанический",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Haven, ✦ конкорд МАЯК, просмотр маршрута: прыжок 2 из 3",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Halcyon, конкорд",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Peregrine, Вулканический",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Следопыт 1, Разведчик, система Nacre",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Авангард 3, Фрегат, система Sundrift",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Суверен 53, Крейсер, система Halcyon",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Nacre",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Kepler",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Haven",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

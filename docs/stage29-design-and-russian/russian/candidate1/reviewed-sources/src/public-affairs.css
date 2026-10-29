@@ -1,0 +1,39 @@
+.foreign-affairs{border:1px solid #324657;border-radius:6px;background:linear-gradient(125deg,#152632,#101b26);padding:25px 28px;margin-bottom:30px}
+.affairs-heading{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.affairs-heading h3{font:27px var(--heading);color:#d8e5e8;margin:8px 0 0}
+.affairs-count{font-size:9px;white-space:nowrap;text-transform:uppercase;letter-spacing:.08em;color:#9eacb9;border:1px solid #425364;border-radius:3px;padding:7px 10px}
+.affairs-count.has-war{color:#ecac9d;border-color:#7c514c;background:#8b4b3a18}
+.affairs-lead{font-size:11px;line-height:1.7;color:#94aabb;margin:14px 0 20px}
+.foreign-relationships{display:grid;gap:7px}
+.foreign-relation{display:grid;grid-template-columns:1fr minmax(130px,auto) 1fr;align-items:center;gap:18px;border:1px solid #314656;border-radius:4px;padding:12px 16px;background:#0c182666}
+.foreign-relation.status-war{border-color:#6e4845;background:linear-gradient(90deg,#482a2d55,#192331)}
+.government-link{display:flex;align-items:center;gap:10px;padding:0;border:0;background:none;color:#cedce3;font-size:12px;text-align:left;min-width:0;line-height:1.5}
+.government-link:last-child{justify-content:flex-end;text-align:right}
+.government-link:hover{color:#fff;background:none;border-color:transparent}
+.unidentified-government{color:#8499aa}
+.government-seal{font-size:23px;color:var(--government-color);flex:none;width:24px;text-align:center}
+.foreign-commitment{text-align:center;position:relative}
+.foreign-commitment strong{display:block;text-transform:uppercase;font-size:9px;letter-spacing:.12em;color:#a2bdc5;font-weight:500}
+.status-war .foreign-commitment strong{color:#edaa99}
+.status-trade .foreign-commitment strong{color:#8fd3c2}
+.foreign-commitment small{display:block;margin-top:4px;color:#8196aa;font-size:9px}
+.public-dispatches{border-top:1px solid #304553;margin-top:22px;padding-top:16px}
+.public-dispatches summary{font-size:11px;color:#bdcbd4;cursor:pointer;list-style-position:inside}
+.public-dispatches summary span{font-size:9px;margin-left:6px;color:#7a97a8}
+.public-dispatches>div{margin:13px 0}
+.public-dispatch{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:12px 0;border-top:1px solid #273a47}
+.public-dispatch time{font-size:8px;color:#829aad;letter-spacing:.08em;padding-top:3px}
+.public-dispatch p{font-size:11px;line-height:1.7;color:#b3c8d4;margin:0}
+.public-affair-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}
+.public-affair-links:empty{display:none}
+.public-affair-links .small-button{font-size:9px;padding:4px 8px}
+.affairs-footnote{font-size:9px;line-height:1.7;color:#778e9f;margin:16px 0 0}
+.rival-card .bilateral-label{font-size:8px;color:#8097a8;margin-bottom:9px}
+.route-public-cause{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-left:2px solid #b47764;padding:7px 10px;background:#39232c80;margin-top:7px;font-size:10px;line-height:1.6;color:#d8ada1}
+.route-public-cause p{margin:0;flex:1 1 280px}
+.route-public-cause button{font-size:9px;padding:4px 8px}
+.sovereignty-note{border-left:2px solid #996d56;background:#392c252e;padding:12px;margin-top:16px}
+.sovereignty-note .section-label{font-size:8px;color:#caac92;margin-bottom:7px}
+.sovereignty-note p{font-size:10px;color:#b6b4ad;line-height:1.7;margin:0}
+@media(max-width:740px){.foreign-affairs{padding:20px 16px}.foreign-relation{gap:8px;padding:11px 9px;grid-template-columns:1fr 100px 1fr}.government-link{font-size:10px;gap:5px}.government-seal{font-size:19px;width:19px}.affairs-count{font-size:8px;padding:6px}.foreign-commitment strong{font-size:8px}.foreign-commitment small{font-size:8px}.public-dispatch{grid-template-columns:58px 1fr;gap:8px}}
+@media(max-width:430px){.government-link{flex-direction:column;text-align:center}.government-link:last-child{text-align:center;justify-content:center}.foreign-relation{grid-template-columns:1fr 90px 1fr}.affairs-heading h3{font-size:24px}.affairs-heading{gap:8px}.public-dispatch{grid-template-columns:1fr;gap:5px}}

@@ -1,0 +1,118 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Система Aster сменила владельца: «Консорциум Вейр» → «Доминион Кхар».",
+      "element": "P"
+    },
+    {
+      "text": "Осмотреть: Aster →",
+      "element": "BUTTON",
+      "action": "report-inspect"
+    },
+    {
+      "text": "Система Hesper сменила владельца: «Консорциум Вейр» → «Доминион Кхар».",
+      "element": "P"
+    },
+    {
+      "text": "Осмотреть: Hesper →",
+      "element": "BUTTON",
+      "action": "report-inspect"
+    },
+    {
+      "text": "“Every star has its price.”",
+      "element": "EM"
+    },
+    {
+      "text": "Trade income +10 credits за цикл · Open borders · Proposals use 1 приказ",
+      "element": "P"
+    },
+    {
+      "text": "“The void respects strength.”",
+      "element": "EM"
+    },
+    {
+      "text": "Military access · Hostile fleets engage on arrival · Proposals use 1 приказ",
+      "element": "P"
+    },
+    {
+      "text": "“The universe remembers.”",
+      "element": "EM"
+    },
+    {
+      "text": "Military access · Hostile fleets engage on arrival · Proposals use 1 приказ",
+      "element": "P"
+    },
+    {
+      "text": "“Every star has its price.”",
+      "element": "DIV"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 1,902; +86 per cycle after 19 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 238; +38 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 324; +99 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 13 of 13 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Дипломатия context",
+      "tag": "ASIDE"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

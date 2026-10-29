@@ -1,0 +1,110 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "0 / 3 beacons · Исследуйте Протокол «Астерион».",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Solace · Прочность: 18 / 18 · Боевая мощь: 3",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · Прочность: 24 / 24 · Боевая мощь: 0",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace · Прочность: 34 / 34 · Боевая мощь: 12",
+      "element": "SMALL"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 140; +7 per cycle after 4 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 110; +9 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 0; +4 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 6 of 6 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Сортировать колонии по критерию: name",
+      "tag": "BUTTON",
+      "action": "colony-sort"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

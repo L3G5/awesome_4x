@@ -1,0 +1,38 @@
+Independent Russian UI audit — first, unfrozen candidate pass
+
+Target: http://127.0.0.1:5221. All recorded contexts reported version 0.21.2, commit 46ffa85ba0438cf2d4ec0134431dfa32bb80a947, build time 2026-10-29T12:58:14.391Z. This identifies the served candidate during observation; it is not a claim that the worktree or server will remain unchanged. phase1-serving-build.json also records served JS/CSS hashes. No game source edits were made by this reviewer. Prior experience-critique and focus-fix artifacts were left untouched.
+
+Method: real Chromium through Playwright, 1440×960 and 390×960, reduced motion, isolated storage. Language changed only through the visible header or modal language button, including Enter activation with a connected/focused control assertion. Exact full campaign objects were compared before/after toggles. Initial campaign, actual default50 and actual finished60 saves were inspected. Additional pending trade/peace offers used separately labeled synthetic contact states, with offers created by normal engine diplomacy commands; those are supplemental interface coverage, not claims about the recorded campaigns.
+
+Passing behavior
+• Both widths: initial and actual default50 toggles preserved full state, the existing open construction modal node, selected replacement value, expanded comparison and chosen charter tab. The focused language control remained connected/focused.
+• English→Russian→English in a fully configured construction dialog restored body text, all collected aria-label/title/alt attributes and full campaign state exactly. The replacement select remained the same node with value mine. See roundtrip-results.json.
+• Five primary contexts passed exact canonical export, import, Russian preference persistence and full-state equality after reload. Actual finished60 narrow passed the same through the menu in supplement-results.json.
+• Actual finished60 ending/battle at both widths: conclusion and retained combat exchanges remained accessible; expanded exchanges and state survived toggling. No gameplay continuation was required.
+• All four trade/peace offer cases: toggling preserved exact state/dialog/focus. Acceptance in Russian matched the complete normal-command result, including reserved funds, paid order and treaty/peace changes.
+• guide.html, design/good-4x.html and design/bad-4x.html remained English (lang=en and no Cyrillic body text) despite Russian game preference.
+• No browser page errors in the primary sweep. No document or measured modal horizontal overflow in captured views. Intentional horizontal economy tables remain scroll regions; this is not a phone readability endorsement.
+
+Observed defects requiring catalog/pattern changes
+High confidence; medium severity overall, higher for decision and accessibility text. Numbers and saved state remained intact in the tested commands.
+1. System/type, charter and construction fragments leak English: Terran world; Academy Charter I/II; Forge Charter I; +6 science; +2 orbital repair; +10% military mineral saving; 2 cycles. These appear in both current decisions and recorded history.
+2. Network and route fragments leak or miscompose: 2 / 3 beacons; 2 restored beacons; This world participates in Concord’s alignment.; / 10 cycles; route header Прыжков: · 3 · 3 orders total. The route title's leading-dot capture is also awkward Russian ordering.
+3. Decision text in diplomacy remains mixed: Trade income +10 credits за цикл · Open borders · Proposals use 1 приказ; Military access · Hostile fleets engage on arrival · Proposals use 1 приказ. Faction mottos inside curly quotes remain English.
+4. Peace card summary is entirely English: Receive 60 credits and agree to a 5-cycle mutual truce. Fleets inside each other's territory return to their nearest colony when accepted. The modal's withdrawal term is corrupted to Вывод военных сил. Осталось: Fleets inside each other's territory return to their nearest owned colony and lose movement. This is not just an untranslated proper name.
+5. Battle UI leaks Engagement, attacker, defender and rounds. Historical summary translation captures the wrong fragment: Битва в системе Haven: «Кхар»: потеряно кораблей — 1, прочности — 35.9 hull; Concord lost 0 ships and 80.5. The original attacker/defender casualty values remain visible but their connective sentence is broken.
+6. Chronicle war text captures the rest of the English treaty-betrayal sentence as if it were the target faction: «Доминион Кхар» объявляет войну державе «The Concord. The active trade treaty was broken; the betrayal deepens their grievance».
+7. Resource title/tooltips stay English (Credits: 1847; +110 per cycle after 11 fleet upkeep, before alignment payments; Minerals; Science; Orders). Many galaxy accessible names remain fully English after the system name, including founding world/concord/beacon/route preview jump/destination. These are real presentation attributes, not save data.
+8. Conclusion retained-count lines mix suffixes without spacing: Записей в Летописи: 138entries · cycles 1–60; Боевых отчётов: 5reports · cycles 55–59. Final beacon headings also leak Beacons.
+9. Exploration history retains whole English outcomes for The Last Observatory, The Silent Archive and The Hollow Sun. Their details were reached through actual recorded Chronicle/conclusion text, not only source enumeration.
+
+Lower-severity wording
+• Следуйте звёздными путями should be Следуйте звёздным путям (or Двигайтесь по звёздным путям).
+• Соединение Крейсер is awkward noun agreement; Крейсерное соединение is natural.
+• Minor inconsistent capitalization (for example Приказы/Кредиты inside running sentences) is editorial, below the missing decision text.
+
+Evidence
+pass1-visible-English.json lists 81 distinct rendered English/mixed lines from the main sweep after excluding known system names, title, seed, target-language control and Roman numerals. This number is a diagnostic count, not a quality score. text/*-latin.json contains source text-node/attribute context; some descendant nodes can exist in closed details, so rely on corresponding .txt/rendered screenshots for visible-text claims. Supplement offer defects are in text/supplement-*-terms.txt and card captures. Actual narrow finished state used supplement-finished60-390-*.
+
+One primary-script navigation error is retained: finished60-390 initially attempted the responsive map mandate's hidden conclusion button. The visible Game menu→Review this age route worked in the supplement. This is a harness route correction, not evidence that the ending is inaccessible or a new localization bug.
+
+Final sign-off is pending the parent's explicit frozen candidate. The first-pass defects above must be retested against that build; they must not be reported as current defects after catalog fixes without re-observation.

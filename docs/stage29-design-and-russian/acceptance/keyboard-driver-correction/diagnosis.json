@@ -1,0 +1,56 @@
+{
+  "baseline": "c3bc8c48860bf036c46e601ba3198b0a689ddd4a",
+  "candidateUrl": "http://127.0.0.1:41387",
+  "productChanges": 0,
+  "testChanges": "Eight added lines across three existing browser tests. Each added Tab is preceded by an assertion identifying the language button; no original assertions were removed.",
+  "diagnosis": "openModal inserts an enabled in-dialog language switch immediately after Close. Its existing focus trap includes that button. All three original snapshots show that intended button focused after the first Tab; the old tests assumed it did not exist.",
+  "cases": [
+    {
+      "testFile": "combat-rounds-ui.spec.js",
+      "case": "four-round summary",
+      "classification": "outdated fixed Tab expectation; no product defect shown",
+      "originalFailureContext": "/tmp/asterion-v022-browser-1/combat-rounds-ui-actual-fo-ef8ee-l-attack-and-reload-exactly/error-context.md",
+      "actualFocusedElementInFailure": "- button \"\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u0438\u0439\" [active] [ref=e256] [cursor=pointer]: \u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+      "updatedKeyboardPath": "Close \u2192 language switch \u2192 exchange summary"
+    },
+    {
+      "testFile": "discoveries-ui.spec.js",
+      "case": "exhausted restoration selector",
+      "classification": "outdated fixed Tab expectation; no product defect shown",
+      "originalFailureContext": "/tmp/asterion-v022-browser-1/discoveries-ui-an-exhauste-6c13d-ration-selector-by-keyboard/error-context.md",
+      "actualFocusedElementInFailure": "- button \"\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u0438\u0439\" [active] [ref=e235] [cursor=pointer]: \u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+      "updatedKeyboardPath": "Close \u2192 language switch \u2192 restoration selector \u2192 Close; reverse wrapping preserved"
+    },
+    {
+      "testFile": "trade-offers-ui.spec.js",
+      "case": "zero-order trade terms",
+      "classification": "outdated fixed Tab expectation; no product defect shown",
+      "originalFailureContext": "/tmp/asterion-v022-browser-2/trade-offers-ui-zero-order-64cb8--inside-the-readable-dialog/error-context.md",
+      "actualFocusedElementInFailure": "- button \"\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u0438\u0439\" [active] [ref=e169] [cursor=pointer]: \u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+      "updatedKeyboardPath": "Close \u2192 language switch \u2192 Close, and the reverse cycle"
+    }
+  ],
+  "retainedAssertions": "Combat keyboard Enter/Space expansion and exact state/reload, restoration focus containment and Escape return, disabled zero-order trade controls and exact state, plus their adjacent focus/localization scenarios.",
+  "commit": "4480ec937b50c7a4ce9cd2de2648f687803e9470",
+  "branch": "fix/language-dialog-keyboard-tests",
+  "worktree": "/tmp/asterion-v022-keyboard-regressions",
+  "validation": {
+    "result": "28 passed (1.2m)",
+    "formerlyFailingCasesPassed": 3,
+    "additionalAdjacentCasesPassed": 25,
+    "files": [
+      "combat-rounds-ui.spec.js",
+      "discoveries-ui.spec.js",
+      "trade-offers-ui.spec.js",
+      "commit-focus-ui.spec.js",
+      "localization-ui.spec.js"
+    ],
+    "candidateBuildBeforeAndAfter": {
+      "version": "0.22.0",
+      "commit": "c3bc8c48860bf036c46e601ba3198b0a689ddd4a",
+      "builtAt": "2026-10-29T13:26:30.401Z"
+    },
+    "command": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:41387 PLAYWRIGHT_CHROMIUM_EXECUTABLE=/usr/bin/google-chrome npx playwright test tests/combat-rounds-ui.spec.js tests/discoveries-ui.spec.js tests/trade-offers-ui.spec.js tests/commit-focus-ui.spec.js tests/localization-ui.spec.js --output=/tmp/asterion-v022-keyboard-regressions-evidence/browser"
+  },
+  "limits": "This is a focused28-case rerun after test-only edits, not a new full99-case browser run. Runtime and rules sources are unchanged. The28 cases include1440px/390px focus behavior, language switching, exact English-engine effects, original save comparisons and reloads as specified in the existing tests."
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "width": 1440,
+    "reportId": 5,
+    "canonical": "Battle at Haven: Khar lost 1 ship and 35.9 hull; Concord lost 0 ships and 80.5 hull. Attacking fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Haven: Кхар — потеряно кораблей: 1, прочности: 35.9; Конкорд — потеряно кораблей: 0, прочности: 80.5.",
+    "correct": true
+  },
+  {
+    "width": 390,
+    "reportId": 5,
+    "canonical": "Battle at Haven: Khar lost 1 ship and 35.9 hull; Concord lost 0 ships and 80.5 hull. Attacking fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Haven: Кхар — потеряно кораблей: 1, прочности: 35.9; Конкорд — потеряно кораблей: 0, прочности: 80.5.",
+    "correct": true
+  },
+  {
+    "width": 1440,
+    "reportId": 4,
+    "canonical": "Battle at Haven: Khar lost 0 ships and 34.2 hull; Concord lost 2 ships and 54.1 hull. Attacking fleet survives; defending fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Haven: Кхар — потеряно кораблей: 0, прочности: 34.2; Конкорд — потеряно кораблей: 2, прочности: 54.1.",
+    "correct": true
+  },
+  {
+    "width": 390,
+    "reportId": 4,
+    "canonical": "Battle at Haven: Khar lost 0 ships and 34.2 hull; Concord lost 2 ships and 54.1 hull. Attacking fleet survives; defending fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Haven: Кхар — потеряно кораблей: 0, прочности: 34.2; Конкорд — потеряно кораблей: 2, прочности: 54.1.",
+    "correct": true
+  },
+  {
+    "width": 1440,
+    "reportId": 3,
+    "canonical": "Battle at Haven: Khar lost 3 ships and 102 hull; Concord lost 2 ships and 81.9 hull. Attacking fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Haven: Кхар — потеряно кораблей: 3, прочности: 102; Конкорд — потеряно кораблей: 2, прочности: 81.9.",
+    "correct": true
+  },
+  {
+    "width": 390,
+    "reportId": 3,
+    "canonical": "Battle at Haven: Khar lost 3 ships and 102 hull; Concord lost 2 ships and 81.9 hull. Attacking fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Haven: Кхар — потеряно кораблей: 3, прочности: 102; Конкорд — потеряно кораблей: 2, прочности: 81.9.",
+    "correct": true
+  },
+  {
+    "width": 1440,
+    "reportId": 2,
+    "canonical": "Battle at Solace: Concord lost 0 ships and 3.3 hull; Choir lost 1 ship and 18 hull. Attacking fleet survives; defending fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Solace: Конкорд — потеряно кораблей: 0, прочности: 3.3; Хор — потеряно кораблей: 1, прочности: 18.",
+    "correct": true
+  },
+  {
+    "width": 390,
+    "reportId": 2,
+    "canonical": "Battle at Solace: Concord lost 0 ships and 3.3 hull; Choir lost 1 ship and 18 hull. Attacking fleet survives; defending fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Solace: Конкорд — потеряно кораблей: 0, прочности: 3.3; Хор — потеряно кораблей: 1, прочности: 18.",
+    "correct": true
+  },
+  {
+    "width": 1440,
+    "reportId": 1,
+    "canonical": "Battle at Halcyon: Choir lost 5 ships and 170 hull; Concord lost 1 ship and 140.5 hull. Attacking fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Halcyon: Хор — потеряно кораблей: 5, прочности: 170; Конкорд — потеряно кораблей: 1, прочности: 140.5.",
+    "correct": true
+  },
+  {
+    "width": 390,
+    "reportId": 1,
+    "canonical": "Battle at Halcyon: Choir lost 5 ships and 170 hull; Concord lost 1 ship and 140.5 hull. Attacking fleet destroyed.",
+    "observedExpectedRussianClause": "Битва в системе Halcyon: Хор — потеряно кораблей: 5, прочности: 170; Конкорд — потеряно кораблей: 1, прочности: 140.5.",
+    "correct": true
+  }
+]

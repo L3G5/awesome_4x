@@ -1,0 +1,250 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Halcyon",
+      "element": "STRONG"
+    },
+    {
+      "text": "Маяк Asterion",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "STRONG"
+    },
+    {
+      "text": "Academy Charter I",
+      "element": "SPAN"
+    },
+    {
+      "text": "Nacre",
+      "element": "STRONG"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG"
+    },
+    {
+      "text": "Forge Charter I",
+      "element": "SPAN"
+    },
+    {
+      "text": "Sundrift",
+      "element": "STRONG"
+    },
+    {
+      "text": "Academy Charter I",
+      "element": "SPAN"
+    },
+    {
+      "text": "2 / 3 beacons · Завершите строительство Маяков Asterion на трёх подконтрольных мирах (2/3).",
+      "element": "P"
+    },
+    {
+      "text": "Средств достаточно. Завершите строительство Маяков Asterion на трёх подконтрольных мирах (2/3).",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Veyr Prime",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Kharos",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "Lumen",
+      "element": "STRONG",
+      "action": "inspect"
+    },
+    {
+      "text": "2 restored beacons · В ожидании синхронизации",
+      "element": "P"
+    },
+    {
+      "text": "✦ Sundrift ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "✦ Haven ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "1 restored beacon · В ожидании синхронизации",
+      "element": "P"
+    },
+    {
+      "text": "✦ Ophion ↗",
+      "element": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "text": "Nacre · Прочность: 18 / 18 · Боевая мощь: 3.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "Sundrift · Прочность: 102 / 102 · Боевая мощь: 45",
+      "element": "SMALL"
+    },
+    {
+      "text": "Halcyon · Прочность: 85 / 85 · Боевая мощь: 38.75",
+      "element": "SMALL"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Суверен · 1 cycles",
+      "element": "SMALL",
+      "action": "inspect"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Маяк Asterion · 1 cycles",
+      "element": "SMALL",
+      "action": "inspect"
+    },
+    {
+      "text": "Завершите строительство Маяков Asterion на трёх подконтрольных мирах (2/3).",
+      "element": "P"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 1,847; +110 per cycle after 11 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 189; +48 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 0; +98 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 11 of 11 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Сортировать колонии по критерию: name",
+      "tag": "BUTTON",
+      "action": "colony-sort"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Halcyon",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Haven",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Nacre",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Осмотреть: Sundrift",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Solace",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Veyr Prime",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Kharos",
+      "tag": "BUTTON",
+      "action": "inspect"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Lumen",
+      "tag": "BUTTON",
+      "action": "inspect"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

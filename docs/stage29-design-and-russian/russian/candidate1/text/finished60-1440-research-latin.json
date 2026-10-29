@@ -1,0 +1,70 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Открывает Маяки Asterion. Для трансценденции синхронизируйте три своих незаблокированных мира с маяками в течение 10 циклов, расходуя по 60 кредитов за цикл.",
+      "element": "P"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "Nacre",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Empire, rival alignment 6 of 10",
+      "tag": "BUTTON"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": null
+  }
+}

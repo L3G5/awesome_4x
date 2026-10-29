@@ -1,0 +1,180 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Asterion Reach",
+      "element": "H2"
+    },
+    {
+      "text": "Систем на карте: 5 · исследовано: 1 · код генерации: ASTERION",
+      "element": "P"
+    },
+    {
+      "text": "/ Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Solace",
+      "element": "H2"
+    },
+    {
+      "text": "Terran world · Система-основатель",
+      "element": "P"
+    },
+    {
+      "text": "Sundrift ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Asterion ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Halcyon ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "КОЛОНИАЛЬНЫЕ ПРОЕКТЫ · Solace",
+      "element": "DIV"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 140; +7 per cycle after 4 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 110; +9 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 0; +4 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 6 of 6 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Solace, founding world, concord",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Флотов: Haven, unsurveyed, adjacent to selected",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Флотов: Halcyon, unsurveyed, adjacent to selected",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Следопыт 1, Разведчик, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Колониальный ковчег 2, Колониальный корабль, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Авангард 3, Фрегат, система Solace",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Hold в системе Solace; free. Movement remains available.",
+      "tag": "BUTTON",
+      "action": "fleet-hold"
+    },
+    {
+      "attribute": "alt",
+      "text": "Terran world",
+      "tag": "IMG"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": {
+      "width": 364,
+      "scrollWidth": 364
+    }
+  }
+}

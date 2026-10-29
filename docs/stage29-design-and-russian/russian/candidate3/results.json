@@ -1,0 +1,769 @@
+[
+  {
+    "tag": "default50-1440",
+    "inspectorNames": [
+      {
+        "view": "galaxy",
+        "name": "Сведения о системе"
+      },
+      {
+        "view": "research",
+        "name": "Контекст раздела «Наука»"
+      },
+      {
+        "view": "diplomacy",
+        "name": "Контекст раздела «Дипломатия»"
+      },
+      {
+        "view": "empire",
+        "name": "Контекст раздела «Империя»"
+      },
+      {
+        "view": "journal",
+        "name": "Контекст раздела «Летопись»"
+      }
+    ],
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 17.515625,
+          "right": 61.46875,
+          "width": 43.953125
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 26.4375,
+          "right": 52.5625,
+          "width": 26.125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 11.921875,
+          "right": 67.0625,
+          "width": 55.140625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 19.15625,
+          "right": 59.828125,
+          "width": 40.671875
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 18.40625,
+          "right": 60.578125,
+          "width": 42.171875
+        },
+        "inside": true
+      }
+    ],
+    "normalResearchEffectAndFocus": true,
+    "exportImportReloadExact": true,
+    "docs": [
+      "guide.html",
+      "design/good-4x.html",
+      "design/bad-4x.html"
+    ]
+  },
+  {
+    "tag": "default50-390",
+    "inspectorNames": [
+      {
+        "view": "galaxy",
+        "name": "Сведения о системе"
+      },
+      {
+        "view": "research",
+        "name": "Контекст раздела «Наука»"
+      },
+      {
+        "view": "diplomacy",
+        "name": "Контекст раздела «Дипломатия»"
+      },
+      {
+        "view": "empire",
+        "name": "Контекст раздела «Империя»"
+      },
+      {
+        "view": "journal",
+        "name": "Контекст раздела «Летопись»"
+      }
+    ],
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 6.40625,
+          "right": 40.59375,
+          "width": 34.1875
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 13.328125,
+          "right": 33.65625,
+          "width": 20.328125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 2.046875,
+          "right": 44.9375,
+          "width": 42.890625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.671875,
+          "right": 39.3125,
+          "width": 31.640625
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.09375,
+          "right": 39.890625,
+          "width": 32.796875
+        },
+        "inside": true
+      }
+    ],
+    "normalResearchEffectAndFocus": true,
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await modal.evaluate(e=>e.isConnected))\n"
+  },
+  {
+    "tag": "trade1-1440",
+    "synthetic": true,
+    "pendingLabel": "Дипломатия, предложения, ожидающие ответа: 1",
+    "badge": 1,
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 17.515625,
+          "right": 61.46875,
+          "width": 43.953125
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 26.4375,
+          "right": 52.5625,
+          "width": 26.125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 11.921875,
+          "right": 67.0625,
+          "width": 55.140625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 19.15625,
+          "right": 59.828125,
+          "width": 40.671875
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 18.40625,
+          "right": 60.578125,
+          "width": 42.171875
+        },
+        "inside": true
+      }
+    ],
+    "stateDialogFocusPreserved": true
+  },
+  {
+    "tag": "trade2-1440",
+    "synthetic": true,
+    "pendingLabel": "Дипломатия, предложения, ожидающие ответа: 2",
+    "badge": 2,
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 17.515625,
+          "right": 61.46875,
+          "width": 43.953125
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 26.4375,
+          "right": 52.5625,
+          "width": 26.125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 11.921875,
+          "right": 67.0625,
+          "width": 55.140625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 19.15625,
+          "right": 59.828125,
+          "width": 40.671875
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 18.40625,
+          "right": 60.578125,
+          "width": 42.171875
+        },
+        "inside": true
+      }
+    ],
+    "stateDialogFocusPreserved": true
+  },
+  {
+    "tag": "peace1-1440",
+    "synthetic": true,
+    "pendingLabel": "Дипломатия, предложения, ожидающие ответа: 1",
+    "badge": 1,
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 17.515625,
+          "right": 61.46875,
+          "width": 43.953125
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 26.4375,
+          "right": 52.5625,
+          "width": 26.125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 11.921875,
+          "right": 67.0625,
+          "width": 55.140625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 19.15625,
+          "right": 59.828125,
+          "width": 40.671875
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 7.5,
+          "right": 71.5,
+          "width": 64
+        },
+        "label": {
+          "x": 18.40625,
+          "right": 60.578125,
+          "width": 42.171875
+        },
+        "inside": true
+      }
+    ],
+    "stateDialogFocusPreserved": true
+  },
+  {
+    "tag": "trade1-390",
+    "synthetic": true,
+    "pendingLabel": "Дипломатия, предложения, ожидающие ответа: 1",
+    "badge": 1,
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 6.40625,
+          "right": 40.59375,
+          "width": 34.1875
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 13.328125,
+          "right": 33.65625,
+          "width": 20.328125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 2.046875,
+          "right": 44.9375,
+          "width": 42.890625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.671875,
+          "right": 39.3125,
+          "width": 31.640625
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.09375,
+          "right": 39.890625,
+          "width": 32.796875
+        },
+        "inside": true
+      }
+    ],
+    "stateDialogFocusPreserved": true
+  },
+  {
+    "tag": "trade2-390",
+    "synthetic": true,
+    "pendingLabel": "Дипломатия, предложения, ожидающие ответа: 2",
+    "badge": 2,
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 6.40625,
+          "right": 40.59375,
+          "width": 34.1875
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 13.328125,
+          "right": 33.65625,
+          "width": 20.328125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 2.046875,
+          "right": 44.9375,
+          "width": 42.890625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.671875,
+          "right": 39.3125,
+          "width": 31.640625
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.09375,
+          "right": 39.890625,
+          "width": 32.796875
+        },
+        "inside": true
+      }
+    ],
+    "stateDialogFocusPreserved": true
+  },
+  {
+    "tag": "peace1-390",
+    "synthetic": true,
+    "pendingLabel": "Дипломатия, предложения, ожидающие ответа: 1",
+    "badge": 1,
+    "rail": [
+      {
+        "page": "galaxy",
+        "text": "Галактика",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 6.40625,
+          "right": 40.59375,
+          "width": 34.1875
+        },
+        "inside": true
+      },
+      {
+        "page": "research",
+        "text": "Наука",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 13.328125,
+          "right": 33.65625,
+          "width": 20.328125
+        },
+        "inside": true
+      },
+      {
+        "page": "diplomacy",
+        "text": "Дипломатия",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 2.046875,
+          "right": 44.9375,
+          "width": 42.890625
+        },
+        "inside": true
+      },
+      {
+        "page": "empire",
+        "text": "Империя",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.671875,
+          "right": 39.3125,
+          "width": 31.640625
+        },
+        "inside": true
+      },
+      {
+        "page": "journal",
+        "text": "Летопись",
+        "lines": 1,
+        "button": {
+          "x": 2,
+          "right": 45,
+          "width": 43
+        },
+        "label": {
+          "x": 7.09375,
+          "right": 39.890625,
+          "width": 32.796875
+        },
+        "inside": true
+      }
+    ],
+    "stateDialogFocusPreserved": true
+  },
+  {
+    "tag": "finished60-1440",
+    "correctAttribution": "Битва в системе Haven: Кхар — потеряно кораблей: 1, прочности: 35.9; Конкорд — потеряно кораблей: 0, прочности: 80.5. Атакующий флот уничтожен.",
+    "endingAndBattleStatePreserved": true
+  },
+  {
+    "tag": "finished60-390",
+    "correctAttribution": "Битва в системе Haven: Кхар — потеряно кораблей: 1, прочности: 35.9; Конкорд — потеряно кораблей: 0, прочности: 80.5. Атакующий флот уничтожен.",
+    "endingAndBattleStatePreserved": true
+  }
+]

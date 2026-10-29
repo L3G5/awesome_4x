@@ -1,0 +1,104 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Открывает Маяки Asterion. Для трансценденции синхронизируйте три своих незаблокированных мира с маяками в течение 10 циклов, расходуя по 60 кредитов за цикл.",
+      "element": "P"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN",
+      "action": "inspect"
+    },
+    {
+      "text": "ASTERION REACH",
+      "element": "SPAN"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "title",
+      "text": "Credits: 140; +7 per cycle after 4 fleet upkeep, before alignment payments",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Minerals: 110; +9 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Science: 0; +4 per cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "title",
+      "text": "Orders: 6 of 6 available this cycle",
+      "tag": "DIV"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Galaxy (1)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Research (2)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Chronicle (5)",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Требуется: Deep-space Logistics and Coherent Lances",
+      "tag": "BUTTON",
+      "action": "research"
+    },
+    {
+      "attribute": "title",
+      "text": "Требуется: Adaptive Biospheres and Autonomous Industry",
+      "tag": "BUTTON",
+      "action": "research"
+    },
+    {
+      "attribute": "title",
+      "text": "Требуется: Deep-space Logistics and Stellar Accords",
+      "tag": "BUTTON",
+      "action": "research"
+    },
+    {
+      "attribute": "title",
+      "text": "Требуется: Quantum Archives and Autonomous Industry",
+      "tag": "BUTTON",
+      "action": "research"
+    }
+  ],
+  "layout": {
+    "documentWidth": 1440,
+    "viewport": 1440,
+    "modal": null
+  }
+}

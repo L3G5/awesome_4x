@@ -1,0 +1,64 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Система Aster сменила владельца: «Консорциум Вейр» → «Доминион Кхар».",
+      "element": "P"
+    },
+    {
+      "text": "Осмотреть: Aster →",
+      "element": "BUTTON",
+      "action": "report-inspect"
+    },
+    {
+      "text": "Система Hesper сменила владельца: «Консорциум Вейр» → «Доминион Кхар».",
+      "element": "P"
+    },
+    {
+      "text": "Осмотреть: Hesper →",
+      "element": "BUTTON",
+      "action": "report-inspect"
+    },
+    {
+      "text": "Система Caldera сменила владельца: «Консорциум Вейр» → «Доминион Кхар».",
+      "element": "P"
+    },
+    {
+      "text": "Осмотреть: Caldera →",
+      "element": "BUTTON",
+      "action": "report-inspect"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Дипломатия context",
+      "tag": "ASIDE"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": null
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "text": [
+    {
+      "text": "ASTERION REACH",
+      "element": "H1"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "Solace",
+      "element": "SPAN"
+    },
+    {
+      "text": "Meridian",
+      "element": "SPAN"
+    },
+    {
+      "text": "Hesper",
+      "element": "SPAN"
+    },
+    {
+      "text": "Nacre",
+      "element": "SPAN"
+    },
+    {
+      "text": "Velorum",
+      "element": "SPAN"
+    },
+    {
+      "text": "Ashfall",
+      "element": "SPAN"
+    },
+    {
+      "text": "Eidolon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Kepler",
+      "element": "SPAN"
+    },
+    {
+      "text": "Orison",
+      "element": "SPAN"
+    },
+    {
+      "text": "Sundrift",
+      "element": "SPAN"
+    },
+    {
+      "text": "Tethys",
+      "element": "SPAN"
+    },
+    {
+      "text": "Haven",
+      "element": "SPAN"
+    },
+    {
+      "text": "Halcyon",
+      "element": "SPAN"
+    },
+    {
+      "text": "Peregrine",
+      "element": "SPAN"
+    },
+    {
+      "text": "Asterion Reach",
+      "element": "H2"
+    },
+    {
+      "text": "ASTERION",
+      "element": "SPAN"
+    },
+    {
+      "text": "/ Nacre",
+      "element": "SPAN"
+    },
+    {
+      "text": "Nacre → Haven · прыжков по известному маршруту: 2 · Удерживает позицию",
+      "element": "P"
+    },
+    {
+      "text": "Haven",
+      "element": "STRONG"
+    },
+    {
+      "text": "Nacre",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Kepler",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Haven",
+      "element": "H2"
+    },
+    {
+      "text": "✦ Asterion МАЯК",
+      "element": "SPAN"
+    },
+    {
+      "text": "Solace ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Kepler ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Peregrine ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "Asterion ↗",
+      "element": "BUTTON"
+    },
+    {
+      "text": "English",
+      "element": "BUTTON",
+      "action": "language"
+    },
+    {
+      "text": "КОЛОНИАЛЬНЫЕ ПРОЕКТЫ · Haven",
+      "element": "DIV"
+    },
+    {
+      "text": "Хартия использует существующую инфраструктуру и не занимает дополнительную ячейку. Для уровня I нужны население 4 и «Логистика дальнего космоса». Для уровня II — население 8 и «Автономная промышленность». Пока оформляется новая хартия, прежние преимущества сохраняются.",
+      "element": "P"
+    },
+    {
+      "text": "Маяк Asterion",
+      "element": "TH"
+    },
+    {
+      "text": "Повысить до уровня II",
+      "element": "SPAN",
+      "action": "develop"
+    },
+    {
+      "text": "Академическая хартия · ур. II",
+      "element": "H3"
+    },
+    {
+      "text": "Эффекты Академическая хартия · ур. II при текущем населении и технологиях",
+      "element": "CAPTION"
+    },
+    {
+      "text": "Маяк Asterion",
+      "element": "TH"
+    },
+    {
+      "text": "Маяк Asterion",
+      "element": "TH"
+    }
+  ],
+  "attrs": [
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Solace, мир-основатель, конкорд",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Meridian, Безжизненный, рядом с выбранным флотом",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Hesper, Кхар",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Nacre, конкорд",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Velorum, Хор",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Ashfall, Засушливый",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Eidolon, Вулканический",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Kepler, Океанический, рядом с выбранным флотом, просмотр маршрута: прыжок 1 из 2",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Orison, Хор",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Sundrift, ✦ конкорд МАЯК",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Tethys, Океанический",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Haven, ✦ конкорд МАЯК, просмотр маршрута: прыжок 2 из 2, цель маршрута",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Halcyon, конкорд",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Peregrine, Вулканический",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Следопыт 1, Разведчик, система Nacre",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Авангард 3, Фрегат, система Sundrift",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Суверен 53, Крейсер, система Halcyon",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Nacre",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Kepler",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "title",
+      "text": "Осмотреть: Haven",
+      "tag": "BUTTON"
+    },
+    {
+      "attribute": "aria-label",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    },
+    {
+      "attribute": "title",
+      "text": "Switch interface to English",
+      "tag": "BUTTON",
+      "action": "language"
+    }
+  ],
+  "layout": {
+    "documentWidth": 390,
+    "viewport": 390,
+    "modal": {
+      "width": 364,
+      "scrollWidth": 364
+    }
+  }
+}

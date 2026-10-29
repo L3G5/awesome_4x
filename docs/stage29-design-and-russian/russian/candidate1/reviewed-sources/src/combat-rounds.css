@@ -1,0 +1,23 @@
+.combat-exchanges{margin-top:20px;border:1px solid #3a5262;border-radius:5px;background:#0c1824}
+.combat-exchanges>summary{padding:14px 17px;color:#dfcfac;font-size:12px;cursor:pointer;line-height:1.6}
+.combat-exchanges>summary span{color:#8fa8b9;font-size:11px}
+.combat-exchanges>summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.combat-exchanges[open]>summary{border-bottom:1px solid #304554}
+.exchange-explanation{padding:0 17px;margin:16px 0;color:#9cb3c3;font-size:11px;line-height:1.8}
+.exchange-list{list-style:none;padding:0;margin:0}
+.combat-round{border-top:1px solid #2c414f;padding:16px 17px}
+.combat-round h4{display:flex;justify-content:space-between;gap:12px;margin:0 0 14px;color:#d8e4e8;font-size:12px;font-weight:500}
+.combat-round h4 span{font-size:9px;font-weight:400;color:#7797a9}
+.exchange-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.exchange-side{min-width:0;border-left:2px solid color-mix(in srgb,var(--side-color) 50%,transparent);padding-left:12px}
+.exchange-formation span{display:block;text-transform:uppercase;font-size:8px;letter-spacing:.1em;color:var(--side-color);margin-bottom:5px}
+.exchange-formation strong{display:block;font-size:12px;font-weight:500;color:#d5e2e7;overflow-wrap:anywhere}
+.exchange-values{display:grid;grid-template-columns:.8fr .8fr 1.2fr;gap:8px;margin:15px 0 10px}
+.exchange-values dt{font-size:8px;color:#829eaf;margin-bottom:6px}
+.exchange-values dd{margin:0;font-size:12px;color:#e0e8e9;white-space:nowrap}
+.exchange-values dd span{color:#7896a8}
+.exchange-power,.exchange-shield{font-size:9px;line-height:1.8;color:#91aebf;margin:5px 0 0}
+.exchange-shield{color:#a5c4cb}
+.exchange-ending{padding:14px 17px;margin:0;border-top:1px solid #304554;color:#c4d2d5;font-size:11px;line-height:1.7}
+.exchange-unavailable{font-size:10px;color:#7f9aaa;line-height:1.7;margin-top:17px}
+@media(max-width:660px){.exchange-pair{grid-template-columns:minmax(0,1fr);gap:18px}.combat-round{padding:16px 14px}.combat-exchanges>summary{padding:13px 14px}.exchange-values dd{font-size:13px}.exchange-explanation{padding-inline:14px}.exchange-ending{padding-inline:14px}.exchange-values{grid-template-columns:1fr 1fr 1.35fr}}

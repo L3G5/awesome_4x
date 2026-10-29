@@ -42,7 +42,7 @@ The simulation in `src/game.js` is independent of rendering. Separate modules ha
 
 ## Design research
 
-The [good 4X guide](https://l3g5.github.io/awesome_4x/design/good-4x.html) and [bad 4X guide](https://l3g5.github.io/awesome_4x/design/bad-4x.html) examine meaningful choices, randomness, replayability, pacing, UI and player control. They preserve source disagreements and provide concrete review tasks, based on 33 distinct sources.
+The [good 4X guide](https://l3g5.github.io/awesome_4x/design/good-4x.html) and [bad 4X guide](https://l3g5.github.io/awesome_4x/design/bad-4x.html) examine meaningful choices, randomness, replayability, pacing, UI and player control. They preserve source disagreements and provide concrete review tasks, based on 33 distinct sources. The [critique and iteration record](docs/stage29-design-and-russian/index.html) connects those criteria to the keyboard, public war-motive and early Ecology changes, with independent Russian-interface review.
 
 ## Validate and investigate
 
