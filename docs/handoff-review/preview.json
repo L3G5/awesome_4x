@@ -1,0 +1,21 @@
+{
+  "purpose": "Read-only illustration of an actual Odyssey cycle50 save imported into the current interface, not newly played history.",
+  "sourceCommit": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "build": {
+    "version": "0.21.1",
+    "commit": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+    "builtAt": "2026-10-29T03:07:29.898Z"
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "reducedMotion": true,
+  "actualInput": "docs/odyssey-playtest/actual/checkpoints/cycle50.json",
+  "inputSha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435",
+  "image": "docs/screenshots/odyssey50-v0211.png",
+  "imageSha256": "607a57ed12782fcdf7054819fbfcaa7df41a5b40c66cbb739cb92b4b3d13a93a",
+  "exactStateUnchanged": true,
+  "pageErrors": [],
+  "failedResponses": []
+}

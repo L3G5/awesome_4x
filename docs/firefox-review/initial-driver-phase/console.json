@@ -1,0 +1,14 @@
+[
+  {
+    "label": "game",
+    "phase": "setup",
+    "type": "warning",
+    "text": "[JavaScript Warning: \"WebGL warning: drawElementsInstanced: Depth texture comparison requests (e.g. `LINEAR`) Filtering, but behavior is implementation-defined, and so on some systems will sometimes behave as `NEAREST`. (warns once)\"]"
+  },
+  {
+    "label": "game",
+    "phase": "new-campaign",
+    "type": "warning",
+    "text": "[JavaScript Warning: \"WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.\" {file: \"debugger eval code line 290 > eval\" line: 1}]"
+  }
+]

@@ -1,0 +1,177 @@
+{
+  "scope": "Bounded Firefox desktop compatibility; one completed accepted phase with an explicitly preserved initial driver-assumption failure, not a completed campaign sample.",
+  "sourcePin": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+  "browser": "Firefox146.0.1 / Playwright1.58.2",
+  "files": [
+    {
+      "file": "README.txt",
+      "bytes": 1616,
+      "sha256": "241da08dae0409acfe2b837505a16cddaeb742d4a0d1e42c66b5ad8f3e1df8c4"
+    },
+    {
+      "file": "audit.mjs",
+      "bytes": 16293,
+      "sha256": "62cc60133e5dbf70fd60840534088b77397dbababf4c27b3b072cf773966b105"
+    },
+    {
+      "file": "browser.json",
+      "bytes": 766,
+      "sha256": "546a9e69d8aeb2aca93d8b8432a7be006a2018d199e16046b0d410dfed8a5384"
+    },
+    {
+      "file": "console.json",
+      "bytes": 1604,
+      "sha256": "9078bc8e2836842583725f9af970ee5e1f6cb15ed2501ebac345233ed2ae2cd6"
+    },
+    {
+      "file": "events.json",
+      "bytes": 21047,
+      "sha256": "b149f53f46e5574f9ad8810e51140fff5c5aabb05c4597b97385f530228aee1a"
+    },
+    {
+      "file": "exports/firefox-cycle2.json",
+      "bytes": 30268,
+      "sha256": "bae3864a4dd97ef75d42228badd7822af9ce15f9370270fb8bb5e3ac41772e64"
+    },
+    {
+      "file": "exports/imported-actual-odyssey-export.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "file": "index.html",
+      "bytes": 9553,
+      "sha256": "a77aa7c496df5bcba66b0526dd6ae604237c78b3a18211c7f5ddc69d79e929b8"
+    },
+    {
+      "file": "initial-driver-phase/audit.mjs",
+      "bytes": 16110,
+      "sha256": "e341323384463b23621fe1075a4ab920d6a5470883cd64f0d92f54959378c83b"
+    },
+    {
+      "file": "initial-driver-phase/browser.json",
+      "bytes": 766,
+      "sha256": "546a9e69d8aeb2aca93d8b8432a7be006a2018d199e16046b0d410dfed8a5384"
+    },
+    {
+      "file": "initial-driver-phase/console.json",
+      "bytes": 599,
+      "sha256": "4c04449f66f88ebf36604f7e1556099db14831510e561bbe76984f2b07ae4b97"
+    },
+    {
+      "file": "initial-driver-phase/events.json",
+      "bytes": 2082,
+      "sha256": "7d9971335b4be3cbd8a08ca17c0a7eefb93c969d2a697fbe892df7b9def4faab"
+    },
+    {
+      "file": "initial-driver-phase/failure.json",
+      "bytes": 2232,
+      "sha256": "4d15d32c446ad854b54e19a41a40cf18a4f7e7dbd61dc5da632ba9c372354c26"
+    },
+    {
+      "file": "initial-driver-phase/network-failures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "initial-driver-phase/page-errors.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "initial-driver-phase/screenshots/01-new-campaign-webgl.png",
+      "bytes": 571213,
+      "sha256": "432c54b513f713b7df924496f3a284f26b7240fdc86a4f079d8b25e2447613b4"
+    },
+    {
+      "file": "initial-driver-phase/screenshots/failure.png",
+      "bytes": 337327,
+      "sha256": "d1b462ca2aaad00521f4d34856341ff3ad198e86393c4b2b69a2e5681af3db31"
+    },
+    {
+      "file": "initial-driver-phase/source-and-input-pins.json",
+      "bytes": 3172,
+      "sha256": "3e05e8ff626ffa36ffabced3b7f5d5c17bf94354e16d53c37a1bb85a89774190"
+    },
+    {
+      "file": "inputs/actual-odyssey-cycle66.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "file": "network-failures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "page-errors.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "results.json",
+      "bytes": 6650,
+      "sha256": "b90fe34db7dac51fcccbad04fa10ca97d70162fbd2f02cdd7b040a2a396d4d10"
+    },
+    {
+      "file": "review-notes.json",
+      "bytes": 4074,
+      "sha256": "040be3e626806653fbf7b078effa1f30c74836ffb7fdcc9323ff8953f24f4189"
+    },
+    {
+      "file": "screenshots/01-new-campaign-webgl.png",
+      "bytes": 571213,
+      "sha256": "432c54b513f713b7df924496f3a284f26b7240fdc86a4f079d8b25e2447613b4"
+    },
+    {
+      "file": "screenshots/02-construction-keyboard.png",
+      "bytes": 337491,
+      "sha256": "40a066cdd0c8b65a40f7a27f2fc1e1be3c55cfc87295aee7911a7a87f759263a"
+    },
+    {
+      "file": "screenshots/03-research-keyboard.png",
+      "bytes": 232699,
+      "sha256": "e50f1da7ae6c600a338c24ff9e6b48f954c2d3bafa2f050445f5bf14fe301030"
+    },
+    {
+      "file": "screenshots/04-chronicle-keyboard.png",
+      "bytes": 191780,
+      "sha256": "4ed93186d9958683bf4d6f3bbb77232ee36abee58fec0b77ef72001607cdb824"
+    },
+    {
+      "file": "screenshots/05-movement-research-paid-project.png",
+      "bytes": 609755,
+      "sha256": "2056936edcfef3d82b58157e18c50561d069ccac19ec63d8d9f2c6d76913f511"
+    },
+    {
+      "file": "screenshots/06-cycle2.png",
+      "bytes": 609638,
+      "sha256": "60a2a61fe1c8a0dd8751a6d6671cf92ed9b14a4158d31f920bc409afb9a45900"
+    },
+    {
+      "file": "screenshots/07-restored-cycle2.png",
+      "bytes": 605900,
+      "sha256": "a0e21485337700f7fd07c73122c81826fdf76a3736026ba698de7f23ad4d4844"
+    },
+    {
+      "file": "screenshots/08-guide-navigation.png",
+      "bytes": 228207,
+      "sha256": "848b2dd424ab120288d09edc2596b9e949db3b995bf558f4782af3b3feade44f"
+    },
+    {
+      "file": "screenshots/09-imported-actual-odyssey-conclusion.png",
+      "bytes": 364974,
+      "sha256": "e36b2f426347eb98d6f9aa8a9d960f7a8f4b2c7bcd884a433a67d124119fab06"
+    },
+    {
+      "file": "screenshots/10-imported-actual-retained-report.png",
+      "bytes": 388745,
+      "sha256": "2f34a63bff7d507b6472387513dc222e6a03b859088a22508298e929ebb70dc3"
+    },
+    {
+      "file": "source-and-input-pins.json",
+      "bytes": 3172,
+      "sha256": "3e05e8ff626ffa36ffabced3b7f5d5c17bf94354e16d53c37a1bb85a89774190"
+    }
+  ]
+}

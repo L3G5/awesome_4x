@@ -1,0 +1,52 @@
+{
+  "result": "No concrete Firefox incompatibility found in the bounded covered flows; no production fix recommended.",
+  "setup": {
+    "command": "npx --no-install playwright install firefox",
+    "cwd": "/home/leg/projects/awesome_4x",
+    "browser": "Firefox 146.0.1, Playwright revision1509",
+    "cache": "/home/leg/.cache/ms-playwright/firefox-1509",
+    "scope": "Browser cache installation only. No dependency or production source changes. Temporary nonpersistent browser contexts; no shared browser profile touched."
+  },
+  "phases": [
+    {
+      "name": "preliminary launch",
+      "result": "Default headless launch showed WebGL and no page exception; diagnostic only, no game orders."
+    },
+    {
+      "name": "initial-driver-phase",
+      "result": "Stopped after three Tabs from construction close landed on Colony charter, not Ships. Firefox inserts a native focus stop on scrollable .modal-content; the Chromium-specific fixed Tab count was an invalid driver assumption. Source, failure, screenshot and partial receipts preserved."
+    },
+    {
+      "name": "accepted phase",
+      "result": "Tab to the target through actual keyboard navigation, then verify activation, retained focus, adjacent Tab and Shift+Tab, ARIA state, Escape return and exact unchanged state. All requested flows pass."
+    }
+  ],
+  "driverCorrections": [
+    "Use target-based keyboard traversal instead of assuming Chromium's exact number of Tab stops.",
+    "Before the accepted phase reached them, correct the research filter selector to case-sensitive All and the guide heading expectation to its actual Find your place text. These were driver expectations, not product defects."
+  ],
+  "graphics": {
+    "observed": "Visible Three.js starfield, starlanes and map labels with a live WebGL2 context; fallback false and canvas visible.",
+    "renderer": "Firefox reports Radeon R9 200 Series, or similar / AMD; this string is not an independent physical GPU attestation.",
+    "warnings": "Depth-texture filtering warning occurs once per initialized page. No rendering failure was observed. The deprecated WEBGL_debug_renderer_info warning was caused by the audit's diagnostic query, not normal game UI."
+  },
+  "coverage": {
+    "viewport": "1440 \u00d71000, Linux headless Firefox, reduced motion requested",
+    "ordinaryCommands": [
+      "Research Physics (free in Orders)",
+      "Move own Pathfinder f1 from Solace to charted neighbor s28 (1 Order)",
+      "Commission frigate at Solace (1 Order,25 credits,35 minerals)",
+      "One ordinary endTurn to cycle2"
+    ],
+    "keyboard": "Construction Infrastructure/Colony charter/Ships; research Engineering/Society; Chronicle Discovery/Construction; Enter/Space, Tab/ShiftTab and construction Escape focus return.",
+    "save": "Export compatibility cycle2, actual picker import, autosave reload; all exact. Separately import immutable actual ODYSSEY cycle66, inspect conclusion and retained rounds, export and reload; exact original bytes and state.",
+    "guide": "Open real popup, follow combat contents anchor, return to game and compare shared autosave."
+  },
+  "limits": [
+    "A bounded browser acceptance audit, not a fresh completed campaign, performance benchmark, all-browser certification or replication of the full Chromium suite.",
+    "One desktop viewport and one Linux Firefox build; other operating systems, headed window managers, assistive technology and long sessions were not tested.",
+    "The tactical fallback was not exercised because WebGL worked. No fallback-support conclusion is inferred.",
+    "The results scope uses 'player orders' generically; there were three command invocations but only two Order-resource costs. Research is free, and exact command-state comparisons preserve that distinction."
+  ],
+  "sourcePhase": "Build metadata pins base3c6e822; source main/guide/package carry the existing near-final focus/ARIA/guide working-tree changes. Exact source hashes, tracked-diff hash and served build asset hashes are retained rather than misrepresenting the worktree as clean."
+}

@@ -1,0 +1,25 @@
+{
+  "browser": "Firefox",
+  "version": "146.0.1",
+  "playwrightVersion": "1.58.2",
+  "executable": "/home/leg/.cache/ms-playwright/firefox-1509/firefox/firefox",
+  "headless": true,
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "launchOptions": "Default Playwright Firefox headless; no graphics preference override, no shared profile",
+  "graphics": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0",
+    "fallback": false,
+    "fallbackNotice": null,
+    "canvasHidden": false,
+    "webgl": {
+      "version": "WebGL 2.0",
+      "vendor": "Mozilla",
+      "renderer": "Radeon R9 200 Series, or similar",
+      "unmaskedRenderer": "Radeon R9 200 Series, or similar",
+      "unmaskedVendor": "AMD"
+    }
+  }
+}

@@ -1,0 +1,980 @@
+[
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"begin\"]",
+    "control": {
+      "text": "Take command →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "begin"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"new-game-menu\"]",
+    "control": {
+      "text": "Begin a new campaign",
+      "attributes": {
+        "data-action": "new-game-menu"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "fill",
+    "selector": "#galaxy-seed",
+    "value": "ASTERION-FIREFOX-0211"
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"new-game-confirm\"]",
+    "control": {
+      "text": "Begin campaign →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "new-game-confirm"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"begin\"]",
+    "control": {
+      "text": "Take command →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "begin"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "screenshot",
+    "file": "screenshots/01-new-campaign-webgl.png"
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "click",
+    "selector": "[data-action=\"build-menu\"]",
+    "control": {
+      "text": "+ Commission a project",
+      "attributes": {
+        "class": "wide-button",
+        "data-action": "build-menu",
+        "data-system": "s0"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "DIV",
+      "attributes": {
+        "class": "modal-content"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "building",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "charter",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "ship",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Enter",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "ship",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "scout",
+        "title": "Fast exploration vessel. Two jumps per turn; best kept away from combat."
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Shift+Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "ship",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Shift+Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "charter",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Space",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "charter",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Shift+Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "building",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Enter",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "building",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "screenshot",
+    "file": "screenshots/02-construction-keyboard.png"
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Escape",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "wide-button",
+        "data-action": "build-menu",
+        "data-system": "s0"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "click",
+    "selector": "[data-page=\"research\"]",
+    "control": {
+      "text": "Research",
+      "attributes": {
+        "data-page": "research",
+        "class": "",
+        "title": "Research (2)",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-page": "diplomacy",
+        "class": "",
+        "title": "Diplomacy (3)",
+        "aria-label": "Diplomacy",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-page": "empire",
+        "class": "",
+        "title": "Empire (4)",
+        "aria-label": "Empire",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-page": "journal",
+        "class": "",
+        "title": "Chronicle (5)",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "home",
+        "title": "Focus homeworld (H)"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "DIV",
+      "attributes": {
+        "class": "workspace-page",
+        "id": "workspace-page"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "active",
+        "data-research-filter": "All",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "",
+        "data-research-filter": "Engineering",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Enter",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "active",
+        "data-research-filter": "Engineering",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "",
+        "data-research-filter": "Society",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "key",
+    "value": "Space",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "class": "active",
+        "data-research-filter": "Society",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "research-keyboard",
+    "kind": "screenshot",
+    "file": "screenshots/03-research-keyboard.png"
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "click",
+    "selector": "[data-page=\"journal\"]",
+    "control": {
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal",
+        "class": "",
+        "title": "Chronicle (5)",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "home",
+        "title": "Focus homeworld (H)"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-log-filter": "All",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-log-filter": "discovery",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "key",
+    "value": "Space",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-log-filter": "discovery",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "key",
+    "value": "Tab",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-log-filter": "construction",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "key",
+    "value": "Enter",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-log-filter": "construction",
+        "class": "active",
+        "aria-pressed": "true"
+      }
+    }
+  },
+  {
+    "phase": "chronicle-keyboard",
+    "kind": "screenshot",
+    "file": "screenshots/04-chronicle-keyboard.png"
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-page=\"research\"]",
+    "control": {
+      "text": "Research",
+      "attributes": {
+        "data-page": "research",
+        "class": "",
+        "title": "Research (2)",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-research-filter=\"All\"]",
+    "control": {
+      "text": "All",
+      "attributes": {
+        "class": "",
+        "data-research-filter": "All",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "control": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "physics",
+        "title": ""
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "ordinary-command-oracle",
+    "action": {
+      "type": "research",
+      "techId": "physics"
+    },
+    "result": {
+      "ok": true,
+      "message": "Research directed toward Resonance Theory."
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-page=\"galaxy\"]",
+    "control": {
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy",
+        "class": "",
+        "title": "Galaxy (1)",
+        "aria-current": "false"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-action=\"home\"]",
+    "control": {
+      "text": "Home",
+      "attributes": {
+        "data-action": "home",
+        "title": "Focus homeworld (H)"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-fleet=\"f1\"]",
+    "control": {
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1",
+        "class": "selected",
+        "title": "Pathfinder 1 at Solace"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-system-select=\"s28\"]",
+    "control": {
+      "text": "Haven ↗",
+      "attributes": {
+        "class": "small-button ghost",
+        "data-system-select": "s28"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-action=\"move\"]",
+    "control": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s28"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "ordinary-command-oracle",
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s28"
+    },
+    "result": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Haven."
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-action=\"home\"]",
+    "control": {
+      "text": "Home",
+      "attributes": {
+        "data-action": "home",
+        "title": "Focus homeworld (H)"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": "[data-action=\"build-menu\"]",
+    "control": {
+      "text": "+ Commission a project",
+      "attributes": {
+        "class": "wide-button",
+        "data-action": "build-menu",
+        "data-system": "s0"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": ".modal [data-tab=\"ship\"]",
+    "control": {
+      "text": "Ships",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "ship",
+        "class": "",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "click",
+    "selector": ".modal [data-action=\"build\"][data-item=\"frigate\"]",
+    "control": {
+      "text": "Vanguard\n\nVersatile escort and invasion vessel. Combine frigates into task forces.\n\n◈ 25   ◇ 35 · 4 cycles · 2 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "frigate",
+        "title": "Versatile escort and invasion vessel. Combine frigates into task forces."
+      }
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "ordinary-command-oracle",
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "result": {
+      "ok": true,
+      "message": "Vanguard commissioned at Solace."
+    }
+  },
+  {
+    "phase": "ordinary-actions",
+    "kind": "screenshot",
+    "file": "screenshots/05-movement-research-paid-project.png"
+  },
+  {
+    "phase": "cycle",
+    "kind": "click",
+    "selector": "[data-action=\"end-turn\"]",
+    "control": {
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "class": "primary end-turn",
+        "data-action": "end-turn",
+        "id": "end-turn"
+      }
+    }
+  },
+  {
+    "phase": "cycle",
+    "kind": "click",
+    "selector": "[data-action=\"end-turn-confirm\"]",
+    "control": {
+      "text": "End cycle →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "end-turn-confirm"
+      }
+    }
+  },
+  {
+    "phase": "cycle",
+    "kind": "screenshot",
+    "file": "screenshots/06-cycle2.png"
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "click",
+    "selector": ".modal [data-action=\"export\"]",
+    "control": {
+      "text": "↓ Export campaign",
+      "attributes": {
+        "data-action": "export"
+      }
+    }
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "key",
+    "value": "Escape",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "click",
+    "selector": ".modal [data-action=\"import\"]",
+    "control": {
+      "text": "↑ Import campaign",
+      "attributes": {
+        "data-action": "import"
+      }
+    }
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "click",
+    "selector": "#confirm-import",
+    "control": {
+      "text": "Restore campaign",
+      "attributes": {
+        "id": "confirm-import",
+        "class": "primary"
+      }
+    }
+  },
+  {
+    "phase": "save-roundtrip",
+    "kind": "screenshot",
+    "file": "screenshots/07-restored-cycle2.png"
+  },
+  {
+    "phase": "guide",
+    "kind": "click",
+    "selector": ".top-actions a[aria-label=\"Open field guide\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "href": "./guide.html",
+        "target": "_blank",
+        "rel": "noopener",
+        "aria-label": "Open field guide",
+        "title": "Field guide (?)"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": ".modal [data-action=\"import\"]",
+    "control": {
+      "text": "↑ Import campaign",
+      "attributes": {
+        "data-action": "import"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": "#confirm-import",
+    "control": {
+      "text": "Restore campaign",
+      "attributes": {
+        "id": "confirm-import",
+        "class": "primary"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": ".modal [data-action=\"show-conclusion\"]",
+    "control": {
+      "text": "Review this age",
+      "attributes": {
+        "data-action": "show-conclusion"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "screenshot",
+    "file": "screenshots/09-imported-actual-odyssey-conclusion.png"
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": ".conclusion-history [data-action=\"combat-report\"]",
+    "control": {
+      "text": "Battle report →",
+      "attributes": {
+        "class": "small-button ghost",
+        "data-action": "combat-report",
+        "data-report": "9"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": ".combat-exchanges summary",
+    "control": {
+      "text": "Inspect exchanges · 4 rounds",
+      "attributes": {}
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "screenshot",
+    "file": "screenshots/10-imported-actual-retained-report.png"
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "key",
+    "value": "Escape",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "click",
+    "selector": ".modal [data-action=\"export\"]",
+    "control": {
+      "text": "↓ Export campaign",
+      "attributes": {
+        "data-action": "export"
+      }
+    }
+  },
+  {
+    "phase": "imported-actual-ending",
+    "kind": "key",
+    "value": "Escape",
+    "focus": {
+      "tag": "BUTTON",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+The first preview driver selected the actual save file but omitted the Restore campaign confirmation, so it timed out without replacing its new local campaign. The corrected run clicks the normal confirmation, inspects the actual cycle50 save without a game command, and verifies full-state equality. The final screenshot waits for the transient restoration toast to clear.

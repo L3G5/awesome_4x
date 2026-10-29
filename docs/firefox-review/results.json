@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "scope": "One bounded Firefox desktop compatibility session plus one explicitly imported completed actual campaign. Three ordinary player orders and one normal endTurn; no campaign victory claimed for the new compatibility fixture.",
+  "version": "0.21.1",
+  "sourcePin": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+  "browser": "146.0.1",
+  "exactStateChecks": 20,
+  "checks": [
+    {
+      "name": "new campaign exact seeded state",
+      "turn": 1,
+      "sha256": "6dfca495f4e19fd7439fcfa161741c865d744608189b3906050a28711758a97b",
+      "exact": true
+    },
+    {
+      "name": "construction keyboard filters preserve state",
+      "turn": 1,
+      "sha256": "6dfca495f4e19fd7439fcfa161741c865d744608189b3906050a28711758a97b",
+      "exact": true
+    },
+    {
+      "name": "construction Escape restores opener without mutation",
+      "turn": 1,
+      "sha256": "6dfca495f4e19fd7439fcfa161741c865d744608189b3906050a28711758a97b",
+      "exact": true
+    },
+    {
+      "name": "research filters preserve state and focus",
+      "turn": 1,
+      "sha256": "6dfca495f4e19fd7439fcfa161741c865d744608189b3906050a28711758a97b",
+      "exact": true
+    },
+    {
+      "name": "Chronicle filters preserve state and focus",
+      "turn": 1,
+      "sha256": "6dfca495f4e19fd7439fcfa161741c865d744608189b3906050a28711758a97b",
+      "exact": true
+    },
+    {
+      "name": "ordinary research",
+      "turn": 1,
+      "sha256": "42f86fd3c58088fd6963e3ea09a3517660b21c01cc4e00957c2bb622bf2627da",
+      "exact": true
+    },
+    {
+      "name": "ordinary move",
+      "turn": 1,
+      "sha256": "cdbaef7ef2189450116a1a7124ac1e47226df406dd52b41b2b44955c56e6b548",
+      "exact": true
+    },
+    {
+      "name": "ordinary build",
+      "turn": 1,
+      "sha256": "2fd3e8c62024ed3d73cdf23233f4efe51ecc5c7405834cd4f5321a0d148b0d51",
+      "exact": true
+    },
+    {
+      "name": "ordinary endTurn full-state result",
+      "turn": 2,
+      "sha256": "7c8251c1e75b307d85ca2102cc0c7a5927da3fab63ccd57c0c1dbf4c6a0525bd",
+      "exact": true
+    },
+    {
+      "name": "download firefox-cycle2.json",
+      "sha256": "bae3864a4dd97ef75d42228badd7822af9ce15f9370270fb8bb5e3ac41772e64",
+      "exact": true
+    },
+    {
+      "name": "export is read only",
+      "turn": 2,
+      "sha256": "7c8251c1e75b307d85ca2102cc0c7a5927da3fab63ccd57c0c1dbf4c6a0525bd",
+      "exact": true
+    },
+    {
+      "name": "actual picker import firefox-cycle2.json",
+      "turn": 2,
+      "sha256": "7c8251c1e75b307d85ca2102cc0c7a5927da3fab63ccd57c0c1dbf4c6a0525bd",
+      "exact": true
+    },
+    {
+      "name": "autosave reload exact after picker import",
+      "turn": 2,
+      "sha256": "7c8251c1e75b307d85ca2102cc0c7a5927da3fab63ccd57c0c1dbf4c6a0525bd",
+      "exact": true
+    },
+    {
+      "name": "guide popup leaves original game unchanged",
+      "turn": 2,
+      "sha256": "7c8251c1e75b307d85ca2102cc0c7a5927da3fab63ccd57c0c1dbf4c6a0525bd",
+      "exact": true
+    },
+    {
+      "name": "guide return opens same browser autosave",
+      "exact": true,
+      "sha256": "7c8251c1e75b307d85ca2102cc0c7a5927da3fab63ccd57c0c1dbf4c6a0525bd"
+    },
+    {
+      "name": "actual picker import cycle66.json",
+      "turn": 66,
+      "sha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "exact": true
+    },
+    {
+      "name": "actual completed ODYSSEY conclusion is read only",
+      "turn": 66,
+      "sha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "exact": true
+    },
+    {
+      "name": "retained actual report inspection is read only",
+      "turn": 66,
+      "sha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "exact": true
+    },
+    {
+      "name": "download imported-actual-odyssey-export.json",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "exact": true
+    },
+    {
+      "name": "completed actual autosave reload remains exact",
+      "turn": 66,
+      "sha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "exact": true
+    }
+  ],
+  "ordinaryCommands": [
+    {
+      "type": "research",
+      "techId": "physics"
+    },
+    {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s28"
+    },
+    {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    }
+  ],
+  "endTurns": 1,
+  "actualCompletedSaveImported": true,
+  "actualInputUnchanged": true,
+  "sourceAndBuildUnchanged": true,
+  "graphics": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0",
+    "fallback": false,
+    "fallbackNotice": null,
+    "canvasHidden": false,
+    "webgl": {
+      "version": "WebGL 2.0",
+      "vendor": "Mozilla",
+      "renderer": "Radeon R9 200 Series, or similar",
+      "unmaskedRenderer": "Radeon R9 200 Series, or similar",
+      "unmaskedVendor": "AMD"
+    }
+  },
+  "pageErrors": [],
+  "networkFailures": [],
+  "consoleMessages": [
+    {
+      "label": "game",
+      "phase": "setup",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WebGL warning: drawElementsInstanced: Depth texture comparison requests (e.g. `LINEAR`) Filtering, but behavior is implementation-defined, and so on some systems will sometimes behave as `NEAREST`. (warns once)\"]"
+    },
+    {
+      "label": "game",
+      "phase": "new-campaign",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.\" {file: \"debugger eval code line 290 > eval\" line: 1}]"
+    },
+    {
+      "label": "game",
+      "phase": "save-roundtrip",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WebGL warning: drawElementsInstanced: Depth texture comparison requests (e.g. `LINEAR`) Filtering, but behavior is implementation-defined, and so on some systems will sometimes behave as `NEAREST`. (warns once)\"]"
+    },
+    {
+      "label": "guide",
+      "phase": "guide",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WebGL warning: drawElementsInstanced: Depth texture comparison requests (e.g. `LINEAR`) Filtering, but behavior is implementation-defined, and so on some systems will sometimes behave as `NEAREST`. (warns once)\"]"
+    },
+    {
+      "label": "game",
+      "phase": "imported-actual-ending",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WebGL warning: drawElementsInstanced: Depth texture comparison requests (e.g. `LINEAR`) Filtering, but behavior is implementation-defined, and so on some systems will sometimes behave as `NEAREST`. (warns once)\"]"
+    }
+  ]
+}

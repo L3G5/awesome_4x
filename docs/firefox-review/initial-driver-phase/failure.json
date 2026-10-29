@@ -1,0 +1,34 @@
+{
+  "phase": "construction-keyboard",
+  "message": "expect(locator).toBeFocused() failed\n\nLocator:  locator('.modal [data-tab=\"ship\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.be.focused\" with timeout 5000ms\n  - waiting for locator('.modal [data-tab=\"ship\"]')\n    9 × locator resolved to <button class=\"\" data-tab=\"ship\" data-system=\"s0\" aria-pressed=\"false\" data-action=\"construction-tab\">Ships</button>\n      - unexpected value \"inactive\"\n",
+  "stack": "Error: expect(locator).toBeFocused() failed\n\nLocator:  locator('.modal [data-tab=\"ship\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.be.focused\" with timeout 5000ms\n  - waiting for locator('.modal [data-tab=\"ship\"]')\n    9 × locator resolved to <button class=\"\" data-tab=\"ship\" data-system=\"s0\" aria-pressed=\"false\" data-action=\"construction-tab\">Ships</button>\n      - unexpected value \"inactive\"\n\n    at Proxy.<anonymous> (/home/leg/projects/awesome_4x/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at focused (file:///tmp/asterion-firefox-review/audit.mjs:45:71)\n    at file:///tmp/asterion-firefox-review/audit.mjs:57:154",
+  "lastEvent": {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab"
+  },
+  "checks": [
+    {
+      "name": "new campaign exact seeded state",
+      "turn": 1,
+      "sha256": "6dfca495f4e19fd7439fcfa161741c865d744608189b3906050a28711758a97b",
+      "exact": true
+    }
+  ],
+  "pageErrors": [],
+  "networkFailures": [],
+  "consoleMessages": [
+    {
+      "label": "game",
+      "phase": "setup",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WebGL warning: drawElementsInstanced: Depth texture comparison requests (e.g. `LINEAR`) Filtering, but behavior is implementation-defined, and so on some systems will sometimes behave as `NEAREST`. (warns once)\"]"
+    },
+    {
+      "label": "game",
+      "phase": "new-campaign",
+      "type": "warning",
+      "text": "[JavaScript Warning: \"WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.\" {file: \"debugger eval code line 290 > eval\" line: 1}]"
+    }
+  ]
+}

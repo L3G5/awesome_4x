@@ -1,0 +1,85 @@
+{
+  "scope": "Documentation and evidence changes leave all seventeen runtime files byte-identical to the accepted0.21.1 production build. Only build-info.json changes commit/time.",
+  "acceptedSourceCommit": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "workingHead": "e8c82b30cd6ee03abe64ebb95ba0789ee2c65ee1",
+  "runtimeFilesIdentical": [
+    {
+      "file": "art/khar-dominion.webp",
+      "sha256": "caa27ef07d09696771a15ea1093275d04b8ff610f36fe321c1d25f311acdea75"
+    },
+    {
+      "file": "art/last-observatory.webp",
+      "sha256": "f2dcf1801786757f3459594e31a32b29b3449a13b89b8fad34435640cdb1b21e"
+    },
+    {
+      "file": "art/luminous-choir.webp",
+      "sha256": "bc9ea736ef0d86eb7a74f5132f721216e6057127d39f854e103f37e84edcbd38"
+    },
+    {
+      "file": "art/patient-reef.webp",
+      "sha256": "f3e44fd2c8dfdad3adb0da12566af5555601d05c2848f574d3e013196e5375c8"
+    },
+    {
+      "file": "art/veyr-consortium.webp",
+      "sha256": "c2710657c32834e8741bf8ede0d1e9be604c9507d2dbab6de6a39219c86b46c7"
+    },
+    {
+      "file": "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2",
+      "sha256": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49"
+    },
+    {
+      "file": "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "file": "assets/index-C-HciKWK.css",
+      "sha256": "f7829bf71c0bd4c6666070939a0372ae0b7cae0c7beb7c5d986de8914a55e003"
+    },
+    {
+      "file": "assets/index-CgYxfsai.js",
+      "sha256": "4fd3cb1146abcffab52202e627fbce345b85542da76aa19a4b67bbe4bdc22b5c"
+    },
+    {
+      "file": "assets/marcellus-latin-400-normal-86dSXJnk.woff2",
+      "sha256": "8a539799d12e3a144273288055490f57e1eee84da7a9145f085bc522e80719c3"
+    },
+    {
+      "file": "assets/marcellus-latin-400-normal-AvMY561b.woff",
+      "sha256": "7083fa63e075a796f4beef9293fbc29a80be738d84bbfd89a20ddcdfc5c82198"
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "7253b4b012a13f1e45abd5a447d19e27cde90ff4fa400f6fa617352d5ef833c7"
+    },
+    {
+      "file": "guide.html",
+      "sha256": "aa848fb6a26561d58e6c8474b2cd598996035cd4c8d5e54178099c53dbc77fb8"
+    },
+    {
+      "file": "index.html",
+      "sha256": "c5fc41c27e717c9c8493934459211f39eb97f0ec0d3d6a44da8ee01df1763d49"
+    },
+    {
+      "file": "licenses/dm-sans.txt",
+      "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+    },
+    {
+      "file": "licenses/marcellus.txt",
+      "sha256": "a015677ab0010a8c14729226613516401d56e7c0f929ae54f1549eada2bab12c"
+    },
+    {
+      "file": "licenses/three.txt",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    }
+  ],
+  "acceptedBuildInfo": {
+    "version": "0.21.1",
+    "commit": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+    "builtAt": "2026-10-29T03:07:29.898Z"
+  },
+  "documentationBuildInfo": {
+    "version": "0.21.1",
+    "commit": "e8c82b30cd6ee03abe64ebb95ba0789ee2c65ee1",
+    "builtAt": "2026-10-29T03:37:27.548Z"
+  }
+}

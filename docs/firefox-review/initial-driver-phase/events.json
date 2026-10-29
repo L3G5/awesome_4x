@@ -1,0 +1,101 @@
+[
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"begin\"]",
+    "control": {
+      "text": "Take command →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "begin"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"menu\"]",
+    "control": {
+      "text": "",
+      "attributes": {
+        "data-action": "menu",
+        "aria-label": "Game menu",
+        "title": "Game menu"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"new-game-menu\"]",
+    "control": {
+      "text": "Begin a new campaign",
+      "attributes": {
+        "data-action": "new-game-menu"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "fill",
+    "selector": "#galaxy-seed",
+    "value": "ASTERION-FIREFOX-0211"
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"new-game-confirm\"]",
+    "control": {
+      "text": "Begin campaign →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "new-game-confirm"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "click",
+    "selector": "[data-action=\"begin\"]",
+    "control": {
+      "text": "Take command →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "begin"
+      }
+    }
+  },
+  {
+    "phase": "new-campaign",
+    "kind": "screenshot",
+    "file": "screenshots/01-new-campaign-webgl.png"
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "click",
+    "selector": "[data-action=\"build-menu\"]",
+    "control": {
+      "text": "+ Commission a project",
+      "attributes": {
+        "class": "wide-button",
+        "data-action": "build-menu",
+        "data-system": "s0"
+      }
+    }
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab"
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab"
+  },
+  {
+    "phase": "construction-keyboard",
+    "kind": "key",
+    "value": "Tab"
+  }
+]

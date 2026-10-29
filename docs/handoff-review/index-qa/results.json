@@ -1,0 +1,35 @@
+{
+  "baseRevision": "3c6e822",
+  "integratedLinkRevision": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "localLinks": 45,
+  "firefoxBundleRoot": "/tmp/asterion-stage24-handoff/docs/firefox-review",
+  "firefoxIntegration": "Frozen handoff bundle; root will integrate",
+  "readmeReports": 32,
+  "canonicalReports": 28,
+  "viewports": [
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "skipLink": true,
+      "categoryAnchors": true,
+      "archiveDisclosure": true,
+      "stage23MergedLink": true,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "skipLink": true,
+      "categoryAnchors": true,
+      "archiveDisclosure": true,
+      "stage23MergedLink": true,
+      "pageErrors": []
+    }
+  ],
+  "htmlSha256": "da476d6ddf9bf8ed9a9259aa102f5e8c3f130ee85134411c195efaf4c8029ed0",
+  "outputPathReview": {
+    "odyssey": "Wrapper rejects output under frozen bundle; child writes only --out and temporary module archive.",
+    "expeditionComparison": "Explicit --out contains results.json, instrumentation-patches.json, ai-change.diff and README.txt; modules use temporary archives.",
+    "saveAudit": "All generated JSON and simulation-finals use explicit --out; engine modules use os.tmpdir."
+  }
+}
