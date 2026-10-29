@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-29T18:22:35.200Z",
+  "base": "http://127.0.0.1:43229/",
+  "build": {
+    "version": "0.23.0",
+    "commit": "b9af2b96203c941cff261ccc8b2984c0432438a9",
+    "builtAt": "2026-10-29T18:14:35.020Z"
+  },
+  "assets": [
+    {
+      "path": "./assets/index-LaH58i5S.js",
+      "sha256": "47d3eba4736af187fae9e5f0d3e287535d683e1ab797016a04c4e1d8b21203c8"
+    },
+    {
+      "path": "./assets/index-BrS5_trg.css",
+      "sha256": "3abf9cbf273c6e84158b2583e2d42ce8cfe0cf2250ce644e2a56a49aa16f1ea3"
+    }
+  ],
+  "checks": [
+    "fresh mobile inspection preserves state and compact controls",
+    "deliberate paid movement, close, full undo and identical repeat",
+    "Russian switch and exact undo history after reload",
+    "confirmed cycle resolution clears history and matches engine",
+    "export/import retain exact campaign and Russian colony-route comparison",
+    "English field guide contains new controls"
+  ],
+  "errors": [],
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "browser": "148.0.7778.96"
+}

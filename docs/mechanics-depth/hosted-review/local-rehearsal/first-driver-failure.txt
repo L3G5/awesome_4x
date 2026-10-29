@@ -1,0 +1,13 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForEvent: Timeout 30000ms exceeded while waiting for event "popup"
+=========================== logs ===========================
+waiting for event "popup"
+============================================================
+    at /home/leg/projects/awesome_4x/docs/mechanics-depth/hosted-review/verify.mjs:57:18 {
+  name: 'TimeoutError'
+}
+
+Node.js v22.23.1
