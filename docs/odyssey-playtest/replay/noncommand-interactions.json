@@ -1,0 +1,1862 @@
+[
+  {
+    "eventIndex": 8,
+    "uiAction": "begin",
+    "selector": "[data-action=begin]"
+  },
+  {
+    "eventIndex": 10,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 12,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 15,
+    "uiAction": null,
+    "selector": "[data-fleet=f2]"
+  },
+  {
+    "eventIndex": 16,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 18,
+    "uiAction": "colonize",
+    "selector": "[data-action=colonize]"
+  },
+  {
+    "eventIndex": 21,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 23,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 24,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 25,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 26,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=lab]) summary"
+  },
+  {
+    "eventIndex": 29,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 30,
+    "uiAction": null,
+    "selector": "[data-system-select=s41]"
+  },
+  {
+    "eventIndex": 34,
+    "uiAction": null,
+    "selector": "[data-system-select=s28]"
+  },
+  {
+    "eventIndex": 36,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 37,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 39,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 40,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 43,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 44,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 46,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 47,
+    "uiAction": null,
+    "selector": "[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 51,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 53,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 54,
+    "uiAction": null,
+    "selector": "[data-system-select=s10]"
+  },
+  {
+    "eventIndex": 56,
+    "uiAction": null,
+    "selector": "[data-system-select=s5]"
+  },
+  {
+    "eventIndex": 58,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 59,
+    "uiAction": null,
+    "selector": "[data-system-select=s0]"
+  },
+  {
+    "eventIndex": 61,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 64,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 66,
+    "uiAction": null,
+    "selector": "[data-system-select=s33]"
+  },
+  {
+    "eventIndex": 68,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 69,
+    "uiAction": null,
+    "selector": "[data-system-select=s13]"
+  },
+  {
+    "eventIndex": 71,
+    "uiAction": null,
+    "selector": "[data-system-select=s26]"
+  },
+  {
+    "eventIndex": 74,
+    "uiAction": null,
+    "selector": "[data-system-select=s1]"
+  },
+  {
+    "eventIndex": 76,
+    "uiAction": null,
+    "selector": "[data-system-select=s18]"
+  },
+  {
+    "eventIndex": 78,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 79,
+    "uiAction": null,
+    "selector": "[data-system-select=s0]"
+  },
+  {
+    "eventIndex": 81,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 83,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 87,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 89,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 90,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 91,
+    "uiAction": null,
+    "selector": "[data-system-select=s31]"
+  },
+  {
+    "eventIndex": 93,
+    "uiAction": null,
+    "selector": "[data-system-select=s39]"
+  },
+  {
+    "eventIndex": 97,
+    "uiAction": null,
+    "selector": "[data-system-select=s1]"
+  },
+  {
+    "eventIndex": 99,
+    "uiAction": null,
+    "selector": "[data-system-select=s18]"
+  },
+  {
+    "eventIndex": 101,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 102,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 103,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 108,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 109,
+    "uiAction": null,
+    "selector": "[data-system-select=s10]"
+  },
+  {
+    "eventIndex": 111,
+    "uiAction": null,
+    "selector": "[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 114,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 116,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 117,
+    "uiAction": null,
+    "selector": "[data-fleet=f16]"
+  },
+  {
+    "eventIndex": 118,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 120,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 121,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 122,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 124,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 125,
+    "uiAction": null,
+    "selector": "[data-system-select=s23]"
+  },
+  {
+    "eventIndex": 127,
+    "uiAction": null,
+    "selector": "[data-system-select=s36]"
+  },
+  {
+    "eventIndex": 131,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 134,
+    "uiAction": null,
+    "selector": "[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 136,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 138,
+    "uiAction": null,
+    "selector": "[data-fleet=f16]"
+  },
+  {
+    "eventIndex": 139,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 141,
+    "uiAction": "colonize",
+    "selector": "[data-action=colonize]"
+  },
+  {
+    "eventIndex": 143,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 146,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 147,
+    "uiAction": null,
+    "selector": "[data-system-select=s4]"
+  },
+  {
+    "eventIndex": 150,
+    "uiAction": null,
+    "selector": "[data-system-select=s9]"
+  },
+  {
+    "eventIndex": 153,
+    "uiAction": null,
+    "selector": "[data-system-select=s17]"
+  },
+  {
+    "eventIndex": 155,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 156,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 157,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 159,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 160,
+    "uiAction": null,
+    "selector": "[data-system-select=s22]"
+  },
+  {
+    "eventIndex": 163,
+    "uiAction": null,
+    "selector": "[data-system-select=s3]"
+  },
+  {
+    "eventIndex": 165,
+    "uiAction": null,
+    "selector": "[data-fleet=f20]"
+  },
+  {
+    "eventIndex": 166,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 168,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 169,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 170,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=habitat]) summary"
+  },
+  {
+    "eventIndex": 174,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 176,
+    "uiAction": null,
+    "selector": "[data-system-select=s35]"
+  },
+  {
+    "eventIndex": 179,
+    "uiAction": null,
+    "selector": "[data-fleet=f20]"
+  },
+  {
+    "eventIndex": 180,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 182,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 183,
+    "uiAction": null,
+    "selector": "[data-system-select=s27]"
+  },
+  {
+    "eventIndex": 185,
+    "uiAction": null,
+    "selector": "[data-system-select=s14]"
+  },
+  {
+    "eventIndex": 187,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 191,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 193,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 195,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 196,
+    "uiAction": null,
+    "selector": "[data-fleet=f20]"
+  },
+  {
+    "eventIndex": 197,
+    "uiAction": null,
+    "selector": "[data-system-select=s4]"
+  },
+  {
+    "eventIndex": 199,
+    "uiAction": "colonize",
+    "selector": "[data-action=colonize]"
+  },
+  {
+    "eventIndex": 201,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 206,
+    "uiAction": "fleet-roster",
+    "selector": "[data-action=fleet-roster]"
+  },
+  {
+    "eventIndex": 208,
+    "uiAction": null,
+    "selector": ".modal [data-fleet=f1]"
+  },
+  {
+    "eventIndex": 209,
+    "uiAction": null,
+    "selector": "[data-system-select=s6]"
+  },
+  {
+    "eventIndex": 211,
+    "uiAction": null,
+    "selector": "[data-system-select=s11]"
+  },
+  {
+    "eventIndex": 215,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 216,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 218,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 219,
+    "uiAction": null,
+    "selector": "[data-system-select=s19]"
+  },
+  {
+    "eventIndex": 222,
+    "uiAction": null,
+    "selector": "[data-system-select=s32]"
+  },
+  {
+    "eventIndex": 225,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 226,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 228,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 229,
+    "uiAction": null,
+    "selector": "[data-system-select=s24]"
+  },
+  {
+    "eventIndex": 231,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 232,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 233,
+    "uiAction": null,
+    "selector": "[data-system-select=s2]"
+  },
+  {
+    "eventIndex": 237,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 238,
+    "uiAction": null,
+    "selector": "[data-system-select=s4]"
+  },
+  {
+    "eventIndex": 241,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 242,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 243,
+    "uiAction": "development-menu",
+    "selector": "[data-action=development-menu]"
+  },
+  {
+    "eventIndex": 245,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-charter=extraction]) summary"
+  },
+  {
+    "eventIndex": 248,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 249,
+    "uiAction": null,
+    "selector": "[data-system-select=s37]"
+  },
+  {
+    "eventIndex": 251,
+    "uiAction": null,
+    "selector": "[data-system-select=s29]"
+  },
+  {
+    "eventIndex": 254,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 255,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 257,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 258,
+    "uiAction": null,
+    "selector": "[data-system-select=s16]"
+  },
+  {
+    "eventIndex": 260,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 262,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 265,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 267,
+    "uiAction": null,
+    "selector": "[data-system-select=s8]"
+  },
+  {
+    "eventIndex": 269,
+    "uiAction": null,
+    "selector": "[data-system-select=s21]"
+  },
+  {
+    "eventIndex": 272,
+    "uiAction": null,
+    "selector": "[data-system-select=s34]"
+  },
+  {
+    "eventIndex": 274,
+    "uiAction": null,
+    "selector": "[data-system-select=s13]"
+  },
+  {
+    "eventIndex": 278,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 279,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 280,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 282,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 283,
+    "uiAction": null,
+    "selector": "[data-system-select=s5]"
+  },
+  {
+    "eventIndex": 285,
+    "uiAction": null,
+    "selector": "[data-system-select=s10]"
+  },
+  {
+    "eventIndex": 288,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 289,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 291,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 292,
+    "uiAction": null,
+    "selector": "[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 294,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 297,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 299,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 300,
+    "uiAction": null,
+    "selector": "[data-fleet=f27]"
+  },
+  {
+    "eventIndex": 301,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 303,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 304,
+    "uiAction": null,
+    "selector": "[data-system-select=s12]"
+  },
+  {
+    "eventIndex": 306,
+    "uiAction": null,
+    "selector": "[data-system-select=s25]"
+  },
+  {
+    "eventIndex": 308,
+    "uiAction": null,
+    "selector": "[data-fleet=f27]"
+  },
+  {
+    "eventIndex": 309,
+    "uiAction": "reset-view",
+    "selector": "[data-action=reset-view]"
+  },
+  {
+    "eventIndex": 310,
+    "uiAction": null,
+    "selector": "[data-system-id=s16]"
+  },
+  {
+    "eventIndex": 316,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 318,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 319,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 320,
+    "uiAction": "development-menu",
+    "selector": "[data-action=development-menu]"
+  },
+  {
+    "eventIndex": 321,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-charter=forge]) summary"
+  },
+  {
+    "eventIndex": 325,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 326,
+    "uiAction": null,
+    "selector": "[data-system-select=s38]"
+  },
+  {
+    "eventIndex": 328,
+    "uiAction": null,
+    "selector": "[data-system-select=s30]"
+  },
+  {
+    "eventIndex": 331,
+    "uiAction": null,
+    "selector": "[data-fleet=f27]"
+  },
+  {
+    "eventIndex": 332,
+    "uiAction": "development-menu",
+    "selector": "[data-action=development-menu]"
+  },
+  {
+    "eventIndex": 335,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 336,
+    "uiAction": null,
+    "selector": "[data-system-select=s17]"
+  },
+  {
+    "eventIndex": 338,
+    "uiAction": null,
+    "selector": "[data-system-select=s22]"
+  },
+  {
+    "eventIndex": 342,
+    "uiAction": null,
+    "selector": "[data-fleet=f27]"
+  },
+  {
+    "eventIndex": 343,
+    "uiAction": "reset-view",
+    "selector": "[data-action=reset-view]"
+  },
+  {
+    "eventIndex": 344,
+    "uiAction": null,
+    "selector": "[data-system-id=s16]"
+  },
+  {
+    "eventIndex": 346,
+    "uiAction": null,
+    "selector": ".route-stop[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 347,
+    "uiAction": "colonize",
+    "selector": "[data-action=colonize]"
+  },
+  {
+    "eventIndex": 349,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 351,
+    "uiAction": "fleet-roster",
+    "selector": "[data-action=fleet-roster]"
+  },
+  {
+    "eventIndex": 352,
+    "uiAction": null,
+    "selector": ".modal [data-fleet=f1]"
+  },
+  {
+    "eventIndex": 353,
+    "uiAction": null,
+    "selector": "[data-system-select=s3]"
+  },
+  {
+    "eventIndex": 355,
+    "uiAction": null,
+    "selector": "[data-system-select=s35]"
+  },
+  {
+    "eventIndex": 358,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 359,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 360,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 362,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 363,
+    "uiAction": null,
+    "selector": "[data-system-select=s27]"
+  },
+  {
+    "eventIndex": 365,
+    "uiAction": null,
+    "selector": "[data-system-select=s40]"
+  },
+  {
+    "eventIndex": 368,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 369,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 372,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 373,
+    "uiAction": "reset-view",
+    "selector": "[data-action=reset-view]"
+  },
+  {
+    "eventIndex": 374,
+    "uiAction": null,
+    "selector": "[data-system-id=s16]"
+  },
+  {
+    "eventIndex": 380,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 384,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 385,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 387,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 390,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 393,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 397,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 399,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 401,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 403,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 404,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 408,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 409,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 412,
+    "uiAction": null,
+    "selector": "[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 413,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 416,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 417,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 418,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=factory]) summary"
+  },
+  {
+    "eventIndex": 421,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 423,
+    "uiAction": null,
+    "selector": "[data-page=empire]"
+  },
+  {
+    "eventIndex": 427,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 428,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 429,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 430,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 434,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 436,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 440,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 441,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 442,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 443,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=beacon]) summary"
+  },
+  {
+    "eventIndex": 446,
+    "uiAction": null,
+    "selector": "[data-fleet=f1]"
+  },
+  {
+    "eventIndex": 447,
+    "uiAction": "anomaly",
+    "selector": "[data-action=anomaly]"
+  },
+  {
+    "eventIndex": 449,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 452,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 453,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 454,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 455,
+    "uiAction": null,
+    "selector": "#replace-building"
+  },
+  {
+    "eventIndex": 456,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=beacon]) summary"
+  },
+  {
+    "eventIndex": 459,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 461,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 462,
+    "uiAction": null,
+    "selector": "#replace-building"
+  },
+  {
+    "eventIndex": 465,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 467,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 468,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 469,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 470,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 471,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 474,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 475,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 477,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 479,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 488,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 489,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 490,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 491,
+    "uiAction": null,
+    "selector": "#replace-building"
+  },
+  {
+    "eventIndex": 492,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=beacon]) summary"
+  },
+  {
+    "eventIndex": 496,
+    "uiAction": null,
+    "selector": "[data-fleet=f49]"
+  },
+  {
+    "eventIndex": 497,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 500,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 503,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 506,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 507,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 510,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 511,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 513,
+    "uiAction": null,
+    "selector": "[data-fleet=f49]"
+  },
+  {
+    "eventIndex": 514,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 519,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 520,
+    "uiAction": null,
+    "selector": "#replace-building"
+  },
+  {
+    "eventIndex": 524,
+    "uiAction": null,
+    "selector": "[data-page=empire]"
+  },
+  {
+    "eventIndex": 528,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 529,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 530,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 531,
+    "uiAction": "construction-tab",
+    "selector": "[data-action=construction-tab][data-tab=ship]"
+  },
+  {
+    "eventIndex": 533,
+    "uiAction": null,
+    "selector": "[data-fleet=f32]"
+  },
+  {
+    "eventIndex": 534,
+    "uiAction": null,
+    "selector": "[data-system-select=s15]"
+  },
+  {
+    "eventIndex": 535,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 538,
+    "uiAction": null,
+    "selector": "[data-page=research]"
+  },
+  {
+    "eventIndex": 540,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 546,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 547,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 554,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 555,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 556,
+    "uiAction": null,
+    "selector": "[data-fleet=f54]"
+  },
+  {
+    "eventIndex": 557,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 560,
+    "uiAction": null,
+    "selector": "[data-fleet=f49]"
+  },
+  {
+    "eventIndex": 562,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 563,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 565,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 567,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 570,
+    "uiAction": null,
+    "selector": "[data-fleet=f55]"
+  },
+  {
+    "eventIndex": 571,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 573,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 575,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 576,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 582,
+    "uiAction": "combat-report",
+    "selector": "[data-action=combat-report][data-report=\"1\"]"
+  },
+  {
+    "eventIndex": 586,
+    "uiAction": null,
+    "selector": ".combat-exchanges summary"
+  },
+  {
+    "eventIndex": 588,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 589,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 590,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 593,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 596,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 601,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 607,
+    "uiAction": "combat-report",
+    "selector": ".modal [data-action=combat-report]"
+  },
+  {
+    "eventIndex": 608,
+    "uiAction": null,
+    "selector": ".combat-exchanges summary"
+  },
+  {
+    "eventIndex": 609,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 611,
+    "uiAction": null,
+    "selector": "[data-fleet=f3]"
+  },
+  {
+    "eventIndex": 612,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 614,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 616,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 618,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 621,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 622,
+    "uiAction": null,
+    "selector": "[data-fleet=f58]"
+  },
+  {
+    "eventIndex": 625,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 626,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 627,
+    "uiAction": null,
+    "selector": "#replace-building"
+  },
+  {
+    "eventIndex": 628,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=shipyard]) summary"
+  },
+  {
+    "eventIndex": 635,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 636,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 639,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 640,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 641,
+    "uiAction": null,
+    "selector": "[data-fleet=f62]"
+  },
+  {
+    "eventIndex": 642,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 644,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 647,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 648,
+    "uiAction": null,
+    "selector": "[data-fleet=f58]"
+  },
+  {
+    "eventIndex": 653,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 658,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 659,
+    "uiAction": null,
+    "selector": "[data-fleet=f67]"
+  },
+  {
+    "eventIndex": 660,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 662,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 664,
+    "uiAction": null,
+    "selector": "[data-fleet=f62]"
+  },
+  {
+    "eventIndex": 666,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 667,
+    "uiAction": null,
+    "selector": "[data-fleet=f58]"
+  },
+  {
+    "eventIndex": 673,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 674,
+    "uiAction": null,
+    "selector": "[data-fleet=f70]"
+  },
+  {
+    "eventIndex": 675,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 677,
+    "uiAction": null,
+    "selector": "[data-fleet=f53]"
+  },
+  {
+    "eventIndex": 678,
+    "uiAction": "merge-menu",
+    "selector": "[data-action=merge-menu]"
+  },
+  {
+    "eventIndex": 683,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 685,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 688,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 689,
+    "uiAction": null,
+    "selector": "[data-fleet=f58]"
+  },
+  {
+    "eventIndex": 691,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 696,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 698,
+    "uiAction": null,
+    "selector": "[data-page=galaxy]"
+  },
+  {
+    "eventIndex": 699,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 700,
+    "uiAction": null,
+    "selector": "[data-fleet=f74]"
+  },
+  {
+    "eventIndex": 704,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 706,
+    "uiAction": null,
+    "selector": "[data-fleet=f58]"
+  },
+  {
+    "eventIndex": 709,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 712,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 713,
+    "uiAction": null,
+    "selector": "[data-fleet=f74]"
+  },
+  {
+    "eventIndex": 716,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 719,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 720,
+    "uiAction": "build-menu",
+    "selector": "[data-action=build-menu]"
+  },
+  {
+    "eventIndex": 721,
+    "uiAction": null,
+    "selector": "#replace-building"
+  },
+  {
+    "eventIndex": 722,
+    "uiAction": null,
+    "selector": ".investment-option:has([data-item=shipyard]) summary"
+  },
+  {
+    "eventIndex": 727,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 728,
+    "uiAction": null,
+    "selector": "[data-fleet=f81]"
+  },
+  {
+    "eventIndex": 734,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 736,
+    "uiAction": "home",
+    "selector": "[data-action=home]"
+  },
+  {
+    "eventIndex": 737,
+    "uiAction": null,
+    "selector": "[data-fleet=f83]"
+  },
+  {
+    "eventIndex": 738,
+    "uiAction": null,
+    "selector": "[data-system-select=s20]"
+  },
+  {
+    "eventIndex": 740,
+    "uiAction": null,
+    "selector": "[data-system-select=s7]"
+  },
+  {
+    "eventIndex": 742,
+    "uiAction": null,
+    "selector": "[data-fleet=f58]"
+  },
+  {
+    "eventIndex": 744,
+    "uiAction": null,
+    "selector": "[data-fleet=f74]"
+  },
+  {
+    "eventIndex": 746,
+    "uiAction": null,
+    "selector": "[data-page=diplomacy]"
+  },
+  {
+    "eventIndex": 748,
+    "uiAction": "peace-confirmation",
+    "selector": "[data-action=peace-confirmation][data-target=veyr]"
+  },
+  {
+    "eventIndex": 750,
+    "uiAction": "peace-confirmation",
+    "selector": "[data-action=peace-confirmation][data-target=choir]"
+  },
+  {
+    "eventIndex": 758,
+    "uiAction": "menu",
+    "selector": "[data-action=menu]"
+  },
+  {
+    "eventIndex": 763,
+    "uiAction": "show-conclusion",
+    "selector": ".modal [data-action=show-conclusion]"
+  },
+  {
+    "eventIndex": 764,
+    "uiAction": "conclusion-chronicle",
+    "selector": "[data-action=conclusion-chronicle]"
+  },
+  {
+    "eventIndex": 765,
+    "uiAction": "show-conclusion",
+    "selector": "[data-action=show-conclusion]:visible"
+  },
+  {
+    "eventIndex": 766,
+    "uiAction": "combat-report",
+    "selector": ".conclusion-history [data-action=combat-report]"
+  },
+  {
+    "eventIndex": 767,
+    "uiAction": null,
+    "selector": ".combat-exchanges summary"
+  },
+  {
+    "eventIndex": 769,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 770,
+    "uiAction": "show-conclusion",
+    "selector": "[data-action=show-conclusion]:visible"
+  },
+  {
+    "eventIndex": 771,
+    "uiAction": "anomaly",
+    "selector": ".conclusion-history [data-action=anomaly]"
+  },
+  {
+    "eventIndex": 773,
+    "uiAction": "close-modal",
+    "selector": "[data-action=close-modal]"
+  },
+  {
+    "eventIndex": 774,
+    "uiAction": "show-conclusion",
+    "selector": "[data-action=show-conclusion]:visible"
+  },
+  {
+    "eventIndex": 775,
+    "uiAction": null,
+    "selector": ".campaign-conclusion [data-system-select=s7]"
+  }
+]

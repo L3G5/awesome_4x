@@ -22,6 +22,8 @@ The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.m
 
 The [planning feedback review](docs/stage21-planning-review/index.html) verifies alignment funding after current income and explicit lethal-retaliation warnings, with unchanged simulation outcomes and independent desktop/narrow checks.
 
+The [Odyssey campaign](docs/odyssey-playtest/index.html) follows actual version-0.20 play through three blockade interruptions and Transcendence at cycle 66, one step ahead of Khar. Its portable replay reproduces all 280 commands and 16 actual exports exactly. Run `node docs/odyssey-playtest/replay.mjs --out /tmp/odyssey-reproduction`.
+
 The [expedition reinforcement review](docs/stage20-expedition-review/index.html) connects two replay-derived local opportunities to a bounded AI policy and its independent checks. The [controlled comparison](docs/expedition-reinforcement-comparison/index.html) holds the engine and player policy fixed across 32 configurations; its three absorptions changed one paired winner. Reproduce with `node scripts/expedition-reinforcement-benchmark.mjs --out /tmp/expedition-reinforcement-results`.
 
 The [campaign conclusion review](docs/stage19-conclusion-review/index.html) verifies reopened endings, final holdings, retained historical links and the public victory tie rule against the completed WATCH and military campaigns.

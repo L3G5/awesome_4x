@@ -1,0 +1,84 @@
+{
+  "scope": "Independent reconstruction of one completed UI campaign, not a new campaign sample, strategy benchmark, counterfactual or autonomous policy run. Reviewer did not operate the original campaign. Reviewer authored part of the existing engine; independence here concerns reconstruction from another operator’s UI receipts, not original engine implementation.",
+  "enginePin": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "integratedPin": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "originalManifestSha256": "1833ec839e140261d922df8a8498ba54efc5b2ad8d6b6fdc18f26091a8b22a79",
+  "originalUnchanged": true,
+  "files": [
+    {
+      "file": "replay.mjs",
+      "bytes": 16545,
+      "sha256": "9a9e761040ce9cb7a1b3fa8f7d166a20707c5666b28743667ccb3efe4da45a34"
+    },
+    {
+      "file": "package-review.mjs",
+      "bytes": 18588,
+      "sha256": "7debc078457405f6bc23fb39945eec73d61340ab58be4c96cb895273b26d3517"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 2419,
+      "sha256": "60e62f083ab9183fb8f6b41f8b148b68b2f0e311f101a8755aec9ab376320d37"
+    },
+    {
+      "file": "index.html",
+      "bytes": 9089,
+      "sha256": "9ffcc5677f74b42fbf05072bac69541916c5a84c1b30c040e2731afdc04f403c"
+    },
+    {
+      "file": "review-notes.json",
+      "bytes": 6335,
+      "sha256": "7535de7df5ccd2a91712748438eab28fe8f89132658dfee0175090012f3274d3"
+    },
+    {
+      "file": "original-inputs.json",
+      "bytes": 9016,
+      "sha256": "eed1307c9f5aa8cc0da51c1885cb35e21f0b98d4395ca3da8c2c96ab69dafe8e"
+    },
+    {
+      "file": "results.json",
+      "bytes": 9358,
+      "sha256": "3d49e4e1c8c569ddd78f26e7f17409a16deafacdeeb623bc176de414c519d2ef"
+    },
+    {
+      "file": "source-pin.json",
+      "bytes": 2422,
+      "sha256": "b90c02e9199ab7efe3c1a8a218bb7eb3d83ca3a85ac57c0822ac6ee42cdbb8de"
+    },
+    {
+      "file": "commands.json",
+      "bytes": 130197,
+      "sha256": "c14d91a0b69b7871b80e48b683cbae3a801ac512b61df617369bb8ac81ee48af"
+    },
+    {
+      "file": "command-results.json",
+      "bytes": 75066,
+      "sha256": "224c14d04a9a0f41b9f707034258c8179602c286206daad3c445d74a6a21f74c"
+    },
+    {
+      "file": "event-state-hashes.json",
+      "bytes": 137735,
+      "sha256": "cbe69ac33aa0b7c0a3e21fa5e660995d4679b3af9cddd487b018dbdf417e126d"
+    },
+    {
+      "file": "noncommand-interactions.json",
+      "bytes": 36369,
+      "sha256": "cbbb3081b9fb9f08568324f03ab85221c387cb00da1c5fa8108eacde0a6ee885"
+    },
+    {
+      "file": "observation-checks.json",
+      "bytes": 49720,
+      "sha256": "dd0fd9015292c9013f2cc9a90603e797a1a42cfa89a86118026ef2348f3958ce"
+    },
+    {
+      "file": "evidence/cycle66-asterion-victory.png",
+      "bytes": 446743,
+      "sha256": "9e9081c6d5592ee8bef9b193992814f3c153b5c3cd8545eeaa92378147711a1f"
+    },
+    {
+      "file": "evidence/cycle66-retained-battle-rounds-verified.png",
+      "bytes": 441207,
+      "sha256": "cb6fd0fc92073c12acbca94dba6d3cdcc73a1502121ceb4dec928a88bc845ba1"
+    }
+  ]
+}

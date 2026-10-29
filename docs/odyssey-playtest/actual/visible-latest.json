@@ -1,0 +1,903 @@
+{
+  "seed": "ASTERION-ODYSSEY-20",
+  "turn": 66,
+  "winner": "player",
+  "victoryType": "Transcendence",
+  "ownFaction": {
+    "credits": 2247,
+    "minerals": 241,
+    "science": 761,
+    "orders": 13,
+    "techs": [
+      "physics",
+      "ecology",
+      "logistics",
+      "industry",
+      "computing",
+      "weapons",
+      "singularity",
+      "cruisers",
+      "diplomacy",
+      "shields",
+      "command",
+      "terraforming"
+    ],
+    "research": null,
+    "contacts": [
+      "veyr",
+      "choir",
+      "khar"
+    ],
+    "relations": {
+      "veyr": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 65,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 31,
+        "truceUntil": 70,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 72,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 65,
+        "lastBorderCount": 1,
+        "grievance": 19,
+        "tradeEndsAt": 0,
+        "truceUntil": 70,
+        "warStartColonies": 5
+      }
+    },
+    "alignment": {
+      "progress": 10,
+      "sites": [
+        "s7",
+        "s20",
+        "s0"
+      ],
+      "active": true,
+      "started": true,
+      "reportedBeacons": [
+        "s0",
+        "s7",
+        "s20"
+      ]
+    }
+  },
+  "systems": [
+    {
+      "id": "s0",
+      "name": "Solace",
+      "x": 29,
+      "y": 29,
+      "owner": "player",
+      "surveyed": true,
+      "sensor": true,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard",
+        "lab",
+        "factory",
+        "beacon"
+      ],
+      "charter": {
+        "type": "forge",
+        "level": 1
+      },
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null
+    },
+    {
+      "id": "s1",
+      "name": "Veyr Prime",
+      "x": -29,
+      "y": 29,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s2",
+      "name": "Kharos",
+      "x": -29,
+      "y": -29,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s3",
+      "name": "Lumen",
+      "x": 29,
+      "y": -29,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s4",
+      "name": "Meridian",
+      "x": 13,
+      "y": -2,
+      "owner": "player",
+      "surveyed": true,
+      "sensor": true,
+      "type": "arid",
+      "habitability": 59,
+      "richness": 4,
+      "science": 4,
+      "population": 7,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "lab",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "pilgrims",
+        "resolved": true
+      }
+    },
+    {
+      "id": "s5",
+      "name": "Hesper",
+      "x": -11.2,
+      "y": 10.8,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s6",
+      "name": "Aurelia",
+      "x": 3.4,
+      "y": -19.4,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s7",
+      "name": "Nacre",
+      "x": 14,
+      "y": 16.2,
+      "owner": "player",
+      "surveyed": true,
+      "sensor": true,
+      "type": "ice",
+      "habitability": 41,
+      "richness": 1,
+      "science": 4,
+      "population": 6,
+      "growth": 0,
+      "buildings": [
+        "factory",
+        "beacon",
+        "bastion",
+        "shipyard"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null
+    },
+    {
+      "id": "s8",
+      "name": "Caldera",
+      "x": -20.4,
+      "y": -6.4,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s9",
+      "name": "Velorum",
+      "x": 20.6,
+      "y": -12.3,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s10",
+      "name": "Ashfall",
+      "x": -7.4,
+      "y": 24.4,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s11",
+      "name": "Carina",
+      "x": -9.8,
+      "y": -24.3,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s12",
+      "name": "Eidolon",
+      "x": 25.2,
+      "y": 12.7,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s13",
+      "name": "Sable",
+      "x": -26.7,
+      "y": 13.1,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s14",
+      "name": "Ilyra",
+      "x": 13.5,
+      "y": -26,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s15",
+      "name": "Kepler",
+      "x": 6.3,
+      "y": 30,
+      "owner": "player",
+      "surveyed": true,
+      "sensor": true,
+      "type": "ocean",
+      "habitability": 76,
+      "richness": 2,
+      "science": 3,
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "mine",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null
+    },
+    {
+      "id": "s16",
+      "name": "Stillwater",
+      "x": -29,
+      "y": -15,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": true,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 5,
+      "science": 4
+    },
+    {
+      "id": "s17",
+      "name": "Orison",
+      "x": 32.7,
+      "y": -11.5,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s18",
+      "name": "Cinder",
+      "x": -19.2,
+      "y": 27.9,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s19",
+      "name": "Bellatrix",
+      "x": -8.4,
+      "y": -33.8,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s20",
+      "name": "Sundrift",
+      "x": 25.7,
+      "y": 23.5,
+      "owner": "player",
+      "surveyed": true,
+      "sensor": true,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 4,
+      "science": 1,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "factory",
+        "beacon",
+        "bastion",
+        "shipyard"
+      ],
+      "charter": {
+        "type": "extraction",
+        "level": 1
+      },
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "wreck",
+        "resolved": true
+      }
+    },
+    {
+      "id": "s21",
+      "name": "Thalassa",
+      "x": -37.5,
+      "y": -3.3,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s22",
+      "name": "Ophion",
+      "x": 28.8,
+      "y": -23.8,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s23",
+      "name": "Tethys",
+      "x": 1.8,
+      "y": 38.5,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s24",
+      "name": "Corvus",
+      "x": -22.5,
+      "y": -32.9,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s25",
+      "name": "Elysian",
+      "x": 38.9,
+      "y": 4,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s26",
+      "name": "Aster",
+      "x": -29,
+      "y": 26.3,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s27",
+      "name": "Nyx",
+      "x": 12.9,
+      "y": -40.9,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s28",
+      "name": "Haven",
+      "x": 22.4,
+      "y": 33.9,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s29",
+      "name": "Aldebaran",
+      "x": -40,
+      "y": -16.4,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s30",
+      "name": "Caelum",
+      "x": 41.4,
+      "y": -13.4,
+      "owner": "choir",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s31",
+      "name": "Vesper",
+      "x": -20.1,
+      "y": 37.7,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s32",
+      "name": "Iona",
+      "x": -18.4,
+      "y": -39.5,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s33",
+      "name": "Halcyon",
+      "x": 40.6,
+      "y": 20.3,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s34",
+      "name": "Antares",
+      "x": -45.1,
+      "y": 11.5,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s35",
+      "name": "Seraph",
+      "x": 24.2,
+      "y": -39.1,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s36",
+      "name": "Peregrine",
+      "x": 3.2,
+      "y": 46.7,
+      "owner": "veyr",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s37",
+      "name": "Morrow",
+      "x": -39.2,
+      "y": -24.2,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s38",
+      "name": "Zenith",
+      "x": 47.7,
+      "y": -7.3,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s39",
+      "name": "Eos",
+      "x": -30,
+      "y": 39.3,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s40",
+      "name": "Terminus",
+      "x": 1.3,
+      "y": -48.8,
+      "owner": "khar",
+      "surveyed": true,
+      "sensor": false
+    },
+    {
+      "id": "s41",
+      "name": "Asterion",
+      "x": 34.6,
+      "y": 35.3,
+      "owner": null,
+      "surveyed": true,
+      "sensor": false
+    }
+  ],
+  "fleets": [
+    {
+      "id": "f1",
+      "owner": "player",
+      "name": "Pathfinder 1",
+      "systemId": "s16",
+      "type": "scout",
+      "ships": 1,
+      "hp": 18,
+      "defenseLead": false,
+      "movesLeft": 2,
+      "hold": true
+    },
+    {
+      "id": "f58",
+      "owner": "player",
+      "name": "Vanguard 58",
+      "systemId": "s7",
+      "type": "frigate",
+      "ships": 4,
+      "hp": 136,
+      "defenseLead": false,
+      "movesLeft": 2,
+      "hold": true
+    },
+    {
+      "id": "f74",
+      "owner": "player",
+      "name": "Vanguard 74",
+      "systemId": "s20",
+      "type": "frigate",
+      "ships": 3,
+      "hp": 102,
+      "defenseLead": false,
+      "movesLeft": 2,
+      "hold": true
+    },
+    {
+      "id": "f81",
+      "owner": "player",
+      "name": "Vanguard 81",
+      "systemId": "s0",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 34,
+      "defenseLead": false,
+      "movesLeft": 2,
+      "hold": true
+    }
+  ],
+  "lanes": [
+    [
+      "s0",
+      "s20"
+    ],
+    [
+      "s0",
+      "s28"
+    ],
+    [
+      "s0",
+      "s41"
+    ],
+    [
+      "s20",
+      "s12"
+    ],
+    [
+      "s12",
+      "s7"
+    ],
+    [
+      "s0",
+      "s33"
+    ],
+    [
+      "s7",
+      "s15"
+    ],
+    [
+      "s15",
+      "s23"
+    ],
+    [
+      "s23",
+      "s36"
+    ],
+    [
+      "s15",
+      "s10"
+    ],
+    [
+      "s10",
+      "s18"
+    ],
+    [
+      "s18",
+      "s31"
+    ],
+    [
+      "s18",
+      "s1"
+    ],
+    [
+      "s1",
+      "s26"
+    ],
+    [
+      "s31",
+      "s39"
+    ],
+    [
+      "s26",
+      "s13"
+    ],
+    [
+      "s10",
+      "s5"
+    ],
+    [
+      "s12",
+      "s25"
+    ],
+    [
+      "s25",
+      "s38"
+    ],
+    [
+      "s38",
+      "s30"
+    ],
+    [
+      "s30",
+      "s17"
+    ],
+    [
+      "s17",
+      "s9"
+    ],
+    [
+      "s9",
+      "s4"
+    ],
+    [
+      "s17",
+      "s22"
+    ],
+    [
+      "s22",
+      "s3"
+    ],
+    [
+      "s3",
+      "s35"
+    ],
+    [
+      "s35",
+      "s27"
+    ],
+    [
+      "s27",
+      "s40"
+    ],
+    [
+      "s27",
+      "s14"
+    ],
+    [
+      "s14",
+      "s6"
+    ],
+    [
+      "s6",
+      "s11"
+    ],
+    [
+      "s11",
+      "s19"
+    ],
+    [
+      "s19",
+      "s32"
+    ],
+    [
+      "s32",
+      "s24"
+    ],
+    [
+      "s24",
+      "s2"
+    ],
+    [
+      "s2",
+      "s37"
+    ],
+    [
+      "s37",
+      "s29"
+    ],
+    [
+      "s29",
+      "s16"
+    ],
+    [
+      "s16",
+      "s8"
+    ],
+    [
+      "s29",
+      "s21"
+    ],
+    [
+      "s21",
+      "s34"
+    ],
+    [
+      "s4",
+      "s7"
+    ],
+    [
+      "s5",
+      "s13"
+    ],
+    [
+      "s7",
+      "s20"
+    ],
+    [
+      "s8",
+      "s21"
+    ],
+    [
+      "s21",
+      "s16"
+    ],
+    [
+      "s26",
+      "s18"
+    ],
+    [
+      "s28",
+      "s20"
+    ],
+    [
+      "s33",
+      "s20"
+    ],
+    [
+      "s34",
+      "s13"
+    ],
+    [
+      "s36",
+      "s15"
+    ],
+    [
+      "s39",
+      "s1"
+    ],
+    [
+      "s40",
+      "s19"
+    ],
+    [
+      "s41",
+      "s28"
+    ]
+  ],
+  "publicRaces": [
+    {
+      "id": "player",
+      "name": "The Concord",
+      "progress": 10,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s0",
+          "name": "Solace"
+        },
+        {
+          "id": "s7",
+          "name": "Nacre"
+        },
+        {
+          "id": "s20",
+          "name": "Sundrift"
+        }
+      ]
+    },
+    {
+      "id": "veyr",
+      "name": "Veyr Consortium",
+      "progress": 4,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s1",
+          "name": "Veyr Prime"
+        },
+        {
+          "id": "s18",
+          "name": "Cinder"
+        },
+        {
+          "id": "s26",
+          "name": "Aster"
+        }
+      ]
+    },
+    {
+      "id": "khar",
+      "name": "Khar Dominion",
+      "progress": 9,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s2",
+          "name": "Kharos"
+        },
+        {
+          "id": "s32",
+          "name": "Iona"
+        },
+        {
+          "id": "s37",
+          "name": "Morrow"
+        }
+      ]
+    },
+    {
+      "id": "choir",
+      "name": "The Luminous Choir",
+      "progress": 6,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s3",
+          "name": "Lumen"
+        },
+        {
+          "id": "s9",
+          "name": "Velorum"
+        },
+        {
+          "id": "s22",
+          "name": "Ophion"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "Root re-execution of the independently reconstructed actual campaign; not another playthrough or outcome sample.",
+  "generatedOutputsByteIdentical": [
+    {
+      "file": "results.json",
+      "sha256": "3d49e4e1c8c569ddd78f26e7f17409a16deafacdeeb623bc176de414c519d2ef"
+    },
+    {
+      "file": "command-results.json",
+      "sha256": "224c14d04a9a0f41b9f707034258c8179602c286206daad3c445d74a6a21f74c"
+    },
+    {
+      "file": "source-pin.json",
+      "sha256": "b90c02e9199ab7efe3c1a8a218bb7eb3d83ca3a85ac57c0822ac6ee42cdbb8de"
+    },
+    {
+      "file": "observation-checks.json",
+      "sha256": "dd0fd9015292c9013f2cc9a90603e797a1a42cfa89a86118026ef2348f3958ce"
+    },
+    {
+      "file": "event-state-hashes.json",
+      "sha256": "cbe69ac33aa0b7c0a3e21fa5e660995d4679b3af9cddd487b018dbdf417e126d"
+    },
+    {
+      "file": "noncommand-interactions.json",
+      "sha256": "cbbb3081b9fb9f08568324f03ab85221c387cb00da1c5fa8108eacde0a6ee885"
+    },
+    {
+      "file": "commands.json",
+      "sha256": "c14d91a0b69b7871b80e48b683cbae3a801ac512b61df617369bb8ac81ee48af"
+    }
+  ],
+  "originalFilesUnchanged": 52,
+  "reviewArtifactsVerified": 15,
+  "actualExportsExact": 16,
+  "ordinaryCommandsExact": 280,
+  "jsonReloadNextCommandEqualities": 280,
+  "validNonnegativeStates": 281,
+  "finalCanonicalSha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+  "finalActualExportSha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+  "portableWrapperOutputsByteIdentical": 7,
+  "portableWrapperUsesPackagedOriginalsAndAssets": true
+}

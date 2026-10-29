@@ -1,0 +1,316 @@
+{
+  "seed": "ASTERION-ODYSSEY-20",
+  "enginePin": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "integratedPin": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "scriptSha256": "9a9e761040ce9cb7a1b3fa8f7d166a20707c5666b28743667ccb3efe4da45a34",
+  "originalManifestSha256": "1833ec839e140261d922df8a8498ba54efc5b2ad8d6b6fdc18f26091a8b22a79",
+  "originalFilesVerified": 52,
+  "recordSha256": "9f88d5621f8a93365c43fa78dd0c202e302905e03465e2f7d3ff357cc5c1de91",
+  "observationsSha256": "635c41096be42bf3e7711add668ec3d2a2cd70ca79d1d6015a20df5572d1a79e",
+  "observationReceipts": 273,
+  "commands": 280,
+  "commandKinds": {
+    "move": 92,
+    "anomaly": 4,
+    "colonize": 4,
+    "research": 13,
+    "build": 47,
+    "endTurn": 65,
+    "diplomacy": 6,
+    "hold": 19,
+    "develop": 3,
+    "planRoute": 2,
+    "continueRoute": 6,
+    "merge": 14,
+    "leadDefense": 2,
+    "repair": 3
+  },
+  "endTurns": 65,
+  "jsonReloadChecks": 280,
+  "validNonnegativeStates": 281,
+  "exportChecks": 16,
+  "actualExportFiles": 16,
+  "uniqueExportHashes": 14,
+  "checkpoints": [
+    {
+      "eventIndex": 32,
+      "time": "2026-10-29T01:31:54.620Z",
+      "file": "checkpoints/cycle1.json",
+      "sha256": "142d2cd6d473720565b4ef294d8d8564f2abf8a7138d8eab095dbe708d515c1f",
+      "canonicalSha256": "cf3169c5f6abfa5e43c9099329f473cfb2a1334985544c1f65bfe76e17824c0b",
+      "turn": 1,
+      "exact": true
+    },
+    {
+      "eventIndex": 130,
+      "time": "2026-10-29T01:37:27.407Z",
+      "file": "checkpoints/cycle10.json",
+      "sha256": "48eac5b34da851f0eafb4722af9775b391258a783a1431aaba7417940893a8f7",
+      "canonicalSha256": "830941a95c3ae63fdf32149f361f79c09c3bb65775b3e49567d945ef5f99bd1e",
+      "turn": 10,
+      "exact": true
+    },
+    {
+      "eventIndex": 264,
+      "time": "2026-10-29T01:51:22.768Z",
+      "file": "checkpoints/cycle20.json",
+      "sha256": "8834c74ef3412a39fe1f36b8169f8f6cf59c98710de11f5ec3f03ebbd556795f",
+      "canonicalSha256": "ab7e87db0f5c4880a531131fdc7677ea35e65bf7fafae45373eaa1b3a63ff1ef",
+      "turn": 20,
+      "exact": true
+    },
+    {
+      "eventIndex": 379,
+      "time": "2026-10-29T01:56:29.617Z",
+      "file": "checkpoints/cycle30.json",
+      "sha256": "d399aba60b52ba3907742b511a08a41f91ded52dd0bf7ad8c46ced69d4cdfc89",
+      "canonicalSha256": "8aba6f734667cda666005a692c290ab27e34f4d7080eccf129d0b864e9c809c6",
+      "turn": 30,
+      "exact": true
+    },
+    {
+      "eventIndex": 451,
+      "time": "2026-10-29T02:02:07.624Z",
+      "file": "checkpoints/cycle40.json",
+      "sha256": "c4b98f322154e5b002c3aa3db474856ab8e0551f6b6026f572ff5400db58cf7f",
+      "canonicalSha256": "1099c0048e34870d982d7c4aaabde596cc405adbf6be79b1da04c0cc2c70e857",
+      "turn": 40,
+      "exact": true
+    },
+    {
+      "eventIndex": 523,
+      "time": "2026-10-29T02:07:13.196Z",
+      "file": "checkpoints/cycle50.json",
+      "sha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435",
+      "canonicalSha256": "0666b145c0807b2f3bcfaa85d69b094d38cc1ec8b91716468cd6c43fc6890685",
+      "turn": 50,
+      "exact": true
+    },
+    {
+      "eventIndex": 605,
+      "time": "2026-10-29T02:18:37.489Z",
+      "file": "checkpoints/cycle56.json",
+      "sha256": "c83eca959b0ab78a6ccdea538efc677d26533da05ae62d3553a062a5c5d66898",
+      "canonicalSha256": "73304617bb6c561cc53e2c4d3ced93a8e4dce5dd4f983a99a9d50bcbb1dfe799",
+      "turn": 56,
+      "exact": true
+    },
+    {
+      "eventIndex": 633,
+      "time": "2026-10-29T02:20:25.144Z",
+      "file": "checkpoints/cycle57.json",
+      "sha256": "d459a0d5ccc60cf80b5174b5f3d4328d4c0db49ccc3324bba04c38027af778a0",
+      "canonicalSha256": "61fd3658dee6dfc0fc0fe6ff1056f407523e13626c6e757143e3c9e6cee2d320",
+      "turn": 57,
+      "exact": true
+    },
+    {
+      "eventIndex": 657,
+      "time": "2026-10-29T02:21:24.507Z",
+      "file": "checkpoints/cycle60.json",
+      "sha256": "2c4572ead08d878635878f9616f7d85558fc1c43498d6178090b2ef77a059170",
+      "canonicalSha256": "0c4ca2080e1604742f6a3ab1e1bc737d8afb4dcd5039b8b09004b8aa98a1c1dc",
+      "turn": 60,
+      "exact": true
+    },
+    {
+      "eventIndex": 671,
+      "time": "2026-10-29T02:23:09.393Z",
+      "file": "checkpoints/cycle61.json",
+      "sha256": "797255968de20aee4688d3d93f9b6600dde70cb875964c4a947b0fed2c41a7f2",
+      "canonicalSha256": "e76cd1670f040671233418e21fa61fe00f693ed18d65115f4249161033f29016",
+      "turn": 61,
+      "exact": true
+    },
+    {
+      "eventIndex": 694,
+      "time": "2026-10-29T02:23:42.789Z",
+      "file": "checkpoints/cycle61-1793240622788.json",
+      "sha256": "4620a5e778a5dfbb7683d7aa31e47f0a19362c226b6ea34c5aed507710cce755",
+      "canonicalSha256": "86f292cc8bf3f5b526e7ed465c445a13d830a8e7b254ee6f9a2ac5beb3411bcf",
+      "turn": 61,
+      "exact": true
+    },
+    {
+      "eventIndex": 732,
+      "time": "2026-10-29T02:26:29.274Z",
+      "file": "checkpoints/cycle64.json",
+      "sha256": "4ebebba5e9b89b2393402ad79206431ff50ae9d95b46baf7a1842982551e0e1b",
+      "canonicalSha256": "606d4ede4c195ac1eaa63abf7c28f45dee4efbe541787f8ae9d4ab99b54ec392",
+      "turn": 64,
+      "exact": true
+    },
+    {
+      "eventIndex": 753,
+      "time": "2026-10-29T02:27:32.949Z",
+      "file": "checkpoints/cycle65.json",
+      "sha256": "eced9cd230bf3a27fb0f5ba855ac18b77cb325e2972c891deade595469a23cf6",
+      "canonicalSha256": "fbf5cef216d6aabcc095526a75eb219f864e1e33bd0860787e344bc05b28d648",
+      "turn": 65,
+      "exact": true
+    },
+    {
+      "eventIndex": 757,
+      "time": "2026-10-29T02:28:10.426Z",
+      "file": "checkpoints/cycle66.json",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "canonicalSha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "turn": 66,
+      "exact": true
+    },
+    {
+      "eventIndex": 777,
+      "time": "2026-10-29T02:29:45.965Z",
+      "file": "checkpoints/cycle66-1793240985964.json",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "canonicalSha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "turn": 66,
+      "exact": true
+    },
+    {
+      "eventIndex": 779,
+      "time": "2026-10-29T02:30:24.421Z",
+      "file": "checkpoints/cycle66-1793241024420.json",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "canonicalSha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+      "turn": 66,
+      "exact": true
+    }
+  ],
+  "turn": 66,
+  "winner": "player",
+  "victoryType": "Transcendence",
+  "finalCanonicalSha256": "b18ff9b20d88777e2ac0b825b01d327837179079bb288b1c26127a4624441a08",
+  "finalActualExportSha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+  "stats": {
+    "credits": 2247,
+    "minerals": 241,
+    "science": 761,
+    "creditIncome": 98,
+    "mineralIncome": 54,
+    "scienceIncome": 73,
+    "production": 90,
+    "upkeep": 17,
+    "colonies": 5,
+    "population": 45,
+    "ships": 9,
+    "military": 123.8,
+    "orders": 13,
+    "maxOrders": 13,
+    "uncappedOrders": 13,
+    "orderLimit": 18,
+    "score": 604,
+    "beacons": 3,
+    "explored": 42
+  },
+  "playerResources": {
+    "credits": 2247,
+    "minerals": 241,
+    "science": 761,
+    "orders": 13
+  },
+  "races": [
+    {
+      "id": "player",
+      "progress": 10
+    },
+    {
+      "id": "veyr",
+      "progress": 4
+    },
+    {
+      "id": "khar",
+      "progress": 9
+    },
+    {
+      "id": "choir",
+      "progress": 6
+    }
+  ],
+  "driverErrorCount": 7,
+  "pageErrors": [],
+  "normalizations": [
+    {
+      "eventIndex": 7,
+      "type": "initialization",
+      "note": "Default ASTERION welcome was inspected but never played. Actual new-game confirmation initializes the recorded ODYSSEY seed before any gameplay command."
+    }
+  ],
+  "scope": "One actual UI campaign faithfully replayed; no state patches, grants, counterfactuals or new outcome sample.",
+  "observationChecks": {
+    "record": 5,
+    "client": 196,
+    "initialWelcomeChecks": 2,
+    "exact": true
+  },
+  "completedTechnologies": 12,
+  "playerShipCounts": {
+    "scout": 1,
+    "frigate": 8
+  },
+  "retainedCombatReports": [
+    {
+      "id": 9,
+      "operationTurn": 62,
+      "outcome": "mutual-destruction",
+      "rounds": 4
+    },
+    {
+      "id": 8,
+      "operationTurn": 61,
+      "outcome": "defender-destroyed",
+      "rounds": 3
+    },
+    {
+      "id": 7,
+      "operationTurn": 60,
+      "outcome": "mutual-destruction",
+      "rounds": 4
+    },
+    {
+      "id": 6,
+      "operationTurn": 57,
+      "outcome": "defender-destroyed",
+      "rounds": 3
+    },
+    {
+      "id": 5,
+      "operationTurn": 56,
+      "outcome": "defender-destroyed",
+      "rounds": 2
+    },
+    {
+      "id": 4,
+      "operationTurn": 56,
+      "outcome": "defender-destroyed",
+      "rounds": 1
+    },
+    {
+      "id": 3,
+      "operationTurn": 56,
+      "outcome": "defender-destroyed",
+      "rounds": 3
+    },
+    {
+      "id": 2,
+      "operationTurn": 55,
+      "outcome": "defender-destroyed",
+      "rounds": 1
+    },
+    {
+      "id": 1,
+      "operationTurn": 55,
+      "outcome": "defender-destroyed",
+      "rounds": 3
+    }
+  ],
+  "postgameReadOnly": {
+    "firstExportEvent": 757,
+    "laterExportEvents": [
+      777,
+      779
+    ],
+    "byteIdentical": true,
+    "stateUnchanged": true
+  }
+}

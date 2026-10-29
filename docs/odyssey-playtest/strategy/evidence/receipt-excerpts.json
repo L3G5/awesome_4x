@@ -1,0 +1,618 @@
+[
+  {
+    "eventIndex": 4,
+    "time": "2026-10-29T01:30:09.486Z",
+    "cycle": "Cycle 01",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=menu]",
+      "actualControl": {
+        "text": "",
+        "attributes": {
+          "data-action": "menu",
+          "aria-label": "Game menu",
+          "title": "Game menu"
+        }
+      }
+    },
+    "status": "Your mandate begins among the stars.",
+    "modal": "×\nCAMPAIGN CONTROL\nA moment among the stars\n\nCycle 1 · ASTERION · The Concord\n\n↓ Export campaign\n↑ Import campaign\nRead the field guide ↗\nBegin a new campaign\n\nProgress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.\n\nWarn before ending a cycle with unused orders\nReturn to the Reach"
+  },
+  {
+    "eventIndex": 9,
+    "time": "2026-10-29T01:30:20.667Z",
+    "cycle": "Cycle 01",
+    "kind": "decision",
+    "text": "Plan an exploration-led economy. Scout nearby candidates before committing the Ark; develop a science world and a production center rather than repeat the prior compact beacon rush."
+  },
+  {
+    "eventIndex": 95,
+    "time": "2026-10-29T01:35:39.959Z",
+    "cycle": "Cycle 06",
+    "kind": "decision",
+    "text": "The west is extensively charted, but its best worlds are behind or beside Veyr. Avoid a distant unsupported colony; the Ark will settle Nacre within the home network. The held home frigate has no actionable threat and should not force an extra warning."
+  },
+  {
+    "eventIndex": 172,
+    "time": "2026-10-29T01:40:47.670Z",
+    "cycle": "Cycle 13",
+    "kind": "decision",
+    "text": "Solace reached8/8. Build Habitation before factory/Forge development so another population step can open a fifth slot; comparison explicitly preserves the current12 production during this construction. Delay the fifth Ark a few cycles rather than replace the capital science investment."
+  },
+  {
+    "eventIndex": 214,
+    "time": "2026-10-29T01:45:07.119Z",
+    "cycle": "Cycle 16",
+    "kind": "decision",
+    "text": "Meridian creates a real shared border: the public relation now shows8 Choir grievance and trust24. Keep the treaty, but move the existing frigate toward that frontier. Save minerals this cycle rather than commission another low-priority building; several labs and the capital Habitat have just finished."
+  },
+  {
+    "eventIndex": 244,
+    "time": "2026-10-29T01:50:25.260Z",
+    "cycle": "Cycle 18",
+    "kind": "decision",
+    "text": "Sundrift has reached six population and supports an Extraction Charter. Commit120 credits and60 minerals for+6 minerals per cycle; retain its market/lab/mine rather than replace science to manufacture more ore. Factory at the capital follows once the treasury recovers."
+  },
+  {
+    "eventIndex": 261,
+    "time": "2026-10-29T01:51:22.239Z",
+    "cycle": "Cycle 19",
+    "kind": "decision",
+    "text": "Stillwater90%/rich5/science4 contains an intact Observatory. Immediate65 minerals would ease the current bottleneck, but this is a plausible long-lived research colony. Leave the choice intact until20 minerals can fund preservation, then send the next Ark here rather than nearby Haven. This takes a remote settlement/lab and time; no restoration benefit is assumed yet."
+  },
+  {
+    "eventIndex": 312,
+    "time": "2026-10-29T01:54:02.220Z",
+    "cycle": "Cycle 24",
+    "kind": "decision",
+    "text": "Plotted the Ark’s8-jump course from Sundrift to Stillwater. It crosses Veyr-held Sable under our active trade agreement; seven stops have unknown current opposition. The route is a plan, not a safety guarantee. Meridian’s single frigate remains on Hold."
+  },
+  {
+    "eventIndex": 323,
+    "time": "2026-10-29T01:54:35.823Z",
+    "cycle": "Cycle 25",
+    "kind": "decision",
+    "text": "Forge I at Solace changes22→29 production and Vanguard2→1 cycle, a useful threshold. Fund it before building a navy. Research now follows the Asterion Protocol while the fourth lab and a future remote colony increase science; no rival beacon is yet public."
+  },
+  {
+    "eventIndex": 341,
+    "time": "2026-10-29T01:55:37.031Z",
+    "cycle": "Cycle 27",
+    "kind": "decision",
+    "text": "Cycle27 public sovereignty changes Stillwater to Khar. Our preserved Observatory is now theirs; the long colony voyage lost the race. Do not force war for sunk preservation costs. Kepler, where the Ark already is, offers76% habitability, native3 science and proximity to Nacre. Settle there instead and let the new research colony support the Protocol."
+  },
+  {
+    "eventIndex": 395,
+    "time": "2026-10-29T01:57:50.651Z",
+    "cycle": "Cycle 31",
+    "kind": "decision",
+    "text": "Three home frigates are assembled, with one further commission to make four. After that, pause naval spending and reserve minerals for Beacon construction and colony production. The fifth colony/laboratory and Academy finish soon; quiet diplomacy gives time to build the network, but public rival beacons will change that priority."
+  },
+  {
+    "eventIndex": 420,
+    "time": "2026-10-29T01:59:39.854Z",
+    "cycle": "Cycle 34",
+    "kind": "decision",
+    "text": "Nacre’s Academy has finished. Add a factory there now: the comparison shows9→15 production, important for a future140-work Beacon. The capital yard is deliberately idle with four frigates staged at Nacre and one at Meridian; minerals are being saved for the network."
+  },
+  {
+    "eventIndex": 432,
+    "time": "2026-10-29T02:00:31.539Z",
+    "cycle": "Cycle 36",
+    "kind": "decision",
+    "text": "Sundrift reached nine population, opening its fifth slot. Add its factory before the Protocol finishes; Nacre and Sundrift need the slow Beacon work started first, while Solace’s29-production Forge can finish the third node later. Existing five-frigate readiness is enough to preserve the mineral reserve for now."
+  },
+  {
+    "eventIndex": 448,
+    "time": "2026-10-29T02:02:06.931Z",
+    "cycle": "Cycle 39",
+    "kind": "decision",
+    "text": "Stillwater’s live expedition record now shows the actual continuation: Khar published the last atlas in cycle35, receiving140 science and30 credits. Our preservation history at20 remains. The material opportunity cost is real; no inference is made about Khar research timing beyond this recorded reward."
+  },
+  {
+    "eventIndex": 458,
+    "time": "2026-10-29T02:02:57.200Z",
+    "cycle": "Cycle 40",
+    "kind": "decision",
+    "text": "The unfunded Sundrift Beacon comparison remains inspectable. Plan to replace its Exchange Port, losing7 credits each cycle while preserving the Extraction-support mine, lab, factory and growing population. Net income is already105 and treasury1320, so the60-credit alignment payment remains sustainable."
+  },
+  {
+    "eventIndex": 472,
+    "time": "2026-10-29T02:03:22.457Z",
+    "cycle": "Cycle 42",
+    "kind": "decision",
+    "text": "The new cruiser quote is65 credits/77 minerals and three cycles at Solace. It is not affordable this cycle. One cruiser before the capital Beacon will add a heavier formation for the exposed network, at the cost of roughly one cycle to the final node; no rival completed Beacons are public yet."
+  },
+  {
+    "eventIndex": 481,
+    "time": "2026-10-29T02:03:53.883Z",
+    "cycle": "Cycle 44",
+    "kind": "decision",
+    "text": "Deflector Fields completes44. Research Stellar Accords next so Distributed Command can eventually give the staged warships a second jump; better defensive response matters once the first two Beacons become public. Current borders remain peaceful, so there is no justification for a pre-emptive war."
+  },
+  {
+    "eventIndex": 484,
+    "time": "2026-10-29T02:04:36.261Z",
+    "cycle": "Cycle 45",
+    "kind": "decision",
+    "text": "Correction to the cycle44 decision note: Deflector Fields had212/220, not completion. I switched too early; the UI transferred accumulated science and completed Stellar Accords instead. This was my research-reading mistake, not a driver failure or rollback. The actual archives now show Shields still available for220 and128 stored science. Select it again;96 per cycle should finish it next cycle. Distributed Command actually costs500, so its mobility improvement will come later."
+  },
+  {
+    "eventIndex": 494,
+    "time": "2026-10-29T02:04:53.892Z",
+    "cycle": "Cycle 46",
+    "kind": "decision",
+    "text": "The final Beacon replaces Solace’s Habitat. The actual comparison explicitly preserves12 citizens while capacity becomes8 and natural growth stays paused; production, income and Forge support remain unchanged. This preserves the mineral mine and shipyard for defense. Commission at46 after the cruiser completes; expected construction is five cycles under current conditions."
+  },
+  {
+    "eventIndex": 505,
+    "time": "2026-10-29T02:05:38.969Z",
+    "cycle": "Cycle 47",
+    "kind": "decision",
+    "text": "Nacre now has a mixed defensive group: four frigates136 hull and one cruiser85 hull. Assign the four-frigate formation as defensive lead for1 order, keeping the larger total hull/firepower first. The UI correctly warns that formations fight separately and this does not guarantee the cruiser protection. Add a Bastion on the exposed Meridian frontier while all three Beacons are already funded."
+  },
+  {
+    "eventIndex": 508,
+    "time": "2026-10-29T02:05:40.354Z",
+    "cycle": "Cycle 47",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=build][data-item=bastion]",
+      "actualControl": {
+        "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 5 cycles",
+        "attributes": {
+          "class": "build-card ",
+          "data-action": "build",
+          "data-system": "s4",
+          "data-item": "bastion",
+          "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+        }
+      }
+    },
+    "status": "Orbital Bastion commissioned at Meridian.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 512,
+    "time": "2026-10-29T02:07:10.405Z",
+    "cycle": "Cycle 48",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=build][data-item=bastion]",
+      "actualControl": {
+        "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 4 cycles",
+        "attributes": {
+          "class": "build-card ",
+          "data-action": "build",
+          "data-system": "s7",
+          "data-item": "bastion",
+          "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+        }
+      }
+    },
+    "status": "Orbital Bastion commissioned at Nacre.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 517,
+    "time": "2026-10-29T02:07:11.598Z",
+    "cycle": "Cycle 48",
+    "kind": "decision",
+    "text": "Two own Beacons finish48, alongside Choir’s first at Ophion. Begin Nacre’s Bastion and move the cruiser to guard Sundrift; the four-frigate lead remains at Nacre. The next capital production after its Beacon will provide a local garrison and more escorts. No attacks or military sightings justify breaking any treaty now."
+  },
+  {
+    "eventIndex": 521,
+    "time": "2026-10-29T02:07:12.583Z",
+    "cycle": "Cycle 49",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=build][data-item=bastion]",
+      "actualControl": {
+        "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 3 cycles",
+        "attributes": {
+          "class": "build-card ",
+          "data-action": "build",
+          "data-system": "s20",
+          "data-item": "bastion",
+          "data-replace": "habitat",
+          "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+        }
+      }
+    },
+    "status": "Orbital Bastion commissioned at Sundrift.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 525,
+    "time": "2026-10-29T02:08:10.378Z",
+    "cycle": "Cycle 50",
+    "kind": "decision",
+    "text": "Cycle50: Veyr now owns Ashfall, Tethys and Peregrine around Kepler. Its three shared borders produce15 grievance, but the actual treaty remains active and trust55. Keep the four-frigate force at the Beacon junction instead of moving into foreign territory; add Kepler’s Bastion when next cycle’s minerals arrive."
+  },
+  {
+    "eventIndex": 536,
+    "time": "2026-10-29T02:08:32.155Z",
+    "cycle": "Cycle 51",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=build][data-item=bastion]",
+      "actualControl": {
+        "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 5 cycles",
+        "attributes": {
+          "class": "build-card ",
+          "data-action": "build",
+          "data-system": "s15",
+          "data-item": "bastion",
+          "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+        }
+      }
+    },
+    "status": "Orbital Bastion commissioned at Kepler.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 543,
+    "time": "2026-10-29T02:09:41.812Z",
+    "cycle": "Cycle 53",
+    "kind": "driver-error",
+    "message": "locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-fleet=f53]').first()\u001b[22m\n"
+  },
+  {
+    "eventIndex": 545,
+    "time": "2026-10-29T02:14:11.836Z",
+    "cycle": "Cycle 53",
+    "kind": "decision",
+    "text": "Driver sequencing correction at actual cycle 53: the cycle52 action batch selected Terraforming successfully, then timed out selecting f53 from the four-fleet quickbar. I accidentally advanced the cycle while that request was pending. No Hold or reinforcement command occurred; no rollback. Recover through Home/orbit and act at53."
+  },
+  {
+    "eventIndex": 548,
+    "time": "2026-10-29T02:14:13.277Z",
+    "cycle": "Cycle 53",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=fleet-hold][data-fleet-target=f53]",
+      "actualControl": {
+        "text": "Hold position",
+        "attributes": {
+          "class": "small-button ghost fleet-hold",
+          "data-action": "fleet-hold",
+          "data-fleet-target": "f53",
+          "aria-pressed": "false",
+          "title": "Hold at Solace; free. Movement remains available."
+        }
+      }
+    },
+    "status": "Vanguard 53 is holding position.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 549,
+    "time": "2026-10-29T02:14:13.475Z",
+    "cycle": "Cycle 53",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=reinforce][data-fleet-target=f53]",
+      "actualControl": {
+        "text": "Commission Vanguard",
+        "attributes": {
+          "class": "wide-button reinforcement-command",
+          "data-action": "reinforce",
+          "data-fleet-target": "f53"
+        }
+      }
+    },
+    "status": "Vanguard commissioned at Solace.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 553,
+    "time": "2026-10-29T02:14:50.152Z",
+    "cycle": "Cycle 54",
+    "kind": "decision",
+    "text": "Cycle54 changes the plan: Veyr and Choir simultaneously declared war and broke our trades as alignment reached4/10. No hostile military is in local sensors yet; an enemy civilian Ark is at Kepler. Defend our network rather than chase their distant beacons. We have cash and ore for continued one-cycle frigates."
+  },
+  {
+    "eventIndex": 566,
+    "time": "2026-10-29T02:15:25.282Z",
+    "cycle": "Cycle 54",
+    "kind": "decision",
+    "text": "Peace is correctly unavailable in the first five war cycles. The distant enemy Ark is not a military blockade; do not divert the beacon guard to destroy a civilian ship. Keep ships near the network and prepare additional escort capacity."
+  },
+  {
+    "eventIndex": 578,
+    "time": "2026-10-29T02:15:47.271Z",
+    "cycle": "Cycle 56",
+    "kind": "command",
+    "command": {
+      "type": "endTurn"
+    },
+    "briefing": "×\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 56 · 7 dispatches from the latest turn. This report remains available from the top bar.\n\nTHREATS & DIPLOMACY 5\nALIGNMENT\n\nKhar Dominion has restored an Asterion Beacon at Iona (2 owned).\n\nInspect Iona\nALIGNMENT\n\nVeyr Consortium has restored an Asterion Beacon at Veyr Prime (1 owned).\n\nInspect Veyr Prime\nALIGNMENT\n\nThe Concord’s Asterion alignment is interrupted (4/10). Hostile warships block alignment at Nacre.\n\nInspect Nacre\nCOMBAT\n\nBattle at Nacre: Veyr lost 0 ships and 16.6 hull; Concord lost 1 ship and 34 hull. Attacking fleet survives; defending fleet destroyed.\n\nBattle report →\nInspect Nacre\nCOMBAT\n\nBattle at Nacre: Veyr lost 3 ships and 105.2 hull; Concord lost 4 ships and 136 hull. Attacking fleet survives; defending fleet destroyed.\n\nBattle report →\nInspect Nacre\nCOMPLETED PROJECTS 2\nCONSTRUCTION\n\nKepler completed Orbital Bastion.\n\nInspect Kepler\nCONSTRUCTION\n\nSolace completed Vanguard.\n\nInspect Solace\nFull chronicle\nContinue planning →",
+    "resources": "◈\n2,139+102\nCREDITS\n◇\n194+54\nMINERALS\n✧\n0+97\nSCIENCE\n⌘\n13 / 13\nORDERS"
+  },
+  {
+    "eventIndex": 597,
+    "time": "2026-10-29T02:17:24.773Z",
+    "cycle": "Cycle 56",
+    "kind": "decision",
+    "text": "Read the actual Nacre loss rounds: six Veyr frigates had weapons1.25 but no shields; our four shielded frigates died, then the lone reinforcement. Their surviving3ships82.2HP face our assembled3ships102HP with shields. Use this observed advantage for relief; cruiser stays at Sundrift as reserve."
+  },
+  {
+    "eventIndex": 604,
+    "time": "2026-10-29T02:17:49.085Z",
+    "cycle": "Cycle 56",
+    "kind": "decision",
+    "text": "Relief succeeds: three assembled frigates defeat the damaged Veyr force, then automatically fight its Ark. Two frigates survive at39.7/68HP, and the zero-fire Ark causes exactly0damage. Pay10minerals/1order for24 immediate repair; shared4 passive repair will nearly finish restoration. Keep this beacon garrison on Hold."
+  },
+  {
+    "eventIndex": 610,
+    "time": "2026-10-29T02:19:10.568Z",
+    "cycle": "Cycle 57",
+    "kind": "decision",
+    "text": "At57 Choir kills Sundrift cruiser and blocks a different beacon: alignment4→3. Actual report shows enemy weapons/shields match ours. Redirect Meridian garrison to join Nacre survivors, then attack with3near-full frigates against3damaged73.1HP. This temporarily leaves Meridian/Nacre to their bastions, but the live blockade is the priority; home new frigate is reserve."
+  },
+  {
+    "eventIndex": 628,
+    "time": "2026-10-29T02:20:01.731Z",
+    "cycle": "Cycle 57",
+    "kind": "interaction",
+    "action": {
+      "click": ".investment-option:has([data-item=shipyard]) summary",
+      "actualControl": {
+        "text": "Compare investment · current → completed",
+        "attributes": {}
+      }
+    },
+    "status": "Vanguard commissioned at Solace.",
+    "modal": "×\nCOLONIAL COMMISSION · SUNDRIFT\nShape this world's future\n\n5 / 5 infrastructure slots · 22 production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.\n\nInfrastructure\nColony charter\nShips\nChoose infrastructure to replace\nSelect a building to replace…\nReplace Research Enclave\nReplace Orbital Extractor\nReplace Manufactory\nReplace Asterion Beacon\nReplace Orbital Bastion\nResearch Enclave remains active until the new building is finished. Its benefits are then removed. Cancelling construction keeps the existing infrastructure.\n◇\nOrbital Extractor\n\n+5 minerals each turn.\n\n◈ 20   ◇ 25 · 2 cycles\n\nAlready built\n\n✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 2 cycles\n\nAlready built\n\n◈\nExchange Port\n\n+7 credits each turn.\n\n◈ 25   ◇ 20 · 2 cycles\nCompare investment · current → completed\n⌁\nOrbital Shipyard\n\nBuild ships here. Adds 4 hull to this colony’s shared repair capacity each cycle.\n\n◈ 25   ◇ 35 · 2 cycles\nCompare investment · current → completed\nOrbital Shipyard\n◈ 25 credits · ◇ 35 minerals · 1 order\n\nAt current population and technology. This compares the completed project with the colony as it is now.\n\n2 cycles to build this project\n32 work at 22 production / cycle\nIts new production cannot accelerate its own construction.\n\nReplaced on completion: Research Enclave. Existing benefits continue until then; the old investment is not refunded.\n\nCompleted effects\nOrbital Shipyard effects at current population and technology\nEFFECT\tCURRENT\tCOMPLETED\nColony credits / cycle\t27\t27\nColony minerals / cycle\t19\t19\nColony science / cycle\t18\t9\nProduction / cycle\t22\t22\nPopulation / capacity\t12 / 8\t12 / 8\nInfrastructure slots used\t5 / 5\t5 / 5\nEmpire orders / cycle\t13\t13\nShared repair pool\t4\t8\n\nRepair is one hull pool shared across formations each cycle. Unused repair capacity does not carry over.\n\nEmpire income / cycle\nCredits 110 → 110\nMinerals 54 → 54\nScience 97 → 88\nIncludes current trade and fleet upkeep; excludes alignment funding. New income is collected from the cycle after completion.\nOne subsequent project\n\nBuild times at the current and completed production rates. Each project has its own payment; unused production does not carry into another commission.\n\nPROJECT\tCURRENT\tCOMPLETED\nPathfinder\tUnavailable\nRequires an Orbital Shipyard\n\t\n1 cycle\n◈ 20 · ◇ 20\n\nColony Ark\tUnavailable\nRequires an Orbital Shipyard\n\t\n2 cycles\n◈ 45 · ◇ 55\n\nVanguard\tUnavailable\nRequires an Orbital Shipyard\n\t\n2 cycles\n◈ 25 · ◇ 35\n\nSovereign\tUnavailable\nRequires an Orbital Shipyard\n\t\n3 cycles\n◈ 65 · ◇ 85\n\nAsterion Beacon\tUnavailable\nAlready built\n\tUnavailable\nAlready built\n\nGrowth, research and later events can change these rates and the completion time.\n\n◎\nHabitation Domes\n\n+4 maximum population and +40% population growth.\n\n◈ 40   ◇ 35 · 2 cycles\nCompare investment · current → completed\n▥\nManufactory\n\n+6 construction production each turn.\n\n◈ 35   ◇ 45 · 2 cycles\n\nAlready built\n\n⌂\nCivic Forum\n\n+1 order each turn and +3 credits.\n\nEmpire orders: 13 → 14 / cycle. +1 usable order.\n\n◈ 50   ◇ 30 · 2 cycles\nCompare investment · current → completed\n⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 3 cycles\n\nAlready built\n\n✦\nAsterion Beacon\n\nA public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.\n\n◈ 180   ◇ 180 · 7 cycles\n\nAlready built"
+  },
+  {
+    "eventIndex": 631,
+    "time": "2026-10-29T02:20:24.617Z",
+    "cycle": "Cycle 57",
+    "kind": "decision",
+    "text": "Build a second yard at Sundrift by replacing its Research Enclave:25credits35minerals,2cycles, production22 unchanged, shared repair4→8, science97→88. The final research finishes next cycle before replacement; use that slot for wartime hull production rather than unnecessary post-tree science."
+  },
+  {
+    "eventIndex": 638,
+    "time": "2026-10-29T02:20:58.391Z",
+    "cycle": "Cycle 58",
+    "kind": "decision",
+    "text": "Cycle58: both enemies now meet minimum war length but still refuse peace. Khar begins a public1/10 alignment while ours resumes4/10. Keep three sites garrisoned and rebuild through two yards; no distant attack on a friendly rival is justified while we retain a three-cycle lead."
+  },
+  {
+    "eventIndex": 655,
+    "time": "2026-10-29T02:21:23.869Z",
+    "cycle": "Cycle 59",
+    "kind": "decision",
+    "text": "At59 the second yard is ready. Hold two frigates at Solace and one each at Nacre/Sundrift while commissioning at both yards. No new hostile warships are observed. Our alignment5/10 versus friendly Khar2/10 remains an achievable lead after two blockade interruptions."
+  },
+  {
+    "eventIndex": 669,
+    "time": "2026-10-29T02:22:15.014Z",
+    "cycle": "Cycle 60",
+    "kind": "decision",
+    "text": "Cycle60: reinforce the previously hit Nacre site to two frigates; leave Solace at two. Sundrift local yard finishes its second frigate next cycle. Current two fronts are quiet, but no assumption of hidden enemy weakness; continue affordable rebuilding until alignment finishes or a visible threat changes priorities."
+  },
+  {
+    "eventIndex": 670,
+    "time": "2026-10-29T02:22:15.413Z",
+    "cycle": "Cycle 61",
+    "kind": "command",
+    "command": {
+      "type": "endTurn"
+    },
+    "briefing": "×\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 61 · 6 dispatches from the latest turn. This report remains available from the top bar.\n\nTHREATS & DIPLOMACY 4\nALIGNMENT\n\nThe Luminous Choir begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.\n\nInspect Ophion\nALIGNMENT\n\nThe Luminous Choir has restored an Asterion Beacon at Velorum (3 owned).\n\nInspect Velorum\nALIGNMENT\n\nThe Concord’s Asterion alignment is interrupted (5/10). Hostile warships block alignment at Nacre.\n\nInspect Nacre\nCOMBAT\n\nBattle at Nacre: Veyr lost 2 ships and 68 hull; Concord lost 2 ships and 68 hull. Both fleets destroyed.\n\nBattle report →\nInspect Nacre\nCOMPLETED PROJECTS 2\nCONSTRUCTION\n\nSundrift completed Vanguard.\n\nInspect Sundrift\nCONSTRUCTION\n\nSolace completed Vanguard.\n\nInspect Solace\nFull chronicle\nContinue planning →",
+    "resources": "◈\n2,324+104\nCREDITS\n◇\n214+54\nMINERALS\n✧\n336+88\nSCIENCE\n⌘\n13 / 13\nORDERS"
+  },
+  {
+    "eventIndex": 672,
+    "time": "2026-10-29T02:23:09.611Z",
+    "cycle": "Cycle 61",
+    "kind": "decision",
+    "text": "Cycle61 third interruption: Nacre defenders and Veyr attackers mutually destroy two ships each, then two fresh Choir frigates occupy the empty node. Khar now4/10 versus our5/10: another delay could reverse the race. Combine both Sundrift ships plus Solace newest hull for immediate relief; transfer the capital veteran pair to Sundrift and refill capital next cycle."
+  },
+  {
+    "eventIndex": 694,
+    "time": "2026-10-29T02:23:42.789Z",
+    "cycle": "Cycle 61",
+    "kind": "export",
+    "path": "/tmp/asterion-odyssey20/checkpoints/cycle61-1793240622788.json"
+  },
+  {
+    "eventIndex": 697,
+    "time": "2026-10-29T02:24:36.179Z",
+    "cycle": "Cycle 62",
+    "kind": "decision",
+    "text": "At62 both enemies still refuse peace; the UI now truthfully cites insufficient weariness/observed pressure rather than minimum duration. Do not spend an impossible proposal. Hold the new capital garrison and keep the one-cycle yard producing."
+  },
+  {
+    "eventIndex": 703,
+    "time": "2026-10-29T02:24:37.448Z",
+    "cycle": "Cycle 63",
+    "kind": "command",
+    "command": {
+      "type": "endTurn"
+    },
+    "briefing": "×\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 63 · 5 dispatches from the latest turn. This report remains available from the top bar.\n\nTHREATS & DIPLOMACY 3\nALIGNMENT\n\nVeyr Consortium begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.\n\nInspect Veyr Prime\nALIGNMENT\n\nVeyr Consortium has restored an Asterion Beacon at Cinder (3 owned).\n\nInspect Cinder\nCOMBAT\n\nBattle at Nacre: Veyr lost 2 ships and 68 hull; Concord lost 2 ships and 68 hull. Both fleets destroyed.\n\nBattle report →\nInspect Nacre\nCOMPLETED PROJECTS 2\nCONSTRUCTION\n\nSundrift completed Vanguard.\n\nInspect Sundrift\nCONSTRUCTION\n\nSolace completed Vanguard.\n\nInspect Solace\nFull chronicle\nContinue planning →",
+    "resources": "◈\n2,343+104\nCREDITS\n◇\n213+54\nMINERALS\n✧\n512+88\nSCIENCE\n⌘\n13 / 13\nORDERS"
+  },
+  {
+    "eventIndex": 705,
+    "time": "2026-10-29T02:25:26.985Z",
+    "cycle": "Cycle 63",
+    "kind": "decision",
+    "text": "Cycle63: another two-frigate Veyr attack annihilates both sides at Nacre. Because no hostile remains, alignment advances7/10; this is distinct from the occupied blockades. Shift a three-frigate group to Nacre and two to Sundrift. Khar is6/10, so preserving every next cycle matters."
+  },
+  {
+    "eventIndex": 722,
+    "time": "2026-10-29T02:25:47.498Z",
+    "cycle": "Cycle 63",
+    "kind": "interaction",
+    "action": {
+      "click": ".investment-option:has([data-item=shipyard]) summary",
+      "actualControl": {
+        "text": "Compare investment · current → completed",
+        "attributes": {}
+      }
+    },
+    "status": "Vanguard 74 is holding position.",
+    "modal": "×\nCOLONIAL COMMISSION · NACRE\nShape this world's future\n\n4 / 4 infrastructure slots · 16 production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.\n\nInfrastructure\nColony charter\nShips\nChoose infrastructure to replace\nSelect a building to replace…\nReplace Research Enclave\nReplace Manufactory\nReplace Asterion Beacon\nReplace Orbital Bastion\nResearch Enclave remains active until the new building is finished. Its benefits are then removed. This also removes the Academy Charter I charter. Cancelling construction keeps the existing infrastructure.\n◇\nOrbital Extractor\n\n+5 minerals each turn.\n\n◈ 20   ◇ 25 · 2 cycles\nCompare investment · current → completed\n✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 2 cycles\n\nAlready built\n\n◈\nExchange Port\n\n+7 credits each turn.\n\n◈ 25   ◇ 20 · 2 cycles\nCompare investment · current → completed\n⌁\nOrbital Shipyard\n\nBuild ships here. Adds 4 hull to this colony’s shared repair capacity each cycle.\n\n◈ 25   ◇ 35 · 2 cycles\nCompare investment · current → completed\nOrbital Shipyard\n◈ 25 credits · ◇ 35 minerals · 1 order\n\nAt current population and technology. This compares the completed project with the colony as it is now.\n\n2 cycles to build this project\n32 work at 16 production / cycle\nIts new production cannot accelerate its own construction.\n\nReplaced on completion: Research Enclave and Academy Charter I. Existing benefits continue until then; the old investment is not refunded.\n\nCompleted effects\nOrbital Shipyard effects at current population and technology\nEFFECT\tCURRENT\tCOMPLETED\nColony credits / cycle\t15\t15\nColony minerals / cycle\t3\t3\nColony science / cycle\t24\t9\nProduction / cycle\t16\t16\nPopulation / capacity\t6 / 6\t6 / 6\nInfrastructure slots used\t4 / 4\t4 / 4\nEmpire orders / cycle\t13\t13\nShared repair pool\t4\t8\n\nRepair is one hull pool shared across formations each cycle. Unused repair capacity does not carry over.\n\nEmpire income / cycle\nCredits 104 → 104\nMinerals 54 → 54\nScience 88 → 73\nIncludes current trade and fleet upkeep; excludes alignment funding. New income is collected from the cycle after completion.\nOne subsequent project\n\nBuild times at the current and completed production rates. Each project has its own payment; unused production does not carry into another commission.\n\nPROJECT\tCURRENT\tCOMPLETED\nPathfinder\tUnavailable\nRequires an Orbital Shipyard\n\t\n2 cycles\n◈ 20 · ◇ 20\n\nColony Ark\tUnavailable\nRequires an Orbital Shipyard\n\t\n3 cycles\n◈ 45 · ◇ 55\n\nVanguard\tUnavailable\nRequires an Orbital Shipyard\n\t\n2 cycles\n◈ 25 · ◇ 35\n\nSovereign\tUnavailable\nRequires an Orbital Shipyard\n\t\n5 cycles\n◈ 65 · ◇ 85\n\nAsterion Beacon\tUnavailable\nAlready built\n\tUnavailable\nAlready built\n\nGrowth, research and later events can change these rates and the completion time.\n\n◎\nHabitation Domes\n\n+4 maximum population and +40% population growth.\n\n◈ 40   ◇ 35 · 3 cycles\nCompare investment · current → completed\n▥\nManufactory\n\n+6 construction production each turn.\n\n◈ 35   ◇ 45 · 3 cycles\n\nAlready built\n\n⌂\nCivic Forum\n\n+1 order each turn and +3 credits.\n\nEmpire orders: 13 → 14 / cycle. +1 usable order.\n\n◈ 50   ◇ 30 · 3 cycles\nCompare investment · current → completed\n⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 4 cycles\n\nAlready built\n\n✦\nAsterion Beacon\n\nA public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.\n\n◈ 180   ◇ 180 · 9 cycles\n\nAlready built"
+  },
+  {
+    "eventIndex": 724,
+    "time": "2026-10-29T02:25:59.700Z",
+    "cycle": "Cycle 63",
+    "kind": "decision",
+    "text": "Retool Nacre too: explicit comparison warns that replacing the lab also removes AcademyI, dropping empire science88→73. All12technologies are already complete; local two-cycle frigates and repair4→8 now matter more than research income. Pay25credits35minerals for this defensive fallback if the race is delayed again."
+  },
+  {
+    "eventIndex": 731,
+    "time": "2026-10-29T02:26:28.803Z",
+    "cycle": "Cycle 64",
+    "kind": "decision",
+    "text": "At64, alignment8 versus Khar7. Three frigates at repeatedly attacked Nacre, two at Sundrift, one at Solace; both active queues will add a hull next cycle. Hold positions instead of pursuing war gains that cannot improve this race."
+  },
+  {
+    "eventIndex": 735,
+    "time": "2026-10-29T02:27:07.499Z",
+    "cycle": "Cycle 65",
+    "kind": "decision",
+    "text": "At65, Veyr visibly stages two frigates at Kepler one jump from Nacre. Reinforce Nacre to four ships now; do not attack away from the beacon at9/10. Merge Sundrift newest hull into its local guard. Choir has publicly declared war on Khar; I cannot infer its unseen fleet locations or whether that will slow their8/10 race."
+  },
+  {
+    "eventIndex": 743,
+    "time": "2026-10-29T02:27:11.062Z",
+    "cycle": "Cycle 65",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=merge]",
+      "actualControl": {
+        "text": "Merge +1",
+        "attributes": {
+          "data-action": "merge",
+          "data-fleet-target": "f58",
+          "data-target": "f83",
+          "title": "Vanguard 83 joins Vanguard 58: 4 ships, 136 / 136 hull, 0 jumps remaining. 1 order.",
+          "aria-label": "Merge Vanguard 83 into Vanguard 58; 1 order"
+        }
+      }
+    },
+    "status": "Fleets combined into one task force.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 745,
+    "time": "2026-10-29T02:27:12.653Z",
+    "cycle": "Cycle 65",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=merge]",
+      "actualControl": {
+        "text": "Merge +1",
+        "attributes": {
+          "data-action": "merge",
+          "data-fleet-target": "f74",
+          "data-target": "f86",
+          "title": "Vanguard 86 joins Vanguard 74: 3 ships, 102 / 102 hull, 2 jumps remaining. 1 order.",
+          "aria-label": "Merge Vanguard 86 into Vanguard 74; 1 order"
+        }
+      }
+    },
+    "status": "Fleets combined into one task force.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 747,
+    "time": "2026-10-29T02:27:24.986Z",
+    "cycle": "Cycle 65",
+    "kind": "decision",
+    "text": "After twelve war cycles both enemies now permit settlement. Pay60credits each for five-cycle truces: this is far cheaper than another blockade, removes the visible Veyr force from Kepler, and protects the last alignment cycle without taking foreign worlds."
+  },
+  {
+    "eventIndex": 748,
+    "time": "2026-10-29T02:27:25.008Z",
+    "cycle": "Cycle 65",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=peace-confirmation][data-target=veyr]",
+      "actualControl": {
+        "text": "Propose peace ◈60",
+        "attributes": {
+          "data-action": "peace-confirmation",
+          "data-stance": "peace",
+          "data-target": "veyr",
+          "title": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves."
+        }
+      }
+    },
+    "status": "Fleets combined into one task force.",
+    "modal": "×\nCONCORD FOREIGN AFFAIRS\nPropose a peace settlement\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\nThe prolonged war increases their willingness to settle.\n\nKeep current policy\nOffer 60 credits · 1 order"
+  },
+  {
+    "eventIndex": 749,
+    "time": "2026-10-29T02:27:32.421Z",
+    "cycle": "Cycle 65",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=diplomatic-confirm][data-target=veyr]",
+      "actualControl": {
+        "text": "Offer 60 credits · 1 order",
+        "attributes": {
+          "class": "primary",
+          "data-action": "diplomatic-confirm",
+          "data-stance": "peace",
+          "data-target": "veyr"
+        }
+      }
+    },
+    "status": "Peace accepted. The truce lasts until turn 70.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 750,
+    "time": "2026-10-29T02:27:32.475Z",
+    "cycle": "Cycle 65",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=peace-confirmation][data-target=choir]",
+      "actualControl": {
+        "text": "Propose peace ◈60",
+        "attributes": {
+          "data-action": "peace-confirmation",
+          "data-stance": "peace",
+          "data-target": "choir",
+          "title": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves."
+        }
+      }
+    },
+    "status": "Peace accepted. The truce lasts until turn 70.",
+    "modal": "×\nCONCORD FOREIGN AFFAIRS\nPropose a peace settlement\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\nThe prolonged war increases their willingness to settle.\n\nKeep current policy\nOffer 60 credits · 1 order"
+  },
+  {
+    "eventIndex": 751,
+    "time": "2026-10-29T02:27:32.558Z",
+    "cycle": "Cycle 65",
+    "kind": "interaction",
+    "action": {
+      "click": "[data-action=diplomatic-confirm][data-target=choir]",
+      "actualControl": {
+        "text": "Offer 60 credits · 1 order",
+        "attributes": {
+          "class": "primary",
+          "data-action": "diplomatic-confirm",
+          "data-stance": "peace",
+          "data-target": "choir"
+        }
+      }
+    },
+    "status": "Peace accepted. The truce lasts until turn 70.",
+    "modal": ""
+  },
+  {
+    "eventIndex": 778,
+    "time": "2026-10-29T02:30:24.114Z",
+    "cycle": "Cycle 66",
+    "kind": "decision",
+    "text": "Campaign complete at66 by actual UI end-cycle. Ending review reopened from menu and Chronicle; retained battle rounds and Stillwater expedition history opened; Nacre world link closed the modal and navigated the galaxy. Final exports before and after these pure inspections are byte-identical SHA256 98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b. No new campaign, rollback, grant, save edit or engine command was used. Postgame report/replay artifacts will be kept separate from the original receipts."
+  }
+]

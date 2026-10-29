@@ -1,0 +1,32 @@
+{
+  "phase": "Postgame author report; original UI evidence remains separately frozen",
+  "frozenAt": "2026-10-29T02:38:51.137Z",
+  "originalManifestSha256": "1833ec839e140261d922df8a8498ba54efc5b2ad8d6b6fdc18f26091a8b22a79",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 13882,
+      "sha256": "c222c9c2bc668fd44ecc566d79f94cb0decacf5dd62e72f5de4e42c2ce5ee144"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 10454,
+      "sha256": "89a332d5ffb604b13423ac9df2d61194ac958793a8e4a728483474e61ce25cd0"
+    },
+    {
+      "file": "summarize.mjs",
+      "bytes": 5733,
+      "sha256": "b79ccd27ee984c046859bb411b361407be5651d9289e53054075388556c8b1b8"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 1625,
+      "sha256": "f5f08e5cdab89496cc04bedf891d6fe6bfe38aedae24c5f5b0cc284d57a2ed49"
+    },
+    {
+      "file": "final-build-verification.json",
+      "bytes": 1053,
+      "sha256": "75288986fab2e2d12c903aac696e8c913c6b27c50649fcd6270035beb7129cb1"
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-10-29T02:33:50.773Z",
+  "method": "Read-only summarization of frozen original UI receipts and actual exports. This script does not run game commands, replay a policy, inspect foreign private assets, or attribute raids to AI implementation details.",
+  "seed": "ASTERION-ODYSSEY-20",
+  "version": "0.20.0",
+  "sourceCommit": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "build": {
+    "url": "http://127.0.0.1:5208",
+    "directory": "/tmp/asterion-stage20-final-hlkrdtbt",
+    "version": "0.20.0",
+    "seed": "ASTERION-ODYSSEY-20",
+    "recordedAt": "2026-10-29T01:37:49.794Z",
+    "files": [
+      {
+        "file": "index.html",
+        "sha256": "a9a741a49e6b6c7552da338ff149989d8845b868ce222d9a6782fa6d620d1f11"
+      },
+      {
+        "file": "assets/index-BiOK--Q4.js",
+        "sha256": "95be2cd26af28a633f71f644d05f29f41b76f7d36b49c9d0b6af1ced0e537489"
+      },
+      {
+        "file": "assets/index-SmGXpBaN.css",
+        "sha256": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef"
+      }
+    ]
+  },
+  "outcome": {
+    "winner": "player",
+    "victoryType": "Transcendence",
+    "turn": 66,
+    "legacy": 604,
+    "legacySource": "Actual ending DOM retained in observations.ndjson"
+  },
+  "play": {
+    "startedAt": "2026-10-29T01:30:20.571Z",
+    "endedAt": "2026-10-29T02:27:39.464Z",
+    "minutes": 57.3
+  },
+  "ownFinalHoldings": {
+    "colonies": 5,
+    "population": 45,
+    "ships": 9,
+    "frigates": 8,
+    "scouts": 1,
+    "technologies": 12,
+    "credits": 2247,
+    "minerals": 241,
+    "science": 761,
+    "alignment": 10
+  },
+  "actualReceiptCounts": {
+    "interactions": 592,
+    "completedCycles": 65,
+    "decisions": 64,
+    "exports": 16,
+    "screenshots": 24,
+    "quickCommissions": 18,
+    "directMerges": 13,
+    "chooserConfirmations": 1,
+    "paidRepairs": 3
+  },
+  "countLimits": "Interaction counts include inspection and navigation. Commission/merge/repair counts count successful UI receipts; independent command reconstruction is separate. No event count is a statistical sample or win-rate estimate.",
+  "driverErrors": [
+    {
+      "cycle": "Cycle 01",
+      "time": "2026-10-29T01:31:00.777Z",
+      "message": "locator.click: Timeout 5000ms exceeded."
+    },
+    {
+      "cycle": "Cycle 15",
+      "time": "2026-10-29T01:43:13.894Z",
+      "message": "locator.evaluate: Timeout 30000ms exceeded."
+    },
+    {
+      "cycle": "Cycle 53",
+      "time": "2026-10-29T02:09:41.812Z",
+      "message": "locator.evaluate: Timeout 30000ms exceeded."
+    },
+    {
+      "cycle": "Cycle 56",
+      "time": "2026-10-29T02:16:20.403Z",
+      "message": "locator.evaluate: SyntaxError: Failed to execute 'querySelectorAll' on 'Document': '[data-action=combat-report][data-report=1]' is not a valid selector."
+    },
+    {
+      "cycle": "Cycle 56",
+      "time": "2026-10-29T02:16:58.008Z",
+      "message": "locator.evaluate: Timeout 30000ms exceeded."
+    },
+    {
+      "cycle": "Cycle 66",
+      "time": "2026-10-29T02:28:31.914Z",
+      "message": "locator.click: Timeout 5000ms exceeded."
+    },
+    {
+      "cycle": "Cycle 66",
+      "time": "2026-10-29T02:28:37.008Z",
+      "message": "locator.click: Timeout 5000ms exceeded."
+    }
+  ],
+  "browserErrorLines": 0,
+  "reloadsDuringPlay": 0,
+  "rollbacks": 0,
+  "endedInspection": {
+    "identicalFinalExports": 3,
+    "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+    "checked": [
+      "Menu reopening",
+      "Chronicle reopening",
+      "Retained combat report and expanded rounds",
+      "Stillwater expedition history",
+      "World link closes ending and opens Nacre"
+    ]
+  },
+  "retainedReports": [
+    {
+      "id": 9,
+      "turn": 62,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Veyr lost 2 ships and 68 hull; Concord lost 2 ships and 68 hull. Both fleets destroyed."
+    },
+    {
+      "id": 8,
+      "turn": 61,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Concord lost 1 ship and 43.6 hull; Choir lost 2 ships and 68 hull. Attacking fleet survives; defending fleet destroyed."
+    },
+    {
+      "id": 7,
+      "turn": 60,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Veyr lost 2 ships and 68 hull; Concord lost 2 ships and 68 hull. Both fleets destroyed."
+    },
+    {
+      "id": 6,
+      "turn": 57,
+      "systemId": "s20",
+      "summary": "Battle at Sundrift: Concord lost 2 ships and 77.6 hull; Choir lost 3 ships and 73.1 hull. Attacking fleet survives; defending fleet destroyed."
+    },
+    {
+      "id": 5,
+      "turn": 56,
+      "systemId": "s20",
+      "summary": "Battle at Sundrift: Choir lost 1 ship and 62.9 hull; Concord lost 1 ship and 85 hull. Attacking fleet survives; defending fleet destroyed."
+    },
+    {
+      "id": 4,
+      "turn": 56,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Concord lost 0 ships and 0 hull; Veyr lost 1 ship and 24 hull. Attacking fleet survives; defending fleet destroyed."
+    },
+    {
+      "id": 3,
+      "turn": 56,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Concord lost 1 ship and 62.3 hull; Veyr lost 3 ships and 82.2 hull. Attacking fleet survives; defending fleet destroyed."
+    },
+    {
+      "id": 2,
+      "turn": 55,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Veyr lost 0 ships and 16.6 hull; Concord lost 1 ship and 34 hull. Attacking fleet survives; defending fleet destroyed."
+    },
+    {
+      "id": 1,
+      "turn": 55,
+      "systemId": "s7",
+      "summary": "Battle at Nacre: Veyr lost 3 ships and 105.2 hull; Concord lost 4 ships and 136 hull. Attacking fleet survives; defending fleet destroyed."
+    }
+  ],
+  "exports": [
+    {
+      "file": "checkpoints/cycle1.json",
+      "turn": 1,
+      "time": "2026-10-29T01:31:54.620Z",
+      "sha256": "142d2cd6d473720565b4ef294d8d8564f2abf8a7138d8eab095dbe708d515c1f",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle10.json",
+      "turn": 10,
+      "time": "2026-10-29T01:37:27.407Z",
+      "sha256": "48eac5b34da851f0eafb4722af9775b391258a783a1431aaba7417940893a8f7",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle20.json",
+      "turn": 20,
+      "time": "2026-10-29T01:51:22.768Z",
+      "sha256": "8834c74ef3412a39fe1f36b8169f8f6cf59c98710de11f5ec3f03ebbd556795f",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle30.json",
+      "turn": 30,
+      "time": "2026-10-29T01:56:29.617Z",
+      "sha256": "d399aba60b52ba3907742b511a08a41f91ded52dd0bf7ad8c46ced69d4cdfc89",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle40.json",
+      "turn": 40,
+      "time": "2026-10-29T02:02:07.624Z",
+      "sha256": "c4b98f322154e5b002c3aa3db474856ab8e0551f6b6026f572ff5400db58cf7f",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle50.json",
+      "turn": 50,
+      "time": "2026-10-29T02:07:13.196Z",
+      "sha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle56.json",
+      "turn": 56,
+      "time": "2026-10-29T02:18:37.489Z",
+      "sha256": "c83eca959b0ab78a6ccdea538efc677d26533da05ae62d3553a062a5c5d66898",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle57.json",
+      "turn": 57,
+      "time": "2026-10-29T02:20:25.144Z",
+      "sha256": "d459a0d5ccc60cf80b5174b5f3d4328d4c0db49ccc3324bba04c38027af778a0",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle60.json",
+      "turn": 60,
+      "time": "2026-10-29T02:21:24.507Z",
+      "sha256": "2c4572ead08d878635878f9616f7d85558fc1c43498d6178090b2ef77a059170",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle61.json",
+      "turn": 61,
+      "time": "2026-10-29T02:23:09.393Z",
+      "sha256": "797255968de20aee4688d3d93f9b6600dde70cb875964c4a947b0fed2c41a7f2",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle61-1793240622788.json",
+      "turn": 61,
+      "time": "2026-10-29T02:23:42.789Z",
+      "sha256": "4620a5e778a5dfbb7683d7aa31e47f0a19362c226b6ea34c5aed507710cce755",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle64.json",
+      "turn": 64,
+      "time": "2026-10-29T02:26:29.274Z",
+      "sha256": "4ebebba5e9b89b2393402ad79206431ff50ae9d95b46baf7a1842982551e0e1b",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle65.json",
+      "turn": 65,
+      "time": "2026-10-29T02:27:32.949Z",
+      "sha256": "eced9cd230bf3a27fb0f5ba855ac18b77cb325e2972c891deade595469a23cf6",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle66.json",
+      "turn": 66,
+      "time": "2026-10-29T02:28:10.426Z",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle66-1793240985964.json",
+      "turn": 66,
+      "time": "2026-10-29T02:29:45.965Z",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "provenance": "Actual UI download"
+    },
+    {
+      "file": "checkpoints/cycle66-1793241024420.json",
+      "turn": 66,
+      "time": "2026-10-29T02:30:24.421Z",
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+      "provenance": "Actual UI download"
+    }
+  ],
+  "derivedCheckpoints": [],
+  "replayStatus": "Independent reconstruction is being prepared separately; no derived checkpoint is represented here as an actual UI download.",
+  "limitations": [
+    "One manually directed campaign on one seed; no difficulty or win-rate generalization.",
+    "No untouched cycle55 or pre-relief cycle56/57 export exists. Any reconstruction requires matching later actual exports.",
+    "Round numbers use the recorded operations cycle; an AI turn battle appears in the following arrival briefing.",
+    "No causal attribution to the Stage20 absorption helper.",
+    "Seven driver failures are preserved, including a cycle52/53 sequencing error and two postgame hidden-selector errors.",
+    "The screenshot named cycle66-reopened-retained-battle-rounds.png actually shows a menu after a driver error; use cycle66-retained-battle-rounds-verified.png instead."
+  ]
+}

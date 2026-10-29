@@ -1,0 +1,2225 @@
+[
+  {
+    "line": 187,
+    "time": "2026-10-29T02:08:32.479Z",
+    "input": {
+      "op": "end",
+      "brief": true
+    },
+    "turn": 52,
+    "ownRelations": {
+      "veyr": {
+        "status": "peace",
+        "trust": 57,
+        "trade": true,
+        "treatyTurn": 0,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 13
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 58,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "peace",
+        "trust": 60,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 1,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "lab",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "lab",
+          "mine",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f3",
+        "owner": "player",
+        "name": "Vanguard 3",
+        "systemId": "s4",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f32",
+        "owner": "player",
+        "name": "Vanguard 32",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 4,
+        "hp": 136,
+        "defenseLead": true,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f49",
+        "owner": "player",
+        "name": "Sovereign 49",
+        "systemId": "s20",
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 85,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f53",
+        "owner": "player",
+        "name": "Vanguard 53",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 2,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 0,
+        "active": false,
+        "beacons": []
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 0,
+        "active": false,
+        "beacons": []
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 200,
+    "time": "2026-10-29T02:15:47.291Z",
+    "input": {
+      "op": "end",
+      "brief": true
+    },
+    "turn": 56,
+    "ownRelations": {
+      "veyr": {
+        "status": "war",
+        "trust": -7,
+        "trade": false,
+        "treatyTurn": 53,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 47,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 62,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "war",
+        "trust": -4,
+        "trade": false,
+        "treatyTurn": 53,
+        "lastBorderCount": 1,
+        "grievance": 35,
+        "tradeEndsAt": 0,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "lab",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "lab",
+          "mine",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f3",
+        "owner": "player",
+        "name": "Vanguard 3",
+        "systemId": "s4",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f6",
+        "owner": "veyr",
+        "name": "Vanguard 6",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 82.2,
+        "defenseLead": false
+      },
+      {
+        "id": "f49",
+        "owner": "player",
+        "name": "Sovereign 49",
+        "systemId": "s20",
+        "type": "cruiser",
+        "ships": 1,
+        "hp": 85,
+        "defenseLead": true,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f52",
+        "owner": "veyr",
+        "name": "Colony Ark 52",
+        "systemId": "s7",
+        "type": "colony",
+        "ships": 1,
+        "hp": 24,
+        "defenseLead": false
+      },
+      {
+        "id": "f53",
+        "owner": "player",
+        "name": "Vanguard 53",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f54",
+        "owner": "player",
+        "name": "Vanguard 54",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f57",
+        "owner": "player",
+        "name": "Vanguard 57",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 4,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 214,
+    "time": "2026-10-29T02:18:37.965Z",
+    "input": {
+      "op": "end",
+      "brief": true
+    },
+    "turn": 57,
+    "ownRelations": {
+      "veyr": {
+        "status": "war",
+        "trust": -7,
+        "trade": false,
+        "treatyTurn": 53,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 47,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 63,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "war",
+        "trust": -4,
+        "trade": false,
+        "treatyTurn": 53,
+        "lastBorderCount": 1,
+        "grievance": 35,
+        "tradeEndsAt": 0,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "lab",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "lab",
+          "mine",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f3",
+        "owner": "player",
+        "name": "Vanguard 3",
+        "systemId": "s4",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f12",
+        "owner": "choir",
+        "name": "Vanguard 12",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 73.1,
+        "defenseLead": false
+      },
+      {
+        "id": "f53",
+        "owner": "player",
+        "name": "Vanguard 53",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 67.7,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 3,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 230,
+    "time": "2026-10-29T02:22:15.430Z",
+    "input": {
+      "op": "end",
+      "brief": true
+    },
+    "turn": 61,
+    "ownRelations": {
+      "veyr": {
+        "status": "war",
+        "trust": -7,
+        "trade": false,
+        "treatyTurn": 53,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 47,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 67,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "war",
+        "trust": -4,
+        "trade": false,
+        "treatyTurn": 53,
+        "lastBorderCount": 1,
+        "grievance": 35,
+        "tradeEndsAt": 0,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "lab",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "mine",
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f53",
+        "owner": "player",
+        "name": "Vanguard 53",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f56",
+        "owner": "choir",
+        "name": "Vanguard 56",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "defenseLead": false
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f70",
+        "owner": "player",
+        "name": "Vanguard 70",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      },
+      {
+        "id": "f73",
+        "owner": "player",
+        "name": "Vanguard 73",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 5,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 0,
+        "active": false,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          },
+          {
+            "id": "s26",
+            "name": "Aster"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 4,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          },
+          {
+            "id": "s37",
+            "name": "Morrow"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 1,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s9",
+            "name": "Velorum"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 242,
+    "time": "2026-10-29T02:25:31.968Z",
+    "input": {
+      "op": "actions",
+      "brief": true,
+      "actions": [
+        {
+          "click": "[data-action=close-modal]"
+        },
+        {
+          "note": "Cycle63: another two-frigate Veyr attack annihilates both sides at Nacre. Because no hostile remains, alignment advances7/10; this is distinct from the occupied blockades. Shift a three-frigate group to Nacre and two to Sundrift. Khar is6/10, so preserving every next cycle matters."
+        },
+        {
+          "click": "[data-fleet=f58]"
+        },
+        {
+          "click": "[data-action=merge]"
+        },
+        {
+          "click": "[data-action=reinforce][data-fleet-target=f58]"
+        },
+        {
+          "click": "[data-system-select=s7]"
+        },
+        {
+          "click": "[data-action=move]"
+        },
+        {
+          "click": "[data-action=fleet-hold][data-fleet-target=f58]"
+        },
+        {
+          "click": "[data-action=home]"
+        },
+        {
+          "click": "[data-fleet=f74]"
+        },
+        {
+          "click": "[data-action=merge]"
+        },
+        {
+          "click": "[data-action=reinforce][data-fleet-target=f74]"
+        },
+        {
+          "click": "[data-system-select=s20]"
+        },
+        {
+          "click": "[data-action=move]"
+        },
+        {
+          "click": "[data-action=fleet-hold][data-fleet-target=f74]"
+        }
+      ]
+    },
+    "turn": 63,
+    "ownRelations": {
+      "veyr": {
+        "status": "war",
+        "trust": -7,
+        "trade": false,
+        "treatyTurn": 53,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 47,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 69,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "war",
+        "trust": -4,
+        "trade": false,
+        "treatyTurn": 53,
+        "lastBorderCount": 1,
+        "grievance": 35,
+        "tradeEndsAt": 0,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "lab",
+          "factory",
+          "beacon",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "mine",
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 102,
+        "defenseLead": false,
+        "movesLeft": 1,
+        "hold": true
+      },
+      {
+        "id": "f74",
+        "owner": "player",
+        "name": "Vanguard 74",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "defenseLead": false,
+        "movesLeft": 1,
+        "hold": true
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 7,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 1,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          },
+          {
+            "id": "s18",
+            "name": "Cinder"
+          },
+          {
+            "id": "s26",
+            "name": "Aster"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 6,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          },
+          {
+            "id": "s37",
+            "name": "Morrow"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 3,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s9",
+            "name": "Velorum"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 249,
+    "time": "2026-10-29T02:26:29.789Z",
+    "input": {
+      "op": "end",
+      "brief": true
+    },
+    "turn": 65,
+    "ownRelations": {
+      "veyr": {
+        "status": "war",
+        "trust": -7,
+        "trade": false,
+        "treatyTurn": 53,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 47,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 71,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "war",
+        "trust": -4,
+        "trade": false,
+        "treatyTurn": 53,
+        "lastBorderCount": 1,
+        "grievance": 35,
+        "tradeEndsAt": 0,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "mine",
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 102,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f71",
+        "owner": "veyr",
+        "name": "Vanguard 71",
+        "systemId": "s15",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "defenseLead": false
+      },
+      {
+        "id": "f74",
+        "owner": "player",
+        "name": "Vanguard 74",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f81",
+        "owner": "player",
+        "name": "Vanguard 81",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f83",
+        "owner": "player",
+        "name": "Vanguard 83",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      },
+      {
+        "id": "f86",
+        "owner": "player",
+        "name": "Vanguard 86",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": false
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 9,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 3,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          },
+          {
+            "id": "s18",
+            "name": "Cinder"
+          },
+          {
+            "id": "s26",
+            "name": "Aster"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 8,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          },
+          {
+            "id": "s37",
+            "name": "Morrow"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 5,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s9",
+            "name": "Velorum"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 250,
+    "time": "2026-10-29T02:27:12.831Z",
+    "input": {
+      "op": "actions",
+      "brief": true,
+      "actions": [
+        {
+          "click": "[data-action=close-modal]"
+        },
+        {
+          "note": "At65, Veyr visibly stages two frigates at Kepler one jump from Nacre. Reinforce Nacre to four ships now; do not attack away from the beacon at9/10. Merge Sundrift newest hull into its local guard. Choir has publicly declared war on Khar; I cannot infer its unseen fleet locations or whether that will slow their8/10 race."
+        },
+        {
+          "click": "[data-action=home]"
+        },
+        {
+          "click": "[data-fleet=f83]"
+        },
+        {
+          "click": "[data-system-select=s20]"
+        },
+        {
+          "click": "[data-action=move]"
+        },
+        {
+          "click": "[data-system-select=s7]"
+        },
+        {
+          "click": "[data-action=move]"
+        },
+        {
+          "click": "[data-fleet=f58]"
+        },
+        {
+          "click": "[data-action=merge]"
+        },
+        {
+          "click": "[data-fleet=f74]"
+        },
+        {
+          "click": "[data-action=merge]"
+        },
+        {
+          "click": "[data-page=diplomacy]"
+        }
+      ]
+    },
+    "turn": 65,
+    "ownRelations": {
+      "veyr": {
+        "status": "war",
+        "trust": -7,
+        "trade": false,
+        "treatyTurn": 53,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 47,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 71,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "war",
+        "trust": -4,
+        "trade": false,
+        "treatyTurn": 53,
+        "lastBorderCount": 1,
+        "grievance": 35,
+        "tradeEndsAt": 0,
+        "truceUntil": 0,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "mine",
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 4,
+        "hp": 136,
+        "defenseLead": false,
+        "movesLeft": 0,
+        "hold": true
+      },
+      {
+        "id": "f71",
+        "owner": "veyr",
+        "name": "Vanguard 71",
+        "systemId": "s15",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "defenseLead": false
+      },
+      {
+        "id": "f74",
+        "owner": "player",
+        "name": "Vanguard 74",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 102,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f81",
+        "owner": "player",
+        "name": "Vanguard 81",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 9,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 3,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          },
+          {
+            "id": "s18",
+            "name": "Cinder"
+          },
+          {
+            "id": "s26",
+            "name": "Aster"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 8,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          },
+          {
+            "id": "s37",
+            "name": "Morrow"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 5,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s9",
+            "name": "Velorum"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 254,
+    "time": "2026-10-29T02:27:32.576Z",
+    "input": {
+      "op": "actions",
+      "brief": true,
+      "actions": [
+        {
+          "click": "[data-action=diplomatic-confirm][data-target=veyr]"
+        },
+        {
+          "click": "[data-action=peace-confirmation][data-target=choir]"
+        },
+        {
+          "click": "[data-action=diplomatic-confirm][data-target=choir]"
+        }
+      ]
+    },
+    "turn": 65,
+    "ownRelations": {
+      "veyr": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 65,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 32,
+        "truceUntil": 70,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 71,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 65,
+        "lastBorderCount": 1,
+        "grievance": 20,
+        "tradeEndsAt": 0,
+        "truceUntil": 70,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "mine",
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 4,
+        "hp": 136,
+        "defenseLead": false,
+        "movesLeft": 0,
+        "hold": true
+      },
+      {
+        "id": "f74",
+        "owner": "player",
+        "name": "Vanguard 74",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 102,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f81",
+        "owner": "player",
+        "name": "Vanguard 81",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 9,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 3,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          },
+          {
+            "id": "s18",
+            "name": "Cinder"
+          },
+          {
+            "id": "s26",
+            "name": "Aster"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 8,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          },
+          {
+            "id": "s37",
+            "name": "Morrow"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 5,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s9",
+            "name": "Velorum"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "line": 257,
+    "time": "2026-10-29T02:27:39.486Z",
+    "input": {
+      "op": "end",
+      "brief": true
+    },
+    "turn": 66,
+    "ownRelations": {
+      "veyr": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 65,
+        "tradeEndsAt": 0,
+        "lastBorderCount": 3,
+        "grievance": 31,
+        "truceUntil": 70,
+        "warStartColonies": 5
+      },
+      "khar": {
+        "status": "peace",
+        "trust": 72,
+        "trade": true,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0,
+        "tradeEndsAt": 0
+      },
+      "choir": {
+        "status": "peace",
+        "trust": -5,
+        "trade": false,
+        "treatyTurn": 65,
+        "lastBorderCount": 1,
+        "grievance": 19,
+        "tradeEndsAt": 0,
+        "truceUntil": 70,
+        "warStartColonies": 5
+      }
+    },
+    "worlds": [
+      {
+        "id": "s0",
+        "name": "Solace",
+        "buildings": [
+          "mine",
+          "shipyard",
+          "lab",
+          "factory",
+          "beacon"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s4",
+        "name": "Meridian",
+        "buildings": [
+          "mine",
+          "lab",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s7",
+        "name": "Nacre",
+        "buildings": [
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s15",
+        "name": "Kepler",
+        "buildings": [
+          "lab",
+          "mine",
+          "bastion"
+        ],
+        "defenseDamage": 0
+      },
+      {
+        "id": "s20",
+        "name": "Sundrift",
+        "buildings": [
+          "mine",
+          "factory",
+          "beacon",
+          "bastion",
+          "shipyard"
+        ],
+        "defenseDamage": 0
+      }
+    ],
+    "visibleFleets": [
+      {
+        "id": "f1",
+        "owner": "player",
+        "name": "Pathfinder 1",
+        "systemId": "s16",
+        "type": "scout",
+        "ships": 1,
+        "hp": 18,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f58",
+        "owner": "player",
+        "name": "Vanguard 58",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 4,
+        "hp": 136,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f74",
+        "owner": "player",
+        "name": "Vanguard 74",
+        "systemId": "s20",
+        "type": "frigate",
+        "ships": 3,
+        "hp": 102,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      },
+      {
+        "id": "f81",
+        "owner": "player",
+        "name": "Vanguard 81",
+        "systemId": "s0",
+        "type": "frigate",
+        "ships": 1,
+        "hp": 34,
+        "defenseLead": false,
+        "movesLeft": 2,
+        "hold": true
+      }
+    ],
+    "races": [
+      {
+        "id": "player",
+        "name": "The Concord",
+        "progress": 10,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s0",
+            "name": "Solace"
+          },
+          {
+            "id": "s7",
+            "name": "Nacre"
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift"
+          }
+        ]
+      },
+      {
+        "id": "veyr",
+        "name": "Veyr Consortium",
+        "progress": 4,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s1",
+            "name": "Veyr Prime"
+          },
+          {
+            "id": "s18",
+            "name": "Cinder"
+          },
+          {
+            "id": "s26",
+            "name": "Aster"
+          }
+        ]
+      },
+      {
+        "id": "khar",
+        "name": "Khar Dominion",
+        "progress": 9,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s2",
+            "name": "Kharos"
+          },
+          {
+            "id": "s32",
+            "name": "Iona"
+          },
+          {
+            "id": "s37",
+            "name": "Morrow"
+          }
+        ]
+      },
+      {
+        "id": "choir",
+        "name": "The Luminous Choir",
+        "progress": 6,
+        "active": true,
+        "beacons": [
+          {
+            "id": "s3",
+            "name": "Lumen"
+          },
+          {
+            "id": "s9",
+            "name": "Velorum"
+          },
+          {
+            "id": "s22",
+            "name": "Ophion"
+          }
+        ]
+      }
+    ]
+  }
+]

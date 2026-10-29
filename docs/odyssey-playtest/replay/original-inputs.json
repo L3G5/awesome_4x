@@ -1,0 +1,266 @@
+{
+  "manifestSha256": "1833ec839e140261d922df8a8498ba54efc5b2ad8d6b6fdc18f26091a8b22a79",
+  "files": [
+    {
+      "file": "record.json",
+      "bytes": 615914,
+      "sha256": "9f88d5621f8a93365c43fa78dd0c202e302905e03465e2f7d3ff357cc5c1de91"
+    },
+    {
+      "file": "observations.ndjson",
+      "bytes": 2327489,
+      "sha256": "635c41096be42bf3e7711add668ec3d2a2cd70ca79d1d6015a20df5572d1a79e"
+    },
+    {
+      "file": "driver.mjs",
+      "bytes": 7649,
+      "sha256": "c285d9a864a83514f3b86b268127b2dad6d1efd7d6a129c45edd93786ffe83bb"
+    },
+    {
+      "file": "client.mjs",
+      "bytes": 1285,
+      "sha256": "b3fe337ed5a64b6acfdcda24b66ecc8bcda879e7e6e7c37f21f09432597a0378"
+    },
+    {
+      "file": "driver-errors.ndjson",
+      "bytes": 5302,
+      "sha256": "f36b87ad49c598cd711a16e4de7a73ad1f61527fb97ea446c91cf80e386df1c7"
+    },
+    {
+      "file": "browser-errors.ndjson",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "driver.log",
+      "bytes": 30,
+      "sha256": "50ee1da73675bd0512bbd515dc20ef188fa1a37f3f6f6e7c0e04a96560f038d6"
+    },
+    {
+      "file": "frozen-build.json",
+      "bytes": 609,
+      "sha256": "1a6a92e3ae5973719f137fbfe228c9002ac8abc28930567f41f4fad6d4327bd1"
+    },
+    {
+      "file": "frozen-guide.json",
+      "bytes": 355,
+      "sha256": "6ce386983046faad6fb2c17ccb916870316944fbc32d7c6452817c78928f4188"
+    },
+    {
+      "file": "frozen-guide.html",
+      "bytes": 65224,
+      "sha256": "018569c7ba8d1fbf9a04451fd77c58c90953e4b36f993718266e83f8a6b1240b"
+    },
+    {
+      "file": "known.json",
+      "bytes": 7879,
+      "sha256": "d671567f8a49bf848d096565696a8d6c59d3642112893055a05c9b4f972746b9"
+    },
+    {
+      "file": "visible-latest.json",
+      "bytes": 14504,
+      "sha256": "b0a660adb4daf45d21549354fce2fdcde304bb0035651c268ea04eb96acf09f2"
+    },
+    {
+      "file": "checkpoints/cycle1.json",
+      "bytes": 28900,
+      "sha256": "142d2cd6d473720565b4ef294d8d8564f2abf8a7138d8eab095dbe708d515c1f"
+    },
+    {
+      "file": "checkpoints/cycle10.json",
+      "bytes": 49767,
+      "sha256": "48eac5b34da851f0eafb4722af9775b391258a783a1431aaba7417940893a8f7"
+    },
+    {
+      "file": "checkpoints/cycle20.json",
+      "bytes": 63277,
+      "sha256": "8834c74ef3412a39fe1f36b8169f8f6cf59c98710de11f5ec3f03ebbd556795f"
+    },
+    {
+      "file": "checkpoints/cycle30.json",
+      "bytes": 72226,
+      "sha256": "d399aba60b52ba3907742b511a08a41f91ded52dd0bf7ad8c46ced69d4cdfc89"
+    },
+    {
+      "file": "checkpoints/cycle40.json",
+      "bytes": 76386,
+      "sha256": "c4b98f322154e5b002c3aa3db474856ab8e0551f6b6026f572ff5400db58cf7f"
+    },
+    {
+      "file": "checkpoints/cycle50.json",
+      "bytes": 80275,
+      "sha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435"
+    },
+    {
+      "file": "checkpoints/cycle56.json",
+      "bytes": 99814,
+      "sha256": "c83eca959b0ab78a6ccdea538efc677d26533da05ae62d3553a062a5c5d66898"
+    },
+    {
+      "file": "checkpoints/cycle57.json",
+      "bytes": 104361,
+      "sha256": "d459a0d5ccc60cf80b5174b5f3d4328d4c0db49ccc3324bba04c38027af778a0"
+    },
+    {
+      "file": "checkpoints/cycle60.json",
+      "bytes": 106789,
+      "sha256": "2c4572ead08d878635878f9616f7d85558fc1c43498d6178090b2ef77a059170"
+    },
+    {
+      "file": "checkpoints/cycle61-1793240622788.json",
+      "bytes": 115515,
+      "sha256": "4620a5e778a5dfbb7683d7aa31e47f0a19362c226b6ea34c5aed507710cce755"
+    },
+    {
+      "file": "checkpoints/cycle61.json",
+      "bytes": 112465,
+      "sha256": "797255968de20aee4688d3d93f9b6600dde70cb875964c4a947b0fed2c41a7f2"
+    },
+    {
+      "file": "checkpoints/cycle64.json",
+      "bytes": 120335,
+      "sha256": "4ebebba5e9b89b2393402ad79206431ff50ae9d95b46baf7a1842982551e0e1b"
+    },
+    {
+      "file": "checkpoints/cycle65.json",
+      "bytes": 124741,
+      "sha256": "eced9cd230bf3a27fb0f5ba855ac18b77cb325e2972c891deade595469a23cf6"
+    },
+    {
+      "file": "checkpoints/cycle66-1793240985964.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "file": "checkpoints/cycle66-1793241024420.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "file": "checkpoints/cycle66.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "file": "screenshots/cycle13-capital-habitat-comparison.png",
+      "bytes": 312695,
+      "sha256": "aeeb471ee5d24cd678272475e789b75c5bc0fdb312a088fd0de570ae56de62e5"
+    },
+    {
+      "file": "screenshots/cycle18-extraction-comparison.png",
+      "bytes": 335335,
+      "sha256": "e91a9aa495403f5b22d30111ac4c8dd1fb6727b5e50b1378b1b2082ff1ace972"
+    },
+    {
+      "file": "screenshots/cycle24-observatory-ark-course.png",
+      "bytes": 886094,
+      "sha256": "4f67e3cbde746cd2aef637c613ba2eb76337862bcb16baa53a5a2380593146fa"
+    },
+    {
+      "file": "screenshots/cycle25-forge-production-threshold.png",
+      "bytes": 345719,
+      "sha256": "94319f5471bb8476a6ad22951d9798f8837d5a3a05a670c6a57422517777bc06"
+    },
+    {
+      "file": "screenshots/cycle27-stillwater-lost-settlement-race.png",
+      "bytes": 595538,
+      "sha256": "286949ad805f8ac5f28f5c0347f5e810c78f2253de5f47a11a04d2391b6a5575"
+    },
+    {
+      "file": "screenshots/cycle30-first-reinforcement-merge.png",
+      "bytes": 717348,
+      "sha256": "eeafed4827a416970b167c12b41b0564afed985872edb41b38efe22c99bce040"
+    },
+    {
+      "file": "screenshots/cycle35-empire-development-overview.png",
+      "bytes": 347687,
+      "sha256": "fdd6eb0547e5b1b418f05149d5d77ef1601cccf5c6c59d2dee7f2a6af949dc51"
+    },
+    {
+      "file": "screenshots/cycle39-first-beacon-investment.png",
+      "bytes": 289687,
+      "sha256": "94d99738bf70784a6175f594e491b2b9db5a9951da53af4c89d2fc430084c516"
+    },
+    {
+      "file": "screenshots/cycle40-unfunded-beacon-replacement.png",
+      "bytes": 271274,
+      "sha256": "d22e9a337e2e2e070a0d12aa1049a53247b22be64c3306b0ba0b371451b75511"
+    },
+    {
+      "file": "screenshots/cycle46-capital-beacon-capacity-tradeoff.png",
+      "bytes": 273994,
+      "sha256": "8bb53e681c1981b78ad9082a8172acdde1cc70ffbcab2adc1b8d88053ee297a1"
+    },
+    {
+      "file": "screenshots/cycle51-alignment-begins.png",
+      "bytes": 355129,
+      "sha256": "ac63d34a7cb806656c0812989c15ee0f09637d957a5dfa29aa2ddeedb9f80d88"
+    },
+    {
+      "file": "screenshots/cycle54-two-treaties-broken.png",
+      "bytes": 307891,
+      "sha256": "31ab724a38a13a2cd58a87b5a1d7712086443a5a73d49d4f6d577cef90ae037d"
+    },
+    {
+      "file": "screenshots/cycle56-nacre-blockade-briefing.png",
+      "bytes": 256340,
+      "sha256": "fb0df7b8bd1c49be63af0dd99c813fdfbba1c125ce60c13b65578a0ce052b487"
+    },
+    {
+      "file": "screenshots/cycle56-nacre-loss-actual-rounds.png",
+      "bytes": 475519,
+      "sha256": "64cfd1fde20793b100af01f4af229544e2d75446b644a64fef102899427a904b"
+    },
+    {
+      "file": "screenshots/cycle56-nacre-relief-preview.png",
+      "bytes": 721236,
+      "sha256": "88de0dc0d47d027b24e5fb80afa1d84207b6c9f45a27b1eeebeff54a1abb40aa"
+    },
+    {
+      "file": "screenshots/cycle56-nacre-relief-two-engagements.png",
+      "bytes": 568787,
+      "sha256": "31e88497f012f7cc226324edc3c193a615a44d2235c0ed08bd6c82cd0b3f0fb4"
+    },
+    {
+      "file": "screenshots/cycle57-retool-lab-to-second-shipyard.png",
+      "bytes": 343180,
+      "sha256": "0bc7ded1835f8621598c4a1a1273f6d39ce1609cafc4bd67444b395eab98de52"
+    },
+    {
+      "file": "screenshots/cycle61-deliberate-merge-relief-assembly.png",
+      "bytes": 295133,
+      "sha256": "3ad66296fe9184fc89aa5645092f56a607679f0eaf32c85b45d2ea529b33464a"
+    },
+    {
+      "file": "screenshots/cycle65-peace-before-final-alignment.png",
+      "bytes": 368073,
+      "sha256": "aa5bfb7be0d01b44ff8c327980b6462ae2e6b2f10cb6d4ae0d2cf429f37c64b1"
+    },
+    {
+      "file": "screenshots/cycle66-asterion-victory.png",
+      "bytes": 446743,
+      "sha256": "9e9081c6d5592ee8bef9b193992814f3c153b5c3cd8545eeaa92378147711a1f"
+    },
+    {
+      "file": "screenshots/cycle66-finished-galaxy-nacre.png",
+      "bytes": 780546,
+      "sha256": "30ba503ab07dcf06c0167157256543a5709013a60b3955d3bad93404ca10a758"
+    },
+    {
+      "file": "screenshots/cycle66-observatory-shared-history.png",
+      "bytes": 650756,
+      "sha256": "943dce16038df4cf8b7cc54f9785e25c1b61f771f2128e199aef9c7872973419"
+    },
+    {
+      "file": "screenshots/cycle66-reopened-retained-battle-rounds.png",
+      "bytes": 300622,
+      "sha256": "0a9bf9951f7c4c776f26478cdf209e327da14c785ee03d2288b6031956154a64"
+    },
+    {
+      "file": "screenshots/cycle66-retained-battle-rounds-verified.png",
+      "bytes": 441207,
+      "sha256": "cb6fd0fc92073c12acbca94dba6d3cdcc73a1502121ceb4dec928a88bc845ba1"
+    }
+  ],
+  "verifiedUnchanged": true
+}

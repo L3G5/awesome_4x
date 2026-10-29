@@ -1,0 +1,918 @@
+{
+  "method": "Read only the final actual export’s player-involved report records; no simulation or private rival state projection.",
+  "reports": [
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f65",
+          "owner": "veyr",
+          "name": "Vanguard 65",
+          "type": "frigate",
+          "shipsBefore": 2,
+          "hullBefore": 68,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        },
+        {
+          "role": "defender",
+          "fleetId": "f53",
+          "owner": "player",
+          "name": "Vanguard 53",
+          "type": "frigate",
+          "shipsBefore": 2,
+          "hullBefore": 68,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "mutual-destruction",
+      "summary": "Battle at Nacre: Veyr lost 2 ships and 68 hull; Concord lost 2 ships and 68 hull. Both fleets destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 68,
+            "shipsAfter": 2,
+            "hullAfter": 46.6,
+            "firepower": 30,
+            "rawHit": 29.713439320446923,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 68,
+            "shipsAfter": 2,
+            "hullAfter": 44.2,
+            "firepower": 30,
+            "rawHit": 26.709478670731183,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 46.6,
+            "shipsAfter": 1,
+            "hullAfter": 20.2,
+            "firepower": 30,
+            "rawHit": 34.10901058441959,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 44.2,
+            "shipsAfter": 1,
+            "hullAfter": 16.9,
+            "firepower": 30,
+            "rawHit": 32.96764277899638,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 3,
+          "attacker": {
+            "shipsBefore": 1,
+            "hullBefore": 20.2,
+            "shipsAfter": 1,
+            "hullAfter": 6.8,
+            "firepower": 15,
+            "rawHit": 12.860660350997932,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 16.9,
+            "shipsAfter": 1,
+            "hullAfter": 6.6,
+            "firepower": 15,
+            "rawHit": 16.7330507109873,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 4,
+          "attacker": {
+            "shipsBefore": 1,
+            "hullBefore": 6.8,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 15.297012012801135,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 6.6,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 16.482913683867082,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 9,
+      "turn": 62
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f53",
+          "owner": "player",
+          "name": "Vanguard 53",
+          "type": "frigate",
+          "shipsBefore": 3,
+          "hullBefore": 102,
+          "shipsAfter": 2,
+          "hullAfter": 58.4
+        },
+        {
+          "role": "defender",
+          "fleetId": "f56",
+          "owner": "choir",
+          "name": "Vanguard 56",
+          "type": "frigate",
+          "shipsBefore": 2,
+          "hullBefore": 68,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Nacre: Concord lost 1 ship and 43.6 hull; Choir lost 2 ships and 68 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 102,
+            "shipsAfter": 3,
+            "hullAfter": 80.3,
+            "firepower": 45,
+            "rawHit": 43.49977025447879,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 68,
+            "shipsAfter": 1,
+            "hullAfter": 33.2,
+            "firepower": 30,
+            "rawHit": 27.179835960734636,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 80.3,
+            "shipsAfter": 3,
+            "hullAfter": 70,
+            "firepower": 45,
+            "rawHit": 41.36573036236223,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 33.2,
+            "shipsAfter": 1,
+            "hullAfter": 0.1,
+            "firepower": 15,
+            "rawHit": 12.839442873839287,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 3,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 70,
+            "shipsAfter": 2,
+            "hullAfter": 58.4,
+            "firepower": 45,
+            "rawHit": 47.13564966071863,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 0.1,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 14.479475102154536,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 8,
+      "turn": 61
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f59",
+          "owner": "veyr",
+          "name": "Vanguard 59",
+          "type": "frigate",
+          "shipsBefore": 2,
+          "hullBefore": 68,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        },
+        {
+          "role": "defender",
+          "fleetId": "f62",
+          "owner": "player",
+          "name": "Vanguard 62",
+          "type": "frigate",
+          "shipsBefore": 2,
+          "hullBefore": 68,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "mutual-destruction",
+      "summary": "Battle at Nacre: Veyr lost 2 ships and 68 hull; Concord lost 2 ships and 68 hull. Both fleets destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 68,
+            "shipsAfter": 2,
+            "hullAfter": 46.8,
+            "firepower": 30,
+            "rawHit": 30.722986671840772,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 68,
+            "shipsAfter": 2,
+            "hullAfter": 43.4,
+            "firepower": 30,
+            "rawHit": 26.514557516667992,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 46.8,
+            "shipsAfter": 1,
+            "hullAfter": 20.8,
+            "firepower": 30,
+            "rawHit": 32.9750435447786,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 43.4,
+            "shipsAfter": 1,
+            "hullAfter": 17,
+            "firepower": 30,
+            "rawHit": 32.48098435532302,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 3,
+          "attacker": {
+            "shipsBefore": 1,
+            "hullBefore": 20.8,
+            "shipsAfter": 1,
+            "hullAfter": 8.4,
+            "firepower": 15,
+            "rawHit": 16.80432789993938,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 17,
+            "shipsAfter": 1,
+            "hullAfter": 3.6,
+            "firepower": 15,
+            "rawHit": 15.459952475270258,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 4,
+          "attacker": {
+            "shipsBefore": 1,
+            "hullBefore": 8.4,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 15.45620510133449,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 3.6,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 14.858604669570923,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 7,
+      "turn": 60
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s20",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f53",
+          "owner": "player",
+          "name": "Vanguard 53",
+          "type": "frigate",
+          "shipsBefore": 3,
+          "hullBefore": 101.7,
+          "shipsAfter": 1,
+          "hullAfter": 24.1
+        },
+        {
+          "role": "defender",
+          "fleetId": "f12",
+          "owner": "choir",
+          "name": "Vanguard 12",
+          "type": "frigate",
+          "shipsBefore": 3,
+          "hullBefore": 73.1,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Sundrift: Concord lost 2 ships and 77.6 hull; Choir lost 3 ships and 73.1 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 101.7,
+            "shipsAfter": 2,
+            "hullAfter": 61.3,
+            "firepower": 45,
+            "rawHit": 39.05403212865349,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 3,
+            "hullBefore": 73.1,
+            "shipsAfter": 2,
+            "hullAfter": 41.9,
+            "firepower": 45,
+            "rawHit": 50.51586458226666,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 61.3,
+            "shipsAfter": 2,
+            "hullAfter": 35.2,
+            "firepower": 30,
+            "rawHit": 31.120476695476103,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 41.9,
+            "shipsAfter": 1,
+            "hullAfter": 17,
+            "firepower": 30,
+            "rawHit": 32.596149110700935,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 3,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 35.2,
+            "shipsAfter": 1,
+            "hullAfter": 24.1,
+            "firepower": 30,
+            "rawHit": 28.223101229639724,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 17,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 13.84943890850991,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 6,
+      "turn": 57
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s20",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f12",
+          "owner": "choir",
+          "name": "Vanguard 12",
+          "type": "frigate",
+          "shipsBefore": 4,
+          "hullBefore": 136,
+          "shipsAfter": 3,
+          "hullAfter": 73.1
+        },
+        {
+          "role": "defender",
+          "fleetId": "f49",
+          "owner": "player",
+          "name": "Sovereign 49",
+          "type": "cruiser",
+          "shipsBefore": 1,
+          "hullBefore": 85,
+          "defenseLead": true,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Sundrift: Choir lost 1 ship and 62.9 hull; Concord lost 1 ship and 85 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 4,
+            "hullBefore": 136,
+            "shipsAfter": 3,
+            "hullAfter": 101.4,
+            "firepower": 60,
+            "rawHit": 58.43207323411479,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 85,
+            "shipsAfter": 1,
+            "hullAfter": 38.3,
+            "firepower": 38.75,
+            "rawHit": 43.23804982705042,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 101.4,
+            "shipsAfter": 3,
+            "hullAfter": 73.1,
+            "firepower": 45,
+            "rawHit": 50.525026003480896,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 38.3,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 38.75,
+            "rawHit": 35.387672540557105,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 5,
+      "turn": 56
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f53",
+          "owner": "player",
+          "name": "Vanguard 53",
+          "type": "frigate",
+          "shipsBefore": 2,
+          "hullBefore": 39.7,
+          "shipsAfter": 2,
+          "hullAfter": 39.7
+        },
+        {
+          "role": "defender",
+          "fleetId": "f52",
+          "owner": "veyr",
+          "name": "Colony Ark 52",
+          "type": "colony",
+          "shipsBefore": 1,
+          "hullBefore": 24,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Nacre: Concord lost 0 ships and 0 hull; Veyr lost 1 ship and 24 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 39.7,
+            "shipsAfter": 2,
+            "hullAfter": 39.7,
+            "firepower": 30,
+            "rawHit": 33.628828660352156,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 24,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 0,
+            "rawHit": 0,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          }
+        }
+      ],
+      "id": 4,
+      "turn": 56
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f53",
+          "owner": "player",
+          "name": "Vanguard 53",
+          "type": "frigate",
+          "shipsBefore": 3,
+          "hullBefore": 102,
+          "shipsAfter": 2,
+          "hullAfter": 39.7
+        },
+        {
+          "role": "defender",
+          "fleetId": "f6",
+          "owner": "veyr",
+          "name": "Vanguard 6",
+          "type": "frigate",
+          "shipsBefore": 3,
+          "hullBefore": 82.2,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Nacre: Concord lost 1 ship and 62.3 hull; Veyr lost 3 ships and 82.2 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 102,
+            "shipsAfter": 2,
+            "hullAfter": 62.5,
+            "firepower": 45,
+            "rawHit": 50.41389382991474,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 3,
+            "hullBefore": 82.2,
+            "shipsAfter": 1,
+            "hullAfter": 31.8,
+            "firepower": 45,
+            "rawHit": 49.31415646802634,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 62.5,
+            "shipsAfter": 2,
+            "hullAfter": 50.5,
+            "firepower": 30,
+            "rawHit": 27.654572784667835,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 31.8,
+            "shipsAfter": 1,
+            "hullAfter": 4.1,
+            "firepower": 15,
+            "rawHit": 14.944505491526796,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          }
+        },
+        {
+          "number": 3,
+          "attacker": {
+            "shipsBefore": 2,
+            "hullBefore": 50.5,
+            "shipsAfter": 2,
+            "hullAfter": 39.7,
+            "firepower": 30,
+            "rawHit": 31.131179040530697,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 4.1,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 13.45852555660531,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          }
+        }
+      ],
+      "id": 3,
+      "turn": 56
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f6",
+          "owner": "veyr",
+          "name": "Vanguard 6",
+          "type": "frigate",
+          "shipsBefore": 3,
+          "hullBefore": 98.8,
+          "shipsAfter": 3,
+          "hullAfter": 82.2
+        },
+        {
+          "role": "defender",
+          "fleetId": "f55",
+          "owner": "player",
+          "name": "Vanguard 55",
+          "type": "frigate",
+          "shipsBefore": 1,
+          "hullBefore": 34,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Nacre: Veyr lost 0 ships and 16.6 hull; Concord lost 1 ship and 34 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 3,
+            "hullBefore": 98.8,
+            "shipsAfter": 3,
+            "hullAfter": 82.2,
+            "firepower": 45,
+            "rawHit": 49.10032206599135,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 34,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 16.591270628152415,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 2,
+      "turn": 55
+    },
+    {
+      "kind": "fleet",
+      "systemId": "s7",
+      "participants": [
+        {
+          "role": "attacker",
+          "fleetId": "f6",
+          "owner": "veyr",
+          "name": "Vanguard 6",
+          "type": "frigate",
+          "shipsBefore": 6,
+          "hullBefore": 204,
+          "shipsAfter": 3,
+          "hullAfter": 98.8
+        },
+        {
+          "role": "defender",
+          "fleetId": "f32",
+          "owner": "player",
+          "name": "Vanguard 32",
+          "type": "frigate",
+          "shipsBefore": 4,
+          "hullBefore": 136,
+          "defenseLead": true,
+          "shipsAfter": 0,
+          "hullAfter": 0
+        }
+      ],
+      "outcome": "defender-destroyed",
+      "summary": "Battle at Nacre: Veyr lost 3 ships and 105.2 hull; Concord lost 4 ships and 136 hull. Attacking fleet survives; defending fleet destroyed.",
+      "rounds": [
+        {
+          "number": 1,
+          "attacker": {
+            "shipsBefore": 6,
+            "hullBefore": 204,
+            "shipsAfter": 5,
+            "hullAfter": 139.6,
+            "firepower": 90,
+            "rawHit": 85.83043222292326,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          },
+          "defender": {
+            "shipsBefore": 4,
+            "hullBefore": 136,
+            "shipsAfter": 2,
+            "hullAfter": 67.3,
+            "firepower": 60,
+            "rawHit": 64.37979774177074,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 2,
+          "attacker": {
+            "shipsBefore": 5,
+            "hullBefore": 139.6,
+            "shipsAfter": 4,
+            "hullAfter": 112,
+            "firepower": 75,
+            "rawHit": 73.85668057424482,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          },
+          "defender": {
+            "shipsBefore": 2,
+            "hullBefore": 67.3,
+            "shipsAfter": 1,
+            "hullAfter": 8.2,
+            "firepower": 30,
+            "rawHit": 27.617749698925763,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        },
+        {
+          "number": 3,
+          "attacker": {
+            "shipsBefore": 4,
+            "hullBefore": 112,
+            "shipsAfter": 3,
+            "hullAfter": 98.8,
+            "firepower": 60,
+            "rawHit": 53.88443232374266,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 1
+          },
+          "defender": {
+            "shipsBefore": 1,
+            "hullBefore": 8.2,
+            "shipsAfter": 0,
+            "hullAfter": 0,
+            "firepower": 15,
+            "rawHit": 13.240725314710287,
+            "weaponsFactor": 1.25,
+            "factionFactor": 1,
+            "shieldFactor": 0.8
+          }
+        }
+      ],
+      "id": 1,
+      "turn": 55
+    }
+  ],
+  "recordedOwnLosses": {
+    "frigate": 13,
+    "cruiser": 1
+  },
+  "scope": "These nine retained reports are not a general lifetime-statistics feature."
+}

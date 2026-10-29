@@ -1,0 +1,5138 @@
+[
+  {
+    "eventIndex": 11,
+    "time": "2026-10-29T01:30:21.487Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s20"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 14,
+    "time": "2026-10-29T01:30:53.853Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s20",
+      "choiceId": "reactor",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=reactor]",
+    "actualControl": {
+      "text": "Study the reactor →\n\nGain 40 science and 30 minerals.\n\n1 order",
+      "attributes": {
+        "class": "choice-card discovery-choice",
+        "data-action": "anomaly-choice",
+        "data-system": "s20",
+        "data-choice": "reactor"
+      }
+    }
+  },
+  {
+    "eventIndex": 17,
+    "time": "2026-10-29T01:30:55.665Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "move",
+      "fleetId": "f2",
+      "targetId": "s20"
+    },
+    "uiStatus": "Colony Ark 2 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 20,
+    "time": "2026-10-29T01:31:07.201Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f2"
+    },
+    "uiStatus": "Colony founded at Sundrift.",
+    "uiSelector": "[data-action=colonize-confirm]",
+    "actualControl": {
+      "text": "Found colony →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "colonize-confirm"
+      }
+    }
+  },
+  {
+    "eventIndex": 22,
+    "time": "2026-10-29T01:31:23.369Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "research",
+      "techId": "physics"
+    },
+    "uiStatus": "Research directed toward Resonance Theory.",
+    "uiSelector": "[data-action=research][data-tech=physics]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "physics",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 28,
+    "time": "2026-10-29T01:31:53.674Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Research Enclave commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=lab]",
+    "actualControl": {
+      "text": "✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 4 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "lab",
+        "title": "+5 science each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 31,
+    "time": "2026-10-29T01:31:54.271Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s41"
+    },
+    "uiStatus": "Vanguard 3 arrived at Asterion.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s41"
+      }
+    }
+  },
+  {
+    "eventIndex": 33,
+    "time": "2026-10-29T01:31:55.049Z",
+    "turnBefore": 1,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 35,
+    "time": "2026-10-29T01:32:23.429Z",
+    "turnBefore": 2,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 3 arrived at Haven.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s28"
+      }
+    }
+  },
+  {
+    "eventIndex": 38,
+    "time": "2026-10-29T01:32:24.801Z",
+    "turnBefore": 2,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s7"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 42,
+    "time": "2026-10-29T01:32:57.347Z",
+    "turnBefore": 2,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s28",
+      "choiceId": "reactor",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=reactor]",
+    "actualControl": {
+      "text": "Study the reactor →\n\nGain 40 science and 30 minerals.\n\n1 order",
+      "attributes": {
+        "class": "choice-card discovery-choice",
+        "data-action": "anomaly-choice",
+        "data-system": "s28",
+        "data-choice": "reactor"
+      }
+    }
+  },
+  {
+    "eventIndex": 45,
+    "time": "2026-10-29T01:32:57.748Z",
+    "turnBefore": 2,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "market",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Exchange Port commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=market]",
+    "actualControl": {
+      "text": "◈\nExchange Port\n\n+7 credits each turn.\n\n◈ 25   ◇ 20 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "market",
+        "title": "+7 credits each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 48,
+    "time": "2026-10-29T01:32:59.395Z",
+    "turnBefore": 2,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kepler.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s15"
+      }
+    }
+  },
+  {
+    "eventIndex": 49,
+    "time": "2026-10-29T01:32:59.719Z",
+    "turnBefore": 2,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 52,
+    "time": "2026-10-29T01:33:22.884Z",
+    "turnBefore": 3,
+    "action": {
+      "type": "research",
+      "techId": "ecology"
+    },
+    "uiStatus": "Research directed toward Adaptive Biospheres.",
+    "uiSelector": "[data-action=research][data-tech=ecology]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "ecology",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 55,
+    "time": "2026-10-29T01:33:23.377Z",
+    "turnBefore": 3,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s10"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ashfall.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s10"
+      }
+    }
+  },
+  {
+    "eventIndex": 57,
+    "time": "2026-10-29T01:33:37.544Z",
+    "turnBefore": 3,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s5"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Hesper.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s5"
+      }
+    }
+  },
+  {
+    "eventIndex": 60,
+    "time": "2026-10-29T01:33:38.813Z",
+    "turnBefore": 3,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s0"
+    },
+    "uiStatus": "Vanguard 3 arrived at Solace.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s0"
+      }
+    }
+  },
+  {
+    "eventIndex": 63,
+    "time": "2026-10-29T01:33:48.377Z",
+    "turnBefore": 3,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "trade"
+    },
+    "uiStatus": "Trade established between The Concord and Veyr Consortium. Borders are open; existing grievances remain.",
+    "uiSelector": "[data-action=diplomacy][data-stance=trade][data-target=veyr]",
+    "actualControl": {
+      "text": "Trade treaty ◈30",
+      "attributes": {
+        "data-action": "diplomacy",
+        "data-stance": "trade",
+        "data-target": "veyr",
+        "title": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation."
+      }
+    }
+  },
+  {
+    "eventIndex": 65,
+    "time": "2026-10-29T01:33:48.714Z",
+    "turnBefore": 3,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 67,
+    "time": "2026-10-29T01:34:02.810Z",
+    "turnBefore": 4,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s33"
+    },
+    "uiStatus": "Vanguard 3 arrived at Halcyon.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s33"
+      }
+    }
+  },
+  {
+    "eventIndex": 70,
+    "time": "2026-10-29T01:34:04.372Z",
+    "turnBefore": 4,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sable.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s13"
+      }
+    }
+  },
+  {
+    "eventIndex": 72,
+    "time": "2026-10-29T01:34:21.654Z",
+    "turnBefore": 4,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s26"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Aster.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s26"
+      }
+    }
+  },
+  {
+    "eventIndex": 73,
+    "time": "2026-10-29T01:34:22.061Z",
+    "turnBefore": 4,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 75,
+    "time": "2026-10-29T01:34:34.280Z",
+    "turnBefore": 5,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Veyr Prime.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s1"
+      }
+    }
+  },
+  {
+    "eventIndex": 77,
+    "time": "2026-10-29T01:34:34.708Z",
+    "turnBefore": 5,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s18"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Cinder.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s18"
+      }
+    }
+  },
+  {
+    "eventIndex": 80,
+    "time": "2026-10-29T01:34:36.129Z",
+    "turnBefore": 5,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s0"
+    },
+    "uiStatus": "Vanguard 3 arrived at Solace.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s0"
+      }
+    }
+  },
+  {
+    "eventIndex": 84,
+    "time": "2026-10-29T01:34:50.495Z",
+    "turnBefore": 5,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Colony Ark commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=colony]",
+    "actualControl": {
+      "text": "Colony Ark\n\nFound a new colony on a surveyed, habitable world. Consumed when settling.\n\n◈ 45   ◇ 55 · 5 cycles · 1 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "colony",
+        "title": "Found a new colony on a surveyed, habitable world. Consumed when settling."
+      }
+    }
+  },
+  {
+    "eventIndex": 85,
+    "time": "2026-10-29T01:34:50.784Z",
+    "turnBefore": 5,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f3]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f3",
+        "aria-pressed": "false",
+        "title": "Hold at Solace; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 86,
+    "time": "2026-10-29T01:34:51.071Z",
+    "turnBefore": 5,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 88,
+    "time": "2026-10-29T01:35:03.776Z",
+    "turnBefore": 6,
+    "action": {
+      "type": "research",
+      "techId": "logistics"
+    },
+    "uiStatus": "Research directed toward Deep-space Logistics.",
+    "uiSelector": "[data-action=research][data-tech=logistics]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "logistics",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 92,
+    "time": "2026-10-29T01:35:05.306Z",
+    "turnBefore": 6,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s31"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Vesper.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s31"
+      }
+    }
+  },
+  {
+    "eventIndex": 94,
+    "time": "2026-10-29T01:35:39.958Z",
+    "turnBefore": 6,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s39"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Eos.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s39"
+      }
+    }
+  },
+  {
+    "eventIndex": 96,
+    "time": "2026-10-29T01:35:40.232Z",
+    "turnBefore": 6,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 98,
+    "time": "2026-10-29T01:35:59.372Z",
+    "turnBefore": 7,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Veyr Prime.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s1"
+      }
+    }
+  },
+  {
+    "eventIndex": 100,
+    "time": "2026-10-29T01:35:59.781Z",
+    "turnBefore": 7,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s18"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Cinder.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s18"
+      }
+    }
+  },
+  {
+    "eventIndex": 104,
+    "time": "2026-10-29T01:36:01.258Z",
+    "turnBefore": 7,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Research Enclave commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=lab]",
+    "actualControl": {
+      "text": "✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "lab",
+        "title": "+5 science each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 105,
+    "time": "2026-10-29T01:36:01.603Z",
+    "turnBefore": 7,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 107,
+    "time": "2026-10-29T01:36:52.040Z",
+    "turnBefore": 8,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "acceptTrade",
+      "offerId": "trade-1"
+    },
+    "uiStatus": "Trade established between The Luminous Choir and The Concord. Borders are open; existing grievances remain.",
+    "uiSelector": "[data-action=trade-response][data-stance=acceptTrade]",
+    "actualControl": {
+      "text": "Accept trade · 1 order",
+      "attributes": {
+        "class": "primary",
+        "data-action": "trade-response",
+        "data-stance": "acceptTrade",
+        "data-target": "choir",
+        "data-offer": "trade-1"
+      }
+    }
+  },
+  {
+    "eventIndex": 110,
+    "time": "2026-10-29T01:36:53.598Z",
+    "turnBefore": 8,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s10"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ashfall.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s10"
+      }
+    }
+  },
+  {
+    "eventIndex": 112,
+    "time": "2026-10-29T01:36:53.998Z",
+    "turnBefore": 8,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kepler.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s15"
+      }
+    }
+  },
+  {
+    "eventIndex": 113,
+    "time": "2026-10-29T01:36:54.336Z",
+    "turnBefore": 8,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 115,
+    "time": "2026-10-29T01:37:14.303Z",
+    "turnBefore": 9,
+    "action": {
+      "type": "research",
+      "techId": "industry"
+    },
+    "uiStatus": "Research directed toward Autonomous Industry.",
+    "uiSelector": "[data-action=research][data-tech=industry]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "industry",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 119,
+    "time": "2026-10-29T01:37:15.728Z",
+    "turnBefore": 9,
+    "action": {
+      "type": "move",
+      "fleetId": "f16",
+      "targetId": "s20"
+    },
+    "uiStatus": "Colony Ark 16 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 123,
+    "time": "2026-10-29T01:37:16.272Z",
+    "turnBefore": 9,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Colony Ark commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=colony]",
+    "actualControl": {
+      "text": "Colony Ark\n\nFound a new colony on a surveyed, habitable world. Consumed when settling.\n\n◈ 45   ◇ 55 · 4 cycles · 1 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "colony",
+        "title": "Found a new colony on a surveyed, habitable world. Consumed when settling."
+      }
+    }
+  },
+  {
+    "eventIndex": 126,
+    "time": "2026-10-29T01:37:17.816Z",
+    "turnBefore": 9,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s23"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Tethys.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s23"
+      }
+    }
+  },
+  {
+    "eventIndex": 128,
+    "time": "2026-10-29T01:37:26.831Z",
+    "turnBefore": 9,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s36"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Peregrine.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s36"
+      }
+    }
+  },
+  {
+    "eventIndex": 129,
+    "time": "2026-10-29T01:37:27.164Z",
+    "turnBefore": 9,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 133,
+    "time": "2026-10-29T01:38:32.667Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s36",
+      "choiceId": "listen",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=listen]",
+    "actualControl": {
+      "text": "Map the resonance →\n\nGain 75 science.\n\n1 order",
+      "attributes": {
+        "class": "choice-card discovery-choice",
+        "data-action": "anomaly-choice",
+        "data-system": "s36",
+        "data-choice": "listen"
+      }
+    }
+  },
+  {
+    "eventIndex": 135,
+    "time": "2026-10-29T01:38:33.079Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kepler.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s15"
+      }
+    }
+  },
+  {
+    "eventIndex": 137,
+    "time": "2026-10-29T01:38:33.467Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s7"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 140,
+    "time": "2026-10-29T01:38:34.712Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "move",
+      "fleetId": "f16",
+      "targetId": "s7"
+    },
+    "uiStatus": "Colony Ark 16 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 142,
+    "time": "2026-10-29T01:38:34.945Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f16"
+    },
+    "uiStatus": "Colony founded at Nacre.",
+    "uiSelector": "[data-action=colonize-confirm]",
+    "actualControl": {
+      "text": "Found colony →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "colonize-confirm"
+      }
+    }
+  },
+  {
+    "eventIndex": 144,
+    "time": "2026-10-29T01:38:35.284Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Research Enclave commissioned at Nacre.",
+    "uiSelector": "[data-action=build][data-item=lab]",
+    "actualControl": {
+      "text": "✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 6 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s7",
+        "data-item": "lab",
+        "title": "+5 science each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 145,
+    "time": "2026-10-29T01:38:35.718Z",
+    "turnBefore": 10,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 148,
+    "time": "2026-10-29T01:38:47.701Z",
+    "turnBefore": 11,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s4"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Meridian.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s4"
+      }
+    }
+  },
+  {
+    "eventIndex": 151,
+    "time": "2026-10-29T01:39:13.037Z",
+    "turnBefore": 11,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s9"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Velorum.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s9"
+      }
+    }
+  },
+  {
+    "eventIndex": 152,
+    "time": "2026-10-29T01:39:13.375Z",
+    "turnBefore": 11,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 154,
+    "time": "2026-10-29T01:39:51.624Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s17"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Orison.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s17"
+      }
+    }
+  },
+  {
+    "eventIndex": 158,
+    "time": "2026-10-29T01:39:53.133Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "mine",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Orbital Extractor commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=mine]",
+    "actualControl": {
+      "text": "◇\nOrbital Extractor\n\n+5 minerals each turn.\n\n◈ 20   ◇ 25 · 3 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "mine",
+        "title": "+5 minerals each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 161,
+    "time": "2026-10-29T01:40:02.681Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s22"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ophion.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s22"
+      }
+    }
+  },
+  {
+    "eventIndex": 162,
+    "time": "2026-10-29T01:40:03.011Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 164,
+    "time": "2026-10-29T01:40:45.591Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s3"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Lumen.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s3"
+      }
+    }
+  },
+  {
+    "eventIndex": 167,
+    "time": "2026-10-29T01:40:46.908Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f20",
+      "targetId": "s20"
+    },
+    "uiStatus": "Colony Ark 20 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 173,
+    "time": "2026-10-29T01:40:47.781Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "habitat",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Habitation Domes commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=habitat]",
+    "actualControl": {
+      "text": "◎\nHabitation Domes\n\n+4 maximum population and +40% population growth.\n\n◈ 40   ◇ 35 · 3 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "habitat",
+        "title": "+4 maximum population and +40% population growth."
+      }
+    }
+  },
+  {
+    "eventIndex": 177,
+    "time": "2026-10-29T01:40:58.914Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s35"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Seraph.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s35"
+      }
+    }
+  },
+  {
+    "eventIndex": 178,
+    "time": "2026-10-29T01:40:59.186Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 181,
+    "time": "2026-10-29T01:41:29.429Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "move",
+      "fleetId": "f20",
+      "targetId": "s7"
+    },
+    "uiStatus": "Colony Ark 20 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 184,
+    "time": "2026-10-29T01:41:30.846Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s27"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nyx.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s27"
+      }
+    }
+  },
+  {
+    "eventIndex": 186,
+    "time": "2026-10-29T01:41:41.603Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s14"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ilyra.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s14"
+      }
+    }
+  },
+  {
+    "eventIndex": 189,
+    "time": "2026-10-29T01:42:06.592Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "gift"
+    },
+    "uiStatus": "The Concord sent a 35-credit gift to Khar Dominion. Trust improves; border grievances remain.",
+    "uiSelector": "[data-action=diplomacy][data-stance=gift][data-target=khar]",
+    "actualControl": {
+      "text": "Send gift ◈35",
+      "attributes": {
+        "data-action": "diplomacy",
+        "data-stance": "gift",
+        "data-target": "khar",
+        "title": "Transfer 35 credits; mutual trust +20. Existing border grievances remain."
+      }
+    }
+  },
+  {
+    "eventIndex": 190,
+    "time": "2026-10-29T01:42:06.641Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "trade"
+    },
+    "uiStatus": "Trade established between The Concord and Khar Dominion. Borders are open; existing grievances remain.",
+    "uiSelector": "[data-action=diplomacy][data-stance=trade][data-target=khar]",
+    "actualControl": {
+      "text": "Trade treaty ◈30",
+      "attributes": {
+        "data-action": "diplomacy",
+        "data-stance": "trade",
+        "data-target": "khar",
+        "title": "Open borders and earn 6 credits per turn, or 10 with Stellar Accords. Mutual trust +10. Border grievances can still cause cancellation."
+      }
+    }
+  },
+  {
+    "eventIndex": 192,
+    "time": "2026-10-29T01:42:06.940Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 194,
+    "time": "2026-10-29T01:42:41.762Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "research",
+      "techId": "computing"
+    },
+    "uiStatus": "Research directed toward Quantum Archives.",
+    "uiSelector": "[data-action=research][data-tech=computing]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "computing",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 198,
+    "time": "2026-10-29T01:42:43.320Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "move",
+      "fleetId": "f20",
+      "targetId": "s4"
+    },
+    "uiStatus": "Colony Ark 20 arrived at Meridian.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s4"
+      }
+    }
+  },
+  {
+    "eventIndex": 200,
+    "time": "2026-10-29T01:42:43.460Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f20"
+    },
+    "uiStatus": "Colony founded at Meridian.",
+    "uiSelector": "[data-action=colonize-confirm]",
+    "actualControl": {
+      "text": "Found colony →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "colonize-confirm"
+      }
+    }
+  },
+  {
+    "eventIndex": 202,
+    "time": "2026-10-29T01:42:43.889Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "build",
+      "systemId": "s4",
+      "itemId": "mine",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Orbital Extractor commissioned at Meridian.",
+    "uiSelector": "[data-action=build][data-item=mine]",
+    "actualControl": {
+      "text": "◇\nOrbital Extractor\n\n+5 minerals each turn.\n\n◈ 20   ◇ 25 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s4",
+        "data-item": "mine",
+        "title": "+5 minerals each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 210,
+    "time": "2026-10-29T01:43:46.126Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s6"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Aurelia.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s6"
+      }
+    }
+  },
+  {
+    "eventIndex": 212,
+    "time": "2026-10-29T01:43:57.983Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s11"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Carina.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s11"
+      }
+    }
+  },
+  {
+    "eventIndex": 213,
+    "time": "2026-10-29T01:43:58.271Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 217,
+    "time": "2026-10-29T01:45:08.564Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 3 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 220,
+    "time": "2026-10-29T01:45:09.979Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s19"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Bellatrix.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s19"
+      }
+    }
+  },
+  {
+    "eventIndex": 223,
+    "time": "2026-10-29T01:49:32.004Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s32"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Iona.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s32"
+      }
+    }
+  },
+  {
+    "eventIndex": 224,
+    "time": "2026-10-29T01:49:34.843Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 227,
+    "time": "2026-10-29T01:49:48.084Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 3 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 230,
+    "time": "2026-10-29T01:49:49.663Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Corvus.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s24"
+      }
+    }
+  },
+  {
+    "eventIndex": 234,
+    "time": "2026-10-29T01:50:01.608Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s2"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kharos.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s2"
+      }
+    }
+  },
+  {
+    "eventIndex": 236,
+    "time": "2026-10-29T01:50:01.998Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 239,
+    "time": "2026-10-29T01:50:10.012Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s4"
+    },
+    "uiStatus": "Vanguard 3 arrived at Meridian.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s4"
+      }
+    }
+  },
+  {
+    "eventIndex": 240,
+    "time": "2026-10-29T01:50:10.091Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f3]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f3",
+        "aria-pressed": "false",
+        "title": "Hold at Meridian; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 247,
+    "time": "2026-10-29T01:50:25.690Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "develop",
+      "systemId": "s20",
+      "charterType": "extraction"
+    },
+    "uiStatus": "Extraction Charter I commissioned at Sundrift.",
+    "uiSelector": "[data-action=develop][data-charter=extraction]",
+    "actualControl": {
+      "text": "◇\nESTABLISH LEVEL I\nExtraction Charter\n\nDevelop native ore deposits. Each level adds 2 plus the world’s ore richness to mineral income.\n\n+6 minerals\n\n◈ 120   ◇ 60 · 6 cycles · 1 order\n\nRequires Orbital Extractor",
+      "attributes": {
+        "class": "build-card charter-card",
+        "data-action": "develop",
+        "data-system": "s20",
+        "data-charter": "extraction"
+      }
+    }
+  },
+  {
+    "eventIndex": 250,
+    "time": "2026-10-29T01:50:27.340Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s37"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Morrow.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s37"
+      }
+    }
+  },
+  {
+    "eventIndex": 252,
+    "time": "2026-10-29T01:50:35.338Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s29"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Aldebaran.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s29"
+      }
+    }
+  },
+  {
+    "eventIndex": 253,
+    "time": "2026-10-29T01:50:35.659Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 256,
+    "time": "2026-10-29T01:50:53.305Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Manufactory commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=factory]",
+    "actualControl": {
+      "text": "▥\nManufactory\n\n+6 construction production each turn.\n\n◈ 35   ◇ 45 · 4 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "factory",
+        "title": "+6 construction production each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 259,
+    "time": "2026-10-29T01:50:54.986Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s16"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Stillwater.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s16"
+      }
+    }
+  },
+  {
+    "eventIndex": 263,
+    "time": "2026-10-29T01:51:22.537Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 266,
+    "time": "2026-10-29T01:51:37.860Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s16",
+      "choiceId": "preserve",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Discovery preserved. Its colony research can now mature.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=preserve]",
+    "actualControl": {
+      "text": "Let the observatory finish →\n\nSpend 40 credits and 20 minerals to begin restoration research.\n\nSettle this world and operate a Research Enclave for three completed cycles without hostile warships in orbit. Then choose 140 science and 30 credits, or restore an Ancient Observatory for 80 credits, 40 minerals and 60 work. Restoration requires Quantum Archives and one infrastructure slot (or explicit replacement), producing +8 science. The opportunity stays with the world if another empire takes it; progress never expires.\n\n◈ 40 credits · ◇ 20 minerals · 1 order",
+      "attributes": {
+        "class": "choice-card discovery-choice",
+        "data-action": "anomaly-choice",
+        "data-system": "s16",
+        "data-choice": "preserve"
+      }
+    }
+  },
+  {
+    "eventIndex": 268,
+    "time": "2026-10-29T01:51:38.310Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s8"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Caldera.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s8"
+      }
+    }
+  },
+  {
+    "eventIndex": 270,
+    "time": "2026-10-29T01:51:50.863Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s21"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Thalassa.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s21"
+      }
+    }
+  },
+  {
+    "eventIndex": 271,
+    "time": "2026-10-29T01:51:51.199Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 273,
+    "time": "2026-10-29T01:52:05.979Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s34"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Antares.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s34"
+      }
+    }
+  },
+  {
+    "eventIndex": 275,
+    "time": "2026-10-29T01:52:14.385Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sable.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s13"
+      }
+    }
+  },
+  {
+    "eventIndex": 277,
+    "time": "2026-10-29T01:52:14.759Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 281,
+    "time": "2026-10-29T01:52:33.066Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Colony Ark commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=colony]",
+    "actualControl": {
+      "text": "Colony Ark\n\nFound a new colony on a surveyed, habitable world. Consumed when settling.\n\n◈ 45   ◇ 55 · 2 cycles · 1 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "colony",
+        "title": "Found a new colony on a surveyed, habitable world. Consumed when settling."
+      }
+    }
+  },
+  {
+    "eventIndex": 284,
+    "time": "2026-10-29T01:52:34.582Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s5"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Hesper.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s5"
+      }
+    }
+  },
+  {
+    "eventIndex": 286,
+    "time": "2026-10-29T01:52:34.902Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s10"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ashfall.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s10"
+      }
+    }
+  },
+  {
+    "eventIndex": 287,
+    "time": "2026-10-29T01:52:35.364Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 290,
+    "time": "2026-10-29T01:53:01.034Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "build",
+      "systemId": "s4",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Research Enclave commissioned at Meridian.",
+    "uiSelector": "[data-action=build][data-item=lab]",
+    "actualControl": {
+      "text": "✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s4",
+        "data-item": "lab",
+        "title": "+5 science each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 293,
+    "time": "2026-10-29T01:53:02.681Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kepler.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s15"
+      }
+    }
+  },
+  {
+    "eventIndex": 295,
+    "time": "2026-10-29T01:53:03.069Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s7"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 296,
+    "time": "2026-10-29T01:53:03.535Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 298,
+    "time": "2026-10-29T01:53:25.716Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "research",
+      "techId": "weapons"
+    },
+    "uiStatus": "Research directed toward Coherent Lances.",
+    "uiSelector": "[data-action=research][data-tech=weapons]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "weapons",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 302,
+    "time": "2026-10-29T01:53:27.744Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "move",
+      "fleetId": "f27",
+      "targetId": "s20"
+    },
+    "uiStatus": "Colony Ark 27 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 305,
+    "time": "2026-10-29T01:53:29.268Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s12"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Eidolon.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s12"
+      }
+    }
+  },
+  {
+    "eventIndex": 307,
+    "time": "2026-10-29T01:53:42.928Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s25"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Elysian.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s25"
+      }
+    }
+  },
+  {
+    "eventIndex": 311,
+    "time": "2026-10-29T01:54:02.165Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f27",
+      "destinationId": "s16"
+    },
+    "uiStatus": "Route plotted: 8 jumps to Stillwater. Continue when ready.",
+    "uiSelector": "[data-action=plan-route]",
+    "actualControl": {
+      "text": "Plot course · free",
+      "attributes": {
+        "class": "primary",
+        "data-action": "plan-route",
+        "data-destination": "s16"
+      }
+    }
+  },
+  {
+    "eventIndex": 314,
+    "time": "2026-10-29T01:54:03.731Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 315,
+    "time": "2026-10-29T01:54:21.540Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f27"
+    },
+    "uiStatus": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]",
+    "actualControl": {
+      "text": "Continue · up to 1 jump",
+      "attributes": {
+        "class": "primary",
+        "data-action": "continue-route",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 317,
+    "time": "2026-10-29T01:54:21.813Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "research",
+      "techId": "singularity"
+    },
+    "uiStatus": "Research directed toward The Asterion Protocol.",
+    "uiSelector": "[data-action=research][data-tech=singularity]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "singularity",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 324,
+    "time": "2026-10-29T01:54:35.939Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "uiStatus": "Forge Charter I commissioned at Solace.",
+    "uiSelector": "[data-action=develop][data-charter=forge]",
+    "actualControl": {
+      "text": "▥\nESTABLISH LEVEL I\nForge Charter\n\nSpecialize in shipbuilding. Each level adds production, 10% off military ship mineral costs, and 2 colony repair capacity.\n\n+7 production · +2 orbital repair · +10% military mineral saving\n\n◈ 120   ◇ 60 · 3 cycles · 1 order\n\nRequires Manufactory",
+      "attributes": {
+        "class": "build-card charter-card",
+        "data-action": "develop",
+        "data-system": "s0",
+        "data-charter": "forge"
+      }
+    }
+  },
+  {
+    "eventIndex": 327,
+    "time": "2026-10-29T01:54:37.488Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s38"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Zenith.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s38"
+      }
+    }
+  },
+  {
+    "eventIndex": 329,
+    "time": "2026-10-29T01:54:43.793Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s30"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Caelum.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s30"
+      }
+    }
+  },
+  {
+    "eventIndex": 330,
+    "time": "2026-10-29T01:54:44.232Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 333,
+    "time": "2026-10-29T01:54:56.066Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "develop",
+      "systemId": "s7",
+      "charterType": "academy"
+    },
+    "uiStatus": "Academy Charter I commissioned at Nacre.",
+    "uiSelector": "[data-action=develop][data-charter=academy]",
+    "actualControl": {
+      "text": "✧\nESTABLISH LEVEL I\nAcademy Charter\n\nBuild a center of discovery. Each level adds 2 plus the world’s native science to science income.\n\n+6 science\n\n◈ 120   ◇ 60 · 8 cycles · 1 order\n\nRequires Research Enclave",
+      "attributes": {
+        "class": "build-card charter-card",
+        "data-action": "develop",
+        "data-system": "s7",
+        "data-charter": "academy"
+      }
+    }
+  },
+  {
+    "eventIndex": 334,
+    "time": "2026-10-29T01:54:56.324Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f27"
+    },
+    "uiStatus": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]",
+    "actualControl": {
+      "text": "Continue · up to 1 jump",
+      "attributes": {
+        "class": "primary",
+        "data-action": "continue-route",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 337,
+    "time": "2026-10-29T01:54:57.686Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s17"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Orison.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s17"
+      }
+    }
+  },
+  {
+    "eventIndex": 339,
+    "time": "2026-10-29T01:54:58.030Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s22"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ophion.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s22"
+      }
+    }
+  },
+  {
+    "eventIndex": 340,
+    "time": "2026-10-29T01:54:58.309Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 348,
+    "time": "2026-10-29T01:55:39.843Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f27"
+    },
+    "uiStatus": "Colony founded at Kepler.",
+    "uiSelector": "[data-action=colonize-confirm]",
+    "actualControl": {
+      "text": "Found colony →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "colonize-confirm"
+      }
+    }
+  },
+  {
+    "eventIndex": 350,
+    "time": "2026-10-29T01:55:40.208Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Research Enclave commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=lab]",
+    "actualControl": {
+      "text": "✧\nResearch Enclave\n\n+5 science each turn.\n\n◈ 30   ◇ 30 · 6 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s15",
+        "data-item": "lab",
+        "title": "+5 science each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 354,
+    "time": "2026-10-29T01:55:41.652Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s3"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Lumen.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s3"
+      }
+    }
+  },
+  {
+    "eventIndex": 356,
+    "time": "2026-10-29T01:55:57.210Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s35"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Seraph.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s35"
+      }
+    }
+  },
+  {
+    "eventIndex": 357,
+    "time": "2026-10-29T01:55:57.491Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 361,
+    "time": "2026-10-29T01:55:58.922Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]",
+    "actualControl": {
+      "text": "Vanguard\n\nVersatile escort and invasion vessel. Combine frigates into task forces.\n\n◈ 25   ◇ 32 · 1 cycles · 2 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "frigate",
+        "title": "Versatile escort and invasion vessel. Combine frigates into task forces."
+      }
+    }
+  },
+  {
+    "eventIndex": 364,
+    "time": "2026-10-29T01:56:00.240Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s27"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nyx.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s27"
+      }
+    }
+  },
+  {
+    "eventIndex": 366,
+    "time": "2026-10-29T01:56:00.595Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s40"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Terminus.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s40"
+      }
+    }
+  },
+  {
+    "eventIndex": 367,
+    "time": "2026-10-29T01:56:13.687Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 370,
+    "time": "2026-10-29T01:56:25.374Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "hold",
+      "fleetId": "f32"
+    },
+    "uiStatus": "Vanguard 32 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f32]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f32",
+        "aria-pressed": "false",
+        "title": "Hold at Solace; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 371,
+    "time": "2026-10-29T01:56:25.609Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f32]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f32"
+      }
+    }
+  },
+  {
+    "eventIndex": 375,
+    "time": "2026-10-29T01:56:28.020Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s16"
+    },
+    "uiStatus": "Route plotted: 7 jumps to Stillwater. Continue when ready.",
+    "uiSelector": "[data-action=plan-route]",
+    "actualControl": {
+      "text": "Plot course · free",
+      "attributes": {
+        "class": "primary",
+        "data-action": "plan-route",
+        "data-destination": "s16"
+      }
+    }
+  },
+  {
+    "eventIndex": 376,
+    "time": "2026-10-29T01:56:28.962Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]",
+    "actualControl": {
+      "text": "Continue · up to 2 jumps",
+      "attributes": {
+        "class": "primary",
+        "data-action": "continue-route",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 378,
+    "time": "2026-10-29T01:56:29.492Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 382,
+    "time": "2026-10-29T01:56:56.318Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "merge",
+      "fleetId": "f32",
+      "targetFleetId": "f33"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f32",
+        "data-target": "f33",
+        "title": "Vanguard 33 joins Vanguard 32: 2 ships, 68 / 68 hull, 1 jump remaining. 1 order.",
+        "aria-label": "Merge Vanguard 33 into Vanguard 32; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 383,
+    "time": "2026-10-29T01:56:56.513Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f32]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f32"
+      }
+    }
+  },
+  {
+    "eventIndex": 386,
+    "time": "2026-10-29T01:56:57.160Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "habitat",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Habitation Domes commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=habitat]",
+    "actualControl": {
+      "text": "◎\nHabitation Domes\n\n+4 maximum population and +40% population growth.\n\n◈ 40   ◇ 35 · 3 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "habitat",
+        "title": "+4 maximum population and +40% population growth."
+      }
+    }
+  },
+  {
+    "eventIndex": 388,
+    "time": "2026-10-29T01:56:58.320Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]",
+    "actualControl": {
+      "text": "Continue · up to 2 jumps",
+      "attributes": {
+        "class": "primary",
+        "data-action": "continue-route",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 389,
+    "time": "2026-10-29T01:57:47.713Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 391,
+    "time": "2026-10-29T01:57:49.191Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "merge",
+      "fleetId": "f32",
+      "targetFleetId": "f35"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f32",
+        "data-target": "f35",
+        "title": "Vanguard 35 joins Vanguard 32: 3 ships, 102 / 102 hull, 1 jump remaining. 1 order.",
+        "aria-label": "Merge Vanguard 35 into Vanguard 32; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 392,
+    "time": "2026-10-29T01:57:49.437Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f32]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f32"
+      }
+    }
+  },
+  {
+    "eventIndex": 394,
+    "time": "2026-10-29T01:57:50.645Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]",
+    "actualControl": {
+      "text": "Continue · up to 2 jumps",
+      "attributes": {
+        "class": "primary",
+        "data-action": "continue-route",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 396,
+    "time": "2026-10-29T01:57:51.032Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 398,
+    "time": "2026-10-29T01:58:19.888Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "merge",
+      "fleetId": "f32",
+      "targetFleetId": "f36"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f32",
+        "data-target": "f36",
+        "title": "Vanguard 36 joins Vanguard 32: 4 ships, 136 / 136 hull, 1 jump remaining. 1 order.",
+        "aria-label": "Merge Vanguard 36 into Vanguard 32; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 400,
+    "time": "2026-10-29T01:58:20.388Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 32 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 402,
+    "time": "2026-10-29T01:58:21.495Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 reached Stillwater in 1 jump.",
+    "uiSelector": "[data-action=continue-route]",
+    "actualControl": {
+      "text": "Continue · up to 1 jump",
+      "attributes": {
+        "class": "primary",
+        "data-action": "continue-route",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 405,
+    "time": "2026-10-29T01:58:44.771Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "hold",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f1]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1",
+        "aria-pressed": "false",
+        "title": "Hold at Stillwater; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 407,
+    "time": "2026-10-29T01:58:45.137Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 410,
+    "time": "2026-10-29T01:58:47.328Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "move",
+      "fleetId": "f32",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 32 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 411,
+    "time": "2026-10-29T01:58:47.656Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "hold",
+      "fleetId": "f32"
+    },
+    "uiStatus": "Vanguard 32 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f32]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f32",
+        "aria-pressed": "false",
+        "title": "Hold at Nacre; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 414,
+    "time": "2026-10-29T01:58:48.639Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "mine",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Orbital Extractor commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=mine]",
+    "actualControl": {
+      "text": "◇\nOrbital Extractor\n\n+5 minerals each turn.\n\n◈ 20   ◇ 25 · 4 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s15",
+        "data-item": "mine",
+        "title": "+5 minerals each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 415,
+    "time": "2026-10-29T01:59:26.478Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 419,
+    "time": "2026-10-29T01:59:39.851Z",
+    "turnBefore": 34,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Manufactory commissioned at Nacre.",
+    "uiSelector": "[data-action=build][data-item=factory]",
+    "actualControl": {
+      "text": "▥\nManufactory\n\n+6 construction production each turn.\n\n◈ 35   ◇ 45 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s7",
+        "data-item": "factory",
+        "title": "+6 construction production each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 422,
+    "time": "2026-10-29T01:59:41.271Z",
+    "turnBefore": 34,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 426,
+    "time": "2026-10-29T01:59:56.687Z",
+    "turnBefore": 35,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 431,
+    "time": "2026-10-29T02:00:31.536Z",
+    "turnBefore": 36,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Manufactory commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=factory]",
+    "actualControl": {
+      "text": "▥\nManufactory\n\n+6 construction production each turn.\n\n◈ 35   ◇ 45 · 4 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "factory",
+        "title": "+6 construction production each turn."
+      }
+    }
+  },
+  {
+    "eventIndex": 433,
+    "time": "2026-10-29T02:00:31.909Z",
+    "turnBefore": 36,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 435,
+    "time": "2026-10-29T02:01:05.245Z",
+    "turnBefore": 37,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 437,
+    "time": "2026-10-29T02:01:24.433Z",
+    "turnBefore": 38,
+    "action": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "uiStatus": "Research directed toward Capital Ship Architecture.",
+    "uiSelector": "[data-action=research][data-tech=cruisers]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "cruisers",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 439,
+    "time": "2026-10-29T02:01:24.630Z",
+    "turnBefore": 38,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 445,
+    "time": "2026-10-29T02:01:35.647Z",
+    "turnBefore": 39,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "beacon",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Asterion Beacon commissioned at Nacre.",
+    "uiSelector": "[data-action=build][data-item=beacon]",
+    "actualControl": {
+      "text": "✦\nAsterion Beacon\n\nA public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.\n\n◈ 180   ◇ 180 · 9 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s7",
+        "data-item": "beacon",
+        "title": "A public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress."
+      }
+    }
+  },
+  {
+    "eventIndex": 450,
+    "time": "2026-10-29T02:02:07.291Z",
+    "turnBefore": 39,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 460,
+    "time": "2026-10-29T02:02:57.538Z",
+    "turnBefore": 40,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 463,
+    "time": "2026-10-29T02:03:06.129Z",
+    "turnBefore": 41,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "beacon",
+      "replaceBuildingId": "market"
+    },
+    "uiStatus": "Asterion Beacon commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=beacon]",
+    "actualControl": {
+      "text": "✦\nAsterion Beacon\n\nA public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.\n\n◈ 180   ◇ 180 · 7 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "beacon",
+        "data-replace": "market",
+        "title": "A public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress."
+      }
+    }
+  },
+  {
+    "eventIndex": 464,
+    "time": "2026-10-29T02:03:06.455Z",
+    "turnBefore": 41,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 466,
+    "time": "2026-10-29T02:03:06.777Z",
+    "turnBefore": 42,
+    "action": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "uiStatus": "Research directed toward Deflector Fields.",
+    "uiSelector": "[data-action=research][data-tech=shields]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "shields",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 473,
+    "time": "2026-10-29T02:03:22.799Z",
+    "turnBefore": 42,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 476,
+    "time": "2026-10-29T02:03:23.240Z",
+    "turnBefore": 43,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Sovereign commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=cruiser]",
+    "actualControl": {
+      "text": "Sovereign\n\nHeavy capital ship designed to break fortified systems.\n\n◈ 65   ◇ 77 · 3 cycles · 4 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "cruiser",
+        "title": "Heavy capital ship designed to break fortified systems."
+      }
+    }
+  },
+  {
+    "eventIndex": 478,
+    "time": "2026-10-29T02:03:53.641Z",
+    "turnBefore": 43,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 480,
+    "time": "2026-10-29T02:03:53.879Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "research",
+      "techId": "diplomacy"
+    },
+    "uiStatus": "Research directed toward Stellar Accords.",
+    "uiSelector": "[data-action=research][data-tech=diplomacy]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "diplomacy",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 482,
+    "time": "2026-10-29T02:03:54.114Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 485,
+    "time": "2026-10-29T02:04:36.287Z",
+    "turnBefore": 45,
+    "action": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "uiStatus": "Research directed toward Deflector Fields.",
+    "uiSelector": "[data-action=research][data-tech=shields]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "shields",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 486,
+    "time": "2026-10-29T02:04:36.472Z",
+    "turnBefore": 45,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 487,
+    "time": "2026-10-29T02:04:36.643Z",
+    "turnBefore": 46,
+    "action": {
+      "type": "research",
+      "techId": "command"
+    },
+    "uiStatus": "Research directed toward Distributed Command.",
+    "uiSelector": "[data-action=research][data-tech=command]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "command",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 495,
+    "time": "2026-10-29T02:04:53.923Z",
+    "turnBefore": 46,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "beacon",
+      "replaceBuildingId": "habitat"
+    },
+    "uiStatus": "Asterion Beacon commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=beacon]",
+    "actualControl": {
+      "text": "✦\nAsterion Beacon\n\nA public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress.\n\n◈ 180   ◇ 180 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "beacon",
+        "data-replace": "habitat",
+        "title": "A public node of the ancient network. Three owned, unblocked beacons align over 10 cycles at 60 credits per cycle; interruptions lose one cycle of progress."
+      }
+    }
+  },
+  {
+    "eventIndex": 498,
+    "time": "2026-10-29T02:04:54.586Z",
+    "turnBefore": 46,
+    "action": {
+      "type": "move",
+      "fleetId": "f49",
+      "targetId": "s20"
+    },
+    "uiStatus": "Sovereign 49 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 499,
+    "time": "2026-10-29T02:04:54.865Z",
+    "turnBefore": 46,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 501,
+    "time": "2026-10-29T02:05:21.588Z",
+    "turnBefore": 47,
+    "action": {
+      "type": "move",
+      "fleetId": "f49",
+      "targetId": "s7"
+    },
+    "uiStatus": "Sovereign 49 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 502,
+    "time": "2026-10-29T02:05:21.853Z",
+    "turnBefore": 47,
+    "action": {
+      "type": "hold",
+      "fleetId": "f49"
+    },
+    "uiStatus": "Sovereign 49 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f49]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f49",
+        "aria-pressed": "false",
+        "title": "Hold at Nacre; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 504,
+    "time": "2026-10-29T02:05:38.965Z",
+    "turnBefore": 47,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f32"
+    },
+    "uiStatus": "Vanguard 32 will lead its local defense.",
+    "uiSelector": "[data-action=defense-lead-toggle][data-fleet-target=f32]",
+    "actualControl": {
+      "text": "Lead defense · 1 order",
+      "attributes": {
+        "class": "wide-button defense-command ",
+        "data-action": "defense-lead-toggle",
+        "data-fleet-target": "f32",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "eventIndex": 508,
+    "time": "2026-10-29T02:05:40.354Z",
+    "turnBefore": 47,
+    "action": {
+      "type": "build",
+      "systemId": "s4",
+      "itemId": "bastion",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Orbital Bastion commissioned at Meridian.",
+    "uiSelector": "[data-action=build][data-item=bastion]",
+    "actualControl": {
+      "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s4",
+        "data-item": "bastion",
+        "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+      }
+    }
+  },
+  {
+    "eventIndex": 509,
+    "time": "2026-10-29T02:05:40.785Z",
+    "turnBefore": 47,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 512,
+    "time": "2026-10-29T02:07:10.405Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "bastion",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Orbital Bastion commissioned at Nacre.",
+    "uiSelector": "[data-action=build][data-item=bastion]",
+    "actualControl": {
+      "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 4 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s7",
+        "data-item": "bastion",
+        "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+      }
+    }
+  },
+  {
+    "eventIndex": 515,
+    "time": "2026-10-29T02:07:11.251Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "move",
+      "fleetId": "f49",
+      "targetId": "s20"
+    },
+    "uiStatus": "Sovereign 49 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 516,
+    "time": "2026-10-29T02:07:11.593Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "hold",
+      "fleetId": "f49"
+    },
+    "uiStatus": "Sovereign 49 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f49]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f49",
+        "aria-pressed": "false",
+        "title": "Hold at Sundrift; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 518,
+    "time": "2026-10-29T02:07:12.026Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 521,
+    "time": "2026-10-29T02:07:12.583Z",
+    "turnBefore": 49,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "bastion",
+      "replaceBuildingId": "habitat"
+    },
+    "uiStatus": "Orbital Bastion commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=bastion]",
+    "actualControl": {
+      "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 3 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "bastion",
+        "data-replace": "habitat",
+        "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+      }
+    }
+  },
+  {
+    "eventIndex": 522,
+    "time": "2026-10-29T02:07:12.924Z",
+    "turnBefore": 49,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 526,
+    "time": "2026-10-29T02:08:10.570Z",
+    "turnBefore": 50,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 532,
+    "time": "2026-10-29T02:08:30.394Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]",
+    "actualControl": {
+      "text": "Vanguard\n\nVersatile escort and invasion vessel. Combine frigates into task forces.\n\n◈ 25   ◇ 32 · 1 cycles · 2 upkeep",
+      "attributes": {
+        "class": "build-card ship-build-card",
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "frigate",
+        "title": "Versatile escort and invasion vessel. Combine frigates into task forces."
+      }
+    }
+  },
+  {
+    "eventIndex": 536,
+    "time": "2026-10-29T02:08:32.155Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "bastion",
+      "replaceBuildingId": null
+    },
+    "uiStatus": "Orbital Bastion commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=bastion]",
+    "actualControl": {
+      "text": "⛨\nOrbital Bastion\n\n+30 colony defense. Invading fleets suffer retaliatory fire.\n\n◈ 45   ◇ 60 · 5 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s15",
+        "data-item": "bastion",
+        "title": "+30 colony defense. Invading fleets suffer retaliatory fire."
+      }
+    }
+  },
+  {
+    "eventIndex": 537,
+    "time": "2026-10-29T02:08:32.457Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 539,
+    "time": "2026-10-29T02:09:11.770Z",
+    "turnBefore": 52,
+    "action": {
+      "type": "research",
+      "techId": "terraforming"
+    },
+    "uiStatus": "Research directed toward Worldshaping.",
+    "uiSelector": "[data-action=research][data-tech=terraforming]",
+    "actualControl": {
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "terraforming",
+        "title": ""
+      }
+    }
+  },
+  {
+    "eventIndex": 541,
+    "time": "2026-10-29T02:09:22.007Z",
+    "turnBefore": 52,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 548,
+    "time": "2026-10-29T02:14:13.277Z",
+    "turnBefore": 53,
+    "action": {
+      "type": "hold",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Vanguard 53 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f53",
+        "aria-pressed": "false",
+        "title": "Hold at Solace; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 549,
+    "time": "2026-10-29T02:14:13.475Z",
+    "turnBefore": 53,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f53"
+      }
+    }
+  },
+  {
+    "eventIndex": 551,
+    "time": "2026-10-29T02:14:30.579Z",
+    "turnBefore": 53,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 558,
+    "time": "2026-10-29T02:14:50.924Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "move",
+      "fleetId": "f54",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 54 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 559,
+    "time": "2026-10-29T02:14:51.071Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "hold",
+      "fleetId": "f54"
+    },
+    "uiStatus": "Vanguard 54 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f54]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f54",
+        "aria-pressed": "false",
+        "title": "Hold at Sundrift; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 561,
+    "time": "2026-10-29T02:14:52.195Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f49"
+    },
+    "uiStatus": "Sovereign 49 will lead its local defense.",
+    "uiSelector": "[data-action=defense-lead-toggle][data-fleet-target=f49]",
+    "actualControl": {
+      "text": "Lead defense · 1 order",
+      "attributes": {
+        "class": "wide-button defense-command ",
+        "data-action": "defense-lead-toggle",
+        "data-fleet-target": "f49",
+        "aria-pressed": "false"
+      }
+    }
+  },
+  {
+    "eventIndex": 564,
+    "time": "2026-10-29T02:14:53.555Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f53"
+      }
+    }
+  },
+  {
+    "eventIndex": 568,
+    "time": "2026-10-29T02:15:25.664Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 572,
+    "time": "2026-10-29T02:15:45.792Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "move",
+      "fleetId": "f55",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 55 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 574,
+    "time": "2026-10-29T02:15:46.387Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "move",
+      "fleetId": "f55",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 55 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 577,
+    "time": "2026-10-29T02:15:46.928Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f53"
+      }
+    }
+  },
+  {
+    "eventIndex": 578,
+    "time": "2026-10-29T02:15:47.271Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 591,
+    "time": "2026-10-29T02:17:23.666Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f57"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f53",
+        "data-target": "f57",
+        "title": "Vanguard 57 joins Vanguard 53: 2 ships, 68 / 68 hull, 2 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 57 into Vanguard 53; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 592,
+    "time": "2026-10-29T02:17:23.868Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f53"
+      }
+    }
+  },
+  {
+    "eventIndex": 594,
+    "time": "2026-10-29T02:17:24.310Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "move",
+      "fleetId": "f53",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 53 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 595,
+    "time": "2026-10-29T02:17:24.566Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f54"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f53",
+        "data-target": "f54",
+        "title": "Vanguard 54 joins Vanguard 53: 3 ships, 102 / 102 hull, 1 jump remaining. 1 order.",
+        "aria-label": "Merge Vanguard 54 into Vanguard 53; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 599,
+    "time": "2026-10-29T02:17:30.078Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "move",
+      "fleetId": "f53",
+      "targetId": "s7"
+    },
+    "uiStatus": "2 combat reports recorded.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Engage →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 602,
+    "time": "2026-10-29T02:17:48.826Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "repair",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Emergency repairs completed.",
+    "uiSelector": "[data-action=repair]",
+    "actualControl": {
+      "text": "Repair ◇10",
+      "attributes": {
+        "data-action": "repair"
+      }
+    }
+  },
+  {
+    "eventIndex": 603,
+    "time": "2026-10-29T02:17:49.080Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "hold",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Vanguard 53 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f53",
+        "aria-pressed": "false",
+        "title": "Hold at Nacre; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 606,
+    "time": "2026-10-29T02:18:37.944Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 613,
+    "time": "2026-10-29T02:19:12.231Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 3 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 615,
+    "time": "2026-10-29T02:19:13.527Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f3"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f53",
+        "data-target": "f3",
+        "title": "Vanguard 3 joins Vanguard 53: 3 ships, 101.7 / 102 hull, 1 jump remaining. 1 order.",
+        "aria-label": "Merge Vanguard 3 into Vanguard 53; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 617,
+    "time": "2026-10-29T02:19:13.869Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "move",
+      "fleetId": "f53",
+      "targetId": "s20"
+    },
+    "uiStatus": "1 combat report recorded.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Engage →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 619,
+    "time": "2026-10-29T02:19:58.915Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "repair",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Emergency repairs completed.",
+    "uiSelector": "[data-action=repair]",
+    "actualControl": {
+      "text": "Repair ◇10",
+      "attributes": {
+        "data-action": "repair"
+      }
+    }
+  },
+  {
+    "eventIndex": 620,
+    "time": "2026-10-29T02:19:59.234Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "hold",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Vanguard 53 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f53",
+        "aria-pressed": "false",
+        "title": "Hold at Sundrift; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 623,
+    "time": "2026-10-29T02:20:00.969Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "hold",
+      "fleetId": "f58"
+    },
+    "uiStatus": "Vanguard 58 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f58",
+        "aria-pressed": "false",
+        "title": "Hold at Solace; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 624,
+    "time": "2026-10-29T02:20:01.177Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f58"
+      }
+    }
+  },
+  {
+    "eventIndex": 632,
+    "time": "2026-10-29T02:20:24.724Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "shipyard",
+      "replaceBuildingId": "lab"
+    },
+    "uiStatus": "Orbital Shipyard commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=shipyard]",
+    "actualControl": {
+      "text": "⌁\nOrbital Shipyard\n\nBuild ships here. Adds 4 hull to this colony’s shared repair capacity each cycle.\n\n◈ 25   ◇ 35 · 2 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s20",
+        "data-item": "shipyard",
+        "data-replace": "lab",
+        "title": "Build ships here. Adds 4 hull to this colony’s shared repair capacity each cycle."
+      }
+    }
+  },
+  {
+    "eventIndex": 634,
+    "time": "2026-10-29T02:20:25.718Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 643,
+    "time": "2026-10-29T02:20:59.233Z",
+    "turnBefore": 58,
+    "action": {
+      "type": "move",
+      "fleetId": "f62",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 62 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 645,
+    "time": "2026-10-29T02:20:59.867Z",
+    "turnBefore": 58,
+    "action": {
+      "type": "move",
+      "fleetId": "f62",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 62 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 646,
+    "time": "2026-10-29T02:21:00.092Z",
+    "turnBefore": 58,
+    "action": {
+      "type": "hold",
+      "fleetId": "f62"
+    },
+    "uiStatus": "Vanguard 62 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f62]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f62",
+        "aria-pressed": "false",
+        "title": "Hold at Nacre; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 649,
+    "time": "2026-10-29T02:21:00.923Z",
+    "turnBefore": 58,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f58"
+      }
+    }
+  },
+  {
+    "eventIndex": 650,
+    "time": "2026-10-29T02:21:01.266Z",
+    "turnBefore": 58,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 651,
+    "time": "2026-10-29T02:21:22.540Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetFleetId": "f64"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f58",
+        "data-target": "f64",
+        "title": "Vanguard 64 joins Vanguard 58: 2 ships, 68 / 68 hull, 2 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 64 into Vanguard 58; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 652,
+    "time": "2026-10-29T02:21:22.694Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f58"
+      }
+    }
+  },
+  {
+    "eventIndex": 654,
+    "time": "2026-10-29T02:21:23.865Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Sundrift.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f53"
+      }
+    }
+  },
+  {
+    "eventIndex": 656,
+    "time": "2026-10-29T02:21:24.274Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 661,
+    "time": "2026-10-29T02:22:11.252Z",
+    "turnBefore": 60,
+    "action": {
+      "type": "move",
+      "fleetId": "f67",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 67 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 663,
+    "time": "2026-10-29T02:22:11.818Z",
+    "turnBefore": 60,
+    "action": {
+      "type": "move",
+      "fleetId": "f67",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 67 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 665,
+    "time": "2026-10-29T02:22:13.331Z",
+    "turnBefore": 60,
+    "action": {
+      "type": "merge",
+      "fleetId": "f62",
+      "targetFleetId": "f67"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f62",
+        "data-target": "f67",
+        "title": "Vanguard 67 joins Vanguard 62: 2 ships, 68 / 68 hull, 0 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 67 into Vanguard 62; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 668,
+    "time": "2026-10-29T02:22:15.009Z",
+    "turnBefore": 60,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f58"
+      }
+    }
+  },
+  {
+    "eventIndex": 670,
+    "time": "2026-10-29T02:22:15.413Z",
+    "turnBefore": 60,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 676,
+    "time": "2026-10-29T02:23:10.573Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "move",
+      "fleetId": "f70",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 70 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 680,
+    "time": "2026-10-29T02:23:29.360Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f70"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge-confirm]",
+    "actualControl": {
+      "text": "Merge 1 ship · 1 order",
+      "attributes": {
+        "class": "primary",
+        "data-action": "merge-confirm",
+        "data-fleet-target": "f53",
+        "data-target": "f70"
+      }
+    }
+  },
+  {
+    "eventIndex": 681,
+    "time": "2026-10-29T02:23:29.576Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f73"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f53",
+        "data-target": "f73",
+        "title": "Vanguard 73 joins Vanguard 53: 3 ships, 102 / 102 hull, 1 jump remaining. 1 order.",
+        "aria-label": "Merge Vanguard 73 into Vanguard 53; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 682,
+    "time": "2026-10-29T02:23:29.788Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Sundrift.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f53"
+      }
+    }
+  },
+  {
+    "eventIndex": 684,
+    "time": "2026-10-29T02:23:30.275Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "move",
+      "fleetId": "f53",
+      "targetId": "s7"
+    },
+    "uiStatus": "1 combat report recorded.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Engage →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 686,
+    "time": "2026-10-29T02:23:40.263Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "repair",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Emergency repairs completed.",
+    "uiSelector": "[data-action=repair]",
+    "actualControl": {
+      "text": "Repair ◇10",
+      "attributes": {
+        "data-action": "repair"
+      }
+    }
+  },
+  {
+    "eventIndex": 687,
+    "time": "2026-10-29T02:23:40.527Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "hold",
+      "fleetId": "f53"
+    },
+    "uiStatus": "Vanguard 53 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f53]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f53",
+        "aria-pressed": "false",
+        "title": "Hold at Nacre; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 690,
+    "time": "2026-10-29T02:23:41.966Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f58"
+      }
+    }
+  },
+  {
+    "eventIndex": 692,
+    "time": "2026-10-29T02:23:42.269Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 58 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 693,
+    "time": "2026-10-29T02:23:42.521Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "hold",
+      "fleetId": "f58"
+    },
+    "uiStatus": "Vanguard 58 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f58",
+        "aria-pressed": "false",
+        "title": "Hold at Sundrift; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 695,
+    "time": "2026-10-29T02:23:43.189Z",
+    "turnBefore": 61,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 701,
+    "time": "2026-10-29T02:24:36.833Z",
+    "turnBefore": 62,
+    "action": {
+      "type": "hold",
+      "fleetId": "f74"
+    },
+    "uiStatus": "Vanguard 74 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f74]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f74",
+        "aria-pressed": "false",
+        "title": "Hold at Solace; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 702,
+    "time": "2026-10-29T02:24:37.094Z",
+    "turnBefore": 62,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f74]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f74"
+      }
+    }
+  },
+  {
+    "eventIndex": 703,
+    "time": "2026-10-29T02:24:37.448Z",
+    "turnBefore": 62,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 707,
+    "time": "2026-10-29T02:25:28.203Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetFleetId": "f80"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f58",
+        "data-target": "f80",
+        "title": "Vanguard 80 joins Vanguard 58: 3 ships, 102 / 102 hull, 2 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 80 into Vanguard 58; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 708,
+    "time": "2026-10-29T02:25:28.478Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Sundrift.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f58"
+      }
+    }
+  },
+  {
+    "eventIndex": 710,
+    "time": "2026-10-29T02:25:28.952Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "move",
+      "fleetId": "f58",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 58 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 711,
+    "time": "2026-10-29T02:25:29.228Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "hold",
+      "fleetId": "f58"
+    },
+    "uiStatus": "Vanguard 58 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f58]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f58",
+        "aria-pressed": "false",
+        "title": "Hold at Nacre; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 714,
+    "time": "2026-10-29T02:25:30.670Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "merge",
+      "fleetId": "f74",
+      "targetFleetId": "f76"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f74",
+        "data-target": "f76",
+        "title": "Vanguard 76 joins Vanguard 74: 2 ships, 68 / 68 hull, 2 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 76 into Vanguard 74; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 715,
+    "time": "2026-10-29T02:25:31.028Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f74]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f74"
+      }
+    }
+  },
+  {
+    "eventIndex": 717,
+    "time": "2026-10-29T02:25:31.600Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "move",
+      "fleetId": "f74",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 74 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 718,
+    "time": "2026-10-29T02:25:31.948Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "hold",
+      "fleetId": "f74"
+    },
+    "uiStatus": "Vanguard 74 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f74]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f74",
+        "aria-pressed": "false",
+        "title": "Hold at Sundrift; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 725,
+    "time": "2026-10-29T02:25:59.821Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "shipyard",
+      "replaceBuildingId": "lab"
+    },
+    "uiStatus": "Orbital Shipyard commissioned at Nacre.",
+    "uiSelector": "[data-action=build][data-item=shipyard]",
+    "actualControl": {
+      "text": "⌁\nOrbital Shipyard\n\nBuild ships here. Adds 4 hull to this colony’s shared repair capacity each cycle.\n\n◈ 25   ◇ 35 · 2 cycles",
+      "attributes": {
+        "class": "build-card ",
+        "data-action": "build",
+        "data-system": "s7",
+        "data-item": "shipyard",
+        "data-replace": "lab",
+        "title": "Build ships here. Adds 4 hull to this colony’s shared repair capacity each cycle."
+      }
+    }
+  },
+  {
+    "eventIndex": 726,
+    "time": "2026-10-29T02:26:00.250Z",
+    "turnBefore": 63,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 729,
+    "time": "2026-10-29T02:26:28.447Z",
+    "turnBefore": 64,
+    "action": {
+      "type": "hold",
+      "fleetId": "f81"
+    },
+    "uiStatus": "Vanguard 81 is holding position.",
+    "uiSelector": "[data-action=fleet-hold][data-fleet-target=f81]",
+    "actualControl": {
+      "text": "Hold position",
+      "attributes": {
+        "class": "small-button ghost fleet-hold",
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f81",
+        "aria-pressed": "false",
+        "title": "Hold at Solace; free. Movement remains available."
+      }
+    }
+  },
+  {
+    "eventIndex": 730,
+    "time": "2026-10-29T02:26:28.798Z",
+    "turnBefore": 64,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=reinforce][data-fleet-target=f81]",
+    "actualControl": {
+      "text": "Commission Vanguard",
+      "attributes": {
+        "class": "wide-button reinforcement-command",
+        "data-action": "reinforce",
+        "data-fleet-target": "f81"
+      }
+    }
+  },
+  {
+    "eventIndex": 733,
+    "time": "2026-10-29T02:26:29.767Z",
+    "turnBefore": 64,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  },
+  {
+    "eventIndex": 739,
+    "time": "2026-10-29T02:27:08.734Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "move",
+      "fleetId": "f83",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 83 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s20"
+      }
+    }
+  },
+  {
+    "eventIndex": 741,
+    "time": "2026-10-29T02:27:09.476Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "move",
+      "fleetId": "f83",
+      "targetId": "s7"
+    },
+    "uiStatus": "Vanguard 83 arrived at Nacre.",
+    "uiSelector": "[data-action=move]",
+    "actualControl": {
+      "text": "Move →",
+      "attributes": {
+        "class": "primary",
+        "data-action": "move",
+        "data-target": "s7"
+      }
+    }
+  },
+  {
+    "eventIndex": 743,
+    "time": "2026-10-29T02:27:11.062Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "merge",
+      "fleetId": "f58",
+      "targetFleetId": "f83"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f58",
+        "data-target": "f83",
+        "title": "Vanguard 83 joins Vanguard 58: 4 ships, 136 / 136 hull, 0 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 83 into Vanguard 58; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 745,
+    "time": "2026-10-29T02:27:12.653Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "merge",
+      "fleetId": "f74",
+      "targetFleetId": "f86"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge]",
+    "actualControl": {
+      "text": "Merge +1",
+      "attributes": {
+        "data-action": "merge",
+        "data-fleet-target": "f74",
+        "data-target": "f86",
+        "title": "Vanguard 86 joins Vanguard 74: 3 ships, 102 / 102 hull, 2 jumps remaining. 1 order.",
+        "aria-label": "Merge Vanguard 86 into Vanguard 74; 1 order"
+      }
+    }
+  },
+  {
+    "eventIndex": 749,
+    "time": "2026-10-29T02:27:32.421Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "peace"
+    },
+    "uiStatus": "Peace accepted. The truce lasts until turn 70.",
+    "uiSelector": "[data-action=diplomatic-confirm][data-target=veyr]",
+    "actualControl": {
+      "text": "Offer 60 credits · 1 order",
+      "attributes": {
+        "class": "primary",
+        "data-action": "diplomatic-confirm",
+        "data-stance": "peace",
+        "data-target": "veyr"
+      }
+    }
+  },
+  {
+    "eventIndex": 751,
+    "time": "2026-10-29T02:27:32.558Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "peace"
+    },
+    "uiStatus": "Peace accepted. The truce lasts until turn 70.",
+    "uiSelector": "[data-action=diplomatic-confirm][data-target=choir]",
+    "actualControl": {
+      "text": "Offer 60 credits · 1 order",
+      "attributes": {
+        "class": "primary",
+        "data-action": "diplomatic-confirm",
+        "data-stance": "peace",
+        "data-target": "choir"
+      }
+    }
+  },
+  {
+    "eventIndex": 754,
+    "time": "2026-10-29T02:27:39.464Z",
+    "turnBefore": 65,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null,
+    "actualControl": null
+  }
+]

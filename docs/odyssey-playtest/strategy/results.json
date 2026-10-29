@@ -1,0 +1,198 @@
+{
+  "method": "Independent passive evidence review. No engine command, replay, AI instrumentation, counterfactual or browser gameplay executed by this review.",
+  "reviewedAt": "2026-10-29T02:57:49.686Z",
+  "pin": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "sourceHashes": {
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+    "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "public/guide.html": "53df310a2acf41b714bfec93b5304307b54b837156e64597911aca609681a448"
+  },
+  "originalFilesVerified": 52,
+  "originalManifestSha256": "1833ec839e140261d922df8a8498ba54efc5b2ad8d6b6fdc18f26091a8b22a79",
+  "recordSha256": "9f88d5621f8a93365c43fa78dd0c202e302905e03465e2f7d3ff357cc5c1de91",
+  "observationsSha256": "635c41096be42bf3e7711add668ec3d2a2cd70ca79d1d6015a20df5572d1a79e",
+  "finalExportSha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b",
+  "currentGuideSha256": "ba295b3a696c8ab2baaac420190e172046c490618518d6f5b2cfe84ab98619c7",
+  "recordedOwnLosses": {
+    "frigate": 13,
+    "cruiser": 1
+  },
+  "ownFinal": {
+    "turn": 66,
+    "winner": "player",
+    "type": "Transcendence",
+    "alignment": 10,
+    "colonies": 5,
+    "credits": 2247
+  },
+  "publicFinalRaces": [
+    {
+      "id": "player",
+      "name": "The Concord",
+      "progress": 10,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s0",
+          "name": "Solace"
+        },
+        {
+          "id": "s7",
+          "name": "Nacre"
+        },
+        {
+          "id": "s20",
+          "name": "Sundrift"
+        }
+      ]
+    },
+    {
+      "id": "veyr",
+      "name": "Veyr Consortium",
+      "progress": 4,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s1",
+          "name": "Veyr Prime"
+        },
+        {
+          "id": "s18",
+          "name": "Cinder"
+        },
+        {
+          "id": "s26",
+          "name": "Aster"
+        }
+      ]
+    },
+    {
+      "id": "khar",
+      "name": "Khar Dominion",
+      "progress": 9,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s2",
+          "name": "Kharos"
+        },
+        {
+          "id": "s32",
+          "name": "Iona"
+        },
+        {
+          "id": "s37",
+          "name": "Morrow"
+        }
+      ]
+    },
+    {
+      "id": "choir",
+      "name": "The Luminous Choir",
+      "progress": 6,
+      "active": true,
+      "beacons": [
+        {
+          "id": "s3",
+          "name": "Lumen"
+        },
+        {
+          "id": "s9",
+          "name": "Velorum"
+        },
+        {
+          "id": "s22",
+          "name": "Ophion"
+        }
+      ]
+    }
+  ],
+  "receiptIndices": [
+    4,
+    9,
+    95,
+    172,
+    214,
+    244,
+    261,
+    312,
+    323,
+    341,
+    395,
+    420,
+    432,
+    448,
+    458,
+    472,
+    481,
+    484,
+    494,
+    505,
+    508,
+    512,
+    517,
+    521,
+    525,
+    536,
+    543,
+    545,
+    548,
+    549,
+    553,
+    566,
+    578,
+    597,
+    604,
+    610,
+    628,
+    631,
+    638,
+    655,
+    669,
+    670,
+    672,
+    694,
+    697,
+    703,
+    705,
+    722,
+    724,
+    731,
+    735,
+    743,
+    745,
+    747,
+    748,
+    749,
+    750,
+    751,
+    778
+  ],
+  "observationLines": [
+    187,
+    200,
+    214,
+    230,
+    242,
+    249,
+    250,
+    254,
+    257
+  ],
+  "independentReplay": {
+    "commands": 280,
+    "endTurns": 65,
+    "exports": 16,
+    "attribution": "Existing independently prepared campaign_review bundle, copied results; not rerun by this reviewer."
+  },
+  "warningLimit": "Original endTurn driver automatically confirms the warning but records only the subsequent briefing. Exact warning counts and their triggering predicates were not captured.",
+  "guideAssessment": {
+    "optionalClarification": "Orbital Bastions retaliate during invasion. They do not join orbital fleet battles or prevent Beacon blockades.",
+    "observedMisunderstanding": false,
+    "reason": "Both beacon worlds had intact Bastions before actual blockades, but the player never explicitly claimed Bastions should prevent them. This is optional explanation, not a required correction."
+  },
+  "recommendation": "Document a completed, contested campaign. No immediate simulation correction justified; final paid peace is a future diplomacy-policy question, not a demonstrated rules bug."
+}
