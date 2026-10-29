@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-10-29T01:37:39.092Z",
+  "uiURL": "http://127.0.0.1:5208",
+  "expectedVersion": "0.20.0",
+  "engineRevision": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "scriptSha256": "2898bf8669c706328d27adcc091c2bc2dc91b0803a772c7748abf3043ee25afe",
+  "method": "Fresh isolated browser contexts. Real Menu > Import file chooser > Restore. No state setters or localStorage fixtures. Public read-only UI inspection; exact whole parsed JSON comparison before/after, actual download and browser autosave reload. No turns or gameplay commands are issued in this UI pass.",
+  "cases": [
+    {
+      "id": "actual-iron-57",
+      "input": "docs/military-playtest/replay/actual-exports/cycle57.json",
+      "inputSha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "pass",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "mandate": "THE CHRONICLE IS COMPLETEThe Concord · Domination · Cycle 57. Review the conclusion or inspect the final galaxy.Review this age →",
+      "conclusionTitle": "Domination",
+      "conclusionText": "×\n⌂\nVICTORY RECORDED · CYCLE 57\nDomination\n\nThe Concord · Recorded victor\n\nGalaxy IRON-COVENANT-10\n\nInspect galaxy\nRead Chronicle\nExport campaign\nYour final holdings\nThe Concord · Cycle 57\nWORLDS\n12\nPOPULATION\n104\nSHIPS\n15\n15 military\nTECHNOLOGIES\n11\nLEGACY\n745\nCredits\n2,892\nMinerals\n1,005\nScience\n0\nOrders remaining\n16\nYOUR FINAL NETWORK\n1 Beacon\n\nAsterion Protocol researched. 3 Beacons required for alignment.\n\n0 / 10 recorded alignment cycles\n\nYOUR FOUNDING-WORLD CONTROL\n4 / 4 founding worlds\n\nOriginal founding worlds under your final sovereignty. Their identity stays fixed when capitals relocate.\n\nSolace ↗\nVeyr Prime ↗\nKharos ↗\nLumen ↗\nSelected retained moments\nNewest first\n\nA selection from the records still in this save, not a complete timeline. The Chronicle retains up to 160 entries; battle reports retain up to 50 engagements involving your civilization.\n\n160 Chronicle entries · cycles 2–57\n24 battle reports · cycles 20–57\nCYCLE 57\nSOVEREIGNTY\n\nInvasion of Lumen: 51 defense damage; 0 defenses remain. Concord lost 0 ships and 11.4 hull to retaliation. Lumen captured; invading fleet survives.\n\nBattle report →\nView system ↗\nCYCLE 56\nCOMBAT\n\nBattle at Seraph: Concord lost 0 ships and 13.5 hull; Choir lost 1 ship and 28.1 hull. Attacking fleet survives; defending fleet destroyed.\n\nBattle report →\nView system ↗\nCYCLE 55\nRESEARCH\n\nResearch complete: The Asterion Protocol. Unlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nCYCLE 54\nDIPLOMACY\n\nThe Concord declared war on The Luminous Choir. The active trade treaty was broken; the betrayal deepens their grievance.\n\nCYCLE 47\nDISCOVERY\n\nA Thousand Sleeping Voices: Restore their navigation. Gained 25 science and 15 credits.\n\nExpedition record →\nView system ↗\nCYCLE 47\nCONSTRUCTION\n\nAster completed Research Enclave.\n\nView system ↗\n\nThis age remains available to inspect and export.\n\nBegin a new campaign",
+      "completedEndTurnDisabled": true,
+      "recordedConclusion": true,
+      "screenshot": "actual-iron-57-conclusion.png",
+      "inspectedHistoricalReport": {
+        "id": 24,
+        "hadRounds": false,
+        "participant": "Sovereign 58"
+      },
+      "noPageOverflow": true,
+      "exportFile": "actual-iron-57-ui-export.json",
+      "exportFullStateEqual": true,
+      "exportSha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "pageErrors": []
+    }
+  ],
+  "failures": [],
+  "originalInputsUnchanged": true,
+  "servedAssets": [
+    {
+      "path": "/assets/index-BiOK--Q4.js",
+      "bytes": 880826,
+      "sha256": "95be2cd26af28a633f71f644d05f29f41b76f7d36b49c9d0b6af1ced0e537489"
+    },
+    {
+      "path": "/assets/index-SmGXpBaN.css",
+      "bytes": 75867,
+      "sha256": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef"
+    }
+  ]
+}

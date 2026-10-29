@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-10-29T01:40:47.570Z",
+  "frozenDirectory": "/tmp/asterion-stage20-final-hlkrdtbt",
+  "productionProofPath": "/tmp/asterion-stage20-release/docs/stage20-expedition-review/acceptance/production-validation.json",
+  "productionProofSha256": "218dcccd2ebc29ff0e75a11920c735eaa7bb15a4d231740e7b9db4f8f5303cd8",
+  "build": {
+    "version": "0.20.0",
+    "commit": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+    "builtAt": "2026-10-29T01:27:11.863Z"
+  },
+  "observed": {
+    "index.html": {
+      "bytes": 876,
+      "sha256": "a9a741a49e6b6c7552da338ff149989d8845b868ce222d9a6782fa6d620d1f11"
+    },
+    "assets/index-BiOK--Q4.js": {
+      "bytes": 880826,
+      "sha256": "95be2cd26af28a633f71f644d05f29f41b76f7d36b49c9d0b6af1ced0e537489"
+    },
+    "assets/index-SmGXpBaN.css": {
+      "bytes": 75867,
+      "sha256": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef"
+    },
+    "build-info.json": {
+      "bytes": 122,
+      "sha256": "771a9b9933e5e6a80358f3092cafefec6508367a82395f022b29a72e05dde5bc"
+    }
+  },
+  "explanation": "Browser imports were tested on the unchanged frozen Stage20 production bundle. Its served HTML/JS/CSS and build metadata match the root release proof and frozen files. Simulation imports independently load the pinned Git engine graph, not this UI bundle."
+}

@@ -1,0 +1,19 @@
+{
+  "comparedFiles": 18,
+  "changedFiles": [
+    "build-info.json",
+    "guide.html"
+  ],
+  "gameAssetsByteIdentical": true,
+  "originalFrozenBuild": "/tmp/asterion-stage20-final-hlkrdtbt",
+  "finalFrozenBuild": "/tmp/asterion-stage20-release-final-y0mp67c4",
+  "finalMetadata": {
+    "version": "0.20.0",
+    "commit": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+    "builtAt": "2026-10-29T01:41:29.813Z"
+  },
+  "oldGuideSha256": "018569c7ba8d1fbf9a04451fd77c58c90953e4b36f993718266e83f8a6b1240b",
+  "finalGuideSha256": "85621372bb21cb27bab30acfd24809cc4cf99db3dc21a71e9021f0e8a5ac3ae3",
+  "sourceGuideSha256": "85621372bb21cb27bab30acfd24809cc4cf99db3dc21a71e9021f0e8a5ac3ae3",
+  "scope": "Separate static guide correction after functional acceptance. All game assets are byte-identical to the 5208 browser and compatibility build; no functional suite repeated."
+}

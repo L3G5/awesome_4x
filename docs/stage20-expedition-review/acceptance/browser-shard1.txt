@@ -1,0 +1,45 @@
+
+> asterion-reach@0.20.0 test:browser
+> playwright test --shard=1/2 --output=/tmp/asterion-stage20-browser-shard1
+
+
+Running 32 tests using 1 worker, shard 1 of 2
+
+(node:548964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:548964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser.spec.js:16:1 › a real opening campaign surveys, settles, builds, researches, saves, and advances rival empires (8.9s)
+  ✓   2 tests/browser.spec.js:57:1 › command views, guide, save export and mobile layout remain usable (2.1s)
+  ✓   3 tests/combat-rounds-ui.spec.js:29:1 › actual four-round exchanges are keyboard-readable and preserve a sequential attack and reload exactly (4.4s)
+  ✓   4 tests/combat-rounds-ui.spec.js:79:1 › narrow historical rounds retain battle-time weapons, doctrine and names after later changes (2.1s)
+  ✓   5 tests/combat-rounds-ui.spec.js:119:1 › older outcome-only reports remain readable without invented rounds (1.7s)
+  ✓   6 tests/conclusion-ui.spec.js:29:1 › the completed WATCH campaign reopens, links retained reports and exports its exact saved outcome (2.9s)
+  ✓   7 tests/conclusion-ui.spec.js:66:1 › the actual military ending remains usable at 390 pixels and labels its capped retained history (1.8s)
+  ✓   8 tests/conclusion-ui.spec.js:89:1 › an older recorded Transcendence remains authoritative without inventing missing alignment progress (2.2s)
+  ✓   9 tests/conclusion-ui.spec.js:110:1 › a loss with no retained history shows the recorded victor and own holdings without a fabricated timeline (2.0s)
+  ✓  10 tests/conclusion-ui.spec.js:128:1 › the actual tied public race explains Legacy and seeded ties without exposing private rival scores (2.7s)
+  ✓  11 tests/conclusion-ui.spec.js:153:1 › a normal advancing cycle opens the new conclusion with its exact authoritative win state (3.2s)
+  ✓  12 tests/conquest-ui.spec.js:18:1 › the actual cycle55 campaign identifies its remaining founding objective and preserves beacon navigation (4.2s)
+  ✓  13 tests/conquest-ui.spec.js:48:1 › contact and chart hints reveal no founding targets or hidden control totals (3.9s)
+  ✓  14 tests/conquest-ui.spec.js:81:1 › an ordinary founding-world capture updates control while the relocated frontier capital remains outside the ledger (2.2s)
+  ✓  15 tests/conquest-ui.spec.js:121:1 › an owned or surveyed legacy world remains inspectable without a redundant chart flag (2.4s)
+  ✓  16 tests/defense-ui.spec.js:18:1 › a held formation spends its last order leading defense and retains usable keyboard focus after reload (4.0s)
+  ✓  17 tests/defense-ui.spec.js:44:1 › division explains the retained lead and merging transfers it to the selected survivor before paid clearing (3.1s)
+  ✓  18 tests/defense-ui.spec.js:70:1 › observed enemy lead order matches actual engagements and its historical defender badge survives reload (4.0s)
+  ✓  19 tests/development-ui.spec.js:22:1 › a capped civic upgrade discloses zero usable orders while preserving the legal credit investment (4.5s)
+  ✓  20 tests/development-ui.spec.js:51:1 › a full colony replaces infrastructure on completion and establishes a persistent specialty (7.3s)
+  ✓  21 tests/development-ui.spec.js:100:1 › a forge displays and charges the discounted military ship price (2.3s)
+  ✓  22 tests/development-ui.spec.js:117:1 › public beacon signals show an interrupted race without revealing hidden fleets (3.5s)
+  ✓  23 tests/development-ui.spec.js:144:1 › a beacon blockade loses an alignment step and a player fleet can restore the race (4.4s)
+  ✓  24 tests/development-ui.spec.js:177:1 › a rival nearing alignment completion opens a briefing and highlights its public network (1.8s)
+  ✓  25 tests/diplomacy-ui.spec.js:6:3 › a player can accept an AI peace offer without losing agency (1.7s)
+  ✓  26 tests/diplomacy-ui.spec.js:6:3 › a player can decline an AI peace offer without losing agency (1.7s)
+  ✓  27 tests/discoveries-ui.spec.js:22:1 › an observatory matures, reserves its restoration after cancellation, and persists its story (8.1s)
+  ✓  28 tests/discoveries-ui.spec.js:78:1 › an exhausted expedition can reach the restoration selector by keyboard (1.8s)
+  ✓  29 tests/discoveries-ui.spec.js:100:1 › a recovered escort keeps its name and fleet heritage after merging (4.4s)
+  ✓  30 tests/discovery-effects-ui.spec.js:17:1 › refugee terms explain arrival above capacity and match the paid command and reload (3.1s)
+  ✓  31 tests/discovery-effects-ui.spec.js:38:1 › Garden terms retain science while showing the actual habitability increase (2.0s)
+  ✓  32 tests/discovery-effects-ui.spec.js:54:1 › a lost refugee destination discloses no population gain before charging its unchanged price (1.9s)
+
+  32 passed (1.8m)

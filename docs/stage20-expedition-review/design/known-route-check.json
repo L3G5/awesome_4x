@@ -1,0 +1,54 @@
+{
+  "label": "Routes derived only from the Choir56 observer projection; unknown fleets are not consulted",
+  "snapshotId": 105,
+  "turn": 56,
+  "observer": "choir",
+  "remainingAlignmentCycles": 4,
+  "participatingSites": [
+    {
+      "id": "s20",
+      "name": "Sundrift",
+      "path": [
+        "s3",
+        "s30",
+        "s17",
+        "s9",
+        "s4",
+        "s12",
+        "s20"
+      ],
+      "pathAvoidingCaelum": null
+    },
+    {
+      "id": "s0",
+      "name": "Solace",
+      "path": [
+        "s3",
+        "s30",
+        "s17",
+        "s9",
+        "s4",
+        "s12",
+        "s20",
+        "s0"
+      ],
+      "pathAvoidingCaelum": null
+    },
+    {
+      "id": "s28",
+      "name": "Haven",
+      "path": [
+        "s3",
+        "s30",
+        "s17",
+        "s9",
+        "s4",
+        "s12",
+        "s20",
+        "s0",
+        "s28"
+      ],
+      "pathAvoidingCaelum": null
+    }
+  ]
+}

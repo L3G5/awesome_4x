@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),views=JSON.parse(fs.readFileSync(base+'/attacker-entry-views.json'));
+const e=views.find(x=>x.id===105),v=e.view,worlds=new Map(v.charted.map(w=>[w.id,w]));
+function route(target,banned){const seen=new Set(['s3']),queue=[['s3']];for(const p of queue){const at=p.at(-1);if(at===target)return p;for(const edge of v.knownLanes){if(!edge.includes(at))continue;const next=edge.find(x=>x!==at),world=worlds.get(next);if(next===banned||seen.has(next)||!world)continue;const relation=v.relations[world.owner];if(world.owner&&world.owner!==v.observer&&relation?.status!=='war'&&!relation?.trade)continue;seen.add(next);queue.push([...p,next]);}}return null;}
+const race=v.publicRaces.find(x=>x.factionId==='player'),result={label:'Routes derived only from the Choir56 observer projection; unknown fleets are not consulted',snapshotId:e.id,turn:e.turn,observer:v.observer,remainingAlignmentCycles:race.target-race.progress,participatingSites:race.participatingSites.map(id=>({id,name:worlds.get(id).name,path:route(id,null),pathAvoidingCaelum:route(id,'s30')}))};
+fs.writeFileSync(base+'/known-route-check.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

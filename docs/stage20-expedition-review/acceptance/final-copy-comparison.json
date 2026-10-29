@@ -1,0 +1,27 @@
+{
+  "scope": "Separate final wording/accessibility phase after functional acceptance; no simulation or action handler changed.",
+  "originalFrozenBuild": "/tmp/asterion-stage20-final-hlkrdtbt",
+  "finalFrozenBuild": "/tmp/asterion-stage20-release-copy-u62nv9s6",
+  "jsComparison": "Entire compiled JavaScript is byte-identical after replacing exactly one title literal with corrected resource wording and an explicit aria-label.",
+  "oldLiteral": "title=\"Cancel and refund unspent work\"",
+  "finalLiteral": "title=\"Cancel and refund unused credits and minerals\" aria-label=\"Cancel construction\"",
+  "indexComparison": "Byte-identical after substituting the new JavaScript filename.",
+  "cssByteIdentical": true,
+  "finalGuideMatchesReviewedGuide": true,
+  "sourceSha256": {
+    "src/main.js": "28c5da0dcbae50afcc2be6a5b650a096974fa3721b751ae6f7da5017643f4a45",
+    "public/guide.html": "85621372bb21cb27bab30acfd24809cc4cf99db3dc21a71e9021f0e8a5ac3ae3"
+  },
+  "compiledSha256": {
+    "index.html": "f8a5259e515bf2914c42174f241073e149428aaa021d400a97b646d533439931",
+    "assets/index-DXC5Q21C.js": "4962aa25ecb172c1d5248995943cc695c0ff271639b9f6401914a7e784904e75",
+    "assets/index-SmGXpBaN.css": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef",
+    "guide.html": "85621372bb21cb27bab30acfd24809cc4cf99db3dc21a71e9021f0e8a5ac3ae3",
+    "build-info.json": "6d253540e2d78eafdbb0c2c8d395da634f63824730bd7acee0280592427cd533"
+  },
+  "buildMetadata": {
+    "version": "0.20.0",
+    "commit": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+    "builtAt": "2026-10-29T01:45:42.501Z"
+  }
+}

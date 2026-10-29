@@ -1,0 +1,41 @@
+Independent design review: local alignment-expedition reinforcement
+
+Decision
+Proceed with the bounded local-merge policy, subject to a pre-spend ETA check. This repairs two evidenced local omissions without prescribing a winning raid or changing diplomacy, war thresholds, production, remote rallying or tactical memory.
+
+Verified evidence
+I reran reconstruct.mjs, feasibility.mjs and known-route-check.mjs in this separate output directory, using the original audit engine/inputs read-only. All six resulting artifacts are byte-identical: reconstruction proof, observer entry/action views, compressed derived checkpoints, two local feasibility forks and the Choir route check. The 265-command historical replay still ends in the exact actual60 state, SHA256 d9cdd751b9a6af62aca35ed7fc631d4967679339e13a230add40ff8d58f0fda9. The original audit remains unmodified.
+
+The two cases are separate local forks, not a rewritten campaign:
+- Veyr53 / checkpoint41: f53 absorbs f59 at Sable, two frigates become three, moves remain2, route/ETA stay five hops/three acting cycles, and the same two departure jumps leave14orders.
+- Veyr56 / checkpoint99: f56 absorbs f59 at Tethys, three frigates become four, moves remain1, route/ETA stay two hops/two acting cycles, and the same next jump leaves15orders.
+Both have17orders before the merge and no observed home threat. In the original trace, the mates move elsewhere later that turn; they were not held as required defenses.
+
+Scope
+At a departure boundary inside advanceIntervention, after the existing mission is selected and validated, consider at most one same-owner, same-class, co-located military mate. Preserve the selected expedition ID and target. Require an ordinary legal merge, <=12ships, and mate.movesLeft >= expedition.movesLeft. Pick deterministically among qualifying mates; current own strength then stable ID is a reasonable bounded rule, not an optimization search. Do not merge after arrival at the blockade target, after a combat stop, while waiting for movement/orders, or for a mission that has become invalid.
+
+Spare orders and ETA
+Use the live order budget after declaration/diplomacy/rescue actions, not next-turn capacity. Before spending:
+1. Keep the current candidate for the selected fleet/site.
+2. Make a pure projected own-state copy with the ordinary summed ships/hull, unchanged selected ID/moves, mate removed and faction.orders reduced by1. No command, random call or real-state mutation occurs in this preflight.
+3. Run the same interventionCandidate for that fixed mission against the projected state.
+4. Require a valid candidate, post-merge arrivalCycles <= pre-merge arrivalCycles, and orders after payment >= min(current movement, recomputed route hops).
+5. Only then issue ordinary merge; reacquire/recompute the normal candidate before ordinary movement. No rollback or refunded speculative command.
+
+Why preflight is necessary
+The separate valid synthetic eta-preflight-counterexample shows that extra power can lower observed-guard risk enough for route() to choose a longer path. Before: two hops, cost7, ETA1, moves2/orders3. After ordinary merge: moves2/orders2; the old-route spare-order test passes, but the route becomes three hops at cost6.506. With one public cycle remaining the candidate vanishes; with three remaining ETA worsens1->2. Thus movement preservation alone is not ETA preservation. This is a synthetic acceptance boundary, not new WATCH history.
+
+Defense and privacy
+Recheck threatsToColonies at each proposed merge boundary. It must remain the existing broad observed-home-threat veto, including a newly observed approach after an earlier jump, even when the threat appears covered. If triggered, skip this new merge; do not broaden the existing expedition's movement/interruption policy. Under that full veto, the existing local observed-defense reservation cannot be stripped by the new merge. Do not replace it with a weaker local-only rule, invent a permanent one-ship garrison floor, or treat defenseLead/Hold as a new AI reservation rule.
+Only own mates, own orders/movement and the existing observer-safe candidate/threat queries may affect the decision. Hidden enemy fleet composition, private research/resources, unsurveyed defenses and old battle history must not become inputs. Tactical memory for Choir's known prior capture is a separate policy question. Merging transfers normal lead/heritage semantics; it creates no hull, moves, resources, upkeep relief or repair capacity.
+
+Acceptance
+- Both original local checkpoints issue the ordinary merge with the selected ID surviving, preserve their stated moves/route/ETA/departure positions and pay one order; hidden-fleet perturbations leave decisions unchanged.
+- The synthetic longer-path/ETA regression is rejected before payment, leaving the unmerged expedition's original legal movement available.
+- Exact order boundaries: e.g. two remaining jumps with two orders cannot absorb; with three orders may absorb if the new route/ETA qualifies. A one-hop arrival with two orders may absorb without spending an unnecessary second jump. Never borrow future orders.
+- Insufficient mate movement, over-cap totals, wrong owner/class/location, civilians, an already-blockading fleet, invalid target/mission, or any observed home threat prevent this new merge. A threat revealed by the first jump also prevents an intermediate absorption.
+- Combat/contact/death stop behavior, treaty access, selected mission metadata and ordinary destruction/target-loss cleanup remain unchanged. Actual merge results and JSON reload continuation remain equal to ordinary commands.
+- No assertion that stronger attacks must win, delay Concord's recorded victory, or cure Choir's lack of an available force. No new campaign cohort was run for this design review.
+
+Risks retained deliberately
+One merge can consume an order otherwise available to later economic/civilian phases; 'spare' means spare for the already selected expedition's current movement, not free. Existing mergeForces may combine other local mates before the expedition boundary; this bounded update does not promise an optimal partition of all forces or change that global order. Unknown targets can still be strongly defended, and absence of an observed threat is not omniscient safety.

@@ -1,0 +1,38 @@
+{
+  "label": "Synthetic route-cost counterexample, not WATCH evidence or a proposed policy implementation",
+  "before": {
+    "path": [
+      "s1",
+      "s4",
+      "s0"
+    ],
+    "cost": 7,
+    "arrivalCycles": 1
+  },
+  "oldPlannedJumps": 2,
+  "preMergeOrders": 3,
+  "postMergeOrders": 2,
+  "movement": 2,
+  "oldSpareOrderTestPassed": true,
+  "afterWithActualOneCycleDeadline": null,
+  "afterRoute": {
+    "path": [
+      "s1",
+      "s5",
+      "s6",
+      "s0"
+    ],
+    "cost": 6.5058823529411764
+  },
+  "afterWithThreeCycleDeadline": {
+    "path": [
+      "s1",
+      "s5",
+      "s6",
+      "s0"
+    ],
+    "cost": 6.5058823529411764,
+    "arrivalCycles": 2
+  },
+  "explanation": "Adding own hull lowers observed-guard risk enough to prefer a longer accessible path. Old-route spare orders and unchanged moves alone do not preserve arrival ETA. Preflight the merged candidate before paying."
+}

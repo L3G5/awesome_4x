@@ -1,0 +1,3854 @@
+{
+  "generatedAt": "2026-10-29T01:37:38.320Z",
+  "runtime": "v22.23.1",
+  "engineRevision": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "scriptSha256": "04a9f3403a25ade096fdc10fec32765758800d6a197f5842a083c59cc6301adb",
+  "sources": {
+    "src/ai.js": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+    "src/combat-preview.js": "c9a02e5ec95dcc0e7ab93292a93bcca84376236a6ed4ad12290ad327e54cab77",
+    "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "src/conquest.js": "85b104ed7b5d15a0f31e707c3e3d32d651c7c60b855c8d3d0ad2202002a50ac0",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/investment.js": "be9f6d13d43738bf3f71fb503c61639dbbb9dc5806a5f83ab04b98ae3f1cefe0",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/reinforcement.js": "a6d7307e21c21de4ab452909c1c58d649355d840bd5a503033e9efc671231bf1",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+  },
+  "method": {
+    "inputs": "Exactly 14 existing compatibility artifacts plus IRON55/57 and WATCH40/51/60. Original bytes and previous provenance remain untouched; no historical generation is executed.",
+    "continuation": "Simulation-only passive player: ordinary endTurn with current rules and AI until a winner is recorded. No player commands, grants, edited state or old-future equality requirement.",
+    "reload": "At every step, JSON-copy the uninterrupted current state, execute ordinary endTurn once on each, compare return values and entire next JSON, and validate both balances/states.",
+    "preservation": "Whole input JSON remains identical after frozen validation and read-only projections. Existing paid queue receipts retain cost/work while the same queue remains active; retained old reports remain byte-identical and do not acquire round traces.",
+    "limits": "19 artifact checks include related and byte-identical historical snapshots; they are not independent games or a win-rate sample. Completed imports remain terminal. Simulation outcomes are not continuations played by a human."
+  },
+  "inputManifestSha256": "254d3eb584d4867177e0e68c305ec1ca9d7d44cbc6730b802351c711365cd944",
+  "cases": [
+    {
+      "id": "original-asterion",
+      "input": "docs/save-compatibility/inputs/original-asterion-cycle30.json",
+      "inputSha256": "0c9e5adfa86808aa2b1e13cfaa1f59ef708508e73cde73f12119fe22fa130297",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "winner",
+          "victoryType"
+        ],
+        "absentOptionalTopLevel": [
+          "combatReports",
+          "lastBriefing",
+          "diplomacyOffers",
+          "publicAffairs",
+          "alignmentUpdatedTurn",
+          "discoveriesUpdatedTurn"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s5",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 7,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s6",
+            "owner": "khar",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 5,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "forum",
+              "kind": "building",
+              "progress": 16,
+              "work": 40,
+              "cost": {
+                "credits": 50,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 21,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "market",
+              "kind": "building",
+              "progress": 7,
+              "work": 24,
+              "cost": {
+                "credits": 25,
+                "minerals": 20
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 5
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 29,
+      "finishTurn": 59,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 13,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "66ff71f4bf15577589ef93ecd17c1eace36196c6f476f11226838b94fce4d48c",
+      "trajectorySha256": "3fa5491ef3ae977fe3aa4bbc453014da0e659a32a255eeb76079776899a74f5f",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/original-asterion.json"
+    },
+    {
+      "id": "original-legacy2",
+      "input": "docs/save-compatibility/inputs/original-legacy2-cycle30.json",
+      "inputSha256": "837b5da9273b58edd05b73d0fe6cc694aa634bb86ec58d4cac5577dca6db39d9",
+      "seed": "stage4-legacy-2",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "winner",
+          "victoryType"
+        ],
+        "absentOptionalTopLevel": [
+          "combatReports",
+          "lastBriefing",
+          "diplomacyOffers",
+          "publicAffairs",
+          "alignmentUpdatedTurn",
+          "discoveriesUpdatedTurn"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "forum",
+              "kind": "building",
+              "progress": 36,
+              "work": 40,
+              "cost": {
+                "credits": 50,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "forum",
+              "kind": "building",
+              "progress": 14,
+              "work": 40,
+              "cost": {
+                "credits": 50,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s16",
+            "owner": "khar",
+            "queue": {
+              "itemId": "market",
+              "kind": "building",
+              "progress": 13,
+              "work": 24,
+              "cost": {
+                "credits": 25,
+                "minerals": 20
+              }
+            }
+          },
+          {
+            "systemId": "s24",
+            "owner": "khar",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 12,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 5
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 32,
+      "finishTurn": 62,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 6,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "70ca592ba1ddcdd0c4da49dbcfdca51e0ce5be07048c15259a2a3abac4921369",
+      "trajectorySha256": "dfb75f8bd14839f94a421c717da5720bc11f6250097963efc5d6d6fb3292f2b1",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/original-legacy2.json"
+    },
+    {
+      "id": "sensors",
+      "input": "docs/save-compatibility/inputs/sensors-cycle30.json",
+      "inputSha256": "0c9e5adfa86808aa2b1e13cfaa1f59ef708508e73cde73f12119fe22fa130297",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "winner",
+          "victoryType"
+        ],
+        "absentOptionalTopLevel": [
+          "combatReports",
+          "lastBriefing",
+          "diplomacyOffers",
+          "publicAffairs",
+          "alignmentUpdatedTurn",
+          "discoveriesUpdatedTurn"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s5",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 7,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s6",
+            "owner": "khar",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 5,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "forum",
+              "kind": "building",
+              "progress": 16,
+              "work": 40,
+              "cost": {
+                "credits": 50,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 21,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "market",
+              "kind": "building",
+              "progress": 7,
+              "work": 24,
+              "cost": {
+                "credits": 25,
+                "minerals": 20
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 5
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 29,
+      "finishTurn": 59,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 13,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "66ff71f4bf15577589ef93ecd17c1eace36196c6f476f11226838b94fce4d48c",
+      "trajectorySha256": "3fa5491ef3ae977fe3aa4bbc453014da0e659a32a255eeb76079776899a74f5f",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/sensors.json"
+    },
+    {
+      "id": "stage2",
+      "input": "docs/save-compatibility/inputs/stage2-cycle30.json",
+      "inputSha256": "2ebaa4282c2af64082deacdc3445a062a35cc793e058a957dfc198fe8116aa0c",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn"
+        ],
+        "absentOptionalTopLevel": [
+          "combatReports",
+          "lastBriefing",
+          "diplomacyOffers",
+          "publicAffairs",
+          "alignmentUpdatedTurn",
+          "discoveriesUpdatedTurn"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s1",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 12,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 16,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "forum",
+              "kind": "building",
+              "progress": 36,
+              "work": 40,
+              "cost": {
+                "credits": 50,
+                "minerals": 30
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 6
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 40,
+      "finishTurn": 70,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 4,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "56c96caca12b9fd08e024fc06a9ccc74c3a276204c3fd0136408178709437a7a",
+      "trajectorySha256": "3c8f4b87abfba539421c988de403876a962a39888b8d9bbfa6914df0340eceab",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage2.json"
+    },
+    {
+      "id": "stage3",
+      "input": "docs/save-compatibility/inputs/stage3-cycle30.json",
+      "inputSha256": "1eeb42c6fe2fa206ccfd5c4be714ebf0960e6473d5da7d21402ec11df9f0d6c9",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers",
+          "publicAffairs",
+          "alignmentUpdatedTurn",
+          "discoveriesUpdatedTurn"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s1",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 12,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 16,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "forum",
+              "kind": "building",
+              "progress": 36,
+              "work": 40,
+              "cost": {
+                "credits": 50,
+                "minerals": 30
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 6
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 40,
+      "finishTurn": 70,
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 4,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "1e4cd03f0c7001710919a61e8d822ba928c0fb8d6bd66586de365cab292d68e6",
+      "trajectorySha256": "9be5b6c9a5b1728fd305602bd3f038aae43026a765db6da1e7107d1c9d70ced2",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage3.json"
+    },
+    {
+      "id": "stage4",
+      "input": "docs/save-compatibility/inputs/stage4-cycle30.json",
+      "inputSha256": "49bdab40a5c2e78bff8559627d431c20dea2f701d6db9e8edf7954194688a0d2",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "alignmentUpdatedTurn"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers",
+          "publicAffairs",
+          "discoveriesUpdatedTurn"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 10,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 15,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s21",
+            "owner": "khar",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 5,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 48,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 10,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s31",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 12,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s39",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 32,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 47,
+      "finishTurn": 77,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 19,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "624d9d21fcc0f5cdbafbeafc6c64f38e0171e4788220bdff43217c927a24f744",
+      "trajectorySha256": "39d940e6bd909be2c4404d53827e1a4b89e4ae822fb2fb1bd61ce012ea9fd132",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage4.json"
+    },
+    {
+      "id": "stage5",
+      "input": "docs/save-compatibility/inputs/stage5-cycle30.json",
+      "inputSha256": "4b8189e24ec8b9b98b13f60bc554ef5129a78fac41d435ad94b4942503dd5656",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers",
+          "publicAffairs"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 10,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 15,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s21",
+            "owner": "khar",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 5,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 48,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s26",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 19,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 10,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s39",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 32,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 33,
+      "finishTurn": 63,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 20,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "0b05e0cc5c3f679cff24831e181b341c0b2c42fb095f464419ebb8bdb86762ba",
+      "trajectorySha256": "0f64d89148b7aa5de8cef4de279eef72cc564711f2541360656546ed4cf54398",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage5.json"
+    },
+    {
+      "id": "stage6",
+      "input": "docs/save-compatibility/inputs/stage6-cycle30.json",
+      "inputSha256": "c7d8241e0bc9182c53452cca710ad1036a87adf876a2484265536f0f436add28",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 10,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 15,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s21",
+            "owner": "khar",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 5,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 48,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s26",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 19,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 10,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s39",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 32,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 33,
+      "finishTurn": 63,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 20,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "36e56d1cf70c03af45087bd5d3141c6382c823e0ef8da92390d707a37e26e021",
+      "trajectorySha256": "e3e1d7f09c42076a97af5dedab876999189915a09fec8a910b507a3990b18996",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage6.json"
+    },
+    {
+      "id": "stage7",
+      "input": "docs/save-compatibility/inputs/stage7-cycle30.json",
+      "inputSha256": "36cea39a3ca09a08ce149966fe6835f891f807e7e8e5b6b2db2c1c0c29afbae5",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s1",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 12,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "frigate",
+              "kind": "ship",
+              "progress": 12,
+              "work": 26,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s14",
+            "owner": "choir",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 41,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 18,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s26",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 49,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 1,
+              "progress": 57,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 21,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s39",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 33,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 40,
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 13,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "766b4040b0102a44db6f5cbef8d86b3f63077e44bcd3f1c8994e8e9e0a486ae6",
+      "trajectorySha256": "3ef9d798c279dcd3203cf316abad4406f4babfcf1d61674f7727160fad525517",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage7.json"
+    },
+    {
+      "id": "stage8",
+      "input": "docs/save-compatibility/inputs/stage8-cycle30.json",
+      "inputSha256": "36cea39a3ca09a08ce149966fe6835f891f807e7e8e5b6b2db2c1c0c29afbae5",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s1",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 12,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "frigate",
+              "kind": "ship",
+              "progress": 12,
+              "work": 26,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s14",
+            "owner": "choir",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 41,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 18,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s26",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 49,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 1,
+              "progress": 57,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 21,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s39",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 33,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 40,
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 13,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "766b4040b0102a44db6f5cbef8d86b3f63077e44bcd3f1c8994e8e9e0a486ae6",
+      "trajectorySha256": "3ef9d798c279dcd3203cf316abad4406f4babfcf1d61674f7727160fad525517",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage8.json"
+    },
+    {
+      "id": "stage9",
+      "input": "docs/save-compatibility/inputs/stage9-cycle30.json",
+      "inputSha256": "36cea39a3ca09a08ce149966fe6835f891f807e7e8e5b6b2db2c1c0c29afbae5",
+      "seed": "ASTERION",
+      "startTurn": 30,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 0,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s1",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 12,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "frigate",
+              "kind": "ship",
+              "progress": 12,
+              "work": 26,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s14",
+            "owner": "choir",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 41,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 18,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s26",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 49,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 1,
+              "progress": 57,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 21,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s39",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 33,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 40,
+      "finishTurn": 70,
+      "winner": "khar",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 13,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "766b4040b0102a44db6f5cbef8d86b3f63077e44bcd3f1c8994e8e9e0a486ae6",
+      "trajectorySha256": "3ef9d798c279dcd3203cf316abad4406f4babfcf1d61674f7727160fad525517",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/stage9.json"
+    },
+    {
+      "id": "actual-stage6-cycle40",
+      "input": "docs/save-compatibility/inputs/actual-stage6-cycle40.json",
+      "inputSha256": "699e6c8b20048eb5d536cd9b986d234b3a854d4312a533671b8835694e0a358e",
+      "seed": "ASTERION",
+      "startTurn": 40,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 22,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 24,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 36,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s5",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "market",
+              "kind": "building",
+              "progress": 5,
+              "work": 24,
+              "cost": {
+                "credits": 25,
+                "minerals": 20
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 16,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 2,
+              "progress": 84,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s16",
+            "owner": "khar",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 24,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s17",
+            "owner": "choir",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 20,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 66,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 12,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s24",
+            "owner": "khar",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 2,
+              "progress": 84,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s27",
+            "owner": "choir",
+            "queue": {
+              "itemId": "market",
+              "kind": "building",
+              "progress": 18,
+              "work": 24,
+              "cost": {
+                "credits": 25,
+                "minerals": 20
+              }
+            }
+          },
+          {
+            "systemId": "s28",
+            "owner": "player",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 21,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s34",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "market",
+              "kind": "building",
+              "progress": 7,
+              "work": 24,
+              "cost": {
+                "credits": 25,
+                "minerals": 20
+              }
+            }
+          },
+          {
+            "systemId": "s41",
+            "owner": "player",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 6,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 32,
+      "finishTurn": 72,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 16,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "6a588b999bee7a2b8f0633bb0b13df6c27c437d56ef821ff7db0e16b21ec6708",
+      "trajectorySha256": "6f7f5838ee0ceb75a3d735982180f7e71720f13d2735773529580614c6b74ab2",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/actual-stage6-cycle40.json"
+    },
+    {
+      "id": "actual-stage6-route63",
+      "input": "docs/save-compatibility/inputs/actual-stage6-route63.json",
+      "inputSha256": "4ab22668b8ccfa41c7116eea7705e64eb95caae58a7ae5420381dc4cf891ea58",
+      "seed": "ASTERION",
+      "startTurn": 63,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s0",
+            "owner": "player",
+            "queue": {
+              "itemId": "cruiser",
+              "kind": "ship",
+              "progress": 58,
+              "work": 65,
+              "cost": {
+                "credits": 65,
+                "minerals": 77
+              }
+            }
+          },
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "cruiser",
+              "kind": "ship",
+              "progress": 58,
+              "work": 65,
+              "cost": {
+                "credits": 65,
+                "minerals": 77
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "frigate",
+              "kind": "ship",
+              "progress": 24,
+              "work": 26,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s6",
+            "owner": "khar",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 132,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s7",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 1,
+              "progress": 19,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 54,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 12,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s14",
+            "owner": "choir",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 2,
+              "progress": 78,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s17",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 22,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s20",
+            "owner": "player",
+            "queue": {
+              "itemId": "cruiser",
+              "kind": "ship",
+              "progress": 44,
+              "work": 65,
+              "cost": {
+                "credits": 65,
+                "minerals": 85
+              }
+            }
+          },
+          {
+            "systemId": "s21",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 2,
+              "progress": 16,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 33,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s31",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 20,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s34",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 1,
+              "progress": 48,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s40",
+            "owner": "khar",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 30,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [
+          {
+            "fleetId": "f73",
+            "owner": "player",
+            "systemId": "s33",
+            "route": {
+              "destinationId": "s25",
+              "path": [
+                "s33",
+                "s25"
+              ]
+            }
+          }
+        ],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 4,
+      "finishTurn": 67,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 14,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "1f75109008be5943e3498c66318bbfffee950d061619d36bb7d83f329a394d7f",
+      "trajectorySha256": "df5a5d68858e3e9bdfaae195f8431a1cc7c9256a248f04d00ef67ff86815ef1d",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/actual-stage6-route63.json"
+    },
+    {
+      "id": "actual-stage6-final67",
+      "input": "docs/save-compatibility/inputs/actual-stage6-final67.json",
+      "inputSha256": "626dd110a0530b3554b5cccb310cecda82a37180ea414685d6bfe214469a167f",
+      "seed": "ASTERION",
+      "startTurn": 67,
+      "initialWinner": "player",
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [
+          "diplomacyOffers"
+        ],
+        "queues": [
+          {
+            "systemId": "s10",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 1,
+              "progress": 8,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s16",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 16,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s21",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 2,
+              "progress": 80,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "bastion",
+              "kind": "building",
+              "progress": 36,
+              "work": 50,
+              "cost": {
+                "credits": 45,
+                "minerals": 60
+              },
+              "replaceBuildingId": "market"
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "bastion",
+              "kind": "building",
+              "progress": 23,
+              "work": 50,
+              "cost": {
+                "credits": 45,
+                "minerals": 60
+              },
+              "replaceBuildingId": "habitat"
+            }
+          },
+          {
+            "systemId": "s34",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "academy",
+              "kind": "charter",
+              "charterType": "academy",
+              "charterLevel": 2,
+              "progress": 36,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s40",
+            "owner": "khar",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 32,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "completedImportRemainsTerminal": true,
+      "steps": 0,
+      "finishTurn": 67,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 0,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "e2f41f4938d3f56f29b4f81c5d320f26e86481ae8e784b0d4ee0caf54aacc0e8",
+      "trajectorySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "simulationOnly": false
+    },
+    {
+      "id": "actual-iron-55",
+      "input": "docs/military-playtest/replay/actual-exports/cycle55.json",
+      "inputSha256": "f43cffaf6a72be7a2c422f0988ab6931acc0d895afd1df925aabbc8485053f8e",
+      "seed": "IRON-COVENANT-10",
+      "startTurn": 55,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs",
+          "diplomacyOffers",
+          "nextDiplomacyOfferId"
+        ],
+        "absentOptionalTopLevel": [],
+        "queues": [
+          {
+            "systemId": "s6",
+            "owner": "choir",
+            "queue": {
+              "itemId": "bastion",
+              "kind": "building",
+              "progress": 10,
+              "work": 50,
+              "cost": {
+                "credits": 45,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "player",
+            "queue": {
+              "itemId": "cruiser",
+              "kind": "ship",
+              "progress": 34,
+              "work": 65,
+              "cost": {
+                "credits": 65,
+                "minerals": 85
+              }
+            }
+          },
+          {
+            "systemId": "s11",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 41,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s17",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 55,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 132,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s24",
+            "owner": "khar",
+            "queue": {
+              "itemId": "bastion",
+              "kind": "building",
+              "progress": 30,
+              "work": 50,
+              "cost": {
+                "credits": 45,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "shipyard",
+              "kind": "building",
+              "progress": 8,
+              "work": 32,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s40",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 24,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          }
+        ],
+        "combatReports": [
+          {
+            "id": 20,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "1328bdc5b8307ad5ec3fe7950e7cb683aed69f4d1aa1e1848a8f4fd2b4fb8671"
+          },
+          {
+            "id": 19,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "081e8665346127f1a88328dce7e4fc864d55c1ea220687b7925b7e3433ab42b5"
+          },
+          {
+            "id": 18,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "f0a4de48fdde4a48d1b4715806610d656b6ad12044a3f0ad642c6ac131f9e443"
+          },
+          {
+            "id": 17,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "95ab53d0719e61c52949e476ba163918b8182e2257f8859a65f0dec7da91f990"
+          },
+          {
+            "id": 16,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "a3b2d589abb47e3d593a18f1d824ecf73c93fd742dd6e375153d67fcec19b4b1"
+          },
+          {
+            "id": 15,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "ce5174e3d9ff728c7eb61edaaa77d911ee34932cea0de47bd2ba3cc1dd58937d"
+          },
+          {
+            "id": 14,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "2b2e729c80179d369e8b604205b370691eef83e423be54d53ebeb496f373ce81"
+          },
+          {
+            "id": 13,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "28b1689cd846eec1c1a2cdc7798a89a80a612f6478cb2c9ba0a19abf1947fe86"
+          },
+          {
+            "id": 12,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "cb14195bd76f154c1c36643ada041696300b0b4a7709e16071713e8b06032483"
+          },
+          {
+            "id": 11,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "e95298747e23bac7d781a5016a3b28e59b21e29f708088fd2ad0a060b5f0ea52"
+          },
+          {
+            "id": 10,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "1bcdad7533f79854475c32d1565d9ad89d1914515a243b0deec0453f39ed85ad"
+          },
+          {
+            "id": 9,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "7c63bdaf136ef925c97b235485016bbcdf1901ad043dc0de088290129d3a2c71"
+          },
+          {
+            "id": 8,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "bd44d046202b8829409adfdc5b2ea693532ed1a92f678d633ebc8cef0a0ff215"
+          },
+          {
+            "id": 7,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "dfdca543b00d712c8a81109e762edbb3a739a891fdd94d10677df1e99c8e1677"
+          },
+          {
+            "id": 6,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "b98744fe838477b897f881848e99a423abd7a0c8925f9364e83e06f8a16f55d6"
+          },
+          {
+            "id": 5,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "dcda3cbddac5af1479a7ee5dc78c8f015eb060a207a420b7b6f5196f9bff3169"
+          },
+          {
+            "id": 4,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "aad8789ca7db8beeaaa23ed3d02a88c08091bfa9208ec03fb51de66c13f8f3ab"
+          },
+          {
+            "id": 3,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "c0c973abf68245960edf63d2a39005b172bb827fc62526df51d1db7a3be193e8"
+          },
+          {
+            "id": 2,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "8d64ce72898c921b05860d903ec7d3bda547c6dc2731d4b0b3b64242911a4233"
+          },
+          {
+            "id": 1,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "65dd563707c331f7eadd205ca18cb509ab8de6f6ed4e4d9a398a7dd30db03a77"
+          }
+        ],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [
+          {
+            "id": "peace-1",
+            "kind": "(kindless legacy peace)",
+            "status": "accepted",
+            "credits": 60
+          },
+          {
+            "id": "peace-2",
+            "kind": "(kindless legacy peace)",
+            "status": "expired",
+            "credits": 60
+          },
+          {
+            "id": "peace-3",
+            "kind": "(kindless legacy peace)",
+            "status": "accepted",
+            "credits": 60
+          }
+        ],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 10,
+      "finishTurn": 65,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 11,
+      "retainedOldReportChecks": 200,
+      "finalCanonicalSha256": "12c6742208ad1a4711f6b225ea9441fff8cf6cdd9da9cb455be18771e4c9f576",
+      "trajectorySha256": "a8e6b3f1eca62677d336094091865804c8590ef92ee5998677e5286c1e51e73c",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/actual-iron-55.json"
+    },
+    {
+      "id": "actual-iron-57",
+      "input": "docs/military-playtest/replay/actual-exports/cycle57.json",
+      "inputSha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "seed": "IRON-COVENANT-10",
+      "startTurn": 57,
+      "initialWinner": "player",
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "publicAffairs",
+          "diplomacyOffers",
+          "nextDiplomacyOfferId"
+        ],
+        "absentOptionalTopLevel": [],
+        "queues": [
+          {
+            "systemId": "s6",
+            "owner": "choir",
+            "queue": {
+              "itemId": "bastion",
+              "kind": "building",
+              "progress": 32,
+              "work": 50,
+              "cost": {
+                "credits": 45,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 22,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s17",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 94,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 12,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s29",
+            "owner": "khar",
+            "queue": {
+              "itemId": "shipyard",
+              "kind": "building",
+              "progress": 26,
+              "work": 32,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s32",
+            "owner": "khar",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 12,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          }
+        ],
+        "combatReports": [
+          {
+            "id": 24,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "3af87c54011040d8455879e5ca811e13170138bca2d763bc0bd237f730592d17"
+          },
+          {
+            "id": 23,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "d8d09fa7597c034d676150790bcc83cbf2847a57e671620087e3698a6055448f"
+          },
+          {
+            "id": 22,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "fdc0e353bef5aff71a838bcc275cacc42cf9e908f8db15974c5e74f12250cb46"
+          },
+          {
+            "id": 21,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "5524007a40ed869a7e67950dab4601a45545e370b64f01671b4b60e0002d4830"
+          },
+          {
+            "id": 20,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "1328bdc5b8307ad5ec3fe7950e7cb683aed69f4d1aa1e1848a8f4fd2b4fb8671"
+          },
+          {
+            "id": 19,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "081e8665346127f1a88328dce7e4fc864d55c1ea220687b7925b7e3433ab42b5"
+          },
+          {
+            "id": 18,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "f0a4de48fdde4a48d1b4715806610d656b6ad12044a3f0ad642c6ac131f9e443"
+          },
+          {
+            "id": 17,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "95ab53d0719e61c52949e476ba163918b8182e2257f8859a65f0dec7da91f990"
+          },
+          {
+            "id": 16,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "a3b2d589abb47e3d593a18f1d824ecf73c93fd742dd6e375153d67fcec19b4b1"
+          },
+          {
+            "id": 15,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "ce5174e3d9ff728c7eb61edaaa77d911ee34932cea0de47bd2ba3cc1dd58937d"
+          },
+          {
+            "id": 14,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "2b2e729c80179d369e8b604205b370691eef83e423be54d53ebeb496f373ce81"
+          },
+          {
+            "id": 13,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "28b1689cd846eec1c1a2cdc7798a89a80a612f6478cb2c9ba0a19abf1947fe86"
+          },
+          {
+            "id": 12,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "cb14195bd76f154c1c36643ada041696300b0b4a7709e16071713e8b06032483"
+          },
+          {
+            "id": 11,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "e95298747e23bac7d781a5016a3b28e59b21e29f708088fd2ad0a060b5f0ea52"
+          },
+          {
+            "id": 10,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "1bcdad7533f79854475c32d1565d9ad89d1914515a243b0deec0453f39ed85ad"
+          },
+          {
+            "id": 9,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "7c63bdaf136ef925c97b235485016bbcdf1901ad043dc0de088290129d3a2c71"
+          },
+          {
+            "id": 8,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "bd44d046202b8829409adfdc5b2ea693532ed1a92f678d633ebc8cef0a0ff215"
+          },
+          {
+            "id": 7,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "dfdca543b00d712c8a81109e762edbb3a739a891fdd94d10677df1e99c8e1677"
+          },
+          {
+            "id": 6,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "b98744fe838477b897f881848e99a423abd7a0c8925f9364e83e06f8a16f55d6"
+          },
+          {
+            "id": 5,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "dcda3cbddac5af1479a7ee5dc78c8f015eb060a207a420b7b6f5196f9bff3169"
+          },
+          {
+            "id": 4,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "aad8789ca7db8beeaaa23ed3d02a88c08091bfa9208ec03fb51de66c13f8f3ab"
+          },
+          {
+            "id": 3,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "c0c973abf68245960edf63d2a39005b172bb827fc62526df51d1db7a3be193e8"
+          },
+          {
+            "id": 2,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "8d64ce72898c921b05860d903ec7d3bda547c6dc2731d4b0b3b64242911a4233"
+          },
+          {
+            "id": 1,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "65dd563707c331f7eadd205ca18cb509ab8de6f6ed4e4d9a398a7dd30db03a77"
+          }
+        ],
+        "routes": [],
+        "hold": 0,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [
+          {
+            "id": "peace-1",
+            "kind": "(kindless legacy peace)",
+            "status": "accepted",
+            "credits": 60
+          },
+          {
+            "id": "peace-2",
+            "kind": "(kindless legacy peace)",
+            "status": "expired",
+            "credits": 60
+          },
+          {
+            "id": "peace-3",
+            "kind": "(kindless legacy peace)",
+            "status": "accepted",
+            "credits": 60
+          }
+        ],
+        "tradeCooldownRelations": 0,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "completedImportRemainsTerminal": true,
+      "steps": 0,
+      "finishTurn": 57,
+      "winner": "player",
+      "victoryType": "Domination",
+      "queueReceiptChecks": 0,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "b8db525d48b552e41f9c1dbbc62f5da6c637b746f77d4959632fa00d51c20014",
+      "trajectorySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "simulationOnly": false
+    },
+    {
+      "id": "actual-watch-40",
+      "input": "docs/watch-playtest/checkpoints/cycle40.json",
+      "inputSha256": "bc336a1f56fa49d494914eb249756af9dc3f41a4f260c279064ab8e62393f715",
+      "seed": "ASTERION-WATCH-14",
+      "startTurn": 40,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "diplomacyOffers",
+          "nextDiplomacyOfferId",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [],
+        "queues": [
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 24,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 36,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s6",
+            "owner": "choir",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 108,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 8,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          },
+          {
+            "systemId": "s16",
+            "owner": "khar",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 24,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 44,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s30",
+            "owner": "choir",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 12,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s34",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 49,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s36",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 7,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 4,
+        "defenseLead": 3,
+        "heritageFleets": 1,
+        "expeditions": 0,
+        "diplomacyOffers": [
+          {
+            "id": "trade-1",
+            "kind": "trade",
+            "status": "accepted",
+            "credits": 30
+          },
+          {
+            "id": "trade-2",
+            "kind": "trade",
+            "status": "declined",
+            "credits": 30
+          },
+          {
+            "id": "trade-3",
+            "kind": "trade",
+            "status": "accepted",
+            "credits": 30
+          }
+        ],
+        "tradeCooldownRelations": 1,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 32,
+      "finishTurn": 72,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 32,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "33db613a1ef85aabbeac6c6e2db29d9ffcb5fc8a4b256cbb09b6c9b2300f3f1b",
+      "trajectorySha256": "024a1bf3a220bb183e20ccb8f792384c1c65dfd6c2dc1a44bc24205e7f91e710",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/actual-watch-40.json"
+    },
+    {
+      "id": "actual-watch-51",
+      "input": "docs/watch-playtest/checkpoints/cycle51.json",
+      "inputSha256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698",
+      "seed": "ASTERION-WATCH-14",
+      "startTurn": 51,
+      "initialWinner": null,
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "diplomacyOffers",
+          "nextDiplomacyOfferId",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [],
+        "queues": [
+          {
+            "systemId": "s2",
+            "owner": "khar",
+            "queue": {
+              "itemId": "frigate",
+              "kind": "ship",
+              "progress": 18,
+              "work": 26,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s3",
+            "owner": "choir",
+            "queue": {
+              "itemId": "colony",
+              "kind": "ship",
+              "progress": 24,
+              "work": 38,
+              "cost": {
+                "credits": 45,
+                "minerals": 55
+              }
+            }
+          },
+          {
+            "systemId": "s8",
+            "owner": "khar",
+            "queue": {
+              "itemId": "lab",
+              "kind": "building",
+              "progress": 10,
+              "work": 30,
+              "cost": {
+                "credits": 30,
+                "minerals": 30
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 22,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s11",
+            "owner": "choir",
+            "queue": {
+              "itemId": "civic",
+              "kind": "charter",
+              "charterType": "civic",
+              "charterLevel": 1,
+              "progress": 26,
+              "work": 60,
+              "cost": {
+                "credits": 120,
+                "minerals": 60
+              }
+            }
+          },
+          {
+            "systemId": "s20",
+            "owner": "player",
+            "queue": {
+              "itemId": "shipyard",
+              "kind": "building",
+              "progress": 21,
+              "work": 32,
+              "cost": {
+                "credits": 25,
+                "minerals": 35
+              },
+              "replaceBuildingId": "lab"
+            }
+          }
+        ],
+        "combatReports": [],
+        "routes": [],
+        "hold": 4,
+        "defenseLead": 1,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [
+          {
+            "id": "trade-1",
+            "kind": "trade",
+            "status": "accepted",
+            "credits": 30
+          },
+          {
+            "id": "trade-2",
+            "kind": "trade",
+            "status": "declined",
+            "credits": 30
+          },
+          {
+            "id": "trade-3",
+            "kind": "trade",
+            "status": "accepted",
+            "credits": 30
+          }
+        ],
+        "tradeCooldownRelations": 2,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "steps": 9,
+      "finishTurn": 60,
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 7,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "6cbcf63e2c279d6c7bb3e8a542bfdffc7f3b11ed7b0eeaefd33f48953e83efd9",
+      "trajectorySha256": "cb5d6cb79acf7e366e5bfde6a1669b8ac6358f58e6d721248f5b866be8e47c2c",
+      "simulationOnly": true,
+      "simulationFinal": "simulation-finals/actual-watch-51.json"
+    },
+    {
+      "id": "actual-watch-60",
+      "input": "docs/watch-playtest/checkpoints/cycle60.json",
+      "inputSha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "seed": "ASTERION-WATCH-14",
+      "startTurn": 60,
+      "initialWinner": "player",
+      "status": "pass",
+      "features": {
+        "presentTopLevelFields": [
+          "version",
+          "seed",
+          "rng",
+          "turn",
+          "nextFleetId",
+          "nextLogId",
+          "nextCombatReportId",
+          "systems",
+          "lanes",
+          "factions",
+          "fleets",
+          "log",
+          "combatReports",
+          "lastBriefing",
+          "winner",
+          "victoryType",
+          "diplomacyUpdatedTurn",
+          "discoveriesUpdatedTurn",
+          "alignmentUpdatedTurn",
+          "diplomacyOffers",
+          "nextDiplomacyOfferId",
+          "publicAffairs"
+        ],
+        "absentOptionalTopLevel": [],
+        "queues": [
+          {
+            "systemId": "s8",
+            "owner": "khar",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 31,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s9",
+            "owner": "choir",
+            "queue": {
+              "itemId": "extraction",
+              "kind": "charter",
+              "charterType": "extraction",
+              "charterLevel": 2,
+              "progress": 58,
+              "work": 100,
+              "cost": {
+                "credits": 300,
+                "minerals": 100
+              }
+            }
+          },
+          {
+            "systemId": "s11",
+            "owner": "choir",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 75,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s13",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 22,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s18",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 132,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s22",
+            "owner": "choir",
+            "queue": {
+              "itemId": "factory",
+              "kind": "building",
+              "progress": 10,
+              "work": 40,
+              "cost": {
+                "credits": 35,
+                "minerals": 45
+              }
+            }
+          },
+          {
+            "systemId": "s33",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "habitat",
+              "kind": "building",
+              "progress": 8,
+              "work": 36,
+              "cost": {
+                "credits": 40,
+                "minerals": 35
+              }
+            }
+          },
+          {
+            "systemId": "s34",
+            "owner": "veyr",
+            "queue": {
+              "itemId": "beacon",
+              "kind": "building",
+              "progress": 48,
+              "work": 140,
+              "cost": {
+                "credits": 180,
+                "minerals": 180
+              }
+            }
+          },
+          {
+            "systemId": "s40",
+            "owner": "choir",
+            "queue": {
+              "itemId": "mine",
+              "kind": "building",
+              "progress": 5,
+              "work": 24,
+              "cost": {
+                "credits": 20,
+                "minerals": 25
+              }
+            }
+          }
+        ],
+        "combatReports": [
+          {
+            "id": 4,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "73368643c296003bb09faa3b8b30ad4de8b5d92d578c122e6aab73e023423024"
+          },
+          {
+            "id": 3,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "5e45012313ed87fa76e808e4519e59358023c112e643dbe471c6e798b9813514"
+          },
+          {
+            "id": 2,
+            "kind": "fleet",
+            "hasRounds": false,
+            "sha256": "5e9f0d669731d9dd5f6e9e2d685f50be29fdd0c1b50634559cc313d440443d73"
+          },
+          {
+            "id": 1,
+            "kind": "invasion",
+            "hasRounds": false,
+            "sha256": "f8e57cf26e691c3166f89206c8c2bc8d61d0bd92a099da3c8ec0be2ce5a5c86d"
+          }
+        ],
+        "routes": [],
+        "hold": 5,
+        "defenseLead": 0,
+        "heritageFleets": 0,
+        "expeditions": 0,
+        "diplomacyOffers": [
+          {
+            "id": "trade-1",
+            "kind": "trade",
+            "status": "accepted",
+            "credits": 30
+          },
+          {
+            "id": "trade-2",
+            "kind": "trade",
+            "status": "declined",
+            "credits": 30
+          },
+          {
+            "id": "trade-3",
+            "kind": "trade",
+            "status": "accepted",
+            "credits": 30
+          }
+        ],
+        "tradeCooldownRelations": 2,
+        "overCapacity": 0
+      },
+      "importPreservedExactly": true,
+      "publicBeaconRefreshChangesImport": false,
+      "completedImportRemainsTerminal": true,
+      "steps": 0,
+      "finishTurn": 60,
+      "winner": "player",
+      "victoryType": "Transcendence",
+      "queueReceiptChecks": 0,
+      "retainedOldReportChecks": 0,
+      "finalCanonicalSha256": "d9cdd751b9a6af62aca35ed7fc631d4967679339e13a230add40ff8d58f0fda9",
+      "trajectorySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "simulationOnly": false
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "inputs": 19,
+    "uniqueInputHashes": 16,
+    "accepted": 19,
+    "unfinishedImports": 16,
+    "finishedImports": 3,
+    "continuationSteps": 490,
+    "reloadChecks": 490,
+    "stateChecks": 999,
+    "retainedQueueReceiptChecks": 218,
+    "retainedReportChecks": 200,
+    "finishedAtomicChecks": 22
+  },
+  "originalInputsUnchanged": true
+}

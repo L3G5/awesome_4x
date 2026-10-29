@@ -1,0 +1,448 @@
+{
+  "merges": [
+    {
+      "snapshot": 41,
+      "turn": 53,
+      "from": "s13",
+      "shipsBefore": 2,
+      "shipsAfter": 3,
+      "movesBefore": 2,
+      "movesAfter": 2,
+      "arrivalCyclesBefore": 3,
+      "arrivalCyclesAfter": 3,
+      "ordersBefore": 17,
+      "ordersAfter": 14,
+      "positionAfter": "s10",
+      "hiddenNoninterference": {
+        "changed": 4,
+        "unchangedRouteAndETA": true
+      }
+    },
+    {
+      "snapshot": 99,
+      "turn": 56,
+      "from": "s23",
+      "shipsBefore": 3,
+      "shipsAfter": 4,
+      "movesBefore": 1,
+      "movesAfter": 1,
+      "arrivalCyclesBefore": 2,
+      "arrivalCyclesAfter": 2,
+      "ordersBefore": 17,
+      "ordersAfter": 15,
+      "positionAfter": "s15",
+      "hiddenNoninterference": {
+        "changed": 4,
+        "unchangedRouteAndETA": true
+      }
+    }
+  ],
+  "productionContext": [
+    {
+      "snapshotId": 38,
+      "turn": 53,
+      "factionId": "veyr",
+      "publicRemaining": 7,
+      "resources": {
+        "credits": 3249,
+        "minerals": 173,
+        "orders": 18
+      },
+      "shipyards": [
+        {
+          "systemId": "s1",
+          "name": "Veyr Prime",
+          "production": 29,
+          "queue": {
+            "itemId": "beacon",
+            "kind": "building",
+            "progress": 58,
+            "work": 140,
+            "cost": {
+              "credits": 180,
+              "minerals": 180
+            }
+          },
+          "frigate": {
+            "id": "frigate",
+            "name": "Vanguard",
+            "role": "Frigate",
+            "icon": "▴",
+            "cost": {
+              "credits": 25,
+              "minerals": 32
+            },
+            "work": 26,
+            "requires": [],
+            "hp": 34,
+            "attack": 12,
+            "moves": 1,
+            "upkeep": 2,
+            "description": "Versatile escort and invasion vessel. Combine frigates into task forces.",
+            "kind": "ship",
+            "replaceBuildingId": null,
+            "orderEffect": {
+              "current": 18,
+              "projected": 18,
+              "nominal": 0,
+              "change": 0,
+              "limit": 18
+            },
+            "enabled": false,
+            "reason": "Construction already in progress",
+            "turns": 1
+          },
+          "routesToPlayerBeacons": []
+        }
+      ]
+    },
+    {
+      "snapshotId": 80,
+      "turn": 55,
+      "factionId": "veyr",
+      "publicRemaining": 5,
+      "resources": {
+        "credits": 3517,
+        "minerals": 128,
+        "orders": 18
+      },
+      "shipyards": [
+        {
+          "systemId": "s1",
+          "name": "Veyr Prime",
+          "production": 29,
+          "queue": {
+            "itemId": "beacon",
+            "kind": "building",
+            "progress": 116,
+            "work": 140,
+            "cost": {
+              "credits": 180,
+              "minerals": 180
+            }
+          },
+          "frigate": {
+            "id": "frigate",
+            "name": "Vanguard",
+            "role": "Frigate",
+            "icon": "▴",
+            "cost": {
+              "credits": 25,
+              "minerals": 32
+            },
+            "work": 26,
+            "requires": [],
+            "hp": 34,
+            "attack": 12,
+            "moves": 1,
+            "upkeep": 2,
+            "description": "Versatile escort and invasion vessel. Combine frigates into task forces.",
+            "kind": "ship",
+            "replaceBuildingId": null,
+            "orderEffect": {
+              "current": 18,
+              "projected": 18,
+              "nominal": 0,
+              "change": 0,
+              "limit": 18
+            },
+            "enabled": false,
+            "reason": "Construction already in progress",
+            "turns": 1
+          },
+          "routesToPlayerBeacons": []
+        }
+      ]
+    },
+    {
+      "snapshotId": 96,
+      "turn": 56,
+      "factionId": "veyr",
+      "publicRemaining": 4,
+      "resources": {
+        "credits": 3746,
+        "minerals": 196,
+        "orders": 18
+      },
+      "shipyards": [
+        {
+          "systemId": "s1",
+          "name": "Veyr Prime",
+          "production": 29,
+          "queue": null,
+          "frigate": {
+            "id": "frigate",
+            "name": "Vanguard",
+            "role": "Frigate",
+            "icon": "▴",
+            "cost": {
+              "credits": 25,
+              "minerals": 32
+            },
+            "work": 26,
+            "requires": [],
+            "hp": 34,
+            "attack": 12,
+            "moves": 1,
+            "upkeep": 2,
+            "description": "Versatile escort and invasion vessel. Combine frigates into task forces.",
+            "kind": "ship",
+            "replaceBuildingId": null,
+            "orderEffect": {
+              "current": 18,
+              "projected": 18,
+              "nominal": 0,
+              "change": 0,
+              "limit": 18
+            },
+            "enabled": true,
+            "reason": "",
+            "turns": 1
+          },
+          "routesToPlayerBeacons": []
+        }
+      ]
+    },
+    {
+      "snapshotId": 105,
+      "turn": 56,
+      "factionId": "choir",
+      "publicRemaining": 4,
+      "resources": {
+        "credits": 2159,
+        "minerals": 746,
+        "orders": 18
+      },
+      "shipyards": [
+        {
+          "systemId": "s3",
+          "name": "Lumen",
+          "production": 12,
+          "queue": {
+            "itemId": "colony",
+            "kind": "ship",
+            "progress": 36,
+            "work": 38,
+            "cost": {
+              "credits": 45,
+              "minerals": 55
+            }
+          },
+          "frigate": {
+            "id": "frigate",
+            "name": "Vanguard",
+            "role": "Frigate",
+            "icon": "▴",
+            "cost": {
+              "credits": 25,
+              "minerals": 35
+            },
+            "work": 26,
+            "requires": [],
+            "hp": 34,
+            "attack": 12,
+            "moves": 1,
+            "upkeep": 2,
+            "description": "Versatile escort and invasion vessel. Combine frigates into task forces.",
+            "kind": "ship",
+            "replaceBuildingId": null,
+            "orderEffect": {
+              "current": 18,
+              "projected": 18,
+              "nominal": 0,
+              "change": 0,
+              "limit": 18
+            },
+            "enabled": false,
+            "reason": "Construction already in progress",
+            "turns": 3
+          },
+          "routesToPlayerBeacons": [
+            {
+              "fleetId": "f12",
+              "paths": [
+                {
+                  "id": "s0",
+                  "route": {
+                    "path": [
+                      "s3",
+                      "s30",
+                      "s17",
+                      "s9",
+                      "s4",
+                      "s12",
+                      "s20",
+                      "s0"
+                    ],
+                    "cost": 14.5
+                  }
+                },
+                {
+                  "id": "s20",
+                  "route": {
+                    "path": [
+                      "s3",
+                      "s30",
+                      "s17",
+                      "s9",
+                      "s4",
+                      "s12",
+                      "s20"
+                    ],
+                    "cost": 11
+                  }
+                },
+                {
+                  "id": "s28",
+                  "route": {
+                    "path": [
+                      "s3",
+                      "s30",
+                      "s17",
+                      "s9",
+                      "s4",
+                      "s12",
+                      "s7",
+                      "s15",
+                      "s28"
+                    ],
+                    "cost": 15.5
+                  }
+                },
+                {
+                  "id": "s30",
+                  "route": {
+                    "path": [
+                      "s3",
+                      "s30"
+                    ],
+                    "cost": 3.5
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshotId": 108,
+      "turn": 57,
+      "factionId": "veyr",
+      "publicRemaining": 3,
+      "resources": {
+        "credits": 3953,
+        "minerals": 232,
+        "orders": 18
+      },
+      "shipyards": [
+        {
+          "systemId": "s1",
+          "name": "Veyr Prime",
+          "production": 29,
+          "queue": null,
+          "frigate": {
+            "id": "frigate",
+            "name": "Vanguard",
+            "role": "Frigate",
+            "icon": "▴",
+            "cost": {
+              "credits": 25,
+              "minerals": 32
+            },
+            "work": 26,
+            "requires": [],
+            "hp": 34,
+            "attack": 12,
+            "moves": 1,
+            "upkeep": 2,
+            "description": "Versatile escort and invasion vessel. Combine frigates into task forces.",
+            "kind": "ship",
+            "replaceBuildingId": null,
+            "orderEffect": {
+              "current": 18,
+              "projected": 18,
+              "nominal": 0,
+              "change": 0,
+              "limit": 18
+            },
+            "enabled": true,
+            "reason": "",
+            "turns": 1
+          },
+          "routesToPlayerBeacons": [
+            {
+              "fleetId": "f72",
+              "paths": [
+                {
+                  "id": "s0",
+                  "route": {
+                    "path": [
+                      "s1",
+                      "s18",
+                      "s10",
+                      "s23",
+                      "s15",
+                      "s28",
+                      "s0"
+                    ],
+                    "cost": 11
+                  }
+                },
+                {
+                  "id": "s20",
+                  "route": {
+                    "path": [
+                      "s1",
+                      "s18",
+                      "s10",
+                      "s23",
+                      "s15",
+                      "s7",
+                      "s12",
+                      "s20"
+                    ],
+                    "cost": 9.5
+                  }
+                },
+                {
+                  "id": "s28",
+                  "route": {
+                    "path": [
+                      "s1",
+                      "s18",
+                      "s10",
+                      "s23",
+                      "s15",
+                      "s28"
+                    ],
+                    "cost": 7.5
+                  }
+                },
+                {
+                  "id": "s30",
+                  "route": {
+                    "path": [
+                      "s1",
+                      "s18",
+                      "s10",
+                      "s23",
+                      "s15",
+                      "s7",
+                      "s12",
+                      "s4",
+                      "s9",
+                      "s17",
+                      "s30"
+                    ],
+                    "cost": 12.5
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

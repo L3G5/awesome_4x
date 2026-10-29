@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-10-29T01:23:05.479Z",
+  "scope": "Independent review of comparison methodology/results. Reviewer authored the core policy and does not claim independence for that implementation.",
+  "sourceEngine": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "sourceBaseline": "e749df166e469bfae7fcbe971f9c50b5f09b776a",
+  "reviewedAuthorManifestSha256": "5588f71ea10530f9a816105a73347538a2afc8c90952cbb7334663deed519aed",
+  "files": [
+    {
+      "path": "artifact-review.json",
+      "bytes": 1715,
+      "sha256": "139466fe7a8e0698cc27dd280d3ea94e1c48003c2782bff2720b40253b32431e"
+    },
+    {
+      "path": "audit-results.json",
+      "bytes": 8798,
+      "sha256": "91b6f1919959a0df9d028a57d7694be8a8bebdf96b9aed7ba1adb95f405d3391"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 13467,
+      "sha256": "9ff0c5d77978130e8f6a53779279e9919086ff4ed05b73a63cd35fa104c7661c"
+    },
+    {
+      "path": "finalize.mjs",
+      "bytes": 8496,
+      "sha256": "ba45dc373ba5b6b45a077f5e01dd6156bf1ca46f281ff35dbfcb372b824b3b53"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6633,
+      "sha256": "01768085c9a863d90d1393b105144c427a74219ab586fa356a0a9905c2873a69"
+    },
+    {
+      "path": "layout-check.json",
+      "bytes": 251,
+      "sha256": "ec90efbbb8bb7da3acad111d4fa2d7e4ce29931083be9a7717c1220f6a2cf491"
+    },
+    {
+      "path": "review-1280.png",
+      "bytes": 388998,
+      "sha256": "801acd7f7e11470395b3819627fa11797c7d1fc3ce7fce7eb02501581c0a7017"
+    },
+    {
+      "path": "review-390.png",
+      "bytes": 353276,
+      "sha256": "ceeea7e03ddbef0e2c6e382cbe6e6e4aecc368f85d379d9c7c95eb10cb4fc125"
+    }
+  ]
+}

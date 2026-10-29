@@ -1,0 +1,277 @@
+{
+  "generatedAt": "2026-10-29T01:20:43.089Z",
+  "runtime": "v22.23.1",
+  "scope": "Independent review of comparison methodology/results. Reviewer authored the core policy and does not claim independence for that implementation.",
+  "engine": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "baseline": "e749df166e469bfae7fcbe971f9c50b5f09b776a",
+  "fixedPlayer": "e749df166e469bfae7fcbe971f9c50b5f09b776a",
+  "runnerSha256": "e1b27fd81c6cfc7d14343c862b3501c2945070a8d8dd3dbe32c4b292c8dfeab0",
+  "verified": {
+    "graphs": 4,
+    "modulesPerGraph": 15,
+    "sourceFingerprints": 60,
+    "patchOperations": 20,
+    "rawDifferingFiles": [
+      "src/ai.js"
+    ],
+    "measuredConfigurations": 32,
+    "seedPolicyPairs": 16,
+    "reportedRawValidationReplays": 32,
+    "independentTargetedRawExecutions": 2,
+    "reportedCompleteRoundEqualityChecks": 2250,
+    "reportedReloadChecks": 96,
+    "acceptedEvents": 3
+  },
+  "checks": {
+    "measuredConfigurations": 32,
+    "rawValidationReplays": 32,
+    "measuredCompletedCycles": 2250,
+    "measuredStateChecks": 2282,
+    "rawStateChecks": 2282,
+    "completeRoundEqualityChecks": 2250,
+    "finalStateEqualityChecks": 32,
+    "jsonReloadNextRoundChecks": 96,
+    "invalidStates": 0,
+    "negativeOrNonfiniteBalances": 0,
+    "unfinishedCampaigns": 0
+  },
+  "summary": {
+    "before": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 70,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 1,
+          "khar": 4,
+          "choir": 3
+        },
+        "metrics": {
+          "acceptedPreflights": 0,
+          "expeditionAbsorptions": 0,
+          "absorptionOrders": 0,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 163,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 0,
+          "expeditionDepartures": 106,
+          "successfulExpeditionJumps": 98,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 15,
+          "uniqueExpeditionsArrived": 15,
+          "reinforcedArrivals": 0,
+          "playerExpeditionDepartures": 0,
+          "fleetDuels": 90,
+          "expeditionFleetDuels": 25,
+          "reinforcedFleetDuels": 0,
+          "blockadeFactionCycles": 32,
+          "blockadeProgressDeclines": 32,
+          "blockadeInterruptions": 13,
+          "reinforcedBlockadeFactionCycles": 0
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 2,
+          "veyr": 3,
+          "khar": 1,
+          "choir": 2
+        },
+        "metrics": {
+          "acceptedPreflights": 0,
+          "expeditionAbsorptions": 0,
+          "absorptionOrders": 0,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 148,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 46,
+          "expeditionDepartures": 95,
+          "successfulExpeditionJumps": 86,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 11,
+          "uniqueExpeditionsArrived": 11,
+          "reinforcedArrivals": 0,
+          "playerExpeditionDepartures": 31,
+          "fleetDuels": 95,
+          "expeditionFleetDuels": 40,
+          "reinforcedFleetDuels": 0,
+          "blockadeFactionCycles": 29,
+          "blockadeProgressDeclines": 26,
+          "blockadeInterruptions": 14,
+          "reinforcedBlockadeFactionCycles": 0
+        }
+      }
+    },
+    "after": {
+      "passive": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 66,
+          "median": 71,
+          "max": 85
+        },
+        "winners": {
+          "player": 0,
+          "veyr": 2,
+          "khar": 4,
+          "choir": 2
+        },
+        "metrics": {
+          "acceptedPreflights": 1,
+          "expeditionAbsorptions": 1,
+          "absorptionOrders": 1,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 173,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 0,
+          "expeditionDepartures": 120,
+          "successfulExpeditionJumps": 110,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 18,
+          "uniqueExpeditionsArrived": 18,
+          "reinforcedArrivals": 2,
+          "playerExpeditionDepartures": 0,
+          "fleetDuels": 96,
+          "expeditionFleetDuels": 31,
+          "reinforcedFleetDuels": 4,
+          "blockadeFactionCycles": 41,
+          "blockadeProgressDeclines": 39,
+          "blockadeInterruptions": 16,
+          "reinforcedBlockadeFactionCycles": 8
+        }
+      },
+      "balanced": {
+        "campaigns": 8,
+        "finish": {
+          "count": 8,
+          "min": 63,
+          "median": 71.5,
+          "max": 73
+        },
+        "winners": {
+          "player": 2,
+          "veyr": 3,
+          "khar": 1,
+          "choir": 2
+        },
+        "metrics": {
+          "acceptedPreflights": 2,
+          "expeditionAbsorptions": 2,
+          "absorptionOrders": 2,
+          "failedAbsorptions": 0,
+          "movementRegressions": 0,
+          "etaRegressions": 0,
+          "ordinaryMerges": 146,
+          "failedOrdinaryMerges": 0,
+          "playerOrdinaryMerges": 46,
+          "expeditionDepartures": 95,
+          "successfulExpeditionJumps": 86,
+          "failedExpeditionMoves": 0,
+          "reachedParticipatingSites": 11,
+          "uniqueExpeditionsArrived": 11,
+          "reinforcedArrivals": 0,
+          "playerExpeditionDepartures": 31,
+          "fleetDuels": 95,
+          "expeditionFleetDuels": 40,
+          "reinforcedFleetDuels": 4,
+          "blockadeFactionCycles": 29,
+          "blockadeProgressDeclines": 26,
+          "blockadeInterruptions": 14,
+          "reinforcedBlockadeFactionCycles": 0
+        }
+      }
+    }
+  },
+  "changedPairs": [
+    {
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "beforeWinner": "choir",
+      "afterWinner": "veyr",
+      "beforeVictory": "Transcendence",
+      "afterVictory": "Transcendence",
+      "beforeFinish": 68,
+      "afterFinish": 78,
+      "finishDelta": 10,
+      "sameFinalState": false,
+      "absorptions": 1,
+      "beforeArrivals": 1,
+      "afterArrivals": 4,
+      "beforeBlockadeDeclines": 2,
+      "afterBlockadeDeclines": 9
+    },
+    {
+      "policy": "balanced",
+      "seed": "stage4-audit-2",
+      "beforeWinner": "player",
+      "afterWinner": "player",
+      "beforeVictory": "Transcendence",
+      "afterVictory": "Transcendence",
+      "beforeFinish": 65,
+      "afterFinish": 65,
+      "finishDelta": 0,
+      "sameFinalState": false,
+      "absorptions": 1,
+      "beforeArrivals": 2,
+      "afterArrivals": 2,
+      "beforeBlockadeDeclines": 3,
+      "afterBlockadeDeclines": 3
+    }
+  ],
+  "targeted": [
+    {
+      "variant": "before",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "winner": "choir",
+      "victoryType": "Transcendence",
+      "finishTurn": 68,
+      "rounds": 67,
+      "finalStateSha256": "c508b587bd3ed53ef64a741be6fabd34f3ccc4cad5918b6609adf55016b37016",
+      "trajectorySha256": "89f7c12c9e7a36ebf04ff183d9785a0fe2af0492188573fc2e5ae1e2ebe80dc4"
+    },
+    {
+      "variant": "after",
+      "policy": "passive",
+      "seed": "stage4-audit-2",
+      "winner": "veyr",
+      "victoryType": "Transcendence",
+      "finishTurn": 78,
+      "rounds": 77,
+      "finalStateSha256": "ff790b6594966ef27ea614354a239b811751410d130a016399f97732d924b9d9",
+      "trajectorySha256": "d4c1651536c51a6b112e131658b412d2953aeac64264280298b6599e76ed4cf0"
+    }
+  ],
+  "frozenInputs": {
+    "results.json": "b374e6aace05deb0d197c03adfb37709026a9177426154e63af2167fb1989074",
+    "instrumentation-patches.json": "c7a95582ede6a79d7350575f99242a2b7ebfa41b5c39b6b5bde59026d421da00",
+    "ai-change.diff": "6130a986f6734627e05fc3272764a9d99ed9bf0567db6b2772efc3ab30af886f",
+    "README.txt": "0f2a777a8bf91f3b7b604e23d5690f8583b41970136359fd081b6d16f626a233"
+  },
+  "conclusions": [
+    "Shared raw dependencies are pinned to fe098323; only rival AI differs.",
+    "Balanced controller source is exactly baseline e749df1 in both variants; passive gives no commands.",
+    "All aggregate sums, paired rows, absorption boundaries and reported validation denominators reconcile.",
+    "Two independent raw executions reproduce the one changed-winner pair, including every-round trajectory and complete final-state hashes.",
+    "No new measured configuration or full-cohort rerun was added."
+  ]
+}

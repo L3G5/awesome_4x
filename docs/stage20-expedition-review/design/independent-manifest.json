@@ -1,0 +1,13 @@
+{
+  "originalArtifactsVerified": 33,
+  "originalArtifactsChanged": [],
+  "currentAiSha256": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+  "proofComparison": "proof-comparison.json",
+  "source": "Original audit engine/input symlinks are read-only; scripts write only this separate directory.",
+  "curatedArtifacts": {
+    "recommendation.txt": "785f49f943885263d599632ff08aea4e83921e40ca545a902bb904cdd6235887",
+    "proof-comparison.json": "62b4badc019d81c4a1fd32c89b464984f1605d1f31dafab8ad58bac540a20210",
+    "eta-preflight-counterexample.mjs": "c2ae5eb403b039f01fa1f3d09339212b22a32fc74f75d79ddef8cc290da78554",
+    "eta-preflight-counterexample.json": "e73b52260d38562afeb6cb0db9ba98f95a315ec0ecda5a2314b558a5f46158ae"
+  }
+}

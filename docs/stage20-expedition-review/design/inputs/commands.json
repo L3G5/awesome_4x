@@ -1,0 +1,2755 @@
+[
+  {
+    "eventIndex": 12,
+    "turnBefore": 1,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "lab"
+    },
+    "uiStatus": "Research Enclave commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=lab]"
+  },
+  {
+    "eventIndex": 14,
+    "turnBefore": 1,
+    "action": {
+      "type": "research",
+      "techId": "physics"
+    },
+    "uiStatus": "Research directed toward Resonance Theory.",
+    "uiSelector": "[data-action=research][data-tech=physics]"
+  },
+  {
+    "eventIndex": 17,
+    "turnBefore": 1,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s20"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 20,
+    "turnBefore": 1,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s20",
+      "choiceId": "preserve"
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=preserve]"
+  },
+  {
+    "eventIndex": 23,
+    "turnBefore": 1,
+    "action": {
+      "type": "move",
+      "fleetId": "f2",
+      "targetId": "s20"
+    },
+    "uiStatus": "Colony Ark 2 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 25,
+    "turnBefore": 1,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f2"
+    },
+    "uiStatus": "Colony founded at Sundrift.",
+    "uiSelector": "[data-action=colonize-confirm]"
+  },
+  {
+    "eventIndex": 28,
+    "turnBefore": 1,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s12"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Eidolon.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 31,
+    "turnBefore": 1,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 33,
+    "turnBefore": 1,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 36,
+    "turnBefore": 2,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "mine"
+    },
+    "uiStatus": "Orbital Extractor commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=mine]"
+  },
+  {
+    "eventIndex": 40,
+    "turnBefore": 2,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s12",
+      "choiceId": "supplies"
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=supplies]"
+  },
+  {
+    "eventIndex": 42,
+    "turnBefore": 2,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s7"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nacre.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 44,
+    "turnBefore": 2,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kepler.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 45,
+    "turnBefore": 2,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 47,
+    "turnBefore": 3,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s28"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 49,
+    "turnBefore": 3,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 52,
+    "turnBefore": 4,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s28",
+      "choiceId": "welcome"
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=welcome]"
+  },
+  {
+    "eventIndex": 54,
+    "turnBefore": 4,
+    "action": {
+      "type": "research",
+      "techId": "logistics"
+    },
+    "uiStatus": "Research directed toward Deep-space Logistics.",
+    "uiSelector": "[data-action=research][data-tech=logistics]"
+  },
+  {
+    "eventIndex": 57,
+    "turnBefore": 4,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s41"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Asterion.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 59,
+    "turnBefore": 4,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s28"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 60,
+    "turnBefore": 4,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 64,
+    "turnBefore": 5,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    "uiStatus": "Colony Ark commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=colony]"
+  },
+  {
+    "eventIndex": 67,
+    "turnBefore": 5,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s15"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kepler.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 69,
+    "turnBefore": 5,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s23"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Tethys.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 71,
+    "turnBefore": 5,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 75,
+    "turnBefore": 6,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s10"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ashfall.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 77,
+    "turnBefore": 6,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s5"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Hesper.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 78,
+    "turnBefore": 6,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 85,
+    "turnBefore": 7,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "acceptTrade",
+      "offerId": "trade-1"
+    },
+    "uiStatus": "Trade established between Veyr Consortium and The Concord. Borders are open; existing grievances remain.",
+    "uiSelector": "[data-action=trade-response][data-stance=acceptTrade]"
+  },
+  {
+    "eventIndex": 90,
+    "turnBefore": 7,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "lab"
+    },
+    "uiStatus": "Research Enclave commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=lab]"
+  },
+  {
+    "eventIndex": 93,
+    "turnBefore": 7,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sable.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 95,
+    "turnBefore": 7,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s8"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Caldera.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 97,
+    "turnBefore": 7,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 99,
+    "turnBefore": 8,
+    "action": {
+      "type": "research",
+      "techId": "industry"
+    },
+    "uiStatus": "Research directed toward Autonomous Industry.",
+    "uiSelector": "[data-action=research][data-tech=industry]"
+  },
+  {
+    "eventIndex": 102,
+    "turnBefore": 8,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sable.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 104,
+    "turnBefore": 8,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s21"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Thalassa.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 105,
+    "turnBefore": 8,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 109,
+    "turnBefore": 9,
+    "action": {
+      "type": "move",
+      "fleetId": "f17",
+      "targetId": "s28"
+    },
+    "uiStatus": "Colony Ark 17 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 111,
+    "turnBefore": 9,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f17"
+    },
+    "uiStatus": "Colony founded at Haven.",
+    "uiSelector": "[data-action=colonize-confirm]"
+  },
+  {
+    "eventIndex": 113,
+    "turnBefore": 9,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "mine"
+    },
+    "uiStatus": "Orbital Extractor commissioned at Haven.",
+    "uiSelector": "[data-action=build][data-item=mine]"
+  },
+  {
+    "eventIndex": 118,
+    "turnBefore": 9,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s29"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Aldebaran.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 120,
+    "turnBefore": 9,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s37"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Morrow.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 121,
+    "turnBefore": 9,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 125,
+    "turnBefore": 10,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "gift"
+    },
+    "uiStatus": "The Concord sent a 35-credit gift to Khar Dominion. Trust improves; border grievances remain.",
+    "uiSelector": "[data-action=diplomacy][data-stance=gift][data-target=khar]"
+  },
+  {
+    "eventIndex": 126,
+    "turnBefore": 10,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "khar",
+      "stance": "trade"
+    },
+    "uiStatus": "Trade established between The Concord and Khar Dominion. Borders are open; existing grievances remain.",
+    "uiSelector": "[data-action=diplomacy][data-stance=trade][data-target=khar]"
+  },
+  {
+    "eventIndex": 129,
+    "turnBefore": 10,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s2"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Kharos.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 132,
+    "turnBefore": 10,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Corvus.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 134,
+    "turnBefore": 10,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 138,
+    "turnBefore": 11,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    "uiStatus": "Colony Ark commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=colony]"
+  },
+  {
+    "eventIndex": 142,
+    "turnBefore": 11,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s11"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Carina.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 144,
+    "turnBefore": 11,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s19"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Bellatrix.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 145,
+    "turnBefore": 11,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 147,
+    "turnBefore": 12,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "declineTrade",
+      "offerId": "trade-2"
+    },
+    "uiStatus": "The Concord declined The Luminous Choir\u2019s trade offer. Borders remain closed.",
+    "uiSelector": "[data-action=trade-response][data-stance=declineTrade]"
+  },
+  {
+    "eventIndex": 149,
+    "turnBefore": 12,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s40"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Terminus.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 152,
+    "turnBefore": 12,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s40",
+      "choiceId": "listen"
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=listen]"
+  },
+  {
+    "eventIndex": 154,
+    "turnBefore": 12,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s27"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Nyx.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 155,
+    "turnBefore": 12,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 165,
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s40"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Terminus.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 167,
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s19"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Bellatrix.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 168,
+    "turnBefore": 13,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 170,
+    "turnBefore": 14,
+    "action": {
+      "type": "research",
+      "techId": "computing"
+    },
+    "uiStatus": "Research directed toward Quantum Archives.",
+    "uiSelector": "[data-action=research][data-tech=computing]"
+  },
+  {
+    "eventIndex": 175,
+    "turnBefore": 14,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "factory"
+    },
+    "uiStatus": "Manufactory commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=factory]"
+  },
+  {
+    "eventIndex": 179,
+    "turnBefore": 14,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "lab"
+    },
+    "uiStatus": "Research Enclave commissioned at Haven.",
+    "uiSelector": "[data-action=build][data-item=lab]"
+  },
+  {
+    "eventIndex": 183,
+    "turnBefore": 14,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s32"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Iona.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 186,
+    "turnBefore": 14,
+    "action": {
+      "type": "anomaly",
+      "systemId": "s32",
+      "choiceId": "salvage"
+    },
+    "uiStatus": "Expedition resolved.",
+    "uiSelector": "[data-action=anomaly-choice][data-choice=salvage]"
+  },
+  {
+    "eventIndex": 188,
+    "turnBefore": 14,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s0"
+    },
+    "uiStatus": "Route plotted: 11 jumps to Solace. Continue when ready.",
+    "uiSelector": "[data-action=plan-route]"
+  },
+  {
+    "eventIndex": 189,
+    "turnBefore": 14,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 190,
+    "turnBefore": 14,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 191,
+    "turnBefore": 15,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused at Stillwater: The Last Observatory is newly surveyed.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 194,
+    "turnBefore": 15,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "factory"
+    },
+    "uiStatus": "Manufactory commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=factory]"
+  },
+  {
+    "eventIndex": 198,
+    "turnBefore": 15,
+    "action": {
+      "type": "move",
+      "fleetId": "f23",
+      "targetId": "s28"
+    },
+    "uiStatus": "Colony Ark 23 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 199,
+    "turnBefore": 15,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 201,
+    "turnBefore": 16,
+    "action": {
+      "type": "move",
+      "fleetId": "f23",
+      "targetId": "s15"
+    },
+    "uiStatus": "Colony Ark 23 arrived at Kepler.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 203,
+    "turnBefore": 16,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f23"
+    },
+    "uiStatus": "Colony founded at Kepler.",
+    "uiSelector": "[data-action=colonize-confirm]"
+  },
+  {
+    "eventIndex": 205,
+    "turnBefore": 16,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "mine"
+    },
+    "uiStatus": "Orbital Extractor commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=mine]"
+  },
+  {
+    "eventIndex": 208,
+    "turnBefore": 16,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 209,
+    "turnBefore": 16,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 210,
+    "turnBefore": 17,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 211,
+    "turnBefore": 17,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 213,
+    "turnBefore": 18,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "acceptTrade",
+      "offerId": "trade-3"
+    },
+    "uiStatus": "Trade established between The Luminous Choir and The Concord. Borders are open; existing grievances remain.",
+    "uiSelector": "[data-action=trade-response][data-stance=acceptTrade]"
+  },
+  {
+    "eventIndex": 214,
+    "turnBefore": 18,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 215,
+    "turnBefore": 18,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 216,
+    "turnBefore": 19,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 reached Solace in 2 jumps.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 220,
+    "turnBefore": 19,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 223,
+    "turnBefore": 19,
+    "action": {
+      "type": "develop",
+      "systemId": "s20",
+      "charterType": "extraction"
+    },
+    "uiStatus": "Extraction Charter I commissioned at Sundrift.",
+    "uiSelector": "[data-action=develop][data-charter=extraction]"
+  },
+  {
+    "eventIndex": 227,
+    "turnBefore": 19,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "factory"
+    },
+    "uiStatus": "Manufactory commissioned at Haven.",
+    "uiSelector": "[data-action=build][data-item=factory]"
+  },
+  {
+    "eventIndex": 229,
+    "turnBefore": 19,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 234,
+    "turnBefore": 20,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s33"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Halcyon.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 236,
+    "turnBefore": 20,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s20"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 237,
+    "turnBefore": 20,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 239,
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s12"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Eidolon.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 241,
+    "turnBefore": 21,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s4"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Meridian.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 244,
+    "turnBefore": 21,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f27"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f27]"
+  },
+  {
+    "eventIndex": 247,
+    "turnBefore": 21,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 251,
+    "turnBefore": 21,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "lab"
+    },
+    "uiStatus": "Research Enclave commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=lab]"
+  },
+  {
+    "eventIndex": 252,
+    "turnBefore": 21,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 256,
+    "turnBefore": 22,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s9"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Velorum.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 258,
+    "turnBefore": 22,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s17"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Orison.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 259,
+    "turnBefore": 22,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 261,
+    "turnBefore": 23,
+    "action": {
+      "type": "research",
+      "techId": "ecology"
+    },
+    "uiStatus": "Research directed toward Adaptive Biospheres.",
+    "uiSelector": "[data-action=research][data-tech=ecology]"
+  },
+  {
+    "eventIndex": 265,
+    "turnBefore": 23,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f30"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f30]"
+  },
+  {
+    "eventIndex": 267,
+    "turnBefore": 23,
+    "action": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "uiStatus": "Forge Charter I commissioned at Solace.",
+    "uiSelector": "[data-action=develop][data-charter=forge]"
+  },
+  {
+    "eventIndex": 271,
+    "turnBefore": 23,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s25"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Elysian.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 273,
+    "turnBefore": 23,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s38"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Zenith.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 274,
+    "turnBefore": 23,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 276,
+    "turnBefore": 24,
+    "action": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "uiStatus": "Research directed toward Deflector Fields.",
+    "uiSelector": "[data-action=research][data-tech=shields]"
+  },
+  {
+    "eventIndex": 281,
+    "turnBefore": 24,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "habitat"
+    },
+    "uiStatus": "Habitation Domes commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=habitat]"
+  },
+  {
+    "eventIndex": 285,
+    "turnBefore": 24,
+    "action": {
+      "type": "develop",
+      "systemId": "s28",
+      "charterType": "academy"
+    },
+    "uiStatus": "Academy Charter I commissioned at Haven.",
+    "uiSelector": "[data-action=develop][data-charter=academy]"
+  },
+  {
+    "eventIndex": 289,
+    "turnBefore": 24,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s30"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Caelum.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 291,
+    "turnBefore": 24,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s3"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Lumen.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 292,
+    "turnBefore": 24,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 294,
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s22"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ophion.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 296,
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s35"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Seraph.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 299,
+    "turnBefore": 25,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 305,
+    "turnBefore": 26,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "factory"
+    },
+    "uiStatus": "Manufactory commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=factory]"
+  },
+  {
+    "eventIndex": 309,
+    "turnBefore": 26,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s3"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Lumen.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 311,
+    "turnBefore": 26,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s14"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ilyra.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 312,
+    "turnBefore": 26,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 316,
+    "turnBefore": 27,
+    "action": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "uiStatus": "Forge Charter II commissioned at Solace.",
+    "uiSelector": "[data-action=develop][data-charter=forge]"
+  },
+  {
+    "eventIndex": 320,
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s6"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Aurelia.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 326,
+    "turnBefore": 27,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s13"
+    },
+    "uiStatus": "Route plotted: 6 jumps to Sable. Continue when ready.",
+    "uiSelector": "[data-action=plan-route]"
+  },
+  {
+    "eventIndex": 327,
+    "turnBefore": 27,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 328,
+    "turnBefore": 27,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 330,
+    "turnBefore": 28,
+    "action": {
+      "type": "research",
+      "techId": "weapons"
+    },
+    "uiStatus": "Research directed toward Coherent Lances.",
+    "uiSelector": "[data-action=research][data-tech=weapons]"
+  },
+  {
+    "eventIndex": 332,
+    "turnBefore": 28,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 334,
+    "turnBefore": 28,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 336,
+    "turnBefore": 29,
+    "action": {
+      "type": "research",
+      "techId": "singularity"
+    },
+    "uiStatus": "Research directed toward The Asterion Protocol.",
+    "uiSelector": "[data-action=research][data-tech=singularity]"
+  },
+  {
+    "eventIndex": 338,
+    "turnBefore": 29,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 344,
+    "turnBefore": 29,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "bastion"
+    },
+    "uiStatus": "Orbital Bastion commissioned at Haven.",
+    "uiSelector": "[data-action=build][data-item=bastion]"
+  },
+  {
+    "eventIndex": 345,
+    "turnBefore": 29,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 349,
+    "turnBefore": 30,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 reached Sable in 1 jump.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 351,
+    "turnBefore": 30,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s34"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Antares.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 352,
+    "turnBefore": 30,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 354,
+    "turnBefore": 31,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s26"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Aster.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 358,
+    "turnBefore": 31,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 3 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 363,
+    "turnBefore": 31,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Veyr Prime.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 364,
+    "turnBefore": 31,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 366,
+    "turnBefore": 32,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s39"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Eos.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 370,
+    "turnBefore": 32,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 374,
+    "turnBefore": 32,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s15"
+    },
+    "uiStatus": "Vanguard 3 arrived at Kepler.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 375,
+    "turnBefore": 32,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 379,
+    "turnBefore": 32,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Veyr Prime.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 380,
+    "turnBefore": 32,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 382,
+    "turnBefore": 33,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s18"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Cinder.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 385,
+    "turnBefore": 33,
+    "action": {
+      "type": "hold",
+      "fleetId": "f39"
+    },
+    "uiStatus": "Vanguard 39 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 388,
+    "turnBefore": 33,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 392,
+    "turnBefore": 33,
+    "action": {
+      "type": "build",
+      "systemId": "s15",
+      "itemId": "bastion"
+    },
+    "uiStatus": "Orbital Bastion commissioned at Kepler.",
+    "uiSelector": "[data-action=build][data-item=bastion]"
+  },
+  {
+    "eventIndex": 396,
+    "turnBefore": 33,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s31"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Vesper.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 397,
+    "turnBefore": 33,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 399,
+    "turnBefore": 34,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s23"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Tethys.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 401,
+    "turnBefore": 34,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s36"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Peregrine.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 404,
+    "turnBefore": 34,
+    "action": {
+      "type": "merge",
+      "fleetId": "f39",
+      "targetFleetId": "f40"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f40]"
+  },
+  {
+    "eventIndex": 407,
+    "turnBefore": 34,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 408,
+    "turnBefore": 34,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 409,
+    "turnBefore": 35,
+    "action": {
+      "type": "merge",
+      "fleetId": "f39",
+      "targetFleetId": "f42"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f42]"
+  },
+  {
+    "eventIndex": 412,
+    "turnBefore": 35,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 414,
+    "turnBefore": 35,
+    "action": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 39 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 418,
+    "turnBefore": 35,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s23"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Tethys.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 419,
+    "turnBefore": 35,
+    "action": {
+      "type": "hold",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 421,
+    "turnBefore": 35,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 425,
+    "turnBefore": 36,
+    "action": {
+      "type": "move",
+      "fleetId": "f39",
+      "targetId": "s15"
+    },
+    "uiStatus": "Vanguard 39 arrived at Kepler.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 427,
+    "turnBefore": 36,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f39"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f39]"
+  },
+  {
+    "eventIndex": 430,
+    "turnBefore": 36,
+    "action": {
+      "type": "hold",
+      "fleetId": "f43"
+    },
+    "uiStatus": "Vanguard 43 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 433,
+    "turnBefore": 36,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 434,
+    "turnBefore": 36,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 435,
+    "turnBefore": 37,
+    "action": {
+      "type": "merge",
+      "fleetId": "f43",
+      "targetFleetId": "f44"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f44]"
+  },
+  {
+    "eventIndex": 438,
+    "turnBefore": 37,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 440,
+    "turnBefore": 37,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 441,
+    "turnBefore": 38,
+    "action": {
+      "type": "merge",
+      "fleetId": "f43",
+      "targetFleetId": "f46"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f46]"
+  },
+  {
+    "eventIndex": 444,
+    "turnBefore": 38,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 446,
+    "turnBefore": 38,
+    "action": {
+      "type": "move",
+      "fleetId": "f43",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 43 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 447,
+    "turnBefore": 38,
+    "action": {
+      "type": "hold",
+      "fleetId": "f43"
+    },
+    "uiStatus": "Vanguard 43 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 448,
+    "turnBefore": 38,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 451,
+    "turnBefore": 39,
+    "action": {
+      "type": "hold",
+      "fleetId": "f47"
+    },
+    "uiStatus": "Vanguard 47 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 454,
+    "turnBefore": 39,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 455,
+    "turnBefore": 39,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 457,
+    "turnBefore": 40,
+    "action": {
+      "type": "merge",
+      "fleetId": "f47",
+      "targetFleetId": "f49"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f49]"
+  },
+  {
+    "eventIndex": 460,
+    "turnBefore": 40,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 463,
+    "turnBefore": 40,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 466,
+    "turnBefore": 41,
+    "action": {
+      "type": "merge",
+      "fleetId": "f47",
+      "targetFleetId": "f50"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f50]"
+  },
+  {
+    "eventIndex": 469,
+    "turnBefore": 41,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 477,
+    "turnBefore": 42,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s6"
+    },
+    "uiStatus": "Route plotted: 9 jumps to Aurelia. Continue when ready.",
+    "uiSelector": "[data-action=plan-route]"
+  },
+  {
+    "eventIndex": 478,
+    "turnBefore": 42,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 479,
+    "turnBefore": 42,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 481,
+    "turnBefore": 43,
+    "action": {
+      "type": "research",
+      "techId": "diplomacy"
+    },
+    "uiStatus": "Research directed toward Stellar Accords.",
+    "uiSelector": "[data-action=research][data-tech=diplomacy]"
+  },
+  {
+    "eventIndex": 483,
+    "turnBefore": 43,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 489,
+    "turnBefore": 43,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "beacon",
+      "replaceBuildingId": "mine"
+    },
+    "uiStatus": "Asterion Beacon commissioned at Haven.",
+    "uiSelector": "[data-action=build][data-item=beacon]"
+  },
+  {
+    "eventIndex": 493,
+    "turnBefore": 43,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "beacon"
+    },
+    "uiStatus": "Asterion Beacon commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=beacon]"
+  },
+  {
+    "eventIndex": 495,
+    "turnBefore": 43,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 501,
+    "turnBefore": 44,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "veyr",
+      "stance": "endTrade"
+    },
+    "uiStatus": "The Concord gave notice to end trade with Veyr Consortium. Income and open borders continue until turn 47, when visiting fleets withdraw.",
+    "uiSelector": "[data-action=diplomatic-confirm][data-stance=endTrade][data-target=veyr]"
+  },
+  {
+    "eventIndex": 505,
+    "turnBefore": 44,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 506,
+    "turnBefore": 44,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 508,
+    "turnBefore": 45,
+    "action": {
+      "type": "research",
+      "techId": "command"
+    },
+    "uiStatus": "Research directed toward Distributed Command.",
+    "uiSelector": "[data-action=research][data-tech=command]"
+  },
+  {
+    "eventIndex": 510,
+    "turnBefore": 45,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 511,
+    "turnBefore": 45,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 512,
+    "turnBefore": 46,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 reached Aurelia in 1 jump.",
+    "uiSelector": "[data-action=continue-route]"
+  },
+  {
+    "eventIndex": 513,
+    "turnBefore": 46,
+    "action": {
+      "type": "hold",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 517,
+    "turnBefore": 46,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "beacon",
+      "replaceBuildingId": "mine"
+    },
+    "uiStatus": "Asterion Beacon commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=beacon]"
+  },
+  {
+    "eventIndex": 520,
+    "turnBefore": 46,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 522,
+    "turnBefore": 47,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 527,
+    "turnBefore": 48,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 528,
+    "turnBefore": 49,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 536,
+    "turnBefore": 50,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "shipyard",
+      "replaceBuildingId": "lab"
+    },
+    "uiStatus": "Orbital Shipyard commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=shipyard]"
+  },
+  {
+    "eventIndex": 537,
+    "turnBefore": 50,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 545,
+    "turnBefore": 51,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 546,
+    "turnBefore": 51,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 548,
+    "turnBefore": 52,
+    "action": {
+      "type": "hold",
+      "fleetId": "f62"
+    },
+    "uiStatus": "Vanguard 62 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 551,
+    "turnBefore": 52,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 553,
+    "turnBefore": 52,
+    "action": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "uiStatus": "Research directed toward Capital Ship Architecture.",
+    "uiSelector": "[data-action=research][data-tech=cruisers]"
+  },
+  {
+    "eventIndex": 563,
+    "turnBefore": 52,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "endTrade"
+    },
+    "uiStatus": "The Concord gave notice to end trade with The Luminous Choir. Income and open borders continue until turn 55, when visiting fleets withdraw.",
+    "uiSelector": "[data-action=diplomatic-confirm][data-stance=endTrade][data-target=choir]"
+  },
+  {
+    "eventIndex": 568,
+    "turnBefore": 52,
+    "action": {
+      "type": "move",
+      "fleetId": "f47",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 47 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 569,
+    "turnBefore": 52,
+    "action": {
+      "type": "merge",
+      "fleetId": "f47",
+      "targetFleetId": "f43"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f43]"
+  },
+  {
+    "eventIndex": 571,
+    "turnBefore": 52,
+    "action": {
+      "type": "move",
+      "fleetId": "f47",
+      "targetId": "s12"
+    },
+    "uiStatus": "Vanguard 47 arrived at Eidolon.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 576,
+    "turnBefore": 52,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s14"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Ilyra.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 578,
+    "turnBefore": 52,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s3"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Lumen.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 583,
+    "turnBefore": 52,
+    "action": {
+      "type": "split",
+      "fleetId": "f3",
+      "ships": 3
+    },
+    "uiStatus": "3 ships detached as Vanguard 64.",
+    "uiSelector": "[data-action=split-confirm]"
+  },
+  {
+    "eventIndex": 585,
+    "turnBefore": 52,
+    "action": {
+      "type": "move",
+      "fleetId": "f64",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 64 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 587,
+    "turnBefore": 52,
+    "action": {
+      "type": "move",
+      "fleetId": "f64",
+      "targetId": "s0"
+    },
+    "uiStatus": "Vanguard 64 arrived at Solace.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 591,
+    "turnBefore": 52,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 592,
+    "turnBefore": 52,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 593,
+    "turnBefore": 53,
+    "action": {
+      "type": "move",
+      "fleetId": "f64",
+      "targetId": "s20"
+    },
+    "uiStatus": "Vanguard 64 arrived at Sundrift.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 594,
+    "turnBefore": 53,
+    "action": {
+      "type": "hold",
+      "fleetId": "f64"
+    },
+    "uiStatus": "Vanguard 64 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 597,
+    "turnBefore": 53,
+    "action": {
+      "type": "merge",
+      "fleetId": "f62",
+      "targetFleetId": "f65"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f65]"
+  },
+  {
+    "eventIndex": 600,
+    "turnBefore": 53,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 604,
+    "turnBefore": 53,
+    "action": {
+      "type": "move",
+      "fleetId": "f47",
+      "targetId": "s4"
+    },
+    "uiStatus": "Vanguard 47 arrived at Meridian.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 606,
+    "turnBefore": 53,
+    "action": {
+      "type": "move",
+      "fleetId": "f47",
+      "targetId": "s9"
+    },
+    "uiStatus": "Vanguard 47 arrived at Velorum.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 610,
+    "turnBefore": 53,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s30"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Caelum.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 611,
+    "turnBefore": 53,
+    "action": {
+      "type": "hold",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 613,
+    "turnBefore": 53,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 618,
+    "turnBefore": 54,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s17"
+    },
+    "uiStatus": "Pathfinder 1 arrived at Orison.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 619,
+    "turnBefore": 54,
+    "action": {
+      "type": "hold",
+      "fleetId": "f1"
+    },
+    "uiStatus": "Pathfinder 1 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 623,
+    "turnBefore": 54,
+    "action": {
+      "type": "move",
+      "fleetId": "f47",
+      "targetId": "s17"
+    },
+    "uiStatus": "Vanguard 47 arrived at Orison.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 624,
+    "turnBefore": 54,
+    "action": {
+      "type": "hold",
+      "fleetId": "f47"
+    },
+    "uiStatus": "Vanguard 47 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 628,
+    "turnBefore": 54,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 3 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 629,
+    "turnBefore": 54,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 632,
+    "turnBefore": 54,
+    "action": {
+      "type": "merge",
+      "fleetId": "f62",
+      "targetFleetId": "f67"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f67]"
+  },
+  {
+    "eventIndex": 635,
+    "turnBefore": 54,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 638,
+    "turnBefore": 54,
+    "action": {
+      "type": "merge",
+      "fleetId": "f64",
+      "targetFleetId": "f69"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f69]"
+  },
+  {
+    "eventIndex": 641,
+    "turnBefore": 54,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Sundrift.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 642,
+    "turnBefore": 54,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 647,
+    "turnBefore": 55,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "war"
+    },
+    "uiStatus": "The Concord declared war on The Luminous Choir.",
+    "uiSelector": "[data-action=war-confirm][data-target=choir]"
+  },
+  {
+    "eventIndex": 652,
+    "turnBefore": 55,
+    "action": {
+      "type": "move",
+      "fleetId": "f47",
+      "targetId": "s30"
+    },
+    "uiStatus": "Vanguard 47 arrived at Caelum.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 654,
+    "turnBefore": 55,
+    "action": {
+      "type": "attack",
+      "fleetId": "f47"
+    },
+    "uiStatus": "1 combat report recorded.",
+    "uiSelector": "[data-action=attack]"
+  },
+  {
+    "eventIndex": 657,
+    "turnBefore": 55,
+    "action": {
+      "type": "hold",
+      "fleetId": "f47"
+    },
+    "uiStatus": "Vanguard 47 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 661,
+    "turnBefore": 55,
+    "action": {
+      "type": "move",
+      "fleetId": "f70",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 70 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 663,
+    "turnBefore": 55,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f70"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f70]"
+  },
+  {
+    "eventIndex": 665,
+    "turnBefore": 55,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 669,
+    "turnBefore": 56,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 673,
+    "turnBefore": 56,
+    "action": {
+      "type": "move",
+      "fleetId": "f71",
+      "targetId": "s0"
+    },
+    "uiStatus": "Vanguard 71 arrived at Solace.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 675,
+    "turnBefore": 56,
+    "action": {
+      "type": "move",
+      "fleetId": "f71",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 71 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 677,
+    "turnBefore": 56,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f71"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f71]"
+  },
+  {
+    "eventIndex": 679,
+    "turnBefore": 56,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 686,
+    "turnBefore": 57,
+    "action": {
+      "type": "hold",
+      "fleetId": "f47"
+    },
+    "uiStatus": "Vanguard 47 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 691,
+    "turnBefore": 57,
+    "action": {
+      "type": "split",
+      "fleetId": "f64",
+      "ships": 1
+    },
+    "uiStatus": "1 ship detached as Vanguard 75.",
+    "uiSelector": "[data-action=split-confirm]"
+  },
+  {
+    "eventIndex": 693,
+    "turnBefore": 57,
+    "action": {
+      "type": "move",
+      "fleetId": "f75",
+      "targetId": "s0"
+    },
+    "uiStatus": "Vanguard 75 arrived at Solace.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 695,
+    "turnBefore": 57,
+    "action": {
+      "type": "move",
+      "fleetId": "f75",
+      "targetId": "s28"
+    },
+    "uiStatus": "Vanguard 75 arrived at Haven.",
+    "uiSelector": "[data-action=move]"
+  },
+  {
+    "eventIndex": 697,
+    "turnBefore": 57,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f75"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f75]"
+  },
+  {
+    "eventIndex": 701,
+    "turnBefore": 57,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "uiStatus": "Vanguard commissioned at Solace.",
+    "uiSelector": "[data-action=build][data-item=frigate]"
+  },
+  {
+    "eventIndex": 704,
+    "turnBefore": 57,
+    "action": {
+      "type": "research",
+      "techId": "terraforming"
+    },
+    "uiStatus": "Research directed toward Worldshaping.",
+    "uiSelector": "[data-action=research][data-tech=terraforming]"
+  },
+  {
+    "eventIndex": 706,
+    "turnBefore": 57,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 711,
+    "turnBefore": 58,
+    "action": {
+      "type": "repair",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Emergency repairs completed.",
+    "uiSelector": "[data-action=repair]"
+  },
+  {
+    "eventIndex": 712,
+    "turnBefore": 58,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "uiStatus": "Vanguard 3 is holding position.",
+    "uiSelector": "[data-action=fleet-hold]"
+  },
+  {
+    "eventIndex": 715,
+    "turnBefore": 58,
+    "action": {
+      "type": "merge",
+      "fleetId": "f62",
+      "targetFleetId": "f76"
+    },
+    "uiStatus": "Fleets combined into one task force.",
+    "uiSelector": "[data-action=merge][data-target=f76]"
+  },
+  {
+    "eventIndex": 719,
+    "turnBefore": 58,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  },
+  {
+    "eventIndex": 721,
+    "turnBefore": 59,
+    "action": {
+      "type": "endTurn"
+    },
+    "uiStatus": null,
+    "uiSelector": null
+  }
+]

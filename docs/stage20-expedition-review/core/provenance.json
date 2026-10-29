@@ -1,0 +1,69 @@
+{
+  "requestedCommit": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "checkoutHead": "9e74d6407ebfb2ddc0e48a95afc5c8f6bbe6c3be",
+  "scope": "Core only. Benchmark methodology and campaign outcome sampling were not reviewed.",
+  "files": {
+    "src/ai.js": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+    "tests/ai-expedition-reinforcement.test.js": "a320e47647709049b87fe1749abc42123a3d55f360d74ac7cd506aefb80d68a3",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821"
+  },
+  "historicalReplay": {
+    "sourcePin": {
+      "pin": "a9c61ff",
+      "files": {
+        "src/ai.js": "dd0c1e77ee56def0b96c9b4299c4406f7cb761059c1d850238951e6e891edcff",
+        "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+        "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+        "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+        "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+        "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+        "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+        "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+        "src/game.js": "4151fb7d296180706ddce706c713f4d8e0e22d845d0fea81ce564262958d3417",
+        "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+        "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+        "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+        "src/reports.js": "0abffbd248cb4736fa0036ded5038d14730756d1bcccebd20295e538d8e94848",
+        "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24"
+      }
+    },
+    "commandsSha256": "d570850702aa98de33dc29e2e0e8cb5f2de8b9a5fe2710a29230ec7ac916d322",
+    "actualFinalExportSha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+    "derivedBoundaries": [
+      {
+        "boundary": 41,
+        "turn": 53,
+        "selectedFleet": "f53",
+        "sha256": "01e827a1ffe1d16995ff5276e627b81d5c6f654a7cf4df924c942f5d5b38509b"
+      },
+      {
+        "boundary": 99,
+        "turn": 56,
+        "selectedFleet": "f56",
+        "sha256": "02eab9abb221bc6296155da581fca7d241afeb3b9b802e846221c91ab853e3d1"
+      }
+    ]
+  },
+  "priorIndependentCounterexample": {
+    "eta-preflight-counterexample.mjs": {
+      "origin": "/tmp/asterion-watch-merge-independent-review/eta-preflight-counterexample.mjs",
+      "sha256": "c2ae5eb403b039f01fa1f3d09339212b22a32fc74f75d79ddef8cc290da78554",
+      "attribution": "campaign_review, earlier independent synthetic preflight review; not WATCH gameplay"
+    },
+    "eta-preflight-counterexample.json": {
+      "origin": "/tmp/asterion-watch-merge-independent-review/eta-preflight-counterexample.json",
+      "sha256": "e73b52260d38562afeb6cb0db9ba98f95a315ec0ecda5a2314b558a5f46158ae",
+      "attribution": "campaign_review, earlier independent synthetic preflight review; not WATCH gameplay"
+    }
+  }
+}

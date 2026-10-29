@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-10-29T01:23:05.478Z",
+  "authorManifestSha256": "5588f71ea10530f9a816105a73347538a2afc8c90952cbb7334663deed519aed",
+  "verifiedArtifacts": [
+    {
+      "path": "docs/expedition-reinforcement-comparison/README.txt",
+      "bytes": 4559,
+      "sha256": "0f2a777a8bf91f3b7b604e23d5690f8583b41970136359fd081b6d16f626a233",
+      "verified": true
+    },
+    {
+      "path": "docs/expedition-reinforcement-comparison/ai-change.diff",
+      "bytes": 3459,
+      "sha256": "6130a986f6734627e05fc3272764a9d99ed9bf0567db6b2772efc3ab30af886f",
+      "verified": true
+    },
+    {
+      "path": "docs/expedition-reinforcement-comparison/index.html",
+      "bytes": 21503,
+      "sha256": "2161212243704d9c760702db5d1d48eb0b22f10b2ac23008a1f60f9cf3307dcc",
+      "verified": true
+    },
+    {
+      "path": "docs/expedition-reinforcement-comparison/instrumentation-patches.json",
+      "bytes": 7085,
+      "sha256": "c7a95582ede6a79d7350575f99242a2b7ebfa41b5c39b6b5bde59026d421da00",
+      "verified": true
+    },
+    {
+      "path": "docs/expedition-reinforcement-comparison/render-report.mjs",
+      "bytes": 15988,
+      "sha256": "c7765548cbe7b994da0e89602b88d8ac2158dd841338df836a388ea6f74a3159",
+      "verified": true
+    },
+    {
+      "path": "docs/expedition-reinforcement-comparison/results.json",
+      "bytes": 157115,
+      "sha256": "b374e6aace05deb0d197c03adfb37709026a9177426154e63af2167fb1989074",
+      "verified": true
+    },
+    {
+      "path": "scripts/expedition-reinforcement-benchmark.mjs",
+      "bytes": 28023,
+      "sha256": "e1b27fd81c6cfc7d14343c862b3501c2945070a8d8dd3dbe32c4b292c8dfeab0",
+      "verified": true
+    }
+  ],
+  "coreEvidenceUnchangedSinceAudit": true
+}

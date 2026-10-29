@@ -1,0 +1,165 @@
+{
+  "generatedAt": "2026-10-29T01:35:24.753Z",
+  "uiURL": "http://127.0.0.1:5208",
+  "expectedVersion": "0.20.0",
+  "engineRevision": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "scriptSha256": "8f46d3aa4e02b83bf21626d99dcab2b53d7d8867d82af3e140e7dbab222a2e1a",
+  "method": "Fresh isolated browser contexts. Real Menu > Import file chooser > Restore. No state setters or localStorage fixtures. Public read-only UI inspection; exact whole parsed JSON comparison before/after, actual download and browser autosave reload. No turns or gameplay commands are issued in this UI pass.",
+  "cases": [
+    {
+      "id": "original-asterion",
+      "input": "docs/save-compatibility/inputs/original-asterion-cycle30.json",
+      "inputSha256": "0c9e5adfa86808aa2b1e13cfaa1f59ef708508e73cde73f12119fe22fa130297",
+      "viewport": [
+        1440,
+        960
+      ],
+      "status": "pass",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "screenshot": "original-asterion-import.png",
+      "noPageOverflow": true,
+      "exportFile": "original-asterion-ui-export.json",
+      "exportFullStateEqual": true,
+      "exportSha256": "17536415f691c5bef9ae590ebb276589421c6a1284d4355830f16e99f4787b3b",
+      "exportByteIdentical": false,
+      "autosaveReloadEqual": true,
+      "pageErrors": []
+    },
+    {
+      "id": "actual-stage6-route63",
+      "input": "docs/save-compatibility/inputs/actual-stage6-route63.json",
+      "inputSha256": "4ab22668b8ccfa41c7116eea7705e64eb95caae58a7ae5420381dc4cf891ea58",
+      "viewport": [
+        1280,
+        900
+      ],
+      "status": "pass",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "screenshot": "actual-stage6-route63-import.png",
+      "noPageOverflow": true,
+      "exportFile": "actual-stage6-route63-ui-export.json",
+      "exportFullStateEqual": true,
+      "exportSha256": "4ab22668b8ccfa41c7116eea7705e64eb95caae58a7ae5420381dc4cf891ea58",
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "pageErrors": []
+    },
+    {
+      "id": "actual-stage6-final67",
+      "input": "docs/save-compatibility/inputs/actual-stage6-final67.json",
+      "inputSha256": "626dd110a0530b3554b5cccb310cecda82a37180ea414685d6bfe214469a167f",
+      "viewport": [
+        1280,
+        900
+      ],
+      "status": "pass",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "mandate": "THE CHRONICLE IS COMPLETE\nThe Concord · Transcendence · Cycle 67. Review the conclusion or inspect the final galaxy.\nReview this age →",
+      "conclusionTitle": "Transcendence",
+      "conclusionText": "×\n✦\nVICTORY RECORDED · CYCLE 67\nTranscendence\n\nThe Concord · Recorded victor\n\nGalaxy ASTERION\n\nInspect galaxy\nRead Chronicle\nExport campaign\nYour final holdings\nThe Concord · Cycle 67\nWORLDS\n8\nPOPULATION\n74\nSHIPS\n14\n13 military\nTECHNOLOGIES\n12\nLEGACY\n765\nCredits\n5,493\nMinerals\n722\nScience\n665\nOrders remaining\n17\nYOUR FINAL NETWORK\n3 Beacons\n\nAsterion Protocol researched. 3 Beacons required for alignment.\n\n10 / 10 recorded alignment cycles\n\nFinal participating sites\n\nSundrift ↗\nElysian ↗\nSolace ↗\nYOUR FOUNDING-WORLD CONTROL\n1 / 4 founding worlds\n\nOriginal founding worlds under your final sovereignty. Their identity stays fixed when capitals relocate.\n\nSolace ↗\nSelected retained moments\nNewest first\n\nA selection from the records still in this save, not a complete timeline. The Chronicle retains up to 160 entries; battle reports retain up to 50 engagements involving your civilization.\n\n151 Chronicle entries · cycles 1–67\n0 battle reports\nCYCLE 66\nDIPLOMACY\n\nKhar Dominion declared war on Veyr Consortium.\n\nCYCLE 63\nSOVEREIGNTY\n\nNyx changed sovereignty from The Luminous Choir to Khar Dominion.\n\nView system ↗\nCYCLE 62\nRESEARCH\n\nResearch complete: Worldshaping. Colonize any world. All colonies grow 50% faster.\n\nCYCLE 58\nCONSTRUCTION\n\nSundrift completed Orbital Shipyard.\n\nView system ↗\nCYCLE 15\nDISCOVERY\n\nA Thousand Sleeping Voices: Restore their navigation. Gained 25 science and 15 credits.\n\nExpedition record →\nView system ↗\n\nThis age remains available to inspect and export.\n\nBegin a new campaign",
+      "completedEndTurnDisabled": true,
+      "recordedConclusion": true,
+      "screenshot": "actual-stage6-final67-conclusion.png",
+      "noPageOverflow": true,
+      "exportFile": "actual-stage6-final67-ui-export.json",
+      "exportFullStateEqual": true,
+      "exportSha256": "626dd110a0530b3554b5cccb310cecda82a37180ea414685d6bfe214469a167f",
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "pageErrors": []
+    },
+    {
+      "id": "actual-iron-57",
+      "input": "docs/military-playtest/replay/actual-exports/cycle57.json",
+      "inputSha256": "fe3858c69ca3b49d9213b80a995127207f7b851c0e5bdea4858579fe33597397",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "fail",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "mandate": "THE CHRONICLE IS COMPLETEThe Concord · Domination · Cycle 57. Review the conclusion or inspect the final galaxy.Review this age →",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#mandate [data-action=\"show-conclusion\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"small-button ghost\" data-action=\"show-conclusion\">Review this age →</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /tmp/asterion-stage20-save-review/ui-audit.mjs:40:67",
+      "pageErrors": []
+    },
+    {
+      "id": "actual-watch-51",
+      "input": "docs/watch-playtest/checkpoints/cycle51.json",
+      "inputSha256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698",
+      "viewport": [
+        1280,
+        900
+      ],
+      "status": "pass",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "screenshot": "actual-watch-51-import.png",
+      "noPageOverflow": true,
+      "exportFile": "actual-watch-51-ui-export.json",
+      "exportFullStateEqual": true,
+      "exportSha256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698",
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "pageErrors": []
+    },
+    {
+      "id": "actual-watch-60",
+      "input": "docs/watch-playtest/checkpoints/cycle60.json",
+      "inputSha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "viewport": [
+        1440,
+        960
+      ],
+      "status": "pass",
+      "version": "ASTERION REACH / EARLY ACCESS 0.20.0",
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "mandate": "THE CHRONICLE IS COMPLETE\nThe Concord · Transcendence · Cycle 60. Review the conclusion or inspect the final galaxy.\nReview this age →",
+      "conclusionTitle": "Transcendence",
+      "conclusionText": "×\n✦\nVICTORY RECORDED · CYCLE 60\nTranscendence\n\nThe Concord · Recorded victor\n\nGalaxy ASTERION-WATCH-14\n\nInspect galaxy\nRead Chronicle\nExport campaign\nYour final holdings\nThe Concord · Cycle 60\nWORLDS\n5\nPOPULATION\n43\nSHIPS\n17\n16 military\nTECHNOLOGIES\n11\nLEGACY\n698\nCredits\n897\nMinerals\n387\nScience\n0\nOrders remaining\n13\nYOUR FINAL NETWORK\n4 Beacons\n\nAsterion Protocol researched. 3 Beacons required for alignment.\n\n10 / 10 recorded alignment cycles\n\nFinal participating sites\n\nSundrift ↗\nSolace ↗\nHaven ↗\nYOUR FOUNDING-WORLD CONTROL\n1 / 4 founding worlds\n\nOriginal founding worlds under your final sovereignty. Their identity stays fixed when capitals relocate.\n\nSolace ↗\nSelected retained moments\nNewest first\n\nA selection from the records still in this save, not a complete timeline. The Chronicle retains up to 160 entries; battle reports retain up to 50 engagements involving your civilization.\n\n149 Chronicle entries · cycles 1–60\n4 battle reports · cycles 55–57\nCYCLE 57\nCOMBAT\n\nBattle at Haven: Veyr lost 3 ships and 102 hull; Concord lost 1 ship and 60.5 hull. Attacking fleet destroyed.\n\nBattle report →\nView system ↗\nCYCLE 57\nRESEARCH\n\nResearch complete: Capital Ship Architecture. Unlocks heavily armed cruisers.\n\nCYCLE 55\nSOVEREIGNTY\n\nInvasion of Caelum: 36 defense damage; 0 defenses remain. Concord lost 0 ships and 8.1 hull to retaliation. Caelum captured; invading fleet survives.\n\nBattle report →\nView system ↗\nCYCLE 55\nDIPLOMACY\n\nThe Concord declared war on The Luminous Choir.\n\nCYCLE 52\nCONSTRUCTION\n\nSundrift completed Orbital Shipyard.\n\nView system ↗\nCYCLE 14\nDISCOVERY\n\nThe Patient Reef: Quarry the lattice. Gained 85 minerals.\n\nExpedition record →\nView system ↗\n\nThis age remains available to inspect and export.\n\nBegin a new campaign",
+      "completedEndTurnDisabled": true,
+      "recordedConclusion": true,
+      "screenshot": "actual-watch-60-conclusion.png",
+      "inspectedHistoricalReport": {
+        "id": 4,
+        "hadRounds": false,
+        "participant": "Vanguard 56"
+      },
+      "noPageOverflow": true,
+      "exportFile": "actual-watch-60-ui-export.json",
+      "exportFullStateEqual": true,
+      "exportSha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "pageErrors": []
+    }
+  ],
+  "failures": [
+    {
+      "id": "actual-iron-57",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#mandate [data-action=\"show-conclusion\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"small-button ghost\" data-action=\"show-conclusion\">Review this age →</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    }
+  ],
+  "originalInputsUnchanged": true,
+  "servedAssets": [
+    {
+      "path": "/assets/index-BiOK--Q4.js",
+      "bytes": 880826,
+      "sha256": "95be2cd26af28a633f71f644d05f29f41b76f7d36b49c9d0b6af1ced0e537489"
+    },
+    {
+      "path": "/assets/index-SmGXpBaN.css",
+      "bytes": 75867,
+      "sha256": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef"
+    }
+  ]
+}

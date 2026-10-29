@@ -1,0 +1,138 @@
+{
+  "requestedCommit": "fe09832333e98886568beb6e3a07c84bccbb285b",
+  "checkoutHead": "9e74d6407ebfb2ddc0e48a95afc5c8f6bbe6c3be",
+  "started": "2026-10-29T01:28:59.435Z",
+  "baselinePin": "e749df166e469bfae7fcbe971f9c50b5f09b776a",
+  "scope": "Six independently authored synthetic core probes. No campaign sample or benchmark methodology review.",
+  "aiSha256": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+  "testSha256": "a320e47647709049b87fe1749abc42123a3d55f360d74ac7cd506aefb80d68a3",
+  "cases": [
+    {
+      "name": "reject the stronger delayed partner, then accept a weaker partner without paying for rejection",
+      "status": "pass",
+      "actions": [
+        {
+          "type": "merge",
+          "fleetId": "f13",
+          "targetFleetId": "f15"
+        },
+        {
+          "type": "move",
+          "fleetId": "f13",
+          "targetId": "s4"
+        },
+        {
+          "type": "move",
+          "fleetId": "f13",
+          "targetId": "s0"
+        }
+      ],
+      "strongArrivalCycles": 2,
+      "chosenArrivalCycles": 1,
+      "finalShips": 3,
+      "finalHull": 78,
+      "orders": 0
+    },
+    {
+      "name": "one absorption at each of two departure boundaries does not sweep another local partner",
+      "status": "pass",
+      "actions": [
+        {
+          "type": "merge",
+          "fleetId": "f13",
+          "targetFleetId": "f14"
+        },
+        {
+          "type": "move",
+          "fleetId": "f13",
+          "targetId": "s4"
+        },
+        {
+          "type": "merge",
+          "fleetId": "f13",
+          "targetFleetId": "f15"
+        },
+        {
+          "type": "move",
+          "fleetId": "f13",
+          "targetId": "s5"
+        }
+      ],
+      "unchangedMission": {
+        "fleetId": "f13",
+        "targetId": "player",
+        "systemId": "s0"
+      },
+      "spareId": "f16",
+      "orders": 2
+    },
+    {
+      "name": "an exact-cap merge uses ordinary fractional hull and route, Hold, lead and heritage semantics",
+      "status": "pass",
+      "merge": {
+        "type": "merge",
+        "fleetId": "f13",
+        "targetFleetId": "f14"
+      },
+      "ships": 12,
+      "hull": 374.06,
+      "movesAfterOneJump": 1,
+      "heritage": "Last Light"
+    },
+    {
+      "name": "private foreign fleet and weapons/research getters are unread during the reinforcement decision",
+      "status": "pass",
+      "actions": [
+        {
+          "type": "merge",
+          "fleetId": "f13",
+          "targetFleetId": "f14"
+        }
+      ],
+      "readBoundary": "Spatial identity/position may be used by existing visibility queries; unobserved hull/class/count and foreign weapons/research/economy getters throw if read.",
+      "purePreflightOnFrozenSave": true
+    },
+    {
+      "name": "the paid war declaration leaves the correct full-run order allowance for optional absorption",
+      "status": "pass",
+      "cases": [
+        {
+          "initialOrders": 3,
+          "ships": 2,
+          "mateSurvives": true,
+          "finalOrders": 0,
+          "systemId": "s5"
+        },
+        {
+          "initialOrders": 4,
+          "ships": 3,
+          "mateSurvives": false,
+          "finalOrders": 0,
+          "systemId": "s5"
+        }
+      ]
+    },
+    {
+      "name": "nonhostile first contact keeps the exact pre-change movement behavior",
+      "status": "pass",
+      "actions": [
+        {
+          "type": "move",
+          "fleetId": "f13",
+          "targetId": "s4"
+        },
+        {
+          "type": "move",
+          "fleetId": "f13",
+          "targetId": "s5"
+        }
+      ],
+      "firstContact": "choir",
+      "sameCompleteStateAsFixedEngineBaseline": true,
+      "interpretation": "Nonhostile contact by itself did not stop this expedition before the patch and still does not; the existing actual-combat stop is unchanged."
+    }
+  ],
+  "finished": "2026-10-29T01:28:59.519Z",
+  "passed": 6,
+  "failed": 0
+}

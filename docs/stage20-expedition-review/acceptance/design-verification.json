@@ -1,0 +1,16 @@
+{
+  "unalteredArchivedSourceFilesVerified": 13,
+  "archivedRevision": "a9c61ffd2e68e2a16ef5b3bec4b6a933cf513d8b",
+  "aiInstrumentation": "Exact archived callback patch and original/instrumented source hashes are preserved in design/instrumentation.json and instrumentation.patch.",
+  "priorRootReproducedOutputs": {
+    "derived-snapshots.json.gz": "d6b3fd03a9b39a01323dabe630c81be6de3dcccd1f00b9153d163979f6edb549",
+    "attacker-entry-views.json": "c33a1c46b69e94e88e1e122be232ec20c6c7698af1a92c26891a9babb316174c",
+    "attacker-action-views.json": "72a70b2b223afe454464bd74052bea0952485e1803f2e9fdeb5a7c005a99e30b",
+    "reconstruction-proof.json": "e43a272cfcdcab4168e350879eeeb33efa040d58a7850735f167474326830659",
+    "feasibility.json": "75aee9a649382354d9ff8e64839589ee07d1beab8f445a84a249cf1058ab37c5",
+    "known-route-check.json": "a48f18e486bfc1e13cc0258561068baa91327f21c0f68f9329abd574fc9fbfe1"
+  },
+  "newRootSyntheticCounterexample": "Separately reproduced in scratch; complete JSON byte equality with design/eta-preflight-counterexample.json. This is synthetic, not another played campaign.",
+  "comparisonEngineMatchesCurrentSourceModules": 14,
+  "comparisonArtifactHashesVerified": 7
+}

@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-10-29T01:34:08.730053+00:00",
+  "version": "0.20.0",
+  "rulesPassed": 386,
+  "browser": {
+    "uniqueCasesPassed": 64,
+    "shards": [
+      {
+        "passed": 32,
+        "duration": "1.8 minutes",
+        "exitCode": 0
+      },
+      {
+        "passed": 32,
+        "duration": "1.8 minutes",
+        "exitCode": 0
+      }
+    ],
+    "sameImmutableBuild": true
+  },
+  "build": {
+    "version": "0.20.0",
+    "commit": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+    "builtAt": "2026-10-29T01:27:11.863Z"
+  },
+  "compiledSha256": {
+    "index.html": "a9a741a49e6b6c7552da338ff149989d8845b868ce222d9a6782fa6d620d1f11",
+    "assets/index-BiOK--Q4.js": "95be2cd26af28a633f71f644d05f29f41b76f7d36b49c9d0b6af1ced0e537489",
+    "assets/index-SmGXpBaN.css": "f4168f2f42da69ac7cad3e41e02bd3de9398bfd737a9f18a1655d1d51e1de4ef"
+  },
+  "sourceSha256": {
+    "src/ai.js": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/main.js": "42275ba7f84f92b9573c9ba7f02a0ea055136a76b619b19fe01564464b291e41",
+    "src/conclusion.js": "9355639524e024476162f04bf3e42555d142742f1eb589d820521afabac88d88",
+    "src/conclusion-ui.js": "f503667613c35ec43d3755ae7e9c23c1687dbaffbc2b25aff181568f19a806f6",
+    "src/victory-ui.js": "075469c60b1fcf5d59a7abfcafdde9b34840a3ebccbdb4931727620104221634",
+    "public/guide.html": "018569c7ba8d1fbf9a04451fd77c58c90953e4b36f993718266e83f8a6b1240b",
+    "package.json": "8c59d04543d6ff20cf192a4841f7d9091ad78195ffe60d99d4ef5d12aba3fd91"
+  },
+  "javascriptGzipKB": 246.56,
+  "gzipMeasurement": "Vite build output",
+  "independentCore": {
+    "focusedTests": 11,
+    "additionalSemanticProbes": 6,
+    "sourceEdits": 0
+  },
+  "independentMethod": {
+    "sourceFingerprints": 60,
+    "instrumentationOperations": 20,
+    "authorArtifacts": 7,
+    "targetedRawReplays": 2
+  },
+  "scope": "Rules and browser acceptance of integrated ending and local expedition reinforcement. Seeded comparisons, synthetic probes, legacy continuations and actual UI gameplay remain separate evidence."
+}

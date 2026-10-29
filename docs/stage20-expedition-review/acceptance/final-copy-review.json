@@ -1,0 +1,20 @@
+{
+  "scope": "Synthetic fresh game with an ordinary paid Research Enclave commission. Read-only inspection of the corrected cancellation control; no new actual campaign sample.",
+  "initialDriverCorrection": {
+    "description": "First setup attempt mistakenly requested a mine already present at home; the ordinary command correctly rejected it before any browser check. Final setup chooses the enabled lab instead.",
+    "result": {
+      "ok": false,
+      "message": "Already built"
+    }
+  },
+  "ordinaryCommission": {
+    "ok": true,
+    "message": "Research Enclave commissioned at Solace."
+  },
+  "accessibleName": "Cancel construction",
+  "title": "Cancel and refund unused credits and minerals",
+  "system": "s0",
+  "exactStatePreserved": true,
+  "keyboardFocus": true,
+  "pageErrors": []
+}

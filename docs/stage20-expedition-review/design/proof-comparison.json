@@ -1,0 +1,26 @@
+{
+  "reconstruction-proof.json": {
+    "sameBytes": true,
+    "sha256": "e43a272cfcdcab4168e350879eeeb33efa040d58a7850735f167474326830659"
+  },
+  "attacker-entry-views.json": {
+    "sameBytes": true,
+    "sha256": "c33a1c46b69e94e88e1e122be232ec20c6c7698af1a92c26891a9babb316174c"
+  },
+  "attacker-action-views.json": {
+    "sameBytes": true,
+    "sha256": "72a70b2b223afe454464bd74052bea0952485e1803f2e9fdeb5a7c005a99e30b"
+  },
+  "derived-snapshots.json.gz": {
+    "sameBytes": true,
+    "sha256": "d6b3fd03a9b39a01323dabe630c81be6de3dcccd1f00b9153d163979f6edb549"
+  },
+  "feasibility.json": {
+    "sameBytes": true,
+    "sha256": "75aee9a649382354d9ff8e64839589ee07d1beab8f445a84a249cf1058ab37c5"
+  },
+  "known-route-check.json": {
+    "sameBytes": true,
+    "sha256": "a48f18e486bfc1e13cc0258561068baa91327f21c0f68f9329abd574fc9fbfe1"
+  }
+}

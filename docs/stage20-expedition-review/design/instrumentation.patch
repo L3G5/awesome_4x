@@ -1,0 +1,21 @@
+--- pinned-a9c61ff/src/ai.js
++++ audit-only/src/ai.js
+@@ -853,9 +853,10 @@
+ }
+ 
+ export function runAI(state, faction) {
++  globalThis.__watchAudit?.('entry', state, faction);
+   if (!faction || faction.eliminated || state.winner) return;
+   const id = faction.id;
+-  const act = action => command(state, { ...action, factionId: id });
++  const act = action => { globalThis.__watchAudit?.('before', state, faction, action); const result = command(state, { ...action, factionId: id }); globalThis.__watchAudit?.('after', state, faction, action, result); return result; };
+   const ordinaryAct = action => canSpend(state, faction, actionCost(state, faction, action)) ? act(action) : { ok: false, message: 'Resources committed to the ancient network.' };
+   if (!faction.research) {
+     const priorities = id === 'khar' ? ['weapons', 'logistics', 'shields', 'cruisers', 'industry', 'physics', 'ecology', 'computing', 'singularity', 'diplomacy', 'command', 'terraforming'] : id === 'choir' ? ['physics', 'logistics', 'computing', 'industry', 'singularity', 'ecology', 'weapons', 'diplomacy', 'shields', 'command', 'cruisers', 'terraforming'] : ['logistics', 'ecology', 'diplomacy', 'industry', 'physics', 'computing', 'weapons', 'singularity', 'command', 'shields', 'cruisers', 'terraforming'];
+@@ -880,3 +881,6 @@
+   economicTurn(state, faction, act);
+   defenseLeadTurn(state, faction, act);
+ }
++
++// Audit-only pure queries; no production policy changes.
++export const auditQueries = { route, strength, canAssault, threatsToColonies, selectObjective, selectRally, raceIntervention, interventionCandidate };

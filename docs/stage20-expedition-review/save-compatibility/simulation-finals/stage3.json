@@ -1,0 +1,3252 @@
+{
+  "version": 1,
+  "seed": "ASTERION",
+  "rng": 2204884535,
+  "turn": 70,
+  "nextFleetId": 60,
+  "nextLogId": 43,
+  "nextCombatReportId": 1,
+  "systems": [
+    {
+      "id": "s0",
+      "name": "Solace",
+      "x": 29,
+      "y": 29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "player",
+      "originalOwner": "player",
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard",
+        "lab"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "khar",
+        "choir",
+        "veyr"
+      ],
+      "exploredBy": [
+        "player",
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s1",
+      "name": "Veyr Prime",
+      "x": -29,
+      "y": 29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": "veyr",
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard",
+        "lab",
+        "forum",
+        "habitat",
+        "beacon"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "Kharos",
+      "x": -29,
+      "y": -29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": "khar",
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard",
+        "lab",
+        "factory",
+        "habitat",
+        "beacon"
+      ],
+      "queue": {
+        "itemId": "cruiser",
+        "kind": "ship",
+        "progress": 29,
+        "work": 65,
+        "cost": {
+          "credits": 65,
+          "minerals": 77
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "player",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar"
+      ],
+      "charter": {
+        "type": "forge",
+        "level": 1
+      }
+    },
+    {
+      "id": "s3",
+      "name": "Lumen",
+      "x": 29,
+      "y": -29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": "choir",
+      "population": 11,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard",
+        "lab",
+        "market",
+        "factory",
+        "beacon",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "khar",
+        "veyr",
+        "player"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "charter": {
+        "type": "forge",
+        "level": 1
+      }
+    },
+    {
+      "id": "s4",
+      "name": "Meridian",
+      "x": 15.2,
+      "y": 1.5,
+      "type": "barren",
+      "habitability": 19,
+      "richness": 3,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "archive",
+        "resolved": true,
+        "resolvedBy": "khar",
+        "observations": {
+          "veyr": {
+            "observedTurn": 61,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 60,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s5",
+      "name": "Hesper",
+      "x": -14.3,
+      "y": 9.2,
+      "type": "ice",
+      "habitability": 40,
+      "richness": 3,
+      "science": 3,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 2,
+      "growth": 0.2,
+      "buildings": [],
+      "queue": {
+        "itemId": "habitat",
+        "kind": "building",
+        "progress": 5,
+        "work": 36,
+        "cost": {
+          "credits": 40,
+          "minerals": 35
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ]
+    },
+    {
+      "id": "s6",
+      "name": "Aurelia",
+      "x": 0.1,
+      "y": -20,
+      "type": "ocean",
+      "habitability": 78,
+      "richness": 3,
+      "science": 1,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "factory",
+        "habitat"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "charter": {
+        "type": "extraction",
+        "level": 2
+      }
+    },
+    {
+      "id": "s7",
+      "name": "Nacre",
+      "x": 11.9,
+      "y": 15.9,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 4,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s8",
+      "name": "Caldera",
+      "x": -22.9,
+      "y": -3.5,
+      "type": "ocean",
+      "habitability": 76,
+      "richness": 5,
+      "science": 4,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "habitat",
+        "bastion",
+        "shipyard"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "garden",
+        "resolved": true,
+        "resolvedBy": "veyr",
+        "observations": {
+          "khar": {
+            "observedTurn": 70,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 69,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ]
+    },
+    {
+      "id": "s9",
+      "name": "Velorum",
+      "x": 19.3,
+      "y": -15.5,
+      "type": "terran",
+      "habitability": 80,
+      "richness": 4,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 11,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "factory",
+        "mine",
+        "forum",
+        "beacon",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar",
+        "player"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "charter": {
+        "type": "civic",
+        "level": 2
+      }
+    },
+    {
+      "id": "s10",
+      "name": "Ashfall",
+      "x": -6.3,
+      "y": 23,
+      "type": "arid",
+      "habitability": 55,
+      "richness": 2,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 1,
+      "growth": 0.6,
+      "buildings": [],
+      "queue": {
+        "itemId": "mine",
+        "kind": "building",
+        "progress": 10,
+        "work": 24,
+        "cost": {
+          "credits": 20,
+          "minerals": 25
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s11",
+      "name": "Carina",
+      "x": -10.8,
+      "y": -25.4,
+      "type": "barren",
+      "habitability": 15,
+      "richness": 3,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 2,
+      "growth": 0.6,
+      "buildings": [
+        "mine",
+        "factory"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s12",
+      "name": "Eidolon",
+      "x": 25.5,
+      "y": 9.9,
+      "type": "volcanic",
+      "habitability": 29,
+      "richness": 4,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "wreck",
+        "resolved": true,
+        "resolvedBy": "choir",
+        "observations": {
+          "khar": {
+            "observedTurn": 61,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 61,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s13",
+      "name": "Sable",
+      "x": -27.1,
+      "y": 10.5,
+      "type": "volcanic",
+      "habitability": 21,
+      "richness": 5,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 2,
+      "growth": 0,
+      "buildings": [
+        "mine"
+      ],
+      "queue": {
+        "itemId": "factory",
+        "kind": "building",
+        "progress": 20,
+        "work": 40,
+        "cost": {
+          "credits": 35,
+          "minerals": 45
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ]
+    },
+    {
+      "id": "s14",
+      "name": "Ilyra",
+      "x": 16.2,
+      "y": -26.4,
+      "type": "arid",
+      "habitability": 62,
+      "richness": 3,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 8,
+      "growth": 0.2,
+      "buildings": [
+        "habitat",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s15",
+      "name": "Kepler",
+      "x": 8.6,
+      "y": 30.3,
+      "type": "ocean",
+      "habitability": 75,
+      "richness": 3,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s16",
+      "name": "Stillwater",
+      "x": -29.4,
+      "y": -12.8,
+      "type": "terran",
+      "habitability": 84,
+      "richness": 4,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0.4,
+      "buildings": [
+        "lab",
+        "factory",
+        "habitat",
+        "beacon",
+        "mine"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "resolvedBy": "veyr",
+        "observations": {
+          "khar": {
+            "observedTurn": 68,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 70,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "veyr",
+        "khar",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s17",
+      "name": "Orison",
+      "x": 31.4,
+      "y": -5.3,
+      "type": "arid",
+      "habitability": 57,
+      "richness": 2,
+      "science": 4,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 5,
+      "growth": 0.4,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s18",
+      "name": "Cinder",
+      "x": -22.7,
+      "y": 25.7,
+      "type": "terran",
+      "habitability": 84,
+      "richness": 5,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "mine",
+        "forum",
+        "habitat",
+        "factory",
+        "shipyard",
+        "beacon"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir"
+      ],
+      "charter": {
+        "type": "forge",
+        "level": 1
+      }
+    },
+    {
+      "id": "s19",
+      "name": "Bellatrix",
+      "x": -4.3,
+      "y": -34.6,
+      "type": "volcanic",
+      "habitability": 22,
+      "richness": 5,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s20",
+      "name": "Sundrift",
+      "x": 28.5,
+      "y": 24.3,
+      "type": "terran",
+      "habitability": 81,
+      "richness": 2,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "resolvedBy": "khar"
+      },
+      "knownBy": [
+        "player",
+        "khar",
+        "choir",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s21",
+      "name": "Thalassa",
+      "x": -35.9,
+      "y": -4,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 2,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "forum",
+        "habitat",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ]
+    },
+    {
+      "id": "s22",
+      "name": "Ophion",
+      "x": 28,
+      "y": -23.1,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 4,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "mine",
+        "shipyard",
+        "beacon",
+        "bastion"
+      ],
+      "queue": {
+        "itemId": "frigate",
+        "kind": "ship",
+        "progress": 24,
+        "work": 26,
+        "cost": {
+          "credits": 25,
+          "minerals": 35
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "player",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s23",
+      "name": "Tethys",
+      "x": -1.5,
+      "y": 38.8,
+      "type": "ocean",
+      "habitability": 73,
+      "richness": 1,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s24",
+      "name": "Corvus",
+      "x": -26.9,
+      "y": -28.3,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 1,
+      "science": 4,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "lab",
+        "factory",
+        "habitat",
+        "beacon"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "resolvedBy": "khar",
+        "observations": {
+          "khar": {
+            "observedTurn": 70,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "khar"
+      ],
+      "charter": {
+        "type": "academy",
+        "level": 1
+      }
+    },
+    {
+      "id": "s25",
+      "name": "Elysian",
+      "x": 39.3,
+      "y": 9,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 4,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "khar",
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s26",
+      "name": "Aster",
+      "x": -36,
+      "y": 20.6,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 1,
+      "science": 3,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "market",
+        "factory",
+        "lab",
+        "habitat",
+        "beacon"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "khar",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir"
+      ],
+      "charter": {
+        "type": "academy",
+        "level": 1
+      }
+    },
+    {
+      "id": "s27",
+      "name": "Nyx",
+      "x": 11,
+      "y": -40,
+      "type": "arid",
+      "habitability": 56,
+      "richness": 1,
+      "science": 1,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 6,
+      "growth": 0.6,
+      "buildings": [
+        "bastion"
+      ],
+      "queue": {
+        "itemId": "shipyard",
+        "kind": "building",
+        "progress": 28,
+        "work": 32,
+        "cost": {
+          "credits": 25,
+          "minerals": 35
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s28",
+      "name": "Haven",
+      "x": 17.3,
+      "y": 38,
+      "type": "terran",
+      "habitability": 84,
+      "richness": 2,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "archive",
+        "resolved": true,
+        "resolvedBy": "veyr"
+      },
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "khar",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s29",
+      "name": "Aldebaran",
+      "x": -40,
+      "y": -14,
+      "type": "ocean",
+      "habitability": 79,
+      "richness": 5,
+      "science": 3,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "mine",
+        "factory",
+        "bastion"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "khar"
+      ],
+      "charter": {
+        "type": "extraction",
+        "level": 2
+      }
+    },
+    {
+      "id": "s30",
+      "name": "Caelum",
+      "x": 38.3,
+      "y": -23.1,
+      "type": "ocean",
+      "habitability": 70,
+      "richness": 5,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 11,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "habitat",
+        "factory"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir"
+      ],
+      "charter": {
+        "type": "extraction",
+        "level": 1
+      }
+    },
+    {
+      "id": "s31",
+      "name": "Vesper",
+      "x": -20.2,
+      "y": 38.1,
+      "type": "ice",
+      "habitability": 43,
+      "richness": 1,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 9,
+      "growth": 0.6,
+      "buildings": [
+        "lab",
+        "forum",
+        "habitat"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s32",
+      "name": "Iona",
+      "x": -14.6,
+      "y": -41.5,
+      "type": "volcanic",
+      "habitability": 20,
+      "richness": 3,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "resolvedBy": "khar"
+      },
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s33",
+      "name": "Halcyon",
+      "x": 39.9,
+      "y": 22.3,
+      "type": "ocean",
+      "habitability": 78,
+      "richness": 2,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "khar",
+        "choir",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s34",
+      "name": "Antares",
+      "x": -42.9,
+      "y": 12.1,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 1,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 12,
+      "growth": 0,
+      "buildings": [
+        "habitat"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "khar",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s35",
+      "name": "Seraph",
+      "x": 24.8,
+      "y": -39,
+      "type": "barren",
+      "habitability": 18,
+      "richness": 5,
+      "science": 1,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 2,
+      "growth": 0.3,
+      "buildings": [
+        "mine"
+      ],
+      "queue": {
+        "itemId": "factory",
+        "kind": "building",
+        "progress": 12,
+        "work": 40,
+        "cost": {
+          "credits": 35,
+          "minerals": 45
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "khar",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s36",
+      "name": "Peregrine",
+      "x": 7.6,
+      "y": 46.7,
+      "type": "volcanic",
+      "habitability": 27,
+      "richness": 1,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "pilgrims",
+        "resolved": true,
+        "resolvedBy": "choir"
+      },
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "khar",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s37",
+      "name": "Morrow",
+      "x": -40.2,
+      "y": -26.1,
+      "type": "barren",
+      "habitability": 14,
+      "richness": 3,
+      "science": 3,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 3,
+      "growth": 0,
+      "buildings": [
+        "habitat"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr"
+      ],
+      "exploredBy": [
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s38",
+      "name": "Zenith",
+      "x": 48.2,
+      "y": -0.1,
+      "type": "volcanic",
+      "habitability": 20,
+      "richness": 2,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "khar",
+        "choir",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s39",
+      "name": "Eos",
+      "x": -31.8,
+      "y": 37.3,
+      "type": "terran",
+      "habitability": 83,
+      "richness": 2,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "lab",
+        "mine",
+        "factory",
+        "forum"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir"
+      ],
+      "charter": {
+        "type": "civic",
+        "level": 1
+      }
+    },
+    {
+      "id": "s40",
+      "name": "Terminus",
+      "x": 2.7,
+      "y": -50.4,
+      "type": "barren",
+      "habitability": 43,
+      "richness": 5,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 6,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "bastion"
+      ],
+      "queue": {
+        "itemId": "extraction",
+        "kind": "charter",
+        "charterType": "extraction",
+        "charterLevel": 1,
+        "progress": 58,
+        "work": 60,
+        "cost": {
+          "credits": 120,
+          "minerals": 60
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "garden",
+        "resolved": true,
+        "resolvedBy": "khar",
+        "observations": {
+          "choir": {
+            "observedTurn": 57,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 70,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar",
+        "veyr",
+        "choir"
+      ]
+    },
+    {
+      "id": "s41",
+      "name": "Asterion",
+      "x": 32.7,
+      "y": 39.4,
+      "type": "arid",
+      "habitability": 56,
+      "richness": 5,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "choir",
+        "khar",
+        "veyr"
+      ],
+      "exploredBy": [
+        "choir",
+        "khar",
+        "veyr"
+      ]
+    }
+  ],
+  "lanes": [
+    [
+      "s0",
+      "s20"
+    ],
+    [
+      "s0",
+      "s41"
+    ],
+    [
+      "s20",
+      "s33"
+    ],
+    [
+      "s33",
+      "s25"
+    ],
+    [
+      "s25",
+      "s38"
+    ],
+    [
+      "s25",
+      "s12"
+    ],
+    [
+      "s12",
+      "s4"
+    ],
+    [
+      "s0",
+      "s28"
+    ],
+    [
+      "s28",
+      "s15"
+    ],
+    [
+      "s28",
+      "s36"
+    ],
+    [
+      "s36",
+      "s23"
+    ],
+    [
+      "s4",
+      "s7"
+    ],
+    [
+      "s12",
+      "s17"
+    ],
+    [
+      "s17",
+      "s9"
+    ],
+    [
+      "s9",
+      "s14"
+    ],
+    [
+      "s9",
+      "s22"
+    ],
+    [
+      "s22",
+      "s3"
+    ],
+    [
+      "s22",
+      "s30"
+    ],
+    [
+      "s3",
+      "s35"
+    ],
+    [
+      "s35",
+      "s27"
+    ],
+    [
+      "s27",
+      "s40"
+    ],
+    [
+      "s27",
+      "s19"
+    ],
+    [
+      "s19",
+      "s11"
+    ],
+    [
+      "s11",
+      "s6"
+    ],
+    [
+      "s19",
+      "s32"
+    ],
+    [
+      "s11",
+      "s24"
+    ],
+    [
+      "s24",
+      "s2"
+    ],
+    [
+      "s2",
+      "s37"
+    ],
+    [
+      "s37",
+      "s29"
+    ],
+    [
+      "s29",
+      "s16"
+    ],
+    [
+      "s29",
+      "s21"
+    ],
+    [
+      "s16",
+      "s8"
+    ],
+    [
+      "s8",
+      "s13"
+    ],
+    [
+      "s13",
+      "s5"
+    ],
+    [
+      "s13",
+      "s26"
+    ],
+    [
+      "s26",
+      "s1"
+    ],
+    [
+      "s1",
+      "s18"
+    ],
+    [
+      "s1",
+      "s39"
+    ],
+    [
+      "s26",
+      "s34"
+    ],
+    [
+      "s39",
+      "s31"
+    ],
+    [
+      "s5",
+      "s10"
+    ],
+    [
+      "s5",
+      "s8"
+    ],
+    [
+      "s6",
+      "s19"
+    ],
+    [
+      "s7",
+      "s15"
+    ],
+    [
+      "s8",
+      "s21"
+    ],
+    [
+      "s10",
+      "s23"
+    ],
+    [
+      "s14",
+      "s22"
+    ],
+    [
+      "s15",
+      "s23"
+    ],
+    [
+      "s16",
+      "s21"
+    ],
+    [
+      "s18",
+      "s31"
+    ],
+    [
+      "s24",
+      "s37"
+    ],
+    [
+      "s30",
+      "s3"
+    ],
+    [
+      "s32",
+      "s11"
+    ],
+    [
+      "s33",
+      "s0"
+    ],
+    [
+      "s34",
+      "s13"
+    ],
+    [
+      "s38",
+      "s17"
+    ],
+    [
+      "s40",
+      "s19"
+    ],
+    [
+      "s41",
+      "s28"
+    ]
+  ],
+  "factions": [
+    {
+      "id": "player",
+      "name": "The Concord",
+      "shortName": "Concord",
+      "color": "#68d9cd",
+      "motto": "Many worlds. One horizon.",
+      "trait": "Civic mandate",
+      "description": "A federation of survivors, united by a fragile promise. Receives one additional order each turn.",
+      "home": "Solace",
+      "leader": "First Speaker Mara Voss",
+      "credits": 1681,
+      "minerals": 765,
+      "science": 584,
+      "research": null,
+      "techs": [],
+      "orders": 6,
+      "contacts": [
+        "khar",
+        "choir",
+        "veyr"
+      ],
+      "capitalId": "s0",
+      "eliminated": false,
+      "relations": {
+        "veyr": {
+          "status": "peace",
+          "trust": 66,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "khar": {
+          "status": "peace",
+          "trust": -10,
+          "trade": false,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0
+        },
+        "choir": {
+          "status": "peace",
+          "trust": 72,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        }
+      },
+      "alignment": {
+        "progress": 0,
+        "sites": [],
+        "active": false,
+        "started": false,
+        "reportedBeacons": []
+      }
+    },
+    {
+      "id": "veyr",
+      "name": "Veyr Consortium",
+      "shortName": "Veyr",
+      "color": "#e5b665",
+      "motto": "Every star has its price.",
+      "trait": "Merchant houses",
+      "description": "Trade leagues that turn the frontier into opportunity. Earns 25% more credits.",
+      "home": "Veyr Prime",
+      "leader": "Director Cassian Rook",
+      "credits": 6842,
+      "minerals": 145,
+      "science": 1561,
+      "research": null,
+      "techs": [
+        "logistics",
+        "ecology",
+        "diplomacy",
+        "industry",
+        "physics",
+        "computing",
+        "weapons",
+        "singularity",
+        "command",
+        "shields",
+        "cruisers",
+        "terraforming"
+      ],
+      "orders": 18,
+      "contacts": [
+        "khar",
+        "choir",
+        "player"
+      ],
+      "capitalId": "s1",
+      "eliminated": false,
+      "relations": {
+        "player": {
+          "status": "peace",
+          "trust": 66,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "khar": {
+          "status": "war",
+          "trust": -53,
+          "trade": false,
+          "treatyTurn": 64,
+          "lastBorderCount": 3,
+          "grievance": 5,
+          "tradeEndsAt": 0,
+          "truceUntil": 0,
+          "warStartColonies": 7
+        },
+        "choir": {
+          "status": "peace",
+          "trust": -5,
+          "trade": false,
+          "treatyTurn": 66,
+          "lastBorderCount": 3,
+          "grievance": 0,
+          "tradeEndsAt": 0,
+          "truceUntil": 71,
+          "warStartColonies": 6
+        }
+      },
+      "strategy": {
+        "mode": "advance",
+        "rallyId": "s16",
+        "objectiveId": "s21",
+        "turn": 69
+      },
+      "alignment": {
+        "progress": 10,
+        "sites": [
+          "s18",
+          "s26",
+          "s1"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s1",
+          "s9",
+          "s16",
+          "s18",
+          "s26"
+        ]
+      }
+    },
+    {
+      "id": "khar",
+      "name": "Khar Dominion",
+      "shortName": "Khar",
+      "color": "#ef7e7a",
+      "motto": "The void respects strength.",
+      "trait": "War foundries",
+      "description": "A martial society forged on hostile worlds. Warships deal 15% more damage.",
+      "home": "Kharos",
+      "leader": "High Marshal Sera Kade",
+      "credits": 2404,
+      "minerals": 313,
+      "science": 2250,
+      "research": null,
+      "techs": [
+        "weapons",
+        "logistics",
+        "cruisers",
+        "industry",
+        "physics",
+        "shields",
+        "ecology",
+        "computing",
+        "singularity",
+        "diplomacy",
+        "command",
+        "terraforming"
+      ],
+      "orders": 18,
+      "contacts": [
+        "choir",
+        "veyr",
+        "player"
+      ],
+      "capitalId": "s2",
+      "eliminated": false,
+      "relations": {
+        "player": {
+          "status": "peace",
+          "trust": -10,
+          "trade": false,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0
+        },
+        "veyr": {
+          "status": "war",
+          "trust": -56,
+          "trade": false,
+          "treatyTurn": 64,
+          "lastBorderCount": 3,
+          "grievance": 32,
+          "tradeEndsAt": 0,
+          "truceUntil": 0,
+          "warStartColonies": 10
+        },
+        "choir": {
+          "status": "peace",
+          "trust": -6,
+          "trade": false,
+          "treatyTurn": 69,
+          "lastBorderCount": 3,
+          "grievance": 1,
+          "tradeEndsAt": 0,
+          "truceUntil": 74,
+          "warStartColonies": 10
+        }
+      },
+      "strategy": {
+        "mode": "defend",
+        "rallyId": "s21",
+        "objectiveId": "s8",
+        "turn": 69
+      },
+      "alignment": {
+        "progress": 6,
+        "sites": [
+          "s2",
+          "s24",
+          "s3"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s2",
+          "s3",
+          "s24"
+        ]
+      }
+    },
+    {
+      "id": "choir",
+      "name": "The Luminous Choir",
+      "shortName": "Choir",
+      "color": "#bca0ef",
+      "motto": "The universe remembers.",
+      "trait": "Shared consciousness",
+      "description": "A communion seeking the intelligence behind the ancient gates. Produces 25% more science.",
+      "home": "Lumen",
+      "leader": "The Ninth Voice",
+      "credits": 3581,
+      "minerals": 191,
+      "science": 2317,
+      "research": null,
+      "techs": [
+        "physics",
+        "logistics",
+        "computing",
+        "industry",
+        "singularity",
+        "ecology",
+        "weapons",
+        "diplomacy",
+        "shields",
+        "command",
+        "cruisers",
+        "terraforming"
+      ],
+      "orders": 12,
+      "contacts": [
+        "khar",
+        "veyr",
+        "player"
+      ],
+      "capitalId": "s14",
+      "eliminated": false,
+      "relations": {
+        "player": {
+          "status": "peace",
+          "trust": 72,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "veyr": {
+          "status": "peace",
+          "trust": -5,
+          "trade": false,
+          "treatyTurn": 66,
+          "lastBorderCount": 1,
+          "grievance": 16,
+          "tradeEndsAt": 0,
+          "truceUntil": 71,
+          "warStartColonies": 7
+        },
+        "khar": {
+          "status": "peace",
+          "trust": -5,
+          "trade": false,
+          "treatyTurn": 69,
+          "lastBorderCount": 3,
+          "grievance": 12,
+          "tradeEndsAt": 0,
+          "truceUntil": 74,
+          "warStartColonies": 7
+        }
+      },
+      "strategy": {
+        "mode": "develop",
+        "rallyId": "s14",
+        "objectiveId": null,
+        "turn": 69
+      },
+      "alignment": {
+        "progress": 0,
+        "sites": [
+          "s22"
+        ],
+        "active": false,
+        "started": true,
+        "reportedBeacons": [
+          "s22"
+        ]
+      }
+    }
+  ],
+  "fleets": [
+    {
+      "id": "f1",
+      "name": "Pathfinder 1",
+      "owner": "player",
+      "systemId": "s0",
+      "type": "scout",
+      "ships": 1,
+      "hp": 18,
+      "movesLeft": 2
+    },
+    {
+      "id": "f2",
+      "name": "Colony Ark 2",
+      "owner": "player",
+      "systemId": "s0",
+      "type": "colony",
+      "ships": 1,
+      "hp": 24,
+      "movesLeft": 1
+    },
+    {
+      "id": "f3",
+      "name": "Vanguard 3",
+      "owner": "player",
+      "systemId": "s0",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 34,
+      "movesLeft": 1
+    },
+    {
+      "id": "f12",
+      "name": "Vanguard 12",
+      "owner": "choir",
+      "systemId": "s22",
+      "type": "frigate",
+      "ships": 3,
+      "hp": 88.1,
+      "movesLeft": 2
+    },
+    {
+      "id": "f24",
+      "name": "Sovereign 24",
+      "owner": "khar",
+      "systemId": "s35",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 76.9,
+      "movesLeft": 2
+    },
+    {
+      "id": "f45",
+      "name": "Sovereign 45",
+      "owner": "khar",
+      "systemId": "s8",
+      "type": "cruiser",
+      "ships": 2,
+      "hp": 132.4,
+      "movesLeft": 2
+    },
+    {
+      "id": "f47",
+      "name": "Vanguard 47",
+      "owner": "khar",
+      "systemId": "s21",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 34,
+      "movesLeft": 2
+    },
+    {
+      "id": "f55",
+      "name": "Sovereign 55",
+      "owner": "veyr",
+      "systemId": "s18",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 2
+    },
+    {
+      "id": "f56",
+      "name": "Sovereign 56",
+      "owner": "khar",
+      "systemId": "s37",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 2
+    },
+    {
+      "id": "f57",
+      "name": "Sovereign 57",
+      "owner": "veyr",
+      "systemId": "s1",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 2
+    },
+    {
+      "id": "f58",
+      "name": "Sovereign 58",
+      "owner": "khar",
+      "systemId": "s3",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 2
+    },
+    {
+      "id": "f59",
+      "name": "Sovereign 59",
+      "owner": "veyr",
+      "systemId": "s18",
+      "type": "cruiser",
+      "ships": 1,
+      "hp": 85,
+      "movesLeft": 2
+    }
+  ],
+  "log": [
+    {
+      "id": 42,
+      "turn": 70,
+      "type": "victory",
+      "text": "Veyr Consortium achieves transcendence. The chronicle of this age is complete."
+    },
+    {
+      "id": 41,
+      "turn": 70,
+      "type": "alignment",
+      "text": "Khar Dominion resumes Asterion alignment (6/10).",
+      "systemId": "s2"
+    },
+    {
+      "id": 40,
+      "turn": 70,
+      "type": "alignment",
+      "text": "Veyr Consortium reaches 10/10 Asterion alignment.",
+      "systemId": "s18"
+    },
+    {
+      "id": 39,
+      "turn": 69,
+      "type": "diplomacy",
+      "text": "Peace agreed between Khar Dominion and The Luminous Choir. Their truce forbids war until cycle 74.",
+      "publicAffairId": 8,
+      "targetId": "khar"
+    },
+    {
+      "id": 38,
+      "turn": 69,
+      "type": "alignment",
+      "text": "Veyr Consortium has restored an Asterion Beacon at Stillwater (5 owned).",
+      "systemId": "s16"
+    },
+    {
+      "id": 37,
+      "turn": 68,
+      "type": "sovereignty",
+      "text": "Stillwater changed sovereignty from Khar Dominion to Veyr Consortium.",
+      "publicAffairId": 7,
+      "targetId": "veyr",
+      "systemId": "s16"
+    },
+    {
+      "id": 36,
+      "turn": 68,
+      "type": "alignment",
+      "text": "Veyr Consortium reaches 8/10 Asterion alignment.",
+      "systemId": "s18"
+    },
+    {
+      "id": 35,
+      "turn": 66,
+      "type": "diplomacy",
+      "text": "Peace agreed between Veyr Consortium and The Luminous Choir. Their truce forbids war until cycle 71.",
+      "publicAffairId": 6,
+      "targetId": "veyr"
+    },
+    {
+      "id": 34,
+      "turn": 66,
+      "type": "alignment",
+      "text": "Khar Dominion’s Asterion alignment is interrupted (8/10).",
+      "systemId": "s2"
+    },
+    {
+      "id": 33,
+      "turn": 66,
+      "type": "alignment",
+      "text": "Khar Dominion has restored an Asterion Beacon at Lumen (4 owned).",
+      "systemId": "s3"
+    },
+    {
+      "id": 32,
+      "turn": 66,
+      "type": "alignment",
+      "text": "Veyr Consortium has restored an Asterion Beacon at Velorum (4 owned).",
+      "systemId": "s9"
+    },
+    {
+      "id": 31,
+      "turn": 65,
+      "type": "sovereignty",
+      "text": "Lumen changed sovereignty from The Luminous Choir to Khar Dominion.",
+      "publicAffairId": 5,
+      "targetId": "khar",
+      "systemId": "s3"
+    },
+    {
+      "id": 30,
+      "turn": 65,
+      "type": "sovereignty",
+      "text": "Velorum changed sovereignty from The Luminous Choir to Veyr Consortium.",
+      "publicAffairId": 4,
+      "targetId": "veyr",
+      "systemId": "s9"
+    },
+    {
+      "id": 29,
+      "turn": 65,
+      "type": "alignment",
+      "text": "Veyr Consortium reaches 5/10 Asterion alignment.",
+      "systemId": "s18"
+    },
+    {
+      "id": 28,
+      "turn": 64,
+      "type": "war",
+      "text": "Veyr Consortium declared war on Khar Dominion.",
+      "publicAffairId": 3,
+      "targetId": "veyr"
+    },
+    {
+      "id": 27,
+      "turn": 64,
+      "type": "alignment",
+      "text": "Khar Dominion reaches 8/10 Asterion alignment.",
+      "systemId": "s2"
+    },
+    {
+      "id": 26,
+      "turn": 63,
+      "type": "alignment",
+      "text": "The Luminous Choir’s Asterion alignment is interrupted (7/10).",
+      "systemId": "s3"
+    },
+    {
+      "id": 25,
+      "turn": 62,
+      "type": "alignment",
+      "text": "The Luminous Choir reaches 8/10 Asterion alignment.",
+      "systemId": "s3"
+    },
+    {
+      "id": 24,
+      "turn": 61,
+      "type": "alignment",
+      "text": "Khar Dominion reaches 5/10 Asterion alignment.",
+      "systemId": "s2"
+    },
+    {
+      "id": 23,
+      "turn": 61,
+      "type": "alignment",
+      "text": "Veyr Consortium begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.",
+      "systemId": "s18"
+    },
+    {
+      "id": 22,
+      "turn": 61,
+      "type": "alignment",
+      "text": "Veyr Consortium broadcasts an Asterion Beacon at Veyr Prime. Its location is now charted.",
+      "systemId": "s1"
+    },
+    {
+      "id": 21,
+      "turn": 59,
+      "type": "alignment",
+      "text": "The Luminous Choir reaches 5/10 Asterion alignment.",
+      "systemId": "s3"
+    },
+    {
+      "id": 20,
+      "turn": 57,
+      "type": "war",
+      "text": "Khar Dominion declared war on The Luminous Choir.",
+      "publicAffairId": 2,
+      "targetId": "khar"
+    },
+    {
+      "id": 19,
+      "turn": 57,
+      "type": "war",
+      "text": "Veyr Consortium declared war on The Luminous Choir.",
+      "publicAffairId": 1,
+      "targetId": "veyr"
+    },
+    {
+      "id": 18,
+      "turn": 57,
+      "type": "alignment",
+      "text": "Khar Dominion begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.",
+      "systemId": "s2"
+    },
+    {
+      "id": 17,
+      "turn": 57,
+      "type": "alignment",
+      "text": "Khar Dominion broadcasts an Asterion Beacon at Corvus. Its location is now charted.",
+      "systemId": "s24"
+    },
+    {
+      "id": 16,
+      "turn": 55,
+      "type": "alignment",
+      "text": "The Luminous Choir begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.",
+      "systemId": "s3"
+    },
+    {
+      "id": 15,
+      "turn": 55,
+      "type": "alignment",
+      "text": "The Luminous Choir broadcasts an Asterion Beacon at Ophion. Its location is now charted.",
+      "systemId": "s22"
+    },
+    {
+      "id": 14,
+      "turn": 54,
+      "type": "alignment",
+      "text": "Khar Dominion broadcasts an Asterion Beacon at Stillwater. Its location is now charted.",
+      "systemId": "s16"
+    },
+    {
+      "id": 13,
+      "turn": 54,
+      "type": "alignment",
+      "text": "Veyr Consortium broadcasts an Asterion Beacon at Aster. Its location is now charted.",
+      "systemId": "s26"
+    },
+    {
+      "id": 12,
+      "turn": 51,
+      "type": "alignment",
+      "text": "Khar Dominion broadcasts an Asterion Beacon at Kharos. Its location is now charted.",
+      "systemId": "s2"
+    },
+    {
+      "id": 11,
+      "turn": 48,
+      "type": "alignment",
+      "text": "Veyr Consortium broadcasts an Asterion Beacon at Cinder. Its location is now charted.",
+      "systemId": "s18"
+    },
+    {
+      "id": 10,
+      "turn": 45,
+      "type": "alignment",
+      "text": "The Luminous Choir broadcasts an Asterion Beacon at Velorum. Its location is now charted.",
+      "systemId": "s9"
+    },
+    {
+      "id": 9,
+      "turn": 41,
+      "type": "alignment",
+      "text": "The Luminous Choir broadcasts an Asterion Beacon at Lumen. Its location is now charted.",
+      "systemId": "s3"
+    },
+    {
+      "id": 8,
+      "turn": 33,
+      "type": "construction",
+      "text": "Solace completed Research Enclave.",
+      "systemId": "s0",
+      "itemId": "lab"
+    },
+    {
+      "id": 7,
+      "turn": 24,
+      "type": "diplomacy",
+      "text": "Trade established between Veyr Consortium and The Concord. Borders are open; existing grievances remain.",
+      "targetId": "veyr"
+    },
+    {
+      "id": 6,
+      "turn": 23,
+      "type": "diplomacy",
+      "text": "First contact: Veyr Consortium. A diplomatic channel is open.",
+      "targetId": "veyr"
+    },
+    {
+      "id": 5,
+      "turn": 18,
+      "type": "diplomacy",
+      "text": "Trade established between The Luminous Choir and The Concord. Borders are open; existing grievances remain.",
+      "targetId": "choir"
+    },
+    {
+      "id": 4,
+      "turn": 17,
+      "type": "diplomacy",
+      "text": "First contact: The Luminous Choir. A diplomatic channel is open.",
+      "targetId": "choir"
+    },
+    {
+      "id": 3,
+      "turn": 14,
+      "type": "diplomacy",
+      "text": "First contact: Khar Dominion. A diplomatic channel is open.",
+      "targetId": "khar"
+    },
+    {
+      "id": 2,
+      "turn": 1,
+      "type": "objective",
+      "text": "First mandate: send your Pathfinder through a starlane, then bring a Colony Ark to a habitable world."
+    },
+    {
+      "id": 1,
+      "turn": 1,
+      "type": "story",
+      "text": "The gates have been silent for centuries. Today, the Concord returns to the stars."
+    }
+  ],
+  "combatReports": [],
+  "lastBriefing": {
+    "turn": 70,
+    "entries": [
+      {
+        "id": 42,
+        "turn": 70,
+        "type": "victory",
+        "text": "Veyr Consortium achieves transcendence. The chronicle of this age is complete."
+      },
+      {
+        "id": 41,
+        "turn": 70,
+        "type": "alignment",
+        "text": "Khar Dominion resumes Asterion alignment (6/10).",
+        "systemId": "s2"
+      },
+      {
+        "id": 40,
+        "turn": 70,
+        "type": "alignment",
+        "text": "Veyr Consortium reaches 10/10 Asterion alignment.",
+        "systemId": "s18"
+      },
+      {
+        "id": 39,
+        "turn": 69,
+        "type": "diplomacy",
+        "text": "Peace agreed between Khar Dominion and The Luminous Choir. Their truce forbids war until cycle 74.",
+        "publicAffairId": 8,
+        "targetId": "khar"
+      }
+    ],
+    "reportIds": []
+  },
+  "winner": "veyr",
+  "victoryType": "Transcendence",
+  "diplomacyUpdatedTurn": 70,
+  "discoveriesUpdatedTurn": 70,
+  "alignmentUpdatedTurn": 70,
+  "publicAffairs": {
+    "version": 1,
+    "observers": {
+      "player": {
+        "nextId": 9,
+        "dispatches": [
+          {
+            "id": 8,
+            "turn": 69,
+            "kind": "peace",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "khar",
+            "untilTurn": 74,
+            "text": "Peace agreed between Khar Dominion and The Luminous Choir. Their truce forbids war until cycle 74."
+          },
+          {
+            "id": 7,
+            "turn": 68,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              }
+            ],
+            "systemId": "s16",
+            "systemName": "Stillwater",
+            "targetId": "veyr",
+            "text": "Stillwater changed sovereignty from Khar Dominion to Veyr Consortium."
+          },
+          {
+            "id": 6,
+            "turn": 66,
+            "kind": "peace",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "veyr",
+            "untilTurn": 71,
+            "text": "Peace agreed between Veyr Consortium and The Luminous Choir. Their truce forbids war until cycle 71."
+          },
+          {
+            "id": 5,
+            "turn": 65,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              }
+            ],
+            "systemId": "s3",
+            "systemName": "Lumen",
+            "targetId": "khar",
+            "text": "Lumen changed sovereignty from The Luminous Choir to Khar Dominion."
+          },
+          {
+            "id": 4,
+            "turn": 65,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              }
+            ],
+            "systemId": "s9",
+            "systemName": "Velorum",
+            "targetId": "veyr",
+            "text": "Velorum changed sovereignty from The Luminous Choir to Veyr Consortium."
+          },
+          {
+            "id": 3,
+            "turn": 64,
+            "kind": "war",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              }
+            ],
+            "targetId": "veyr",
+            "text": "Veyr Consortium declared war on Khar Dominion."
+          },
+          {
+            "id": 2,
+            "turn": 57,
+            "kind": "war",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "khar",
+            "text": "Khar Dominion declared war on The Luminous Choir."
+          },
+          {
+            "id": 1,
+            "turn": 57,
+            "kind": "war",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "veyr",
+            "text": "Veyr Consortium declared war on The Luminous Choir."
+          }
+        ],
+        "transfers": [
+          {
+            "id": 7,
+            "turn": 68,
+            "systemId": "s16",
+            "systemName": "Stillwater",
+            "from": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          },
+          {
+            "id": 5,
+            "turn": 65,
+            "systemId": "s3",
+            "systemName": "Lumen",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 4,
+            "turn": 65,
+            "systemId": "s9",
+            "systemName": "Velorum",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          }
+        ]
+      },
+      "khar": {
+        "nextId": 7,
+        "dispatches": [
+          {
+            "id": 4,
+            "turn": 66,
+            "kind": "peace",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "veyr",
+            "untilTurn": 71,
+            "text": "Peace agreed between Veyr Consortium and The Luminous Choir. Their truce forbids war until cycle 71."
+          },
+          {
+            "id": 2,
+            "turn": 65,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              }
+            ],
+            "systemId": "s9",
+            "systemName": "Velorum",
+            "targetId": "veyr",
+            "text": "Velorum changed sovereignty from The Luminous Choir to Veyr Consortium."
+          },
+          {
+            "id": 1,
+            "turn": 57,
+            "kind": "war",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "veyr",
+            "text": "Veyr Consortium declared war on The Luminous Choir."
+          }
+        ],
+        "transfers": [
+          {
+            "id": 6,
+            "turn": 68,
+            "systemId": "s35",
+            "systemName": "Seraph",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 5,
+            "turn": 68,
+            "systemId": "s16",
+            "systemName": "Stillwater",
+            "from": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          },
+          {
+            "id": 3,
+            "turn": 65,
+            "systemId": "s3",
+            "systemName": "Lumen",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 2,
+            "turn": 65,
+            "systemId": "s9",
+            "systemName": "Velorum",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          }
+        ]
+      },
+      "veyr": {
+        "nextId": 7,
+        "dispatches": [
+          {
+            "id": 6,
+            "turn": 69,
+            "kind": "peace",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "khar",
+            "untilTurn": 74,
+            "text": "Peace agreed between Khar Dominion and The Luminous Choir. Their truce forbids war until cycle 74."
+          },
+          {
+            "id": 5,
+            "turn": 68,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              }
+            ],
+            "systemId": "s35",
+            "systemName": "Seraph",
+            "targetId": "khar",
+            "text": "Seraph changed sovereignty from The Luminous Choir to Khar Dominion."
+          },
+          {
+            "id": 3,
+            "turn": 65,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              }
+            ],
+            "systemId": "s3",
+            "systemName": "Lumen",
+            "targetId": "khar",
+            "text": "Lumen changed sovereignty from The Luminous Choir to Khar Dominion."
+          },
+          {
+            "id": 1,
+            "turn": 57,
+            "kind": "war",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "khar",
+            "text": "Khar Dominion declared war on The Luminous Choir."
+          }
+        ],
+        "transfers": [
+          {
+            "id": 5,
+            "turn": 68,
+            "systemId": "s35",
+            "systemName": "Seraph",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 4,
+            "turn": 68,
+            "systemId": "s16",
+            "systemName": "Stillwater",
+            "from": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          },
+          {
+            "id": 3,
+            "turn": 65,
+            "systemId": "s3",
+            "systemName": "Lumen",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 2,
+            "turn": 65,
+            "systemId": "s9",
+            "systemName": "Velorum",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          }
+        ]
+      },
+      "choir": {
+        "nextId": 6,
+        "dispatches": [
+          {
+            "id": 4,
+            "turn": 68,
+            "kind": "sovereignty",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              }
+            ],
+            "systemId": "s16",
+            "systemName": "Stillwater",
+            "targetId": "veyr",
+            "text": "Stillwater changed sovereignty from Khar Dominion to Veyr Consortium."
+          },
+          {
+            "id": 1,
+            "turn": 64,
+            "kind": "war",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              }
+            ],
+            "targetId": "veyr",
+            "text": "Veyr Consortium declared war on Khar Dominion."
+          }
+        ],
+        "transfers": [
+          {
+            "id": 5,
+            "turn": 68,
+            "systemId": "s35",
+            "systemName": "Seraph",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 4,
+            "turn": 68,
+            "systemId": "s16",
+            "systemName": "Stillwater",
+            "from": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          },
+          {
+            "id": 3,
+            "turn": 65,
+            "systemId": "s3",
+            "systemName": "Lumen",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "khar",
+              "name": "Khar Dominion",
+              "shortName": "Khar",
+              "color": "#ef7e7a"
+            }
+          },
+          {
+            "id": 2,
+            "turn": 65,
+            "systemId": "s9",
+            "systemName": "Velorum",
+            "from": {
+              "id": "choir",
+              "name": "The Luminous Choir",
+              "shortName": "Choir",
+              "color": "#bca0ef"
+            },
+            "to": {
+              "id": "veyr",
+              "name": "Veyr Consortium",
+              "shortName": "Veyr",
+              "color": "#e5b665"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

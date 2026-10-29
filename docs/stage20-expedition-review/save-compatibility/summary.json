@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-10-29T01:40:47.571Z",
+  "engineRevision": "47e037308271ff3d3ac0d1fc870a889cdf0a67c4",
+  "engine": {
+    "inputs": 19,
+    "uniqueInputHashes": 16,
+    "accepted": 19,
+    "unfinishedImports": 16,
+    "finishedImports": 3,
+    "continuationSteps": 490,
+    "reloadChecks": 490,
+    "stateChecks": 999,
+    "retainedQueueReceiptChecks": 218,
+    "retainedReportChecks": 200,
+    "finishedAtomicChecks": 22
+  },
+  "features": {
+    "paidQueues": 157,
+    "oldBattleReports": 48,
+    "tracefreeOldReports": 48,
+    "routes": 1,
+    "hold": 13,
+    "defenseLead": 4,
+    "heritageFleets": 9,
+    "kindlessPeaceRecords": 6,
+    "typedTradeRecords": 9,
+    "cooldownRelations": 5,
+    "overCapacityColonies": 27
+  },
+  "uiUniqueCases": 6,
+  "uiCases": [
+    {
+      "id": "original-asterion",
+      "viewport": [
+        1440,
+        960
+      ],
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "exportFullStateEqual": true,
+      "exportByteIdentical": false,
+      "autosaveReloadEqual": true,
+      "recordedConclusion": false,
+      "pageErrors": [],
+      "screenshot": "original-asterion-import.png"
+    },
+    {
+      "id": "actual-stage6-route63",
+      "viewport": [
+        1280,
+        900
+      ],
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "exportFullStateEqual": true,
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "recordedConclusion": false,
+      "pageErrors": [],
+      "screenshot": "actual-stage6-route63-import.png"
+    },
+    {
+      "id": "actual-stage6-final67",
+      "viewport": [
+        1280,
+        900
+      ],
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "exportFullStateEqual": true,
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "recordedConclusion": true,
+      "pageErrors": [],
+      "screenshot": "actual-stage6-final67-conclusion.png"
+    },
+    {
+      "id": "actual-iron-57",
+      "viewport": [
+        390,
+        844
+      ],
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "exportFullStateEqual": true,
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "recordedConclusion": true,
+      "pageErrors": [],
+      "screenshot": "actual-iron-57-conclusion.png"
+    },
+    {
+      "id": "actual-watch-51",
+      "viewport": [
+        1280,
+        900
+      ],
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "exportFullStateEqual": true,
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "recordedConclusion": false,
+      "pageErrors": [],
+      "screenshot": "actual-watch-51-import.png"
+    },
+    {
+      "id": "actual-watch-60",
+      "viewport": [
+        1440,
+        960
+      ],
+      "fullStateImportEqual": true,
+      "inspectionStateEqual": true,
+      "exportFullStateEqual": true,
+      "exportByteIdentical": true,
+      "autosaveReloadEqual": true,
+      "recordedConclusion": true,
+      "pageErrors": [],
+      "screenshot": "actual-watch-60-conclusion.png"
+    }
+  ],
+  "driverFollowup": "The first 390px IRON57 pass selected a desktop-only mandate button. The input and five inspection pages already matched exactly; its timeout was a driver expectation, not a product failure. The same build passed the focused rerun through the visible Menu → Review this age path. Original phase/source/error remain preserved.",
+  "productIssues": [],
+  "inputIntegrity": "All 19 original files match the pinned repository objects; prior hashes verified for the 14 older artifacts and IRON55/57. Every input was rehashed unchanged after both passes."
+}

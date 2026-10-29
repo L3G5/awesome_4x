@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: both exact WATCH local forks absorb one frigate and preserve their ordinary departure and ETA
+ok 1 - both exact WATCH local forks absorb one frigate and preserve their ordinary departure and ETA
+  ---
+  duration_ms: 114.878825
+  type: 'test'
+  ...
+# Subtest: full runAI integrates one paid absorption without changing the selected mission or current jump budget
+ok 2 - full runAI integrates one paid absorption without changing the selected mission or current jump budget
+  ---
+  duration_ms: 5.204789
+  type: 'test'
+  ...
+# Subtest: spare orders preserve all current jumps, including a one-hop arrival
+ok 3 - spare orders preserve all current jumps, including a one-hop arrival
+  ---
+  duration_ms: 10.666936
+  type: 'test'
+  ...
+# Subtest: low movement, capacity, wrong ownership/class/location and civilians never become expedition mates
+ok 4 - low movement, capacity, wrong ownership/class/location and civilians never become expedition mates
+  ---
+  duration_ms: 17.761138
+  type: 'test'
+  ...
+# Subtest: only one deterministic mate is absorbed per departure; another local mate is not swept up
+ok 5 - only one deterministic mate is absorbed per departure; another local mate is not swept up
+  ---
+  duration_ms: 3.232489
+  type: 'test'
+  ...
+# Subtest: a covered observed home threat still prevents absorption without changing expedition movement
+ok 6 - a covered observed home threat still prevents absorption without changing expedition movement
+  ---
+  duration_ms: 2.813898
+  type: 'test'
+  ...
+# Subtest: a newly observed threat at an intermediate boundary skips only the new absorption
+ok 7 - a newly observed threat at an intermediate boundary skips only the new absorption
+  ---
+  duration_ms: 2.88994
+  type: 'test'
+  ...
+# Subtest: the independent weighted-route counterexample rejects a slower merged candidate before payment
+ok 8 - the independent weighted-route counterexample rejects a slower merged candidate before payment
+  ---
+  duration_ms: 6.479866
+  type: 'test'
+  ...
+# Subtest: a qualifying intermediate reinforcement can join, but contact/combat still stops the same cycle
+ok 9 - a qualifying intermediate reinforcement can join, but contact/combat still stops the same cycle
+  ---
+  duration_ms: 7.83819
+  type: 'test'
+  ...
+# Subtest: arrival and invalidated missions do not opportunistically assemble extra forces
+ok 10 - arrival and invalidated missions do not opportunistically assemble extra forces
+  ---
+  duration_ms: 9.644019
+  type: 'test'
+  ...
+# Subtest: hidden foreign forces and research cannot alter local absorption, target or clear movement
+ok 11 - hidden foreign forces and research cannot alter local absorption, target or clear movement
+  ---
+  duration_ms: 3.478118
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 871.964469
