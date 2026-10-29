@@ -97,3 +97,19 @@ test('mobile reload, import and new campaign start in inspection', async ({ page
   await page.locator('[data-action="begin"]').click(); await inspection(page);
   expect(await snapshot(page)).toEqual(createGame('mobile-new-inspection'));
 });
+
+test.describe('mobile landscape touch', () => {
+  test.use({ viewport: { width: 640, height: 390 }, isMobile: true, hasTouch: true });
+  test('the inspector does not cover deliberate movement controls', async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('asterion-reach-language-v1', 'ru'));
+    await page.goto('./'); await page.locator('[data-action="begin"]').tap();
+    const state = await snapshot(page), target = getNeighbors(state, 's0').find(id => !state.systems.find(s => s.id === id).owner);
+    await page.locator('.galaxy-fleet[data-fleet-id="f1"]').tap();
+    await page.locator(`#inspector .building-pills [data-system-select="${target}"]`).tap();
+    const geometry = await page.evaluate(() => ({ mapBottom: document.querySelector('#galaxy-page').getBoundingClientRect().bottom, inspectorTop: document.querySelector('.inspector').getBoundingClientRect().top }));
+    expect(geometry.mapBottom).toBeLessThanOrEqual(geometry.inspectorTop + 1);
+    await page.locator('[data-action="move"]').tap();
+    expect(command(state, { type: 'move', fleetId: 'f1', targetId: target }).ok).toBe(true);
+    expect(await snapshot(page)).toEqual(state);
+  });
+});

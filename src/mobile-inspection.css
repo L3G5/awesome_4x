@@ -1,5 +1,6 @@
 .close-fleet-controls{display:none}
 @media(max-width:660px){
+  .app-shell{grid-template-rows:minmax(90px,auto) minmax(350px,62dvh) auto 32px}
   .fleet-bar.is-inspecting{min-height:0;width:max-content;max-width:calc(100% - 20px);right:auto;padding:5px}
   .fleet-bar.is-inspecting .fleet-title{display:none}
   .fleet-bar.is-inspecting button{min-height:40px}
