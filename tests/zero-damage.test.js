@@ -1,3 +1,4 @@
+import { legacyCampaign } from './legacy-campaign-fixture.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, command, endTurn, validateSave } from '../src/game.js';
@@ -5,7 +6,7 @@ import { createGame, command, endTurn, validateSave } from '../src/game.js';
 // Synthetic valid boundary fixtures discovered in a planning review. These
 // are not evidence of corruption in an actual historical player campaign.
 function fixture(seed = 'zero-damage-control', defenderType = 'colony') {
-  const state = createGame(seed);
+  const state = legacyCampaign(seed);
   const attacker = state.fleets.find(fleet => fleet.owner === 'player' && fleet.type === 'frigate');
   const defender = state.fleets.find(fleet => fleet.owner === 'veyr' && fleet.type === defenderType);
   defender.systemId = attacker.systemId;

@@ -11,6 +11,7 @@ import { recordSovereigntyTransfer, validatePublicAffairsState } from './public-
 import { getSplitPreview, getColonyRepairForecast } from './fleet-management.js';
 import { captureFleetReadiness, reconcileFleetReadiness, validateFleetReadiness } from './fleet-readiness.js';
 import { getDefenseLeadPreview, orderDefenders, validateDefenseState } from './defense.js';
+import { generateGalaxyLayout, prepareStartingWorlds, MAP_VERSION } from './galaxy-generation.js';
 export { hasSensors, getVisibleFleets } from './intelligence.js';
 export { getCombatReport } from './reports.js';
 export { CHARTERS, getInfrastructure, getCharterBonuses, getDevelopmentOptions, getConstructionProject, getOrderCapacity, getOrderChange } from './development.js';
@@ -101,54 +102,29 @@ export function createGame(seed = 'ASTERION') {
     const template = FACTIONS[id];
     state.factions.push({ ...template, credits: 140, minerals: 110, science: 0, research: null, techs: [], orders: 0, contacts: [], capitalId: `s${index}`, eliminated: false, relations: Object.fromEntries(ids.filter(other => other !== id).map(other => [other, { status: 'peace', trust: id === 'khar' || other === 'khar' ? -10 : 10, trade: false, treatyTurn: 0 }])) });
   }
+  const layout = generateGalaxyLayout(seed);
+  state.mapVersion = MAP_VERSION;
   const planetTypes = Object.keys(PLANET_TYPES);
   for (let index = 0; index < SYSTEM_NAMES.length; index++) {
     const home = index < 4;
-    let x, y;
-    if (home) {
-      const angle = Math.PI * .25 + index * Math.PI / 2;
-      x = Math.cos(angle) * 41;
-      y = Math.sin(angle) * 41;
-    } else {
-      const angle = (index - 4) * 2.3999632297 + (random(state) - .5) * .24;
-      const radius = 7 + Math.sqrt((index - 3) / 38) * 43;
-      x = Math.cos(angle) * radius + (random(state) - .5) * 3;
-      y = Math.sin(angle) * radius + (random(state) - .5) * 3;
-    }
+    const { x, y } = layout.positions[index];
     const type = home ? 'terran' : planetTypes[Math.floor(random(state) * planetTypes.length)];
     const habitability = home ? 90 : { terran: 85, ocean: 75, arid: 60, ice: 40, volcanic: 25, barren: 15 }[type] + Math.floor(random(state) * 11) - 5;
-    const anomalyKeys = Object.keys(ANOMALIES).filter(id => !ANOMALIES[id].multiStage);
-    state.systems.push({ id: `s${index}`, name: SYSTEM_NAMES[index], x: round(x), y: round(y), type, habitability, richness: home ? 3 : 1 + Math.floor(random(state) * 5), science: home ? 2 : 1 + Math.floor(random(state) * 4), owner: home ? ids[index] : null, originalOwner: home ? ids[index] : null, population: home ? 4 : 0, growth: 0, buildings: home ? ['mine', 'shipyard'] : [], queue: null, defenseDamage: 0, anomaly: !home && index % 4 === 0 ? { id: anomalyKeys[Math.floor(random(state) * anomalyKeys.length)], resolved: false } : null, knownBy: [], exploredBy: [] });
+    state.systems.push({ id: `s${index}`, name: SYSTEM_NAMES[index], x: round(x), y: round(y), type, habitability, richness: home ? 3 : 1 + Math.floor(random(state) * 5), science: home ? 2 : 1 + Math.floor(random(state) * 4), owner: home ? ids[index] : null, originalOwner: home ? ids[index] : null, population: home ? 4 : 0, growth: 0, buildings: home ? ['mine', 'shipyard'] : [], queue: null, defenseDamage: 0, anomaly: null, knownBy: [], exploredBy: [] });
   }
-  // Prim's spanning tree guarantees every seeded map is connected. Short extra
-  // lanes add alternate routes without erasing strategic chokepoints.
-  const reached = new Set(['s0']);
-  const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
-  const connect = (a, b) => { if (!state.lanes.some(([x, y]) => (x === a && y === b) || (x === b && y === a))) state.lanes.push([a, b]); };
-  while (reached.size < state.systems.length) {
-    let best = null;
-    for (const a of state.systems.filter(s => reached.has(s.id))) for (const b of state.systems.filter(s => !reached.has(s.id))) {
-      const d = distance(a, b);
-      if (!best || d < best.distance) best = { a, b, distance: d };
-    }
-    connect(best.a.id, best.b.id); reached.add(best.b.id);
-  }
-  for (const system of state.systems) {
-    const nearest = [...state.systems].filter(s => s !== system).sort((a, b) => distance(system, a) - distance(system, b));
-    for (const neighbor of nearest.slice(0, 2)) connect(system.id, neighbor.id);
-  }
-  placeDiscoveries(state);
+  state.lanes = layout.lanes;
+  const openings = prepareStartingWorlds(state);
+  placeDiscoveries(state, openings.flatMap(opening => opening.prospects));
   for (const faction of state.factions) {
-    const neighbor = getNeighbors(state, faction.capitalId).map(id => systemOf(state, id)).find(s => !s.owner);
-    if (neighbor) { neighbor.type = 'terran'; neighbor.habitability = Math.max(75, neighbor.habitability); }
     makeFleet(state, faction.id, faction.capitalId, 'scout');
     makeFleet(state, faction.id, faction.capitalId, 'colony');
     makeFleet(state, faction.id, faction.capitalId, 'frigate');
     survey(state, faction.capitalId, faction.id);
+    for (const systemId of openings.find(opening => opening.factionId === faction.id).prospects) survey(state, systemId, faction.id);
     faction.orders = getEmpireStats(state, faction.id).maxOrders;
   }
   record(state, 'The gates have been silent for centuries. Today, the Concord returns to the stars.', 'story');
-  record(state, 'First mandate: send your Pathfinder through a starlane, then bring a Colony Ark to a habitable world.', 'objective');
+  record(state, 'First mandate: compare your two surveyed prospects, choose a first colony, and send your Pathfinder beyond the familiar stars.', 'objective');
   return state;
 }
 
@@ -685,6 +661,7 @@ function isValidSave(value) {
   if (!value || value.version !== SAVE_VERSION || !Number.isInteger(value.turn) || value.turn < 1 || !Array.isArray(value.systems) || value.systems.length !== 42 || !Array.isArray(value.factions) || value.factions.length !== 4 || !Array.isArray(value.fleets) || !Array.isArray(value.lanes) || !Array.isArray(value.log)) return false;
   const text = item => typeof item === 'string' && item.length < 2000;
   const member = (table, key) => typeof key === 'string' && Object.hasOwn(table, key);
+  if (value.mapVersion !== undefined && value.mapVersion !== MAP_VERSION) return false;
   if (!text(value.seed) || value.fleets.length > 1000 || value.log.length > 160) return false;
   const systemIds = new Set(value.systems.map(s => s.id));
   if (systemIds.size !== 42 || [...systemIds].some(id => !/^s([0-9]|[1-3][0-9]|4[01])$/.test(id)) || ids.some(id => !value.factions.some(f => f.id === id))) return false;

@@ -4,7 +4,7 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 
 ## Main functions
 
-- `createGame(seed = 'ASTERION')`: new state, 42 connected systems, four factions and three starting ships per faction.
+- `createGame(seed = 'ASTERION')`: new state, 42 connected systems, four factions and three starting ships per faction. New states record `mapVersion: 2`, with bounded seeded geography and two initially surveyed local prospects per faction. Imported older saves retain their serialized map and RNG.
 - `command(state, action)`: validates and mutates state. Returns `{ ok: boolean, message: string }`. Failed commands make no mutation. `action.factionId` defaults to `player`; AI uses the same command validation.
 - `endTurn(state)`: AI actions, income, research, growth, construction, repairs, movement/order refresh, victory audit. Returns the same result shape.
 - `validateSave(value)`: checks a parsed JSON save before use. `SAVE_VERSION` is exported.

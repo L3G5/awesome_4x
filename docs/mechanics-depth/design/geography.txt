@@ -1,0 +1,81 @@
+Asterion Reach: geographic depth advice
+Pinned inspection: 810194596a0fa7d02efa418749bb3e27f547229e, v0.22
+Date: 29 October 2026
+Scope: read-only design advice; no repository source edited.
+
+Recommendation
+Prototype a genuinely resampled spatial scaffold with bounded starting knowledge, then add two optional, paid restorations of dormant starlanes. The latter changes travel and access for every civilization, so choosing a poorly yielding junction, buying transit, delaying an opening, or keeping a route closed can have different answers. Keep the resource economy, tech tree, combat, ordinary movement costs and existing discovery rewards intact for the first comparison.
+
+The existing maps already produce strategic variation. This is an experiment to strengthen its geographic causes, not a repair for a demonstrated absence of depth. Repeated research/build labels are not evidence of a solved plan when their timing, destination or opportunity cost changes.
+
+Observed current facts
+- createGame still assigns the four capitals fixed positions and places the remaining worlds in the same radial/spiral order with bounded coordinate jitter (game.js:98-149). The safety conversion selects the first unowned adjacency and makes it Terran with habitability at least75. It does not evaluate competing local opportunities.
+- Recreated the same64 previously reviewed seeds under the current source. All64 coordinate arrays and lane sets match the earlier audit. This is a fresh geometry check, not another campaign cohort. Earlier measurements remain relevant to this generator: Solace always neighbors Sundrift and Asterion; the initial Solace neighbor sets come from four combinations; the first safety conversion selected Sundrift57/64. Route variation was substantial, including Solace->Veyr distances5-20.
+- Charting reveals lanes/names/sovereignty; surveying reveals terrain and resources. A new empire initially surveys only its capital. A scout has two jumps, an Ark one. Comparing two separate home branches can therefore require return travel, another cycle, or using the military escort to scout. More irregular maps could magnify this information cost unless designed around it.
+- Geography affects growth, native yields and charter returns, reinforcement/Ark travel, borders, defense and discovery ownership. It does not affect ordinary credits/minerals/science transfers: those are pooled. Trade pays a flat6/10 credits per treaty regardless of spatial connection (game.js:172-185). There is no existing supply network to extend.
+- Ten anomaly slots still follow index%4; two are replaced by Observatory/Reef. The staged sites already connect ownership, support infrastructure, safe operation, work, slots and a portable alternative. More reward text or a new percentage bonus would add little to this particular problem.
+- The early Ecology override remains conservative and knowledge-limited. It needs1-2 colonies, a live/paid Ark and an achievable surveyed30-49% site. Its previous fixed20-seed comparison had two real interventions, both followed by settlement; one delayed later science. New generation should preserve situations where harsh-world access matters, rather than guaranteeing such abundant ordinary worlds that the branch becomes irrelevant.
+
+Experiment G: resample positions, keep orientation and bound the opening
+Use one new generator version, not a menu of barely tested map presets. Keep42 worlds and the four named capitals at their familiar orientation; those anchors help a player read a new map. Replace the index-based neutral spiral with seeded, separated point sampling:
+1. Give each capital a local catchment of three neutral positions, roughly9-17 map units inward from it with a seeded bearing/spread. These12 points need not keep fixed world IDs/names. Place the remaining26 by stratified area sampling across inner and outer regions, not by fixed radial rank. A provisional minimum separation of6 units avoids near-overlap. These are tunable construction parameters, not claims about an optimal galaxy.
+2. Build connected ordinary lanes using the existing spanning-tree approach and a bounded short-edge pass. Reuse the existing graph/navigation rules. Do not count renaming worlds, rotating the whole picture, or moving the same topology as success.
+3. Evaluate the opening after the graph exists. Require a distinct safe first colony for every capital and another useful local prospect, rather than boosting the first edge in array order. One adjacent world must be at least60% habitable. The second adjacent prospect can be30-49% when its ore/science makes Ecology a credible commitment, or an ordinary colonizable alternative. A third >=50% option must exist within three ordinary jumps, supplying a recovery/substitute route. Local safety prospects must not be the same world promised to multiple empires; they should be materially nearer their own capital than a rival.
+4. Reveal the two local prospects' existing surveyed information symmetrically at campaign start. This gives an informed settlement/research commitment without extra blind backtracking. It grants knowledge, not resources, an investigation result or fleet sensors. Scouts still open the remaining39 worlds and survey the next branches. Revise the first-mandate wording to match that starting knowledge. If full local surveys weaken the opening too much, test a separate limited chart report later; do not implement a new partial-information model inside this first generator change.
+5. Select the same ten discovery sites independently of numeric world index after positioning, preserving eight ordinary and the two existing staged sites and their exact rewards. Avoid stacking more than two portable-reward sites in any home's immediate neighbors. This removes fixed named reward locations without making the new mechanic a jackpot. Do not add an event deck/content expansion here.
+
+Provisional hard acceptance bounds for a predeclared512-seed batch
+- Exactly42 worlds, connected graph, no overlapping/duplicate lanes, no dependence on hash-map iteration for tie-breaking.
+- Start with52-64 ordinary edges, home degree2-4, maximum degree6. Treat these as a first test envelope; if generation cannot meet them cheaply, revise the construction before interpreting outcome data.
+- Capital-pair distances5-13 and ordinary graph diameter <=18. This preserves staging time while removing the most isolated long tail observed in the current sample. Check every capital, not just Concord.
+- Every empire has the stated safe first colony, known alternative and ordinary substitute. A first Ark can settle a known adjacent safe world with the same one jump/one founding sequence as now. No mandatory new reconnaissance cycle or technology is needed for survival.
+- For the two local prospects, reject cases where one dominates the other in habitability, native ore, native science AND onward access. Reject extreme paired resource disparities; a provisional combined native ore+science range8-14 and maximum inter-empire gap4 is a starting fairness bound, not an objective balance formula. Do not equalize every local route or role.
+- Bounded deterministic attempts with a diagnostic rejection/fallback count. Aim for <1% fallback over the fixed batch; zero invalid or stranded starts. A frequent fallback to one template would conceal the original repetition inside a safety mechanism.
+- New campaigns record the generator version. Existing saves keep their serialized systems/lanes unchanged; no regeneration or surprise new sites on import. Seed reproducibility is scoped to generator version.
+
+These constraints need implementation testing: the point recipe has not been prototyped here. In particular, minimum capital spacing, edge density and three local catchments can fight each other. Do not claim the recipe is feasible solely because its rules are plausible.
+
+Complementary mechanic L: restore a dormant starlane
+Generate two OPTIONAL inactive links. They are absent from movement adjacency until restored. Choose non-capital endpoint pairs whose current ordinary path is3-6 jumps and whose physical separation is manageable; an initial <=35-unit visual span is plausible on the current map scale. Opening either link, or both together, must keep every capital pair at least five jumps apart. Testing each link separately is insufficient: two individually safe shortcuts can combine into an unsafe rush route.
+
+A faction learns a dormant connection when it charts either endpoint. Show the other endpoint as charted/unsurveyed and explain that restoration creates one ordinary lane. Do not reveal remote planet yields, discovery outcomes, ships, queues or research. This keeps the opportunity readable without demanding a full-map scouting expedition.
+
+Provisional project rules:
+- An owned endpoint and Deep-space Logistics permit starting restoration. Use that colony's existing production queue and a normal order; an initial price of60 credits/70 minerals/48 work makes it compete with roughly two frigates, an Ark or development. No shipyard prerequisite, new currency, standing upkeep or slot-tax building is needed.
+- One public reservation/project per link; cancellation uses the existing unspent-work refund rule. Capture handles cancellation consistently with ordinary queues. The reservation must clear on cancellation, capture or elimination so another owner can later restore it. Display a known reservation explicitly rather than letting a failed command query hidden work.
+- Completion permanently adds an ordinary lane and records the restoring faction/turn. It grants no movement refill, free jump, reward currency or faction-only privilege. Borders, visible blockades, ordinary orders and movement limits continue to apply. Both empires and their opponents can exploit the opening. No closing/reopening control in this iteration: that would add trap exploits, notices and a second policy problem.
+- Disclose the before/after known route difference, the ordinary construction cost/time and the reciprocal exposure. Construction is a commitment to a possible shared shortcut, not a guaranteed economic return. Completion is a consequential briefing; no repeated prompt for an intentionally unbuilt link.
+
+Why this fits the current implementation
+Normal AI/navigation already query starlane adjacency. Adding a completed public edge changes existing routes without creating a second fleet-movement graph, fuel model or transport UI. Players can keep a weakly yielding junction for transit, fortify before opening, negotiate access at its far end, or leave it dormant. Existing restoration stories, paid queues and public network signals supply useful precedents, though a new project kind/save validation still requires deliberate work.
+
+A read-only enumeration on the64 current maps found60-102 possible single-link candidates per map under path3-6, span<=35 and post-opening capital minimum5. This only establishes that candidate links exist on existing layouts. It does not validate paired placement, prices, AI judgment or fun. Example ASTERION Haven<->Ashfall is presently three jumps; that single opening changes Solace->Veyr8->6 and Solace->Khar10->8 while the minimum capital distance remains6. Both directions gain access. No game state or source was changed to produce this enumeration.
+
+Minimum AI and ownership requirements
+The AI must use its own queue/budget plus charted/surveyed facts to consider restoration when it shortens a real Ark, reinforcement, known settlement or public objective route by at least two jumps. Preserve normal defense and Beacon funding reserves. Do not score hidden fleets or unknown destinations. A known hostile beneficiary or incoming threat is a reason to stage defenses or defer opening. Route previews and AI should use the active edge after completion; existing manually plotted routes should remain the player's chosen route unless explicitly replotted. Do not ship a mechanic that only a scripted human demonstration can operate.
+
+Required reversals and counterexamples
+A. Same native yields, different access: in a compact loop, buy an ordinary lab/ship instead of restoration; in a long arm, a paid opening allows several needed arrivals two or more cycles sooner. Record actual use, not just a shorter graph path.
+B. Same prospective shortcut, different diplomacy: trade/open transit makes the far endpoint useful; closed borders make it a poor civilian route. An expiring treaty must not be treated as permanent access.
+C. Same friendly benefit, different exposure: opening before a nearby Khar force is contained is worse than delaying it and building defenders. Do not require the player to foresee invisible fleets; show unknown presence honestly and let scouting reduce that uncertainty.
+D. Low-habitability rich junction versus safe science backwater: founding/research/production priority reverses because the junction enables an achievable route, not because it receives a free unique yield.
+E. No restoration: there must be plausible states where keeping both links inactive and pursuing ordinary industry or a compact Beacon network remains a viable plan.
+
+Worst cases to test before broad claims
+- Both links active collapse capital separation, bypass the only defensible approach, or put an unannounced enemy one jump from a Beacon.
+- The shortcut merely saves a scout's one-off detour and nobody has enough traffic to justify its queue/cost.
+- Every owner opens every available link immediately; the project becomes another compulsory upgrade. Conversely, nobody can justify one before the race ends.
+- A poor initial catchment requires paid restoration to reach a third colony. Optional infrastructure must not repair a broken basic start.
+- Preserving a staged site on a distant world becomes an automatic mistake because the only useful route is unknown, unavailable or revealed too late.
+- Gate capture/cancellation leaves a permanent project lock; two owners race the same project and one silently loses paid work; save reload duplicates an active edge or reopens a completed reservation.
+- Free startup knowledge exposes foreign live state, or repeated cancel/restart/restore yields resources/orders.
+- New charting, renderer labels, queued projects and manual route intent remain understandable in English and Russian, including resumed saves.
+
+Evaluation order
+First compare current and new generation with no new links. Use identical goals and ordinary budgets across repeated openings. Log the first changed commitment, its known cause and the cost of insisting on the previous plan. A changed name, coordinates, first research label or win alone is insufficient. A useful reversal should affect at least a meaningful production choice or about two cycles of travel, and remain explainable before its outcome.
+
+Then add the two optional links on a fixed, predeclared subset of maps; keep prices constant initially. Observe restoration->completion->actual route use and the rival's response. Include an unbuilt-link comparison and the bad-opening counterexamples above. If time permits, use the four cells current/new generation x links off/on to separate causes; do not bundle balance tuning and extra technologies into the same comparison.
+
+Bounded evidence can demonstrate changed decisions, fair starts, coherent rival operations and tolerable administration. Only repeated human-style play can tell whether the extra commitment is interesting. Do not turn graph diversity, restoration counts or automated victories into a replayability/fun score.
+
+Supporting current probe: /tmp/asterion-depth-replay-probe.mjs and /tmp/asterion-depth-replay-probe.json.

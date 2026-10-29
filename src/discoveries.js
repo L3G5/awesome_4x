@@ -2,6 +2,7 @@ import { ANOMALIES, BUILDINGS, SHIPS, TECHS } from './content.js';
 import { getInfrastructure, getCharterBonuses } from './development.js';
 import { getVisibleFleets, hasSensors } from './intelligence.js';
 import { getSystemYield } from './game.js';
+import { seededRandom } from './galaxy-generation.js';
 
 const TARGET = 3;
 const factionOf = (state, id) => state.factions.find(faction => faction.id === id);
@@ -25,17 +26,22 @@ function record(state, factionId, systemId, text) {
   state.log.length = Math.min(state.log.length, 160);
 }
 
-/** Replace two existing placements without advancing the galaxy RNG. */
-export function placeDiscoveries(state) {
-  const worlds = state.systems.filter(system => system.anomaly);
-  if (worlds.length < 2) return;
-  let seed = 2166136261;
-  for (const character of String(state.seed)) seed = Math.imul(seed ^ character.charCodeAt(0), 16777619);
-  for (const id of ['observatory', 'reef']) {
-    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
-    const [system] = worlds.splice(seed % worlds.length, 1);
-    system.anomaly = { id, resolved: false };
-  }
+/** New-campaign discoveries have varied locations and a bounded content deck. */
+export function placeDiscoveries(state, initialSurveyIds = []) {
+  const random = seededRandom(`${state.seed}:discovery-sites:2`);
+  const shuffle = values => {
+    const result = [...values];
+    for (let index = result.length - 1; index > 0; index--) {
+      const other = Math.floor(random() * (index + 1));
+      [result[index], result[other]] = [result[other], result[index]];
+    }
+    return result;
+  };
+  const ordinary = Object.keys(ANOMALIES).filter(id => !ANOMALIES[id].multiStage);
+  const deck = shuffle([...ordinary, ...shuffle(ordinary).slice(0, 2), 'observatory', 'reef']);
+  const sites = shuffle(state.systems.filter(system => !system.originalOwner && !initialSurveyIds.includes(system.id)));
+  for (const system of state.systems) system.anomaly = null;
+  for (const [index, id] of deck.entries()) sites[index].anomaly = { id, resolved: false };
 }
 
 /** Knowledge changes only with a current expedition or colony, after survey. */

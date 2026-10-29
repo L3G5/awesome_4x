@@ -1,3 +1,4 @@
+import { legacyCampaign } from './legacy-campaign-fixture.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -9,8 +10,8 @@ const fleet = (state, id) => state.fleets.find(candidate => candidate.id === id)
 
 // Reconstruct the independently reported synthetic-lethal.json fixture with
 // no external /tmp dependency. This is a controlled test, not a campaign loss.
-function fixture({ hp = 3, defense = 8, shielded = false } = {}) {
-  const state = createGame('LETHAL-INVASION-REVIEW');
+function fixture({ hp = 3, defense = 8, shielded = false, historical = false } = {}) {
+  const state = historical ? legacyCampaign('LETHAL-INVASION-REVIEW') : createGame('LETHAL-INVASION-REVIEW');
   state.turn = 2;
   const attacker = state.fleets.find(candidate => candidate.owner === 'player' && candidate.type === 'frigate');
   const target = state.systems.find(system => system.id === 's1');
@@ -48,7 +49,7 @@ function attackChecked({ state, attacker }) {
 }
 
 test('the exact synthetic lethal case exposes zero remaining hull even when the colony loses all defense', () => {
-  const scenario = fixture();
+  const scenario = fixture({ historical: true });
   assert.equal(createHash('sha256').update(JSON.stringify(scenario.state)).digest('hex'), 'c2f7711683fd1ac590397f375c27aaecc821d72bccdd3f0c1bf73b2f87014239');
   const { forecast, report } = attackChecked(scenario);
   assert.deepEqual(forecast, {

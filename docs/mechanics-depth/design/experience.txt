@@ -1,0 +1,83 @@
+Asterion Reach — experience advice for the depth prototype
+Read-only review, main 810194596a0fa7d02efa418749bb3e27f547229e, v0.22.0.
+
+Recommendation
+Prototype the two dormant starlanes first, together with direct Empire commissioning. This is a coherent use of the current game: a few permanent changes to the movement graph, bought through a colony's already scarce production queue, with a shared benefit that can help a rival. It asks where/when to commit rather than creating another administration layer. Keep industrial support as the fallback if the shortcut choices do not reverse under plausible public circumstances. Do not implement both new systems in the same iteration.
+
+Current evidence relevant to the choice
+I reread the supplied good/bad 4X guides earlier; this advice applies their decision/evidence/control tests to the current game rather than restating them. Credits, minerals and science are pooled; construction work is local. Charters already specialize colonies, a building/charter occupies the sole project slot, fleet travel spends ordinary orders/movement, and held garrisons already stay quiet. Alignment is a three-world positional objective with local interruption and a visible ten-cycle end.
+
+F2/F3 persist on the current build. In four new read-only UI tasks (1440/390, English/Russian), ODYSSEY50's Kepler could be compared in Empire, but opening its project choices required Inspect→Galaxy→Commission. Returning to Empire reset the scroll to 0. Sort survived. At 390 the 760px table sits in 310px; the action remains outside the visible strip even after the row is brought into view. The construction dialog still provides a useful current→completed Manufactory comparison. Every campaign object remained exactly unchanged during these inspections. Evidence: /tmp/asterion-depth-experience-evidence/recheck.json and the paired screenshots, from a copied build pinned to main 8101945.
+
+A particularly relevant context error for a new network UI: while choosing a Kepler project, the selected fleet remains the held Pathfinder at Stillwater. The Galaxy therefore shows an unrelated scout course preview. A lane-building workflow should not inherit that fleet as its implicit subject.
+
+Actual geography illustrates useful differences. In the default50 save, Nacre→Halcyon has a four-hop route through neutral Meridian/Eidolon and Choir-controlled Elysian; another approach goes via Kepler/Haven/Solace. In ODYSSEY50, the five owned colonies form a more connected chain through Nacre/Sundrift. These are current-map observations, not evidence that any proposed dormant edge is balanced. They suggest testing shortcuts against distinct access/defense arrangements rather than rewarding a new line on the map by itself.
+
+Dormant-lane decision flow
+1. Discover an eligible candidate through normal exploration. Reveal its full line only after the required endpoint information is known. Do not show an unknown remote star merely because the engine has selected a dormant pair. Distinguish an inactive lane from an ordinary lane behind closed borders; these are different problems with different remedies.
+2. Select the dormant line or a named project entry at an eligible endpoint. Open one restoration preview. Keep the player's existing fleet selection and course untouched. If both endpoints can build, show their production/available-project state side by side and let the player choose the builder. A busy endpoint should explain what occupies its queue; never silently cancel it or insert a second queue.
+3. The same preview puts four facts together: immediate credit/mineral/order cost; completion cycles at the selected colony's current work rate; the meaningful known travel change; and who may use the restored lane. It must explicitly say that all empires can use it under normal border/movement rules. No private ownership impression from the player's color or a friendly-looking line.
+4. Commit once with a button that includes the one-order cost. The preview is the review/commit step; avoid a second generic confirmation. Keep normal cancellation/refund semantics explicit. Restoration should not consume an infrastructure replacement selection if it uses no colony slot.
+5. Once queued, it behaves as an ordinary project. Show its endpoint pair, builder and ETA in the Empire row. One completion dispatch links to the changed map. There should be no maintenance click, delivery acknowledgment or renewal after commitment.
+6. Preserve old plotted fleet courses. A new edge makes new path choices possible; it should not quietly substitute a different course through a newly exposed frontier. Offer ordinary Replot when the player reviews a relevant fleet. Do not require every fleet to acknowledge the lane.
+
+A useful preview is task-sized
+Default to the endpoint-to-endpoint charted/passable route: “4→1 jumps”. Optionally let the selected fleet/goal supply a second comparison if that player task is already active. Do not require picking a fleet just to see why a lane matters. Report jumps and travel orders honestly; do not call it arrival time unless the calculation includes that fleet's moves, orders and stops. Keep the construction ETA distinct from travel saved.
+
+For danger, show shared use and known access, then let the player judge the map. A public route from a known rival's holdings can be highlighted, but do not consult hidden fleets to announce that an invasion will arrive. A destination behind closed borders must still say so after restoration. The new connection changes geography, not diplomacy or war legality.
+
+Two decisions that should reverse
+• Restore now when it lets an isolated shipyard reinforce a beacon/frontier several jumps sooner and the opposite approach is controlled or covered. Choose the fast builder even if its next ship is delayed, because the travel saved matters more.
+• Delay/decline the same edge when it bypasses your defensible chokepoint into an exposed beacon or gives a nearby known rival a shorter approach than it gives you. Build the defender/beacon first, choose the other restoration, or leave both dormant.
+Also test a late fifty-cycle save whose objectives are already nearly complete. “Do nothing” should remain a reasonable result. Idle colonies should not become an obligation to restore every available lane.
+
+Resolve these product rules before the prototype is judged
+• Can either endpoint build, and which conditions must remain true during work? Capture/blockade cancellation must use a visible, predictable rule.
+• If another empire restores the same lane first, what happens to the queued investment? Prevent a hidden sunk-cost trap: either make the competing restoration a deliberately public race, or define a clear remaining-investment refund/stop rule. Do not expose the opponent's unrelated construction queue or fleets as a side effect.
+• Once restored, use ordinary knowledge/access rules for both sides. New adjacency may be public without revealing defending fleets. State this once in the preview and apply it symmetrically to the AI.
+These are design questions with direct consequences for the player's commitment; they are not requests for another management subsystem.
+
+Fix the existing comparison→action handoff in the same narrow UI pass
+Give an idle Empire colony a direct Commission action that opens the existing project dialog for that colony while leaving Empire, sort and scroll intact. Keep an explicit Inspect action for geography/defense; it is valuable when deciding about a shortcut. A restoration opened from the map may need map context, whereas commissioning an already chosen lab/ship should not force a map excursion.
+
+At 390, put world identity, its project/idle state and its basic action together. A compact status/action under a linked world name is a good first prototype; it can remove the far-right Inspect arrow and leave the numeric comparison horizontally scrollable. If keeping the existing columns, a sticky first-column action must remain usable without a horizontal hunt. Do not build a whole new mobile screen or make the entire row one ambiguous click target. Check the final Russian labels at the actual width.
+
+After cancel, focus the opener in the original row. After commission, focus that row's updated project summary. The current construction focus restoration assumes the Galaxy inspector has .production-row; opening from Empire needs an origin-aware result target. Preserve exact ordinary payment/order effects. Do not add auto-builds or idle-colony warnings as part of this convenience change.
+
+Industrial support alternative — useful, but a larger accounting burden
+The strongest alternative would move a limited amount of local construction work from a chosen source colony to a recipient through a standing, bounded connection. This has a real scarce resource, unlike a cash-only route added to late empires already earning roughly 100+ credits per cycle. Preview both queues, not just the recipient's bonus: a fresh 65-work cruiser at 24 work/cycle takes 3 cycles, but diverting 4 work makes it 4; a 140-work beacon at 10 work/cycle takes 14, while receiving 3 makes it 11. These illustrative values describe a tradeoff, not proposed balance constants or a simulation of growth/events.
+
+Such a system needs explicit capacity, simultaneous accounting, interruption/standby behavior, limits on chained transfers, and no hidden auto-spending. A recipient without a project should be quiet standby under the existing instruction, not a per-turn prompt. Owned-node paths would avoid a new hidden-interdiction sensor problem. All of this can be coherent, but it is more rule/UI work than restoring two shared lanes. Reject a cash-commerce layer that merely adds routine positive income or a “send freighter” click each cycle. Do not replace the current globally pooled base economy with mandatory freight as a side effect.
+
+Compact bilingual copy for a lane prototype
+Use complete authored labels/sentences and typed number/system slots. Avoid fragment-by-fragment prose assembly; the recent localization audit showed why that is fragile.
+English | Russian
+Dormant starlane | Неактивный звёздный путь
+Restore lane | Восстановить путь
+Restoration project | Восстановление пути
+Builder colony | Строящая колония
+After restoration | После восстановления
+Jumps: {0} → {1} | Прыжков: {0} → {1}
+Cycles remaining: {0} | Циклов до завершения: {0}
+No colony slot used. | Не занимает ячейку инфраструктуры.
+All empires can use it. | Путём смогут пользоваться все империи.
+Normal border and movement rules apply. | Обычные правила границ и передвижения сохраняются.
+Existing fleet courses are unchanged. | Заданные курсы флотов сохраняются.
+Restore · 1 order | Восстановить · 1 приказ
+Review route | Посмотреть маршрут
+Lane restored | Путь восстановлен
+Commission | Заказать проект
+Inspect world | Осмотреть мир
+Keep system names and seed values literal. Do not call this network “alignment” or a new “trade treaty”; those terms already mean specific victory/diplomacy rules. On a narrow screen allow the long preview sentences to wrap; keep the rail/primary action compact.
+
+Prototype rejection criteria
+• Reject cosmetic shortcuts: if the new edge barely changes useful known paths, it does not earn a new project.
+• Reject an automatic best answer: if players restore both immediately regardless of rival access, builder queue or objectives, revisit placement/cost/shared risk rather than adding more menus.
+• Reject theatrical shared risk: observe a rival actually using a restored edge when it helps its existing plan. A warning with no capable rival response does not create the intended tradeoff.
+• Reject administrative renewal: zero maintenance clicks should be required between restoration commitment and completion beyond normal End cycle and meaningful game events. The two investments should not create a recurring attention queue.
+• Reject evidence detours: before paying, a player should predict builder, ETA, useful path change, access limits and shared use from the same preview. A mandatory unrelated fleet selection or reconstruction across three panels is a UI failure.
+• Reject cancellation/focus regressions: preview/cancel must preserve full state; commission must match normal quoted costs; return must preserve row, sort, scroll and a meaningful keyboard position at 1440/390 in both languages.
+• Reject forced completion: the “leave it dormant” choice must remain available without nags, especially near an existing victory.
+
+Suggested first independent play tasks after a prototype exists
+Give me one early/mid campaign with two surveyed candidates and competing endpoint queues; one public-rival pressure case where the tempting edge can help the opponent; and an actual late save where ignoring restoration is sensible. I will attempt prediction→commit/cancel→completion→ordinary fleet travel, classify choosing versus execution/checking clicks, and try the same builder comparison at 390 in Russian. A second prototype is justified by a failed strategic task, not by a request for more interface widgets.

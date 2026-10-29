@@ -1540,5 +1540,10 @@ export const russian = {
   "The Last Observatory: {0}. {1}": "Последняя обсерватория: {0}. {1}",
   "The Patient Reef: {0}. {1}": "Терпеливый риф: {0}. {1}",
   "Diplomacy, {0} pending diplomatic proposal": "Дипломатия, предложения, ожидающие ответа: {0}",
-  "Diplomacy, {0} pending diplomatic proposals": "Дипломатия, предложения, ожидающие ответа: {0}"
+  "Diplomacy, {0} pending diplomatic proposals": "Дипломатия, предложения, ожидающие ответа: {0}",
+  "First mandate: compare your two surveyed prospects, choose a first colony, and send your Pathfinder beyond the familiar stars.": "Первое поручение: сравните два обследованных мира, выберите первую колонию и отправьте Следопыт за пределы знакомых звёзд.",
+  "Compare your prospects": "Сравните ближайшие миры",
+  "Two nearby worlds are already surveyed. Compare their resources and habitability, then send your Pathfinder beyond them.": "Два ближайших мира уже обследованы. Сравните их ресурсы и пригодность для жизни, затем отправьте Следопыт дальше.",
+  "Their Beacon blockade delays a rival ahead in public alignment who could finish during the truce.": "Их блокада Маяка сдерживает соперника, который опережает их в открытой гонке синхронизации и может завершить её за время перемирия.",
+  "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
 };

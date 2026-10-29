@@ -23,20 +23,24 @@ test('seeded maps are reproducible, connected, and give every empire an accessib
   assert.notDeepEqual(createGame('A').systems, createGame('B').systems);
 });
 
-test('exploration follows lanes, reveals survey detail and consumes movement plus orders', () => {
+test('exploration beyond the two initial prospects surveys new worlds and spends ordinary movement and orders', () => {
   const state = createGame(), scout = ownFleet(state, 'scout');
-  const neighbor = state.systems.find(s => s.id === getNeighbors(state, scout.systemId)[0]);
+  const prospect = state.systems.find(system => getNeighbors(state, scout.systemId).includes(system.id)
+    && getNeighbors(state, system.id).some(id => !state.systems.find(world => world.id === id).exploredBy.includes('player')));
   const initialKnown = getVisibleSystems(state).length;
-  assert.ok(neighbor.knownBy.includes('player'));
-  assert.ok(!neighbor.exploredBy.includes('player'));
+  assert.ok(prospect.knownBy.includes('player'));
+  assert.equal(state.systems.filter(system => system.exploredBy.includes('player')).length, 3);
   const original = structuredClone(state);
   assert.equal(command(state, { type: 'move', fleetId: scout.id, targetId: 's2' }).ok, false);
   assert.deepEqual(state, original, 'invalid jumps do not change any state');
-  assert.equal(command(state, { type: 'move', fleetId: scout.id, targetId: neighbor.id }).ok, true);
-  assert.equal(scout.systemId, neighbor.id);
-  assert.equal(scout.movesLeft, 1);
-  assert.equal(player(state).orders, 5);
-  assert.ok(neighbor.exploredBy.includes('player'));
+  assert.equal(command(state, { type: 'move', fleetId: scout.id, targetId: prospect.id }).ok, true);
+  const frontier = state.systems.find(system => getNeighbors(state, scout.systemId).includes(system.id) && !system.exploredBy.includes('player'));
+  assert.ok(frontier.knownBy.includes('player'));
+  assert.equal(command(state, { type: 'move', fleetId: scout.id, targetId: frontier.id }).ok, true);
+  assert.equal(scout.systemId, frontier.id);
+  assert.equal(scout.movesLeft, 0);
+  assert.equal(player(state).orders, 4);
+  assert.ok(frontier.exploredBy.includes('player'));
   assert.ok(getVisibleSystems(state).length >= initialKnown);
 });
 

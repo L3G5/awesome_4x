@@ -21,7 +21,7 @@ function war(state, first = 'khar', second = 'veyr', since = 1) {
 }
 function captureFixture({ charted = true, participant = false } = {}) {
   const state = createGame('public-sovereignty');
-  const system = state.systems.find(candidate => candidate.id === 's4');
+  const system = state.systems.find(candidate => !candidate.originalOwner && !getNeighbors(state, 's0').includes(candidate.id));
   Object.assign(system, { owner: 'veyr', population: 1, buildings: [], defenseDamage: 0, queue: null });
   system.knownBy = ['veyr', participant ? 'player' : 'khar', ...(charted ? ['player'] : [])].filter((id, index, all) => all.indexOf(id) === index);
   system.exploredBy = ['veyr'];

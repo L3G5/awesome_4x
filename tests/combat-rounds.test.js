@@ -1,3 +1,4 @@
+import { legacyCampaign } from './legacy-campaign-fixture.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
@@ -14,7 +15,7 @@ const empire = (state, id = 'player') => state.factions.find(faction => faction.
 const attack = scenario => game.command(scenario.state, scenario.action);
 
 function fixture(game, options = {}) {
-  const state = game.createGame('formation-sequence');
+  const state = options.historical ? legacyCampaign('formation-sequence') : game.createGame('formation-sequence');
   const aOwner = options.aOwner || 'player', dOwner = options.dOwner || 'veyr';
   const faction = id => state.factions.find(f => f.id === id);
   const attacker = state.fleets.find(f => f.owner === aOwner && f.type === 'frigate');
@@ -280,7 +281,7 @@ const baseline = [
 
 test('all thirteen ordinary command and complete next-cycle outcomes match the archived pre-trace engine', () => {
   for (const expected of baseline) {
-    const scenario = fixture(game, expected.options), { state } = scenario;
+    const scenario = fixture(game, { ...expected.options, historical: true }), { state } = scenario;
     assert.equal(hash(state), expected.initial, `${expected.options.name}: exact initial state`);
     const result = attack(scenario);
     assert.equal(result.ok, true);

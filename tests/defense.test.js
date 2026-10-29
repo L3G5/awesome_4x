@@ -1,3 +1,4 @@
+import { legacyCampaign } from './legacy-campaign-fixture.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, command, endTurn, getNeighbors, getDefenseLeadPreview, orderDefenders, validateSave } from '../src/game.js';
@@ -21,8 +22,9 @@ function addFleet(state, template, extra = {}) {
   state.fleets.push(created);
   return created;
 }
-function sequence(arrival = false) {
-  const state = createGame('formation-sequence'), attacker = fleet(state), defender = fleet(state, 'veyr'), ark = fleet(state, 'veyr', 'colony');
+function sequence(arrival = false, historical = false) {
+  const state = historical ? legacyCampaign('formation-sequence') : createGame('formation-sequence');
+  const attacker = fleet(state), defender = fleet(state, 'veyr'), ark = fleet(state, 'veyr', 'colony');
   war(state);
   for (const id of ['player', 'veyr']) faction(state, id).techs.push('shields');
   for (const force of [attacker, defender]) { force.ships = 4; force.hp = 136; }
@@ -159,7 +161,7 @@ test('default no-lead exchanges preserve pre-feature casualties, RNG, costs and 
     ] },
   ];
   for (const arrival of [false, true]) for (const explicitFalse of [false, true]) {
-    const { state, attacker, targetId } = sequence(arrival);
+    const { state, attacker, targetId } = sequence(arrival, true);
     if (explicitFalse) for (const force of state.fleets) force.defenseLead = false;
     const result = act(state, arrival ? 'move' : 'attack', attacker, arrival ? { targetId } : {});
     assert.equal(state.rng, 1063615140);

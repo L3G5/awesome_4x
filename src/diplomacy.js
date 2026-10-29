@@ -1,4 +1,4 @@
-import { FACTIONS } from './content.js';
+import { FACTIONS, SHIPS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
 import { recordPublicDiplomacy } from './public-affairs.js';
 import { getPublicRaces } from './victory.js';
@@ -34,6 +34,17 @@ function pressureFor(state, observerId, otherId) {
   return { borderCount, threatenedColonies: threatened.length, invadingWeight: visible.filter(fleet => owned.has(fleet.systemId)).reduce((sum, fleet) => sum + weight(fleet), 0), observedWeight: relevant.reduce((sum, fleet) => sum + weight(fleet), 0) };
 }
 
+/** Both sides can observe this blockade from the proposer's owned Beacon. */
+function decisiveBlockade(state, recipientId, proposerId) {
+  const races = getPublicRaces(state, recipientId);
+  const recipient = races.find(race => race.factionId === recipientId);
+  const proposer = races.find(race => race.factionId === proposerId);
+  if (!recipient || !proposer || proposer.progress <= recipient.progress
+    || proposer.progress >= proposer.target || proposer.target - proposer.progress > DIPLOMACY_RULES.truceTurns) return false;
+  return proposer.participatingSites.some(systemId => getVisibleFleets(state, proposerId, systemId)
+    .some(fleet => fleet.owner === recipientId && SHIPS[fleet.type]?.attack >= 4));
+}
+
 function willingness(state, recipientId, proposerId) {
   const recipient = factionOf(state, recipientId);
   const relation = recipient.relations[proposerId];
@@ -41,15 +52,17 @@ function willingness(state, recipientId, proposerId) {
   const lostColonies = Math.max(0, (relation.warStartColonies ?? coloniesOf(state, recipientId).length) - coloniesOf(state, recipientId).length);
   const pressure = pressureFor(state, recipientId, proposerId);
   const score = Math.min(60, warAge * 3) + lostColonies * 24 + Math.min(24, pressure.threatenedColonies * 12) + (pressure.invadingWeight > 0 ? 12 : 0);
-  const threshold = recipientId === 'khar' ? 48 : 36;
+  const blockadeLeverage = decisiveBlockade(state, recipientId, proposerId);
+  const threshold = Math.min(60, (recipientId === 'khar' ? 48 : 36) + (blockadeLeverage ? 24 : 0));
   const accepted = warAge >= DIPLOMACY_RULES.minimumWarTurns && score >= threshold;
   const reasons = [];
   if (lostColonies) reasons.push(`${nameOf(state, recipientId)} has lost ${lostColonies} colon${lostColonies === 1 ? 'y' : 'ies'} since the war began.`);
   if (pressure.threatenedColonies) reasons.push('Their colonies face military pressure they can observe.');
   if (warAge >= 12) reasons.push('The prolonged war increases their willingness to settle.');
   if (recipientId === 'khar') reasons.push('The Khar Dominion is reluctant to concede a war.');
-  const reason = warAge < DIPLOMACY_RULES.minimumWarTurns ? `Peace negotiations open after ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : accepted ? (reasons[0] || 'They are willing to end the war.') : 'They refuse these terms for now: war weariness and their observed losses or military pressure are insufficient.';
-  return { accepted, reason, reasons, warAge, lostColonies };
+  if (blockadeLeverage) reasons.push('Their Beacon blockade delays a rival ahead in public alignment who could finish during the truce.');
+  const reason = warAge < DIPLOMACY_RULES.minimumWarTurns ? `Peace negotiations open after ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : accepted ? (reasons[0] || 'They are willing to end the war.') : blockadeLeverage ? 'They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.' : 'They refuse these terms for now: war weariness and their observed losses or military pressure are insufficient.';
+  return { accepted, reason, reasons, warAge, lostColonies, blockadeLeverage };
 }
 
 function compatibleOffer(state, offer) {
