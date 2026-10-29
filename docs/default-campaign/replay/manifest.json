@@ -1,0 +1,77 @@
+{
+  "phase": "Frozen actual12\u219230 continuation only",
+  "pin": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "originalInputSha256": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+  "files": [
+    {
+      "file": "README.txt",
+      "bytes": 1352,
+      "sha256": "8a981ae9872a7ca1cfa8cc20f0e48523e6a0a817371ee9515a25960a87350042"
+    },
+    {
+      "file": "command-results.json",
+      "bytes": 22076,
+      "sha256": "7002368ac5e457405b0ae71724a31248e675c55f25719361fd895334ed8a40d5"
+    },
+    {
+      "file": "commands.json",
+      "bytes": 28150,
+      "sha256": "cd4b28afd85687ae6b5eef7fb947d005435bdc50054bfb77a2ff40a2b54248e7"
+    },
+    {
+      "file": "event-state-hashes.json",
+      "bytes": 57038,
+      "sha256": "c0cee84eb14b92f6aee005e7564ec78765edc405220263e3fec4fe5d53cfd52f"
+    },
+    {
+      "file": "evidence/036-cycle20-midgame-checkpoint.png",
+      "bytes": 339856,
+      "sha256": "083ce7f2ddc353bf97033a20fe72d3091d633a54722bc1b62da997840fd342bc"
+    },
+    {
+      "file": "evidence/056-cycle30-checkpoint.png",
+      "bytes": 332404,
+      "sha256": "0056773fb9b85f8faebc456553dbee0f9bf6313e3335e865e55b398227706283"
+    },
+    {
+      "file": "index.html",
+      "bytes": 6294,
+      "sha256": "80b3d918ac7da8f51c35eba03baa6c839819b0d94ecd865b6bb67ddb2ff471d1"
+    },
+    {
+      "file": "input-manifest.json",
+      "bytes": 9794,
+      "sha256": "285c5ba55010bed825bc116b5fec1eb39846003c79fe3af83d48e5047566b830"
+    },
+    {
+      "file": "noncommand-receipts.json",
+      "bytes": 14335,
+      "sha256": "b75b3ae4c9acffce497137ee23b4fd4d5c8976c989cf2f1e67a4c40e6040fbef"
+    },
+    {
+      "file": "observation-checks.json",
+      "bytes": 17894,
+      "sha256": "25e9c7b80e78f5c5361b83caf0b05c62fe29b70c432653b50616cc1a507d9379"
+    },
+    {
+      "file": "replay.mjs",
+      "bytes": 14882,
+      "sha256": "fd24391266b12ef10a440d65175112ed6e2bde95b3ab6d30a1fd498f0d7e9f1d"
+    },
+    {
+      "file": "results.json",
+      "bytes": 2758,
+      "sha256": "07a9ff467f4dedfc5b5685bbbb8a2e55e9e9710f7971f895b9c5f24c1b442a43"
+    },
+    {
+      "file": "review-notes.json",
+      "bytes": 2313,
+      "sha256": "6ccb688db9d9567e413b35bec35dfb9b1576c2686dda3dc25b50bb4e19c9093b"
+    },
+    {
+      "file": "source-pins.json",
+      "bytes": 2437,
+      "sha256": "0d8257ad7536ad7e3ce2e2d7a2e792ba83b37a6792213ebfc222f725c225ff71"
+    }
+  ]
+}

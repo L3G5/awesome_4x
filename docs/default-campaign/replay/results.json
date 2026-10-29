@@ -1,0 +1,85 @@
+{
+  "scope": "One cross-version continuation of the actual ASTERION opening, beginning from unedited cycle12. No reconstruction or replay claim for cycles1–12; no continued play beyond the frozen actual cycle30 boundary.",
+  "pin": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "buildPin": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+  "scriptSha256": "fd24391266b12ef10a440d65175112ed6e2bde95b3ab6d30a1fd498f0d7e9f1d",
+  "inputSha256": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+  "frozenLogSha256": "0d203095029765498b62fab8af7d0494b65d5e4eae9ad77a32f3abe44aacd791",
+  "logEvents": 318,
+  "successfulActionReceipts": 203,
+  "commands": 85,
+  "commandKinds": {
+    "move": 16,
+    "planRoute": 8,
+    "continueRoute": 24,
+    "endTurn": 18,
+    "develop": 3,
+    "colonize": 1,
+    "research": 3,
+    "build": 9,
+    "hold": 1,
+    "merge": 1,
+    "leadDefense": 1
+  },
+  "endTurns": 18,
+  "jsonReloadNextCommandChecks": 85,
+  "validNonnegativeStates": 86,
+  "exports": [
+    {
+      "line": 170,
+      "file": "036-asterion-reach-cycle-20.json",
+      "turn": 20,
+      "bytesSha256": "492a718ca75568222d5d41cff5eaec4b30409857729bfa082635d18313b815c9",
+      "canonicalSha256": "b01bb2fa8920717a508d8ea4af60feabb74164b574abd18aa9dc26d6a7de2b20",
+      "exact": true
+    },
+    {
+      "line": 314,
+      "file": "056-asterion-reach-cycle-30.json",
+      "turn": 30,
+      "bytesSha256": "9909263a0a283336ebb7b18dbccd33a5174cf610ad4aa5aca7fce62f34db4474",
+      "canonicalSha256": "61401936350e2abe264e3407b9c5a75b178a9827b64a0bcb801bb8b89566fa54",
+      "exact": true
+    }
+  ],
+  "visibleObservationChecks": 52,
+  "preImportObservations": 2,
+  "driverErrors": [
+    {
+      "index": 10,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.development-card:has-text(\"Academy Charter\")')\u001b[22m\n"
+    },
+    {
+      "index": 14,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.fleet-switch button[title=\"Pathfinder 1 at Carina\"]')\u001b[22m\n"
+    }
+  ],
+  "initialTurn": 12,
+  "finalTurn": 30,
+  "winner": null,
+  "stats": {
+    "credits": 709,
+    "minerals": 90,
+    "science": 0,
+    "creditIncome": 84,
+    "mineralIncome": 37,
+    "scienceIncome": 82,
+    "production": 70,
+    "upkeep": 6,
+    "colonies": 4,
+    "population": 30,
+    "ships": 4,
+    "military": 27,
+    "orders": 10,
+    "maxOrders": 10,
+    "uncappedOrders": 10,
+    "orderLimit": 18,
+    "score": 194,
+    "beacons": 0,
+    "explored": 41
+  },
+  "finalCanonicalSha256": "61401936350e2abe264e3407b9c5a75b178a9827b64a0bcb801bb8b89566fa54",
+  "statePatches": 0,
+  "unexecutedRequestedActionsApplied": 0,
+  "originalFilesVerified": 61
+}

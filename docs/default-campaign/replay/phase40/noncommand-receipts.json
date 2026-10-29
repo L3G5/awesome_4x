@@ -1,0 +1,1132 @@
+[
+  {
+    "line": 2,
+    "requestIndex": 1,
+    "action": {
+      "click": "[data-action=\"begin\"]"
+    }
+  },
+  {
+    "line": 3,
+    "requestIndex": 1,
+    "action": {
+      "click": "[data-action=\"menu\"]"
+    }
+  },
+  {
+    "line": 6,
+    "requestIndex": 2,
+    "action": {
+      "importFile": {
+        "selector": "[data-action=\"import\"]",
+        "path": "/tmp/asterion-asterion21-midgame/input-actual-cycle12-v0.21.0.json"
+      }
+    }
+  },
+  {
+    "line": 9,
+    "requestIndex": 3,
+    "action": {
+      "click": "#confirm-import"
+    }
+  },
+  {
+    "line": 10,
+    "requestIndex": 3,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 13,
+    "requestIndex": 4,
+    "action": {
+      "click": "[aria-label=\"Inspect Sundrift\"]"
+    }
+  },
+  {
+    "line": 14,
+    "requestIndex": 4,
+    "action": {
+      "click": "[data-action=\"development-menu\"]"
+    }
+  },
+  {
+    "line": 17,
+    "requestIndex": 5,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 18,
+    "requestIndex": 5,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Kharos\"]"
+    }
+  },
+  {
+    "line": 21,
+    "requestIndex": 6,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Corvus\")"
+    }
+  },
+  {
+    "line": 25,
+    "requestIndex": 7,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Carina\")"
+    }
+  },
+  {
+    "line": 27,
+    "requestIndex": 7,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Kharos\"]"
+    }
+  },
+  {
+    "line": 28,
+    "requestIndex": 7,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 39,
+    "requestIndex": 10,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 40,
+    "requestIndex": 10,
+    "action": {
+      "click": "[aria-label=\"Inspect Sundrift\"]"
+    }
+  },
+  {
+    "line": 41,
+    "requestIndex": 10,
+    "action": {
+      "click": "[data-action=\"development-menu\"]"
+    }
+  },
+  {
+    "line": 45,
+    "requestIndex": 11,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 48,
+    "requestIndex": 12,
+    "action": {
+      "click": "#inspector .fleet-row:has-text(\"Colony Ark 21\")"
+    }
+  },
+  {
+    "line": 49,
+    "requestIndex": 12,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Halcyon\")"
+    }
+  },
+  {
+    "line": 53,
+    "requestIndex": 13,
+    "action": {
+      "click": "[data-action=\"colonize\"]"
+    }
+  },
+  {
+    "line": 59,
+    "requestIndex": 15,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 62,
+    "requestIndex": 16,
+    "action": {
+      "click": "button:has-text(\"Pathfinder 1 ×1\")"
+    }
+  },
+  {
+    "line": 65,
+    "requestIndex": 17,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Aurelia\")"
+    }
+  },
+  {
+    "line": 69,
+    "requestIndex": 18,
+    "action": {
+      "click": ".galaxy-system-label:has-text(\"Thalassa\")"
+    }
+  },
+  {
+    "line": 77,
+    "requestIndex": 20,
+    "action": {
+      "press": "2"
+    }
+  },
+  {
+    "line": 83,
+    "requestIndex": 22,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 84,
+    "requestIndex": 22,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 88,
+    "requestIndex": 23,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Carina\"]"
+    }
+  },
+  {
+    "line": 90,
+    "requestIndex": 23,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Aldebaran\"]"
+    }
+  },
+  {
+    "line": 95,
+    "requestIndex": 24,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 96,
+    "requestIndex": 24,
+    "action": {
+      "click": "[aria-label=\"Inspect Halcyon\"]"
+    }
+  },
+  {
+    "line": 97,
+    "requestIndex": 24,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 99,
+    "requestIndex": 24,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 100,
+    "requestIndex": 24,
+    "action": {
+      "click": "[aria-label=\"Inspect Haven\"]"
+    }
+  },
+  {
+    "line": 101,
+    "requestIndex": 24,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 103,
+    "requestIndex": 24,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Stillwater\"]"
+    }
+  },
+  {
+    "line": 105,
+    "requestIndex": 24,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Morrow\"]"
+    }
+  },
+  {
+    "line": 110,
+    "requestIndex": 25,
+    "action": {
+      "press": "2"
+    }
+  },
+  {
+    "line": 114,
+    "requestIndex": 26,
+    "action": {
+      "press": "3"
+    }
+  },
+  {
+    "line": 117,
+    "requestIndex": 27,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 118,
+    "requestIndex": 27,
+    "action": {
+      "click": ".galaxy-system-label:has-text(\"Nacre\")"
+    }
+  },
+  {
+    "line": 123,
+    "requestIndex": 28,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Caldera\"]"
+    }
+  },
+  {
+    "line": 128,
+    "requestIndex": 29,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Hesper\"]"
+    }
+  },
+  {
+    "line": 129,
+    "requestIndex": 29,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Sable\")"
+    }
+  },
+  {
+    "line": 133,
+    "requestIndex": 30,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Aster ↗\")"
+    }
+  },
+  {
+    "line": 137,
+    "requestIndex": 31,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Hesper\"]"
+    }
+  },
+  {
+    "line": 140,
+    "requestIndex": 31,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 143,
+    "requestIndex": 32,
+    "action": {
+      "click": "[aria-label=\"Inspect Solace\"]"
+    }
+  },
+  {
+    "line": 144,
+    "requestIndex": 32,
+    "action": {
+      "click": "[data-action=\"development-menu\"]"
+    }
+  },
+  {
+    "line": 149,
+    "requestIndex": 33,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Aster\"]"
+    }
+  },
+  {
+    "line": 150,
+    "requestIndex": 33,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Veyr Prime\")"
+    }
+  },
+  {
+    "line": 154,
+    "requestIndex": 34,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Eos\")"
+    }
+  },
+  {
+    "line": 159,
+    "requestIndex": 35,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Vesper\")"
+    }
+  },
+  {
+    "line": 163,
+    "requestIndex": 36,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Cinder\")"
+    }
+  },
+  {
+    "line": 165,
+    "requestIndex": 36,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Tethys\"]"
+    }
+  },
+  {
+    "line": 168,
+    "requestIndex": 36,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 169,
+    "requestIndex": 36,
+    "action": {
+      "click": "[data-action=\"menu\"]"
+    }
+  },
+  {
+    "line": 171,
+    "requestIndex": 36,
+    "action": {
+      "click": "[data-action=\"export\"]"
+    }
+  },
+  {
+    "line": 172,
+    "requestIndex": 36,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 175,
+    "requestIndex": 37,
+    "action": {
+      "click": "[aria-label=\"Inspect Sundrift\"]"
+    }
+  },
+  {
+    "line": 176,
+    "requestIndex": 37,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 178,
+    "requestIndex": 37,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Kepler\"]"
+    }
+  },
+  {
+    "line": 180,
+    "requestIndex": 37,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Cinder\"]"
+    }
+  },
+  {
+    "line": 183,
+    "requestIndex": 38,
+    "action": {
+      "click": ".galaxy-system-label:has-text(\"Antares\")"
+    }
+  },
+  {
+    "line": 187,
+    "requestIndex": 38,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 190,
+    "requestIndex": 39,
+    "action": {
+      "click": "[aria-label=\"Inspect Haven\"]"
+    }
+  },
+  {
+    "line": 191,
+    "requestIndex": 39,
+    "action": {
+      "click": "[data-action=\"development-menu\"]"
+    }
+  },
+  {
+    "line": 193,
+    "requestIndex": 39,
+    "action": {
+      "click": ".fleet-switch button[title=\"Vanguard 3 at Haven\"]"
+    }
+  },
+  {
+    "line": 195,
+    "requestIndex": 39,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Aster\"]"
+    }
+  },
+  {
+    "line": 199,
+    "requestIndex": 40,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 200,
+    "requestIndex": 40,
+    "action": {
+      "click": ".galaxy-system-label:has-text(\"Nacre\")"
+    }
+  },
+  {
+    "line": 204,
+    "requestIndex": 40,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 205,
+    "requestIndex": 40,
+    "action": {
+      "click": "[aria-label=\"Inspect Halcyon\"]"
+    }
+  },
+  {
+    "line": 206,
+    "requestIndex": 40,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 210,
+    "requestIndex": 41,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Sable\"]"
+    }
+  },
+  {
+    "line": 212,
+    "requestIndex": 41,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 213,
+    "requestIndex": 41,
+    "action": {
+      "click": "#inspector .fleet-row:has-text(\"Vanguard 3\")"
+    }
+  },
+  {
+    "line": 215,
+    "requestIndex": 41,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 216,
+    "requestIndex": 41,
+    "action": {
+      "click": "[data-tab=\"ship\"]"
+    }
+  },
+  {
+    "line": 219,
+    "requestIndex": 42,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 221,
+    "requestIndex": 42,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Ashfall\"]"
+    }
+  },
+  {
+    "line": 224,
+    "requestIndex": 42,
+    "action": {
+      "press": "2"
+    }
+  },
+  {
+    "line": 228,
+    "requestIndex": 43,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 229,
+    "requestIndex": 43,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 230,
+    "requestIndex": 43,
+    "action": {
+      "click": "[data-tab=\"ship\"]"
+    }
+  },
+  {
+    "line": 232,
+    "requestIndex": 43,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Kepler\"]"
+    }
+  },
+  {
+    "line": 236,
+    "requestIndex": 44,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Meridian\")"
+    }
+  },
+  {
+    "line": 240,
+    "requestIndex": 45,
+    "action": {
+      "click": "button:has-text(\"Read expedition record\")"
+    }
+  },
+  {
+    "line": 243,
+    "requestIndex": 46,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 245,
+    "requestIndex": 46,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Eidolon\")"
+    }
+  },
+  {
+    "line": 249,
+    "requestIndex": 47,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Elysian\")"
+    }
+  },
+  {
+    "line": 251,
+    "requestIndex": 47,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 252,
+    "requestIndex": 47,
+    "action": {
+      "click": "[aria-label=\"Inspect Haven\"]"
+    }
+  },
+  {
+    "line": 253,
+    "requestIndex": 47,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 256,
+    "requestIndex": 47,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 259,
+    "requestIndex": 48,
+    "action": {
+      "click": "#inspector .fleet-row:has-text(\"Vanguard 3\"):not(:has-text(\"Vanguard 34\"))"
+    }
+  },
+  {
+    "line": 264,
+    "requestIndex": 49,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Elysian\"]"
+    }
+  },
+  {
+    "line": 265,
+    "requestIndex": 49,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 271,
+    "requestIndex": 50,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 272,
+    "requestIndex": 50,
+    "action": {
+      "click": "[data-tab=\"ship\"]"
+    }
+  },
+  {
+    "line": 274,
+    "requestIndex": 50,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Asterion\")"
+    }
+  },
+  {
+    "line": 278,
+    "requestIndex": 51,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Haven\")"
+    }
+  },
+  {
+    "line": 281,
+    "requestIndex": 51,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 282,
+    "requestIndex": 51,
+    "action": {
+      "click": "[aria-label=\"Inspect Halcyon\"]"
+    }
+  },
+  {
+    "line": 283,
+    "requestIndex": 51,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 285,
+    "requestIndex": 51,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Haven\"]"
+    }
+  },
+  {
+    "line": 288,
+    "requestIndex": 52,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Peregrine\")"
+    }
+  },
+  {
+    "line": 292,
+    "requestIndex": 53,
+    "action": {
+      "click": "[aria-label=\"Fit galaxy\"]"
+    }
+  },
+  {
+    "line": 297,
+    "requestIndex": 55,
+    "action": {
+      "click": ".galaxy-system-label:has-text(\"Lumen\")"
+    }
+  },
+  {
+    "line": 298,
+    "requestIndex": 55,
+    "action": {
+      "click": "#inspector [data-system-select]:has-text(\"Caelum\")"
+    }
+  },
+  {
+    "line": 302,
+    "requestIndex": 55,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 305,
+    "requestIndex": 56,
+    "action": {
+      "click": "#inspector .fleet-row:has-text(\"Colony Ark 35\")"
+    }
+  },
+  {
+    "line": 306,
+    "requestIndex": 56,
+    "action": {
+      "click": ".galaxy-system-label:has-text(\"Nacre\")"
+    }
+  },
+  {
+    "line": 309,
+    "requestIndex": 56,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Tethys\"]"
+    }
+  },
+  {
+    "line": 312,
+    "requestIndex": 56,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 313,
+    "requestIndex": 56,
+    "action": {
+      "click": "[data-action=\"menu\"]"
+    }
+  },
+  {
+    "line": 315,
+    "requestIndex": 56,
+    "action": {
+      "click": "[data-action=\"export\"]"
+    }
+  },
+  {
+    "line": 316,
+    "requestIndex": 56,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 319,
+    "requestIndex": 57,
+    "action": {
+      "press": "3"
+    }
+  },
+  {
+    "line": 322,
+    "requestIndex": 58,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 323,
+    "requestIndex": 58,
+    "action": {
+      "click": "button:has-text(\"Colony Ark 35 ×1\")"
+    }
+  },
+  {
+    "line": 325,
+    "requestIndex": 58,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Nacre\"]"
+    }
+  },
+  {
+    "line": 328,
+    "requestIndex": 58,
+    "action": {
+      "click": ".fleet-switch button[title=\"Colony Ark 35 at Kepler\"]"
+    }
+  },
+  {
+    "line": 330,
+    "requestIndex": 58,
+    "action": {
+      "click": "[data-action=\"colonize\"]"
+    }
+  },
+  {
+    "line": 334,
+    "requestIndex": 59,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 336,
+    "requestIndex": 59,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 337,
+    "requestIndex": 59,
+    "action": {
+      "click": "button:has-text(\"Pathfinder 1 ×1\")"
+    }
+  },
+  {
+    "line": 340,
+    "requestIndex": 59,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 343,
+    "requestIndex": 60,
+    "action": {
+      "click": "[aria-label=\"Inspect Solace\"]"
+    }
+  },
+  {
+    "line": 344,
+    "requestIndex": 60,
+    "action": {
+      "click": "#inspector .fleet-row:has-text(\"Vanguard 3\")"
+    }
+  },
+  {
+    "line": 346,
+    "requestIndex": 60,
+    "action": {
+      "click": ".fleet-switch button[title=\"Pathfinder 1 at Velorum\"]"
+    }
+  },
+  {
+    "line": 351,
+    "requestIndex": 61,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 352,
+    "requestIndex": 61,
+    "action": {
+      "click": "[aria-label=\"Inspect Nacre\"]"
+    }
+  },
+  {
+    "line": 356,
+    "requestIndex": 61,
+    "action": {
+      "press": "h"
+    }
+  },
+  {
+    "line": 357,
+    "requestIndex": 61,
+    "action": {
+      "click": "#inspector .fleet-row:has-text(\"Vanguard 3 ×2\")"
+    }
+  },
+  {
+    "line": 361,
+    "requestIndex": 62,
+    "action": {
+      "click": ".fleet-switch button[title^=\"Pathfinder 1 at\"]"
+    }
+  },
+  {
+    "line": 364,
+    "requestIndex": 62,
+    "action": {
+      "press": "2"
+    }
+  },
+  {
+    "line": 367,
+    "requestIndex": 63,
+    "action": {
+      "press": "1"
+    }
+  },
+  {
+    "line": 368,
+    "requestIndex": 63,
+    "action": {
+      "click": ".fleet-switch button[title^=\"Pathfinder 1 at\"]"
+    }
+  },
+  {
+    "line": 372,
+    "requestIndex": 63,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 375,
+    "requestIndex": 64,
+    "action": {
+      "click": "[aria-label=\"Inspect Sundrift\"]"
+    }
+  },
+  {
+    "line": 376,
+    "requestIndex": 64,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 378,
+    "requestIndex": 64,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 379,
+    "requestIndex": 64,
+    "action": {
+      "click": "[aria-label=\"Inspect Nacre\"]"
+    }
+  },
+  {
+    "line": 380,
+    "requestIndex": 64,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 382,
+    "requestIndex": 64,
+    "action": {
+      "press": "2"
+    }
+  },
+  {
+    "line": 388,
+    "requestIndex": 65,
+    "action": {
+      "click": "[data-action=\"briefing\"]"
+    }
+  },
+  {
+    "line": 391,
+    "requestIndex": 66,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 393,
+    "requestIndex": 66,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 398,
+    "requestIndex": 68,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 399,
+    "requestIndex": 68,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 400,
+    "requestIndex": 68,
+    "action": {
+      "click": "button:has-text(\"Review your funding\")"
+    }
+  },
+  {
+    "line": 403,
+    "requestIndex": 69,
+    "action": {
+      "click": "[data-action=\"menu\"]"
+    }
+  },
+  {
+    "line": 405,
+    "requestIndex": 69,
+    "action": {
+      "click": "[data-action=\"export\"]"
+    }
+  },
+  {
+    "line": 406,
+    "requestIndex": 69,
+    "action": {
+      "press": "Escape"
+    }
+  },
+  {
+    "line": 410,
+    "requestIndex": 70,
+    "action": {
+      "click": "[aria-label=\"Inspect Haven\"]"
+    }
+  },
+  {
+    "line": 411,
+    "requestIndex": 70,
+    "action": {
+      "click": "[data-action=\"build-menu\"]"
+    }
+  },
+  {
+    "line": 414,
+    "requestIndex": 70,
+    "action": {
+      "press": "4"
+    }
+  },
+  {
+    "line": 415,
+    "requestIndex": 70,
+    "action": {
+      "click": "[data-action=\"menu\"]"
+    }
+  },
+  {
+    "line": 416,
+    "requestIndex": 70,
+    "action": {
+      "click": "[data-action=\"export\"]"
+    }
+  },
+  {
+    "line": 418,
+    "requestIndex": 70,
+    "action": {
+      "press": "Escape"
+    }
+  }
+]

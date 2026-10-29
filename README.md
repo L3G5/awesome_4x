@@ -50,7 +50,7 @@ Set `PLAYWRIGHT_BASE_URL` to check an already-served build. Chromium acceptance 
 
 The [development index](docs/development.html) organizes played campaigns, exact replays, mechanics reviews, controlled AI comparisons, save compatibility and artwork. It preserves each report's source pins and distinguishes historical measurements from current behavior. Open `/docs/development.html` through the local development server to browse the HTML reports. [PROGRESS.md](PROGRESS.md) records each stage's goals, results and deployment checks; [docs/API.md](docs/API.md) describes the engine interface.
 
-The completed [Odyssey](docs/odyssey-playtest/index.html), [fortified-network WATCH](docs/watch-playtest/index.html) and [military campaign](docs/military-playtest/report.html) preserve actual UI play and independent reconstruction. For example:
+The completed [default ASTERION campaign](docs/default-campaign/index.html), [Odyssey](docs/odyssey-playtest/index.html), [fortified-network WATCH](docs/watch-playtest/index.html) and [military campaign](docs/military-playtest/report.html) preserve actual UI play and independent reconstruction. For example:
 
 ```sh
 node docs/odyssey-playtest/verify.mjs

@@ -1,0 +1,75 @@
+{
+  "phase": "Frozen cumulative actual12\u219250 continuation",
+  "files": [
+    {
+      "file": "README.txt",
+      "bytes": 1098,
+      "sha256": "ec2330271befa209d3286fb0f07076cc69ad9ed36997d19d25565cad9fe8bd02"
+    },
+    {
+      "file": "command-results.json",
+      "bytes": 34857,
+      "sha256": "b7303da89ca77fb4c6ffdafe5c2cfb5f469891155187854dcdcacdfa9e0c99d6"
+    },
+    {
+      "file": "commands.json",
+      "bytes": 45304,
+      "sha256": "2aa2e954e8032a34ab54bf3a9dcd235d52657ca299f34a9c5801b1aa96c79f27"
+    },
+    {
+      "file": "event-state-hashes.json",
+      "bytes": 90391,
+      "sha256": "a4b0b274489a844d1b681fcb035dfbab2c82e8ede1fdad92e2c8ece0fb4e0e7c"
+    },
+    {
+      "file": "index.html",
+      "bytes": 4303,
+      "sha256": "b3ba30113371f88b7d2384364bdd0178deb15520680fd3b89b894151d42e68f6"
+    },
+    {
+      "file": "input-manifest.json",
+      "bytes": 14809,
+      "sha256": "489f219626825d47253e98cb43f7d2560eb7dba0e2e56768d5e26af1056c4a52"
+    },
+    {
+      "file": "noncommand-receipts.json",
+      "bytes": 21928,
+      "sha256": "4f2ce1a2dd9bf46948ae9bee735ba9516853de3ca8947b2e90a692dd19cdd836"
+    },
+    {
+      "file": "observation-checks.json",
+      "bytes": 26414,
+      "sha256": "62ad2acf99564812c10eb54f749f2384e5b8015f321c1049889fb006b5b3aea8"
+    },
+    {
+      "file": "parser-adjustment/failure-before-optional-income-label.json",
+      "bytes": 1959,
+      "sha256": "05cb0f9f474824554f49f03be3dd846f80c7f3e46384e9a54f3c655c2d382ceb"
+    },
+    {
+      "file": "parser-adjustment/replay-before-optional-income-label.mjs",
+      "bytes": 17012,
+      "sha256": "9e5db1ec393fabe92cf388d8c9072d18fd894ff44ebb2497d70ad30f563614b4"
+    },
+    {
+      "file": "replay.mjs",
+      "bytes": 17042,
+      "sha256": "f73767bbc503182e046e554b2f9888b9b89664004bec6e81003f4ba39cac7d40"
+    },
+    {
+      "file": "results.json",
+      "bytes": 4522,
+      "sha256": "94b78aad7d51b6efcb566a00409ce6fc73937e4f973693410f33d6ea24328330"
+    },
+    {
+      "file": "review-notes.json",
+      "bytes": 1587,
+      "sha256": "3b1aa0a64cb7805ad34894cae652e121d12442b88ae48ea33484b5585e99d9fe"
+    },
+    {
+      "file": "source-pins.json",
+      "bytes": 2437,
+      "sha256": "0d8257ad7536ad7e3ce2e2d7a2e792ba83b37a6792213ebfc222f725c225ff71"
+    }
+  ]
+}

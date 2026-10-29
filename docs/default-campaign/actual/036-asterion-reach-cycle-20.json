@@ -1,0 +1,3158 @@
+{
+  "version": 1,
+  "seed": "ASTERION",
+  "rng": 1409269922,
+  "turn": 20,
+  "nextFleetId": 29,
+  "nextLogId": 67,
+  "nextCombatReportId": 1,
+  "systems": [
+    {
+      "id": "s0",
+      "name": "Solace",
+      "x": 29,
+      "y": 29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "player",
+      "originalOwner": "player",
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard",
+        "lab",
+        "factory"
+      ],
+      "queue": {
+        "itemId": "forge",
+        "kind": "charter",
+        "charterType": "forge",
+        "charterLevel": 1,
+        "progress": 36,
+        "work": 60,
+        "cost": {
+          "credits": 120,
+          "minerals": 60
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "player",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s1",
+      "name": "Veyr Prime",
+      "x": -29,
+      "y": 29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": "veyr",
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard"
+      ],
+      "queue": {
+        "itemId": "frigate",
+        "kind": "ship",
+        "progress": 12,
+        "work": 26,
+        "cost": {
+          "credits": 25,
+          "minerals": 35
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "Kharos",
+      "x": -29,
+      "y": -29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": "khar",
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard"
+      ],
+      "queue": {
+        "itemId": "frigate",
+        "kind": "ship",
+        "progress": 12,
+        "work": 26,
+        "cost": {
+          "credits": 25,
+          "minerals": 35
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "player"
+      ],
+      "exploredBy": [
+        "khar",
+        "player"
+      ]
+    },
+    {
+      "id": "s3",
+      "name": "Lumen",
+      "x": 29,
+      "y": -29,
+      "type": "terran",
+      "habitability": 90,
+      "richness": 3,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": "choir",
+      "population": 8,
+      "growth": 0,
+      "buildings": [
+        "mine",
+        "shipyard"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "choir",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s4",
+      "name": "Meridian",
+      "x": 15.2,
+      "y": 1.5,
+      "type": "barren",
+      "habitability": 19,
+      "richness": 3,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "archive",
+        "resolved": true,
+        "observations": {
+          "choir": {
+            "observedTurn": 4,
+            "phase": "opening",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 11,
+            "phase": "opening",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 12,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "khar",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s4:1",
+            "stageId": "opening",
+            "choiceId": "study",
+            "turn": 11,
+            "factionId": "khar",
+            "title": "The Silent Archive",
+            "choiceLabel": "Recover their knowledge",
+            "outcomeText": "Gained 50 science.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "science": 50
+              }
+            },
+            "knownBy": [
+              "khar"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s5",
+      "name": "Hesper",
+      "x": -14.3,
+      "y": 9.2,
+      "type": "ice",
+      "habitability": 40,
+      "richness": 3,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "player",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "player",
+        "choir",
+        "khar"
+      ]
+    },
+    {
+      "id": "s6",
+      "name": "Aurelia",
+      "x": 0.1,
+      "y": -20,
+      "type": "ocean",
+      "habitability": 78,
+      "richness": 3,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s7",
+      "name": "Nacre",
+      "x": 11.9,
+      "y": 15.9,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 4,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s8",
+      "name": "Caldera",
+      "x": -22.9,
+      "y": -3.5,
+      "type": "ocean",
+      "habitability": 76,
+      "richness": 5,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "observatory",
+        "resolved": true,
+        "observations": {
+          "veyr": {
+            "observedTurn": 8,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "player": {
+            "observedTurn": 16,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "choir": {
+            "observedTurn": 15,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 9,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "player",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s8:1",
+            "stageId": "opening",
+            "choiceId": "salvage",
+            "turn": 7,
+            "factionId": "player",
+            "title": "The Last Observatory",
+            "choiceLabel": "Take the timing core",
+            "outcomeText": "Gained 65 minerals and 20 science.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "minerals": 65,
+                "science": 20
+              }
+            },
+            "knownBy": [
+              "player",
+              "choir",
+              "veyr",
+              "khar"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "veyr",
+        "player",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "player",
+        "choir",
+        "khar"
+      ]
+    },
+    {
+      "id": "s9",
+      "name": "Velorum",
+      "x": 19.3,
+      "y": -15.5,
+      "type": "terran",
+      "habitability": 80,
+      "richness": 4,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 4,
+      "growth": 0.6,
+      "buildings": [
+        "lab"
+      ],
+      "queue": {
+        "itemId": "academy",
+        "kind": "charter",
+        "charterType": "academy",
+        "charterLevel": 1,
+        "progress": 16,
+        "work": 60,
+        "cost": {
+          "credits": 120,
+          "minerals": 60
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "player",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s10",
+      "name": "Ashfall",
+      "x": -6.3,
+      "y": 23,
+      "type": "arid",
+      "habitability": 55,
+      "richness": 2,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "veyr",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s11",
+      "name": "Carina",
+      "x": -10.8,
+      "y": -25.4,
+      "type": "barren",
+      "habitability": 15,
+      "richness": 3,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s12",
+      "name": "Eidolon",
+      "x": 25.5,
+      "y": 9.9,
+      "type": "volcanic",
+      "habitability": 29,
+      "richness": 4,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "wreck",
+        "resolved": true,
+        "observations": {
+          "choir": {
+            "observedTurn": 4,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 12,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 12,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "choir",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s12:1",
+            "stageId": "opening",
+            "choiceId": "reactor",
+            "turn": 3,
+            "factionId": "choir",
+            "title": "A Banner in the Dark",
+            "choiceLabel": "Study the reactor",
+            "outcomeText": "Gained 40 science and 30 minerals.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "science": 40,
+                "minerals": 30
+              }
+            },
+            "knownBy": [
+              "choir",
+              "veyr",
+              "khar"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s13",
+      "name": "Sable",
+      "x": -27.1,
+      "y": 10.5,
+      "type": "volcanic",
+      "habitability": 21,
+      "richness": 5,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "player",
+        "choir",
+        "khar"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ]
+    },
+    {
+      "id": "s14",
+      "name": "Ilyra",
+      "x": 16.2,
+      "y": -26.4,
+      "type": "arid",
+      "habitability": 62,
+      "richness": 3,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 2,
+      "growth": 0.5,
+      "buildings": [],
+      "queue": {
+        "itemId": "lab",
+        "kind": "building",
+        "progress": 26,
+        "work": 30,
+        "cost": {
+          "credits": 30,
+          "minerals": 30
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "choir",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s15",
+      "name": "Kepler",
+      "x": 8.6,
+      "y": 30.3,
+      "type": "ocean",
+      "habitability": 75,
+      "richness": 3,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s16",
+      "name": "Stillwater",
+      "x": -29.4,
+      "y": -12.8,
+      "type": "terran",
+      "habitability": 84,
+      "richness": 4,
+      "science": 2,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 1,
+      "growth": 0.8,
+      "buildings": [],
+      "queue": {
+        "itemId": "lab",
+        "kind": "building",
+        "progress": 10,
+        "work": 30,
+        "cost": {
+          "credits": 30,
+          "minerals": 30
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "observations": {
+          "veyr": {
+            "observedTurn": 8,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "player": {
+            "observedTurn": 15,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 20,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "choir": {
+            "observedTurn": 14,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "veyr",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s16:1",
+            "stageId": "opening",
+            "choiceId": "ore",
+            "turn": 7,
+            "factionId": "veyr",
+            "title": "The Hollow Sun",
+            "choiceLabel": "Redirect the foundries",
+            "outcomeText": "Gained 85 minerals.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "minerals": 85
+              }
+            },
+            "knownBy": [
+              "veyr",
+              "player",
+              "khar",
+              "choir"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "veyr",
+        "player",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "player",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s17",
+      "name": "Orison",
+      "x": 31.4,
+      "y": -5.3,
+      "type": "arid",
+      "habitability": 57,
+      "richness": 2,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "player",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s18",
+      "name": "Cinder",
+      "x": -22.7,
+      "y": 25.7,
+      "type": "terran",
+      "habitability": 84,
+      "richness": 5,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 8,
+      "growth": 0.2,
+      "buildings": [
+        "mine"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "charter": {
+        "type": "extraction",
+        "level": 1
+      }
+    },
+    {
+      "id": "s19",
+      "name": "Bellatrix",
+      "x": -4.3,
+      "y": -34.6,
+      "type": "volcanic",
+      "habitability": 22,
+      "richness": 5,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s20",
+      "name": "Sundrift",
+      "x": 28.5,
+      "y": 24.3,
+      "type": "terran",
+      "habitability": 81,
+      "richness": 2,
+      "science": 4,
+      "owner": "player",
+      "originalOwner": null,
+      "population": 6,
+      "growth": 0.7,
+      "buildings": [
+        "mine",
+        "lab"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "observations": {
+          "player": {
+            "observedTurn": 20,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 15,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "choir": {
+            "observedTurn": 18,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "player",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s20:1",
+            "stageId": "opening",
+            "choiceId": "ore",
+            "turn": 1,
+            "factionId": "player",
+            "title": "The Hollow Sun",
+            "choiceLabel": "Redirect the foundries",
+            "outcomeText": "Gained 85 minerals.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "minerals": 85
+              }
+            },
+            "knownBy": [
+              "player",
+              "khar",
+              "choir"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "player",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "player",
+        "khar",
+        "choir"
+      ],
+      "charter": {
+        "type": "academy",
+        "level": 1
+      }
+    },
+    {
+      "id": "s21",
+      "name": "Thalassa",
+      "x": -35.9,
+      "y": -4,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 2,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "player",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ]
+    },
+    {
+      "id": "s22",
+      "name": "Ophion",
+      "x": 28,
+      "y": -23.1,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 4,
+      "science": 2,
+      "owner": "choir",
+      "originalOwner": null,
+      "population": 6,
+      "growth": 0.4,
+      "buildings": [
+        "mine"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "choir",
+        "player",
+        "veyr"
+      ],
+      "charter": {
+        "type": "extraction",
+        "level": 1
+      }
+    },
+    {
+      "id": "s23",
+      "name": "Tethys",
+      "x": -1.5,
+      "y": 38.8,
+      "type": "ocean",
+      "habitability": 73,
+      "richness": 1,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ]
+    },
+    {
+      "id": "s24",
+      "name": "Corvus",
+      "x": -26.9,
+      "y": -28.3,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 1,
+      "science": 4,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 6,
+      "growth": 0.4,
+      "buildings": [
+        "lab"
+      ],
+      "queue": {
+        "itemId": "academy",
+        "kind": "charter",
+        "charterType": "academy",
+        "charterLevel": 1,
+        "progress": 45,
+        "work": 60,
+        "cost": {
+          "credits": 120,
+          "minerals": 60
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "reef",
+        "resolved": false,
+        "observations": {
+          "khar": {
+            "observedTurn": 20,
+            "phase": "opening",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "player": {
+            "observedTurn": 14,
+            "phase": "opening",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        }
+      },
+      "knownBy": [
+        "khar",
+        "veyr",
+        "player"
+      ],
+      "exploredBy": [
+        "khar",
+        "player"
+      ]
+    },
+    {
+      "id": "s25",
+      "name": "Elysian",
+      "x": 39.3,
+      "y": 9,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 4,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s26",
+      "name": "Aster",
+      "x": -36,
+      "y": 20.6,
+      "type": "terran",
+      "habitability": 75,
+      "richness": 1,
+      "science": 3,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 3,
+      "growth": 0.7,
+      "buildings": [
+        "lab"
+      ],
+      "queue": {
+        "itemId": "habitat",
+        "kind": "building",
+        "progress": 20,
+        "work": 36,
+        "cost": {
+          "credits": 40,
+          "minerals": 35
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ]
+    },
+    {
+      "id": "s27",
+      "name": "Nyx",
+      "x": 11,
+      "y": -40,
+      "type": "arid",
+      "habitability": 56,
+      "richness": 1,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s28",
+      "name": "Haven",
+      "x": 17.3,
+      "y": 38,
+      "type": "terran",
+      "habitability": 84,
+      "richness": 2,
+      "science": 4,
+      "owner": "player",
+      "originalOwner": null,
+      "population": 5,
+      "growth": 0.4,
+      "buildings": [
+        "lab"
+      ],
+      "queue": {
+        "itemId": "factory",
+        "kind": "building",
+        "progress": 39,
+        "work": 40,
+        "cost": {
+          "credits": 35,
+          "minerals": 45
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "archive",
+        "resolved": true,
+        "observations": {
+          "player": {
+            "observedTurn": 20,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "khar": {
+            "observedTurn": 18,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "choir": {
+            "observedTurn": 17,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "player",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s28:1",
+            "stageId": "opening",
+            "choiceId": "study",
+            "turn": 2,
+            "factionId": "player",
+            "title": "The Silent Archive",
+            "choiceLabel": "Recover their knowledge",
+            "outcomeText": "Gained 50 science.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "science": 50
+              }
+            },
+            "knownBy": [
+              "player",
+              "khar",
+              "choir"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s29",
+      "name": "Aldebaran",
+      "x": -40,
+      "y": -14,
+      "type": "ocean",
+      "habitability": 79,
+      "richness": 5,
+      "science": 3,
+      "owner": "khar",
+      "originalOwner": null,
+      "population": 4,
+      "growth": 0,
+      "buildings": [
+        "mine"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "khar",
+        "player",
+        "choir"
+      ],
+      "exploredBy": [
+        "veyr",
+        "khar",
+        "player"
+      ]
+    },
+    {
+      "id": "s30",
+      "name": "Caelum",
+      "x": 38.3,
+      "y": -23.1,
+      "type": "ocean",
+      "habitability": 70,
+      "richness": 5,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "veyr"
+      ]
+    },
+    {
+      "id": "s31",
+      "name": "Vesper",
+      "x": -20.2,
+      "y": 38.1,
+      "type": "ice",
+      "habitability": 43,
+      "richness": 1,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 1,
+      "growth": 0.8,
+      "buildings": [],
+      "queue": {
+        "itemId": "lab",
+        "kind": "building",
+        "progress": 20,
+        "work": 30,
+        "cost": {
+          "credits": 30,
+          "minerals": 30
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ]
+    },
+    {
+      "id": "s32",
+      "name": "Iona",
+      "x": -14.6,
+      "y": -41.5,
+      "type": "volcanic",
+      "habitability": 20,
+      "richness": 3,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "forge",
+        "resolved": true,
+        "observations": {
+          "khar": {
+            "observedTurn": 6,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "player": {
+            "observedTurn": 8,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 18,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "khar",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s32:1",
+            "stageId": "opening",
+            "choiceId": "ore",
+            "turn": 5,
+            "factionId": "khar",
+            "title": "The Hollow Sun",
+            "choiceLabel": "Redirect the foundries",
+            "outcomeText": "Gained 85 minerals.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "minerals": 85
+              }
+            },
+            "knownBy": [
+              "khar",
+              "player",
+              "veyr"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s33",
+      "name": "Halcyon",
+      "x": 39.9,
+      "y": 22.3,
+      "type": "ocean",
+      "habitability": 78,
+      "richness": 2,
+      "science": 1,
+      "owner": "player",
+      "originalOwner": null,
+      "population": 3,
+      "growth": 0.1,
+      "buildings": [],
+      "queue": {
+        "itemId": "lab",
+        "kind": "building",
+        "progress": 28,
+        "work": 30,
+        "cost": {
+          "credits": 30,
+          "minerals": 30
+        }
+      },
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "player",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s34",
+      "name": "Antares",
+      "x": -42.9,
+      "y": 12.1,
+      "type": "terran",
+      "habitability": 82,
+      "richness": 1,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "choir"
+      ]
+    },
+    {
+      "id": "s35",
+      "name": "Seraph",
+      "x": 24.8,
+      "y": -39,
+      "type": "barren",
+      "habitability": 18,
+      "richness": 5,
+      "science": 1,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "choir",
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s36",
+      "name": "Peregrine",
+      "x": 7.6,
+      "y": 46.7,
+      "type": "volcanic",
+      "habitability": 27,
+      "richness": 1,
+      "science": 4,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "pilgrims",
+        "resolved": true,
+        "observations": {
+          "khar": {
+            "observedTurn": 17,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "choir": {
+            "observedTurn": 17,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "khar",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s36:1",
+            "stageId": "opening",
+            "choiceId": "supplies",
+            "turn": 16,
+            "factionId": "khar",
+            "title": "A Thousand Sleeping Voices",
+            "choiceLabel": "Restore their navigation",
+            "outcomeText": "Gained 25 science and 15 credits.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "science": 25,
+                "credits": 15
+              }
+            },
+            "knownBy": [
+              "khar",
+              "choir"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s37",
+      "name": "Morrow",
+      "x": -40.2,
+      "y": -26.1,
+      "type": "barren",
+      "habitability": 14,
+      "richness": 3,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "khar",
+        "veyr",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "khar",
+        "player"
+      ]
+    },
+    {
+      "id": "s38",
+      "name": "Zenith",
+      "x": 48.2,
+      "y": -0.1,
+      "type": "volcanic",
+      "habitability": 20,
+      "richness": 2,
+      "science": 3,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "exploredBy": [
+        "player",
+        "khar",
+        "choir"
+      ]
+    },
+    {
+      "id": "s39",
+      "name": "Eos",
+      "x": -31.8,
+      "y": 37.3,
+      "type": "terran",
+      "habitability": 83,
+      "richness": 2,
+      "science": 2,
+      "owner": "veyr",
+      "originalOwner": null,
+      "population": 4,
+      "growth": 0.9,
+      "buildings": [
+        "lab"
+      ],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "veyr",
+        "choir",
+        "player"
+      ],
+      "exploredBy": [
+        "veyr",
+        "choir",
+        "player"
+      ]
+    },
+    {
+      "id": "s40",
+      "name": "Terminus",
+      "x": 2.7,
+      "y": -50.4,
+      "type": "barren",
+      "habitability": 43,
+      "richness": 5,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": {
+        "id": "garden",
+        "resolved": true,
+        "observations": {
+          "khar": {
+            "observedTurn": 5,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "player": {
+            "observedTurn": 7,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          },
+          "veyr": {
+            "observedTurn": 19,
+            "phase": "resolved",
+            "progress": 0,
+            "siteId": null,
+            "siteState": null
+          }
+        },
+        "resolvedBy": "khar",
+        "stage": "resolved",
+        "history": [
+          {
+            "id": "s40:1",
+            "stageId": "opening",
+            "choiceId": "preserve",
+            "turn": 4,
+            "factionId": "khar",
+            "title": "Garden Between Stars",
+            "choiceLabel": "Wake the caretakers",
+            "outcomeText": "Gained 20 science. Habitability increased by 25 points.",
+            "effects": {
+              "paid": {},
+              "gained": {
+                "science": 20
+              },
+              "habitability": 25
+            },
+            "knownBy": [
+              "khar",
+              "player",
+              "veyr"
+            ]
+          }
+        ]
+      },
+      "knownBy": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "exploredBy": [
+        "khar",
+        "player",
+        "veyr"
+      ]
+    },
+    {
+      "id": "s41",
+      "name": "Asterion",
+      "x": 32.7,
+      "y": 39.4,
+      "type": "arid",
+      "habitability": 56,
+      "richness": 5,
+      "science": 2,
+      "owner": null,
+      "originalOwner": null,
+      "population": 0,
+      "growth": 0,
+      "buildings": [],
+      "queue": null,
+      "defenseDamage": 0,
+      "anomaly": null,
+      "knownBy": [
+        "player",
+        "khar",
+        "choir"
+      ],
+      "exploredBy": [
+        "khar"
+      ]
+    }
+  ],
+  "lanes": [
+    [
+      "s0",
+      "s20"
+    ],
+    [
+      "s0",
+      "s41"
+    ],
+    [
+      "s20",
+      "s33"
+    ],
+    [
+      "s33",
+      "s25"
+    ],
+    [
+      "s25",
+      "s38"
+    ],
+    [
+      "s25",
+      "s12"
+    ],
+    [
+      "s12",
+      "s4"
+    ],
+    [
+      "s0",
+      "s28"
+    ],
+    [
+      "s28",
+      "s15"
+    ],
+    [
+      "s28",
+      "s36"
+    ],
+    [
+      "s36",
+      "s23"
+    ],
+    [
+      "s4",
+      "s7"
+    ],
+    [
+      "s12",
+      "s17"
+    ],
+    [
+      "s17",
+      "s9"
+    ],
+    [
+      "s9",
+      "s14"
+    ],
+    [
+      "s9",
+      "s22"
+    ],
+    [
+      "s22",
+      "s3"
+    ],
+    [
+      "s22",
+      "s30"
+    ],
+    [
+      "s3",
+      "s35"
+    ],
+    [
+      "s35",
+      "s27"
+    ],
+    [
+      "s27",
+      "s40"
+    ],
+    [
+      "s27",
+      "s19"
+    ],
+    [
+      "s19",
+      "s11"
+    ],
+    [
+      "s11",
+      "s6"
+    ],
+    [
+      "s19",
+      "s32"
+    ],
+    [
+      "s11",
+      "s24"
+    ],
+    [
+      "s24",
+      "s2"
+    ],
+    [
+      "s2",
+      "s37"
+    ],
+    [
+      "s37",
+      "s29"
+    ],
+    [
+      "s29",
+      "s16"
+    ],
+    [
+      "s29",
+      "s21"
+    ],
+    [
+      "s16",
+      "s8"
+    ],
+    [
+      "s8",
+      "s13"
+    ],
+    [
+      "s13",
+      "s5"
+    ],
+    [
+      "s13",
+      "s26"
+    ],
+    [
+      "s26",
+      "s1"
+    ],
+    [
+      "s1",
+      "s18"
+    ],
+    [
+      "s1",
+      "s39"
+    ],
+    [
+      "s26",
+      "s34"
+    ],
+    [
+      "s39",
+      "s31"
+    ],
+    [
+      "s5",
+      "s10"
+    ],
+    [
+      "s5",
+      "s8"
+    ],
+    [
+      "s6",
+      "s19"
+    ],
+    [
+      "s7",
+      "s15"
+    ],
+    [
+      "s8",
+      "s21"
+    ],
+    [
+      "s10",
+      "s23"
+    ],
+    [
+      "s14",
+      "s22"
+    ],
+    [
+      "s15",
+      "s23"
+    ],
+    [
+      "s16",
+      "s21"
+    ],
+    [
+      "s18",
+      "s31"
+    ],
+    [
+      "s24",
+      "s37"
+    ],
+    [
+      "s30",
+      "s3"
+    ],
+    [
+      "s32",
+      "s11"
+    ],
+    [
+      "s33",
+      "s0"
+    ],
+    [
+      "s34",
+      "s13"
+    ],
+    [
+      "s38",
+      "s17"
+    ],
+    [
+      "s40",
+      "s19"
+    ],
+    [
+      "s41",
+      "s28"
+    ]
+  ],
+  "factions": [
+    {
+      "id": "player",
+      "name": "The Concord",
+      "shortName": "Concord",
+      "color": "#68d9cd",
+      "motto": "Many worlds. One horizon.",
+      "trait": "Civic mandate",
+      "description": "A federation of survivors, united by a fragile promise. Receives one additional order each turn.",
+      "home": "Solace",
+      "leader": "First Speaker Mara Voss",
+      "credits": 226,
+      "minerals": 84,
+      "science": 0,
+      "research": {
+        "techId": "computing",
+        "progress": 178
+      },
+      "techs": [
+        "logistics",
+        "industry",
+        "physics"
+      ],
+      "orders": 10,
+      "contacts": [
+        "choir",
+        "veyr",
+        "khar"
+      ],
+      "capitalId": "s0",
+      "eliminated": false,
+      "relations": {
+        "veyr": {
+          "status": "peace",
+          "trust": 31,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "khar": {
+          "status": "peace",
+          "trust": 29,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "choir": {
+          "status": "peace",
+          "trust": 36,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        }
+      },
+      "alignment": {
+        "progress": 0,
+        "sites": [],
+        "active": false,
+        "started": false,
+        "reportedBeacons": []
+      }
+    },
+    {
+      "id": "veyr",
+      "name": "Veyr Consortium",
+      "shortName": "Veyr",
+      "color": "#e5b665",
+      "motto": "Every star has its price.",
+      "trait": "Merchant houses",
+      "description": "Trade leagues that turn the frontier into opportunity. Earns 25% more credits.",
+      "home": "Veyr Prime",
+      "leader": "Director Cassian Rook",
+      "credits": 439,
+      "minerals": 57,
+      "science": 0,
+      "research": {
+        "techId": "diplomacy",
+        "progress": 173
+      },
+      "techs": [
+        "logistics",
+        "ecology"
+      ],
+      "orders": 10,
+      "contacts": [
+        "khar",
+        "player",
+        "choir"
+      ],
+      "capitalId": "s1",
+      "eliminated": false,
+      "relations": {
+        "player": {
+          "status": "peace",
+          "trust": 31,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "khar": {
+          "status": "peace",
+          "trust": -10,
+          "trade": false,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0
+        },
+        "choir": {
+          "status": "peace",
+          "trust": 31,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        }
+      },
+      "strategy": {
+        "mode": "develop",
+        "rallyId": "s1",
+        "objectiveId": null,
+        "turn": 19
+      },
+      "alignment": {
+        "progress": 0,
+        "sites": [],
+        "active": false,
+        "started": false,
+        "reportedBeacons": []
+      }
+    },
+    {
+      "id": "khar",
+      "name": "Khar Dominion",
+      "shortName": "Khar",
+      "color": "#ef7e7a",
+      "motto": "The void respects strength.",
+      "trait": "War foundries",
+      "description": "A martial society forged on hostile worlds. Warships deal 15% more damage.",
+      "home": "Kharos",
+      "leader": "High Marshal Sera Kade",
+      "credits": 178,
+      "minerals": 41,
+      "science": 0,
+      "research": {
+        "techId": "cruisers",
+        "progress": 264
+      },
+      "techs": [
+        "weapons",
+        "logistics"
+      ],
+      "orders": 9,
+      "contacts": [
+        "choir",
+        "veyr",
+        "player"
+      ],
+      "capitalId": "s2",
+      "eliminated": false,
+      "relations": {
+        "player": {
+          "status": "peace",
+          "trust": 24,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "veyr": {
+          "status": "peace",
+          "trust": -10,
+          "trade": false,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0
+        },
+        "choir": {
+          "status": "peace",
+          "trust": -10,
+          "trade": false,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0
+        }
+      },
+      "strategy": {
+        "mode": "develop",
+        "rallyId": "s2",
+        "objectiveId": null,
+        "turn": 19
+      },
+      "alignment": {
+        "progress": 0,
+        "sites": [],
+        "active": false,
+        "started": false,
+        "reportedBeacons": []
+      }
+    },
+    {
+      "id": "choir",
+      "name": "The Luminous Choir",
+      "shortName": "Choir",
+      "color": "#bca0ef",
+      "motto": "The universe remembers.",
+      "trait": "Shared consciousness",
+      "description": "A communion seeking the intelligence behind the ancient gates. Produces 25% more science.",
+      "home": "Lumen",
+      "leader": "The Ninth Voice",
+      "credits": 203,
+      "minerals": 57,
+      "science": 0,
+      "research": {
+        "techId": "computing",
+        "progress": 329
+      },
+      "techs": [
+        "physics",
+        "logistics"
+      ],
+      "orders": 9,
+      "contacts": [
+        "khar",
+        "player",
+        "veyr"
+      ],
+      "capitalId": "s3",
+      "eliminated": false,
+      "relations": {
+        "player": {
+          "status": "peace",
+          "trust": 36,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "veyr": {
+          "status": "peace",
+          "trust": 31,
+          "trade": true,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0,
+          "tradeEndsAt": 0
+        },
+        "khar": {
+          "status": "peace",
+          "trust": -10,
+          "trade": false,
+          "treatyTurn": 0,
+          "lastBorderCount": 0,
+          "grievance": 0
+        }
+      },
+      "strategy": {
+        "mode": "develop",
+        "rallyId": "s3",
+        "objectiveId": null,
+        "turn": 19
+      },
+      "alignment": {
+        "progress": 0,
+        "sites": [],
+        "active": false,
+        "started": false,
+        "reportedBeacons": []
+      }
+    }
+  ],
+  "fleets": [
+    {
+      "id": "f1",
+      "name": "Pathfinder 1",
+      "owner": "player",
+      "systemId": "s18",
+      "type": "scout",
+      "ships": 1,
+      "hp": 18,
+      "movesLeft": 2
+    },
+    {
+      "id": "f3",
+      "name": "Vanguard 3",
+      "owner": "player",
+      "systemId": "s15",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 34,
+      "movesLeft": 1,
+      "route": {
+        "destinationId": "s0",
+        "path": [
+          "s15",
+          "s28",
+          "s0"
+        ]
+      }
+    },
+    {
+      "id": "f4",
+      "name": "Pathfinder 4",
+      "owner": "veyr",
+      "systemId": "s27",
+      "type": "scout",
+      "ships": 1,
+      "hp": 18,
+      "movesLeft": 2
+    },
+    {
+      "id": "f6",
+      "name": "Vanguard 6",
+      "owner": "veyr",
+      "systemId": "s1",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 34,
+      "movesLeft": 1,
+      "defenseLead": true
+    },
+    {
+      "id": "f7",
+      "name": "Pathfinder 7",
+      "owner": "khar",
+      "systemId": "s10",
+      "type": "scout",
+      "ships": 1,
+      "hp": 18,
+      "movesLeft": 2
+    },
+    {
+      "id": "f9",
+      "name": "Vanguard 9",
+      "owner": "khar",
+      "systemId": "s2",
+      "type": "frigate",
+      "ships": 4,
+      "hp": 136,
+      "movesLeft": 1,
+      "defenseLead": true
+    },
+    {
+      "id": "f10",
+      "name": "Pathfinder 10",
+      "owner": "choir",
+      "systemId": "s38",
+      "type": "scout",
+      "ships": 1,
+      "hp": 18,
+      "movesLeft": 2
+    },
+    {
+      "id": "f12",
+      "name": "Vanguard 12",
+      "owner": "choir",
+      "systemId": "s3",
+      "type": "frigate",
+      "ships": 3,
+      "hp": 102,
+      "movesLeft": 1,
+      "defenseLead": true
+    },
+    {
+      "id": "f26",
+      "name": "Colony Ark 26",
+      "owner": "veyr",
+      "systemId": "s26",
+      "type": "colony",
+      "ships": 1,
+      "hp": 24,
+      "movesLeft": 1
+    },
+    {
+      "id": "f28",
+      "name": "Vanguard 28",
+      "owner": "choir",
+      "systemId": "s3",
+      "type": "frigate",
+      "ships": 1,
+      "hp": 34,
+      "movesLeft": 1
+    }
+  ],
+  "log": [
+    {
+      "id": 66,
+      "turn": 20,
+      "type": "construction",
+      "text": "Sundrift completed Academy Charter I.",
+      "systemId": "s20"
+    },
+    {
+      "id": 65,
+      "turn": 19,
+      "type": "survey",
+      "text": "Survey complete at Cinder: Terran world, 84% habitability.",
+      "systemId": "s18"
+    },
+    {
+      "id": 64,
+      "turn": 19,
+      "type": "survey",
+      "text": "Survey complete at Vesper: Glacial world, 43% habitability.",
+      "systemId": "s31"
+    },
+    {
+      "id": 63,
+      "turn": 18,
+      "type": "survey",
+      "text": "Survey complete at Eos: Terran world, 83% habitability.",
+      "systemId": "s39"
+    },
+    {
+      "id": 62,
+      "turn": 18,
+      "type": "survey",
+      "text": "Survey complete at Veyr Prime: Terran world, 90% habitability.",
+      "systemId": "s1"
+    },
+    {
+      "id": 61,
+      "turn": 18,
+      "type": "construction",
+      "text": "Solace completed Manufactory.",
+      "systemId": "s0",
+      "itemId": "factory"
+    },
+    {
+      "id": 60,
+      "turn": 17,
+      "type": "survey",
+      "text": "Survey complete at Aster: Terran world, 75% habitability.",
+      "systemId": "s26"
+    },
+    {
+      "id": 59,
+      "turn": 17,
+      "type": "survey",
+      "text": "Survey complete at Sable: Volcanic world, 21% habitability.",
+      "systemId": "s13"
+    },
+    {
+      "id": 58,
+      "turn": 16,
+      "type": "research",
+      "text": "Research complete: Resonance Theory. +2 science per colony. The first step toward understanding the gates.",
+      "techId": "physics"
+    },
+    {
+      "id": 57,
+      "turn": 15,
+      "type": "survey",
+      "text": "Survey complete at Thalassa: Terran world, 82% habitability.",
+      "systemId": "s21"
+    },
+    {
+      "id": 56,
+      "turn": 15,
+      "type": "construction",
+      "text": "Haven completed Research Enclave.",
+      "systemId": "s28",
+      "itemId": "lab"
+    },
+    {
+      "id": 55,
+      "turn": 14,
+      "type": "research",
+      "text": "Research complete: Autonomous Industry. Unlocks Manufactories, which add 6 production per turn.",
+      "techId": "industry"
+    },
+    {
+      "id": 54,
+      "turn": 13,
+      "type": "colony",
+      "text": "A new beginning: Halcyon joins Concord.",
+      "systemId": "s33"
+    },
+    {
+      "id": 53,
+      "turn": 13,
+      "type": "construction",
+      "text": "Solace completed Colony Ark.",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    {
+      "id": 52,
+      "turn": 11,
+      "type": "survey",
+      "text": "Survey complete at Corvus: Terran world, 75% habitability.",
+      "systemId": "s24"
+    },
+    {
+      "id": 51,
+      "turn": 11,
+      "type": "discovery",
+      "text": "Corvus: The Patient Reef detected. An expedition can investigate.",
+      "systemId": "s24"
+    },
+    {
+      "id": 50,
+      "turn": 11,
+      "type": "survey",
+      "text": "Survey complete at Kharos: Terran world, 90% habitability.",
+      "systemId": "s2"
+    },
+    {
+      "id": 49,
+      "turn": 11,
+      "type": "diplomacy",
+      "text": "Trade established between Khar Dominion and The Concord. Borders are open; existing grievances remain.",
+      "targetId": "khar"
+    },
+    {
+      "id": 48,
+      "turn": 11,
+      "type": "construction",
+      "text": "Sundrift completed Research Enclave.",
+      "systemId": "s20",
+      "itemId": "lab"
+    },
+    {
+      "id": 47,
+      "turn": 10,
+      "type": "diplomacy",
+      "text": "Khar Dominion proposes trade and reserves its 30-credit treaty fee. Borders remain closed until you accept. The offer expires on cycle 13.",
+      "targetId": "khar"
+    },
+    {
+      "id": 46,
+      "turn": 10,
+      "type": "survey",
+      "text": "Survey complete at Morrow: Barren world, 14% habitability.",
+      "systemId": "s37"
+    },
+    {
+      "id": 45,
+      "turn": 10,
+      "type": "diplomacy",
+      "text": "The Concord sent a 35-credit gift to Khar Dominion. Trust improves; border grievances remain.",
+      "targetId": "khar"
+    },
+    {
+      "id": 44,
+      "turn": 9,
+      "type": "diplomacy",
+      "text": "The Luminous Choir and Veyr Consortium announced a trade agreement. Their borders are open to each other.",
+      "publicAffairId": 1,
+      "targetId": "choir"
+    },
+    {
+      "id": 43,
+      "turn": 9,
+      "type": "survey",
+      "text": "Survey complete at Aldebaran: Ocean world, 79% habitability.",
+      "systemId": "s29"
+    },
+    {
+      "id": 42,
+      "turn": 9,
+      "type": "survey",
+      "text": "Survey complete at Aurelia: Ocean world, 78% habitability.",
+      "systemId": "s6"
+    },
+    {
+      "id": 41,
+      "turn": 9,
+      "type": "colony",
+      "text": "A new beginning: Haven joins Concord.",
+      "systemId": "s28"
+    },
+    {
+      "id": 40,
+      "turn": 9,
+      "type": "diplomacy",
+      "text": "Trade established between Veyr Consortium and The Concord. Borders are open; existing grievances remain.",
+      "targetId": "veyr"
+    },
+    {
+      "id": 39,
+      "turn": 9,
+      "type": "construction",
+      "text": "Solace completed Colony Ark.",
+      "systemId": "s0",
+      "itemId": "colony"
+    },
+    {
+      "id": 38,
+      "turn": 8,
+      "type": "diplomacy",
+      "text": "Veyr Consortium proposes trade and reserves its 30-credit treaty fee. Borders remain closed until you accept. The offer expires on cycle 11.",
+      "targetId": "veyr"
+    },
+    {
+      "id": 37,
+      "turn": 8,
+      "type": "diplomacy",
+      "text": "First contact: Khar Dominion. A diplomatic channel is open.",
+      "targetId": "khar"
+    },
+    {
+      "id": 36,
+      "turn": 8,
+      "type": "survey",
+      "text": "Survey complete at Carina: Barren world, 15% habitability.",
+      "systemId": "s11"
+    },
+    {
+      "id": 35,
+      "turn": 8,
+      "type": "survey",
+      "text": "Survey complete at Iona: Volcanic world, 20% habitability.",
+      "systemId": "s32"
+    },
+    {
+      "id": 34,
+      "turn": 8,
+      "type": "diplomacy",
+      "text": "First contact: Veyr Consortium. A diplomatic channel is open.",
+      "targetId": "veyr"
+    },
+    {
+      "id": 33,
+      "turn": 8,
+      "type": "survey",
+      "text": "Survey complete at Stillwater: Terran world, 84% habitability.",
+      "systemId": "s16"
+    },
+    {
+      "id": 32,
+      "turn": 7,
+      "type": "discovery",
+      "text": "The Last Observatory: Take the timing core. Gained 65 minerals and 20 science.",
+      "systemId": "s8"
+    },
+    {
+      "id": 31,
+      "turn": 7,
+      "type": "survey",
+      "text": "Survey complete at Bellatrix: Volcanic world, 22% habitability.",
+      "systemId": "s19"
+    },
+    {
+      "id": 30,
+      "turn": 7,
+      "type": "survey",
+      "text": "Survey complete at Terminus: Barren world, 43% habitability.",
+      "systemId": "s40"
+    },
+    {
+      "id": 29,
+      "turn": 7,
+      "type": "survey",
+      "text": "Survey complete at Caldera: Ocean world, 76% habitability.",
+      "systemId": "s8"
+    },
+    {
+      "id": 28,
+      "turn": 7,
+      "type": "discovery",
+      "text": "Caldera: The Last Observatory detected. An expedition can investigate.",
+      "systemId": "s8"
+    },
+    {
+      "id": 27,
+      "turn": 6,
+      "type": "survey",
+      "text": "Survey complete at Hesper: Glacial world, 40% habitability.",
+      "systemId": "s5"
+    },
+    {
+      "id": 26,
+      "turn": 6,
+      "type": "survey",
+      "text": "Survey complete at Nyx: Arid world, 56% habitability.",
+      "systemId": "s27"
+    },
+    {
+      "id": 25,
+      "turn": 6,
+      "type": "survey",
+      "text": "Survey complete at Seraph: Barren world, 18% habitability.",
+      "systemId": "s35"
+    },
+    {
+      "id": 24,
+      "turn": 6,
+      "type": "construction",
+      "text": "Sundrift completed Orbital Extractor.",
+      "systemId": "s20",
+      "itemId": "mine"
+    },
+    {
+      "id": 23,
+      "turn": 5,
+      "type": "survey",
+      "text": "Survey complete at Ashfall: Arid world, 55% habitability.",
+      "systemId": "s10"
+    },
+    {
+      "id": 22,
+      "turn": 5,
+      "type": "survey",
+      "text": "Survey complete at Lumen: Terran world, 90% habitability.",
+      "systemId": "s3"
+    },
+    {
+      "id": 21,
+      "turn": 5,
+      "type": "survey",
+      "text": "Survey complete at Ophion: Terran world, 75% habitability.",
+      "systemId": "s22"
+    },
+    {
+      "id": 20,
+      "turn": 5,
+      "type": "construction",
+      "text": "Solace completed Research Enclave.",
+      "systemId": "s0",
+      "itemId": "lab"
+    },
+    {
+      "id": 19,
+      "turn": 4,
+      "type": "diplomacy",
+      "text": "Trade established between The Concord and The Luminous Choir. Borders are open; existing grievances remain.",
+      "targetId": "choir"
+    },
+    {
+      "id": 18,
+      "turn": 4,
+      "type": "survey",
+      "text": "Survey complete at Tethys: Ocean world, 73% habitability.",
+      "systemId": "s23"
+    },
+    {
+      "id": 17,
+      "turn": 4,
+      "type": "survey",
+      "text": "Survey complete at Ilyra: Arid world, 62% habitability.",
+      "systemId": "s14"
+    },
+    {
+      "id": 16,
+      "turn": 4,
+      "type": "survey",
+      "text": "Survey complete at Velorum: Terran world, 80% habitability.",
+      "systemId": "s9"
+    },
+    {
+      "id": 15,
+      "turn": 3,
+      "type": "diplomacy",
+      "text": "First contact: The Luminous Choir. A diplomatic channel is open.",
+      "targetId": "choir"
+    },
+    {
+      "id": 14,
+      "turn": 3,
+      "type": "survey",
+      "text": "Survey complete at Kepler: Ocean world, 75% habitability.",
+      "systemId": "s15"
+    },
+    {
+      "id": 13,
+      "turn": 3,
+      "type": "survey",
+      "text": "Survey complete at Orison: Arid world, 57% habitability.",
+      "systemId": "s17"
+    },
+    {
+      "id": 12,
+      "turn": 3,
+      "type": "survey",
+      "text": "Survey complete at Zenith: Volcanic world, 20% habitability.",
+      "systemId": "s38"
+    },
+    {
+      "id": 11,
+      "turn": 2,
+      "type": "discovery",
+      "text": "The Silent Archive: Recover their knowledge. Gained 50 science.",
+      "systemId": "s28"
+    },
+    {
+      "id": 10,
+      "turn": 2,
+      "type": "research",
+      "text": "Research complete: Deep-space Logistics. +1 order each turn. Opens automated industry and larger hulls.",
+      "techId": "logistics"
+    },
+    {
+      "id": 9,
+      "turn": 2,
+      "type": "survey",
+      "text": "Survey complete at Haven: Terran world, 84% habitability.",
+      "systemId": "s28"
+    },
+    {
+      "id": 8,
+      "turn": 2,
+      "type": "discovery",
+      "text": "Haven: The Silent Archive detected. An expedition can investigate.",
+      "systemId": "s28"
+    },
+    {
+      "id": 7,
+      "turn": 2,
+      "type": "survey",
+      "text": "Survey complete at Elysian: Terran world, 82% habitability.",
+      "systemId": "s25"
+    },
+    {
+      "id": 6,
+      "turn": 2,
+      "type": "survey",
+      "text": "Survey complete at Halcyon: Ocean world, 78% habitability.",
+      "systemId": "s33"
+    },
+    {
+      "id": 5,
+      "turn": 1,
+      "type": "colony",
+      "text": "A new beginning: Sundrift joins Concord.",
+      "systemId": "s20"
+    },
+    {
+      "id": 4,
+      "turn": 1,
+      "type": "discovery",
+      "text": "The Hollow Sun: Redirect the foundries. Gained 85 minerals.",
+      "systemId": "s20"
+    },
+    {
+      "id": 3,
+      "turn": 1,
+      "type": "discovery",
+      "text": "Sundrift: The Hollow Sun detected. An expedition can investigate.",
+      "systemId": "s20"
+    },
+    {
+      "id": 2,
+      "turn": 1,
+      "type": "objective",
+      "text": "First mandate: send your Pathfinder through a starlane, then bring a Colony Ark to a habitable world."
+    },
+    {
+      "id": 1,
+      "turn": 1,
+      "type": "story",
+      "text": "The gates have been silent for centuries. Today, the Concord returns to the stars."
+    }
+  ],
+  "combatReports": [],
+  "lastBriefing": {
+    "turn": 20,
+    "entries": [
+      {
+        "id": 66,
+        "turn": 20,
+        "type": "construction",
+        "text": "Sundrift completed Academy Charter I.",
+        "systemId": "s20"
+      }
+    ],
+    "reportIds": []
+  },
+  "winner": null,
+  "victoryType": null,
+  "diplomacyUpdatedTurn": 20,
+  "discoveriesUpdatedTurn": 20,
+  "alignmentUpdatedTurn": 20,
+  "publicAffairs": {
+    "version": 1,
+    "observers": {
+      "khar": {
+        "nextId": 4,
+        "dispatches": [
+          {
+            "id": 3,
+            "turn": 9,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              }
+            ],
+            "targetId": "choir",
+            "text": "The Luminous Choir and Veyr Consortium announced a trade agreement. Their borders are open to each other."
+          },
+          {
+            "id": 2,
+            "turn": 9,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "player",
+                "name": "The Concord",
+                "shortName": "Concord",
+                "color": "#68d9cd"
+              }
+            ],
+            "targetId": "veyr",
+            "text": "Veyr Consortium and The Concord announced a trade agreement. Their borders are open to each other."
+          },
+          {
+            "id": 1,
+            "turn": 4,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": null,
+                "name": "Uncontacted civilization",
+                "shortName": "Uncontacted",
+                "color": null
+              },
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              }
+            ],
+            "targetId": "choir",
+            "text": "Uncontacted civilization and The Luminous Choir announced a trade agreement. Their borders are open to each other."
+          }
+        ],
+        "transfers": []
+      },
+      "choir": {
+        "nextId": 3,
+        "dispatches": [
+          {
+            "id": 2,
+            "turn": 11,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "player",
+                "name": "The Concord",
+                "shortName": "Concord",
+                "color": "#68d9cd"
+              }
+            ],
+            "targetId": "khar",
+            "text": "Khar Dominion and The Concord announced a trade agreement. Their borders are open to each other."
+          },
+          {
+            "id": 1,
+            "turn": 9,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              },
+              {
+                "id": "player",
+                "name": "The Concord",
+                "shortName": "Concord",
+                "color": "#68d9cd"
+              }
+            ],
+            "targetId": "veyr",
+            "text": "Veyr Consortium and The Concord announced a trade agreement. Their borders are open to each other."
+          }
+        ],
+        "transfers": []
+      },
+      "player": {
+        "nextId": 2,
+        "dispatches": [
+          {
+            "id": 1,
+            "turn": 9,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": "choir",
+                "name": "The Luminous Choir",
+                "shortName": "Choir",
+                "color": "#bca0ef"
+              },
+              {
+                "id": "veyr",
+                "name": "Veyr Consortium",
+                "shortName": "Veyr",
+                "color": "#e5b665"
+              }
+            ],
+            "targetId": "choir",
+            "text": "The Luminous Choir and Veyr Consortium announced a trade agreement. Their borders are open to each other."
+          }
+        ],
+        "transfers": []
+      },
+      "veyr": {
+        "nextId": 2,
+        "dispatches": [
+          {
+            "id": 1,
+            "turn": 11,
+            "kind": "trade",
+            "participants": [
+              {
+                "id": "khar",
+                "name": "Khar Dominion",
+                "shortName": "Khar",
+                "color": "#ef7e7a"
+              },
+              {
+                "id": "player",
+                "name": "The Concord",
+                "shortName": "Concord",
+                "color": "#68d9cd"
+              }
+            ],
+            "targetId": "khar",
+            "text": "Khar Dominion and The Concord announced a trade agreement. Their borders are open to each other."
+          }
+        ],
+        "transfers": []
+      }
+    }
+  },
+  "diplomacyOffers": [
+    {
+      "id": "trade-1",
+      "kind": "trade",
+      "from": "veyr",
+      "to": "player",
+      "createdTurn": 8,
+      "expiresTurn": 11,
+      "credits": 30,
+      "status": "accepted"
+    },
+    {
+      "id": "trade-2",
+      "kind": "trade",
+      "from": "khar",
+      "to": "player",
+      "createdTurn": 10,
+      "expiresTurn": 13,
+      "credits": 30,
+      "status": "accepted"
+    }
+  ],
+  "nextDiplomacyOfferId": 3
+}

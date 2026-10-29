@@ -1,0 +1,13 @@
+{
+  "purpose": "Actual UI-only cross-version continuation from normal ASTERION cycle 12 through cycle 30",
+  "sourceCampaign": "/tmp/asterion-stage21-novice-audit/index.html",
+  "inputSHA256": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+  "target": "http://127.0.0.1:5215",
+  "buildInfo": {
+    "version": "0.21.1",
+    "commit": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+    "builtAt": "2026-10-29T03:07:29.898Z"
+  },
+  "startedAt": "2026-10-29T03:21:53.054718+00:00",
+  "rule": "No state edits, hidden-state reads, engine commands, scripted strategic policy, rollback, or resource grants. Explicit manually selected UI decisions only."
+}

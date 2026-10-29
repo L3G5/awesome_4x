@@ -1,0 +1,18 @@
+{
+  "method": "Root reran the frozen independent final replay once against original inputs and played build. All eight generated JSON outputs are byte-identical.",
+  "commands": 177,
+  "endTurns": 48,
+  "exports": 11,
+  "reloadChecks": 177,
+  "observations": 111,
+  "outputs": {
+    "results.json": "5f9024e70c7784e034e0209ae28ce6c14fc35dcf552361000e54d7367291252c",
+    "input-manifest.json": "ac9727e0798fdc46bfebae8f4c96c27d714ac7a28be581598c2a6fdbc33f1118",
+    "command-results.json": "b28fd62d19db95b22723ed80768da7cc19d85cdb8629d32ac3eae0c9fc7a25a6",
+    "source-pins.json": "0d8257ad7536ad7e3ce2e2d7a2e792ba83b37a6792213ebfc222f725c225ff71",
+    "observation-checks.json": "a87e5e0f4bb5c41ea516276469db56df8db32c58c454f409e51ca623da933988",
+    "event-state-hashes.json": "c5162622ae2a3228363dbcd032322acd3cc6150ca92b47b0b9afea934c9dd99e",
+    "noncommand-receipts.json": "1f0f4b4755fbe22b67546e6461f5a67d13e6fd511ed2980bb79aaae76303f8a1",
+    "commands.json": "a22de7ba5dedc4eb3eb443a29705e1b5cdadc50e96d45f09f38de621108f413e"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "Cumulative exact replay of the same actual ASTERION continuation12\u219250, with frozen30/40 phases preserved. No cycles1\u201312 claim, additional gameplay sample, later live-state inspection or counterfactual.",
+  "additionalFrom40": {
+    "commands": 25,
+    "endTurns": 10,
+    "actualExports": [
+      50
+    ]
+  },
+  "additionalNormalizations": [
+    {
+      "request": 74,
+      "meaning": "The third Beacon purchase, End Cycle44 and Empire shortcut succeeded before an ambiguous funding selector failed strict mode. The failed navigation has no game command; request75 uses the visible context control."
+    },
+    {
+      "request": 75,
+      "meaning": "The displayed topbar now inserts income before alignment beneath CREDITS. The observation parser was extended to accept this exact optional static label; all numeric expectations remain unchanged. Initial parser failure and prior parser source are preserved separately."
+    },
+    {
+      "request": 83,
+      "meaning": "The ordinary gift command targets the explicitly selected Choir, costs35 credits and preserves existing grievances; no implicit treaty or concession is added."
+    }
+  ],
+  "method": "Same original cycle12 input; through40 receipts must remain an exact prefix. Only successful action-complete receipts create ordinary commands; return values, full JSON states, actual exports and visible resources/turns are checked.",
+  "boundary": "Cycle50, no winner, two completed Beacons. The actual third Beacon remains in construction; the replay never pretends queued work already completed."
+}

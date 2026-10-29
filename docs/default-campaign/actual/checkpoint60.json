@@ -1,0 +1,44 @@
+{
+  "cycle": 60,
+  "finalRequest": 109,
+  "outcome": "Concord Transcendence victory",
+  "observedUI": {
+    "worlds": 5,
+    "population": 40,
+    "credits": 1902,
+    "creditIncome": 86,
+    "minerals": 238,
+    "mineralIncome": 38,
+    "scienceBank": 324,
+    "scienceIncome": 99,
+    "orders": 13,
+    "ships": 6,
+    "militaryShips": 5,
+    "fleetPower": 174,
+    "legacy": 607,
+    "technologies": 12,
+    "completedBeacons": 3,
+    "alignment": 10,
+    "retainedChronicleEntries": 138,
+    "retainedBattleReports": 5
+  },
+  "notes": [
+    "Alignment advanced every cycle from 51 through 60.",
+    "Choir war reported at 54, Khar war at 55; both broke existing trade treaties.",
+    "Actual Halcyon defensive battle in the cycle 56 resolution: Choir five-frigate formation destroyed; one Concord cruiser lost. Three ordinary emergency repairs restore the survivor.",
+    "Haven and Halcyon Shipyards replace Extractors at 57; each shared repair pool changes from four to eight hull while Beacons and charter supports remain.",
+    "Local capital engagement at 57 clears one hostile Choir scout, then surviving cruiser merges into Halcyon defense.",
+    "Peace terms inspected at 58 and 59 remain unavailable or refused; no invalid proposal is submitted.",
+    "Four-frigate defense lead at Haven is lost during the final turn; its cruiser survives and enemy attackers are destroyed. Exact sequence remains in retained battle reports.",
+    "No additional driver errors after request 74. After request 109, further work is read-only conclusion inspection."
+  ],
+  "hashes": {
+    "through-cycle60-actions.jsonl": "e95d79bf31b438a1a082933539dc88ef75be4131cb4b1f14879043d90e852ab0",
+    "089-asterion-reach-cycle-54.json": "92398cdb94c7807d052089f98d990e9e3d5887dfa704e21e1bf58d4b5e6458da",
+    "092-asterion-reach-cycle-55.json": "a77a004a6ec2d47cdd80865f4733de4054408b78048599ad24b37514181465e5",
+    "098-asterion-reach-cycle-56.json": "1fcaa0596bfe0f9db4b9b6b6f537608fd046e9dd2b007023571fdf2ef4587336",
+    "107-asterion-reach-cycle-59.json": "335bb2d4277f381beb5a2bfc47d459a0f1eb06b3009ac5566e6edfe338520967",
+    "109-asterion-reach-cycle-60.json": "96e011b3394a25084fdd128d082bb71039678ef7c38c0d62ef8ace7c27041f72",
+    "observation-109.json": "509549db2fbdd70a8d5f474da2628a35613afb77b1bbb154ca417fd2ed4f9338"
+  }
+}

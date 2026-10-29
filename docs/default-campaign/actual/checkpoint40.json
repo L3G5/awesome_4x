@@ -1,0 +1,31 @@
+{
+  "cycle": 40,
+  "finalRequest": 70,
+  "observedUI": {
+    "worlds": 5,
+    "population": 35,
+    "credits": 1160,
+    "creditIncome": 96,
+    "minerals": 51,
+    "mineralIncome": 47,
+    "scienceBank": 77,
+    "scienceIncome": 87,
+    "orders": 11,
+    "ships": 4,
+    "fleetPower": 49,
+    "legacy": 266
+  },
+  "notes": [
+    "Actual Nacre settlement at cycle 31; all 42 systems surveyed by cycle 33.",
+    "Merged third frigate at cycle 34, retaining Hold and defense lead.",
+    "Protocol completed at 36; Beacon commissions at Sundrift 36 and Haven 39.",
+    "Coherent Lances and Deflector Fields completed; active research is empty in this checkpoint.",
+    "Foreign Khar\u2192Veyr war reported in the cycle 38 briefing (public relation later dates it since cycle 37).",
+    "Request 66: Escape and End Cycle succeeded; the foreign-war briefing opened, making subsequent page shortcut ineffective and funding selector absent. Request 68 dismisses briefing and navigates normally. This driver mistake is separate from the minor context-link wording finding."
+  ],
+  "hashes": {
+    "through-cycle40-actions.jsonl": "02658c81c34545ebf4e3e913af0a7a69681702182d80b54143ae3575eb2f2644",
+    "070-asterion-reach-cycle-40.json": "bfbcf58fe278b2fe391a231286523a8d0c25f117ad38a3367baa1364529f7529",
+    "observation-070.json": "e03f1a00015e0fd4c82cbb8903bfd86cae95486688bc0fd65ddbb70e4ccd5e7f"
+  }
+}

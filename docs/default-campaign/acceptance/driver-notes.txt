@@ -1,0 +1,2 @@
+Initial package link check caught a root-report screenshot path missing its screens/ directory. Corrected the new wrapper link; original actual/replay evidence is unchanged. The final link and browser checks follow this correction.
+The next link check ran before the root manifest was generated and stopped at that absent target. Generated the manifest before the final check; no original evidence change.

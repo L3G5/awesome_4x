@@ -1,0 +1,64 @@
+{
+  "scope": "One faithful actual ASTERION continuation, beginning with the unedited0.21.0 cycle12 export and ending with its natural0.21.1 Transcendence victory at60. The final frozen record also includes read-only inspections through browser-close request119. No replay of1\u219212, new campaign, state patch, counterfactual or AI instrumentation is claimed.",
+  "independence": "This reviewer did not operate the original UI continuation. The reviewer authored parts of the existing engine; independence here applies to reconstruction from another operator\u2019s receipts, not original engine implementation.",
+  "normalizationRules": [
+    "Use successful action-complete receipts, not intended request arrays. Resolve unique own fleet and observed world names, pinned content names and UI selection/modal context.",
+    "Native Enter settlement is corroborated by the preceding observation focus on colonize-confirm.",
+    "The ordinary reinforcement shortcut uses the selected own class at its own current shipyard; it is not an automatic merge or future binding.",
+    "Replacement dropdown values identify the actual supporting building removed by the ordinary build command. Opening a comparison summary is read-only.",
+    "The inspector Frigate selector at59 resolves the sole own frigate at the selected Halcyon system; no global fleet-order guess is used.",
+    "Actual combat dispatch opens a report; Escape closes that report and preserves selection. Automatic public-war briefings obey the pinned UI logic.",
+    "The dynamic income-before-alignment topbar label is optional static text in the observation parser; no numeric comparison changes."
+  ],
+  "driverErrors": [
+    {
+      "request": 10,
+      "meaning": "Route and navigation succeeded; nonexistent development-card selector timed out. Academy purchase occurs only in successful request11."
+    },
+    {
+      "request": 14,
+      "meaning": "Enter settled Halcyon successfully; the later fleet switch failed after Ark consumption. Registry selection then recovered the scout."
+    },
+    {
+      "request": 66,
+      "meaning": "End Cycle38 succeeded, opening an automatic foreign-war briefing. Page shortcut was inert and subsequent funding selector absent; request68 recovered."
+    },
+    {
+      "request": 74,
+      "meaning": "Beacon purchase, End Cycle44 and Empire navigation succeeded. The broad funding selector was ambiguous with a hidden control. Request75 selected the visible context control."
+    },
+    {
+      "request": 110,
+      "meaning": "Read Chronicle succeeded after victory; guessed uppercase Combat data value failed. Request112 used the actual visible Combat button. No game command or turn occurred."
+    }
+  ],
+  "exportPhases": {
+    "54": "Before player response to the observed Choir war.",
+    "55": "Before player response to the observed Khar war.",
+    "56": "Before the three ordinary emergency repairs.",
+    "59": "Actual pre-final-turn state.",
+    "60": "Natural victory; first109 export and post-inspection118 export are byte-identical."
+  },
+  "retainedHistory": "All five reports, their saved rounds and138 Chronicle entries are included in complete final-state equality. Reports carry operation turns55/57/59; arrival views occur at56/57/60. No historical exchange is inferred from present fleets.",
+  "validationCounts": {
+    "commands": 177,
+    "endTurnsIncluded": 48,
+    "otherCommands": 129,
+    "reloadBranches": 177,
+    "initialAndPostCommandValidStates": 178,
+    "actualExportFiles": 11,
+    "uniqueExportByteHashes": 10,
+    "postImportVisibleObservations": 111,
+    "preImportObservationsOutsideScope": 2,
+    "frozenLogEvents": 684,
+    "successfulUIActionReceipts": 435,
+    "originalContinuationFilesVerified": 137
+  },
+  "postgame": "Every reconstructed event state from the winning endTurn at line645 through close request119 has the same canonical hash. Both final downloaded files are118420 bytes with identical SHA256.",
+  "limits": [
+    "The replay validates the recorded continuation and provenance, not optimal strategy or causal impact of one mechanic.",
+    "Observation comparisons cover turn and eight displayed resource/order values, not all DOM text or a new browser walkthrough.",
+    "JSON restore branches and incremental phase extensions are validations of this same history, not additional campaign samples.",
+    "The original author report is separately maintained; no original log, observation, screenshot or export was edited."
+  ]
+}

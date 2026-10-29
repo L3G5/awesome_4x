@@ -1,0 +1,105 @@
+{
+  "scope": "One cross-version continuation of the actual ASTERION opening, beginning from unedited cycle12. No reconstruction or replay claim for cycles1–12; no continued play beyond the frozen actual cycle40 boundary.",
+  "pin": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "buildPin": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+  "scriptSha256": "563abb0b7d2f6a92fb34928db720c2736854e25b86972cd7da0dc40c2dc0edad",
+  "inputSha256": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+  "frozenLogSha256": "02658c81c34545ebf4e3e913af0a7a69681702182d80b54143ae3575eb2f2644",
+  "logEvents": 420,
+  "successfulActionReceipts": 275,
+  "commands": 114,
+  "commandKinds": {
+    "move": 16,
+    "planRoute": 9,
+    "continueRoute": 32,
+    "endTurn": 28,
+    "develop": 3,
+    "colonize": 2,
+    "research": 5,
+    "build": 14,
+    "hold": 2,
+    "merge": 2,
+    "leadDefense": 1
+  },
+  "endTurns": 28,
+  "jsonReloadNextCommandChecks": 114,
+  "validNonnegativeStates": 115,
+  "exports": [
+    {
+      "line": 170,
+      "file": "036-asterion-reach-cycle-20.json",
+      "turn": 20,
+      "bytesSha256": "492a718ca75568222d5d41cff5eaec4b30409857729bfa082635d18313b815c9",
+      "canonicalSha256": "b01bb2fa8920717a508d8ea4af60feabb74164b574abd18aa9dc26d6a7de2b20",
+      "exact": true
+    },
+    {
+      "line": 314,
+      "file": "056-asterion-reach-cycle-30.json",
+      "turn": 30,
+      "bytesSha256": "9909263a0a283336ebb7b18dbccd33a5174cf610ad4aa5aca7fce62f34db4474",
+      "canonicalSha256": "61401936350e2abe264e3407b9c5a75b178a9827b64a0bcb801bb8b89566fa54",
+      "exact": true
+    },
+    {
+      "line": 404,
+      "file": "069-asterion-reach-cycle-38.json",
+      "turn": 38,
+      "bytesSha256": "d6d7ddf4c5d59e99cbbde6bfde4c8e6eca042cbede79396acdde406027c2e921",
+      "canonicalSha256": "63672d91884ffc51e69ffefcdb4ce99f2b3cdfae10e2d01f8d44412864c447bf",
+      "exact": true
+    },
+    {
+      "line": 417,
+      "file": "070-asterion-reach-cycle-40.json",
+      "turn": 40,
+      "bytesSha256": "bfbcf58fe278b2fe391a231286523a8d0c25f117ad38a3367baa1364529f7529",
+      "canonicalSha256": "7493be5200f54bf21b010b79ddbccfd666f31e827fa326ab2f6620ced6f920ba",
+      "exact": true
+    }
+  ],
+  "visibleObservationChecks": 65,
+  "preImportObservations": 2,
+  "driverErrors": [
+    {
+      "index": 10,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.development-card:has-text(\"Academy Charter\")')\u001b[22m\n"
+    },
+    {
+      "index": 14,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.fleet-switch button[title=\"Pathfinder 1 at Carina\"]')\u001b[22m\n"
+    },
+    {
+      "index": 66,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Review your funding\")')\u001b[22m\n"
+    }
+  ],
+  "initialTurn": 12,
+  "finalTurn": 40,
+  "winner": null,
+  "stats": {
+    "credits": 1160,
+    "minerals": 51,
+    "science": 77,
+    "creditIncome": 96,
+    "mineralIncome": 47,
+    "scienceIncome": 87,
+    "production": 85,
+    "upkeep": 7,
+    "colonies": 5,
+    "population": 35,
+    "ships": 4,
+    "military": 48.8,
+    "orders": 11,
+    "maxOrders": 11,
+    "uncappedOrders": 11,
+    "orderLimit": 18,
+    "score": 266,
+    "beacons": 0,
+    "explored": 42
+  },
+  "finalCanonicalSha256": "7493be5200f54bf21b010b79ddbccfd666f31e827fa326ab2f6620ced6f920ba",
+  "statePatches": 0,
+  "unexecutedRequestedActionsApplied": 0,
+  "originalFilesVerified": 78
+}

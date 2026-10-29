@@ -1,0 +1,1275 @@
+[
+  {
+    "line": 22,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Corvus."
+    },
+    "canonicalSha256": "87d0bc9b7ff29f3aa898c66fb71b260a42836114df288a814e3a13774289314e"
+  },
+  {
+    "line": 26,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Carina."
+    },
+    "canonicalSha256": "493f65b0232751404a568005eafc1512bc230a41c4a7ec67cb88dffeaf6fd0a1"
+  },
+  {
+    "line": 31,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 10 jumps to Solace. Continue when ready."
+    },
+    "canonicalSha256": "48df54f34a2424875d7a6c6d136fe4ddc10d191f515bd6f38ccaa2c5a7616226"
+  },
+  {
+    "line": 34,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "49e651e15b359af5481442313ff808310a269073f1d59a8d0e078038b3a2e530"
+  },
+  {
+    "line": 35,
+    "answer": {
+      "ok": true,
+      "message": "Turn 13: a new mandate begins."
+    },
+    "canonicalSha256": "31564cc6470b98bda77226b3f0e6a695dc3c09bf19b123e2dafc0310c98a9879"
+  },
+  {
+    "line": 38,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "42f1f3b618875b71bd74b945f316798cc66d1f7c0464565547186474ffe19189"
+  },
+  {
+    "line": 44,
+    "answer": {
+      "ok": true,
+      "message": "Academy Charter I commissioned at Sundrift."
+    },
+    "canonicalSha256": "3b03f7f0dc36383e42d4f69ad3eb15304fb8d2aca062ea2d7987f9f755df478f"
+  },
+  {
+    "line": 52,
+    "answer": {
+      "ok": true,
+      "message": "Colony Ark 21 arrived at Halcyon."
+    },
+    "canonicalSha256": "3839c431eb6f0e1ecc4c261f9872fd406fb217d59535c6b9b87b40cce7d4f33e"
+  },
+  {
+    "line": 56,
+    "answer": {
+      "ok": true,
+      "message": "Colony founded at Halcyon."
+    },
+    "canonicalSha256": "9c403186f9f1f99124e104d12aab12c329cf4e1a256747c077f3eb173bc4dfd8"
+  },
+  {
+    "line": 66,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Aurelia."
+    },
+    "canonicalSha256": "99f32b18db5801a41f9f928e233ffef1775214c2d5443400bde10978c413432d"
+  },
+  {
+    "line": 72,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 5 jumps to Thalassa. Continue when ready."
+    },
+    "canonicalSha256": "4063ab10eaaf3a0488f5afc4af6676243390e3d85af66be9368fc5aadbe92c66"
+  },
+  {
+    "line": 73,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "b9b61387adf92b01a1a24c8a44685631b8ef5dee4a816186aabab6c6b57661b6"
+  },
+  {
+    "line": 74,
+    "answer": {
+      "ok": true,
+      "message": "Turn 14: a new mandate begins."
+    },
+    "canonicalSha256": "85374196f42816548988001600d79f567166ed685f5842755b7b443e7f27bf2d"
+  },
+  {
+    "line": 80,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Resonance Theory."
+    },
+    "canonicalSha256": "e5d54707e015cd4c9168be241a5c033ffd7d752daa12d0e0de42cc1a66a58e32"
+  },
+  {
+    "line": 87,
+    "answer": {
+      "ok": true,
+      "message": "Manufactory commissioned at Solace."
+    },
+    "canonicalSha256": "81a2c64153040c7fd07155f1e3166c65689b21b6c09f7e256eb7cf9c9a3e160e"
+  },
+  {
+    "line": 89,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "88ff5a239f386626c3db2c9256de722d83535d718cd7f497fc4c97f91e2a5db3"
+  },
+  {
+    "line": 91,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "136eb2f3c020c764bc6957e7e856c2844be451b14c0d38cbf5c5ccf546b86d2e"
+  },
+  {
+    "line": 92,
+    "answer": {
+      "ok": true,
+      "message": "Turn 15: a new mandate begins."
+    },
+    "canonicalSha256": "a51d2100cbfd91c84c869339b774f55f4a6e40daaa9a95a8057954ad2b63df90"
+  },
+  {
+    "line": 98,
+    "answer": {
+      "ok": true,
+      "message": "Research Enclave commissioned at Halcyon."
+    },
+    "canonicalSha256": "55995563fbb65a554a627a78387d3fe5953a2044186fcb34c184a503ef2a1a34"
+  },
+  {
+    "line": 102,
+    "answer": {
+      "ok": true,
+      "message": "Manufactory commissioned at Haven."
+    },
+    "canonicalSha256": "eac8efead01b696bc4fa273e9f72332be7fc195cabad47779edc72a362c42649"
+  },
+  {
+    "line": 104,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "c30480defcdd6ba49454cc322bd2eb1c626d8eb6e59a2911b748296d14551d8c"
+  },
+  {
+    "line": 106,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Pathfinder 1 reached Thalassa in 2 jumps.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "33faa9fb0bd9b946f8f3643a9a307230871f001acb89fb43f3cdc63d38fb72e8"
+  },
+  {
+    "line": 109,
+    "answer": {
+      "ok": true,
+      "message": "Turn 16: a new mandate begins."
+    },
+    "canonicalSha256": "6db31d57bcb4c57af18f06f77f9ad29d9571bc494106ae12aeeebbd92c9417ad"
+  },
+  {
+    "line": 113,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Quantum Archives."
+    },
+    "canonicalSha256": "a2d9249719d0e1c3aa740a9e4bb0aa607c85248f490c66604c09e89a707a2d8f"
+  },
+  {
+    "line": 121,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 6 jumps to Nacre. Continue when ready."
+    },
+    "canonicalSha256": "41efc1f080617ff9c6ad849b3fa2860e097d9c0515c18a26b2b6371c403c76e2"
+  },
+  {
+    "line": 122,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "046221a11186c4f8373db2d2077360bb13d8b37cb23411446c92391b81b52e41"
+  },
+  {
+    "line": 124,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "c97b11263abf35f0a1904cf9fb348d1863ef23601184762f7251c5699e2da001"
+  },
+  {
+    "line": 125,
+    "answer": {
+      "ok": true,
+      "message": "Turn 17: a new mandate begins."
+    },
+    "canonicalSha256": "df85ac9307de961cc560b57d20ff622de45fb84e6436a7e2280e9c7cf4bc994a"
+  },
+  {
+    "line": 130,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Sable."
+    },
+    "canonicalSha256": "d0e86bdebfc9b3d614fe86926c64758ce3546706f6e262d8333e3a63d4b2b4ab"
+  },
+  {
+    "line": 134,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Aster."
+    },
+    "canonicalSha256": "64f9304eb08206bbb7d71d3e40ac55bb3dcc73af7d8d3bd372e5ac112c64402e"
+  },
+  {
+    "line": 138,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "b98346cf3141b15935bf86da50b456b1f72afac64c4ba87ebe5a34c9c31ac510"
+  },
+  {
+    "line": 139,
+    "answer": {
+      "ok": true,
+      "message": "Turn 18: a new mandate begins."
+    },
+    "canonicalSha256": "71ee10a8b65b946cdf63b0dcf8eebcbc78ddc6a4f2b41278c215e54a07ad0b8d"
+  },
+  {
+    "line": 147,
+    "answer": {
+      "ok": true,
+      "message": "Forge Charter I commissioned at Solace."
+    },
+    "canonicalSha256": "2f65195774ce0bba1a547996da53b9322380e3a80ac89d18515374024a229a3b"
+  },
+  {
+    "line": 148,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "c7dad4ae658d832920415cc06b1e241d39b3b3e55b48d097f70aee06c7748dcc"
+  },
+  {
+    "line": 151,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Veyr Prime."
+    },
+    "canonicalSha256": "4297eaf64954ce9b14e8a472c11da65d8c920af33eb726b18d614a330c832c56"
+  },
+  {
+    "line": 155,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Eos."
+    },
+    "canonicalSha256": "dc6641e42dd99a3ee4c39f6600873a64e73512f85d93a58fb8a8a1a0bad5505e"
+  },
+  {
+    "line": 156,
+    "answer": {
+      "ok": true,
+      "message": "Turn 19: a new mandate begins."
+    },
+    "canonicalSha256": "6f2cf24e55bbf0e86df18e28cb31d65713f7e539e128362e923936186b2c921d"
+  },
+  {
+    "line": 160,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Vesper."
+    },
+    "canonicalSha256": "654c3c658bbc4eaa7f6a09d7cef25415f9f59c58440412d4754b0196843d43ac"
+  },
+  {
+    "line": 164,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Cinder."
+    },
+    "canonicalSha256": "0673661a5eb47450037be3111d9dcab67eacfcb911084d658f495c5a8d7e15b6"
+  },
+  {
+    "line": 166,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "f792b6d9b49b4f862eb56680048e439f855084060eaaff08af6e61dad29519f1"
+  },
+  {
+    "line": 167,
+    "answer": {
+      "ok": true,
+      "message": "Turn 20: a new mandate begins."
+    },
+    "canonicalSha256": "b01bb2fa8920717a508d8ea4af60feabb74164b574abd18aa9dc26d6a7de2b20"
+  },
+  {
+    "line": 177,
+    "answer": {
+      "ok": true,
+      "message": "Manufactory commissioned at Sundrift."
+    },
+    "canonicalSha256": "5d05e8d5fc77b826dce44223321351a5295662eeaf15c21045f9959323426fd3"
+  },
+  {
+    "line": 179,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "9efbe8012cd92ed5f9629e1a5cd59b12f9b54e7dcda55786fde64f999b262551"
+  },
+  {
+    "line": 184,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 3 jumps to Antares. Continue when ready."
+    },
+    "canonicalSha256": "39f3b78b77febbd6dd21c068fb93eb084091ecdd1a0ee484522cbae9b0ad5d8f"
+  },
+  {
+    "line": 185,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "4329b7597e87545b0ce819dfb51d5af7a46495ac1309d2eb1f3aa4866de02b2a"
+  },
+  {
+    "line": 186,
+    "answer": {
+      "ok": true,
+      "message": "Turn 21: a new mandate begins."
+    },
+    "canonicalSha256": "e201d5d3c988361e0ad38853a48272690ec8c0dbe7c2a56caf98e27bbc0196be"
+  },
+  {
+    "line": 192,
+    "answer": {
+      "ok": true,
+      "message": "Academy Charter I commissioned at Haven."
+    },
+    "canonicalSha256": "3bddba584b5e2d89dee709d56cf1bc108d5e7a41a9580f9b436acd2192521c81"
+  },
+  {
+    "line": 194,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Vanguard 3 reached Solace in 1 jump.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "fbaf752df4868ff88d6af00ed77ba1fada75479e917215e23dc42adf1c1daae4"
+  },
+  {
+    "line": 196,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Pathfinder 1 reached Antares in 1 jump.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "c1b0892a5e4731ea721746ce20113cf708ec64bac366edb5052168bf7f117b52"
+  },
+  {
+    "line": 201,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 6 jumps to Nacre. Continue when ready."
+    },
+    "canonicalSha256": "622ad7dd9853bee17d329509d15ce453ebec63b82890b6e18d24962865c102cb"
+  },
+  {
+    "line": 202,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "4eb32314d4a1e2c81c99b036508d8890d7df86b863f0d6ca764a661eb5c06359"
+  },
+  {
+    "line": 203,
+    "answer": {
+      "ok": true,
+      "message": "Turn 22: a new mandate begins."
+    },
+    "canonicalSha256": "0b24be6b8193f2702245efd598a142b756548cb4dc23837963c575df4a463429"
+  },
+  {
+    "line": 207,
+    "answer": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Halcyon."
+    },
+    "canonicalSha256": "3cac04698ff1f036ef883e8b349051845d58a56ad5e683054185377301abc79b"
+  },
+  {
+    "line": 211,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "76eceddb3629ae432553738678f7f5134cc6f3f3de9d36f9775473511bb7a753"
+  },
+  {
+    "line": 214,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard 3 is holding position."
+    },
+    "canonicalSha256": "4a435d5015250ac03c66076c4ad777e7cf82bbe51bd92ed8b37f20a622176786"
+  },
+  {
+    "line": 220,
+    "answer": {
+      "ok": true,
+      "message": "Turn 23: a new mandate begins."
+    },
+    "canonicalSha256": "247e2a0ed35ec308116b0946d64962a3a26e3b9a14629a5397ba75644ecb7879"
+  },
+  {
+    "line": 222,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "1d6205cf038c2707bdf6c4b7c4ddd2dae7e141bdf88f2e1bb0102b1cd91fb485"
+  },
+  {
+    "line": 223,
+    "answer": {
+      "ok": true,
+      "message": "Turn 24: a new mandate begins."
+    },
+    "canonicalSha256": "18fc1c0c3b5778506dcf8430cb7e2f541186457fc1c29e316a2bf2377465ff35"
+  },
+  {
+    "line": 227,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward The Asterion Protocol."
+    },
+    "canonicalSha256": "d45d17f25e62ae1ddbc28803186d86d1bdb682960c5ef2e53c8ba6e5d7a62893"
+  },
+  {
+    "line": 231,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard commissioned at Solace."
+    },
+    "canonicalSha256": "172ff6adc780dc5e885f5a7ae9523ca8720cc49bf02f18a3c65702066dd3dcbd"
+  },
+  {
+    "line": 233,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Pathfinder 1 reached Nacre in 1 jump.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "5b207ba567b83fbe46ec06b58dfb490debaf79adbb51ed064d09cdc46bd04293"
+  },
+  {
+    "line": 237,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Meridian."
+    },
+    "canonicalSha256": "f71ee7daec84aacaecd79496d264418fa4eedd4cff85ad84fdbcb9342d250efc"
+  },
+  {
+    "line": 244,
+    "answer": {
+      "ok": true,
+      "message": "Turn 25: a new mandate begins."
+    },
+    "canonicalSha256": "f186db71802e3af78efed62dad71a02866f7430bff2695410fc808e8cef6e6ea"
+  },
+  {
+    "line": 246,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Eidolon."
+    },
+    "canonicalSha256": "f669dd7160eb1b620b2a55d1616a546baa72592c64a220c2823d07a97433af73"
+  },
+  {
+    "line": 250,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Elysian."
+    },
+    "canonicalSha256": "7466e5f2c5daf9e9ec5ce8c81b40af0f9cc262f57858c4314ab1a97934ed089a"
+  },
+  {
+    "line": 254,
+    "answer": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Haven."
+    },
+    "canonicalSha256": "ba13a02adfd3a15028c55263305d0aa0b84db6a9d5caeef3bc66cb942f53a09e"
+  },
+  {
+    "line": 255,
+    "answer": {
+      "ok": true,
+      "message": "Turn 26: a new mandate begins."
+    },
+    "canonicalSha256": "d9d5f2ce29fca240c03ce7eb495f4f5ae02611443a224d42631d7a6e7e64d874"
+  },
+  {
+    "line": 262,
+    "answer": {
+      "ok": true,
+      "message": "Fleets combined into one task force."
+    },
+    "canonicalSha256": "9bad4f5a6f5ae767ffc705667f720cf00a1076c24b679b01da28db170daa09a5"
+  },
+  {
+    "line": 263,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard 3 will lead its local defense."
+    },
+    "canonicalSha256": "423be0e6f63bdea30fb099a0402784cf5821ccf6c3d8f413499fc134e61bed41"
+  },
+  {
+    "line": 266,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 2 jumps to Solace. Continue when ready."
+    },
+    "canonicalSha256": "915d2d0aaf42b7bd9aa4350ed216cbd711160aec6cb3fd8e9b28e88b7f4c59be"
+  },
+  {
+    "line": 267,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Pathfinder 1 reached Solace in 2 jumps.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "b9022581cb78cedac8534eac715f7c9efd361dfc09b730fe188dfb359da12644"
+  },
+  {
+    "line": 270,
+    "answer": {
+      "ok": true,
+      "message": "Turn 27: a new mandate begins."
+    },
+    "canonicalSha256": "31d395e5ab28a01724b3ca86e735f565d840390c12804dff8008b89f0e612622"
+  },
+  {
+    "line": 273,
+    "answer": {
+      "ok": true,
+      "message": "Colony Ark commissioned at Solace."
+    },
+    "canonicalSha256": "74daf7e0766509d4458402bb1873d485127ea7ad01f3298817c511d4a0943711"
+  },
+  {
+    "line": 275,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Asterion."
+    },
+    "canonicalSha256": "1043488d5dc27bf971bca12d073cd1aa954a4028530889aee784ddba5af9fd07"
+  },
+  {
+    "line": 279,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Haven."
+    },
+    "canonicalSha256": "e2e03f635563b2f28d9cc1c3caa503d0b50d6ffc325076d475e38078515d08ce"
+  },
+  {
+    "line": 280,
+    "answer": {
+      "ok": true,
+      "message": "Turn 28: a new mandate begins."
+    },
+    "canonicalSha256": "73b2a5f3b6d1deeecc1e2bdd3e3098630eaebefe63c84b9503d8470a9aae9fc3"
+  },
+  {
+    "line": 284,
+    "answer": {
+      "ok": true,
+      "message": "Manufactory commissioned at Halcyon."
+    },
+    "canonicalSha256": "a7f4379799daa4f61389dd0fc7f822548012a7f75236746a648a359a04b8cc1e"
+  },
+  {
+    "line": 289,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 arrived at Peregrine."
+    },
+    "canonicalSha256": "53d6b5cd1e5af25bff8ad18ac9fa1376d1cb243155a3c52f9ee51506454ea25b"
+  },
+  {
+    "line": 299,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 9 jumps to Caelum. Continue when ready."
+    },
+    "canonicalSha256": "cf219a7dab2da55273f3336a113eeed105c6ebb7c3ef3d486c9f0704a54ae0d0"
+  },
+  {
+    "line": 300,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "61c2ed03c1f6286c912fc8242383ac3ad2dec941cbe0a082cdd19cd0c567cf53"
+  },
+  {
+    "line": 301,
+    "answer": {
+      "ok": true,
+      "message": "Turn 29: a new mandate begins."
+    },
+    "canonicalSha256": "103152a3359a7bd623d7beaf01d3cffa6ec91510f83d7302f0efe4fd7cfce13b"
+  },
+  {
+    "line": 307,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 3 jumps to Nacre. Continue when ready."
+    },
+    "canonicalSha256": "3e64a2b89eb395e6465669e9236410aca02bf0f3a83f412d7637265d28b67f11"
+  },
+  {
+    "line": 308,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "2f7f72ee7226656df7cd260d0d535cf934984b5edf4bf81522e741222727f8e9"
+  },
+  {
+    "line": 310,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "6bf4933f88fb7603a51d7f573a76027c13c26960a49b0b1794d7fd915cffc9a8"
+  },
+  {
+    "line": 311,
+    "answer": {
+      "ok": true,
+      "message": "Turn 30: a new mandate begins."
+    },
+    "canonicalSha256": "61401936350e2abe264e3407b9c5a75b178a9827b64a0bcb801bb8b89566fa54"
+  },
+  {
+    "line": 324,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 1 jump. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "c942333f997e77d4db34c8769f7f91121d788dac6d54019a109eb5bf60a07444"
+  },
+  {
+    "line": 326,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "11017ee85230fb3b81f4dd7142b0f60a4561057bc0707c041dc0c911aa94aeac"
+  },
+  {
+    "line": 327,
+    "answer": {
+      "ok": true,
+      "message": "Turn 31: a new mandate begins."
+    },
+    "canonicalSha256": "c1d7e13d78441d010e02ffa94eaddf8311f97da3b5ad830f40faa8dd71ea053b"
+  },
+  {
+    "line": 329,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Colony Ark 35 reached Nacre in 1 jump.",
+      "jumpsCompleted": 1,
+      "ordersSpent": 1,
+      "movesSpent": 1,
+      "combatReports": []
+    },
+    "canonicalSha256": "0bcfe736a9088af56730a01cfec634730b6478aff7617a34003f7daa2754ea35"
+  },
+  {
+    "line": 333,
+    "answer": {
+      "ok": true,
+      "message": "Colony founded at Nacre."
+    },
+    "canonicalSha256": "620d882894edd8f7e94c8ead7d31f6eb86a8a63de0da9e1c1f19d20537a14f80"
+  },
+  {
+    "line": 335,
+    "answer": {
+      "ok": true,
+      "message": "Orbital Extractor commissioned at Nacre."
+    },
+    "canonicalSha256": "d320fc6c208596222c91863d12dc0102421f25288c1ea1800a532d11a4ab6523"
+  },
+  {
+    "line": 338,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "9d51a9d6006a00dfe7cae8b69d237d436b6b245bde87108b804bd412ee1d2003"
+  },
+  {
+    "line": 339,
+    "answer": {
+      "ok": true,
+      "message": "Turn 32: a new mandate begins."
+    },
+    "canonicalSha256": "7f625c805c158f4af1f6f6cf3f8014a8492c38644eff7b3de23ed2de57c289be"
+  },
+  {
+    "line": 345,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard commissioned at Solace."
+    },
+    "canonicalSha256": "9545e92b88210b03adebdec60b9781a057e6ad64a4284aad0af6c7960f01816b"
+  },
+  {
+    "line": 347,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Pathfinder 1 reached Caelum in 2 jumps.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "13790ac9cfee017972a5f1ccfc057de1a0b19eeb948d793ab70da2ae680d59dc"
+  },
+  {
+    "line": 348,
+    "answer": {
+      "ok": true,
+      "message": "Turn 33: a new mandate begins."
+    },
+    "canonicalSha256": "0761079eb6c85ca4fc9d15128e166386bb7c2ad1312634564190339044f1afbd"
+  },
+  {
+    "line": 353,
+    "answer": {
+      "ok": true,
+      "message": "Route plotted: 6 jumps to Nacre. Continue when ready."
+    },
+    "canonicalSha256": "57f8d7e054c3b0737bd5b3840b7b4c8db3336d313b2e13f503005f166b7b3dac"
+  },
+  {
+    "line": 354,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "80f4e5f775d02ade2c24b2abb651d9ceec56f474a2f678e2604311a31141e354"
+  },
+  {
+    "line": 355,
+    "answer": {
+      "ok": true,
+      "message": "Turn 34: a new mandate begins."
+    },
+    "canonicalSha256": "76e2aa85d1ce7748c7b4e9dd17e6979ec612f528ac15687a97a859d8ef4bf465"
+  },
+  {
+    "line": 358,
+    "answer": {
+      "ok": true,
+      "message": "Fleets combined into one task force."
+    },
+    "canonicalSha256": "8aca176b25db46485f5a8e22f4f303417dc5bbfbf36bea034aeec9116898505a"
+  },
+  {
+    "line": 362,
+    "answer": {
+      "ok": true,
+      "outcome": "moves-exhausted",
+      "message": "Route paused after 2 jumps. This fleet has used all its movement this turn.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "9c26765033bf6396f0a9d91df89a0a48c1040cb9d3e3785c27f4d03b68a5b308"
+  },
+  {
+    "line": 363,
+    "answer": {
+      "ok": true,
+      "message": "Turn 35: a new mandate begins."
+    },
+    "canonicalSha256": "c217263ce9685ce972c17e9b4e82b30c45f30a3d674d0c7626d0d312171a6789"
+  },
+  {
+    "line": 369,
+    "answer": {
+      "ok": true,
+      "outcome": "arrived",
+      "message": "Pathfinder 1 reached Nacre in 2 jumps.",
+      "jumpsCompleted": 2,
+      "ordersSpent": 2,
+      "movesSpent": 2,
+      "combatReports": []
+    },
+    "canonicalSha256": "667a87e4ce3ae5130d0f934bb1c44701261adfde261093c0f90c3d998a89abbc"
+  },
+  {
+    "line": 370,
+    "answer": {
+      "ok": true,
+      "message": "Pathfinder 1 is holding position."
+    },
+    "canonicalSha256": "487ced3cde52f15249bdece276262e33adbe141a419e62f01fd1bc336a9138b7"
+  },
+  {
+    "line": 371,
+    "answer": {
+      "ok": true,
+      "message": "Turn 36: a new mandate begins."
+    },
+    "canonicalSha256": "91f8477404abebe8fabd8ef2723c8815593f82cab69205c142570123b5d639e0"
+  },
+  {
+    "line": 377,
+    "answer": {
+      "ok": true,
+      "message": "Asterion Beacon commissioned at Sundrift."
+    },
+    "canonicalSha256": "043f329ee3675416ea13a18bbea75809bcbf2c20353b1ccd441c33fc63f4fc22"
+  },
+  {
+    "line": 381,
+    "answer": {
+      "ok": true,
+      "message": "Research Enclave commissioned at Nacre."
+    },
+    "canonicalSha256": "19f6db0cfa3fd38d832765d7cc15b090cfa87ddefcb8cb207f4d6c57c1139b7d"
+  },
+  {
+    "line": 383,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Coherent Lances."
+    },
+    "canonicalSha256": "7dda7d2f93545c3299743e98bbf7039970c44fa3bbc0d8b64415104cc463a8eb"
+  },
+  {
+    "line": 386,
+    "answer": {
+      "ok": true,
+      "message": "Turn 37: a new mandate begins."
+    },
+    "canonicalSha256": "fa1a51153c2b82ef1d8df2c81f987a945c183b33bfd20623f621fabc7303dd09"
+  },
+  {
+    "line": 387,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Deflector Fields."
+    },
+    "canonicalSha256": "41bed4ef281e00ab7697161d788953d07770e0ec7dea77f27c68995d1e7f3780"
+  },
+  {
+    "line": 392,
+    "answer": {
+      "ok": true,
+      "message": "Turn 38: a new mandate begins."
+    },
+    "canonicalSha256": "63672d91884ffc51e69ffefcdb4ce99f2b3cdfae10e2d01f8d44412864c447bf"
+  },
+  {
+    "line": 407,
+    "answer": {
+      "ok": true,
+      "message": "Turn 39: a new mandate begins."
+    },
+    "canonicalSha256": "0847337d0d8f3b3d7f150296ac1ad1f0b45b632c7a2687b376db5cecaaa4b3fa"
+  },
+  {
+    "line": 412,
+    "answer": {
+      "ok": true,
+      "message": "Asterion Beacon commissioned at Haven."
+    },
+    "canonicalSha256": "bffa53450de1a42545d7c13d7a0507c4a8bb6f74501e37e2fd52781f723b7567"
+  },
+  {
+    "line": 413,
+    "answer": {
+      "ok": true,
+      "message": "Turn 40: a new mandate begins."
+    },
+    "canonicalSha256": "7493be5200f54bf21b010b79ddbccfd666f31e827fa326ab2f6620ced6f920ba"
+  },
+  {
+    "line": 422,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Capital Ship Architecture."
+    },
+    "canonicalSha256": "ffcc40a7bd341cef0cbeb8372ae6eeefffa941c6e713259d4f0271217040019f"
+  },
+  {
+    "line": 423,
+    "answer": {
+      "ok": true,
+      "message": "Turn 41: a new mandate begins."
+    },
+    "canonicalSha256": "d0f9a8999e62ccf0afb65db3b213e7f0696badf4d65ab8ff37b7288ef476903b"
+  },
+  {
+    "line": 427,
+    "answer": {
+      "ok": true,
+      "message": "Turn 42: a new mandate begins."
+    },
+    "canonicalSha256": "6ef6555dbf2601c90b965221981d3df9e29e60ce99be645282773795c48b7104"
+  },
+  {
+    "line": 431,
+    "answer": {
+      "ok": true,
+      "message": "Turn 43: a new mandate begins."
+    },
+    "canonicalSha256": "c66c0f3aaf330c80adfa36ce4e06647d9e9d1576728f720891bfb6ead2fdbfae"
+  },
+  {
+    "line": 436,
+    "answer": {
+      "ok": true,
+      "message": "Asterion Beacon commissioned at Halcyon."
+    },
+    "canonicalSha256": "14544fd4cc7d5b2c8fd1a624ef45f9c11b8b10bbf1b436fd3c73cedac45ec6d5"
+  },
+  {
+    "line": 437,
+    "answer": {
+      "ok": true,
+      "message": "Turn 44: a new mandate begins."
+    },
+    "canonicalSha256": "b88368e52a234f28c8c45a0ffd9e176454f96700ab6e25805b29ce39f15838e0"
+  },
+  {
+    "line": 445,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Adaptive Biospheres."
+    },
+    "canonicalSha256": "e2ec79952f3e2c58217f4a00a11f097d0dc2b760878f1f9ed3efd35bf2a12a7c"
+  },
+  {
+    "line": 448,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Stellar Accords."
+    },
+    "canonicalSha256": "a6287052974b1b51b30bc67f1fef8736fc490e0a24884e167fca06da4d3584fb"
+  },
+  {
+    "line": 451,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard 3 awaits orders."
+    },
+    "canonicalSha256": "10efcd980dc29426989c0eb4ea148e6dfab253090028a11ca4993d6ef51faf98"
+  },
+  {
+    "line": 453,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard 3 arrived at Sundrift."
+    },
+    "canonicalSha256": "e9cc26ada1a9b331503c08f15b28de1d44b090fb6aa718447f69829b6ab83a2d"
+  },
+  {
+    "line": 454,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard 3 will lead its local defense."
+    },
+    "canonicalSha256": "c4d057c744ef6b5835bd069ca7a7c6225cb93f561e16503d0b78a41b0a6aa6ca"
+  },
+  {
+    "line": 455,
+    "answer": {
+      "ok": true,
+      "message": "Vanguard 3 is holding position."
+    },
+    "canonicalSha256": "5dca7144ea75f7bc8f1e3b8508beadae42321474e837bc51a482ae63672fcf8c"
+  },
+  {
+    "line": 456,
+    "answer": {
+      "ok": true,
+      "message": "Turn 45: a new mandate begins."
+    },
+    "canonicalSha256": "b90d882bf4721c1d549606d4468c10c7e4933719a714b76183b8269728a8a557"
+  },
+  {
+    "line": 462,
+    "answer": {
+      "ok": true,
+      "message": "Sovereign commissioned at Solace."
+    },
+    "canonicalSha256": "bfbe8a01f2063f3651e055d0268fc1c6a379ec10d6e0ba3131f5730c998ac934"
+  },
+  {
+    "line": 463,
+    "answer": {
+      "ok": true,
+      "message": "Turn 46: a new mandate begins."
+    },
+    "canonicalSha256": "42f503f3e752c1cb4e49e517db6f5e55c71ba1b27f1406cb333772b8b3ce5c4c"
+  },
+  {
+    "line": 465,
+    "answer": {
+      "ok": true,
+      "message": "Research directed toward Distributed Command."
+    },
+    "canonicalSha256": "2600f0ef9dbbee15ea384ccd766af8f9b0a88e1ec61afe40db64d4299ce22aaa"
+  },
+  {
+    "line": 468,
+    "answer": {
+      "ok": true,
+      "message": "Turn 47: a new mandate begins."
+    },
+    "canonicalSha256": "6cc371d5a2caceb1ec7f8e44029c042d94067400898d2303a0d1cee06d781cf1"
+  },
+  {
+    "line": 472,
+    "answer": {
+      "ok": true,
+      "message": "Turn 48: a new mandate begins."
+    },
+    "canonicalSha256": "9cf78fba98acde13eb8fbca38937e9c99e50953d83d9968239d353db73f67dba"
+  },
+  {
+    "line": 478,
+    "answer": {
+      "ok": true,
+      "message": "Sovereign commissioned at Solace."
+    },
+    "canonicalSha256": "10208a59ba8f2e7e699eca5c6313ecd484e6eb37d695a496c2cc8f413b51a5fb"
+  },
+  {
+    "line": 481,
+    "answer": {
+      "ok": true,
+      "message": "Sovereign 53 arrived at Halcyon."
+    },
+    "canonicalSha256": "ec72d58e6e540c950585adf9eeca169b3801c29464df6a18679a4c707e960c4c"
+  },
+  {
+    "line": 482,
+    "answer": {
+      "ok": true,
+      "message": "Sovereign 53 will lead its local defense."
+    },
+    "canonicalSha256": "530b00c3b9d577c4d7adb9071819468b8e55ecbe86b9e48cfd48c36431e43c93"
+  },
+  {
+    "line": 483,
+    "answer": {
+      "ok": true,
+      "message": "Sovereign 53 is holding position."
+    },
+    "canonicalSha256": "129e22184a0b2c548190e9110f820405341233637a13604c84b931b3a81cc614"
+  },
+  {
+    "line": 484,
+    "answer": {
+      "ok": true,
+      "message": "Turn 49: a new mandate begins."
+    },
+    "canonicalSha256": "c6052e7d462a0466f1805d5510e8dc4a9744002992b5497c03705baf45856580"
+  },
+  {
+    "line": 490,
+    "answer": {
+      "ok": true,
+      "message": "The Concord sent a 35-credit gift to The Luminous Choir. Trust improves; border grievances remain.",
+      "outcome": "gift"
+    },
+    "canonicalSha256": "074d9d05b370b47386aa80612e3e352c0983de913f1fa547b6d5ea08b89cfa17"
+  },
+  {
+    "line": 491,
+    "answer": {
+      "ok": true,
+      "message": "Turn 50: a new mandate begins."
+    },
+    "canonicalSha256": "04871969d732da1822ffd4303de458661106e08d1777cede4729c86bb263ec2f"
+  }
+]

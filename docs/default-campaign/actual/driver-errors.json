@@ -1,0 +1,116 @@
+[
+  {
+    "kind": "driver-error",
+    "index": 10,
+    "request": {
+      "actions": [
+        {
+          "click": "button:has-text(\"Continue \u00b7 up to\")"
+        },
+        {
+          "press": "4"
+        },
+        {
+          "click": "[aria-label=\"Inspect Sundrift\"]"
+        },
+        {
+          "click": "[data-action=\"development-menu\"]"
+        },
+        {
+          "click": ".development-card:has-text(\"Academy Charter\")"
+        }
+      ],
+      "note": "Commit Sundrift to an Academy charter: +6 science and an eight-cycle build, funded by this cycle income."
+    },
+    "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.development-card:has-text(\"Academy Charter\")')\u001b[22m\n",
+    "at": "2026-10-29T03:24:02.759Z",
+    "explanation": "The selector used .development-card; the visible card is .build-card. Earlier navigation succeeded. Request 11 completes the intended Academy purchase."
+  },
+  {
+    "kind": "driver-error",
+    "index": 14,
+    "request": {
+      "actions": [
+        {
+          "press": "Enter"
+        },
+        {
+          "click": ".fleet-switch button[title=\"Pathfinder 1 at Carina\"]"
+        }
+      ],
+      "screenshot": "cycle13-halcyon-founded",
+      "note": "Pay the displayed 30 credits/20 minerals/one order to found Halcyon. Defer new building spending until income recovers."
+    },
+    "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.fleet-switch button[title=\"Pathfinder 1 at Carina\"]')\u001b[22m\n",
+    "at": "2026-10-29T03:24:57.341Z",
+    "explanation": "Enter successfully founded Halcyon. The following fleet-switch control no longer existed after the Ark was consumed. Requests 15\u201316 inspect Empire and select the scout normally."
+  },
+  {
+    "kind": "driver-error",
+    "index": 66,
+    "request": {
+      "actions": [
+        {
+          "press": "Escape"
+        },
+        {
+          "click": "#end-turn"
+        },
+        {
+          "press": "4"
+        },
+        {
+          "click": "button:has-text(\"Review your funding\")"
+        }
+      ],
+      "note": "At cycle 38 mineral reserves remain below a second Beacon's 180 cost. Review the alignment funding outlook before waiting for the next income cycle."
+    },
+    "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Review your funding\")')\u001b[22m\n",
+    "at": "2026-10-29T03:44:23.291Z",
+    "explanation": "End Cycle reached 38 and opened the foreign-war briefing. The following page shortcut had no effect while the modal was open. Request 68 dismisses it and navigates normally."
+  },
+  {
+    "kind": "driver-error",
+    "index": 74,
+    "request": {
+      "actions": [
+        {
+          "click": ".build-card:has-text(\"Asterion Beacon\")"
+        },
+        {
+          "click": "#end-turn"
+        },
+        {
+          "press": "4"
+        },
+        {
+          "click": "button:has-text(\"Review your funding\")"
+        }
+      ],
+      "screenshot": "cycle44-first-beacon-funding",
+      "note": "Commission the third Beacon at Halcyon. At cycle 44 Sundrift's first Beacon completes, so inspect the now-visible funding budget and remaining structural requirement."
+    },
+    "message": "locator.click: Error: strict mode violation: locator('button:has-text(\"Review your funding\")') resolved to 2 elements:\n    1) <button class=\"small-button ghost\" data-action=\"review-alignment\">Review your funding \u2192</button> aka locator('#mandate').getByText('Review your funding \u2192')\n    2) <button class=\"wide-button ghost\" data-action=\"review-alignment\">Review your funding \u2192</button> aka getByRole('button', { name: 'Review your funding \u2192' })\n\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Review your funding\")')\u001b[22m\n",
+    "at": "2026-10-29T03:49:34.119Z",
+    "explanation": "The third Beacon purchase and End Cycle to 44 succeeded. The generic funding selector matched a hidden map button and the visible context button. Request 75 narrows to the visible context control."
+  },
+  {
+    "kind": "driver-error",
+    "index": 110,
+    "request": {
+      "actions": [
+        {
+          "click": ".modal button:text-is(\"Read Chronicle\")"
+        },
+        {
+          "click": "[data-log-filter=\"Combat\"]"
+        }
+      ],
+      "screenshot": "cycle60-retained-combat-sequence",
+      "note": "Read-only post-ending inspection: open the Chronicle from the conclusion and view the retained combat sequence, including the final Haven defense."
+    },
+    "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-log-filter=\"Combat\"]')\u001b[22m\n",
+    "at": "2026-10-29T04:13:21.047Z",
+    "explanation": "Read Chronicle opened correctly. The filter selector used Combat instead of the actual lowercase combat value. Request 112 activates the visible Combat button."
+  }
+]

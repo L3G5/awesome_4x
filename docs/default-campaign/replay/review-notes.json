@@ -1,0 +1,44 @@
+{
+  "scope": "Exact reconstruction of the frozen actual ASTERION continuation from cycle12 on0.21.0 into0.21.1 through cycle30 only. No reconstruction of cycles1\u201312, no synthetic branches and no outcome sample.",
+  "method": "Process only action-complete receipts. Resolve visible exact fleet/world/project names through the current replay state/content and pinned UI selection semantics. Validate unique targets. Call ordinary command/endTurn, compare full state and result to JSON-restored invocation, compare status/turn receipts, and verify every actual export. Inspect recorded resource cells at each post-import observation.",
+  "normalizations": [
+    {
+      "requests": [
+        1,
+        2,
+        3
+      ],
+      "meaning": "Default fresh startup is outside scope. The confirmed actual cycle12 picker import is the only initialization. Normal revealPublicBeacons at import is checked to leave the input unchanged."
+    },
+    {
+      "requests": [
+        10,
+        11
+      ],
+      "meaning": "Continue-route and navigation completed in request10 before a nonexistent .development-card timed out. That requested purchase was not executed. Request11 uses .build-card and successfully commissions the Academy Charter."
+    },
+    {
+      "requests": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "meaning": "Observation013 records focus on colonize-confirm. Request14 Enter genuinely settles Halcyon; only the subsequent fleet switch fails after the consumed Ark disappears. The successful settlement remains; later registry selection recovers the scout."
+    },
+    {
+      "requests": [
+        48,
+        49
+      ],
+      "meaning": "The selector excludes Vanguard34 and selects exact own Vanguard3. The sole legal local same-class mate is used for the ordinary merge; selected identity, hold and costs are reproduced."
+    }
+  ],
+  "limits": [
+    "Visible observation comparisons cover turn and eight resource/order values, not a pixel-by-pixel DOM comparison.",
+    "Two observations precede import and are excluded from the cycle12 continuation checks.",
+    "No full-state data from later live play is read.",
+    "The completed exact phase ends at30 with no winner; this is not a completed campaign or a new gameplay sample."
+  ],
+  "originalsUnchanged": true
+}

@@ -395,13 +395,24 @@ The ongoing default campaign exposed a small presentation mismatch at actual cyc
 - The Empire context now says “Review alignment requirements” when no funding outlook is rendered, “Review your funding” when that budget exists, and “Review final network” after an ending. The action and scrolling behavior are unchanged. The existing workspace browser case now checks the empty-network label and visible destination; all thirteen adjacent planning/workspace cases pass on immutable production (27.4 seconds).
 - No simulation module or saved field changes. Version 0.21.2 builds at 247.56 KB gzip JavaScript. Independent acceptance passes six actual-input cases at 1440/390 pixels: default38 requirements, ODYSSEY50 funding and ODYSSEY66 final network. All 24 full-state comparisons and six byte-identical UI exports pass; Enter opens each appropriate destination with no page/resource error or overflow. Root verifies 31 independent artifacts, 58 source fingerprints, eighteen production files and all three inputs. Complete evidence is in `docs/stage25-alignment-label/`.
 
-## Subsequent stages
+- Workflow 40815482994 succeeded at commit `eab279d`; live metadata matches version 0.21.2 and that exact release. CI passed all 406 rules tests and 80 browser scenarios. The hosted workspace-context scenario passed from an isolated release archive (7.6 seconds).
 
-1. Playtest the complete opening and midgame, fix usability and rules inconsistencies.
-2. Evaluate AI over multiple seeded campaigns; improve scouting, expansion, fleet coordination, defense and economic planning.
-3. Expand consequential strategic choices, faction identity, discoveries and campaign objectives based on playtest evidence.
-4. Refine procedural visual assets, combat feedback, audio, accessibility and documentation.
-5. Run reproducible release acceptance, check hosted experience, and audit all original requirements after the twelve-hour development window.
+## Stage 26 — the completed default campaign (started 2026-10-29 04:17 UTC)
+
+- The ordinary ASTERION opening on immutable 0.21.0 reached cycle 12; its untouched export was imported through the normal picker into immutable 0.21.1 and played to natural Transcendence at cycle 60. No save edits, grants, engine commands, automated policy or rollback were used. Final holdings are five worlds, 40 population, four cruisers, one frigate, one scout, twelve technologies and Legacy 607. All 42 systems were surveyed.
+- Choir declared war at 54 and Khar at 55, ending two trade agreements. Five battles tested the defenses. After paid repairs, reinforcements and two Shipyard replacements, Haven survived the final three engagements: its four-frigate lead was destroyed, but a cruiser remained at 12.5/85 hull after passive repair. Alignment reached 10/10 without an interruption. The final save retains all 138 Chronicle entries and five reports. Read-only ending inspection leaves both final exports byte-identical.
+- Independent reconstruction covers the actual cycle 12–60 continuation only: 177 ordinary commands, 48 End Cycles, 177 exact reload-next-command checks, 178 valid states, all eleven actual exports and 111 rendered observations. The first twelve cycles are outside the replay scope. Root reproduces all eight generated JSON outputs byte-for-byte. Earlier phase30/40/50 manifests remain unchanged; five driver errors and unexecuted requested navigation tails remain explicitly distinguished from commands.
+- The original 196-file report, frozen independent replays, played build fingerprints and source continuity checks are packaged in `docs/default-campaign/`. A portable wrapper verifies the bundle and uses copied inputs plus historical Git modules. All fourteen engine modules match the current 0.21.2 release; that does not retroactively change the played interface version. The only new product finding was the wording corrected in Stage 25.
+
+- The portable wrapper reproduces all eight final JSON outputs exactly using packaged originals and build fingerprints. All 275 local report links and fourteen desktop/narrow views pass; root inspected the report screenshot. Two new-wrapper setup errors (a missing screenshot subdirectory and a manifest checked before generation) are preserved separately. No game source, rule or runtime asset changes in this stage.
+
+## Completion review
+
+The exploration, expansion, economy, research, diplomacy, combat and three victory routes are implemented and documented in the HTML Field Guide. Purposeful rival behavior has focused rule coverage and controlled comparisons; actual complete campaigns cover Transcendence and Domination. Three.js presentation includes the galaxy, native planet/ship portraits, original faction illustrations, self-hosted fonts and a tactical fallback. Autosave and import/export have historical continuity checks. Chromium release acceptance and bounded Firefox acceptance are recorded above. GitHub repository administration and public Pages deployment are verified. The twelve-hour minimum ends at 2026-10-29 04:38:57 UTC; the final handoff follows that time and successful final deployment.
+
+## Optional future work
+
+Audio and broader device/browser coverage remain possible extensions. They are not required to play the complete desktop-first campaign. Additional campaign samples could inform balance changes; the recorded histories do not establish human win rates.
 
 ## Current blockers
 

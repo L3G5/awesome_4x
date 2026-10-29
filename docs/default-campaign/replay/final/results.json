@@ -1,0 +1,190 @@
+{
+  "scope": "One cross-version continuation of the actual ASTERION opening, beginning from unedited cycle12. No reconstruction or replay claim for cycles1–12; no continued play beyond cycle60; frozen read-only postgame receipts through request119 are included.",
+  "pin": "648c1f53de5f37d4df012c6b7e9994fb9574819c",
+  "buildPin": "3c6e822211e380510ddd387a24d3f021dc4bb36b",
+  "scriptSha256": "e956ad3cf494dc4529f1bc3a352f4ffde89fdd4f4db83ef4924f8e4f0f129722",
+  "inputSha256": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+  "frozenLogSha256": "f0f9efc47364122976ce11b77ed6af4b9bbf7d20092c5fb3a07cd0b0cbb4afa5",
+  "logEvents": 684,
+  "successfulActionReceipts": 435,
+  "commands": 177,
+  "commandKinds": {
+    "move": 22,
+    "planRoute": 10,
+    "continueRoute": 33,
+    "endTurn": 48,
+    "develop": 3,
+    "colonize": 2,
+    "research": 10,
+    "build": 24,
+    "hold": 8,
+    "merge": 5,
+    "leadDefense": 6,
+    "resume": 1,
+    "diplomacy": 1,
+    "repair": 3,
+    "attack": 1
+  },
+  "endTurns": 48,
+  "jsonReloadNextCommandChecks": 177,
+  "validNonnegativeStates": 178,
+  "exports": [
+    {
+      "line": 170,
+      "file": "036-asterion-reach-cycle-20.json",
+      "turn": 20,
+      "bytesSha256": "492a718ca75568222d5d41cff5eaec4b30409857729bfa082635d18313b815c9",
+      "canonicalSha256": "b01bb2fa8920717a508d8ea4af60feabb74164b574abd18aa9dc26d6a7de2b20",
+      "exact": true
+    },
+    {
+      "line": 314,
+      "file": "056-asterion-reach-cycle-30.json",
+      "turn": 30,
+      "bytesSha256": "9909263a0a283336ebb7b18dbccd33a5174cf610ad4aa5aca7fce62f34db4474",
+      "canonicalSha256": "61401936350e2abe264e3407b9c5a75b178a9827b64a0bcb801bb8b89566fa54",
+      "exact": true
+    },
+    {
+      "line": 404,
+      "file": "069-asterion-reach-cycle-38.json",
+      "turn": 38,
+      "bytesSha256": "d6d7ddf4c5d59e99cbbde6bfde4c8e6eca042cbede79396acdde406027c2e921",
+      "canonicalSha256": "63672d91884ffc51e69ffefcdb4ce99f2b3cdfae10e2d01f8d44412864c447bf",
+      "exact": true
+    },
+    {
+      "line": 417,
+      "file": "070-asterion-reach-cycle-40.json",
+      "turn": 40,
+      "bytesSha256": "bfbcf58fe278b2fe391a231286523a8d0c25f117ad38a3367baa1364529f7529",
+      "canonicalSha256": "7493be5200f54bf21b010b79ddbccfd666f31e827fa326ab2f6620ced6f920ba",
+      "exact": true
+    },
+    {
+      "line": 494,
+      "file": "083-asterion-reach-cycle-50.json",
+      "turn": 50,
+      "bytesSha256": "ddb3bf508496b3ce9ccdb46d5bcf643327fb32a8788fbb6276f106d162de633d",
+      "canonicalSha256": "04871969d732da1822ffd4303de458661106e08d1777cede4729c86bb263ec2f",
+      "exact": true
+    },
+    {
+      "line": 527,
+      "file": "089-asterion-reach-cycle-54.json",
+      "turn": 54,
+      "bytesSha256": "92398cdb94c7807d052089f98d990e9e3d5887dfa704e21e1bf58d4b5e6458da",
+      "canonicalSha256": "0f2c348d064d046230903346b1567ed6be2da370ad77336b605fda874ae78a35",
+      "exact": true
+    },
+    {
+      "line": 546,
+      "file": "092-asterion-reach-cycle-55.json",
+      "turn": 55,
+      "bytesSha256": "a77a004a6ec2d47cdd80865f4733de4054408b78048599ad24b37514181465e5",
+      "canonicalSha256": "310fb1dad128130ac6665d6ad6f396d39e1b4a57491a5f9a2c346608c7411037",
+      "exact": true
+    },
+    {
+      "line": 583,
+      "file": "098-asterion-reach-cycle-56.json",
+      "turn": 56,
+      "bytesSha256": "1fcaa0596bfe0f9db4b9b6b6f537608fd046e9dd2b007023571fdf2ef4587336",
+      "canonicalSha256": "075b749fe9ddde142b3f0e550184452aa47ae0293ab9e0a9ff6c1afff63362b6",
+      "exact": true
+    },
+    {
+      "line": 642,
+      "file": "107-asterion-reach-cycle-59.json",
+      "turn": 59,
+      "bytesSha256": "335bb2d4277f381beb5a2bfc47d459a0f1eb06b3009ac5566e6edfe338520967",
+      "canonicalSha256": "8b46feb84edd3427f22f3df152d0b5f6da00d8d56a6fc636fc0dc51392d6ad81",
+      "exact": true
+    },
+    {
+      "line": 648,
+      "file": "109-asterion-reach-cycle-60.json",
+      "turn": 60,
+      "bytesSha256": "96e011b3394a25084fdd128d082bb71039678ef7c38c0d62ef8ace7c27041f72",
+      "canonicalSha256": "c7bc2aaa0c13263b844e133abb3a7473ffc0567117644e3f0286d6caa73b5c63",
+      "exact": true
+    },
+    {
+      "line": 681,
+      "file": "118-asterion-reach-cycle-60.json",
+      "turn": 60,
+      "bytesSha256": "96e011b3394a25084fdd128d082bb71039678ef7c38c0d62ef8ace7c27041f72",
+      "canonicalSha256": "c7bc2aaa0c13263b844e133abb3a7473ffc0567117644e3f0286d6caa73b5c63",
+      "exact": true
+    }
+  ],
+  "visibleObservationChecks": 111,
+  "preImportObservations": 2,
+  "driverErrors": [
+    {
+      "index": 10,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.development-card:has-text(\"Academy Charter\")')\u001b[22m\n"
+    },
+    {
+      "index": 14,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.fleet-switch button[title=\"Pathfinder 1 at Carina\"]')\u001b[22m\n"
+    },
+    {
+      "index": 66,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Review your funding\")')\u001b[22m\n"
+    },
+    {
+      "index": 74,
+      "message": "locator.click: Error: strict mode violation: locator('button:has-text(\"Review your funding\")') resolved to 2 elements:\n    1) <button class=\"small-button ghost\" data-action=\"review-alignment\">Review your funding →</button> aka locator('#mandate').getByText('Review your funding →')\n    2) <button class=\"wide-button ghost\" data-action=\"review-alignment\">Review your funding →</button> aka getByRole('button', { name: 'Review your funding →' })\n\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Review your funding\")')\u001b[22m\n"
+    },
+    {
+      "index": 110,
+      "message": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-log-filter=\"Combat\"]')\u001b[22m\n"
+    }
+  ],
+  "initialTurn": 12,
+  "finalTurn": 60,
+  "winner": "player",
+  "victoryType": "Transcendence",
+  "retainedCombatReports": 5,
+  "retainedChronicle": 138,
+  "completedTechnologies": 12,
+  "ownShipsByClass": {
+    "scout": 1,
+    "cruiser": 4,
+    "frigate": 1
+  },
+  "postgame": {
+    "firstWinnerCommandLine": 645,
+    "lastFrozenRequest": 119,
+    "firstFinalExport": "109-asterion-reach-cycle-60.json",
+    "lastFinalExport": "118-asterion-reach-cycle-60.json",
+    "byteIdentical": true,
+    "allPostgameEventStatesEqual": true
+  },
+  "stats": {
+    "credits": 1902,
+    "minerals": 238,
+    "science": 324,
+    "creditIncome": 86,
+    "mineralIncome": 38,
+    "scienceIncome": 99,
+    "production": 90,
+    "upkeep": 19,
+    "colonies": 5,
+    "population": 40,
+    "ships": 6,
+    "military": 173.8,
+    "orders": 13,
+    "maxOrders": 13,
+    "uncappedOrders": 13,
+    "orderLimit": 18,
+    "score": 607,
+    "beacons": 3,
+    "explored": 42
+  },
+  "finalCanonicalSha256": "c7bc2aaa0c13263b844e133abb3a7473ffc0567117644e3f0286d6caa73b5c63",
+  "statePatches": 0,
+  "unexecutedRequestedActionsApplied": 0,
+  "originalFilesVerified": 137
+}

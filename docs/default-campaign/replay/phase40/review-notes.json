@@ -1,0 +1,31 @@
+{
+  "scope": "Cumulative exact replay of the same actual ASTERION continuation from12 through explicitly frozen40. The initial12\u219230 evidence remains separate and unchanged. No cycles1\u201312 replay, extra campaign or later live-state inspection.",
+  "deltaFromPhase30": {
+    "commands": 29,
+    "endTurns": 10,
+    "additionalActualExports": [
+      38,
+      40
+    ]
+  },
+  "additionalReceiptInterpretation": [
+    {
+      "request": 59,
+      "meaning": "Enter confirms Nacre settlement; the immediately preceding observation058 records colonize-confirm focus."
+    },
+    {
+      "requests": [
+        60,
+        61
+      ],
+      "meaning": "The reinforcement shortcut commissions an independent frigate of the selected own formation class through ordinary build. At34, the sole legal mate is merged into Vanguard3, retaining its existing identity."
+    },
+    {
+      "request": 66,
+      "meaning": "Escape and End Cycle to38 succeeded. The resulting foreign-war briefing opened; the later page shortcut was inert and funding selector timed out. No funding or economic command is inferred. Request68 dismisses the actual briefing and navigates normally."
+    }
+  ],
+  "unchangedEarlierInterpretation": "Requests10/14 and the initial import follow the frozen phase30 ledger. Complete through30 log is asserted to be an exact prefix of the through40 log.",
+  "method": "Successful action-complete receipts only, exact unique name resolution, pinned UI modal/selection semantics, ordinary command/endTurn, full JSON reload-next-command equality, exact original exports, and visible turn/resource observation checks.",
+  "limits": "65 observation comparisons cover turn and8 displayed resource/order values. Two pre-import observations are outside scope. Actual40 has no winner; no final outcome claim or gameplay sample count is inferred."
+}

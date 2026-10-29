@@ -1,0 +1,33 @@
+{
+  "cycle": 30,
+  "recordedAt": "2026-10-29T03:38:39.502284+00:00",
+  "observedUI": {
+    "worlds": 4,
+    "population": 30,
+    "credits": 709,
+    "creditIncome": 84,
+    "minerals": 90,
+    "mineralIncome": 37,
+    "scienceIncome": 82,
+    "orders": 10,
+    "ships": 4,
+    "fleetPower": 27,
+    "legacy": 194
+  },
+  "observedMilestones": [
+    "Halcyon founded at cycle 13",
+    "Autonomous Industry, Resonance Theory, Quantum Archives completed; Asterion Protocol underway",
+    "Academy I completed at Sundrift and Haven; Forge I at Solace",
+    "New frigate merged with veteran Vanguard 3; 68 hull, Hold retained, defensive lead assigned",
+    "All four founding worlds identified; active trade/open borders with all three rivals",
+    "Colony Ark 35 traveling to Nacre"
+  ],
+  "extension": "Parent explicitly requested continuing this same campaign naturally to an ending after preserving cycle 30. No rollback or new import.",
+  "hashes": {
+    "input-actual-cycle12-v0.21.0.json": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+    "036-asterion-reach-cycle-20.json": "492a718ca75568222d5d41cff5eaec4b30409857729bfa082635d18313b815c9",
+    "056-asterion-reach-cycle-30.json": "9909263a0a283336ebb7b18dbccd33a5174cf610ad4aa5aca7fce62f34db4474",
+    "observation-056.json": "9105e33993b42b92e90c2f6f95cfc310a13902ad64fa7b0ab23bea0297624221",
+    "through-cycle30-actions.jsonl": "0d203095029765498b62fab8af7d0494b65d5e4eae9ad77a32f3abe44aacd791"
+  }
+}

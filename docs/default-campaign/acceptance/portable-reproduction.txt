@@ -1,0 +1,66 @@
+Verified 274 packaged artifacts. Replaying into /tmp/asterion-default-portable-reproduction
+{
+  "commands": 177,
+  "endTurns": 48,
+  "exports": [
+    {
+      "turn": 20,
+      "exact": true,
+      "hash": "492a718ca75568222d5d41cff5eaec4b30409857729bfa082635d18313b815c9"
+    },
+    {
+      "turn": 30,
+      "exact": true,
+      "hash": "9909263a0a283336ebb7b18dbccd33a5174cf610ad4aa5aca7fce62f34db4474"
+    },
+    {
+      "turn": 38,
+      "exact": true,
+      "hash": "d6d7ddf4c5d59e99cbbde6bfde4c8e6eca042cbede79396acdde406027c2e921"
+    },
+    {
+      "turn": 40,
+      "exact": true,
+      "hash": "bfbcf58fe278b2fe391a231286523a8d0c25f117ad38a3367baa1364529f7529"
+    },
+    {
+      "turn": 50,
+      "exact": true,
+      "hash": "ddb3bf508496b3ce9ccdb46d5bcf643327fb32a8788fbb6276f106d162de633d"
+    },
+    {
+      "turn": 54,
+      "exact": true,
+      "hash": "92398cdb94c7807d052089f98d990e9e3d5887dfa704e21e1bf58d4b5e6458da"
+    },
+    {
+      "turn": 55,
+      "exact": true,
+      "hash": "a77a004a6ec2d47cdd80865f4733de4054408b78048599ad24b37514181465e5"
+    },
+    {
+      "turn": 56,
+      "exact": true,
+      "hash": "1fcaa0596bfe0f9db4b9b6b6f537608fd046e9dd2b007023571fdf2ef4587336"
+    },
+    {
+      "turn": 59,
+      "exact": true,
+      "hash": "335bb2d4277f381beb5a2bfc47d459a0f1eb06b3009ac5566e6edfe338520967"
+    },
+    {
+      "turn": 60,
+      "exact": true,
+      "hash": "96e011b3394a25084fdd128d082bb71039678ef7c38c0d62ef8ace7c27041f72"
+    },
+    {
+      "turn": 60,
+      "exact": true,
+      "hash": "96e011b3394a25084fdd128d082bb71039678ef7c38c0d62ef8ace7c27041f72"
+    }
+  ],
+  "reloadChecks": 177,
+  "visibleObservations": 111,
+  "final": "c7bc2aaa0c13263b844e133abb3a7473ffc0567117644e3f0286d6caa73b5c63"
+}
+177 commands, 11 exact exports, 177 reload checks. Final: c7bc2aaa0c13263b844e133abb3a7473ffc0567117644e3f0286d6caa73b5c63

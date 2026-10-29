@@ -1,0 +1,39 @@
+{
+  "endingRecorded": {
+    "pass": true,
+    "evidence": "observation-109.json"
+  },
+  "finalHoldingsRetained": {
+    "pass": true,
+    "evidence": "observation-117.json"
+  },
+  "finishedNetworkHasNoFutureBudget": {
+    "pass": true,
+    "evidence": "observation-116.json"
+  },
+  "allFiveReportsReachable": {
+    "pass": true,
+    "evidence": "observation-112.json"
+  },
+  "threeFinalEngagementsInspected": {
+    "pass": true,
+    "evidence": [
+      "observation-113.json",
+      "observation-114.json",
+      "observation-115.json"
+    ]
+  },
+  "postEndingStateUnchanged": {
+    "equal": true,
+    "bytes": 118420,
+    "sha256": "96e011b3394a25084fdd128d082bb71039678ef7c38c0d62ef8ace7c27041f72",
+    "first": "109-asterion-reach-cycle-60.json",
+    "afterReadOnlyInspection": "118-asterion-reach-cycle-60.json"
+  },
+  "earlierFrozenBundlesUnchanged": {
+    "pass": true,
+    "checkedAt": "2026-10-29T04:22:58.278132+00:00",
+    "originalOpeningManifestFiles": 122,
+    "keyboardFollowupManifestFiles": 27
+  }
+}

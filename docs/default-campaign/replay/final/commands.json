@@ -1,0 +1,2517 @@
+[
+  {
+    "line": 22,
+    "requestIndex": 6,
+    "time": "2026-10-29T03:23:12.124Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s24"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Corvus."
+  },
+  {
+    "line": 26,
+    "requestIndex": 7,
+    "time": "2026-10-29T03:23:21.730Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s11"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Carina."
+  },
+  {
+    "line": 31,
+    "requestIndex": 8,
+    "time": "2026-10-29T03:23:28.407Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f3",
+      "destinationId": "s0"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 10 jumps to Solace. Continue when ready."
+  },
+  {
+    "line": 34,
+    "requestIndex": 9,
+    "time": "2026-10-29T03:23:34.681Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 35,
+    "requestIndex": 9,
+    "time": "2026-10-29T03:23:34.832Z",
+    "turnBefore": 12,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 13: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 38,
+    "requestIndex": 10,
+    "time": "2026-10-29T03:23:52.333Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 44,
+    "requestIndex": 11,
+    "time": "2026-10-29T03:24:25.452Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "develop",
+      "systemId": "s20",
+      "charterType": "academy"
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Academy Charter\")"
+    },
+    "status": "Academy Charter I commissioned at Sundrift."
+  },
+  {
+    "line": 52,
+    "requestIndex": 13,
+    "time": "2026-10-29T03:24:39.879Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f21",
+      "targetId": "s33"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Colony Ark 21 arrived at Halcyon."
+  },
+  {
+    "line": 56,
+    "requestIndex": 14,
+    "time": "2026-10-29T03:24:47.342Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f21"
+    },
+    "selector": {
+      "press": "Enter"
+    },
+    "status": "Colony founded at Halcyon."
+  },
+  {
+    "line": 66,
+    "requestIndex": 17,
+    "time": "2026-10-29T03:25:25.302Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s6"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Aurelia."
+  },
+  {
+    "line": 72,
+    "requestIndex": 19,
+    "time": "2026-10-29T03:25:59.984Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s21"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 5 jumps to Thalassa. Continue when ready."
+  },
+  {
+    "line": 73,
+    "requestIndex": 19,
+    "time": "2026-10-29T03:26:00.639Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 74,
+    "requestIndex": 19,
+    "time": "2026-10-29T03:26:00.975Z",
+    "turnBefore": 13,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 14: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 80,
+    "requestIndex": 21,
+    "time": "2026-10-29T03:26:28.892Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "research",
+      "techId": "physics"
+    },
+    "selector": {
+      "click": ".tech-card:has-text(\"Resonance Theory\") h3:text-is(\"Resonance Theory\") >> .. >> button"
+    },
+    "status": "Research directed toward Resonance Theory."
+  },
+  {
+    "line": 87,
+    "requestIndex": 23,
+    "time": "2026-10-29T03:26:45.584Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Manufactory\")"
+    },
+    "status": "Manufactory commissioned at Solace."
+  },
+  {
+    "line": 89,
+    "requestIndex": 23,
+    "time": "2026-10-29T03:26:46.532Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 91,
+    "requestIndex": 23,
+    "time": "2026-10-29T03:26:47.847Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 92,
+    "requestIndex": 23,
+    "time": "2026-10-29T03:26:48.232Z",
+    "turnBefore": 14,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 15: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 98,
+    "requestIndex": 24,
+    "time": "2026-10-29T03:27:08.676Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Research Enclave\")"
+    },
+    "status": "Research Enclave commissioned at Halcyon."
+  },
+  {
+    "line": 102,
+    "requestIndex": 24,
+    "time": "2026-10-29T03:27:09.309Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Manufactory\")"
+    },
+    "status": "Manufactory commissioned at Haven."
+  },
+  {
+    "line": 104,
+    "requestIndex": 24,
+    "time": "2026-10-29T03:27:10.389Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 106,
+    "requestIndex": 24,
+    "time": "2026-10-29T03:27:11.533Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Pathfinder 1 reached Thalassa in 2 jumps."
+  },
+  {
+    "line": 109,
+    "requestIndex": 25,
+    "time": "2026-10-29T03:27:33.301Z",
+    "turnBefore": 15,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 16: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 113,
+    "requestIndex": 26,
+    "time": "2026-10-29T03:27:47.906Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "research",
+      "techId": "computing"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Quantum Archives\") >> .. >> button"
+    },
+    "status": "Research directed toward Quantum Archives."
+  },
+  {
+    "line": 121,
+    "requestIndex": 28,
+    "time": "2026-10-29T03:28:16.931Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s7"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 6 jumps to Nacre. Continue when ready."
+  },
+  {
+    "line": 122,
+    "requestIndex": 28,
+    "time": "2026-10-29T03:28:17.555Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 124,
+    "requestIndex": 28,
+    "time": "2026-10-29T03:28:18.690Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 125,
+    "requestIndex": 28,
+    "time": "2026-10-29T03:28:19.018Z",
+    "turnBefore": 16,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 17: a new mandate begins."
+  },
+  {
+    "line": 130,
+    "requestIndex": 29,
+    "time": "2026-10-29T03:28:41.492Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s13"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Sable."
+  },
+  {
+    "line": 134,
+    "requestIndex": 30,
+    "time": "2026-10-29T03:29:02.476Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s26"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Aster."
+  },
+  {
+    "line": 138,
+    "requestIndex": 31,
+    "time": "2026-10-29T03:29:12.250Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 139,
+    "requestIndex": 31,
+    "time": "2026-10-29T03:29:12.411Z",
+    "turnBefore": 17,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 18: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 147,
+    "requestIndex": 33,
+    "time": "2026-10-29T03:29:28.517Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "develop",
+      "systemId": "s0",
+      "charterType": "forge"
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Forge Charter\")"
+    },
+    "status": "Forge Charter I commissioned at Solace."
+  },
+  {
+    "line": 148,
+    "requestIndex": 33,
+    "time": "2026-10-29T03:29:28.728Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 151,
+    "requestIndex": 33,
+    "time": "2026-10-29T03:29:30.111Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s1"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Veyr Prime."
+  },
+  {
+    "line": 155,
+    "requestIndex": 34,
+    "time": "2026-10-29T03:29:43.861Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s39"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Eos."
+  },
+  {
+    "line": 156,
+    "requestIndex": 34,
+    "time": "2026-10-29T03:29:43.992Z",
+    "turnBefore": 18,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 19: a new mandate begins."
+  },
+  {
+    "line": 160,
+    "requestIndex": 35,
+    "time": "2026-10-29T03:29:53.432Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s31"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Vesper."
+  },
+  {
+    "line": 164,
+    "requestIndex": 36,
+    "time": "2026-10-29T03:30:02.998Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s18"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Cinder."
+  },
+  {
+    "line": 166,
+    "requestIndex": 36,
+    "time": "2026-10-29T03:30:03.844Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 167,
+    "requestIndex": 36,
+    "time": "2026-10-29T03:30:04.250Z",
+    "turnBefore": 19,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 20: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 177,
+    "requestIndex": 37,
+    "time": "2026-10-29T03:30:36.801Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Manufactory\")"
+    },
+    "status": "Manufactory commissioned at Sundrift."
+  },
+  {
+    "line": 179,
+    "requestIndex": 37,
+    "time": "2026-10-29T03:30:37.688Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 184,
+    "requestIndex": 38,
+    "time": "2026-10-29T03:31:00.022Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s34"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 3 jumps to Antares. Continue when ready."
+  },
+  {
+    "line": 185,
+    "requestIndex": 38,
+    "time": "2026-10-29T03:31:00.779Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 186,
+    "requestIndex": 38,
+    "time": "2026-10-29T03:31:01.088Z",
+    "turnBefore": 20,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 21: 2 dispatches available in your briefing."
+  },
+  {
+    "line": 192,
+    "requestIndex": 39,
+    "time": "2026-10-29T03:32:08.450Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "develop",
+      "systemId": "s28",
+      "charterType": "academy"
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Academy Charter\")"
+    },
+    "status": "Academy Charter I commissioned at Haven."
+  },
+  {
+    "line": 194,
+    "requestIndex": 39,
+    "time": "2026-10-29T03:32:08.693Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Vanguard 3 reached Solace in 1 jump."
+  },
+  {
+    "line": 196,
+    "requestIndex": 39,
+    "time": "2026-10-29T03:32:09.721Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Pathfinder 1 reached Antares in 1 jump."
+  },
+  {
+    "line": 201,
+    "requestIndex": 40,
+    "time": "2026-10-29T03:32:31.287Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s7"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 6 jumps to Nacre. Continue when ready."
+  },
+  {
+    "line": 202,
+    "requestIndex": 40,
+    "time": "2026-10-29T03:32:31.715Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 203,
+    "requestIndex": 40,
+    "time": "2026-10-29T03:32:32.131Z",
+    "turnBefore": 21,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 22: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 207,
+    "requestIndex": 40,
+    "time": "2026-10-29T03:32:32.630Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "mine",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Orbital Extractor\")"
+    },
+    "status": "Orbital Extractor commissioned at Halcyon."
+  },
+  {
+    "line": 211,
+    "requestIndex": 41,
+    "time": "2026-10-29T03:32:57.181Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 214,
+    "requestIndex": 41,
+    "time": "2026-10-29T03:32:58.421Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Vanguard 3 is holding position."
+  },
+  {
+    "line": 220,
+    "requestIndex": 42,
+    "time": "2026-10-29T03:33:26.239Z",
+    "turnBefore": 22,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 23: a new mandate begins."
+  },
+  {
+    "line": 222,
+    "requestIndex": 42,
+    "time": "2026-10-29T03:33:26.935Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 223,
+    "requestIndex": 42,
+    "time": "2026-10-29T03:33:27.476Z",
+    "turnBefore": 23,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 24: 2 dispatches available in your briefing."
+  },
+  {
+    "line": 227,
+    "requestIndex": 43,
+    "time": "2026-10-29T03:33:51.438Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "research",
+      "techId": "singularity"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"The Asterion Protocol\") >> .. >> button"
+    },
+    "status": "Research directed toward The Asterion Protocol."
+  },
+  {
+    "line": 231,
+    "requestIndex": 43,
+    "time": "2026-10-29T03:33:52.034Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Vanguard\")"
+    },
+    "status": "Vanguard commissioned at Solace."
+  },
+  {
+    "line": 233,
+    "requestIndex": 43,
+    "time": "2026-10-29T03:33:53.179Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Pathfinder 1 reached Nacre in 1 jump."
+  },
+  {
+    "line": 237,
+    "requestIndex": 44,
+    "time": "2026-10-29T03:34:23.710Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s4"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Meridian."
+  },
+  {
+    "line": 244,
+    "requestIndex": 46,
+    "time": "2026-10-29T03:34:48.649Z",
+    "turnBefore": 24,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 25: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 246,
+    "requestIndex": 46,
+    "time": "2026-10-29T03:34:49.149Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s12"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Eidolon."
+  },
+  {
+    "line": 250,
+    "requestIndex": 47,
+    "time": "2026-10-29T03:35:15.679Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s25"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Elysian."
+  },
+  {
+    "line": 254,
+    "requestIndex": 47,
+    "time": "2026-10-29T03:35:16.205Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "mine",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Orbital Extractor\")"
+    },
+    "status": "Orbital Extractor commissioned at Haven."
+  },
+  {
+    "line": 255,
+    "requestIndex": 47,
+    "time": "2026-10-29T03:35:16.545Z",
+    "turnBefore": 25,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 26: 2 dispatches available in your briefing."
+  },
+  {
+    "line": 262,
+    "requestIndex": 49,
+    "time": "2026-10-29T03:35:43.032Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f34"
+    },
+    "selector": {
+      "click": "button:has-text(\"Merge +1\")"
+    },
+    "status": "Fleets combined into one task force."
+  },
+  {
+    "line": 263,
+    "requestIndex": 49,
+    "time": "2026-10-29T03:35:43.165Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Lead defense · 1 order\")"
+    },
+    "status": "Vanguard 3 will lead its local defense."
+  },
+  {
+    "line": 266,
+    "requestIndex": 49,
+    "time": "2026-10-29T03:35:44.354Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s0"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 2 jumps to Solace. Continue when ready."
+  },
+  {
+    "line": 267,
+    "requestIndex": 49,
+    "time": "2026-10-29T03:35:45.051Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Pathfinder 1 reached Solace in 2 jumps."
+  },
+  {
+    "line": 270,
+    "requestIndex": 50,
+    "time": "2026-10-29T03:36:04.492Z",
+    "turnBefore": 26,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 27: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 273,
+    "requestIndex": 50,
+    "time": "2026-10-29T03:36:04.783Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "colony",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Colony Ark\")"
+    },
+    "status": "Colony Ark commissioned at Solace."
+  },
+  {
+    "line": 275,
+    "requestIndex": 50,
+    "time": "2026-10-29T03:36:05.325Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s41"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Asterion."
+  },
+  {
+    "line": 279,
+    "requestIndex": 51,
+    "time": "2026-10-29T03:36:23.442Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s28"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Haven."
+  },
+  {
+    "line": 280,
+    "requestIndex": 51,
+    "time": "2026-10-29T03:36:23.702Z",
+    "turnBefore": 27,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 28: a new mandate begins."
+  },
+  {
+    "line": 284,
+    "requestIndex": 51,
+    "time": "2026-10-29T03:36:24.237Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "factory",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Manufactory\")"
+    },
+    "status": "Manufactory commissioned at Halcyon."
+  },
+  {
+    "line": 289,
+    "requestIndex": 52,
+    "time": "2026-10-29T03:36:37.886Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "move",
+      "fleetId": "f1",
+      "targetId": "s36"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Pathfinder 1 arrived at Peregrine."
+  },
+  {
+    "line": 299,
+    "requestIndex": 55,
+    "time": "2026-10-29T03:37:28.165Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s30"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 9 jumps to Caelum. Continue when ready."
+  },
+  {
+    "line": 300,
+    "requestIndex": 55,
+    "time": "2026-10-29T03:37:28.505Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 301,
+    "requestIndex": 55,
+    "time": "2026-10-29T03:37:28.907Z",
+    "turnBefore": 28,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 29: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 307,
+    "requestIndex": 56,
+    "time": "2026-10-29T03:37:49.775Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f35",
+      "destinationId": "s7"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 3 jumps to Nacre. Continue when ready."
+  },
+  {
+    "line": 308,
+    "requestIndex": 56,
+    "time": "2026-10-29T03:37:50.379Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f35"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 310,
+    "requestIndex": 56,
+    "time": "2026-10-29T03:37:51.550Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 311,
+    "requestIndex": 56,
+    "time": "2026-10-29T03:37:51.918Z",
+    "turnBefore": 29,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 30: a new mandate begins."
+  },
+  {
+    "line": 324,
+    "requestIndex": 58,
+    "time": "2026-10-29T03:39:41.449Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f35"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 1 jump. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 326,
+    "requestIndex": 58,
+    "time": "2026-10-29T03:39:42.866Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 327,
+    "requestIndex": 58,
+    "time": "2026-10-29T03:39:43.187Z",
+    "turnBefore": 30,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 31: a new mandate begins."
+  },
+  {
+    "line": 329,
+    "requestIndex": 58,
+    "time": "2026-10-29T03:39:44.198Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f35"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Colony Ark 35 reached Nacre in 1 jump."
+  },
+  {
+    "line": 333,
+    "requestIndex": 59,
+    "time": "2026-10-29T03:39:59.013Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "colonize",
+      "fleetId": "f35"
+    },
+    "selector": {
+      "press": "Enter"
+    },
+    "status": "Colony founded at Nacre."
+  },
+  {
+    "line": 335,
+    "requestIndex": 59,
+    "time": "2026-10-29T03:39:59.209Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "mine",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Orbital Extractor\")"
+    },
+    "status": "Orbital Extractor commissioned at Nacre."
+  },
+  {
+    "line": 338,
+    "requestIndex": 59,
+    "time": "2026-10-29T03:39:59.914Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 339,
+    "requestIndex": 59,
+    "time": "2026-10-29T03:40:00.334Z",
+    "turnBefore": 31,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 32: a new mandate begins."
+  },
+  {
+    "line": 345,
+    "requestIndex": 60,
+    "time": "2026-10-29T03:40:48.697Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "frigate"
+    },
+    "selector": {
+      "click": "button:text-is(\"Commission Vanguard\")"
+    },
+    "status": "Vanguard commissioned at Solace."
+  },
+  {
+    "line": 347,
+    "requestIndex": 60,
+    "time": "2026-10-29T03:40:49.626Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Pathfinder 1 reached Caelum in 2 jumps."
+  },
+  {
+    "line": 348,
+    "requestIndex": 60,
+    "time": "2026-10-29T03:40:50.081Z",
+    "turnBefore": 32,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 33: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 353,
+    "requestIndex": 61,
+    "time": "2026-10-29T03:41:21.437Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f1",
+      "destinationId": "s7"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 6 jumps to Nacre. Continue when ready."
+  },
+  {
+    "line": 354,
+    "requestIndex": 61,
+    "time": "2026-10-29T03:41:22.097Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 355,
+    "requestIndex": 61,
+    "time": "2026-10-29T03:41:22.438Z",
+    "turnBefore": 33,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 34: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 358,
+    "requestIndex": 61,
+    "time": "2026-10-29T03:41:23.548Z",
+    "turnBefore": 34,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f42"
+    },
+    "selector": {
+      "click": "button:has-text(\"Merge +1\")"
+    },
+    "status": "Fleets combined into one task force."
+  },
+  {
+    "line": 362,
+    "requestIndex": 62,
+    "time": "2026-10-29T03:42:01.684Z",
+    "turnBefore": 34,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Route paused after 2 jumps. This fleet has used all its movement this turn."
+  },
+  {
+    "line": 363,
+    "requestIndex": 62,
+    "time": "2026-10-29T03:42:02.049Z",
+    "turnBefore": 34,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 35: a new mandate begins."
+  },
+  {
+    "line": 369,
+    "requestIndex": 63,
+    "time": "2026-10-29T03:42:26.677Z",
+    "turnBefore": 35,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Pathfinder 1 reached Nacre in 2 jumps."
+  },
+  {
+    "line": 370,
+    "requestIndex": 63,
+    "time": "2026-10-29T03:42:27.001Z",
+    "turnBefore": 35,
+    "action": {
+      "type": "hold",
+      "fleetId": "f1"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Pathfinder 1 is holding position."
+  },
+  {
+    "line": 371,
+    "requestIndex": 63,
+    "time": "2026-10-29T03:42:27.150Z",
+    "turnBefore": 35,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 36: 2 dispatches available in your briefing."
+  },
+  {
+    "line": 377,
+    "requestIndex": 64,
+    "time": "2026-10-29T03:43:06.454Z",
+    "turnBefore": 36,
+    "action": {
+      "type": "build",
+      "systemId": "s20",
+      "itemId": "beacon",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Asterion Beacon\")"
+    },
+    "status": "Asterion Beacon commissioned at Sundrift."
+  },
+  {
+    "line": 381,
+    "requestIndex": 64,
+    "time": "2026-10-29T03:43:07.029Z",
+    "turnBefore": 36,
+    "action": {
+      "type": "build",
+      "systemId": "s7",
+      "itemId": "lab",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Research Enclave\")"
+    },
+    "status": "Research Enclave commissioned at Nacre."
+  },
+  {
+    "line": 383,
+    "requestIndex": 64,
+    "time": "2026-10-29T03:43:07.068Z",
+    "turnBefore": 36,
+    "action": {
+      "type": "research",
+      "techId": "weapons"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Coherent Lances\") >> .. >> button"
+    },
+    "status": "Research directed toward Coherent Lances."
+  },
+  {
+    "line": 386,
+    "requestIndex": 65,
+    "time": "2026-10-29T03:44:01.501Z",
+    "turnBefore": 36,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 37: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 387,
+    "requestIndex": 65,
+    "time": "2026-10-29T03:44:01.551Z",
+    "turnBefore": 37,
+    "action": {
+      "type": "research",
+      "techId": "shields"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Deflector Fields\") >> .. >> button"
+    },
+    "status": "Research directed toward Deflector Fields."
+  },
+  {
+    "line": 392,
+    "requestIndex": 66,
+    "time": "2026-10-29T03:44:13.283Z",
+    "turnBefore": 37,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 38: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 407,
+    "requestIndex": 69,
+    "time": "2026-10-29T03:46:06.126Z",
+    "turnBefore": 38,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 39: a new mandate begins."
+  },
+  {
+    "line": 412,
+    "requestIndex": 70,
+    "time": "2026-10-29T03:46:42.178Z",
+    "turnBefore": 39,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "beacon",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Asterion Beacon\")"
+    },
+    "status": "Asterion Beacon commissioned at Haven."
+  },
+  {
+    "line": 413,
+    "requestIndex": 70,
+    "time": "2026-10-29T03:46:42.355Z",
+    "turnBefore": 39,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 40: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 422,
+    "requestIndex": 71,
+    "time": "2026-10-29T03:47:40.296Z",
+    "turnBefore": 40,
+    "action": {
+      "type": "research",
+      "techId": "cruisers"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Capital Ship Architecture\") >> .. >> button"
+    },
+    "status": "Research directed toward Capital Ship Architecture."
+  },
+  {
+    "line": 423,
+    "requestIndex": 71,
+    "time": "2026-10-29T03:47:40.357Z",
+    "turnBefore": 40,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 41: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 427,
+    "requestIndex": 72,
+    "time": "2026-10-29T03:49:07.681Z",
+    "turnBefore": 41,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 42: a new mandate begins."
+  },
+  {
+    "line": 431,
+    "requestIndex": 73,
+    "time": "2026-10-29T03:49:20.367Z",
+    "turnBefore": 42,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 43: a new mandate begins."
+  },
+  {
+    "line": 436,
+    "requestIndex": 74,
+    "time": "2026-10-29T03:49:33.867Z",
+    "turnBefore": 43,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "beacon",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Asterion Beacon\")"
+    },
+    "status": "Asterion Beacon commissioned at Halcyon."
+  },
+  {
+    "line": 437,
+    "requestIndex": 74,
+    "time": "2026-10-29T03:49:34.085Z",
+    "turnBefore": 43,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 44: 4 dispatches available in your briefing."
+  },
+  {
+    "line": 445,
+    "requestIndex": 76,
+    "time": "2026-10-29T03:50:24.639Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "research",
+      "techId": "ecology"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Adaptive Biospheres\") >> .. >> button"
+    },
+    "status": "Research directed toward Adaptive Biospheres."
+  },
+  {
+    "line": 448,
+    "requestIndex": 77,
+    "time": "2026-10-29T03:50:38.233Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "research",
+      "techId": "diplomacy"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Stellar Accords\") >> .. >> button"
+    },
+    "status": "Research directed toward Stellar Accords."
+  },
+  {
+    "line": 451,
+    "requestIndex": 77,
+    "time": "2026-10-29T03:50:39.343Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "resume",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:text-is(\"Resume\")"
+    },
+    "status": "Vanguard 3 awaits orders."
+  },
+  {
+    "line": 453,
+    "requestIndex": 77,
+    "time": "2026-10-29T03:50:39.636Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "move",
+      "fleetId": "f3",
+      "targetId": "s20"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Vanguard 3 arrived at Sundrift."
+  },
+  {
+    "line": 454,
+    "requestIndex": 77,
+    "time": "2026-10-29T03:50:39.761Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Lead defense · 1 order\")"
+    },
+    "status": "Vanguard 3 will lead its local defense."
+  },
+  {
+    "line": 455,
+    "requestIndex": 77,
+    "time": "2026-10-29T03:50:39.894Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Vanguard 3 is holding position."
+  },
+  {
+    "line": 456,
+    "requestIndex": 77,
+    "time": "2026-10-29T03:50:40.031Z",
+    "turnBefore": 44,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 45: a new mandate begins."
+  },
+  {
+    "line": 462,
+    "requestIndex": 78,
+    "time": "2026-10-29T03:51:13.222Z",
+    "turnBefore": 45,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Sovereign\")"
+    },
+    "status": "Sovereign commissioned at Solace."
+  },
+  {
+    "line": 463,
+    "requestIndex": 78,
+    "time": "2026-10-29T03:51:13.368Z",
+    "turnBefore": 45,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 46: 3 dispatches available in your briefing."
+  },
+  {
+    "line": 465,
+    "requestIndex": 78,
+    "time": "2026-10-29T03:51:13.418Z",
+    "turnBefore": 46,
+    "action": {
+      "type": "research",
+      "techId": "command"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Distributed Command\") >> .. >> button"
+    },
+    "status": "Research directed toward Distributed Command."
+  },
+  {
+    "line": 468,
+    "requestIndex": 79,
+    "time": "2026-10-29T03:51:52.523Z",
+    "turnBefore": 46,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 47: 2 dispatches available in your briefing."
+  },
+  {
+    "line": 472,
+    "requestIndex": 80,
+    "time": "2026-10-29T03:52:34.423Z",
+    "turnBefore": 47,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 48: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 478,
+    "requestIndex": 81,
+    "time": "2026-10-29T03:53:08.829Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Sovereign\")"
+    },
+    "status": "Sovereign commissioned at Solace."
+  },
+  {
+    "line": 481,
+    "requestIndex": 81,
+    "time": "2026-10-29T03:53:09.413Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "move",
+      "fleetId": "f53",
+      "targetId": "s33"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Sovereign 53 arrived at Halcyon."
+  },
+  {
+    "line": 482,
+    "requestIndex": 81,
+    "time": "2026-10-29T03:53:09.606Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f53"
+    },
+    "selector": {
+      "click": "button:has-text(\"Lead defense · 1 order\")"
+    },
+    "status": "Sovereign 53 will lead its local defense."
+  },
+  {
+    "line": 483,
+    "requestIndex": 81,
+    "time": "2026-10-29T03:53:09.739Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "hold",
+      "fleetId": "f53"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Sovereign 53 is holding position."
+  },
+  {
+    "line": 484,
+    "requestIndex": 81,
+    "time": "2026-10-29T03:53:09.920Z",
+    "turnBefore": 48,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 49: a new mandate begins."
+  },
+  {
+    "line": 490,
+    "requestIndex": 83,
+    "time": "2026-10-29T03:53:59.534Z",
+    "turnBefore": 49,
+    "action": {
+      "type": "diplomacy",
+      "targetId": "choir",
+      "stance": "gift"
+    },
+    "selector": {
+      "click": "[data-rival=\"choir\"] [data-stance=\"gift\"]"
+    },
+    "status": "The Concord sent a 35-credit gift to The Luminous Choir. Trust improves; border grievances remain."
+  },
+  {
+    "line": 491,
+    "requestIndex": 83,
+    "time": "2026-10-29T03:53:59.591Z",
+    "turnBefore": 49,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 50: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 499,
+    "requestIndex": 84,
+    "time": "2026-10-29T03:55:27.656Z",
+    "turnBefore": 50,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 51: 5 dispatches available in your briefing."
+  },
+  {
+    "line": 503,
+    "requestIndex": 85,
+    "time": "2026-10-29T03:56:08.591Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "research",
+      "techId": "terraforming"
+    },
+    "selector": {
+      "click": ".tech-card h3:text-is(\"Worldshaping\") >> .. >> button"
+    },
+    "status": "Research directed toward Worldshaping."
+  },
+  {
+    "line": 506,
+    "requestIndex": 85,
+    "time": "2026-10-29T03:56:09.072Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "selector": {
+      "click": "button:text-is(\"Commission Sovereign\")"
+    },
+    "status": "Sovereign commissioned at Solace."
+  },
+  {
+    "line": 508,
+    "requestIndex": 85,
+    "time": "2026-10-29T03:56:09.332Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "move",
+      "fleetId": "f57",
+      "targetId": "s28"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Sovereign 57 arrived at Haven."
+  },
+  {
+    "line": 509,
+    "requestIndex": 85,
+    "time": "2026-10-29T03:56:09.466Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f57"
+    },
+    "selector": {
+      "click": "button:has-text(\"Lead defense · 1 order\")"
+    },
+    "status": "Sovereign 57 will lead its local defense."
+  },
+  {
+    "line": 510,
+    "requestIndex": 85,
+    "time": "2026-10-29T03:56:09.604Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "hold",
+      "fleetId": "f57"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Sovereign 57 is holding position."
+  },
+  {
+    "line": 513,
+    "requestIndex": 86,
+    "time": "2026-10-29T03:56:27.150Z",
+    "turnBefore": 51,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 52: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 517,
+    "requestIndex": 87,
+    "time": "2026-10-29T03:56:39.744Z",
+    "turnBefore": 52,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 53: a new mandate begins."
+  },
+  {
+    "line": 520,
+    "requestIndex": 88,
+    "time": "2026-10-29T03:56:48.816Z",
+    "turnBefore": 53,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 54: 3 dispatches available in your briefing."
+  },
+  {
+    "line": 534,
+    "requestIndex": 90,
+    "time": "2026-10-29T03:59:07.872Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "selector": {
+      "click": "button:text-is(\"Commission Sovereign\")"
+    },
+    "status": "Sovereign commissioned at Solace."
+  },
+  {
+    "line": 536,
+    "requestIndex": 90,
+    "time": "2026-10-29T03:59:08.267Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "move",
+      "fleetId": "f61",
+      "targetId": "s33"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Sovereign 61 arrived at Halcyon."
+  },
+  {
+    "line": 538,
+    "requestIndex": 90,
+    "time": "2026-10-29T03:59:08.936Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f61"
+    },
+    "selector": {
+      "click": "button:has-text(\"Merge +1\")"
+    },
+    "status": "Fleets combined into one task force."
+  },
+  {
+    "line": 541,
+    "requestIndex": 91,
+    "time": "2026-10-29T03:59:54.387Z",
+    "turnBefore": 54,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 55: 4 dispatches available in your briefing."
+  },
+  {
+    "line": 552,
+    "requestIndex": 92,
+    "time": "2026-10-29T04:01:08.515Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "planRoute",
+      "fleetId": "f3",
+      "destinationId": "s28"
+    },
+    "selector": {
+      "click": "button:has-text(\"Plot course · free\")"
+    },
+    "status": "Route plotted: 2 jumps to Haven. Continue when ready."
+  },
+  {
+    "line": 553,
+    "requestIndex": 92,
+    "time": "2026-10-29T04:01:09.250Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "continueRoute",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Continue · up to\")"
+    },
+    "status": "Vanguard 3 reached Haven in 2 jumps."
+  },
+  {
+    "line": 554,
+    "requestIndex": 92,
+    "time": "2026-10-29T04:01:09.523Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "button:has-text(\"Lead defense · 1 order\")"
+    },
+    "status": "Vanguard 3 will lead its local defense."
+  },
+  {
+    "line": 555,
+    "requestIndex": 92,
+    "time": "2026-10-29T04:01:09.732Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "hold",
+      "fleetId": "f3"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Vanguard 3 is holding position."
+  },
+  {
+    "line": 565,
+    "requestIndex": 95,
+    "time": "2026-10-29T04:03:07.238Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "shipyard",
+      "replaceBuildingId": "mine"
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Orbital Shipyard\")"
+    },
+    "status": "Orbital Shipyard commissioned at Haven."
+  },
+  {
+    "line": 570,
+    "requestIndex": 95,
+    "time": "2026-10-29T04:03:07.777Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "shipyard",
+      "replaceBuildingId": "mine"
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Orbital Shipyard\")"
+    },
+    "status": "Orbital Shipyard commissioned at Halcyon."
+  },
+  {
+    "line": 571,
+    "requestIndex": 95,
+    "time": "2026-10-29T04:03:07.994Z",
+    "turnBefore": 55,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 56: 2 dispatches available in your briefing."
+  },
+  {
+    "line": 584,
+    "requestIndex": 98,
+    "time": "2026-10-29T04:05:28.244Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "repair",
+      "fleetId": "f53"
+    },
+    "selector": {
+      "click": "button:has-text(\"Repair ◇10\")"
+    },
+    "status": "Emergency repairs completed."
+  },
+  {
+    "line": 587,
+    "requestIndex": 99,
+    "time": "2026-10-29T04:05:38.576Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "repair",
+      "fleetId": "f53"
+    },
+    "selector": {
+      "click": "button:has-text(\"Repair ◇10\")"
+    },
+    "status": "Emergency repairs completed."
+  },
+  {
+    "line": 588,
+    "requestIndex": 99,
+    "time": "2026-10-29T04:05:38.787Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "repair",
+      "fleetId": "f53"
+    },
+    "selector": {
+      "click": "button:has-text(\"Repair ◇10\")"
+    },
+    "status": "Emergency repairs completed."
+  },
+  {
+    "line": 589,
+    "requestIndex": 99,
+    "time": "2026-10-29T04:05:38.949Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "hold",
+      "fleetId": "f53"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Sovereign 53 is holding position."
+  },
+  {
+    "line": 590,
+    "requestIndex": 99,
+    "time": "2026-10-29T04:05:39.227Z",
+    "turnBefore": 56,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 57: 5 dispatches available in your briefing."
+  },
+  {
+    "line": 600,
+    "requestIndex": 102,
+    "time": "2026-10-29T04:07:38.626Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "attack",
+      "fleetId": "f64"
+    },
+    "selector": {
+      "click": "button:text-is(\"Engage\")"
+    },
+    "status": "1 combat report recorded."
+  },
+  {
+    "line": 604,
+    "requestIndex": 103,
+    "time": "2026-10-29T04:08:07.365Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "build",
+      "systemId": "s0",
+      "itemId": "cruiser"
+    },
+    "selector": {
+      "click": "button:text-is(\"Commission Sovereign\")"
+    },
+    "status": "Sovereign commissioned at Solace."
+  },
+  {
+    "line": 606,
+    "requestIndex": 103,
+    "time": "2026-10-29T04:08:07.797Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "move",
+      "fleetId": "f64",
+      "targetId": "s33"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Sovereign 64 arrived at Halcyon."
+  },
+  {
+    "line": 608,
+    "requestIndex": 103,
+    "time": "2026-10-29T04:08:08.865Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "merge",
+      "fleetId": "f53",
+      "targetFleetId": "f64"
+    },
+    "selector": {
+      "click": "button:has-text(\"Merge +1\")"
+    },
+    "status": "Fleets combined into one task force."
+  },
+  {
+    "line": 611,
+    "requestIndex": 103,
+    "time": "2026-10-29T04:08:09.255Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "build",
+      "systemId": "s33",
+      "itemId": "frigate",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Vanguard\")"
+    },
+    "status": "Vanguard commissioned at Halcyon."
+  },
+  {
+    "line": 616,
+    "requestIndex": 103,
+    "time": "2026-10-29T04:08:10.014Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "build",
+      "systemId": "s28",
+      "itemId": "frigate",
+      "replaceBuildingId": null
+    },
+    "selector": {
+      "click": ".build-card:has-text(\"Vanguard\")"
+    },
+    "status": "Vanguard commissioned at Haven."
+  },
+  {
+    "line": 619,
+    "requestIndex": 104,
+    "time": "2026-10-29T04:08:37.640Z",
+    "turnBefore": 57,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 58: 1 dispatches available in your briefing."
+  },
+  {
+    "line": 625,
+    "requestIndex": 106,
+    "time": "2026-10-29T04:09:28.240Z",
+    "turnBefore": 58,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Cycle 59: 3 dispatches available in your briefing."
+  },
+  {
+    "line": 630,
+    "requestIndex": 107,
+    "time": "2026-10-29T04:10:34.131Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "merge",
+      "fleetId": "f3",
+      "targetFleetId": "f66"
+    },
+    "selector": {
+      "click": "button:has-text(\"Merge +1\")"
+    },
+    "status": "Fleets combined into one task force."
+  },
+  {
+    "line": 635,
+    "requestIndex": 107,
+    "time": "2026-10-29T04:10:35.597Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "move",
+      "fleetId": "f67",
+      "targetId": "s20"
+    },
+    "selector": {
+      "click": "[data-action=\"move\"]"
+    },
+    "status": "Vanguard 67 arrived at Sundrift."
+  },
+  {
+    "line": 636,
+    "requestIndex": 107,
+    "time": "2026-10-29T04:10:35.798Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "leadDefense",
+      "fleetId": "f67"
+    },
+    "selector": {
+      "click": "button:has-text(\"Lead defense · 1 order\")"
+    },
+    "status": "Vanguard 67 will lead its local defense."
+  },
+  {
+    "line": 637,
+    "requestIndex": 107,
+    "time": "2026-10-29T04:10:35.950Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "hold",
+      "fleetId": "f67"
+    },
+    "selector": {
+      "click": "[data-action=\"fleet-hold\"]"
+    },
+    "status": "Vanguard 67 is holding position."
+  },
+  {
+    "line": 645,
+    "requestIndex": 108,
+    "time": "2026-10-29T04:10:59.604Z",
+    "turnBefore": 59,
+    "action": {
+      "type": "endTurn"
+    },
+    "selector": {
+      "click": "#end-turn"
+    },
+    "status": "Turn 60: a new mandate begins."
+  }
+]

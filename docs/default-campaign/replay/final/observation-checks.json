@@ -1,0 +1,1901 @@
+[
+  {
+    "line": 4,
+    "requestIndex": 1,
+    "file": "observation-001.json",
+    "scope": "Default startup before actual cycle12 import; outside replay boundary"
+  },
+  {
+    "line": 7,
+    "requestIndex": 2,
+    "file": "observation-002.json",
+    "scope": "Default startup before actual cycle12 import; outside replay boundary"
+  },
+  {
+    "line": 11,
+    "requestIndex": 3,
+    "file": "observation-003.json",
+    "turn": 12,
+    "visibleResources": {
+      "credits": 105,
+      "creditIncome": 52,
+      "minerals": 162,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 9,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 15,
+    "requestIndex": 4,
+    "file": "observation-004.json",
+    "turn": 12,
+    "visibleResources": {
+      "credits": 105,
+      "creditIncome": 52,
+      "minerals": 162,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 9,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 19,
+    "requestIndex": 5,
+    "file": "observation-005.json",
+    "turn": 12,
+    "visibleResources": {
+      "credits": 105,
+      "creditIncome": 52,
+      "minerals": 162,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 9,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 23,
+    "requestIndex": 6,
+    "file": "observation-006.json",
+    "turn": 12,
+    "visibleResources": {
+      "credits": 105,
+      "creditIncome": 52,
+      "minerals": 162,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 8,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 29,
+    "requestIndex": 7,
+    "file": "observation-007.json",
+    "turn": 12,
+    "visibleResources": {
+      "credits": 105,
+      "creditIncome": 52,
+      "minerals": 162,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 7,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 32,
+    "requestIndex": 8,
+    "file": "observation-008.json",
+    "turn": 12,
+    "visibleResources": {
+      "credits": 105,
+      "creditIncome": 52,
+      "minerals": 162,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 7,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 36,
+    "requestIndex": 9,
+    "file": "observation-009.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 157,
+      "creditIncome": 51,
+      "minerals": 182,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 9,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 46,
+    "requestIndex": 11,
+    "file": "observation-011.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 37,
+      "creditIncome": 51,
+      "minerals": 122,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 7,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 50,
+    "requestIndex": 12,
+    "file": "observation-012.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 37,
+      "creditIncome": 51,
+      "minerals": 122,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 7,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 54,
+    "requestIndex": 13,
+    "file": "observation-013.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 37,
+      "creditIncome": 51,
+      "minerals": 122,
+      "mineralIncome": 20,
+      "science": 0,
+      "scienceIncome": 27,
+      "orders": 6,
+      "maxOrders": 9
+    },
+    "exact": true
+  },
+  {
+    "line": 60,
+    "requestIndex": 15,
+    "file": "observation-015.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 7,
+      "creditIncome": 57,
+      "minerals": 102,
+      "mineralIncome": 22,
+      "science": 0,
+      "scienceIncome": 28,
+      "orders": 5,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 63,
+    "requestIndex": 16,
+    "file": "observation-016.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 7,
+      "creditIncome": 57,
+      "minerals": 102,
+      "mineralIncome": 22,
+      "science": 0,
+      "scienceIncome": 28,
+      "orders": 5,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 67,
+    "requestIndex": 17,
+    "file": "observation-017.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 7,
+      "creditIncome": 57,
+      "minerals": 102,
+      "mineralIncome": 22,
+      "science": 0,
+      "scienceIncome": 28,
+      "orders": 4,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 70,
+    "requestIndex": 18,
+    "file": "observation-018.json",
+    "turn": 13,
+    "visibleResources": {
+      "credits": 7,
+      "creditIncome": 57,
+      "minerals": 102,
+      "mineralIncome": 22,
+      "science": 0,
+      "scienceIncome": 28,
+      "orders": 4,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 75,
+    "requestIndex": 19,
+    "file": "observation-019.json",
+    "turn": 14,
+    "visibleResources": {
+      "credits": 64,
+      "creditIncome": 59,
+      "minerals": 124,
+      "mineralIncome": 23,
+      "science": 5,
+      "scienceIncome": 28,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 78,
+    "requestIndex": 20,
+    "file": "observation-020.json",
+    "turn": 14,
+    "visibleResources": {
+      "credits": 64,
+      "creditIncome": 59,
+      "minerals": 124,
+      "mineralIncome": 23,
+      "science": 5,
+      "scienceIncome": 28,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 81,
+    "requestIndex": 21,
+    "file": "observation-021.json",
+    "turn": 14,
+    "visibleResources": {
+      "credits": 64,
+      "creditIncome": 59,
+      "minerals": 124,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 28,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 85,
+    "requestIndex": 22,
+    "file": "observation-022.json",
+    "turn": 14,
+    "visibleResources": {
+      "credits": 64,
+      "creditIncome": 59,
+      "minerals": 124,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 28,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 93,
+    "requestIndex": 23,
+    "file": "observation-023.json",
+    "turn": 15,
+    "visibleResources": {
+      "credits": 88,
+      "creditIncome": 61,
+      "minerals": 102,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 33,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 107,
+    "requestIndex": 24,
+    "file": "observation-024.json",
+    "turn": 15,
+    "visibleResources": {
+      "credits": 23,
+      "creditIncome": 61,
+      "minerals": 27,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 33,
+      "orders": 5,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 111,
+    "requestIndex": 25,
+    "file": "observation-025.json",
+    "turn": 16,
+    "visibleResources": {
+      "credits": 84,
+      "creditIncome": 61,
+      "minerals": 50,
+      "mineralIncome": 23,
+      "science": 6,
+      "scienceIncome": 41,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 115,
+    "requestIndex": 26,
+    "file": "observation-026.json",
+    "turn": 16,
+    "visibleResources": {
+      "credits": 84,
+      "creditIncome": 61,
+      "minerals": 50,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 41,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 119,
+    "requestIndex": 27,
+    "file": "observation-027.json",
+    "turn": 16,
+    "visibleResources": {
+      "credits": 84,
+      "creditIncome": 61,
+      "minerals": 50,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 41,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 126,
+    "requestIndex": 28,
+    "file": "observation-028.json",
+    "turn": 17,
+    "visibleResources": {
+      "credits": 145,
+      "creditIncome": 65,
+      "minerals": 73,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 43,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 131,
+    "requestIndex": 29,
+    "file": "observation-029.json",
+    "turn": 17,
+    "visibleResources": {
+      "credits": 145,
+      "creditIncome": 65,
+      "minerals": 73,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 43,
+      "orders": 9,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 135,
+    "requestIndex": 30,
+    "file": "observation-030.json",
+    "turn": 17,
+    "visibleResources": {
+      "credits": 145,
+      "creditIncome": 65,
+      "minerals": 73,
+      "mineralIncome": 23,
+      "science": 0,
+      "scienceIncome": 43,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 141,
+    "requestIndex": 31,
+    "file": "observation-031.json",
+    "turn": 18,
+    "visibleResources": {
+      "credits": 210,
+      "creditIncome": 67,
+      "minerals": 96,
+      "mineralIncome": 24,
+      "science": 0,
+      "scienceIncome": 44,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 145,
+    "requestIndex": 32,
+    "file": "observation-032.json",
+    "turn": 18,
+    "visibleResources": {
+      "credits": 210,
+      "creditIncome": 67,
+      "minerals": 96,
+      "mineralIncome": 24,
+      "science": 0,
+      "scienceIncome": 44,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 152,
+    "requestIndex": 33,
+    "file": "observation-033.json",
+    "turn": 18,
+    "visibleResources": {
+      "credits": 90,
+      "creditIncome": 67,
+      "minerals": 36,
+      "mineralIncome": 24,
+      "science": 0,
+      "scienceIncome": 44,
+      "orders": 7,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 157,
+    "requestIndex": 34,
+    "file": "observation-034.json",
+    "turn": 19,
+    "visibleResources": {
+      "credits": 157,
+      "creditIncome": 69,
+      "minerals": 60,
+      "mineralIncome": 24,
+      "science": 0,
+      "scienceIncome": 44,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 161,
+    "requestIndex": 35,
+    "file": "observation-035.json",
+    "turn": 19,
+    "visibleResources": {
+      "credits": 157,
+      "creditIncome": 69,
+      "minerals": 60,
+      "mineralIncome": 24,
+      "science": 0,
+      "scienceIncome": 44,
+      "orders": 9,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 173,
+    "requestIndex": 36,
+    "file": "observation-036.json",
+    "turn": 20,
+    "visibleResources": {
+      "credits": 226,
+      "creditIncome": 71,
+      "minerals": 84,
+      "mineralIncome": 25,
+      "science": 0,
+      "scienceIncome": 50,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 181,
+    "requestIndex": 37,
+    "file": "observation-037.json",
+    "turn": 20,
+    "visibleResources": {
+      "credits": 191,
+      "creditIncome": 71,
+      "minerals": 39,
+      "mineralIncome": 25,
+      "science": 0,
+      "scienceIncome": 50,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 188,
+    "requestIndex": 38,
+    "file": "observation-038.json",
+    "turn": 21,
+    "visibleResources": {
+      "credits": 262,
+      "creditIncome": 73,
+      "minerals": 64,
+      "mineralIncome": 25,
+      "science": 0,
+      "scienceIncome": 55,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 197,
+    "requestIndex": 39,
+    "file": "observation-039.json",
+    "turn": 21,
+    "visibleResources": {
+      "credits": 142,
+      "creditIncome": 73,
+      "minerals": 4,
+      "mineralIncome": 25,
+      "science": 0,
+      "scienceIncome": 55,
+      "orders": 7,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 208,
+    "requestIndex": 40,
+    "file": "observation-040.json",
+    "turn": 22,
+    "visibleResources": {
+      "credits": 195,
+      "creditIncome": 75,
+      "minerals": 4,
+      "mineralIncome": 26,
+      "science": 0,
+      "scienceIncome": 56,
+      "orders": 9,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 217,
+    "requestIndex": 41,
+    "file": "observation-041.json",
+    "turn": 22,
+    "visibleResources": {
+      "credits": 195,
+      "creditIncome": 75,
+      "minerals": 4,
+      "mineralIncome": 26,
+      "science": 0,
+      "scienceIncome": 56,
+      "orders": 7,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 225,
+    "requestIndex": 42,
+    "file": "observation-042.json",
+    "turn": 24,
+    "visibleResources": {
+      "credits": 347,
+      "creditIncome": 79,
+      "minerals": 56,
+      "mineralIncome": 26,
+      "science": 36,
+      "scienceIncome": 73,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 234,
+    "requestIndex": 43,
+    "file": "observation-043.json",
+    "turn": 24,
+    "visibleResources": {
+      "credits": 322,
+      "creditIncome": 79,
+      "minerals": 24,
+      "mineralIncome": 26,
+      "science": 0,
+      "scienceIncome": 73,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 238,
+    "requestIndex": 44,
+    "file": "observation-044.json",
+    "turn": 24,
+    "visibleResources": {
+      "credits": 322,
+      "creditIncome": 79,
+      "minerals": 24,
+      "mineralIncome": 26,
+      "science": 0,
+      "scienceIncome": 73,
+      "orders": 7,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 241,
+    "requestIndex": 45,
+    "file": "observation-045.json",
+    "turn": 24,
+    "visibleResources": {
+      "credits": 322,
+      "creditIncome": 79,
+      "minerals": 24,
+      "mineralIncome": 26,
+      "science": 0,
+      "scienceIncome": 73,
+      "orders": 7,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 247,
+    "requestIndex": 46,
+    "file": "observation-046.json",
+    "turn": 25,
+    "visibleResources": {
+      "credits": 401,
+      "creditIncome": 81,
+      "minerals": 50,
+      "mineralIncome": 26,
+      "science": 0,
+      "scienceIncome": 80,
+      "orders": 9,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 257,
+    "requestIndex": 47,
+    "file": "observation-047.json",
+    "turn": 26,
+    "visibleResources": {
+      "credits": 462,
+      "creditIncome": 79,
+      "minerals": 51,
+      "mineralIncome": 31,
+      "science": 0,
+      "scienceIncome": 80,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 260,
+    "requestIndex": 48,
+    "file": "observation-048.json",
+    "turn": 26,
+    "visibleResources": {
+      "credits": 462,
+      "creditIncome": 79,
+      "minerals": 51,
+      "mineralIncome": 31,
+      "science": 0,
+      "scienceIncome": 80,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 268,
+    "requestIndex": 49,
+    "file": "observation-049.json",
+    "turn": 26,
+    "visibleResources": {
+      "credits": 462,
+      "creditIncome": 79,
+      "minerals": 51,
+      "mineralIncome": 31,
+      "science": 0,
+      "scienceIncome": 80,
+      "orders": 6,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 276,
+    "requestIndex": 50,
+    "file": "observation-050.json",
+    "turn": 27,
+    "visibleResources": {
+      "credits": 496,
+      "creditIncome": 83,
+      "minerals": 27,
+      "mineralIncome": 36,
+      "science": 0,
+      "scienceIncome": 81,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 286,
+    "requestIndex": 51,
+    "file": "observation-051.json",
+    "turn": 28,
+    "visibleResources": {
+      "credits": 544,
+      "creditIncome": 83,
+      "minerals": 18,
+      "mineralIncome": 36,
+      "science": 0,
+      "scienceIncome": 81,
+      "orders": 9,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 290,
+    "requestIndex": 52,
+    "file": "observation-052.json",
+    "turn": 28,
+    "visibleResources": {
+      "credits": 544,
+      "creditIncome": 83,
+      "minerals": 18,
+      "mineralIncome": 36,
+      "science": 0,
+      "scienceIncome": 81,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 293,
+    "requestIndex": 53,
+    "file": "observation-053.json",
+    "turn": 28,
+    "visibleResources": {
+      "credits": 544,
+      "creditIncome": 83,
+      "minerals": 18,
+      "mineralIncome": 36,
+      "science": 0,
+      "scienceIncome": 81,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 295,
+    "requestIndex": 54,
+    "file": "observation-054.json",
+    "turn": 28,
+    "visibleResources": {
+      "credits": 544,
+      "creditIncome": 83,
+      "minerals": 18,
+      "mineralIncome": 36,
+      "science": 0,
+      "scienceIncome": 81,
+      "orders": 8,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 303,
+    "requestIndex": 55,
+    "file": "observation-055.json",
+    "turn": 29,
+    "visibleResources": {
+      "credits": 627,
+      "creditIncome": 82,
+      "minerals": 54,
+      "mineralIncome": 36,
+      "science": 0,
+      "scienceIncome": 81,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 317,
+    "requestIndex": 56,
+    "file": "observation-056.json",
+    "turn": 30,
+    "visibleResources": {
+      "credits": 709,
+      "creditIncome": 84,
+      "minerals": 90,
+      "mineralIncome": 37,
+      "science": 0,
+      "scienceIncome": 82,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 320,
+    "requestIndex": 57,
+    "file": "observation-057.json",
+    "turn": 30,
+    "visibleResources": {
+      "credits": 709,
+      "creditIncome": 84,
+      "minerals": 90,
+      "mineralIncome": 37,
+      "science": 0,
+      "scienceIncome": 82,
+      "orders": 10,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 331,
+    "requestIndex": 58,
+    "file": "observation-058.json",
+    "turn": 31,
+    "visibleResources": {
+      "credits": 793,
+      "creditIncome": 84,
+      "minerals": 127,
+      "mineralIncome": 37,
+      "science": 0,
+      "scienceIncome": 82,
+      "orders": 9,
+      "maxOrders": 10
+    },
+    "exact": true
+  },
+  {
+    "line": 341,
+    "requestIndex": 59,
+    "file": "observation-059.json",
+    "turn": 32,
+    "visibleResources": {
+      "credits": 833,
+      "creditIncome": 90,
+      "minerals": 123,
+      "mineralIncome": 41,
+      "science": 0,
+      "scienceIncome": 85,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 349,
+    "requestIndex": 60,
+    "file": "observation-060.json",
+    "turn": 33,
+    "visibleResources": {
+      "credits": 898,
+      "creditIncome": 92,
+      "minerals": 132,
+      "mineralIncome": 41,
+      "science": 0,
+      "scienceIncome": 85,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 359,
+    "requestIndex": 61,
+    "file": "observation-061.json",
+    "turn": 34,
+    "visibleResources": {
+      "credits": 990,
+      "creditIncome": 90,
+      "minerals": 173,
+      "mineralIncome": 41,
+      "science": 0,
+      "scienceIncome": 85,
+      "orders": 10,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 365,
+    "requestIndex": 62,
+    "file": "observation-062.json",
+    "turn": 35,
+    "visibleResources": {
+      "credits": 1080,
+      "creditIncome": 92,
+      "minerals": 214,
+      "mineralIncome": 41,
+      "science": 0,
+      "scienceIncome": 86,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 373,
+    "requestIndex": 63,
+    "file": "observation-063.json",
+    "turn": 36,
+    "visibleResources": {
+      "credits": 1172,
+      "creditIncome": 92,
+      "minerals": 255,
+      "mineralIncome": 46,
+      "science": 20,
+      "scienceIncome": 86,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 384,
+    "requestIndex": 64,
+    "file": "observation-064.json",
+    "turn": 36,
+    "visibleResources": {
+      "credits": 962,
+      "creditIncome": 92,
+      "minerals": 45,
+      "mineralIncome": 46,
+      "science": 0,
+      "scienceIncome": 86,
+      "orders": 9,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 389,
+    "requestIndex": 65,
+    "file": "observation-065.json",
+    "turn": 37,
+    "visibleResources": {
+      "credits": 1054,
+      "creditIncome": 94,
+      "minerals": 91,
+      "mineralIncome": 46,
+      "science": 0,
+      "scienceIncome": 87,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 396,
+    "requestIndex": 67,
+    "file": "observation-067.json",
+    "turn": 38,
+    "visibleResources": {
+      "credits": 1148,
+      "creditIncome": 96,
+      "minerals": 137,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 87,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 401,
+    "requestIndex": 68,
+    "file": "observation-068.json",
+    "turn": 38,
+    "visibleResources": {
+      "credits": 1148,
+      "creditIncome": 96,
+      "minerals": 137,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 87,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 408,
+    "requestIndex": 69,
+    "file": "observation-069.json",
+    "turn": 39,
+    "visibleResources": {
+      "credits": 1244,
+      "creditIncome": 96,
+      "minerals": 184,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 87,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 419,
+    "requestIndex": 70,
+    "file": "observation-070.json",
+    "turn": 40,
+    "visibleResources": {
+      "credits": 1160,
+      "creditIncome": 96,
+      "minerals": 51,
+      "mineralIncome": 47,
+      "science": 77,
+      "scienceIncome": 87,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 425,
+    "requestIndex": 71,
+    "file": "observation-071.json",
+    "turn": 41,
+    "visibleResources": {
+      "credits": 1256,
+      "creditIncome": 98,
+      "minerals": 98,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 429,
+    "requestIndex": 72,
+    "file": "observation-072.json",
+    "turn": 42,
+    "visibleResources": {
+      "credits": 1354,
+      "creditIncome": 98,
+      "minerals": 145,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 434,
+    "requestIndex": 73,
+    "file": "observation-073.json",
+    "turn": 43,
+    "visibleResources": {
+      "credits": 1452,
+      "creditIncome": 98,
+      "minerals": 192,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 442,
+    "requestIndex": 75,
+    "file": "observation-075.json",
+    "turn": 44,
+    "visibleResources": {
+      "credits": 1370,
+      "creditIncome": 98,
+      "minerals": 59,
+      "mineralIncome": 47,
+      "science": 95,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 446,
+    "requestIndex": 76,
+    "file": "observation-076.json",
+    "turn": 44,
+    "visibleResources": {
+      "credits": 1370,
+      "creditIncome": 98,
+      "minerals": 59,
+      "mineralIncome": 47,
+      "science": 35,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 460,
+    "requestIndex": 77,
+    "file": "observation-077.json",
+    "turn": 45,
+    "visibleResources": {
+      "credits": 1468,
+      "creditIncome": 100,
+      "minerals": 106,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 466,
+    "requestIndex": 78,
+    "file": "observation-078.json",
+    "turn": 46,
+    "visibleResources": {
+      "credits": 1503,
+      "creditIncome": 112,
+      "minerals": 76,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 470,
+    "requestIndex": 79,
+    "file": "observation-079.json",
+    "turn": 47,
+    "visibleResources": {
+      "credits": 1615,
+      "creditIncome": 112,
+      "minerals": 123,
+      "mineralIncome": 47,
+      "science": 0,
+      "scienceIncome": 97,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 474,
+    "requestIndex": 80,
+    "file": "observation-080.json",
+    "turn": 48,
+    "visibleResources": {
+      "credits": 1727,
+      "creditIncome": 110,
+      "minerals": 170,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 485,
+    "requestIndex": 81,
+    "file": "observation-081.json",
+    "turn": 49,
+    "visibleResources": {
+      "credits": 1772,
+      "creditIncome": 110,
+      "minerals": 141,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 488,
+    "requestIndex": 82,
+    "file": "observation-082.json",
+    "turn": 49,
+    "visibleResources": {
+      "credits": 1772,
+      "creditIncome": 110,
+      "minerals": 141,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 497,
+    "requestIndex": 83,
+    "file": "observation-083.json",
+    "turn": 50,
+    "visibleResources": {
+      "credits": 1847,
+      "creditIncome": 110,
+      "minerals": 189,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 11,
+      "maxOrders": 11
+    },
+    "exact": true
+  },
+  {
+    "line": 500,
+    "requestIndex": 84,
+    "file": "observation-084.json",
+    "turn": 51,
+    "visibleResources": {
+      "credits": 1897,
+      "creditIncome": 108,
+      "minerals": 237,
+      "mineralIncome": 48,
+      "science": 37,
+      "scienceIncome": 98,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 511,
+    "requestIndex": 85,
+    "file": "observation-085.json",
+    "turn": 51,
+    "visibleResources": {
+      "credits": 1832,
+      "creditIncome": 108,
+      "minerals": 160,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 10,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 515,
+    "requestIndex": 86,
+    "file": "observation-086.json",
+    "turn": 52,
+    "visibleResources": {
+      "credits": 1880,
+      "creditIncome": 108,
+      "minerals": 208,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 518,
+    "requestIndex": 87,
+    "file": "observation-087.json",
+    "turn": 53,
+    "visibleResources": {
+      "credits": 1928,
+      "creditIncome": 108,
+      "minerals": 256,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 522,
+    "requestIndex": 88,
+    "file": "observation-088.json",
+    "turn": 54,
+    "visibleResources": {
+      "credits": 1966,
+      "creditIncome": 94,
+      "minerals": 304,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 530,
+    "requestIndex": 89,
+    "file": "observation-089.json",
+    "turn": 54,
+    "visibleResources": {
+      "credits": 1966,
+      "creditIncome": 94,
+      "minerals": 304,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 539,
+    "requestIndex": 90,
+    "file": "observation-090.json",
+    "turn": 54,
+    "visibleResources": {
+      "credits": 1901,
+      "creditIncome": 94,
+      "minerals": 227,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 98,
+      "orders": 10,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 542,
+    "requestIndex": 91,
+    "file": "observation-091.json",
+    "turn": 55,
+    "visibleResources": {
+      "credits": 1925,
+      "creditIncome": 86,
+      "minerals": 275,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 556,
+    "requestIndex": 92,
+    "file": "observation-092.json",
+    "turn": 55,
+    "visibleResources": {
+      "credits": 1925,
+      "creditIncome": 86,
+      "minerals": 275,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 10,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 560,
+    "requestIndex": 93,
+    "file": "observation-093.json",
+    "turn": 55,
+    "visibleResources": {
+      "credits": 1925,
+      "creditIncome": 86,
+      "minerals": 275,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 10,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 563,
+    "requestIndex": 94,
+    "file": "observation-094.json",
+    "turn": 55,
+    "visibleResources": {
+      "credits": 1925,
+      "creditIncome": 86,
+      "minerals": 275,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 10,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 572,
+    "requestIndex": 95,
+    "file": "observation-095.json",
+    "turn": 56,
+    "visibleResources": {
+      "credits": 1905,
+      "creditIncome": 90,
+      "minerals": 253,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 575,
+    "requestIndex": 96,
+    "file": "observation-096.json",
+    "turn": 56,
+    "visibleResources": {
+      "credits": 1905,
+      "creditIncome": 90,
+      "minerals": 253,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 578,
+    "requestIndex": 97,
+    "file": "observation-097.json",
+    "turn": 56,
+    "visibleResources": {
+      "credits": 1905,
+      "creditIncome": 90,
+      "minerals": 253,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 585,
+    "requestIndex": 98,
+    "file": "observation-098.json",
+    "turn": 56,
+    "visibleResources": {
+      "credits": 1905,
+      "creditIncome": 90,
+      "minerals": 243,
+      "mineralIncome": 48,
+      "science": 0,
+      "scienceIncome": 99,
+      "orders": 12,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 591,
+    "requestIndex": 99,
+    "file": "observation-099.json",
+    "turn": 57,
+    "visibleResources": {
+      "credits": 1935,
+      "creditIncome": 86,
+      "minerals": 271,
+      "mineralIncome": 38,
+      "science": 27,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 595,
+    "requestIndex": 100,
+    "file": "observation-100.json",
+    "turn": 57,
+    "visibleResources": {
+      "credits": 1935,
+      "creditIncome": 86,
+      "minerals": 271,
+      "mineralIncome": 38,
+      "science": 27,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 598,
+    "requestIndex": 101,
+    "file": "observation-101.json",
+    "turn": 57,
+    "visibleResources": {
+      "credits": 1935,
+      "creditIncome": 86,
+      "minerals": 271,
+      "mineralIncome": 38,
+      "science": 27,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 601,
+    "requestIndex": 102,
+    "file": "observation-102.json",
+    "turn": 57,
+    "visibleResources": {
+      "credits": 1935,
+      "creditIncome": 86,
+      "minerals": 271,
+      "mineralIncome": 38,
+      "science": 27,
+      "scienceIncome": 99,
+      "orders": 12,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 617,
+    "requestIndex": 103,
+    "file": "observation-103.json",
+    "turn": 57,
+    "visibleResources": {
+      "credits": 1820,
+      "creditIncome": 86,
+      "minerals": 124,
+      "mineralIncome": 38,
+      "science": 27,
+      "scienceIncome": 99,
+      "orders": 7,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 620,
+    "requestIndex": 104,
+    "file": "observation-104.json",
+    "turn": 58,
+    "visibleResources": {
+      "credits": 1846,
+      "creditIncome": 86,
+      "minerals": 162,
+      "mineralIncome": 38,
+      "science": 126,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 623,
+    "requestIndex": 105,
+    "file": "observation-105.json",
+    "turn": 58,
+    "visibleResources": {
+      "credits": 1846,
+      "creditIncome": 86,
+      "minerals": 162,
+      "mineralIncome": 38,
+      "science": 126,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 626,
+    "requestIndex": 106,
+    "file": "observation-106.json",
+    "turn": 59,
+    "visibleResources": {
+      "credits": 1872,
+      "creditIncome": 82,
+      "minerals": 200,
+      "mineralIncome": 38,
+      "science": 225,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 643,
+    "requestIndex": 107,
+    "file": "observation-107.json",
+    "turn": 59,
+    "visibleResources": {
+      "credits": 1872,
+      "creditIncome": 82,
+      "minerals": 200,
+      "mineralIncome": 38,
+      "science": 225,
+      "scienceIncome": 99,
+      "orders": 10,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 646,
+    "requestIndex": 108,
+    "file": "observation-108.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 650,
+    "requestIndex": 109,
+    "file": "observation-109.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 655,
+    "requestIndex": 111,
+    "file": "observation-111.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 658,
+    "requestIndex": 112,
+    "file": "observation-112.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 661,
+    "requestIndex": 113,
+    "file": "observation-113.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 665,
+    "requestIndex": 114,
+    "file": "observation-114.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 669,
+    "requestIndex": 115,
+    "file": "observation-115.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 674,
+    "requestIndex": 116,
+    "file": "observation-116.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 678,
+    "requestIndex": 117,
+    "file": "observation-117.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  },
+  {
+    "line": 682,
+    "requestIndex": 118,
+    "file": "observation-118.json",
+    "turn": 60,
+    "visibleResources": {
+      "credits": 1902,
+      "creditIncome": 86,
+      "minerals": 238,
+      "mineralIncome": 38,
+      "science": 324,
+      "scienceIncome": 99,
+      "orders": 13,
+      "maxOrders": 13
+    },
+    "exact": true
+  }
+]

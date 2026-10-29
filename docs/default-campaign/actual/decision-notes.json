@@ -1,0 +1,2402 @@
+[
+  {
+    "request": 1,
+    "at": "2026-10-29T03:22:17.832Z",
+    "observedCycleAfter": "Cycle 01",
+    "note": "Start separate actual continuation; normal default startup only before import.",
+    "actions": [
+      {
+        "click": "[data-action=\"begin\"]"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      }
+    ],
+    "observation": "observation-001.json"
+  },
+  {
+    "request": 2,
+    "at": "2026-10-29T03:22:24.097Z",
+    "observedCycleAfter": "Cycle 01",
+    "note": "Visible menu import picker; untouched 0.21.0 cycle 12 export restored on 0.21.1.",
+    "actions": [
+      {
+        "importFile": {
+          "selector": "[data-action=\"import\"]",
+          "path": "/tmp/asterion-asterion21-midgame/input-actual-cycle12-v0.21.0.json"
+        }
+      }
+    ],
+    "observation": "observation-002.json"
+  },
+  {
+    "request": 3,
+    "at": "2026-10-29T03:22:29.984Z",
+    "observedCycleAfter": "Cycle 12",
+    "note": "Restore confirmed; inspect public Empire state before choosing next developments.",
+    "actions": [
+      {
+        "click": "#confirm-import"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-003.json"
+  },
+  {
+    "request": 4,
+    "at": "2026-10-29T03:22:47.358Z",
+    "observedCycleAfter": "Cycle 12",
+    "note": "Sundrift is idle and unchartered; inspect permanent development choices before spending.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Sundrift\"]"
+      },
+      {
+        "click": "[data-action=\"development-menu\"]"
+      }
+    ],
+    "observation": "observation-004.json"
+  },
+  {
+    "request": 5,
+    "at": "2026-10-29T03:23:00.336Z",
+    "observedCycleAfter": "Cycle 12",
+    "note": "Save for an Academy charter after next income. Continue scouting from Kharos before returning the veteran frigate home.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Kharos\"]"
+      }
+    ],
+    "observation": "observation-005.json"
+  },
+  {
+    "request": 6,
+    "at": "2026-10-29T03:23:11.729Z",
+    "observedCycleAfter": "Cycle 12",
+    "note": "Scout back through Corvus to inspect remaining frontier lanes.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Corvus\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-006.json"
+  },
+  {
+    "request": 7,
+    "at": "2026-10-29T03:23:21.355Z",
+    "observedCycleAfter": "Cycle 12",
+    "note": "Return scout toward central unsurveyed branches; chart a homeward course for the military frigate.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Carina\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Kharos\"]"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-007.json"
+  },
+  {
+    "request": 8,
+    "at": "2026-10-29T03:23:28.141Z",
+    "observedCycleAfter": "Cycle 12",
+    "note": "Plan Solace return through ten charted jumps; planning is free and resumes the holding fleet.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      }
+    ],
+    "observation": "observation-008.json"
+  },
+  {
+    "request": 9,
+    "at": "2026-10-29T03:23:34.489Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Spend one jump on the planned return, then collect income and the pending Ark completion.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-009.json"
+  },
+  {
+    "request": 10,
+    "at": "2026-10-29T03:23:52.116Z",
+    "observedCycleAfter": null,
+    "note": "Commit Sundrift to an Academy charter: +6 science and an eight-cycle build, funded by this cycle income.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Sundrift\"]"
+      },
+      {
+        "click": "[data-action=\"development-menu\"]"
+      },
+      {
+        "click": ".development-card:has-text(\"Academy Charter\")"
+      }
+    ],
+    "observation": null
+  },
+  {
+    "request": 11,
+    "at": "2026-10-29T03:24:25.351Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Correct the driver-only selector typo; no purchase occurred in the failed request. Select the visible Academy charter card.",
+    "actions": [
+      {
+        "click": ".build-card:has-text(\"Academy Charter\")"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-011.json"
+  },
+  {
+    "request": 12,
+    "at": "2026-10-29T03:24:32.227Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Inspect Halcyon as a nearby fourth colony before moving the newly completed Ark.",
+    "actions": [
+      {
+        "click": "#inspector .fleet-row:has-text(\"Colony Ark 21\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Halcyon\")"
+      }
+    ],
+    "observation": "observation-012.json"
+  },
+  {
+    "request": 13,
+    "at": "2026-10-29T03:24:39.730Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Choose 78% Halcyon for compact expansion; preview settlement before confirmation.",
+    "actions": [
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "[data-action=\"colonize\"]"
+      }
+    ],
+    "observation": "observation-013.json"
+  },
+  {
+    "request": 14,
+    "at": "2026-10-29T03:24:47.264Z",
+    "observedCycleAfter": null,
+    "note": "Pay the displayed 30 credits/20 minerals/one order to found Halcyon. Defer new building spending until income recovers.",
+    "actions": [
+      {
+        "press": "Enter"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Carina\"]"
+      }
+    ],
+    "observation": null
+  },
+  {
+    "request": 15,
+    "at": "2026-10-29T03:25:12.093Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Settlement consumed the Ark and its fleet bar disappeared. Use Empire registry to select the scout; this is a driver navigation correction.",
+    "actions": [
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-015.json"
+  },
+  {
+    "request": 16,
+    "at": "2026-10-29T03:25:18.810Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Select scout from the visible Fleet Registry.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Pathfinder 1 \u00d71\")"
+      }
+    ],
+    "observation": "observation-016.json"
+  },
+  {
+    "request": 17,
+    "at": "2026-10-29T03:25:24.907Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Use Aurelia to reach the still-unsurveyed central branch.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Aurelia\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-017.json"
+  },
+  {
+    "request": 18,
+    "at": "2026-10-29T03:25:47.559Z",
+    "observedCycleAfter": "Cycle 13",
+    "note": "Select the visible unsurveyed Thalassa label to inspect its charted route.",
+    "actions": [
+      {
+        "click": ".galaxy-system-label:has-text(\"Thalassa\")"
+      }
+    ],
+    "observation": "observation-018.json"
+  },
+  {
+    "request": 19,
+    "at": "2026-10-29T03:25:59.680Z",
+    "observedCycleAfter": "Cycle 14",
+    "note": "Thalassa is five charted jumps away; take the available jump and let the colony economy recover.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-019.json"
+  },
+  {
+    "request": 20,
+    "at": "2026-10-29T03:26:15.644Z",
+    "observedCycleAfter": "Cycle 14",
+    "note": "Autonomous Industry completed; select a science path toward later Beacon research.",
+    "actions": [
+      {
+        "press": "2"
+      }
+    ],
+    "observation": "observation-020.json"
+  },
+  {
+    "request": 21,
+    "at": "2026-10-29T03:26:28.866Z",
+    "observedCycleAfter": "Cycle 14",
+    "note": "Choose Resonance Theory for +2 science per colony and the Quantum Archives prerequisite.",
+    "actions": [
+      {
+        "click": ".tech-card:has-text(\"Resonance Theory\") h3:text-is(\"Resonance Theory\") >> .. >> button"
+      }
+    ],
+    "observation": "observation-021.json"
+  },
+  {
+    "request": 22,
+    "at": "2026-10-29T03:26:36.353Z",
+    "observedCycleAfter": "Cycle 14",
+    "note": "Compare the newly unlocked Manufactory with other Solace infrastructure before committing the capital's final free slot.",
+    "actions": [
+      {
+        "press": "h"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      }
+    ],
+    "observation": "observation-022.json"
+  },
+  {
+    "request": 23,
+    "at": "2026-10-29T03:26:45.481Z",
+    "observedCycleAfter": "Cycle 15",
+    "note": "Build Solace Manufactory, then advance both already-planned journeys. Keep 29 credits before ordinary income.",
+    "actions": [
+      {
+        "click": ".build-card:has-text(\"Manufactory\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Carina\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Aldebaran\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-023.json"
+  },
+  {
+    "request": 24,
+    "at": "2026-10-29T03:27:08.119Z",
+    "observedCycleAfter": "Cycle 15",
+    "note": "Add Halcyon science and Haven production, then survey Thalassa with the scout while the frigate returns home.",
+    "actions": [
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Halcyon\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Research Enclave\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Haven\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Manufactory\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Stillwater\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Morrow\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      }
+    ],
+    "observation": "observation-024.json"
+  },
+  {
+    "request": 25,
+    "at": "2026-10-29T03:27:33.134Z",
+    "observedCycleAfter": "Cycle 16",
+    "note": "Thalassa is an unclaimed 82% Terran world. With both fleets spent and all four colonies building, advance to the Resonance completion.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "2"
+      }
+    ],
+    "observation": "observation-025.json"
+  },
+  {
+    "request": 26,
+    "at": "2026-10-29T03:27:47.877Z",
+    "observedCycleAfter": "Cycle 16",
+    "note": "Start Quantum Archives at 6/360 science, then review treaty remaining durations and border access.",
+    "actions": [
+      {
+        "click": ".tech-card h3:text-is(\"Quantum Archives\") >> .. >> button"
+      },
+      {
+        "press": "3"
+      }
+    ],
+    "observation": "observation-026.json"
+  },
+  {
+    "request": 27,
+    "at": "2026-10-29T03:27:58.446Z",
+    "observedCycleAfter": "Cycle 16",
+    "note": "All three treaties remain open, and Khar grievance is low. Scout the unsurveyed western branch next by selecting visible Nacre.",
+    "actions": [
+      {
+        "press": "h"
+      },
+      {
+        "click": ".galaxy-system-label:has-text(\"Nacre\")"
+      }
+    ],
+    "observation": "observation-027.json"
+  },
+  {
+    "request": 28,
+    "at": "2026-10-29T03:28:16.602Z",
+    "observedCycleAfter": "Cycle 17",
+    "note": "Spend two scout jumps toward Nacre and one homeward frigate jump; retain funds while colonial projects mature.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Caldera\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-028.json"
+  },
+  {
+    "request": 29,
+    "at": "2026-10-29T03:28:40.128Z",
+    "observedCycleAfter": "Cycle 17",
+    "note": "Hesper exposes adjacent unsurveyed Sable. Take this short exploratory detour before resuming the western route.",
+    "actions": [
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Hesper\"]"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Sable\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-029.json"
+  },
+  {
+    "request": 30,
+    "at": "2026-10-29T03:29:01.951Z",
+    "observedCycleAfter": "Cycle 17",
+    "note": "Sable reveals the Veyr border at Aster. Enter through the active trade agreement to chart that branch.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Aster \u2197\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-030.json"
+  },
+  {
+    "request": 31,
+    "at": "2026-10-29T03:29:11.850Z",
+    "observedCycleAfter": "Cycle 18",
+    "note": "Return the frigate another jump and review colonial completions at cycle 18.",
+    "actions": [
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Hesper\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-031.json"
+  },
+  {
+    "request": 32,
+    "at": "2026-10-29T03:29:20.202Z",
+    "observedCycleAfter": "Cycle 18",
+    "note": "Solace Manufactory is complete. Inspect a Forge charter to turn the mature capital into the fleet-building center.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Solace\"]"
+      },
+      {
+        "click": "[data-action=\"development-menu\"]"
+      }
+    ],
+    "observation": "observation-032.json"
+  },
+  {
+    "request": 33,
+    "at": "2026-10-29T03:29:28.416Z",
+    "observedCycleAfter": "Cycle 18",
+    "note": "Commission Forge I at Solace for +6 production and military mineral savings; survey Veyr Prime through peaceful open borders.",
+    "actions": [
+      {
+        "click": ".build-card:has-text(\"Forge Charter\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Aster\"]"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Veyr Prime\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-033.json"
+  },
+  {
+    "request": 34,
+    "at": "2026-10-29T03:29:43.537Z",
+    "observedCycleAfter": "Cycle 19",
+    "note": "The fourth founding world is now identified. Survey the Veyr colony at Eos, then end the cycle with no extra spending.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Eos\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-034.json"
+  },
+  {
+    "request": 35,
+    "at": "2026-10-29T03:29:53.108Z",
+    "observedCycleAfter": "Cycle 19",
+    "note": "Continue peaceful survey through the connected Veyr worlds.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Vesper\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-035.json"
+  },
+  {
+    "request": 36,
+    "at": "2026-10-29T03:30:02.624Z",
+    "observedCycleAfter": "Cycle 20",
+    "note": "Survey Cinder, bring the frigate to Kepler, and preserve an actual cycle 20 UI export before further decisions.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Cinder\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Tethys\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      }
+    ],
+    "observation": "observation-036.json"
+  },
+  {
+    "request": 37,
+    "at": "2026-10-29T03:30:36.006Z",
+    "observedCycleAfter": "Cycle 20",
+    "note": "Use Sundrift's open slot for a Manufactory to accelerate later projects; advance the frigate to Haven and inspect scout connections.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Sundrift\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Manufactory\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Kepler\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Cinder\"]"
+      }
+    ],
+    "observation": "observation-037.json"
+  },
+  {
+    "request": 38,
+    "at": "2026-10-29T03:30:59.586Z",
+    "observedCycleAfter": "Cycle 21",
+    "note": "Chart a short route to unsurveyed Antares; keep minerals for Haven's Academy charter when its Manufactory finishes.",
+    "actions": [
+      {
+        "click": ".galaxy-system-label:has-text(\"Antares\")"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-038.json"
+  },
+  {
+    "request": 39,
+    "at": "2026-10-29T03:32:07.877Z",
+    "observedCycleAfter": "Cycle 21",
+    "note": "Commission Haven Academy I after its Manufactory completion. The veteran frigate reaches Solace; the scout surveys Antares.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Haven\"]"
+      },
+      {
+        "click": "[data-action=\"development-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Academy Charter\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Vanguard 3 at Haven\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Aster\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      }
+    ],
+    "observation": "observation-039.json"
+  },
+  {
+    "request": 40,
+    "at": "2026-10-29T03:32:29.832Z",
+    "observedCycleAfter": "Cycle 22",
+    "note": "Resume the western survey and invest in Halcyon mineral income; mineral reserves are now the limit on simultaneous projects.",
+    "actions": [
+      {
+        "press": "h"
+      },
+      {
+        "click": ".galaxy-system-label:has-text(\"Nacre\")"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Halcyon\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Orbital Extractor\")"
+      }
+    ],
+    "observation": "observation-040.json"
+  },
+  {
+    "request": 41,
+    "at": "2026-10-29T03:32:56.291Z",
+    "observedCycleAfter": "Cycle 22",
+    "note": "Scout continues toward Nacre. Hold the returned frigate at the capital, and inspect Forge-discounted ship costs before saving for a second military hull.",
+    "actions": [
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Sable\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Vanguard 3\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      }
+    ],
+    "observation": "observation-041.json"
+  },
+  {
+    "request": 42,
+    "at": "2026-10-29T03:33:25.993Z",
+    "observedCycleAfter": "Cycle 24",
+    "note": "Keep the capital fleet holding and save the 32 minerals needed for a new Vanguard. Scout spends its two available jumps while research and construction advance to cycle 24.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Ashfall\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "2"
+      }
+    ],
+    "observation": "observation-042.json"
+  },
+  {
+    "request": 43,
+    "at": "2026-10-29T03:33:51.417Z",
+    "observedCycleAfter": "Cycle 24",
+    "note": "Start the Protocol and commission a Forge-discounted Vanguard at Solace. Scout completes its planned survey of Nacre.",
+    "actions": [
+      {
+        "click": ".tech-card h3:text-is(\"The Asterion Protocol\") >> .. >> button"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Vanguard\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Kepler\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      }
+    ],
+    "observation": "observation-043.json"
+  },
+  {
+    "request": 44,
+    "at": "2026-10-29T03:34:23.262Z",
+    "observedCycleAfter": "Cycle 24",
+    "note": "Nacre is a rich 82% Terran expansion candidate. Survey its newly charted neighbor Meridian before selecting the next destination.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Meridian\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-044.json"
+  },
+  {
+    "request": 45,
+    "at": "2026-10-29T03:34:34.305Z",
+    "observedCycleAfter": "Cycle 24",
+    "note": "Meridian's discovery was already resolved at cycle 11; read the visible expedition record before leaving.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Read expedition record\")"
+      }
+    ],
+    "observation": "observation-045.json"
+  },
+  {
+    "request": 46,
+    "at": "2026-10-29T03:34:48.294Z",
+    "observedCycleAfter": "Cycle 25",
+    "note": "Advance to cycle 25 and survey Eidolon, the remaining branch beside Meridian.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Eidolon\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-046.json"
+  },
+  {
+    "request": 47,
+    "at": "2026-10-29T03:35:15.207Z",
+    "observedCycleAfter": "Cycle 26",
+    "note": "Bring the scout toward the home branch. Add Haven's missing mineral infrastructure before commissioning another colony ship; cycle 26 should complete the new frigate.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Elysian\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Haven\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Orbital Extractor\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-047.json"
+  },
+  {
+    "request": 48,
+    "at": "2026-10-29T03:35:32.333Z",
+    "observedCycleAfter": "Cycle 26",
+    "note": "Select the veteran frigate to combine the two local military hulls into a defensive formation.",
+    "actions": [
+      {
+        "click": "#inspector .fleet-row:has-text(\"Vanguard 3\"):not(:has-text(\"Vanguard 34\"))"
+      }
+    ],
+    "observation": "observation-048.json"
+  },
+  {
+    "request": 49,
+    "at": "2026-10-29T03:35:42.864Z",
+    "observedCycleAfter": "Cycle 26",
+    "note": "Merge produces the previewed 68-hull formation and retains Hold. Assign it as the home defense lead while the scout returns to Solace.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Merge +1\")"
+      },
+      {
+        "click": "button:has-text(\"Lead defense \u00b7 1 order\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Elysian\"]"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      }
+    ],
+    "observation": "observation-049.json"
+  },
+  {
+    "request": 50,
+    "at": "2026-10-29T03:36:04.213Z",
+    "observedCycleAfter": "Cycle 27",
+    "note": "Commission an Ark for rich Nacre at cycle 27. Survey nearby Asterion while waiting for the ship to complete.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Colony Ark\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Asterion\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-050.json"
+  },
+  {
+    "request": 51,
+    "at": "2026-10-29T03:36:23.062Z",
+    "observedCycleAfter": "Cycle 28",
+    "note": "Return scout via Haven. Both new Extractors are now working; invest the mineral gain in Halcyon's Manufactory.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Haven\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Halcyon\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Manufactory\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Haven\"]"
+      }
+    ],
+    "observation": "observation-051.json"
+  },
+  {
+    "request": 52,
+    "at": "2026-10-29T03:36:37.367Z",
+    "observedCycleAfter": "Cycle 28",
+    "note": "Survey Peregrine, the last unvisited branch beside the home colonies.",
+    "actions": [
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Peregrine\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      }
+    ],
+    "observation": "observation-052.json"
+  },
+  {
+    "request": 53,
+    "at": "2026-10-29T03:36:56.790Z",
+    "observedCycleAfter": "Cycle 28",
+    "note": "Fit the charted galaxy to locate the remaining unsurveyed system before assigning the scout's next trip.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Fit galaxy\"]"
+      }
+    ],
+    "observation": "observation-053.json"
+  },
+  {
+    "request": 54,
+    "at": "2026-10-29T03:37:02.538Z",
+    "observedCycleAfter": "Cycle 28",
+    "note": "",
+    "actions": [],
+    "observation": "observation-054.json"
+  },
+  {
+    "request": 55,
+    "at": "2026-10-29T03:37:27.433Z",
+    "observedCycleAfter": "Cycle 29",
+    "note": "Caelum was charted beside Lumen during the original opening. Reach it through Lumen's visible connected-system list, then spend the remaining scout jump along the plotted route.",
+    "actions": [
+      {
+        "click": ".galaxy-system-label:has-text(\"Lumen\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Caelum\")"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-055.json"
+  },
+  {
+    "request": 56,
+    "at": "2026-10-29T03:37:49.296Z",
+    "observedCycleAfter": "Cycle 30",
+    "note": "The Ark starts its three-jump Nacre journey while the scout advances toward Caelum. Preserve the requested actual cycle 30 checkpoint before continuing toward a natural ending.",
+    "actions": [
+      {
+        "click": "#inspector .fleet-row:has-text(\"Colony Ark 35\")"
+      },
+      {
+        "click": ".galaxy-system-label:has-text(\"Nacre\")"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Tethys\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      }
+    ],
+    "observation": "observation-056.json"
+  },
+  {
+    "request": 57,
+    "at": "2026-10-29T03:38:54.452Z",
+    "observedCycleAfter": "Cycle 30",
+    "note": "Before further expansion, review current trust, grievances and treaty status at the preserved cycle 30 checkpoint.",
+    "actions": [
+      {
+        "press": "3"
+      }
+    ],
+    "observation": "observation-057.json"
+  },
+  {
+    "request": 58,
+    "at": "2026-10-29T03:39:40.826Z",
+    "observedCycleAfter": "Cycle 31",
+    "note": "Treaties remain strong with zero grievances, so retain peaceful relations. Continue both routes, then inspect Nacre's settlement confirmation at cycle 31.",
+    "actions": [
+      {
+        "press": "4"
+      },
+      {
+        "click": "button:has-text(\"Colony Ark 35 \u00d71\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Nacre\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Colony Ark 35 at Kepler\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "[data-action=\"colonize\"]"
+      }
+    ],
+    "observation": "observation-058.json"
+  },
+  {
+    "request": 59,
+    "at": "2026-10-29T03:39:58.929Z",
+    "observedCycleAfter": "Cycle 32",
+    "note": "Found Nacre and immediately commission its Extractor. Preserve funds for Beacons while the scout continues toward Caelum.",
+    "actions": [
+      {
+        "press": "Enter"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Orbital Extractor\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "button:has-text(\"Pathfinder 1 \u00d71\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-059.json"
+  },
+  {
+    "request": 60,
+    "at": "2026-10-29T03:40:47.480Z",
+    "observedCycleAfter": "Cycle 33",
+    "note": "Add one more low-cost frigate for the growing five-world empire, while reserving the bulk of minerals for three future Beacons.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Solace\"]"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Vanguard 3\")"
+      },
+      {
+        "click": "button:text-is(\"Commission Vanguard\")"
+      },
+      {
+        "click": ".fleet-switch button[title=\"Pathfinder 1 at Velorum\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-060.json"
+  },
+  {
+    "request": 61,
+    "at": "2026-10-29T03:41:20.730Z",
+    "observedCycleAfter": "Cycle 34",
+    "note": "All 42 charted systems are now surveyed. Return the scout to Nacre and merge the third frigate into the home defensive formation after completion.",
+    "actions": [
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Nacre\"]"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Vanguard 3 \u00d72\")"
+      },
+      {
+        "click": "button:has-text(\"Merge +1\")"
+      }
+    ],
+    "observation": "observation-061.json"
+  },
+  {
+    "request": 62,
+    "at": "2026-10-29T03:42:00.762Z",
+    "observedCycleAfter": "Cycle 35",
+    "note": "Keep the three-frigate home defense in place and continue the scout's return. Inspect Protocol progress before committing mineral reserves.",
+    "actions": [
+      {
+        "click": ".fleet-switch button[title^=\"Pathfinder 1 at\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "2"
+      }
+    ],
+    "observation": "observation-062.json"
+  },
+  {
+    "request": 63,
+    "at": "2026-10-29T03:42:25.675Z",
+    "observedCycleAfter": "Cycle 36",
+    "note": "Scout returns to Nacre and holds. Advance the final Protocol cycle and review newly available victory requirements.",
+    "actions": [
+      {
+        "press": "1"
+      },
+      {
+        "click": ".fleet-switch button[title^=\"Pathfinder 1 at\"]"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-063.json"
+  },
+  {
+    "request": 64,
+    "at": "2026-10-29T03:43:05.975Z",
+    "observedCycleAfter": "Cycle 36",
+    "note": "Commission the first Beacon in Sundrift's open slot, add Nacre science, and research the inexpensive weapons upgrade to protect the future network.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Sundrift\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Asterion Beacon\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Nacre\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Research Enclave\")"
+      },
+      {
+        "press": "2"
+      },
+      {
+        "click": ".tech-card h3:text-is(\"Coherent Lances\") >> .. >> button"
+      }
+    ],
+    "observation": "observation-064.json"
+  },
+  {
+    "request": 65,
+    "at": "2026-10-29T03:44:01.456Z",
+    "observedCycleAfter": "Cycle 37",
+    "note": "Coherent Lances completes. Start Deflector Fields, then read the cycle briefing while saving the next Beacon's minerals.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "click": ".tech-card h3:text-is(\"Deflector Fields\") >> .. >> button"
+      },
+      {
+        "click": "[data-action=\"briefing\"]"
+      }
+    ],
+    "observation": "observation-065.json"
+  },
+  {
+    "request": 66,
+    "at": "2026-10-29T03:44:13.217Z",
+    "observedCycleAfter": null,
+    "note": "At cycle 38 mineral reserves remain below a second Beacon's 180 cost. Review the alignment funding outlook before waiting for the next income cycle.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "button:has-text(\"Review your funding\")"
+      }
+    ],
+    "observation": null
+  },
+  {
+    "request": 67,
+    "at": "2026-10-29T03:44:38.930Z",
+    "observedCycleAfter": "Cycle 38",
+    "note": "The review selector did not resolve; observe the current visible page before choosing the funding link again.",
+    "actions": [],
+    "observation": "observation-067.json"
+  },
+  {
+    "request": 68,
+    "at": "2026-10-29T03:44:52.328Z",
+    "observedCycleAfter": "Cycle 38",
+    "note": "The failed navigation was caused by a newly opened war briefing: Khar declared war on Veyr. Acknowledge it, then inspect the Concord funding outlook; our own treaties are unchanged by that foreign war.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "button:has-text(\"Review your funding\")"
+      }
+    ],
+    "observation": "observation-068.json"
+  },
+  {
+    "request": 69,
+    "at": "2026-10-29T03:46:05.989Z",
+    "observedCycleAfter": "Cycle 39",
+    "note": "Preserve the actual cycle 38 state for the minor funding-link wording finding, then continue normally to the next mineral income.",
+    "actions": [
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-069.json"
+  },
+  {
+    "request": 70,
+    "at": "2026-10-29T03:46:41.666Z",
+    "observedCycleAfter": "Cycle 40",
+    "note": "Cycle 39 reaches the second Beacon's mineral cost exactly; commission it at Haven, then preserve cycle 40 before choosing further research.",
+    "actions": [
+      {
+        "click": "[aria-label=\"Inspect Haven\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Asterion Beacon\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      }
+    ],
+    "observation": "observation-070.json"
+  },
+  {
+    "request": 71,
+    "at": "2026-10-29T03:47:40.236Z",
+    "observedCycleAfter": "Cycle 41",
+    "note": "Begin capital-ship research after shields. While Beacon projects mature, review the foreign war and confirm it has not changed Concord treaties.",
+    "actions": [
+      {
+        "press": "2"
+      },
+      {
+        "click": ".tech-card h3:text-is(\"Capital Ship Architecture\") >> .. >> button"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "3"
+      }
+    ],
+    "observation": "observation-071.json"
+  },
+  {
+    "request": 72,
+    "at": "2026-10-29T03:49:07.650Z",
+    "observedCycleAfter": "Cycle 42",
+    "note": "Keep peaceful relations and allow research, two Beacon projects, and mineral income to advance one cycle; no new commission is affordable yet.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-072.json"
+  },
+  {
+    "request": 73,
+    "at": "2026-10-29T03:49:20.333Z",
+    "observedCycleAfter": "Cycle 43",
+    "note": "The prior affordability note referred specifically to the third Beacon's 180 minerals. At cycle 43, inspect Halcyon's Beacon cost and open slot before committing it.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "click": "[aria-label=\"Inspect Halcyon\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      }
+    ],
+    "observation": "observation-073.json"
+  },
+  {
+    "request": 74,
+    "at": "2026-10-29T03:49:33.780Z",
+    "observedCycleAfter": null,
+    "note": "Commission the third Beacon at Halcyon. At cycle 44 Sundrift's first Beacon completes, so inspect the now-visible funding budget and remaining structural requirement.",
+    "actions": [
+      {
+        "click": ".build-card:has-text(\"Asterion Beacon\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "button:has-text(\"Review your funding\")"
+      }
+    ],
+    "observation": null
+  },
+  {
+    "request": 75,
+    "at": "2026-10-29T03:49:44.476Z",
+    "observedCycleAfter": "Cycle 44",
+    "note": "After the first Beacon a hidden map action shares this label; narrow the driver locator to the visible context button. No additional game command occurred in the selector error.",
+    "actions": [
+      {
+        "click": ".wide-button[data-action=\"review-alignment\"]"
+      }
+    ],
+    "observation": "observation-075.json"
+  },
+  {
+    "request": 76,
+    "at": "2026-10-29T03:50:24.567Z",
+    "observedCycleAfter": "Cycle 44",
+    "note": "Capital Ship Architecture is complete. Spend stored science on the prerequisite for Stellar Accords and Distributed Command, which will improve fleet response speed.",
+    "actions": [
+      {
+        "press": "2"
+      },
+      {
+        "click": ".tech-card h3:text-is(\"Adaptive Biospheres\") >> .. >> button"
+      }
+    ],
+    "observation": "observation-076.json"
+  },
+  {
+    "request": 77,
+    "at": "2026-10-29T03:50:38.199Z",
+    "observedCycleAfter": "Cycle 45",
+    "note": "Adaptive Biospheres completes immediately from stored science; select Stellar Accords. Move the three-frigate force to defend the first Beacon and inspect the new cruiser at Solace after cycle 45 income.",
+    "actions": [
+      {
+        "click": ".tech-card h3:text-is(\"Stellar Accords\") >> .. >> button"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Vanguard 3\")"
+      },
+      {
+        "click": "button:text-is(\"Resume\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Sundrift\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "button:has-text(\"Lead defense \u00b7 1 order\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      }
+    ],
+    "observation": "observation-077.json"
+  },
+  {
+    "request": 78,
+    "at": "2026-10-29T03:51:13.122Z",
+    "observedCycleAfter": "Cycle 46",
+    "note": "Commission the first cruiser for Beacon defense. Stellar Accords completes at 46; select Distributed Command to increase military movement and orders.",
+    "actions": [
+      {
+        "click": ".build-card:has-text(\"Sovereign\")"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "2"
+      },
+      {
+        "click": ".tech-card h3:text-is(\"Distributed Command\") >> .. >> button"
+      }
+    ],
+    "observation": "observation-078.json"
+  },
+  {
+    "request": 79,
+    "at": "2026-10-29T03:51:52.490Z",
+    "observedCycleAfter": "Cycle 47",
+    "note": "The second Beacon is due at Haven. Review the public network while the first cruiser finishes its last construction cycle.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-079.json"
+  },
+  {
+    "request": 80,
+    "at": "2026-10-29T03:52:34.392Z",
+    "observedCycleAfter": "Cycle 48",
+    "note": "The Choir has publicly restored its first Beacon. Keep our construction schedule and receive the first cruiser at cycle 48.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-080.json"
+  },
+  {
+    "request": 81,
+    "at": "2026-10-29T03:53:08.555Z",
+    "observedCycleAfter": "Cycle 49",
+    "note": "Commission the second cruiser. The Choir now owns neighboring Elysian, so station the first cruiser at Halcyon before its Beacon completes; the second will cover Haven.",
+    "actions": [
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Sovereign\")"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Sovereign 53\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Halcyon\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "button:has-text(\"Lead defense \u00b7 1 order\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-081.json"
+  },
+  {
+    "request": 82,
+    "at": "2026-10-29T03:53:40.444Z",
+    "observedCycleAfter": "Cycle 49",
+    "note": "Check whether the new shared border and defensive cruiser have affected Choir relations before advancing the race.",
+    "actions": [
+      {
+        "press": "3"
+      }
+    ],
+    "observation": "observation-082.json"
+  },
+  {
+    "request": 83,
+    "at": "2026-10-29T03:53:59.495Z",
+    "observedCycleAfter": "Cycle 50",
+    "note": "A shared border has created four grievances with the Choir. Send the ordinary 35-credit goodwill gift to maintain relations, then preserve the cycle 50 checkpoint.",
+    "actions": [
+      {
+        "click": "[data-rival=\"choir\"] [data-stance=\"gift\"]"
+      },
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      }
+    ],
+    "observation": "observation-083.json"
+  },
+  {
+    "request": 84,
+    "at": "2026-10-29T03:55:27.613Z",
+    "observedCycleAfter": "Cycle 51",
+    "note": "Advance the simultaneous third Beacon, second cruiser and Distributed Command completions; inspect any resulting briefing before making further decisions.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-084.json"
+  },
+  {
+    "request": 85,
+    "at": "2026-10-29T03:56:08.543Z",
+    "observedCycleAfter": "Cycle 51",
+    "note": "Alignment has begun at 1/10. Start the remaining research, order one reserve cruiser, and station Sovereign 57 at Haven so all three Beacons have local military defense.",
+    "actions": [
+      {
+        "press": "2"
+      },
+      {
+        "click": ".tech-card h3:text-is(\"Worldshaping\") >> .. >> button"
+      },
+      {
+        "press": "h"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Sovereign 57\")"
+      },
+      {
+        "click": "button:text-is(\"Commission Sovereign\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Haven\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "button:has-text(\"Lead defense \u00b7 1 order\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      }
+    ],
+    "observation": "observation-085.json"
+  },
+  {
+    "request": 86,
+    "at": "2026-10-29T03:56:26.962Z",
+    "observedCycleAfter": "Cycle 52",
+    "note": "Keep the defended network stable and watch for public warnings as alignment advances.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "4"
+      }
+    ],
+    "observation": "observation-086.json"
+  },
+  {
+    "request": 87,
+    "at": "2026-10-29T03:56:39.700Z",
+    "observedCycleAfter": "Cycle 53",
+    "note": "Hold the existing defensive positions; no threat or interruption is currently visible. Advance one alignment cycle.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-087.json"
+  },
+  {
+    "request": 88,
+    "at": "2026-10-29T03:56:48.780Z",
+    "observedCycleAfter": "Cycle 54",
+    "note": "Receive the reserve cruiser at cycle 54 and inspect the capital's local fleet before assigning it to defense.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-088.json"
+  },
+  {
+    "request": 89,
+    "at": "2026-10-29T03:58:03.145Z",
+    "observedCycleAfter": "Cycle 54",
+    "note": "Preserve the actual war transition before responding. The Choir broke its trade treaty as our alignment reached four; inspect available diplomacy and public peace terms.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      },
+      {
+        "press": "3"
+      }
+    ],
+    "observation": "observation-089.json"
+  },
+  {
+    "request": 90,
+    "at": "2026-10-29T03:59:07.501Z",
+    "observedCycleAfter": "Cycle 54",
+    "note": "Peace is temporarily unavailable. Refill the capital reserve with one cruiser commission, move Sovereign 61 to Halcyon, and merge into the existing holding defensive lead for 170 hull.",
+    "actions": [
+      {
+        "press": "h"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Sovereign 61\")"
+      },
+      {
+        "click": "button:text-is(\"Commission Sovereign\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Halcyon\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Sovereign 53\")"
+      },
+      {
+        "click": "button:has-text(\"Merge +1\")"
+      }
+    ],
+    "observation": "observation-090.json"
+  },
+  {
+    "request": 91,
+    "at": "2026-10-29T03:59:54.215Z",
+    "observedCycleAfter": "Cycle 55",
+    "note": "Keep the reinforced Halcyon formation in place and let the next cycle resolve before making any attack decision.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-091.json"
+  },
+  {
+    "request": 92,
+    "at": "2026-10-29T04:01:07.102Z",
+    "observedCycleAfter": "Cycle 55",
+    "note": "Preserve the second war declaration. Khar owns Hesper on the eastern approach, so use Distributed Command to move the three frigates from Sundrift through Solace to Haven; they become the local defense lead alongside its cruiser. The two cruisers at Halcyon cover the Choir approach to Sundrift.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      },
+      {
+        "click": ".fleet-switch button[title^=\"Vanguard 3 at\"]"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Haven\"]"
+      },
+      {
+        "click": "button:has-text(\"Plot course \u00b7 free\")"
+      },
+      {
+        "click": "button:has-text(\"Continue \u00b7 up to\")"
+      },
+      {
+        "click": "button:has-text(\"Lead defense \u00b7 1 order\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      }
+    ],
+    "observation": "observation-092.json"
+  },
+  {
+    "request": 93,
+    "at": "2026-10-29T04:02:34.955Z",
+    "observedCycleAfter": "Cycle 55",
+    "note": "With a real second front, inspect replacing Haven's Extractor with a Shipyard to improve shared repairs and enable local reinforcements while preserving its Beacon and Academy support.",
+    "actions": [
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "select": {
+          "selector": "#replace-building",
+          "value": {
+            "label": "Replace Orbital Extractor"
+          }
+        }
+      }
+    ],
+    "observation": "observation-093.json"
+  },
+  {
+    "request": 94,
+    "at": "2026-10-29T04:02:51.468Z",
+    "observedCycleAfter": "Cycle 55",
+    "note": "Read the actual replacement comparison before accepting the tradeoff from mineral income to frontline repair capacity.",
+    "actions": [
+      {
+        "click": ".investment-option:has(.build-card:has-text(\"Orbital Shipyard\")) summary"
+      }
+    ],
+    "observation": "observation-094.json"
+  },
+  {
+    "request": 95,
+    "at": "2026-10-29T04:03:07.122Z",
+    "observedCycleAfter": "Cycle 56",
+    "note": "Accept the displayed tradeoff: each frontline Shipyard replaces five minerals of income with four extra shared repair hull and local shipbuilding. Both Beacons remain intact. Resolve the next war cycle.",
+    "actions": [
+      {
+        "click": ".build-card:has-text(\"Orbital Shipyard\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Halcyon\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "select": {
+          "selector": "#replace-building",
+          "value": {
+            "label": "Replace Orbital Extractor"
+          }
+        }
+      },
+      {
+        "click": ".build-card:has-text(\"Orbital Shipyard\")"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-095.json"
+  },
+  {
+    "request": 96,
+    "at": "2026-10-29T04:03:35.082Z",
+    "observedCycleAfter": "Cycle 56",
+    "note": "Read the first actual combat report: the Choir attack was destroyed at Halcyon, but our formation lost one cruiser and needs urgent repair.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Battle report \u2192\")"
+      }
+    ],
+    "observation": "observation-096.json"
+  },
+  {
+    "request": 97,
+    "at": "2026-10-29T04:04:43.928Z",
+    "observedCycleAfter": "Cycle 56",
+    "note": "Select the surviving cruiser directly from the battle report to inspect its available repair action.",
+    "actions": [
+      {
+        "click": "button:text-is(\"Select Sovereign 53\")"
+      }
+    ],
+    "observation": "observation-097.json"
+  },
+  {
+    "request": 98,
+    "at": "2026-10-29T04:05:27.889Z",
+    "observedCycleAfter": "Cycle 56",
+    "note": "Preserve the post-battle state before paid repairs. Spend one emergency repair order on the surviving Halcyon cruiser.",
+    "actions": [
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "button:has-text(\"Repair \u25c710\")"
+      }
+    ],
+    "observation": "observation-098.json"
+  },
+  {
+    "request": 99,
+    "at": "2026-10-29T04:05:38.358Z",
+    "observedCycleAfter": "Cycle 57",
+    "note": "Two further repair orders restore the survivor to full 85 hull; return it to Hold and resolve cycle 57, when the replacement Shipyards and new reserve cruiser complete.",
+    "actions": [
+      {
+        "click": "button:has-text(\"Repair \u25c710\")"
+      },
+      {
+        "click": "button:has-text(\"Repair \u25c710\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      },
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-099.json"
+  },
+  {
+    "request": 100,
+    "at": "2026-10-29T04:06:51.358Z",
+    "observedCycleAfter": "Cycle 57",
+    "note": "Both frontline Shipyards completed with their Beacons intact. Inspect the fresh capital cruiser before restoring Halcyon's two-ship formation.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "press": "h"
+      }
+    ],
+    "observation": "observation-100.json"
+  },
+  {
+    "request": 101,
+    "at": "2026-10-29T04:07:24.433Z",
+    "observedCycleAfter": "Cycle 57",
+    "note": "A hostile Choir scout is visibly in Solace and prevents passive repairs there. Inspect the newly built local cruiser's engagement option before clearing the capital and reinforcing Halcyon.",
+    "actions": [
+      {
+        "click": "#inspector .fleet-row:has-text(\"Sovereign 64\")"
+      }
+    ],
+    "observation": "observation-101.json"
+  },
+  {
+    "request": 102,
+    "at": "2026-10-29T04:07:38.458Z",
+    "observedCycleAfter": "Cycle 57",
+    "note": "Clear the visible hostile scout from the capital using the local cruiser; no expedition into rival territory or forced challenge is involved.",
+    "actions": [
+      {
+        "click": "button:text-is(\"Engage\")"
+      }
+    ],
+    "observation": "observation-102.json"
+  },
+  {
+    "request": 103,
+    "at": "2026-10-29T04:08:07.143Z",
+    "observedCycleAfter": "Cycle 57",
+    "note": "Clear the capital, refill its reserve queue, and restore Halcyon's two-cruiser formation. Use the two new frontline Shipyards for one frigate each, completing before the expected final alignment cycles.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "button:text-is(\"Commission Sovereign\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Halcyon\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Sovereign 53\")"
+      },
+      {
+        "click": "button:has-text(\"Merge +1\")"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Vanguard\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Haven\"]"
+      },
+      {
+        "click": "[data-action=\"build-menu\"]"
+      },
+      {
+        "click": "[data-tab=\"ship\"]"
+      },
+      {
+        "click": ".build-card:has-text(\"Vanguard\")"
+      }
+    ],
+    "observation": "observation-103.json"
+  },
+  {
+    "request": 104,
+    "at": "2026-10-29T04:08:37.452Z",
+    "observedCycleAfter": "Cycle 58",
+    "note": "Resolve the next cycle before checking whether peace negotiations have become available.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-104.json"
+  },
+  {
+    "request": 105,
+    "at": "2026-10-29T04:08:48.981Z",
+    "observedCycleAfter": "Cycle 58",
+    "note": "Five cycles have passed since the Choir war began; inspect current peace willingness rather than assuming negotiations are available.",
+    "actions": [
+      {
+        "press": "3"
+      }
+    ],
+    "observation": "observation-105.json"
+  },
+  {
+    "request": 106,
+    "at": "2026-10-29T04:09:28.180Z",
+    "observedCycleAfter": "Cycle 59",
+    "note": "Choir peace terms are visibly refused and Khar still has the early-war restriction. Keep defensive positions; no proposal is sent or paid while unavailable.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-106.json"
+  },
+  {
+    "request": 107,
+    "at": "2026-10-29T04:10:33.660Z",
+    "observedCycleAfter": "Cycle 59",
+    "note": "Peace remains refused. Merge Haven's new frigate into its lead formation, and send Halcyon's new frigate to guard Sundrift directly. Preserve the final pre-resolution state with all three Beacons defended.",
+    "actions": [
+      {
+        "press": "4"
+      },
+      {
+        "click": "button:has-text(\"Vanguard 3 \u00d73\")"
+      },
+      {
+        "click": "button:has-text(\"Merge +1\")"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[aria-label=\"Inspect Halcyon\"]"
+      },
+      {
+        "click": "#inspector .fleet-row:has-text(\"Frigate\")"
+      },
+      {
+        "click": "#inspector [data-system-select]:has-text(\"Sundrift\")"
+      },
+      {
+        "click": "[data-action=\"move\"]"
+      },
+      {
+        "click": "button:has-text(\"Lead defense \u00b7 1 order\")"
+      },
+      {
+        "click": "[data-action=\"fleet-hold\"]"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": "[data-action=\"menu\"]"
+      },
+      {
+        "click": "[data-action=\"export\"]"
+      },
+      {
+        "press": "Escape"
+      }
+    ],
+    "observation": "observation-107.json"
+  },
+  {
+    "request": 108,
+    "at": "2026-10-29T04:10:59.545Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Resolve the final projected alignment cycle with all three Beacons unblocked and funded; do not assume the outcome before the turn completes.",
+    "actions": [
+      {
+        "click": "#end-turn"
+      }
+    ],
+    "observation": "observation-108.json"
+  },
+  {
+    "request": 109,
+    "at": "2026-10-29T04:11:33.264Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "The ordinary final turn recorded a Concord Transcendence victory at cycle 60 after a last-turn Khar attack. Export the actual finished campaign before read-only conclusion inspection.",
+    "actions": [
+      {
+        "click": ".modal [data-action=\"export\"]"
+      }
+    ],
+    "observation": "observation-109.json"
+  },
+  {
+    "request": 110,
+    "at": "2026-10-29T04:13:11.021Z",
+    "observedCycleAfter": null,
+    "note": "Read-only post-ending inspection: open the Chronicle from the conclusion and view the retained combat sequence, including the final Haven defense.",
+    "actions": [
+      {
+        "click": ".modal button:text-is(\"Read Chronicle\")"
+      },
+      {
+        "click": "[data-log-filter=\"Combat\"]"
+      }
+    ],
+    "observation": null
+  },
+  {
+    "request": 111,
+    "at": "2026-10-29T04:13:27.355Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Read Chronicle succeeded; the requested Combat filter name was a driver guess. Inspect the actual visible filter labels before selecting one.",
+    "actions": [],
+    "observation": "observation-111.json"
+  },
+  {
+    "request": 112,
+    "at": "2026-10-29T04:13:36.143Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Use the actual visible Combat filter button; its data value differs in case from the earlier driver guess.",
+    "actions": [
+      {
+        "click": "#workspace-page button:text-is(\"Combat\")"
+      }
+    ],
+    "observation": "observation-112.json"
+  },
+  {
+    "request": 113,
+    "at": "2026-10-29T04:14:11.704Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Read-only: inspect the first Haven engagement in chronological order, from the retained newest-first list.",
+    "actions": [
+      {
+        "click": "#workspace-page button:has-text(\"Battle report \u2192\") >> nth=2"
+      }
+    ],
+    "observation": "observation-113.json"
+  },
+  {
+    "request": 114,
+    "at": "2026-10-29T04:14:11.998Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Read-only: inspect the engagement that destroyed the remaining frigates.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "#workspace-page button:has-text(\"Battle report \u2192\") >> nth=1"
+      }
+    ],
+    "observation": "observation-114.json"
+  },
+  {
+    "request": 115,
+    "at": "2026-10-29T04:14:12.393Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Read-only: inspect the cruiser defense that destroyed the final attacker.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "click": "#workspace-page button:has-text(\"Battle report \u2192\") >> nth=0"
+      }
+    ],
+    "observation": "observation-115.json"
+  },
+  {
+    "request": 116,
+    "at": "2026-10-29T04:15:06.020Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Read-only: the final network action leads to the completed alignment card without a future funding budget.",
+    "actions": [
+      {
+        "press": "Escape"
+      },
+      {
+        "press": "4"
+      },
+      {
+        "click": ".wide-button[data-action=\"review-alignment\"]"
+      }
+    ],
+    "observation": "observation-116.json"
+  },
+  {
+    "request": 117,
+    "at": "2026-10-29T04:15:06.197Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Read-only: reopen the conclusion from Chronicle and verify retained final holdings and history remain available.",
+    "actions": [
+      {
+        "press": "5"
+      },
+      {
+        "click": "#workspace-page button:has-text(\"Review this age\")"
+      }
+    ],
+    "observation": "observation-117.json"
+  },
+  {
+    "request": 118,
+    "at": "2026-10-29T04:15:06.485Z",
+    "observedCycleAfter": "Cycle 60",
+    "note": "Export again after read-only ending inspection for a byte-for-byte comparison with the first finished export.",
+    "actions": [
+      {
+        "click": ".modal [data-action=\"export\"]"
+      }
+    ],
+    "observation": "observation-118.json"
+  },
+  {
+    "request": 119,
+    "at": "2026-10-29T04:15:19.271Z",
+    "observedCycleAfter": null,
+    "note": "Actual continuation and read-only conclusion inspection are complete. Close only this isolated browser context; frozen servers and other profiles remain untouched.",
+    "actions": [],
+    "observation": null
+  }
+]
