@@ -1,0 +1,323 @@
+[
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": ".modal [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:56.002Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:15:56.056Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": ".galaxy-fleet[data-fleet-id=\"f1\"]",
+    "at": "2026-10-29T18:15:56.129Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "#inspector .building-pills [data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:15:56.311Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "#inspector .building-pills [data-system-select=\"s9\"]",
+    "at": "2026-10-29T18:15:56.397Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "[data-action=\"plan-route\"]",
+    "at": "2026-10-29T18:15:56.457Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "[data-action=\"fleet-hold\"]",
+    "at": "2026-10-29T18:15:56.526Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": ".route-stop[data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:15:56.590Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "[data-action=\"move\"]",
+    "at": "2026-10-29T18:15:56.693Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "[data-action=\"continue-route\"]",
+    "at": "2026-10-29T18:15:57.026Z"
+  },
+  {
+    "type": "ordinary-continue",
+    "width": 320,
+    "from": "s20",
+    "to": "s9",
+    "sha256": "82113033a8cd4e8983b996b7542532612acfeedf8ab92d37a68a67c5a10eece2",
+    "at": "2026-10-29T18:15:57.045Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": "#undo-action",
+    "at": "2026-10-29T18:15:57.110Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 320,
+    "label": "visible Undo restores exact pre-Continue state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:15:57.128Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:57.197Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 320,
+    "label": "RU to EN preserves state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:15:57.209Z"
+  },
+  {
+    "type": "tap",
+    "width": 320,
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:57.261Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 320,
+    "label": "EN to RU preserves state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:15:57.277Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": ".modal [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:57.972Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:15:58.007Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": ".galaxy-fleet[data-fleet-id=\"f1\"]",
+    "at": "2026-10-29T18:15:58.083Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "#inspector .building-pills [data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:15:58.263Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "#inspector .building-pills [data-system-select=\"s9\"]",
+    "at": "2026-10-29T18:15:58.346Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "[data-action=\"plan-route\"]",
+    "at": "2026-10-29T18:15:58.424Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "[data-action=\"fleet-hold\"]",
+    "at": "2026-10-29T18:15:58.494Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": ".route-stop[data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:15:58.555Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "[data-action=\"move\"]",
+    "at": "2026-10-29T18:15:58.645Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "[data-action=\"continue-route\"]",
+    "at": "2026-10-29T18:15:58.945Z"
+  },
+  {
+    "type": "ordinary-continue",
+    "width": 390,
+    "from": "s20",
+    "to": "s9",
+    "sha256": "82113033a8cd4e8983b996b7542532612acfeedf8ab92d37a68a67c5a10eece2",
+    "at": "2026-10-29T18:15:58.957Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": "#undo-action",
+    "at": "2026-10-29T18:15:59.010Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 390,
+    "label": "visible Undo restores exact pre-Continue state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:15:59.022Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:59.077Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 390,
+    "label": "RU to EN preserves state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:15:59.089Z"
+  },
+  {
+    "type": "tap",
+    "width": 390,
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:59.143Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 390,
+    "label": "EN to RU preserves state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:15:59.152Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": ".modal [data-action=\"language\"]",
+    "at": "2026-10-29T18:15:59.823Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:15:59.852Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": ".galaxy-fleet[data-fleet-id=\"f1\"]",
+    "at": "2026-10-29T18:15:59.911Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "#inspector .building-pills [data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:16:00.082Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "#inspector .building-pills [data-system-select=\"s9\"]",
+    "at": "2026-10-29T18:16:00.157Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "[data-action=\"plan-route\"]",
+    "at": "2026-10-29T18:16:00.218Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "[data-action=\"fleet-hold\"]",
+    "at": "2026-10-29T18:16:00.276Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": ".route-stop[data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:16:00.341Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "[data-action=\"move\"]",
+    "at": "2026-10-29T18:16:00.426Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "[data-action=\"continue-route\"]",
+    "at": "2026-10-29T18:16:00.716Z"
+  },
+  {
+    "type": "ordinary-continue",
+    "width": 640,
+    "from": "s20",
+    "to": "s9",
+    "sha256": "82113033a8cd4e8983b996b7542532612acfeedf8ab92d37a68a67c5a10eece2",
+    "at": "2026-10-29T18:16:00.725Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": "#undo-action",
+    "at": "2026-10-29T18:16:00.776Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 640,
+    "label": "visible Undo restores exact pre-Continue state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:16:00.785Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:16:00.848Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 640,
+    "label": "RU to EN preserves state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:16:00.858Z"
+  },
+  {
+    "type": "tap",
+    "width": 640,
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:16:00.906Z"
+  },
+  {
+    "type": "state-equal",
+    "width": 640,
+    "label": "EN to RU preserves state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:16:00.915Z"
+  }
+]

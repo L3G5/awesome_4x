@@ -1,0 +1,65 @@
+{
+  "sourceCommit": "b9af2b96203c941cff261ccc8b2984c0432438a9",
+  "priorSourceCommit": "14b36d1a14c54264ac8e9b37aec2260ccbb461cb",
+  "buildInfo": {
+    "version": "0.23.0",
+    "commit": "b9af2b96203c941cff261ccc8b2984c0432438a9",
+    "builtAt": "2026-10-29T18:14:35.020Z"
+  },
+  "sourceSHA256": {
+    "src/game.js": {
+      "before": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "reviewed": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1"
+    },
+    "src/turn-history.js": {
+      "before": "a4a9d99083441c9174e9d03be7c543912e0787d7a47b888f7c9cba47b7d644e2",
+      "reviewed": "a4a9d99083441c9174e9d03be7c543912e0787d7a47b888f7c9cba47b7d644e2"
+    },
+    "src/main.js": {
+      "before": "a068862f2a7d18c21e248ea7b5b36bd3d80b9b8ed034ec4e19fb5a44fe063b78",
+      "reviewed": "a068862f2a7d18c21e248ea7b5b36bd3d80b9b8ed034ec4e19fb5a44fe063b78"
+    },
+    "src/undo.css": {
+      "before": "6e07e3a160a7f2c38715bc64f35726d5873b7dd8057ce691fd3bbcbd26cd704e",
+      "reviewed": "6e07e3a160a7f2c38715bc64f35726d5873b7dd8057ce691fd3bbcbd26cd704e"
+    },
+    "src/mobile-inspection.css": {
+      "before": "d58d35d9e70107f8f956fa679b4ebd6f5545621fa92e2d59f5875b16b30fdd01",
+      "reviewed": "0fad93ada767a279d1b7d23451c68fcb800418327ccaf6a314735bfd6f2b4261"
+    },
+    "src/style.css": {
+      "before": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c",
+      "reviewed": "d8e27668744e8a616df1dd782d676be9288bceaa456977588f7fa6f5030ac90c"
+    },
+    "src/navigation-ui.js": {
+      "before": "314a5ae1276a0412b58094aa66a7400f7c6ddb40fd5b7965de47c6de2c8add2f",
+      "reviewed": "314a5ae1276a0412b58094aa66a7400f7c6ddb40fd5b7965de47c6de2c8add2f"
+    },
+    "src/locales/ru.js": {
+      "before": "84640601f19fedf228c8a5575558da5e9a01f62173456b3a6433ea4fc9c56975",
+      "reviewed": "84640601f19fedf228c8a5575558da5e9a01f62173456b3a6433ea4fc9c56975"
+    },
+    "src/locales/bindings.js": {
+      "before": "e0463d8bc3d4897c659a86ccd562b6f1d503bed9e0e2d09e8e78c23b2653e1e5",
+      "reviewed": "e0463d8bc3d4897c659a86ccd562b6f1d503bed9e0e2d09e8e78c23b2653e1e5"
+    }
+  },
+  "builtSHA256": {
+    "assets/index-BrS5_trg.css": "3abf9cbf273c6e84158b2583e2d42ce8cfe0cf2250ce644e2a56a49aa16f1ea3",
+    "assets/index-LaH58i5S.js": "47d3eba4736af187fae9e5f0d3e287535d683e1ab797016a04c4e1d8b21203c8"
+  },
+  "preservedEarlierEvidence": [
+    {
+      "path": "docs/mechanics-depth/firefox-review",
+      "manifestSHA256": "4c9dcc3a267b4c45b4fdbd7126ba75f01c7849924c65681e22b15b7b76c5bd6d"
+    },
+    {
+      "path": "docs/mechanics-depth/firefox-review/route-localization-followup",
+      "manifestSHA256": "0e4c0a68f77153314da1089bd16749aef5662d7ff3453f7b5da91c8beed8fe49"
+    },
+    {
+      "path": "docs/mechanics-depth/firefox-review/route-action-layout-finding",
+      "manifestSHA256": "52ee78befab2921b88d0176850af41f4b250f0fc8f96b7e145e5aa42baf65401"
+    }
+  ]
+}
