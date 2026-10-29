@@ -884,6 +884,57 @@ function defenseLeadTurn(state, faction, act) {
   if (candidates.length) act({ type: 'leadDefense', fleetId: candidates[0].fleet.id });
 }
 
+/** A bounded, observer-safe opportunity estimate; it neither reserves nor spends. */
+export function getEarlyEcologyPlan(state, factionId) {
+  const faction = factionOf(state, factionId);
+  if (!faction || state.winner || faction.eliminated || faction.research || state.turn > 30 || !faction.techs.length || faction.techs.includes('ecology') || faction.techs.includes('terraforming')) return null;
+  if (Object.values(faction.relations).some(relation => relation.status === 'war') || threatsToColonies(state, faction).length) return null;
+  const colonies = state.systems.filter(system => system.owner === faction.id);
+  if (!colonies.length || colonies.length >= 3 || !canPay(faction, { credits: 30, minerals: 20 })) return null;
+  const stats = getEmpireStats(state, faction.id);
+  if (stats.creditIncome <= SHIPS.colony.upkeep || stats.mineralIncome <= 0 || stats.scienceIncome <= 0) return null;
+  const researchCycles = Math.ceil(Math.max(0, TECHS.ecology.cost - faction.science) / stats.scienceIncome);
+  const worlds = getVisibleSystems(state, faction.id).filter(system => !system.owner && surveyed(system, faction) && !observedEnemies(state, faction, system.id).length);
+  const harsh = worlds.filter(system => system.habitability >= 30 && system.habitability < 50);
+  if (!harsh.length) return null;
+  const ordinary = worlds.filter(system => system.habitability >= 50);
+  const arks = ownFleets(state, faction).filter(fleet => fleet.type === 'colony').map(fleet => ({ fleet, readyCycles: fleet.movesLeft > 0 ? 0 : 1, earliestReadyCycles: fleet.movesLeft > 0 ? 0 : 1, shipyardId: null }));
+  for (const colony of colonies.filter(system => system.queue?.kind === 'ship' && system.queue.itemId === 'colony')) {
+    const readyCycles = Math.ceil((colony.queue.work - colony.queue.progress) / getSystemYield(state, colony).production);
+    if (readyCycles > 4) continue;
+    // Normal growth can launch an Ark before the current-production estimate.
+    // Bound that timing by allowing one population gain per completed cycle.
+    let remainingWork = colony.queue.work - colony.queue.progress, earliestReadyCycles = 0;
+    while (remainingWork > 0) {
+      remainingWork -= getSystemYield(state, { ...colony, population: colony.population + earliestReadyCycles }).production;
+      earliestReadyCycles++;
+    }
+    arks.push({ fleet: { owner: faction.id, systemId: colony.id, type: 'colony', ships: 1, hp: SHIPS.colony.hp }, readyCycles, earliestReadyCycles, shipyardId: colony.id });
+  }
+  const plans = [];
+  for (const ark of arks) {
+    const alternatives = ordinary.map(system => ({ system, travel: route(state, faction, ark.fleet, system.id, { peaceful: true }) })).filter(item => item.travel)
+      .sort((a, b) => a.travel.cost - b.travel.cost || a.system.id.localeCompare(b.system.id));
+    // An existing Ark would depart for an ordinary world during research.
+    // Only compare better routes when Ecology is ready before its launch.
+    if (alternatives.length && researchCycles > ark.earliestReadyCycles) continue;
+    for (const system of harsh) {
+      const travel = route(state, faction, ark.fleet, system.id, { peaceful: true });
+      if (!travel || travel.path.length - 1 > 3) continue;
+      const jumps = travel.path.length - 1, arrivalCycles = Math.max(researchCycles, ark.readyCycles) + jumps;
+      if (arrivalCycles > 12 || alternatives.length && jumps + 2 > alternatives[0].travel.path.length - 1) continue;
+      // Announced border closures are known constraints, not future access.
+      if (travel.path.some(id => {
+        const owner = systemOf(state, id).owner, relation = faction.relations[owner];
+        return owner && owner !== faction.id && (!relation?.trade || relation.tradeEndsAt && relation.tradeEndsAt <= state.turn + arrivalCycles);
+      })) continue;
+      plans.push({ systemId: system.id, habitability: system.habitability, path: [...travel.path], fleetId: ark.fleet.id || null, shipyardId: ark.shipyardId, researchCycles, readyCycles: ark.readyCycles, earliestReadyCycles: ark.earliestReadyCycles, jumps, arrivalCycles,
+        ordinaryAlternative: alternatives.length ? { systemId: alternatives[0].system.id, jumps: alternatives[0].travel.path.length - 1 } : null });
+    }
+  }
+  return plans.sort((a, b) => a.arrivalCycles - b.arrivalCycles || a.jumps - b.jumps || a.systemId.localeCompare(b.systemId))[0] || null;
+}
+
 export function runAI(state, faction) {
   if (!faction || faction.eliminated || state.winner) return;
   const id = faction.id;
@@ -892,6 +943,7 @@ export function runAI(state, faction) {
   if (!faction.research) {
     const priorities = id === 'khar' ? ['weapons', 'logistics', 'shields', 'cruisers', 'industry', 'physics', 'ecology', 'computing', 'singularity', 'diplomacy', 'command', 'terraforming'] : id === 'choir' ? ['physics', 'logistics', 'computing', 'industry', 'singularity', 'ecology', 'weapons', 'diplomacy', 'shields', 'command', 'cruisers', 'terraforming'] : ['logistics', 'ecology', 'diplomacy', 'industry', 'physics', 'computing', 'weapons', 'singularity', 'command', 'shields', 'cruisers', 'terraforming'];
     if (needsAlignmentIncome(state, faction)) priorities.unshift('ecology', 'logistics', 'diplomacy', 'industry');
+    if (getEarlyEcologyPlan(state, id)) priorities.unshift('ecology');
     const options = getResearchOptions(state, id);
     const techId = priorities.find(tech => options.some(option => option.id === tech && option.enabled));
     if (techId) act({ type: 'research', techId });
