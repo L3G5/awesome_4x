@@ -1,0 +1,9 @@
+.turn-actions { display: flex; gap: 8px; align-items: stretch; }
+.turn-actions .end-turn { flex: 1; min-width: 0; }
+.undo-action { flex: 0 0 auto; font-size: 11px; padding: 10px; white-space: nowrap; }
+.undo-action:disabled { opacity: .45; }
+.modal-undo { position: absolute; left: 15px; top: 14px; z-index: 2; padding: 6px 10px; font-size: 11px; }
+@media (min-width: 661px) and (max-width: 1450px) {
+  .turn-actions .end-turn kbd { display: none; }
+}
+html[lang="ru"] .turn-actions .end-turn { letter-spacing: .03em; }

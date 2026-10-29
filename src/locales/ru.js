@@ -1602,5 +1602,13 @@ export const russian = {
   "Unchanged": "Без изменений",
   "All colony routes": "Все маршруты к колониям",
   "Current borders apply. Jumps are not travel time.": "Учитываются текущие границы. Число прыжков не означает время в пути.",
-  "Capital": "Столица"
+  "Capital": "Столица",
+  "Undo": "Отменить",
+  "↶ Undo": "↶ Отменить",
+  "Undo last action (Ctrl/Cmd+Z)": "Отменить последнее действие (Ctrl/Cmd+Z)",
+  "No actions to undo this cycle": "В этом цикле нет действий для отмены",
+  "Action undone. You can revise your orders before ending this cycle.": "Действие отменено. До завершения цикла вы можете изменить свои приказы.",
+  "● AUTOSAVED · UNDO IN THIS TAB": "● СОХРАНЕНО · ОТМЕНА В ЭТОЙ ВКЛАДКЕ",
+  "Undo restores actions within this cycle. Ending the cycle, importing a save or starting a campaign clears undo history.": "Отмена возвращает действия в пределах текущего цикла. Завершение цикла, импорт сохранения или начало кампании очищает историю отмены.",
+  "Undo history is available only in this tab until it closes or reloads.": "История отмены доступна только в этой вкладке до её закрытия или перезагрузки."
 };

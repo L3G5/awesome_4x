@@ -31,6 +31,10 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 
 ## Commands
 
+The browser wraps player commands with `src/turn-history.js`. `applyTurnCommand(state, action, history, context)` executes on a clone and returns `{state,result}`; only successful state changes enter history. `TurnHistory` stores exact JSON snapshots, including RNG, observations, IDs, offers and reports. Undo restores the prior campaign and presentation context. Repeating the same command therefore produces the same random outcome. Failed commands, no-op acknowledgements and presentation changes create no undo step.
+
+`applyTurnBoundary(state, history)` clears history after every successful `endTurn`, including a victory that ends resolution without incrementing the turn counter. Confirmed import and new campaign also clear it. The canonical export format is unchanged: browser history is separate under `asterion-reach-undo-v1`, validated against the exact current save and same seed/cycle before restoration. `persistTurnHistory` removes old history before writing the current campaign, then writes history; storage pressure may preserve the campaign while retaining undo only in memory. No cross-cycle undo or redo API is exposed.
+
 Ordinary commands cost one order. Research, cancellation, route planning/clearing and advisory Hold/Resume are free; continuing a course pays for each executed jump. Movement and attacking also consume one fleet move. Colonizing can occur after the ark has moved.
 
 A civilian move into an unseen hostile fleet is a **consumed expedition**, returning `{ok:true,outcome:'intercepted',message}`. It spends one order and one move, retains the origin, establishes contact and logs the observed ship count without surveying the destination or granting ongoing sensors. A visible blockade instead returns a normal `{ok:false,message}` without cost or mutation. Callers should not retry an intercepted jump automatically. Warships may enter unscouted opposition and engage normally.

@@ -12,6 +12,8 @@ import './reinforcement.css';
 import './conclusion.css';
 import './planning-feedback.css';
 import './localization.css';
+import './undo.css';
+import { TurnHistory, applyTurnCommand, applyTurnBoundary, persistTurnHistory } from './turn-history.js';
 import './mobile-inspection.css';
 import { localizeInterface } from './localization.js';
 import { GalaxyView } from './galaxy.js';
@@ -44,10 +46,11 @@ import { getNavigationView, renderRouteStrip } from './navigation-ui.js';
 import { renderDevelopmentSummary, renderConstructionMenu } from './development-ui.js';
 import { renderAlignmentCard, renderPublicRaces, renderBeaconInspector } from './victory-ui.js';
 import { getAlignmentStatus, getPublicRaces, revealPublicBeacons } from './victory.js';
-import { createGame, command, endTurn, getEmpireStats, getSystemYield, getVisibleSystems, getNeighbors, getBuildOptions, getConstructionProject, getResearchOptions, getVictoryProgress, fleetPower, estimateCombat, estimateInvasion, getCombatReport, validateSave } from './game.js';
+import { createGame, getEmpireStats, getSystemYield, getVisibleSystems, getNeighbors, getBuildOptions, getConstructionProject, getResearchOptions, getVictoryProgress, fleetPower, estimateCombat, estimateInvasion, getCombatReport, validateSave } from './game.js';
 import { FACTIONS, TECHS, BUILDINGS, SHIPS, ANOMALIES, PLANET_TYPES } from './content.js';
 
 const SAVE_KEY = 'asterion-reach-save-v1';
+const UNDO_KEY = 'asterion-reach-undo-v1';
 const SETTINGS_KEY = 'asterion-reach-settings-v1';
 const LANGUAGE_KEY = 'asterion-reach-language-v1';
 let language = 'en';
@@ -74,6 +77,9 @@ try { const saved = JSON.parse(localStorage.getItem(SAVE_KEY)); if (validateSave
 const isNew = !state;
 state ||= createGame('ASTERION');
 revealPublicBeacons(state);
+const turnHistory = new TurnHistory(validateSave);
+try { turnHistory.restore(localStorage.getItem(UNDO_KEY), state); } catch {}
+let undoPersisted = true;
 let selectedSystemId = state.factions.find(f => f.id === 'player').capitalId;
 const mobileViewport = matchMedia('(max-width:660px)');
 let selectedFleetId = mobileViewport.matches ? null : state.fleets.find(f => f.owner === 'player' && f.type === 'scout')?.id || null;
@@ -91,14 +97,23 @@ $('#app').innerHTML = `<div class="app-shell">
   <header class="topbar"><div class="brand"><div class="brand-mark">${icon('mark',34)}</div><div><h1>ASTERION REACH</h1><small>THE STARS REMEMBER</small></div></div><div class="resources" id="resources"></div><div class="top-actions"><button class="language-toggle" data-action="language" translate="no">Русский</button><button data-action="briefing" id="briefing-button" aria-label="Latest cycle briefing" title="Latest cycle briefing">${icon('journal')}</button><a href="./guide.html" target="_blank" rel="noopener" aria-label="Open field guide" title="Field guide (?)">${icon('help')}</a><button data-action="menu" aria-label="Game menu" title="Game menu">${icon('menu')}</button></div></header>
   <nav class="rail" aria-label="Command views">${[['galaxy','Galaxy'],['research','Research'],['diplomacy','Diplomacy'],['empire','Empire'],['journal','Chronicle']].map(([id,label],i)=>`<button data-page="${id}" class="${id==='galaxy'?'active':''}" title="${label} (${i+1})">${icon(id)}<span>${label}</span></button>`).join('')}<div class="rail-bottom"><button data-action="home" title="Focus homeworld (H)">${icon('home')}<span>Home</span></button></div></nav>
   <main class="main-stage"><div class="galaxy-page" id="galaxy-page"><div class="map-canvas" id="galaxy" aria-label="Interactive galaxy map"></div><div class="map-heading"><div class="eyebrow">CONCORD EXPLORATION AUTHORITY</div><h2>The Asterion Reach</h2><p id="map-meta"></p></div><div class="map-tools"><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="zoom-out" aria-label="Zoom out">−</button><button data-action="reset-view" title="Fit galaxy" aria-label="Fit galaxy">⌖</button></div><div class="map-message" id="mandate"></div><div class="map-caption">PER ASPERA, AD ASTRA</div><div class="map-legend"><span><i></i>CONCORD</span><span><i style="background:#d9bd7c"></i>CHARTED</span><span><i style="background:#596a82"></i>UNKNOWN</span><span class="founding-legend">⌂ FOUNDING WORLD</span><span class="dormant-legend" hidden>DORMANT LANE</span></div><div class="fleet-bar" id="fleet-bar"></div></div><div class="workspace-page" id="workspace-page" hidden></div></main>
-  <aside class="inspector" aria-label="System inspector"><div class="inspector-content" id="inspector"></div><div class="turn-panel"><div class="turn-meta"><b id="turn-number"></b><span id="turn-year"></span></div><button class="primary end-turn" data-action="end-turn" id="end-turn"><span>End cycle →</span><kbd>SPACE</kbd></button><div class="turn-hint" id="turn-hint"></div></div></aside>
+  <aside class="inspector" aria-label="System inspector"><div class="inspector-content" id="inspector"></div><div class="turn-panel"><div class="turn-meta"><b id="turn-number"></b><span id="turn-year"></span></div><div class="turn-actions"><button class="primary end-turn" data-action="end-turn" id="end-turn"><span>End cycle →</span><kbd>SPACE</kbd></button><button class="undo-action" data-action="undo" id="undo-action" title="Undo last action (Ctrl/Cmd+Z)" disabled>↶ Undo</button></div><div class="turn-hint" id="turn-hint"></div></div></aside>
   <footer class="statusbar"><span class="status-message" id="status-message">Your mandate begins among the stars.</span><span class="version">ASTERION REACH <span class="green">/</span> EARLY ACCESS ${__APP_VERSION__}</span><span id="save-status">LOCAL CAMPAIGN</span></footer></div><div id="modal-root"></div><div class="toast-stack" id="toasts" role="status" aria-live="polite"></div><input class="sr-only" type="file" id="import-save" accept="application/json,.json" aria-label="Import campaign save" tabindex="-1" />`;
 
 const localization = localizeInterface(document.body, language);
 const galaxy = new GalaxyView($('#galaxy'), { onSelect: selectSystem, onFleetSelect: selectFleet });
 function save() {
-  try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); saveError = false; $('#save-status').textContent = '● AUTOSAVED'; }
-  catch { if (!saveError) toast('Autosave unavailable. Export your campaign from the menu.', true); saveError = true; $('#save-status').textContent = 'SAVE UNAVAILABLE'; }
+  let result;
+  try { result = persistTurnHistory(localStorage, SAVE_KEY, UNDO_KEY, state, turnHistory); }
+  catch { result = { saved: false, historySaved: false }; }
+  undoPersisted = result.historySaved;
+  if (result.saved) {
+    saveError = false;
+    $('#save-status').textContent = undoPersisted ? '● AUTOSAVED' : '● AUTOSAVED · UNDO IN THIS TAB';
+  } else {
+    if (!saveError) toast('Autosave unavailable. Export your campaign from the menu.', true);
+    saveError = true; $('#save-status').textContent = 'SAVE UNAVAILABLE';
+  }
 }
 function saveSettings() { try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch {} }
 function toast(message, error = false) {
@@ -121,15 +136,55 @@ function deselectFleet({ focus = false } = {}) {
 }
 mobileViewport.addEventListener('change', event => { if (event.matches) deselectFleet(); });
 function setPage(value) { const changed=page!==value;page = value; galaxy.setPaused?.(Boolean(modalType) || page !== 'galaxy'); $('#galaxy-page').hidden = page !== 'galaxy'; $('#workspace-page').hidden = page === 'galaxy'; document.querySelectorAll('[data-page]').forEach(el => { el.classList.toggle('active',el.dataset.page === page); el.setAttribute('aria-current',el.dataset.page === page ? 'page' : 'false'); }); renderPage(); renderInspector(); $('#inspector').scrollTop=0; if(changed)$('#workspace-page').scrollTop=0; }
+function commandContext() {
+  return {
+    selectedSystemId, selectedFleetId, selectedRivalId, page,
+    colonySort, colonySortDirection, researchFilter, logFilter,
+    workspaceScroll: $('#workspace-page').scrollTop,
+    colonyScroll: $('.colony-scroll')?.scrollLeft || 0,
+    inspectorScroll: $('#inspector').scrollTop,
+  };
+}
+function updateUndoControls() {
+  document.querySelectorAll('[data-action="undo"]').forEach(button => {
+    button.disabled = !turnHistory.size;
+    button.title = turnHistory.size ? 'Undo last action (Ctrl/Cmd+Z)' : 'No actions to undo this cycle';
+  });
+}
+function undoAction() {
+  const restored = turnHistory.undo(state);
+  if (!restored) { updateUndoControls(); return; }
+  closeModal(); constructionOrigin = null;
+  state = restored.state;
+  const context = restored.context;
+  const system = systemById(context.selectedSystemId);
+  selectedSystemId = system && (system.owner === 'player' || system.knownBy.includes('player') || system.exploredBy.includes('player')) ? system.id : player().capitalId;
+  selectedFleetId = fleetById(context.selectedFleetId)?.owner === 'player' ? context.selectedFleetId : null;
+  selectedRivalId = player().contacts.includes(context.selectedRivalId) ? context.selectedRivalId : null;
+  colonySort = ['name','credits','minerals','science','production'].includes(context.colonySort) ? context.colonySort : 'name';
+  colonySortDirection = context.colonySortDirection === 'desc' ? 'desc' : 'asc';
+  researchFilter = ['All','Engineering','Society','Physics','Military'].includes(context.researchFilter) ? context.researchFilter : 'All';
+  logFilter = ['All','discovery','construction','research','combat','diplomacy','war','sovereignty'].includes(context.logFilter) ? context.logFilter : 'All';
+  setPage(['galaxy','research','diplomacy','empire','journal'].includes(context.page) ? context.page : 'galaxy');
+  save(); render(); localization.setLanguage(language);
+  $('#workspace-page').scrollTop = context.workspaceScroll || 0;
+  if ($('.colony-scroll')) $('.colony-scroll').scrollLeft = context.colonyScroll || 0;
+  $('#inspector').scrollTop = context.inspectorScroll || 0;
+  (turnHistory.size ? $('#undo-action') : $('#end-turn')).focus({ preventScroll: true });
+  toast('Action undone. You can revise your orders before ending this cycle.');
+}
 function dispatch(action) {
-  const result = command(state, action);
+  const applied = applyTurnCommand(state, action, turnHistory, commandContext());
+  const result = applied.result;
   if (!result.ok) { toast(result.message, true); return false; }
+  state = applied.state;
   if(action.type==='split'&&result.newFleetId){selectedFleetId=result.newFleetId;selectedSystemId=fleetById(selectedFleetId).systemId;}
   if (['move','continueRoute'].includes(action.type) && fleetById(action.fleetId)) selectedSystemId = fleetById(action.fleetId).systemId;
   if (selectedFleetId && !fleetById(selectedFleetId)) selectedFleetId = null;
   save(); render(); toast(result.combatReports?.length ? `${result.combatReports.length} combat report${result.combatReports.length>1?'s':''} recorded.` : result.message); if (state.winner) showVictory(); else if(result.combatReports?.length)showReports(result.combatReports.map(r=>r.id)); return true;
 }
 function render() {
+  updateUndoControls();
   const p = player(), stats = getEmpireStats(state);
   const outlook = getAlignmentOutlook(state);
   const showIncomeScope = !state.winner && (stats.beacons > 0 || p.alignment?.started);
@@ -253,7 +308,7 @@ function renderPage() {
 function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
   $('#toasts').replaceChildren();
-  modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><button class="language-toggle modal-language" data-action="language" translate="no">Русский</button><div class="modal-content">${html}</div></section></div>`;
+  modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><button class="language-toggle modal-language" data-action="language" translate="no">Русский</button><div class="modal-content">${html}</div>${turnHistory.size?'<button class="modal-undo" data-action="undo" title="Undo last action (Ctrl/Cmd+Z)">↶ Undo</button>':''}</section></div>`;
   const focusTarget=type==='combat-report'||type==='conclusion'||type==='build'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'||type==='conclusion'});
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
@@ -310,7 +365,7 @@ function showFleetHeritage(fleetId) {
   openModal('heritage',`<div class="eyebrow">CONCORD FLEET HERITAGE</div><h2 id="modal-title">${escape(fleet.name)}</h2><div class="heritage-portrait">${renderShipPortrait(fleet.type,fleet.owner,true)}</div><p class="modal-lead">The discoveries carried forward by this task force. These records survive mergers; they do not imply that every original hull remains.</p><div class="discovery-history">${(fleet.heritage||[]).map(entry=>`<article class="discovery-history-entry"><div class="discovery-history-meta">RECOVERED IN CYCLE ${entry.turn} · ${escape(FACTIONS[entry.factionId].shortName)}</div><h3>${escape(entry.name)}</h3><p>Recovered from ${escape(systemById(entry.systemId).name)}. The expedition's story remains with this fleet.</p><button class="small-button ghost" data-action="heritage-origin" data-system="${entry.systemId}">Read the expedition record →</button></article>`).join('')}</div>`);
 }
 function showMenu() {
-  openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · <span translate="no">${escape(state.seed)}</span> · The Concord</p><div class="menu-grid">${state.winner?'<button data-action="show-conclusion">Review this age</button>':''}<button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
+  openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · <span translate="no">${escape(state.seed)}</span> · The Concord</p><div class="menu-grid">${state.winner?'<button data-action="show-conclusion">Review this age</button>':''}<button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><p class="save-meta">${undoPersisted?'Undo restores actions within this cycle. Ending the cycle, importing a save or starting a campaign clears undo history.':'Undo history is available only in this tab until it closes or reloads.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
 }
 function briefingKey() {
   return state.lastBriefing ? `${state.seed}:${state.lastBriefing.turn}:${state.lastBriefing.entries[0]?.id || 0}` : '';
@@ -368,7 +423,7 @@ function advanceTurn(force=false) {
     openModal('end-confirm',`<div class="eyebrow">BEFORE THE NEXT CYCLE</div><h2 id="modal-title">Conclude your mandate?</h2><p class="modal-lead">${stats.orders} orders remain${idle?`, and ${idle} ${idle===1?'fleet awaits':'fleets await'} orders`:''}. Unused orders do not carry over.${unassignedResearch?' Your researchers have no assigned project; their science will remain in reserve.':''}</p><p class="empty-note">Rival empires will act, colonies will grow, production and research will advance, and your orders will replenish.</p><div class="modal-actions"><button data-action="close-modal">Keep planning</button><button class="primary" data-action="end-turn-confirm">End cycle →</button></div>`); return;
   }
   const previousRaces=getPublicRaces(state);
-  closeModal(); const result=endTurn(state); if (!result.ok) return toast(result.message,true);
+  closeModal(); const applied=applyTurnBoundary(state,turnHistory); const result=applied.result; if (!result.ok) return toast(result.message,true); state=applied.state;
   previousTurn=state.turn-1; save(); render(); toast(result.message);
   if (state.winner) showVictory();
   else {
@@ -394,7 +449,7 @@ $('#import-save').addEventListener('change',async event=>{
   const file=event.target.files[0]; event.target.value=''; if (!file) return;
   try { if (file.size>3_000_000) throw new Error('Save file is too large.'); const candidate=JSON.parse(await file.text()); if (!validateSave(candidate)) throw new Error('This file is not a valid Asterion Reach campaign.');
     openModal('confirm-import',`<div class="eyebrow">RESTORE A CAMPAIGN</div><h2 id="modal-title">Return to cycle ${candidate.turn}?</h2><p class="modal-lead">This will replace the current autosave. Export your current campaign first if you want to keep it.</p><div class="modal-actions"><button data-action="export">Export current</button><button id="confirm-import" class="primary">Restore campaign</button></div>`);
-    $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=mobileViewport.matches?null:state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
+    $('#confirm-import').addEventListener('click',()=>{state=candidate;turnHistory.clear();revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=mobileViewport.matches?null:state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
   } catch(error){toast(error.message,true);}
 });
 document.addEventListener('change',event=>{if(event.target.id==='merge-partner'){showMerge(event.target.dataset.fleetTarget,event.target.value);$('#merge-partner')?.focus();}if(event.target.id==='split-ships'){showSplit(event.target.dataset.fleetTarget,Number(event.target.value));$('#split-ships')?.focus();}if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
@@ -408,6 +463,7 @@ document.addEventListener('click',event=>{
   if (el.dataset.logFilter) {logFilter=el.dataset.logFilter;renderPage();$('#workspace-page [data-log-filter].active')?.focus();return;}
   const action=el.dataset.action;
   switch(action){
+    case 'undo':undoAction();break;
     case 'language':
       language = language === 'ru' ? 'en' : 'ru';
       try { localStorage.setItem(LANGUAGE_KEY, language); } catch {}
@@ -492,11 +548,15 @@ document.addEventListener('click',event=>{
     case 'export':exportSave();break;
     case 'import':$('#import-save').click();break;
     case 'new-game-menu':openModal('new-game',`<div class="eyebrow">ANOTHER POSSIBLE FUTURE</div><h2 id="modal-title">Begin a new age</h2><p class="modal-lead">A new campaign replaces your autosave. Export this campaign from the menu if you want to return to it.</p><label class="form-label" for="galaxy-seed">Galaxy seed · the same seed creates the same frontier</label><input id="galaxy-seed" maxlength="48" value="${escape(`REACH-${Math.floor(Math.random()*90000+10000)}`)}"><div class="modal-actions"><button data-action="export">Export current</button><button class="primary" data-action="new-game-confirm">Begin campaign →</button></div>`);break;
-    case 'new-game-confirm':state=createGame($('#galaxy-seed').value.trim()||'ASTERION');selectedSystemId='s0';selectedFleetId=mobileViewport.matches?null:state.fleets.find(f=>f.owner==='player'&&f.type==='scout').id;closeModal();setPage('galaxy');save();render();galaxy.reset();showWelcome();break;
+    case 'new-game-confirm':state=createGame($('#galaxy-seed').value.trim()||'ASTERION');turnHistory.clear();selectedSystemId='s0';selectedFleetId=mobileViewport.matches?null:state.fleets.find(f=>f.owner==='player'&&f.type==='scout').id;closeModal();setPage('galaxy');save();render();galaxy.reset();showWelcome();break;
   }
 });
 document.addEventListener('change',event=>{if(event.target.id==='starlane-builder'){buildMenu(event.target.value,'starlane');$('#starlane-builder')?.focus();}});
 document.addEventListener('keydown',event=>{
+  const editing = event.target.matches('input,textarea,select') || event.target.isContentEditable;
+  if ((event.ctrlKey || event.metaKey) && !event.altKey && !event.shiftKey && (event.code==='KeyZ' || event.key.toLowerCase()==='z') && !editing) {
+    event.preventDefault(); if (!event.repeat) undoAction(); return;
+  }
   if (modalType) {
     if (event.key==='Escape'){event.preventDefault();closeModal();}
     if(event.key==='Tab'){const focusable=[...document.querySelectorAll('.modal button:not(:disabled),.modal a[href],.modal input:not(:disabled),.modal select:not(:disabled),.modal textarea:not(:disabled),.modal summary,.modal [tabindex]')].filter(el=>el.tabIndex>=0&&el.getClientRects().length&&!el.matches(':disabled'));const first=focusable[0],last=focusable.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}}
