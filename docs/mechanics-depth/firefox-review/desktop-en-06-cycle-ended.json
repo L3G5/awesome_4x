@@ -1,0 +1,25 @@
+{
+  "sha256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+  "turn": 2,
+  "text": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n147+7\nCREDITS\n◇\n119+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n6 / 6\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\n✧\nResonance Theory · 4 / 60 science · 14 cycles remaining\nAll\nEngineering\nSociety\nPhysics\nMilitary\nPHYSICS\n✧ 60\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nIn progress\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nCONCORD RESEARCH COUNCIL\nYour archives\n\n0 of 12 sciences recovered\n\n+4\nscience each cycle\n0 in reserve\nCOMMISSIONED RESEARCH\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\n4 / 60 science · 14 cycles at current output\n\nTHIS BREAKTHROUGH OPENS\nDeflector Fields\nResearch becomes available\nQuantum Archives\nResearch becomes available\nRESEARCH WORLDS\nSolace\n4 science / cycle\n↗\nCycle 02\n2401 CE\nEND CYCLE →\n↶ Undo\n6 orders remaining · 1 colony\nTurn 2: a new mandate begins.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nTurn 2: a new mandate begins.",
+  "focus": {
+    "tag": "BUTTON",
+    "id": "end-turn",
+    "action": "end-turn",
+    "text": "End cycle →SPACE",
+    "visible": true,
+    "rect": {
+      "x": 1139,
+      "y": 880,
+      "width": 209.9166717529297,
+      "height": 46
+    }
+  },
+  "ui": {
+    "width": 1440,
+    "height": 1000,
+    "scrollWidth": 1440,
+    "language": "en",
+    "page": "research"
+  }
+}

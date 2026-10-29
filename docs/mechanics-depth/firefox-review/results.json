@@ -1,0 +1,49 @@
+[
+  {
+    "name": "desktop-en",
+    "pass": true,
+    "activation": "Enter",
+    "afterFocus": {
+      "tag": "BUTTON",
+      "id": "undo-action",
+      "action": "undo",
+      "text": "↶ Undo",
+      "visible": true,
+      "rect": {
+        "x": 1356.9166259765625,
+        "y": 880,
+        "width": 61.08332824707031,
+        "height": 46
+      }
+    },
+    "originalSHA256": "264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db",
+    "researchedSHA256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "builtSHA256": "929d7af549911df321e6c8b0ca4dd97ee840e1922d1deb5140c81ddbcf0082a5",
+    "endedSHA256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+    "paidCredits": 30,
+    "paidMinerals": 30
+  },
+  {
+    "name": "narrow-ru",
+    "pass": true,
+    "activation": "Space",
+    "afterFocus": {
+      "tag": "H2",
+      "id": "",
+      "text": "Конкорд",
+      "visible": true,
+      "rect": {
+        "x": 63,
+        "y": 135,
+        "width": 312,
+        "height": 31
+      }
+    },
+    "originalSHA256": "264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db",
+    "researchedSHA256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "builtSHA256": "929d7af549911df321e6c8b0ca4dd97ee840e1922d1deb5140c81ddbcf0082a5",
+    "endedSHA256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+    "paidCredits": 30,
+    "paidMinerals": 30
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "source": "635e8256af87327aa8a4eab92bb6d95baede5fe5",
+  "build": "0.23.0 at http://127.0.0.1:41371",
+  "browser": "Firefox 146.0.1",
+  "scope": "Independent bounded Undo and mobile inspection acceptance; no broad suite rerun. Fresh default campaigns, ordinary UI commands, no synthetic save edits or engine mutations. The read-only state hook supplies exact equality checks.",
+  "contexts": [
+    {
+      "viewport": "1440×1000",
+      "language": "en",
+      "hasTouch": false
+    },
+    {
+      "viewport": "390×844",
+      "language": "ru",
+      "hasTouch": true
+    },
+    {
+      "viewport": "640×390",
+      "language": "ru",
+      "hasTouch": true,
+      "description": "Resized continuation of the independent narrow movement context."
+    }
+  ],
+  "isMobile": false,
+  "functionalAcceptance": "pass",
+  "exactStateEqualityAssertions": 22,
+  "paidProject": {
+    "credits": 30,
+    "minerals": 30
+  },
+  "ordinaryMovement": {
+    "orders": 1,
+    "movement": 1,
+    "from": "Solace",
+    "to": "Sundrift",
+    "repeatedExactlyAtLandscape": true
+  },
+  "pageErrors": 0,
+  "failedHTTPResponses": 0,
+  "findings": [
+    {
+      "severity": "minor localization",
+      "text": "Up to 1 приказ now; stops for new contacts, discoveries or combat.",
+      "observation": "mobile-05.json",
+      "screenshot": "mobile-paid-movement.png"
+    },
+    {
+      "severity": "minor localization",
+      "text": "· Holding position",
+      "observation": "mobile-07.json",
+      "screenshot": "mobile-movement-undone.png"
+    }
+  ],
+  "driverNotes": [
+    "The first mobile driver launch had a closed stdin stream after startup; it was terminated by its exact own Node PID without performing any campaign actions. A fresh isolated context performed the recorded requests. Both start entries are retained.",
+    "Request 8 resized successfully, then used an absent self-target connection selector because Undo had already restored the target Sundrift. Request 9 used the already-visible Move button and matched the prior moved state exactly. This is a driver error, not a product defect."
+  ]
+}

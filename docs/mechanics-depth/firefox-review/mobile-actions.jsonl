@@ -1,0 +1,45 @@
+{"type":"start","browser":"146.0.1","viewport":{"width":390,"height":844},"hasTouch":true,"isMobile":false,"language":"ru","at":"2026-10-29T18:01:04.410Z"}
+{"type":"start","browser":"146.0.1","viewport":{"width":390,"height":844},"hasTouch":true,"isMobile":false,"language":"ru","at":"2026-10-29T18:01:52.765Z"}
+{"type":"request","n":1,"request":{"save":"initial","assertInspection":true,"actions":[{"tap":".galaxy-system-label[data-system-id=\"s9\"]"}],"screenshot":"mobile-world-inspection","note":"Tap Velorum in the fresh Russian narrow view; inspect without selecting a fleet."},"at":"2026-10-29T18:01:59.446Z"}
+{"type":"action-complete","n":1,"action":{"tap":".galaxy-system-label[data-system-id=\"s9\"]"},"at":"2026-10-29T18:01:59.519Z"}
+{"type":"state-pin","n":1,"name":"initial","sha256":"264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db","at":"2026-10-29T18:01:59.533Z"}
+{"type":"inspection-pass","n":1,"at":"2026-10-29T18:01:59.540Z"}
+{"type":"request","n":2,"request":{"actions":[{"tap":".galaxy-fleet[data-fleet-id=\"f1\"]"},{"tap":"#inspector .building-pills [data-system-select=\"s20\"]"},{"tap":"#inspector .building-pills [data-system-select=\"s9\"]"}],"equal":"initial","screenshot":"mobile-explicit-route-preview","note":"Explicitly select the Pathfinder, then inspect the visible Sundrift→Velorum connection to preview a two-jump course."},"at":"2026-10-29T18:02:21.680Z"}
+{"type":"action-complete","n":2,"action":{"tap":".galaxy-fleet[data-fleet-id=\"f1\"]"},"at":"2026-10-29T18:02:21.748Z"}
+{"type":"action-complete","n":2,"action":{"tap":"#inspector .building-pills [data-system-select=\"s20\"]"},"at":"2026-10-29T18:02:21.884Z"}
+{"type":"action-complete","n":2,"action":{"tap":"#inspector .building-pills [data-system-select=\"s9\"]"},"at":"2026-10-29T18:02:21.936Z"}
+{"type":"state-equal","n":2,"name":"initial","sha256":"264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db","at":"2026-10-29T18:02:21.950Z"}
+{"type":"request","n":3,"request":{"actions":[{"tap":"[data-action=\"plan-route\"]"},{"tap":"[data-action=\"fleet-hold\"]"}],"save":"heldRoute","screenshot":"mobile-held-route","note":"Plot the visible two-jump course and hold it using ordinary free controls."},"at":"2026-10-29T18:02:28.188Z"}
+{"type":"action-complete","n":3,"action":{"tap":"[data-action=\"plan-route\"]"},"at":"2026-10-29T18:02:28.234Z"}
+{"type":"action-complete","n":3,"action":{"tap":"[data-action=\"fleet-hold\"]"},"at":"2026-10-29T18:02:28.299Z"}
+{"type":"state-pin","n":3,"name":"heldRoute","sha256":"61b6f9e5b96669fcdb56c5b1f4132c0356ac6a07b83c48c054944d12c269f6f0","at":"2026-10-29T18:02:28.310Z"}
+{"type":"request","n":4,"request":{"actions":[{"tap":"[data-action=\"close-fleet-controls\"]"}],"equal":"heldRoute","assertInspection":true,"screenshot":"mobile-route-closed","note":"Close the fleet panel; route, Hold, resources and entire campaign state must remain unchanged."},"at":"2026-10-29T18:02:28.376Z"}
+{"type":"action-complete","n":4,"action":{"tap":"[data-action=\"close-fleet-controls\"]"},"at":"2026-10-29T18:02:28.420Z"}
+{"type":"state-equal","n":4,"name":"heldRoute","sha256":"61b6f9e5b96669fcdb56c5b1f4132c0356ac6a07b83c48c054944d12c269f6f0","at":"2026-10-29T18:02:28.437Z"}
+{"type":"inspection-pass","n":4,"at":"2026-10-29T18:02:28.444Z"}
+{"type":"request","n":5,"request":{"actions":[{"tap":"#fleet-bar [data-action=\"fleet-roster\"]"},{"tap":".modal [data-fleet=\"f1\"]"},{"tap":"#inspector .building-pills [data-system-select=\"s20\"]"},{"tap":"[data-action=\"move\"]"}],"assertMove":"heldRoute","save":"moved","screenshot":"mobile-paid-movement","note":"Reopen the roster, explicitly select the held scout, and move one adjacent jump to surveyed Sundrift. Verify one order and one movement spent."},"at":"2026-10-29T18:02:40.029Z"}
+{"type":"action-complete","n":5,"action":{"tap":"#fleet-bar [data-action=\"fleet-roster\"]"},"at":"2026-10-29T18:02:40.053Z"}
+{"type":"action-complete","n":5,"action":{"tap":".modal [data-fleet=\"f1\"]"},"at":"2026-10-29T18:02:40.119Z"}
+{"type":"action-complete","n":5,"action":{"tap":"#inspector .building-pills [data-system-select=\"s20\"]"},"at":"2026-10-29T18:02:40.170Z"}
+{"type":"action-complete","n":5,"action":{"tap":"[data-action=\"move\"]"},"at":"2026-10-29T18:02:40.235Z"}
+{"type":"state-pin","n":5,"name":"moved","sha256":"55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778","at":"2026-10-29T18:02:40.247Z"}
+{"type":"ordinary-move-pass","n":5,"from":"s0","to":"s20","moves":[2,1],"orders":[6,5],"at":"2026-10-29T18:02:40.258Z"}
+{"type":"request","n":6,"request":{"actions":[{"tap":"[data-action=\"close-fleet-controls\"]"}],"equal":"moved","assertInspection":true,"screenshot":"mobile-moved-panel-closed","note":"Closing the moved fleet panel preserves the complete campaign state."},"at":"2026-10-29T18:02:40.331Z"}
+{"type":"action-complete","n":6,"action":{"tap":"[data-action=\"close-fleet-controls\"]"},"at":"2026-10-29T18:02:40.370Z"}
+{"type":"state-equal","n":6,"name":"moved","sha256":"55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778","at":"2026-10-29T18:02:40.389Z"}
+{"type":"inspection-pass","n":6,"at":"2026-10-29T18:02:40.394Z"}
+{"type":"request","n":7,"request":{"actions":[{"press":"Control+z"}],"equal":"heldRoute","screenshot":"mobile-movement-undone","note":"Undo the ordinary one-jump movement; full held route and all resources must return exactly."},"at":"2026-10-29T18:03:20.618Z"}
+{"type":"action-complete","n":7,"action":{"press":"Control+z"},"at":"2026-10-29T18:03:20.671Z"}
+{"type":"state-equal","n":7,"name":"heldRoute","sha256":"61b6f9e5b96669fcdb56c5b1f4132c0356ac6a07b83c48c054944d12c269f6f0","at":"2026-10-29T18:03:20.692Z"}
+{"type":"request","n":8,"request":{"actions":[{"resize":{"width":640,"height":390}},{"tap":"#inspector .building-pills [data-system-select=\"s20\"]"},{"tap":"[data-action=\"move\"]"}],"equal":"moved","assertMove":"heldRoute","screenshot":"landscape-ru-paid-movement","note":"At a 640×390 touch viewport, repeat the same ordinary movement through the visible control. It must produce exactly the earlier moved state."},"at":"2026-10-29T18:03:20.803Z"}
+{"type":"action-complete","n":8,"action":{"resize":{"width":640,"height":390}},"at":"2026-10-29T18:03:20.821Z"}
+{"type":"driver-error","n":8,"message":"locator.tap: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#inspector .building-pills [data-system-select=\"s20\"]')\u001b[22m\n","at":"2026-10-29T18:03:30.823Z"}
+{"type":"request","n":9,"request":{"actions":[{"tap":"[data-action=\"move\"]"}],"equal":"moved","assertMove":"heldRoute","screenshot":"landscape-ru-paid-movement","note":"Driver correction: Undo already restored the target Sundrift; its own connected-world list does not contain itself. Use the already-visible Move button at 640×390."},"at":"2026-10-29T18:03:33.733Z"}
+{"type":"action-complete","n":9,"action":{"tap":"[data-action=\"move\"]"},"at":"2026-10-29T18:03:33.799Z"}
+{"type":"state-equal","n":9,"name":"moved","sha256":"55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778","at":"2026-10-29T18:03:33.816Z"}
+{"type":"ordinary-move-pass","n":9,"from":"s0","to":"s20","moves":[2,1],"orders":[6,5],"at":"2026-10-29T18:03:33.828Z"}
+{"type":"request","n":10,"request":{"actions":[{"tap":"[data-action=\"close-fleet-controls\"]"}],"equal":"moved","assertInspection":true,"screenshot":"landscape-ru-inspection","note":"Closing at the narrow landscape viewport also leaves the remaining route and whole campaign unchanged."},"at":"2026-10-29T18:03:58.368Z"}
+{"type":"action-complete","n":10,"action":{"tap":"[data-action=\"close-fleet-controls\"]"},"at":"2026-10-29T18:03:58.430Z"}
+{"type":"state-equal","n":10,"name":"moved","sha256":"55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778","at":"2026-10-29T18:03:58.440Z"}
+{"type":"inspection-pass","n":10,"at":"2026-10-29T18:03:58.446Z"}
+{"type":"request","n":11,"request":{"close":true,"note":"Bounded Firefox mobile acceptance complete. Close only this isolated context."},"at":"2026-10-29T18:03:58.504Z"}

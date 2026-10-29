@@ -1,0 +1,339 @@
+[
+  {
+    "type": "click",
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:00:17.287Z"
+  },
+  {
+    "type": "case-start",
+    "name": "desktop-en",
+    "width": 1440,
+    "height": 1000,
+    "language": "en",
+    "hasTouch": false,
+    "isMobile": false,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0",
+    "at": "2026-10-29T18:00:17.431Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-page=\"research\"]",
+    "at": "2026-10-29T18:00:17.466Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "at": "2026-10-29T18:00:17.579Z"
+  },
+  {
+    "type": "click",
+    "selector": "#undo-action",
+    "at": "2026-10-29T18:00:17.730Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en research Undo",
+    "sha256": "264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db",
+    "at": "2026-10-29T18:00:17.832Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "at": "2026-10-29T18:00:17.837Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en repeated research",
+    "sha256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "at": "2026-10-29T18:00:17.922Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-page=\"empire\"]",
+    "at": "2026-10-29T18:00:17.922Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-colony-row=\"s0\"] [data-action=\"empire-build-menu\"]",
+    "at": "2026-10-29T18:00:17.991Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-action=\"build\"][data-item=\"lab\"]",
+    "at": "2026-10-29T18:00:18.074Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en paid build survives reload",
+    "sha256": "929d7af549911df321e6c8b0ca4dd97ee840e1922d1deb5140c81ddbcf0082a5",
+    "at": "2026-10-29T18:00:18.756Z"
+  },
+  {
+    "type": "click",
+    "selector": ".top-actions [data-action=\"menu\"]",
+    "at": "2026-10-29T18:00:18.805Z"
+  },
+  {
+    "type": "keyboard-tab-sequence",
+    "sequence": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "close-modal",
+        "text": "Return to the Reach",
+        "visible": true,
+        "rect": {
+          "x": 862.5499877929688,
+          "y": 685.0166625976562,
+          "width": 136.4499969482422,
+          "height": 36
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "undo",
+        "text": "↶ Undo",
+        "visible": true,
+        "rect": {
+          "x": 426,
+          "y": 262.9666748046875,
+          "width": 61.08332824707031,
+          "height": 28
+        }
+      }
+    ],
+    "at": "2026-10-29T18:00:18.900Z"
+  },
+  {
+    "type": "key",
+    "key": "Enter",
+    "at": "2026-10-29T18:00:19.000Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en modal Undo restores paid build exactly",
+    "sha256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "at": "2026-10-29T18:00:19.045Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en second Undo restores original",
+    "sha256": "264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db",
+    "at": "2026-10-29T18:00:19.140Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "at": "2026-10-29T18:00:19.143Z"
+  },
+  {
+    "type": "click",
+    "selector": "#end-turn",
+    "at": "2026-10-29T18:00:19.211Z"
+  },
+  {
+    "type": "click",
+    "selector": ".modal .close-modal",
+    "at": "2026-10-29T18:00:19.271Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en cancelled End Cycle retains state",
+    "sha256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "at": "2026-10-29T18:00:19.375Z"
+  },
+  {
+    "type": "click",
+    "selector": "#end-turn",
+    "at": "2026-10-29T18:00:19.379Z"
+  },
+  {
+    "type": "click",
+    "selector": "[data-action=\"end-turn-confirm\"]",
+    "at": "2026-10-29T18:00:19.468Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en Undo cannot cross End Cycle",
+    "sha256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+    "at": "2026-10-29T18:00:19.577Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "desktop-en next cycle reload",
+    "sha256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+    "at": "2026-10-29T18:00:20.048Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".modal [data-action=\"language\"]",
+    "at": "2026-10-29T18:00:20.754Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:00:20.851Z"
+  },
+  {
+    "type": "case-start",
+    "name": "narrow-ru",
+    "width": 390,
+    "height": 844,
+    "language": "ru",
+    "hasTouch": true,
+    "isMobile": false,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0",
+    "at": "2026-10-29T18:00:20.885Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-page=\"research\"]",
+    "at": "2026-10-29T18:00:20.905Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "at": "2026-10-29T18:00:20.944Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#undo-action",
+    "at": "2026-10-29T18:00:21.018Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru research Undo",
+    "sha256": "264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db",
+    "at": "2026-10-29T18:00:21.073Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "at": "2026-10-29T18:00:21.077Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru repeated research",
+    "sha256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "at": "2026-10-29T18:00:21.132Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-page=\"empire\"]",
+    "at": "2026-10-29T18:00:21.133Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-colony-row=\"s0\"] [data-action=\"empire-build-menu\"]",
+    "at": "2026-10-29T18:00:21.190Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"build\"][data-item=\"lab\"]",
+    "at": "2026-10-29T18:00:21.293Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru paid build survives reload",
+    "sha256": "929d7af549911df321e6c8b0ca4dd97ee840e1922d1deb5140c81ddbcf0082a5",
+    "at": "2026-10-29T18:00:21.862Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".top-actions [data-action=\"menu\"]",
+    "at": "2026-10-29T18:00:21.903Z"
+  },
+  {
+    "type": "keyboard-tab-sequence",
+    "sequence": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "close-modal",
+        "text": "Вернуться в Предел",
+        "visible": true,
+        "rect": {
+          "x": 213.89999389648438,
+          "y": 690.0166625976562,
+          "width": 144.10000610351562,
+          "height": 38
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "action": "undo",
+        "text": "↶ Отменить",
+        "visible": true,
+        "rect": {
+          "x": 28,
+          "y": 105.96665954589844,
+          "width": 88.19999694824219,
+          "height": 30
+        }
+      }
+    ],
+    "at": "2026-10-29T18:00:21.956Z"
+  },
+  {
+    "type": "key",
+    "key": "Space",
+    "at": "2026-10-29T18:00:22.012Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru modal Undo restores paid build exactly",
+    "sha256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "at": "2026-10-29T18:00:22.066Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru second Undo restores original",
+    "sha256": "264e57ddfde626108e1962a31f6072ef364284bdf8599c9b7a47f942bc8d04db",
+    "at": "2026-10-29T18:00:22.134Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"research\"][data-tech=\"physics\"]",
+    "at": "2026-10-29T18:00:22.138Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#end-turn",
+    "at": "2026-10-29T18:00:22.199Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".modal .close-modal",
+    "at": "2026-10-29T18:00:22.237Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru cancelled End Cycle retains state",
+    "sha256": "628cdf2c0732984f326f63c4403a984ca3a8351014b5bd267ef1847796dfb8d8",
+    "at": "2026-10-29T18:00:22.281Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#end-turn",
+    "at": "2026-10-29T18:00:22.285Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"end-turn-confirm\"]",
+    "at": "2026-10-29T18:00:22.317Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru Undo cannot cross End Cycle",
+    "sha256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+    "at": "2026-10-29T18:00:22.412Z"
+  },
+  {
+    "type": "assert-state-equal",
+    "label": "narrow-ru next cycle reload",
+    "sha256": "4727b401edb55d403914714706c88e5a44c17afeb7cdf8eda06112a84bbeda1f",
+    "at": "2026-10-29T18:00:22.902Z"
+  }
+]

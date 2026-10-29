@@ -1,0 +1,59 @@
+{
+  "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+  "turn": 1,
+  "text": "ASTERION REACH\n◈\n140\n+7\n◇\n110\n+9\n✧\n0\n+4\n⌘\n5 / 6\nEnglish\nГалактика\nНаука\nДипломатия\nИмперия\nЛетопись\nДомой\n⌂Solace\nКОНКОРД\nVelorum\nНЕ ИССЛЕДОВАНО\nSundrift\nЛЕДЯНОЙ\n△\n⬡\n▴\nУПРАВЛЕНИЕ ИССЛЕДОВАНИЙ КОНКОРДА\nAsterion Reach\n\nСистем на карте: 7 · обследовано: 3 · код генерации: ASTERION\n\n+\n−\n⌖\nКОНКОРД\nИЗУЧЕНО\nНЕИЗВЕСТНО\n⌂ МИР-ОСНОВАТЕЛЬ\nСписок флотов →\nНЕЗАНЯТЫЕ ПОГРАНИЧНЫЕ СИСТЕМЫ\nSundrift\n\nЛедяной мир · Система на фронтире\n\nДревние льды скрывают тёплый подлёдный океан.\n\n44%\nПРИГОДНОСТЬ ДЛЯ ЖИЗНИ\n2\nБОГАТСТВО РУДНЫХ ЗАЛЕЖЕЙ\n3\nНАУКА\nНА ОРБИТЕ\nФЛОТОВ: 1\nСледопыт 1\nРазведчик · прочность: 18 / 18\nГотов\nПрыжков: 1\nСВЯЗАННЫЕ СИСТЕМЫ\nSolace ↗\nVelorum ↗\nOrison ↗\nHalcyon ↗\nЦикл 01\n2400 н. э.\nЗАВЕРШИТЬ ЦИКЛ →\n↶ Отменить\nПриказы: 5 · Колонии: 1\nСледопыт 1 прибыл в систему Sundrift.\n● АВТОСОХРАНЕНИЕ\nСледопыт 1 прибыл в систему Sundrift.",
+  "controls": [
+    {
+      "text": "⌂SolaceКОНКОРД",
+      "system": "s0"
+    },
+    {
+      "text": "VelorumНЕ ИССЛЕДОВАНО",
+      "system": "s9"
+    },
+    {
+      "text": "OrisonНЕ ИССЛЕДОВАНО",
+      "system": "s17"
+    },
+    {
+      "text": "SundriftЛЕДЯНОЙ",
+      "system": "s20"
+    },
+    {
+      "text": "IonaНЕ ИССЛЕДОВАНО",
+      "system": "s32"
+    },
+    {
+      "text": "HalcyonНЕ ИССЛЕДОВАНО",
+      "system": "s33"
+    },
+    {
+      "text": "AntaresЗЕМНОГО ТИПА",
+      "system": "s34"
+    },
+    {
+      "text": "Solace ↗",
+      "system": "s0"
+    },
+    {
+      "text": "Velorum ↗",
+      "system": "s9"
+    },
+    {
+      "text": "Orison ↗",
+      "system": "s17"
+    },
+    {
+      "text": "Halcyon ↗",
+      "system": "s33"
+    }
+  ],
+  "inspection": "fleet-bar is-inspecting",
+  "selected": null,
+  "focus": {
+    "tag": "BUTTON",
+    "action": "fleet-roster",
+    "text": "Список флотов →"
+  },
+  "overflow": false
+}
