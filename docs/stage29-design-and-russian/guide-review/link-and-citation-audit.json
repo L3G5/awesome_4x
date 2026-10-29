@@ -1,0 +1,843 @@
+{
+  "counts": {
+    "coreEntries": 36,
+    "uniqueSources": 33,
+    "byLedger": {
+      "strategy": 12,
+      "replayability": 12,
+      "experience": 12
+    }
+  },
+  "pages": [
+    {
+      "file": "good-4x.html",
+      "sha256": "466d58d496a811a96017023adf86d62d02067fda5656494b21107ccf1548bf97",
+      "allHrefs": [
+        "bad-4x.html",
+        "../",
+        "../guide.html",
+        "#review",
+        "research/index.json",
+        "research/strategy/sources.json",
+        "research/replayability/source-ledger.json",
+        "research/experience/source-ledger.json",
+        "#promise",
+        "#decisions",
+        "#randomness",
+        "#replay",
+        "#exploration",
+        "#opponents",
+        "#pacing",
+        "#interface",
+        "#control",
+        "#evidence",
+        "#review",
+        "https://www.reddit.com/r/4Xgaming/comments/1f9vx9e/best_feature_to_prevent_snowballing/",
+        "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+        "https://danfelder.net/2015/05/21/design-101-complexity-vs-depth/",
+        "https://www.designer-notes.com/old-world-designer-notes-1-orders/",
+        "https://www.designer-notes.com/old-world-designer-notes-5-yields/",
+        "https://keithburgun.net/good-randomness/",
+        "https://www.designer-notes.com/game-developer-column-9-playing-the-odds-3/",
+        "https://www.atthegatesgame.com/news/weekly-update-1-the-map",
+        "https://www.designer-notes.com/old-world-designer-notes-4-the-technology-deck/",
+        "https://www.pcgamer.com/how-the-endless-series-reimagined-the-4x-strategy-genre/",
+        "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+        "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+        "https://www.designer-notes.com/old-world-designer-notes-9-events/",
+        "https://news.xbox.com/en-us/2025/09/11/how-endless-legend-2-raises-the-tide-on-turn-based-strategy-games/",
+        "https://www.gamedeveloper.com/design/revisiting-the-design-of-civ-5",
+        "https://www.reddit.com/r/GalCiv/comments/1uwexck/galactic_civilizations_iv_ama_july_15th_2026/",
+        "https://www.gamedeveloper.com/design/the-frothy-design-and-diplomacy-of-humankind",
+        "https://www.designer-notes.com/old-world-designer-notes-10-diplomacy/",
+        "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+        "https://www.reddit.com/r/4Xgaming/comments/18gs97z/4x_games_largely_have_not_figured_out_late_game/",
+        "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+        "https://community.amplitude-studios.com/amplitude-studios/endless-legend-2/blogs/996-ui-ux-next-steps",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2428969051",
+        "https://www.reddit.com/r/CivVII/comments/1va5lpv/do_you_plan_out_your_towns_with_map_tacks_and_if/",
+        "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+        "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+        "https://www.reddit.com/r/4Xgaming/comments/1x21wqs/micromanagement_vs_hand_holding_which_do_you/",
+        "https://steamcommunity.com/games/281990/announcements/detail/3646280646048523752",
+        "https://www.diva-portal.org/smash/get/diva2:1538474/FULLTEXT01.pdf",
+        "https://www.reddit.com/r/civ/comments/1i3x2j1/potatomcwhiskeys_video_dropped_diety_tecumseh/",
+        "https://www.reddit.com/r/IAmA/comments/gftr6m/i_am_soren_johnson_designerprogrammer_of_old/",
+        "research/strategy/notes.html",
+        "research/replayability/research-notes.txt",
+        "research/experience/research-notes.txt"
+      ],
+      "brokenLocalLinks": [],
+      "externalUrlsAbsentFromCoreLedgers": [],
+      "duplicateIds": [],
+      "sections": {
+        "promise": {
+          "text": [
+            "1. Choose the experience you are promising",
+            "A strong 4X gives its audience reasons to explore, expand, develop and contest the world. Decide whether the main promise is a tense race, an expressive civilization story, a competitive puzzle or a long sandbox. A successful design can combine these, but its ending, difficulty and amount of direct control must make that combination coherent.",
+            "Some players enjoy turning an earned lead into overwhelming power. Others stop when opposition disappears. Treat those preferences as design inputs. Campaign length, victory timing and optional continuation can serve them better than assuming everyone wants constant pressure.",
+            "Test it",
+            "Ask an optimizer and a roleplayer what they hoped to accomplish, when they felt successful, and when they wanted to stop. Record their differences before choosing a remedy.",
+            "Players disagree about preventing snowballing",
+            "\u00b7",
+            "Optimizing and roleplaying: a disagreement"
+          ],
+          "citations": [
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1f9vx9e/best_feature_to_prevent_snowballing/",
+              "label": "Players disagree about preventing snowballing"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+              "label": "Optimizing and roleplaying: a disagreement"
+            }
+          ]
+        },
+        "decisions": {
+          "text": [
+            "2. Make choices compete for something valuable",
+            "Strategic depth appears when the best action depends on the situation and on what the player gives up. A shared order budget can make exploration compete with defense; limited colony slots can make a laboratory compete with a shipyard. Each is useful only while those alternatives remain credible.",
+            "Breadth is the range of viable approaches. Depth is the reasoning needed to choose and adapt among them. Complexity includes learning rules and tracking their state. A small ruleset can support deep decisions; a large one can justify its cost through distinct opportunities. Count changed priorities and interacting constraints, alongside feature count.",
+            "Test it",
+            "Choose ten recurring decisions. For each, describe two believable situations that reverse the preferred answer. Investigate choices whose answer never changes.",
+            "Dan Felder: complexity and depth",
+            "\u00b7",
+            "Soren Johnson: Orders",
+            "\u00b7",
+            "Soren Johnson: Yields"
+          ],
+          "citations": [
+            {
+              "href": "https://danfelder.net/2015/05/21/design-101-complexity-vs-depth/",
+              "label": "Dan Felder: complexity and depth"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-1-orders/",
+              "label": "Soren Johnson: Orders"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-5-yields/",
+              "label": "Soren Johnson: Yields"
+            }
+          ]
+        },
+        "randomness": {
+          "text": [
+            "3. Give uncertainty a job and room for a response",
+            "Classify randomness by when it arrives, how outcomes are distributed and how large their effects can become. A revealed map creates a different planning problem from a combat roll after commitment. A shuffled offer deck behaves differently from independent draws. Both small repeated advantages and a single jackpot can compound.",
+            "Constrain generation around strategic needs: scarce luxuries can invite trade while an essential capability needs a plausible substitute or recovery route. Show useful probabilities, forecast ranges and unknown information honestly. Give the player ways to scout, hedge, prepare or change plans. Surprise can create stories when its consequences are understandable.",
+            "Test it",
+            "Across varied seeds, inspect the worst starts and strongest early rewards. Track the next several decisions, including substitutes and recovery, rather than comparing only initial resource totals.",
+            "Keith Burgun: randomness axes",
+            "\u00b7",
+            "Soren Johnson: Playing the Odds"
+          ],
+          "citations": [
+            {
+              "href": "https://keithburgun.net/good-randomness/",
+              "label": "Keith Burgun: randomness axes"
+            },
+            {
+              "href": "https://www.designer-notes.com/game-developer-column-9-playing-the-odds-3/",
+              "label": "Soren Johnson: Playing the Odds"
+            }
+          ]
+        },
+        "replay": {
+          "text": [
+            "4. Make a new campaign ask different questions",
+            "Maps earn replayability when geography changes settlement, supply, target selection or defense. Faction identity can change resource values, rules or diplomatic incentives. Evaluate diversity between factions and flexibility within each faction separately: a unique faction with one compulsory routine may still become repetitive.",
+            "Offer enough early information for a first commitment to respond to the world. Research availability, goals and discoveries can encourage adaptation when players understand their constraints. Preserve the ability to form a coherent long plan; repeated forced pivots can become exhausting.",
+            "Test it",
+            "Play several openings with the same optimization goal. Record the first meaningful divergence, its cause, and the cost of insisting on the previous plan. Cosmetic differences do not count.",
+            "Jon Shafer: The Map",
+            "\u00b7",
+            "Soren Johnson: The Technology Deck",
+            "\u00b7",
+            "Amplitude designers on faction asymmetry",
+            "\u00b7",
+            "Optimizing and roleplaying: a disagreement"
+          ],
+          "citations": [
+            {
+              "href": "https://www.atthegatesgame.com/news/weekly-update-1-the-map",
+              "label": "Jon Shafer: The Map"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-4-the-technology-deck/",
+              "label": "Soren Johnson: The Technology Deck"
+            },
+            {
+              "href": "https://www.pcgamer.com/how-the-endless-series-reimagined-the-4x-strategy-genre/",
+              "label": "Amplitude designers on faction asymmetry"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+              "label": "Optimizing and roleplaying: a disagreement"
+            }
+          ]
+        },
+        "exploration": {
+          "text": [
+            "5. Let discoveries change what the player cares about",
+            "Exploration can reward information, a valuable location, narrative curiosity or power. Different audiences value those rewards differently. A defensible route can be as consequential as an unusual ship. Repeated resource grants need enough context to affect choices.",
+            "Persistent events can connect past actions to future options. Later geographic changes can reopen settlement and defense decisions after the first map sweep. Telegraph consequential changes, allow preparation, and preserve enough earned investment for the response to feel worthwhile. More authored text alone does not establish engagement.",
+            "Test it",
+            "After a discovery, ask what the player changed and why. Check whether later events remember prior choices. Test a late reveal against an established plan, not only on a fresh map.",
+            "Players discuss exploration rewards",
+            "\u00b7",
+            "Soren Johnson: Events",
+            "\u00b7",
+            "Derek Paxton on Tidefall iteration"
+          ],
+          "citations": [
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+              "label": "Players discuss exploration rewards"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-9-events/",
+              "label": "Soren Johnson: Events"
+            },
+            {
+              "href": "https://news.xbox.com/en-us/2025/09/11/how-endless-legend-2-raises-the-tide-on-turn-based-strategy-games/",
+              "label": "Derek Paxton on Tidefall iteration"
+            }
+          ]
+        },
+        "opponents": {
+          "text": [
+            "6. Give rivals coherent capabilities and readable motives",
+            "Opponents need functioning plans: research must support production, fleets must be able to reach objectives, and diplomacy must fit their circumstances. Personality can vary priorities while keeping those plans viable. Distinguish a civilization acting as a character from an opponent optimized to stop the player.",
+            "Diplomacy works when the player can form useful expectations about motives, trust, commitments and possible conflict. Its procedures should prevent trivial exploitation while allowing sensible actions. State-sensitive offers, costs or delays need a strategic purpose; arbitrary waiting can drain a political system of initiative.",
+            "Test it",
+            "Follow a rival from intention to arrival. Explain a declaration using information the player could observe. Try repeated treaty interactions and check that profitable loops have real costs or consequences.",
+            "Jon Shafer: Revisiting Civ V",
+            "\u00b7",
+            "Brad Wardell: Galactic Civilizations IV AMA",
+            "\u00b7",
+            "William Dyce: Humankind diplomacy",
+            "\u00b7",
+            "Soren Johnson: Diplomacy"
+          ],
+          "citations": [
+            {
+              "href": "https://www.gamedeveloper.com/design/revisiting-the-design-of-civ-5",
+              "label": "Jon Shafer: Revisiting Civ V"
+            },
+            {
+              "href": "https://www.reddit.com/r/GalCiv/comments/1uwexck/galactic_civilizations_iv_ama_july_15th_2026/",
+              "label": "Brad Wardell: Galactic Civilizations IV AMA"
+            },
+            {
+              "href": "https://www.gamedeveloper.com/design/the-frothy-design-and-diplomacy-of-humankind",
+              "label": "William Dyce: Humankind diplomacy"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-10-diplomacy/",
+              "label": "Soren Johnson: Diplomacy"
+            }
+          ]
+        },
+        "pacing": {
+          "text": [
+            "7. Renew decisions as the empire grows",
+            "Manage three separate curves: economic advantage, feedback that amplifies advantage, and work remaining after the contest feels resolved. Expansion should have valuable uses and relevant constraints; growth can remain a reward. Later play needs fresh priorities, manageable administration and a credible route to an ending.",
+            "Visible rival progress and intermediate objectives help players judge urgency. A decisive-win rule, adaptive goal or optional continuation may fit better than extending every match to a fixed final turn. A crisis is useful when it changes timing, relationships or geography; its presence alone does not guarantee a satisfying climax.",
+            "Test it",
+            "At early, middle and late checkpoints, record turns with a contested decision and turns spent executing a settled plan. Compare the perceived decisive moment with formal victory.",
+            "Soren Johnson: The End",
+            "\u00b7",
+            "Players disagree about the late game",
+            "\u00b7",
+            "Players discuss unfinished campaigns"
+          ],
+          "citations": [
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+              "label": "Soren Johnson: The End"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/18gs97z/4x_games_largely_have_not_figured_out_late_game/",
+              "label": "Players disagree about the late game"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+              "label": "Players discuss unfinished campaigns"
+            }
+          ]
+        },
+        "interface": {
+          "text": [
+            "8. Put the decision and its evidence together",
+            "Group information around player tasks. A construction choice should show affordability, duration, output change, lost benefits and blocked prerequisites where the choice is made. Empire summaries should reveal both the result and its sources. Keep context visible while comparing alternatives.",
+            "Useful previews remove arithmetic and memory burdens while preserving strategic judgment. State their assumptions: current income, known enemies or completed construction can differ from what the next turn actually delivers. Persistent plans and reminders can help players resume a campaign, with enough flexibility for those who prefer improvisation.",
+            "Test it",
+            "Ask someone to predict an investment\u2019s net effect before clicking. Watch for tab-hopping, external notes and mistaken assumptions. Repeat after a day away and with a larger empire.",
+            "Derek Paxton: UI/UX Next Steps",
+            "\u00b7",
+            "Detailed Map Tacks: creator documentation",
+            "\u00b7",
+            "Players disagree about advance planning"
+          ],
+          "citations": [
+            {
+              "href": "https://community.amplitude-studios.com/amplitude-studios/endless-legend-2/blogs/996-ui-ux-next-steps",
+              "label": "Derek Paxton: UI/UX Next Steps"
+            },
+            {
+              "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=2428969051",
+              "label": "Detailed Map Tacks: creator documentation"
+            },
+            {
+              "href": "https://www.reddit.com/r/CivVII/comments/1va5lpv/do_you_plan_out_your_towns_with_map_tacks_and_if/",
+              "label": "Players disagree about advance planning"
+            }
+          ]
+        },
+        "control": {
+          "text": [
+            "9. Reduce routine work while preserving intent",
+            "Identify repeated execution separately from valued fine control. Routes, queues, filters, standing assignments and scoped automation can carry out an established intention. Expose their costs, stopping conditions and exceptions. Automation needs explicit spending permissions and a reliable manual override.",
+            "Make reminders and automatic focus changes controllable. A held garrison should not repeatedly demand attention; a newly blocked route may deserve it. Keyboard navigation, persistent focus, readable type, contrast and language support make existing decisions accessible without reducing their depth.",
+            "Test it",
+            "Count maintenance clicks for the same strategy at three empire sizes. Check that assistance stops for meaningful exceptions, respects reserves and never silently replaces a manual instruction.",
+            "Players discuss routine decisions",
+            "\u00b7",
+            "Players disagree about micromanagement",
+            "\u00b7",
+            "Players discuss automatic cycling and reminders",
+            "\u00b7",
+            "Stellaris diary #310: automation budgets"
+          ],
+          "citations": [
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+              "label": "Players discuss routine decisions"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+              "label": "Players disagree about micromanagement"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1x21wqs/micromanagement_vs_hand_holding_which_do_you/",
+              "label": "Players discuss automatic cycling and reminders"
+            },
+            {
+              "href": "https://steamcommunity.com/games/281990/announcements/detail/3646280646048523752",
+              "label": "Stellaris diary #310: automation budgets"
+            }
+          ]
+        },
+        "evidence": {
+          "text": [
+            "10. Judge engagement with play, including the boring parts",
+            "A polished opening and a winning automated policy establish limited things. Observe first-time learning, repeated openings, resumed saves, difficult reversals and late-game administration. Separate action latency from strategic progress, and readability from aesthetic preference.",
+            "Record abandoned campaigns, fatigue, mistaken predictions, reversals of plan and moments players remember. Use specific before/after tasks for interface changes and controlled comparisons for rule changes. Keep provenance clear: a replay verifies a history, while another played campaign supplies another experience. Report uncertainty and preferences alongside the numbers.",
+            "Test it",
+            "Write a hypothesis before changing a system, choose a small relevant test, and define what would disconfirm it. Avoid turning one enthusiastic session into a claim about all players.",
+            "Aron Nisbel: strategy interface study",
+            "\u00b7",
+            "Players discuss interface atmosphere and readability",
+            "\u00b7",
+            "Soren Johnson: developer AMA"
+          ],
+          "citations": [
+            {
+              "href": "https://www.diva-portal.org/smash/get/diva2:1538474/FULLTEXT01.pdf",
+              "label": "Aron Nisbel: strategy interface study"
+            },
+            {
+              "href": "https://www.reddit.com/r/civ/comments/1i3x2j1/potatomcwhiskeys_video_dropped_diety_tecumseh/",
+              "label": "Players discuss interface atmosphere and readability"
+            },
+            {
+              "href": "https://www.reddit.com/r/IAmA/comments/gftr6m/i_am_soren_johnson_designerprogrammer_of_old/",
+              "label": "Soren Johnson: developer AMA"
+            }
+          ]
+        },
+        "review": {
+          "text": [
+            "Use the guides to review a real game",
+            "Start with a pinned build, stated audience and concrete tasks. For each criterion, record an observed strength, an observed failure or an untested question. Use small ratings only as a shared discussion aid:",
+            "0",
+            "absent or obstructive;",
+            "1",
+            "partially supported;",
+            "2",
+            "consistently supported in the observed tasks. Include confidence and the saves or actions inspected. Do not sum these into an objective \u201cfun score.\u201d",
+            "Review area",
+            "Concrete question",
+            "Useful evidence",
+            "Decision depth",
+            "When does the preferred choice reverse?",
+            "Two plausible states and their opportunity costs",
+            "Replayability",
+            "What changes the next campaign\u2019s plan?",
+            "Repeated openings, same goal, reasons for divergence",
+            "Randomness",
+            "What response remains after bad luck?",
+            "Extreme seeds, visible warning and recovery options",
+            "Rivals",
+            "Can a visible intention become a credible operation?",
+            "Research \u2192 production \u2192 travel \u2192 engagement",
+            "Pacing",
+            "How much work follows perceived resolution?",
+            "Early, middle, late and finished saves",
+            "Interface",
+            "Can the player predict and execute the choice?",
+            "Task errors, navigation, focus and net-effect previews",
+            "Ownership",
+            "Does assistance preserve the player\u2019s intent?",
+            "Budgets, exceptions, manual overrides and resuming",
+            "Prioritize by player impact and evidence strength. Prefer one targeted change with a falsifiable prediction over a feature bundle that makes its cause impossible to assess. Revisit the original task and a plausible counterexample after the change."
+          ],
+          "citations": []
+        }
+      }
+    },
+    {
+      "file": "bad-4x.html",
+      "sha256": "509a74e80b4d718fe8e46ffc81d03b500664ea1e0b5812108476079259cf3b6d",
+      "allHrefs": [
+        "good-4x.html",
+        "../",
+        "../guide.html",
+        "#review",
+        "research/index.json",
+        "research/strategy/sources.json",
+        "research/replayability/source-ledger.json",
+        "research/experience/source-ledger.json",
+        "#busywork",
+        "#false-depth",
+        "#same-opening",
+        "#luck",
+        "#empty-events",
+        "#rivals",
+        "#ending",
+        "#opaque-ui",
+        "#overhelp",
+        "#validation",
+        "#review",
+        "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+        "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+        "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+        "https://danfelder.net/2015/05/21/design-101-complexity-vs-depth/",
+        "https://jonshaferondesign.com/2014/09/15/atg-update-progress-pacing-people/",
+        "https://www.designer-notes.com/old-world-designer-notes-5-yields/",
+        "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+        "https://www.atthegatesgame.com/news/weekly-update-1-the-map",
+        "https://www.pcgamer.com/how-the-endless-series-reimagined-the-4x-strategy-genre/",
+        "https://keithburgun.net/good-randomness/",
+        "https://www.designer-notes.com/game-developer-column-9-playing-the-odds-3/",
+        "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+        "https://www.designer-notes.com/old-world-designer-notes-9-events/",
+        "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+        "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+        "https://news.xbox.com/en-us/2025/09/11/how-endless-legend-2-raises-the-tide-on-turn-based-strategy-games/",
+        "https://www.gamedeveloper.com/design/revisiting-the-design-of-civ-5",
+        "https://www.reddit.com/r/GalCiv/comments/1uwexck/galactic_civilizations_iv_ama_july_15th_2026/",
+        "https://www.designer-notes.com/old-world-designer-notes-10-diplomacy/",
+        "https://www.gamedeveloper.com/design/the-frothy-design-and-diplomacy-of-humankind",
+        "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+        "https://www.reddit.com/r/4Xgaming/comments/18gs97z/4x_games_largely_have_not_figured_out_late_game/",
+        "https://www.reddit.com/r/4Xgaming/comments/1f9vx9e/best_feature_to_prevent_snowballing/",
+        "https://community.amplitude-studios.com/amplitude-studios/endless-legend-2/blogs/996-ui-ux-next-steps",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=2428969051",
+        "https://www.reddit.com/r/civ/comments/1i3x2j1/potatomcwhiskeys_video_dropped_diety_tecumseh/",
+        "https://www.reddit.com/r/IAmA/comments/gftr6m/i_am_soren_johnson_designerprogrammer_of_old/",
+        "https://steamcommunity.com/games/281990/announcements/detail/3646280646048523752",
+        "https://www.reddit.com/r/4Xgaming/comments/1x21wqs/micromanagement_vs_hand_holding_which_do_you/",
+        "https://www.reddit.com/r/CivVII/comments/1va5lpv/do_you_plan_out_your_towns_with_map_tacks_and_if/",
+        "https://www.diva-portal.org/smash/get/diva2:1538474/FULLTEXT01.pdf",
+        "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+        "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+        "research/strategy/notes.html",
+        "research/replayability/research-notes.txt",
+        "research/experience/research-notes.txt"
+      ],
+      "brokenLocalLinks": [],
+      "externalUrlsAbsentFromCoreLedgers": [],
+      "duplicateIds": [],
+      "sections": {
+        "busywork": {
+          "text": [
+            "1. Activity expands while decisions disappear",
+            "Symptom:",
+            "each additional colony or ship adds acknowledgements, repeated build selections and predictable movement. The player knows the intended plan but spends longer issuing it.",
+            "Why it disengages:",
+            "administration grows faster than the number of relevant choices. Small adjustments can be enjoyable expression for some players, so diagnose which interactions supply that value. A routine slider reset and a tightly contested economic allocation may look similar in a click count.",
+            "Possible repair:",
+            "standing orders, actionable summaries, queues or deliberate scale reduction. Automate a clearly stated intention with exceptions and overrides. Revisit the underlying rule if every player delegates the entire subsystem immediately.",
+            "Test it",
+            "Compare the same strategy with three and ten colonies. Classify each action as choosing, executing, checking or acknowledging, and ask which ones the player values.",
+            "Players disagree about micromanagement",
+            "\u00b7",
+            "Players discuss routine decisions",
+            "\u00b7",
+            "Players discuss unfinished campaigns"
+          ],
+          "citations": [
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+              "label": "Players disagree about micromanagement"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+              "label": "Players discuss routine decisions"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+              "label": "Players discuss unfinished campaigns"
+            }
+          ]
+        },
+        "false-depth": {
+          "text": [
+            "2. A wide menu hides one reliable answer",
+            "Symptom:",
+            "most technologies, buildings or currencies are compulsory stepping stones; one upgrade dominates regardless of geography or threat. Additional options repeat the same numerical trade with larger values.",
+            "Why it disengages:",
+            "the player pays learning and tracking costs while receiving little new strategic uncertainty. Long prerequisite chains can make the desired capability feel remote without adding interesting intermediate decisions.",
+            "Possible repair:",
+            "remove redundant gates, give options distinct use cases, or create genuine opportunity costs. Distinct resource constraints can add depth when they interact with location, substitution and recovery; indiscriminately removing currencies can flatten a useful economy.",
+            "Test it",
+            "Try to construct plausible situations where each alternative becomes preferable. Check the full path to a useful capability for repeated mandatory steps.",
+            "Dan Felder: complexity and depth",
+            "\u00b7",
+            "Jon Shafer: Progress, Pacing & People",
+            "\u00b7",
+            "Soren Johnson: Yields"
+          ],
+          "citations": [
+            {
+              "href": "https://danfelder.net/2015/05/21/design-101-complexity-vs-depth/",
+              "label": "Dan Felder: complexity and depth"
+            },
+            {
+              "href": "https://jonshaferondesign.com/2014/09/15/atg-update-progress-pacing-people/",
+              "label": "Jon Shafer: Progress, Pacing & People"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-5-yields/",
+              "label": "Soren Johnson: Yields"
+            }
+          ]
+        },
+        "same-opening": {
+          "text": [
+            "3. Procedural scenery leaves the opening unchanged",
+            "Symptom:",
+            "random seeds alter names and coordinates while the same first research, build order and expansion target remain best. Factions have different labels or percentage bonuses, yet converge on identical plans.",
+            "Why it disengages:",
+            "surface novelty runs out quickly for an optimizer. A distinctive restriction can also become a script, leaving a faction expressive in one campaign but inflexible on the next.",
+            "Possible repair:",
+            "make early information useful, create competing local opportunities and test flexible responses. Strong asymmetry is one tool; it brings balance and learning costs. Keep coherent long-term planning available for players who enjoy it.",
+            "Test it",
+            "Compare repeated optimized openings and the reasons for their first divergence. Separately inspect different factions and repeated play of a single faction.",
+            "Optimizing and roleplaying: a disagreement",
+            "\u00b7",
+            "Jon Shafer: The Map",
+            "\u00b7",
+            "Amplitude designers on faction asymmetry"
+          ],
+          "citations": [
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+              "label": "Optimizing and roleplaying: a disagreement"
+            },
+            {
+              "href": "https://www.atthegatesgame.com/news/weekly-update-1-the-map",
+              "label": "Jon Shafer: The Map"
+            },
+            {
+              "href": "https://www.pcgamer.com/how-the-endless-series-reimagined-the-4x-strategy-genre/",
+              "label": "Amplitude designers on faction asymmetry"
+            }
+          ]
+        },
+        "luck": {
+          "text": [
+            "4. Randomness overwhelms agency\u2014or changes nothing",
+            "Symptom:",
+            "an early reward reliably decides the economic race, indispensable options fail to appear, or post-commitment losses arrive with no useful warning. At the other extreme, every random event is a tiny interchangeable bonus.",
+            "Why it disengages:",
+            "large uncontrolled swings can devalue planning; negligible swings become ceremony. Calling randomness \u201cinput\u201d does not establish fairness or strategic value. Repeated small advantages can also accumulate.",
+            "Possible repair:",
+            "constrain generation, disclose consequential uncertainty, offer substitutes and recovery, and tune effects against their downstream value. Preserve room for memorable discoveries when the target audience enjoys them.",
+            "Test it",
+            "Inspect extreme starts and unlucky sequences. Ask what action could reasonably have reduced the risk, and whether choosing differently was plausible before the outcome.",
+            "Keith Burgun: randomness axes",
+            "\u00b7",
+            "Soren Johnson: Playing the Odds",
+            "\u00b7",
+            "Players discuss exploration rewards"
+          ],
+          "citations": [
+            {
+              "href": "https://keithburgun.net/good-randomness/",
+              "label": "Keith Burgun: randomness axes"
+            },
+            {
+              "href": "https://www.designer-notes.com/game-developer-column-9-playing-the-odds-3/",
+              "label": "Soren Johnson: Playing the Odds"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+              "label": "Players discuss exploration rewards"
+            }
+          ]
+        },
+        "empty-events": {
+          "text": [
+            "5. Exploration and events become a notification treadmill",
+            "Symptom:",
+            "discovery text changes, but the player repeatedly chooses the largest resource grant. Later messages interrupt play without altering a relationship, commitment or available action.",
+            "Why it disengages:",
+            "the interface demands attention without supplying a decision the player cares about. A large event library can still feel repetitive if its consequences rarely connect to the rest of the game. Conversely, players seeking stories may value events that a pure optimizer dismisses.",
+            "Possible repair:",
+            "connect events to persistent state, vary the kind of reward, let some history remain quietly inspectable, and reserve interruptions for consequential choices. Test renewed exploration against established investments.",
+            "Test it",
+            "Record the last ten event choices and what changed afterward. Separate narrative interest from mechanical adaptation instead of treating either as the only valid payoff.",
+            "Soren Johnson: Events",
+            "\u00b7",
+            "Players discuss routine decisions",
+            "\u00b7",
+            "Players discuss exploration rewards",
+            "\u00b7",
+            "Derek Paxton on Tidefall iteration"
+          ],
+          "citations": [
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-9-events/",
+              "label": "Soren Johnson: Events"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+              "label": "Players discuss routine decisions"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+              "label": "Players discuss exploration rewards"
+            },
+            {
+              "href": "https://news.xbox.com/en-us/2025/09/11/how-endless-legend-2-raises-the-tide-on-turn-based-strategy-games/",
+              "label": "Derek Paxton on Tidefall iteration"
+            }
+          ]
+        },
+        "rivals": {
+          "text": [
+            "6. Rivals are arbitrary, exploitable or incapable",
+            "Symptom:",
+            "alliances collapse without readable causes, repeated bargaining generates easy profit, a themed AI builds unusable fleets, or armies declare an objective they cannot reach.",
+            "Why it disengages:",
+            "the player cannot build a useful model of the world. Empty hostility creates noise; effortless exploitation reduces a rival to a resource dispenser; incoherent planning makes threats feel theatrical.",
+            "Possible repair:",
+            "align research, production, travel and objectives; expose motives at the appropriate information level; price repeated diplomatic actions; and define which commitments rivals honor. Avoid making diplomacy so rigid that reasonable initiatives require arbitrary waiting.",
+            "Test it",
+            "Trace a full rival plan rather than checking a declaration alone. Try repeatable diplomatic loops. Ask whether a player could explain a major change in relations from visible evidence.",
+            "Jon Shafer: Revisiting Civ V",
+            "\u00b7",
+            "Brad Wardell: Galactic Civilizations IV AMA",
+            "\u00b7",
+            "Soren Johnson: Diplomacy",
+            "\u00b7",
+            "William Dyce: Humankind diplomacy"
+          ],
+          "citations": [
+            {
+              "href": "https://www.gamedeveloper.com/design/revisiting-the-design-of-civ-5",
+              "label": "Jon Shafer: Revisiting Civ V"
+            },
+            {
+              "href": "https://www.reddit.com/r/GalCiv/comments/1uwexck/galactic_civilizations_iv_ama_july_15th_2026/",
+              "label": "Brad Wardell: Galactic Civilizations IV AMA"
+            },
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-10-diplomacy/",
+              "label": "Soren Johnson: Diplomacy"
+            },
+            {
+              "href": "https://www.gamedeveloper.com/design/the-frothy-design-and-diplomacy-of-humankind",
+              "label": "William Dyce: Humankind diplomacy"
+            }
+          ]
+        },
+        "ending": {
+          "text": [
+            "7. The game continues long after its purpose is fulfilled",
+            "Symptom:",
+            "dominance is clear, remaining rivals offer little resistance, and victory requires lengthy cleanup. Alternatively, a barely signalled rival condition suddenly ends a long campaign.",
+            "Why it disengages:",
+            "formal victory and the player\u2019s sense of achievement are out of step. Anti-snowball penalties can create a different frustration when they punish the growth fantasy the player came for. Repeated scripted crises may simply extend the obligation.",
+            "Possible repair:",
+            "make progress visible, test earlier decisive endings, provide adaptive objectives or offer optional continuation. Choose whether the campaign celebrates earned domination, continued competition or open-ended stewardship.",
+            "Test it",
+            "Record when players expect the outcome to be settled and when they stop caring. Treat those answers separately from objective mathematical inevitability.",
+            "Soren Johnson: The End",
+            "\u00b7",
+            "Players disagree about the late game",
+            "\u00b7",
+            "Players disagree about preventing snowballing"
+          ],
+          "citations": [
+            {
+              "href": "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+              "label": "Soren Johnson: The End"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/18gs97z/4x_games_largely_have_not_figured_out_late_game/",
+              "label": "Players disagree about the late game"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1f9vx9e/best_feature_to_prevent_snowballing/",
+              "label": "Players disagree about preventing snowballing"
+            }
+          ]
+        },
+        "opaque-ui": {
+          "text": [
+            "8. Strategic difficulty comes from missing information",
+            "Symptom:",
+            "a player must visit several panels to calculate a replacement, cannot explain an income change, or learns an invalid action only after committing. Rich decoration crowds out labels and comparisons.",
+            "Why it disengages:",
+            "mistakes reflect memory, arithmetic or discovery of the interface rather than the intended strategic tradeoff. Atmosphere still matters; visual restraint alone does not ensure legibility.",
+            "Possible repair:",
+            "place relevant information beside the action, show net effects and sources, distinguish known facts from forecasts, and preserve spatial and keyboard context. Use optional depth for detailed explanations instead of flooding every screen.",
+            "Test it",
+            "Ask a player to predict a command\u2019s cost and consequence. Record navigation detours and incorrect predictions; separately ask whether the screen feels appropriate to the fiction.",
+            "Derek Paxton: UI/UX Next Steps",
+            "\u00b7",
+            "Detailed Map Tacks: creator documentation",
+            "\u00b7",
+            "Players discuss interface atmosphere and readability",
+            "\u00b7",
+            "Soren Johnson: developer AMA"
+          ],
+          "citations": [
+            {
+              "href": "https://community.amplitude-studios.com/amplitude-studios/endless-legend-2/blogs/996-ui-ux-next-steps",
+              "label": "Derek Paxton: UI/UX Next Steps"
+            },
+            {
+              "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=2428969051",
+              "label": "Detailed Map Tacks: creator documentation"
+            },
+            {
+              "href": "https://www.reddit.com/r/civ/comments/1i3x2j1/potatomcwhiskeys_video_dropped_diety_tecumseh/",
+              "label": "Players discuss interface atmosphere and readability"
+            },
+            {
+              "href": "https://www.reddit.com/r/IAmA/comments/gftr6m/i_am_soren_johnson_designerprogrammer_of_old/",
+              "label": "Soren Johnson: developer AMA"
+            }
+          ]
+        },
+        "overhelp": {
+          "text": [
+            "9. Assistance quietly takes control away",
+            "Symptom:",
+            "prompts repeatedly select a garrison the player intends to hold; camera jumps interrupt another task; automation consumes reserved resources or overrides manual orders. The player fights the assistant to preserve a plan.",
+            "Why it disengages:",
+            "convenience erodes ownership and trust. Removing all help also harms players who rely on reminders to resume a plan. Preferences differ by task, input method and experience.",
+            "Possible repair:",
+            "expose automation state, budgets and stopping rules; make cycling and reminders optional; provide reliable overrides; and allow planning aids without making exhaustive annotation compulsory.",
+            "Test it",
+            "Give an automated system a budget and one exception. Change the plan manually, save and resume. Verify that assistance follows the new intent and that its status is understandable.",
+            "Stellaris diary #310: automation budgets",
+            "\u00b7",
+            "Players discuss automatic cycling and reminders",
+            "\u00b7",
+            "Players disagree about advance planning"
+          ],
+          "citations": [
+            {
+              "href": "https://steamcommunity.com/games/281990/announcements/detail/3646280646048523752",
+              "label": "Stellaris diary #310: automation budgets"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1x21wqs/micromanagement_vs_hand_holding_which_do_you/",
+              "label": "Players discuss automatic cycling and reminders"
+            },
+            {
+              "href": "https://www.reddit.com/r/CivVII/comments/1va5lpv/do_you_plan_out_your_towns_with_map_tacks_and_if/",
+              "label": "Players disagree about advance planning"
+            }
+          ]
+        },
+        "validation": {
+          "text": [
+            "10. Production output is mistaken for engagement",
+            "Symptom:",
+            "the team counts features, event text, test passes or simulated victories and concludes the game is fun. Only the opening receives human-style observation; later saves are checked for crashes.",
+            "Why it disengages:",
+            "correct systems can still form a repetitive or exhausting campaign. Self-selected online complaints reveal useful possibilities and preference conflicts, but they do not establish their prevalence. A developer retrospective explains a design argument; it does not prove a universal solution.",
+            "Possible repair:",
+            "combine rules testing with focused task observation, repeated campaigns, late-game reviews and explicit audience questions. State what was observed, inferred or left untested. Allow criticism to remove a mechanic as readily as to add one.",
+            "Test it",
+            "For each proposed improvement, write the player problem, supporting observation, expected change and a result that would make you reconsider.",
+            "Aron Nisbel: strategy interface study",
+            "\u00b7",
+            "Players discuss unfinished campaigns",
+            "\u00b7",
+            "Players disagree about micromanagement"
+          ],
+          "citations": [
+            {
+              "href": "https://www.diva-portal.org/smash/get/diva2:1538474/FULLTEXT01.pdf",
+              "label": "Aron Nisbel: strategy interface study"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+              "label": "Players discuss unfinished campaigns"
+            },
+            {
+              "href": "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+              "label": "Players disagree about micromanagement"
+            }
+          ]
+        },
+        "review": {
+          "text": [
+            "Use the guides to review a real game",
+            "Start with a pinned build, stated audience and concrete tasks. For each criterion, record an observed strength, an observed failure or an untested question. Use small ratings only as a shared discussion aid:",
+            "0",
+            "absent or obstructive;",
+            "1",
+            "partially supported;",
+            "2",
+            "consistently supported in the observed tasks. Include confidence and the saves or actions inspected. Do not sum these into an objective \u201cfun score.\u201d",
+            "Review area",
+            "Concrete question",
+            "Useful evidence",
+            "Decision depth",
+            "When does the preferred choice reverse?",
+            "Two plausible states and their opportunity costs",
+            "Replayability",
+            "What changes the next campaign\u2019s plan?",
+            "Repeated openings, same goal, reasons for divergence",
+            "Randomness",
+            "What response remains after bad luck?",
+            "Extreme seeds, visible warning and recovery options",
+            "Rivals",
+            "Can a visible intention become a credible operation?",
+            "Research \u2192 production \u2192 travel \u2192 engagement",
+            "Pacing",
+            "How much work follows perceived resolution?",
+            "Early, middle, late and finished saves",
+            "Interface",
+            "Can the player predict and execute the choice?",
+            "Task errors, navigation, focus and net-effect previews",
+            "Ownership",
+            "Does assistance preserve the player\u2019s intent?",
+            "Budgets, exceptions, manual overrides and resuming",
+            "Prioritize by player impact and evidence strength. Prefer one targeted change with a falsifiable prediction over a feature bundle that makes its cause impossible to assess. Revisit the original task and a plausible counterexample after the change."
+          ],
+          "citations": []
+        }
+      }
+    }
+  ]
+}

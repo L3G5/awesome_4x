@@ -1,0 +1,36 @@
+import fs from 'node:fs';
+import {chromium} from '/home/leg/projects/awesome_4x/node_modules/@playwright/test/index.mjs';
+const out='/tmp/asterion-critique-replayability';
+const browser=await chromium.launch({headless:true,executablePath:'/home/leg/.cache/ms-playwright/chromium-1223/chrome-linux64/chrome',args:['--enable-unsafe-swiftshader']});
+const records=[];
+for(const seed of ['replayability-review-9','replayability-review-4']){
+ const context=await browser.newContext({viewport:{width:1440,height:960}}),page=await context.newPage(),errors=[];
+ page.on('pageerror',error=>errors.push(error.message));
+ await page.goto('http://127.0.0.1:5220');
+ await page.locator('[data-action="begin"]').click();
+ await page.locator('[data-action="menu"]').click();
+ await page.locator('[data-action="new-game-menu"]').click();
+ await page.locator('#galaxy-seed').fill(seed);
+ await page.locator('[data-action="new-game-confirm"]').click();
+ await page.locator('[data-action="begin"]').click();
+ const initial=await page.locator('#inspector').innerText();
+ await page.screenshot({path:out+'/'+seed+'-initial.png'});
+ await page.locator('#inspector [data-system-select="s20"]').click();
+ const beforeSurvey=await page.locator('#inspector').innerText();
+ await page.locator('[data-action="move"]').click();
+ const sundrift=await page.locator('#inspector').innerText();
+ await page.screenshot({path:out+'/'+seed+'-sundrift.png'});
+ await page.locator('[data-action="home"]').click();
+ await page.locator('#inspector [data-fleet="f3"]').click();
+ await page.locator('#inspector [data-system-select="s41"]').click();
+ await page.locator('[data-action="move"]').click();
+ const asterion=await page.locator('#inspector').innerText();
+ await page.screenshot({path:out+'/'+seed+'-asterion.png'});
+ await page.locator('[data-page="research"]').click();
+ const research=await page.locator('#workspace-page').innerText();
+ records.push({seed,method:'Visible UI only in isolated Chromium context. New campaign, scout to Sundrift, initial frigate to Asterion, inspect research. No end turn; no hidden state read; no imported or modified save.',initial,beforeSurvey,sundrift,asterion,research,errors});
+ await context.close();
+}
+fs.writeFileSync(out+'/ui-openings.json',JSON.stringify({baseURL:'http://127.0.0.1:5220',records},null,2)+'\n');
+await browser.close();
+console.log(JSON.stringify(records.map(({seed,sundrift,asterion,errors})=>({seed,sundrift,asterion,errors})),null,2));

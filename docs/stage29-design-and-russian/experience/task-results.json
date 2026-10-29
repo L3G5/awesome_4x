@@ -1,0 +1,153 @@
+{
+  "mapKeyboard": {
+    "before": {
+      "tag": "BUTTON",
+      "text": "Sundrift\n✦ CONCORD BEACON",
+      "html": "<button type=\"button\" class=\"galaxy-system-label is-owned is-beacon\" data-system-id=\"s20\" aria-pressed=\"false\" aria-label=\"Sundrift, ✦ concord beacon\" style=\"--system-color: #68d9cd; visibility: visible; transform: translate(512px, 387px) translateX("
+    },
+    "after": {
+      "tag": "BODY",
+      "text": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n1,847+110\nCREDITS\nincome before alignment\n◇\n189+48\nMINERALS\n✧\n0+",
+      "html": "<body>\n    <div id=\"app\"><div class=\"app-shell\">\n  <header class=\"topbar\"><div class=\"brand\"><div class=\"brand-mark\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-li"
+    },
+    "tab": {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "html": "<button type=\"button\" class=\"galaxy-system-label is-owned is-founding is-route-preview\" data-system-id=\"s0\" aria-pressed=\"false\" aria-label=\"Solace, founding world, concord, route preview jump 3 of 4\" style=\"--system-color: #68d9cd; visibility: visib"
+    },
+    "inspector": "Sundrift"
+  },
+  "colony": {
+    "focusAfterInspect": {
+      "tag": "BODY",
+      "text": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n1,847+110\nCREDITS\nincome before alignment\n◇\n189+48\nMINERALS\n✧\n0+",
+      "html": "<body>\n    <div id=\"app\"><div class=\"app-shell\">\n  <header class=\"topbar\"><div class=\"brand\"><div class=\"brand-mark\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-li"
+    },
+    "viewAfterInspect": "galaxy",
+    "name": "Haven",
+    "focusAfterBuild": {
+      "tag": "BODY",
+      "text": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n1,822+110\nCREDITS\nincome before alignment\n◇\n154+48\nMINERALS\n✧\n0+",
+      "html": "<body>\n    <div id=\"app\"><div class=\"app-shell\">\n  <header class=\"topbar\"><div class=\"brand\"><div class=\"brand-mark\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-li"
+    },
+    "state": {
+      "turn": 50,
+      "orders": 10,
+      "queue": {
+        "itemId": "shipyard",
+        "kind": "building",
+        "progress": 0,
+        "work": 32,
+        "cost": {
+          "credits": 25,
+          "minerals": 35
+        },
+        "replaceBuildingId": "mine"
+      }
+    },
+    "tabAfterBuild": {
+      "tag": "INPUT",
+      "text": "",
+      "html": "<input class=\"sr-only\" type=\"file\" id=\"import-save\" accept=\"application/json,.json\" aria-label=\"Import campaign save\" style=\"\">"
+    },
+    "returnNavigation": {
+      "scrollBefore": 1098,
+      "scrollAfter": 0,
+      "sort": "✧ SCIENCE\n↓"
+    }
+  },
+  "researchKeyboard": {
+    "before": {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "html": "<button data-action=\"research\" data-tech=\"terraforming\" title=\"\">Research →</button>"
+    },
+    "after": {
+      "tag": "BODY",
+      "text": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n1,847+110\nCREDITS\nincome before alignment\n◇\n189+48\nMINERALS\n✧\n0+",
+      "html": "<body>\n    <div id=\"app\"><div class=\"app-shell\">\n  <header class=\"topbar\"><div class=\"brand\"><div class=\"brand-mark\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-li"
+    },
+    "tab": {
+      "tag": "BUTTON",
+      "text": "All",
+      "html": "<button class=\"active\" data-research-filter=\"All\" aria-pressed=\"true\">All</button>"
+    },
+    "research": {
+      "techId": "terraforming",
+      "progress": 439
+    }
+  },
+  "mobile": {
+    "rowBox": {
+      "x": 64,
+      "y": 328.671875,
+      "width": 760,
+      "height": 68.390625
+    },
+    "worldBox": {
+      "x": 64,
+      "y": 328.671875,
+      "width": 178.421875,
+      "height": 68.390625
+    },
+    "inspectBox": {
+      "x": 760.09375,
+      "y": 347.359375,
+      "width": 30.1875,
+      "height": 31
+    },
+    "viewport": {
+      "width": 390,
+      "height": 960
+    },
+    "scrollDimensions": {
+      "width": 310,
+      "scrollWidth": 760,
+      "scrollLeft": 0
+    },
+    "fonts": [
+      {
+        "text": "Kepler\n7 / 8 population",
+        "size": "17px"
+      },
+      {
+        "text": "Unchartered\n2 / 4 slots",
+        "size": "10px"
+      },
+      {
+        "text": "17",
+        "size": "12px"
+      },
+      {
+        "text": "9",
+        "size": "12px"
+      },
+      {
+        "text": "17",
+        "size": "12px"
+      },
+      {
+        "text": "11",
+        "size": "12px"
+      },
+      {
+        "text": "Idle",
+        "size": "10px"
+      },
+      {
+        "text": "↗",
+        "size": "10px"
+      }
+    ],
+    "focusAfterInspect": {
+      "tag": "BODY",
+      "text": "ASTERION REACH\n◈\n1,930\n+118\n◇\n58\n+54\n✧\n0\n+96\n⌘\n11 / 11\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHo",
+      "html": "<body>\n    <div id=\"app\"><div class=\"app-shell\">\n  <header class=\"topbar\"><div class=\"brand\"><div class=\"brand-mark\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-li"
+    },
+    "view": "galaxy"
+  },
+  "ending": {
+    "unchanged": true,
+    "winner": "player"
+  }
+}

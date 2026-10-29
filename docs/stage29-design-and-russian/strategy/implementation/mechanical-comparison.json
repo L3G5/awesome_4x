@@ -1,0 +1,52 @@
+{
+  "baseline": "93a62961e994994d30c05240b17c39a418020473",
+  "method": "Paired ordinary-command application of existing actual UI histories to pinned baseline and changed engine. No new campaign, synthetic balance sample or altered player strategy.",
+  "normalizations": [
+    "Remove only relations warCause metadata.",
+    "Remove only the exact appended authored declaration sentence from strings; do not ignore or reorder any other log, briefing, AI, fleet, economy, RNG or state field."
+  ],
+  "results": [
+    {
+      "campaign": "default actual continuation",
+      "commands": 177,
+      "allPostCommandMechanicalStatesEqual": true,
+      "allCommandResultsEqualAfterAuthoredTextNormalization": true,
+      "jsonReloadNextCommandChecks": 177,
+      "baselineExactActualExport": true,
+      "turn": 60,
+      "winner": "player",
+      "alignedCauseDeclarations": [
+        {
+          "turn": 54,
+          "text": "Khar Dominion declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance. Competition over public Asterion alignment prompted this declaration."
+        },
+        {
+          "turn": 53,
+          "text": "The Luminous Choir declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance. Competition over public Asterion alignment prompted this declaration."
+        }
+      ],
+      "finalRng": 901471331
+    },
+    {
+      "campaign": "Odyssey actual transcript",
+      "commands": 280,
+      "allPostCommandMechanicalStatesEqual": true,
+      "allCommandResultsEqualAfterAuthoredTextNormalization": true,
+      "jsonReloadNextCommandChecks": 280,
+      "baselineExactActualExport": true,
+      "turn": 66,
+      "winner": "player",
+      "alignedCauseDeclarations": [
+        {
+          "turn": 53,
+          "text": "The Luminous Choir declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance. Competition over public Asterion alignment prompted this declaration."
+        },
+        {
+          "turn": 53,
+          "text": "Veyr Consortium declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance. Competition over public Asterion alignment prompted this declaration."
+        }
+      ],
+      "finalRng": 3328440834
+    }
+  ]
+}

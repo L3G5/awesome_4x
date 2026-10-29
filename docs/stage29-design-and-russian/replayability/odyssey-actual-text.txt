@@ -1,0 +1,95 @@
+Odyssey — a campaign in the Asterion Reach
+Actual UI campaign · version 0.20 · 29 October 2026
+A narrow passage
+to Transcendence.
+An exploration-led Concord reached the ancient network first, then had to defend it. Three interruptions, a lost cruiser and repeated relief operations turned a comfortable lead into a one-cycle finish.
+Seed
+ASTERION-ODYSSEY-20
+· 57 minutes of play · Ordinary UI actions throughout
+66
+VICTORY CYCLE
+5
+FINAL COLONIES
+45
+POPULATION
+8
+SURVIVING WARSHIPS
+604
+FINAL LEGACY
+The actual ending. Khar’s public alignment was 9/10, Choir’s 6/10 and Veyr’s 4/10 when the Concord completed 10/10. This was not a tied finish.
+Worlds with different jobs
+Sundrift became the mineral foundation. Nacre’s low habitability was acceptable because its native science justified an Academy. Solace’s Forge pushed production from 22 to 29, crossing the threshold for a one-cycle frigate. Meridian supplied ore before receiving its research infrastructure; Kepler became a practical replacement for a distant settlement plan.
+The comparison panels mattered when slots filled. Two Habitation Domes were eventually replaced: the previews showed that existing citizens remained at 12/8, with growth paused. Once all twelve technologies were complete, wartime shipyards replaced laboratories at Sundrift and Nacre. Nacre’s preview explicitly disclosed the loss of its Academy charter.
+A production threshold, not simply a bigger number: the Forge enabled one-cycle frigates.
+The observatory we did not inherit
+The preserved record belongs to the world. It remembers both civilizations’ decisions.
+At cycle 20, the scout paid 40 credits and 20 minerals to preserve the Last Observatory on fertile Stillwater. A Colony Ark was later sent along an eight-jump route. Khar settled the world at cycle 27 while the Ark was still six jumps away.
+The expedition changed destination and settled Kepler instead. The lost opportunity did not justify an unprepared war. Later local observation showed Khar had completed the observatory’s story at cycle 35, taking the atlas reward. The ending linked back to that exact shared history.
+This setback made distance, settlement timing and ownership consequential. No restoration or reward was invented for the player.
+The race became a war
+Early diplomacy was explicit: the Concord initiated Veyr and Khar trade, and accepted a funded Choir offer at cycle 8. All three Concord beacons were operational at cycle 51. Veyr and Choir broke their trade treaties and declared war during 53→54. Their subsequent attacks forced real fleet assembly, repairs and industrial changes.
+Arrival cycle
+Observed event
+Consequence and response
+56
+Six Veyr frigates defeated Nacre’s four-ship lead and its separate one-ship reinforcement.
+Alignment 5→4. Three newly assembled frigates relieved the blockade; two survived. The following zero-fire Ark exchange preserved exactly 39.7 hull.
+57
+Four Choir frigates destroyed Sundrift’s cruiser.
+Alignment 4→3. Meridian’s garrison joined the relief force; one frigate survived. A laboratory was retooled into a second shipyard.
+61
+Two Veyr frigates and two Concord defenders destroyed each other at Nacre; two Choir frigates then occupied the empty orbit.
+Alignment 6→5. The deliberate merge chooser assembled another three-ship relief force. Khar’s network was now just one cycle behind.
+63
+A second two-against-two Veyr attack ended in mutual destruction.
+No hostile formation remained. Alignment advanced 6→7. The replacement guard was increased to three, then four frigates.
+AI-turn engagements retain the operations cycle in their reports and appear in the following arrival briefing. The table uses the displayed arrival cycle.
+Recorded volleys and shield modifiers explained why the initial garrison lost and informed the relief decision.
+The chooser made the surviving identity, hull total, Hold state and reduced movement explicit before payment.
+Three paid repairs restored damaged survivors; passive repair forecasts showed the remaining shared recovery. Eighteen quick commissions and fourteen paid merges were made through the UI. Neither rebuilding nor merging was automatic.
+By cycle 65, prolonged-war peace settlements were available. Paying 60 credits and one order to each enemy secured binding truces and withdrew the visible Veyr force from Kepler. The final alignment payment then completed the campaign at cycle 66. Khar remained a trade partner throughout.
+What the interface helped—and where it still asked for work
+Meaningful support
+Investment comparisons exposed production thresholds, capacity tradeoffs and lost charter support. Quick commissions shortened repeated rebuilding. Merge previews prevented movement assumptions during relief. Hold kept established garrisons out of movement cycling. Battle rounds explained the actual exchanges without implying that nearby formations fought together.
+The ending was reopened from both menu and Chronicle. Its battle, expedition and world links worked. Three final exports, taken before and after inspection, are byte-identical.
+Remaining friction
+The late war still required navigating among shipyards, moving new formations and merging them manually. This was useful control during a close race, but a substantial portion of the late interaction count. The unused-order warning also remained a repeated confirmation when deliberate reserves and stationary garrisons were appropriate.
+One real player mistake was preserved: unfinished Shields research at 212/220 was switched to Accords, then corrected the next cycle. Seven driver failures are separately recorded; none is presented as a game crash or erased by a rollback.
+Evidence, without reconstructed history masquerading as play
+The original evidence is frozen. Every game mutation occurred through visible controls, including end-cycle confirmation. Observer-safe projections supplied current own assets, charted geography and locally visible fleets. No save edits, resource grants, engine commands, policy automation, rollback or browser recovery were used during play.
+Actual final save
+Original receipts and decisions
+Full observations
+Original SHA-256 manifest
+Compact results and export inventory
+Read-only summary script
+Provenance and error accounting
+Immutable build:
+47e037308271ff3d3ac0d1fc870a889cdf0a67c4
+, served at
+http://127.0.0.1:5208
+. Exact asset fingerprints are in
+frozen-build.json
+. The
+actual frozen guide
+predates later release copyediting.
+Sixteen actual UI downloads, 592 successful interaction receipts, 65 completed cycles, 64 decision notes, 24 screenshots, seven driver errors and zero browser errors are retained. Interaction totals include inspection and navigation; they are not game-order totals or independent samples.
+Cycle 1: attempted navigation while a colonization confirmation was pending.
+Cycle 15: an unavailable fleet selector after the Ark was consumed.
+Cycle 52→53: a fifth quickbar fleet selector timed out while an end-cycle request was mistakenly issued. Only the research selection succeeded; intended Hold and commission happened at actual 53.
+Cycle 56: one invalid numeric selector and one incorrect details-class selector during report inspection.
+Cycle 66: two unscoped selectors selected a hidden underlying ending control. Modal-scoped controls then worked.
+The screenshot named
+cycle66-reopened-retained-battle-rounds.png
+captures the menu after those driver errors. The correct evidence is
+cycle66-retained-battle-rounds-verified.png
+.
+There is no untouched cycle-55 or pre-relief cycle-56/57 UI export. Actual 56/57 saves are after relief; actual
+cycle61.json
+is before relief and
+the later cycle61 export
+is after it. Any independently reconstructed checkpoint must stay labeled derived and match later actual exports.
+Independent replay is being prepared separately. This report makes no causal claim that a particular raid used Stage 20’s new absorption helper. Later AI diagnostics, if performed, are separate evidence. One manually played seed does not establish a win rate or a general difficulty estimate.
+Final export SHA-256:
+98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b
+Original play and receipts ended 02:30 UTC. This report is a later read-only summary.

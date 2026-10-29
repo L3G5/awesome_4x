@@ -1,0 +1,829 @@
+{
+  "packageBaseCommit": "c3bc8c48860bf036c46e601ba3198b0a689ddd4a",
+  "scope": "This review archive and its tools. Original report pins remain authoritative; integrated release reports are separate packages.",
+  "delegatedDirectories": [
+    "russian",
+    "acceptance"
+  ],
+  "deferredLocalLinks": [
+    "russian/index.html",
+    "acceptance/index.html"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 160,
+      "sha256": "58118fe57b716742ff68138384bbf37dd5ad7923528e8e2ca4bce0cf22f8b8c0"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 4841,
+      "sha256": "9642afe5e186711e3560dc730ed160f060dab6ee33ef96abd2bb931cbf82dc74"
+    },
+    {
+      "path": "ecology/README.txt",
+      "bytes": 1314,
+      "sha256": "cef2152e926e8c6f19ddff37a97c1458784319d1d2ac67f9cbd27ab08c6f3e44"
+    },
+    {
+      "path": "ecology/ecology-priority.patch",
+      "bytes": 18467,
+      "sha256": "895d0cdccfbbd3877e1b1c8ab7e66b378a7a28ac7c25986d86e9e6bf9b586889"
+    },
+    {
+      "path": "ecology/examples.json",
+      "bytes": 30288,
+      "sha256": "f38b04e15071213bfd6a968371ec7e6b093af10b21d9003fc1ad7ba64962bbce"
+    },
+    {
+      "path": "ecology/focused-tests.txt",
+      "bytes": 2477,
+      "sha256": "928a9bc7ecc0d77d6e3ebad363fcad5ca26f0fa07e1da38f59af344677ec3d4a"
+    },
+    {
+      "path": "ecology/implementation-report.txt",
+      "bytes": 8308,
+      "sha256": "45299f978c31997ce3a6dff48a6787e0b6900fb8cb64bec151ca61962db4fc59"
+    },
+    {
+      "path": "ecology/manifest.json",
+      "bytes": 2939,
+      "sha256": "2bfeda9d3a7271cc1601431bf5f7a0b06e906097e18d3959a2f524c8244a757e"
+    },
+    {
+      "path": "ecology/paired-cohort-before-growth-bound-stdout.txt",
+      "bytes": 300,
+      "sha256": "be994477fe4f45ce77123dfd6c5c0e15517f8e1b1c27a1b35ee8382bf4ccbf3e"
+    },
+    {
+      "path": "ecology/paired-cohort-before-growth-bound.json.gz",
+      "bytes": 244413,
+      "sha256": "ab03e4e336a8d9a08416c7eed3904abb524650e35990aa52a26be40488b53442"
+    },
+    {
+      "path": "ecology/paired-cohort-initial-mutable-projection.json.gz",
+      "bytes": 91011,
+      "sha256": "e73ce7d16be413b2090c956ad5f2df39190fd8d00ec72bfcb1d974f8c6fd7c90"
+    },
+    {
+      "path": "ecology/paired-cohort-initial-stdout.txt",
+      "bytes": 300,
+      "sha256": "be994477fe4f45ce77123dfd6c5c0e15517f8e1b1c27a1b35ee8382bf4ccbf3e"
+    },
+    {
+      "path": "ecology/paired-cohort-stdout.txt",
+      "bytes": 300,
+      "sha256": "be994477fe4f45ce77123dfd6c5c0e15517f8e1b1c27a1b35ee8382bf4ccbf3e"
+    },
+    {
+      "path": "ecology/paired-cohort.json.gz",
+      "bytes": 244443,
+      "sha256": "ba1f1d79652a448f6fc99b9b25c79d25f0df621bf040169101eca8345fb503b1"
+    },
+    {
+      "path": "ecology/paired-cohort.mjs",
+      "bytes": 6536,
+      "sha256": "1ebe9c8af378fa3c4c3dc33c49906dc3487548f1a30094f9a72b456173680e4c"
+    },
+    {
+      "path": "ecology/rules-tests.txt",
+      "bytes": 102109,
+      "sha256": "c526830c679714463223296c61b1a53d87ebabdef6939384b0e39453a09da011"
+    },
+    {
+      "path": "ecology/stage4-audit-15-first-difference-after.json",
+      "bytes": 72236,
+      "sha256": "32ef8f6a4af18c7ec68945a5f9012a317126d2616aadc816ae431318cf61b7bf"
+    },
+    {
+      "path": "ecology/stage4-audit-15-first-difference-before.json",
+      "bytes": 72094,
+      "sha256": "a8e9cc398b43fcfb20c7eb890d9ab575deb7a04a9c2e285a5a40193bab13da03"
+    },
+    {
+      "path": "ecology/stage4-audit-4-first-difference-after.json",
+      "bytes": 112429,
+      "sha256": "be3deda24084250d9ff0acf6e47bf302899bd4e684beae950065b58fb7e74198"
+    },
+    {
+      "path": "ecology/stage4-audit-4-first-difference-before.json",
+      "bytes": 112668,
+      "sha256": "77dbc4f63015837d338ba91af542edd4ee213103047a6e46cae3afb8ac553a2e"
+    },
+    {
+      "path": "experience/browser-errors.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "experience/findings.json",
+      "bytes": 1043,
+      "sha256": "fb2d098601cd190fe5bc98c6037c02ef62c8275dcc40e229689eb7ad4080ed22"
+    },
+    {
+      "path": "experience/fix/build-1440.png",
+      "bytes": 674214,
+      "sha256": "cdbdd00c2e98a70f33606f1b9504e542116b04b5eac701a0642df52efdbbe34a"
+    },
+    {
+      "path": "experience/fix/build-390.png",
+      "bytes": 145700,
+      "sha256": "25f4420405e43e5163cdd2ec32042e546eb23986dcde42ed4487abb9e184f2bd"
+    },
+    {
+      "path": "experience/fix/capture.mjs",
+      "bytes": 2031,
+      "sha256": "fdb9100c076a0de9b124a9463a8358f90cae531d03beed7ba99d656ac78aa93b"
+    },
+    {
+      "path": "experience/fix/focus-appearance.json",
+      "bytes": 1309,
+      "sha256": "6d90b5ba1328471dabde158af782bede1eb03df86f9d4ea141774418f485add2"
+    },
+    {
+      "path": "experience/fix/inspect-1440.png",
+      "bytes": 666519,
+      "sha256": "a1a33ceb5d949c1f2ab1a970a1806cde2c9a3460f14b40515cff020aeafe8f13"
+    },
+    {
+      "path": "experience/fix/inspect-390.png",
+      "bytes": 215304,
+      "sha256": "789e1ae4a0c7f5233143bd1d1d40dbe2a96759a913d2c421b4b40e71cbfd0117"
+    },
+    {
+      "path": "experience/fix/research-1440.png",
+      "bytes": 346107,
+      "sha256": "ada2a3559dac580cee13734a5b3abc54ec9a684bc27bc165fd8aeaa8a1eac2c5"
+    },
+    {
+      "path": "experience/fix/research-390.png",
+      "bytes": 134889,
+      "sha256": "aeb8b893422d6699813389a749a891102c8fb7f8eadce317ffb1ea27b33ee743"
+    },
+    {
+      "path": "experience/fix/verification.json",
+      "bytes": 1560,
+      "sha256": "bfed3fc0a91b822665d8c15d64d4b0339d669b6ea0819912dae81e88f323a751"
+    },
+    {
+      "path": "experience/index.html",
+      "bytes": 20292,
+      "sha256": "064bad4980e9939aa30129e3372208eee29cc9a58f898fa4998913b7d2c8f021"
+    },
+    {
+      "path": "experience/inspect.mjs",
+      "bytes": 1780,
+      "sha256": "3a180d4260d146812e1fed1beb5ffa4e3a5d0278b77ade390c3bc58d01412b72"
+    },
+    {
+      "path": "experience/late-loop-final.json",
+      "bytes": 99303,
+      "sha256": "dba0db0c1575fa5a9f83b3934bcb1451cb7ec128d7a3d9137ae67eba3849745c"
+    },
+    {
+      "path": "experience/late-loop.json",
+      "bytes": 9999,
+      "sha256": "b2205e0a442c75c968d48a83cb6eced0882003884d1564dfad4df7d0ff121029"
+    },
+    {
+      "path": "experience/late-loop.mjs",
+      "bytes": 2783,
+      "sha256": "4491a4e22e5c6962da2ecf2d2e334168c24a41f6f67fc671bf068ca3a259dfd3"
+    },
+    {
+      "path": "experience/manifest.sha256",
+      "bytes": 7473,
+      "sha256": "efbe5781ba6c571a4b7f94dc2baeb6e476b24a9306cf4073c1492c2de10f3443"
+    },
+    {
+      "path": "experience/report.txt",
+      "bytes": 18302,
+      "sha256": "c51129fee674ba82395b7a0074338e2ac37cb0177c6a7a27532806a45db0bfa9"
+    },
+    {
+      "path": "experience/screens/colony-return-top.png",
+      "bytes": 345096,
+      "sha256": "89b1ebcf4497d46d27a77dfdc44f4be766453741742171cc1d00aa9d4c97d609"
+    },
+    {
+      "path": "experience/screens/default50-55-briefing.png",
+      "bytes": 283304,
+      "sha256": "b8c605f6a0a1ea0804c663a98f4a9b036f1aea52c3c8bc98a263e50f9365ee56"
+    },
+    {
+      "path": "experience/screens/default50-diplomacy.png",
+      "bytes": 376056,
+      "sha256": "d72f1b194e91c85665a8f670a547869774478e70e46015a8f34fcadb5eaa5bc1"
+    },
+    {
+      "path": "experience/screens/default50-empire.png",
+      "bytes": 333253,
+      "sha256": "99bea7571bb5af98445fae1cff9b4fa1d57ce3319eb19cf21405fbf96a29fb45"
+    },
+    {
+      "path": "experience/screens/default50-galaxy.png",
+      "bytes": 671328,
+      "sha256": "fcc5231e15737b07b74f9568228713b30b5097dbe46d910ae186c06c59a21b85"
+    },
+    {
+      "path": "experience/screens/default50-journal.png",
+      "bytes": 333523,
+      "sha256": "07cda5be8e56c8485cc9f067a038bb14558c3e9569eb78483a39e1712da86a3f"
+    },
+    {
+      "path": "experience/screens/default50-research.png",
+      "bytes": 332969,
+      "sha256": "e3d36d3ec69666aae830e297fdb4776174aae54341bd56b4d4f8568bdbb8e16a"
+    },
+    {
+      "path": "experience/screens/default60-diplomacy.png",
+      "bytes": 376003,
+      "sha256": "687378d883ed29cdf0800513bba2f49664235aaa79eabbaacc0c4534afed83a1"
+    },
+    {
+      "path": "experience/screens/default60-empire.png",
+      "bytes": 324574,
+      "sha256": "a218932cc50fcb2a19dcb9586539e49c903cff0317efde93235b4e801f8246dd"
+    },
+    {
+      "path": "experience/screens/default60-galaxy.png",
+      "bytes": 670610,
+      "sha256": "94cf182182c541abf406eaaf96de1272d80b913e789560703c6836a5bccba206"
+    },
+    {
+      "path": "experience/screens/default60-journal.png",
+      "bytes": 338974,
+      "sha256": "a7857e6e9d1426aac345e97464ccb8236677fdbf82a4c114adae3842ac5cff78"
+    },
+    {
+      "path": "experience/screens/default60-research.png",
+      "bytes": 323508,
+      "sha256": "6032a34c372de5ddce7c548a7fd4bcf49363b96bb051a544ddd29f3f0d1eee98"
+    },
+    {
+      "path": "experience/screens/haven-shipyard-comparison.png",
+      "bytes": 329272,
+      "sha256": "d279870246095cd20e2c2ba5710480cee1cb35a675b2400b2132c494df124dd4"
+    },
+    {
+      "path": "experience/screens/map-selection-focus.png",
+      "bytes": 669037,
+      "sha256": "d217e797bd9f4f5de4ff39c262ab4c5b22991e1510237bfe09658118cdcdb74c"
+    },
+    {
+      "path": "experience/screens/mobile-after-inspect.png",
+      "bytes": 296218,
+      "sha256": "f0e327833f2b4d321c3f3e5e32b607fc3bc643cee84ea6e8145348869487e122"
+    },
+    {
+      "path": "experience/screens/mobile-colony-table-left.png",
+      "bytes": 126953,
+      "sha256": "4a695d29a4468762136d433d70dc31f0363523514e182f2c976bcbc6a1e1f54d"
+    },
+    {
+      "path": "experience/screens/odyssey50-diplomacy.png",
+      "bytes": 366279,
+      "sha256": "a6776de1947c8deee677a09b17982ae742462b210b3efe1f8e8cb24b0644f298"
+    },
+    {
+      "path": "experience/screens/odyssey50-empire.png",
+      "bytes": 341755,
+      "sha256": "b3024acc8f6660c48fa039c5157d7a83c5b095082cb6c914ac9ae7fb2e455462"
+    },
+    {
+      "path": "experience/screens/odyssey50-galaxy.png",
+      "bytes": 672440,
+      "sha256": "8360ee178ea8ea464a503e1873e804042d99b43be6a07ab71c41aaa5048f965a"
+    },
+    {
+      "path": "experience/screens/odyssey50-journal.png",
+      "bytes": 333306,
+      "sha256": "75eabd1dd7f7067a0a6c830a4290a4e92063d1ff99ff9f9b01103356fae91775"
+    },
+    {
+      "path": "experience/screens/odyssey50-mobile-diplomacy.png",
+      "bytes": 200104,
+      "sha256": "ab29d34b918b2f9a6912d18060c1c5638339cf37ec99b40c9018fe0cd61acb08"
+    },
+    {
+      "path": "experience/screens/odyssey50-mobile-empire.png",
+      "bytes": 183566,
+      "sha256": "63231fc9b34b63474adc139494dff1d638b683421aa55673da71fc80b7e77b90"
+    },
+    {
+      "path": "experience/screens/odyssey50-mobile-galaxy.png",
+      "bytes": 309351,
+      "sha256": "b94a44e0bc1c6c6cdb2f633744b8406db8f884dc99d681a58035d2b278197e86"
+    },
+    {
+      "path": "experience/screens/odyssey50-mobile-journal.png",
+      "bytes": 238814,
+      "sha256": "7db2e69495426e24c03760f39bdb1d7eccd895fb541fc60c14b01d4bfd7a1c83"
+    },
+    {
+      "path": "experience/screens/odyssey50-mobile-research.png",
+      "bytes": 204953,
+      "sha256": "d2bfa866b1d8fd1807722086c0c23f1f45b91524f8c3aae79c2bff6b21acd768"
+    },
+    {
+      "path": "experience/screens/odyssey50-research.png",
+      "bytes": 332661,
+      "sha256": "1049c378b9d7436b926b697c2eab079803357217baa3cc18feee94a6c8fbb1b9"
+    },
+    {
+      "path": "experience/screens/odyssey66-battle.png",
+      "bytes": 443303,
+      "sha256": "ee0037efa7a097395fa004ebcb5a9ef503418b6da20b4f8c9ae38a9249d4105c"
+    },
+    {
+      "path": "experience/screens/odyssey66-conclusion.png",
+      "bytes": 418141,
+      "sha256": "e3175542cc48100e028a879270ff63d21469620b6ffe96b6b152b77722b9947c"
+    },
+    {
+      "path": "experience/screens/odyssey66-diplomacy.png",
+      "bytes": 378866,
+      "sha256": "27782d671d91b68e844dd344ba2a6a3e1c28e007528b3a4c644b434192ebe115"
+    },
+    {
+      "path": "experience/screens/odyssey66-empire.png",
+      "bytes": 323468,
+      "sha256": "24942435c79466b3ea6999035e2cf3d66348e7fda52eb468a8ce1907b43bc5b3"
+    },
+    {
+      "path": "experience/screens/odyssey66-galaxy.png",
+      "bytes": 689917,
+      "sha256": "d703557889a1da46d2fd482a0ba7cdc8c46f84df9355d58a9e73c632f2253334"
+    },
+    {
+      "path": "experience/screens/odyssey66-journal.png",
+      "bytes": 332364,
+      "sha256": "da715316cc94aca8b1589b822d080a334419429f67aef45dacc441e916d90655"
+    },
+    {
+      "path": "experience/screens/odyssey66-research.png",
+      "bytes": 321628,
+      "sha256": "e46d58ac796b48cc5e85b9dbe956a8a4702d364b274c05ca9d6c2c41111ce6a8"
+    },
+    {
+      "path": "experience/task-results.json",
+      "bytes": 5527,
+      "sha256": "75f303f7d54af9b2fd689dae097101be0f6b3075296a2b072138b09a53e2ad43"
+    },
+    {
+      "path": "experience/tasks.mjs",
+      "bytes": 6357,
+      "sha256": "55f2866d522401dab44657afae221efc223d0e10cf3a898cf0d4714e9a88df8f"
+    },
+    {
+      "path": "experience/text/default50-diplomacy.txt",
+      "bytes": 2872,
+      "sha256": "cd376b9ec3170cadb58ab759081c0c7cc42b98d7a98a42b7aba96ed6023575d3"
+    },
+    {
+      "path": "experience/text/default50-empire.txt",
+      "bytes": 3667,
+      "sha256": "1d0d3f5bc8ca5d4e6e298cd47b250a725c16eb22b5e74fea40ffda7b743f5754"
+    },
+    {
+      "path": "experience/text/default50-galaxy.txt",
+      "bytes": 2168,
+      "sha256": "804e78f06a04c0a7b0b3fb7712b8bbdad782179ee0af6195dae339f037245416"
+    },
+    {
+      "path": "experience/text/default50-journal.txt",
+      "bytes": 10064,
+      "sha256": "96f8e28e3c958e81a94f6fdb6ea6020628e731e38d19b5fc5a5f577b9b47494c"
+    },
+    {
+      "path": "experience/text/default50-research.txt",
+      "bytes": 2858,
+      "sha256": "b14fb295aeb134ba6459d5988d109fe398b4b55976aabf6d78c0e4da0fac818a"
+    },
+    {
+      "path": "experience/text/default60-diplomacy.txt",
+      "bytes": 3006,
+      "sha256": "1e4a93356dddab965adb1b9c6186758e30572d203deb7344e1f68eb427f88da0"
+    },
+    {
+      "path": "experience/text/default60-empire.txt",
+      "bytes": 3149,
+      "sha256": "fe462a033088cfd0e7664ca3e24785e801e05469067a005de0aed1a4281f5981"
+    },
+    {
+      "path": "experience/text/default60-galaxy.txt",
+      "bytes": 2710,
+      "sha256": "bd0f7a310d0733819aa37306def05f407f3d1b480a8814911c4f1bebbc976158"
+    },
+    {
+      "path": "experience/text/default60-journal.txt",
+      "bytes": 13287,
+      "sha256": "a6b97d2af4e9f87d52d6c01132c1d34a49ae67cc0e625b944bb78b9780fc986f"
+    },
+    {
+      "path": "experience/text/default60-research.txt",
+      "bytes": 2819,
+      "sha256": "8a02ab725a28f91e11b922246fa79e4ff4c0e2989b3867d71e07819833abb10e"
+    },
+    {
+      "path": "experience/text/haven-shipyard-comparison.txt",
+      "bytes": 3593,
+      "sha256": "1f7a1d6159b9a76314f962a8e3d2f726b66faef4a058e90b2c6acde589d3c83d"
+    },
+    {
+      "path": "experience/text/odyssey50-diplomacy.txt",
+      "bytes": 2886,
+      "sha256": "587aeac2d9e6cca5b1372a7957b9aed1d4d0f65ca7fd8c5567bfbdb957b588e7"
+    },
+    {
+      "path": "experience/text/odyssey50-empire.txt",
+      "bytes": 3897,
+      "sha256": "18646c7f185ad4ede5c19de0f65893eb22e55c16e5d6bda79f7779a641061b87"
+    },
+    {
+      "path": "experience/text/odyssey50-galaxy.txt",
+      "bytes": 2309,
+      "sha256": "de312efba6c82532067c9cd2a9400ec928759904083630cbc9940a67df5eb92e"
+    },
+    {
+      "path": "experience/text/odyssey50-journal.txt",
+      "bytes": 9835,
+      "sha256": "8d8415df6586e7f9b3afcac7d89df75b3ac3bf21e340b824f5a4d703a869c61c"
+    },
+    {
+      "path": "experience/text/odyssey50-mobile-diplomacy.txt",
+      "bytes": 2761,
+      "sha256": "b19f0aa70b6948bf0c618bb9e7c882e2359607b3b208a4e6b2209537282cf703"
+    },
+    {
+      "path": "experience/text/odyssey50-mobile-empire.txt",
+      "bytes": 3719,
+      "sha256": "f24f06404fa3db0d40357e565bbf9df7c2fc86f7ab3b359358b92de3b9043f12"
+    },
+    {
+      "path": "experience/text/odyssey50-mobile-galaxy.txt",
+      "bytes": 1932,
+      "sha256": "288cfe0bac6bbf3ea0ada4a20eb7be77266bb8d94a9d6f3db519d3a3a9f0266e"
+    },
+    {
+      "path": "experience/text/odyssey50-mobile-journal.txt",
+      "bytes": 9722,
+      "sha256": "664fe5f11e9ccf2dd4d9deab0a26fc850aad68429a32869a2eb1052b2d1a1a06"
+    },
+    {
+      "path": "experience/text/odyssey50-mobile-research.txt",
+      "bytes": 2746,
+      "sha256": "23c854ebc4525c7e5b887d53e7c2f09287643455459218a4fb46759d684b2806"
+    },
+    {
+      "path": "experience/text/odyssey50-research.txt",
+      "bytes": 2859,
+      "sha256": "3ba5e889ac537af7e74679566b6e0c4461bddec8aa0a98a2ea5e01d5e9e6ccda"
+    },
+    {
+      "path": "experience/text/odyssey66-battle.txt",
+      "bytes": 694,
+      "sha256": "7752b7fd0822fd58a094f1085989826841460f6ea084e2ea5cba5e1754197aae"
+    },
+    {
+      "path": "experience/text/odyssey66-conclusion.txt",
+      "bytes": 1873,
+      "sha256": "ce08412df8a7f88d8717028348234b95aa892af481edec40ac303bfa1cdf92bc"
+    },
+    {
+      "path": "experience/text/odyssey66-diplomacy.txt",
+      "bytes": 3175,
+      "sha256": "dd2df45992696ea54a84498acba9d07395385be9d65275532676d991ae4e0b81"
+    },
+    {
+      "path": "experience/text/odyssey66-empire.txt",
+      "bytes": 3091,
+      "sha256": "504e34daf8db36937ada55fcd3708d6d9ed9e4f677ed609e561cf92eefefa76c"
+    },
+    {
+      "path": "experience/text/odyssey66-galaxy.txt",
+      "bytes": 2728,
+      "sha256": "5b813f80fb95b8a1648c7d970f2ecba098c631ad422a43e05eedf5b600c9a400"
+    },
+    {
+      "path": "experience/text/odyssey66-journal.txt",
+      "bytes": 15091,
+      "sha256": "3acd047cc8d3c11eef85d07c1dbc3d691581b2a6d7256f7eb17351197d217502"
+    },
+    {
+      "path": "experience/text/odyssey66-research.txt",
+      "bytes": 2819,
+      "sha256": "e3a992dbd8065fd6c48067561303deabbb19ccdd6fbb32bded5a1ef9b083e87f"
+    },
+    {
+      "path": "guide-review/bad-4x-1280-review.png",
+      "bytes": 123550,
+      "sha256": "d3bf77eb89833d5df4875511af71600511588b1545f0a3e93513ebb15f0968eb"
+    },
+    {
+      "path": "guide-review/bad-4x-1280-top.png",
+      "bytes": 176733,
+      "sha256": "89b53bcebadcc9483b605696436ec960c92a48eefc090ee3b47fc37309c19be0"
+    },
+    {
+      "path": "guide-review/bad-4x-390-review.png",
+      "bytes": 121161,
+      "sha256": "0b988079d48a6a760cd31b8c5a33c434103347bac4a44dec3036c0e02805ebe6"
+    },
+    {
+      "path": "guide-review/bad-4x-390-top.png",
+      "bytes": 95226,
+      "sha256": "de7854d9ac5aa44fd34fc3659c514a36ae095698a5e53cc4d1d2f72d58f4c1fe"
+    },
+    {
+      "path": "guide-review/browser-audit.mjs",
+      "bytes": 3094,
+      "sha256": "3bd974d4b13c038654da69afbaf078d9ea72b3e1e2fe45fc3cece829ae15b818"
+    },
+    {
+      "path": "guide-review/browser-results.json",
+      "bytes": 8310,
+      "sha256": "048f2f2ec42981463466d571fa78834d860a501c61c820581da3ab3e1adb011b"
+    },
+    {
+      "path": "guide-review/good-4x-1280-review.png",
+      "bytes": 123550,
+      "sha256": "cf73f7de6491c861c23b17c0caed9d0cbcab3dc9b7e12cae529c8ff2a5fd3a81"
+    },
+    {
+      "path": "guide-review/good-4x-1280-top.png",
+      "bytes": 193380,
+      "sha256": "a6f695ed0806e4ddddd84f05eb556da9e6070d482bbc887af8f3c4ca401ce785"
+    },
+    {
+      "path": "guide-review/good-4x-390-review.png",
+      "bytes": 121017,
+      "sha256": "ad195347d71b1485785a8951198604ec7975a0fdbb8d687aca24ec2f92c83aac"
+    },
+    {
+      "path": "guide-review/good-4x-390-top.png",
+      "bytes": 97867,
+      "sha256": "1a587ed508affed0fefda47622ac2f24e1fc3d756009d0d66ceb124516494896"
+    },
+    {
+      "path": "guide-review/index.html",
+      "bytes": 8913,
+      "sha256": "7c5da9ee6fd209451a6d282f2593add5a187f63d46796e25c1fd4bd7b9c72587"
+    },
+    {
+      "path": "guide-review/link-and-citation-audit.json",
+      "bytes": 51199,
+      "sha256": "6ee42446972b5ff8f36456f932e2fed5418bdf01ae982a136d088c245465651a"
+    },
+    {
+      "path": "guide-review/review.json",
+      "bytes": 8633,
+      "sha256": "e63947d5df5b624a339234f327a9cce02f048d8909774debad65092efd005808"
+    },
+    {
+      "path": "index.html",
+      "bytes": 13473,
+      "sha256": "4dda8be93d0f5133cce3c4cdd26fcb477ebe6e47bef81fcd18849964542144db"
+    },
+    {
+      "path": "package-check.json",
+      "bytes": 2629,
+      "sha256": "0a699f1864b81d708b07bb09ade45f56d520eca24ea1713ad2472e0b635c86c2"
+    },
+    {
+      "path": "refresh-manifest.mjs",
+      "bytes": 1389,
+      "sha256": "c9548cd117cfda764bcf55594877e57c9d135d79e5059d9c8618f4f01c0d0a6d"
+    },
+    {
+      "path": "replayability/README.txt",
+      "bytes": 984,
+      "sha256": "8abac719205653865ebab3b83651922ad1dc04df827e33b1443752e9bf314267"
+    },
+    {
+      "path": "replayability/audit-results.json.gz",
+      "bytes": 58285,
+      "sha256": "b2e08d936225ca3f745561257e0b8b88b0f7c05fcfd6c5656da36146a47531f7"
+    },
+    {
+      "path": "replayability/audit.mjs",
+      "bytes": 6429,
+      "sha256": "84b82c2ee8ed3a68dc9f07bcf280e03fd4619ac6c648e7db24edc4e3b934becd"
+    },
+    {
+      "path": "replayability/default-actual-text.txt",
+      "bytes": 28294,
+      "sha256": "e8b312f822dfb524398a4131504d53b817200989476394ba3c7a4ea4bf29ec21"
+    },
+    {
+      "path": "replayability/default-text.txt",
+      "bytes": 4410,
+      "sha256": "56a81d0579029fc97038ec966551c73e210bb379c0e76f6da5d7d4a544d320ea"
+    },
+    {
+      "path": "replayability/manifest.json",
+      "bytes": 3424,
+      "sha256": "1c87b16c06948759acaef2787f1efda409ddb77e11b8cfa411051e7fb17c9f16"
+    },
+    {
+      "path": "replayability/odyssey-actual-text.txt",
+      "bytes": 8285,
+      "sha256": "f144e60c92d8f6b5dfe484210d6423df1d249511e90e30a15a3b4d2613f76f97"
+    },
+    {
+      "path": "replayability/odyssey-text.txt",
+      "bytes": 5121,
+      "sha256": "81ae63df7e4978d07534f312036acd80aec1f701bfec57bd9235dc20c63bf776"
+    },
+    {
+      "path": "replayability/policy-benchmark-output.txt",
+      "bytes": 11172,
+      "sha256": "b906bb0558b70243fe1d11a784a8b6b055f597c7b0ba8a78f0103cf885c8028c"
+    },
+    {
+      "path": "replayability/policy-benchmark.json.gz",
+      "bytes": 157929,
+      "sha256": "265e34164079bcf29901a84bab56e7faebc3847a4245621d750c9cb0b2d2c244"
+    },
+    {
+      "path": "replayability/policy-summary.json",
+      "bytes": 5288,
+      "sha256": "6f142301177305ff06a924953f6a024e28c0bd22505fb9d9aac0dd9d3d4ef525"
+    },
+    {
+      "path": "replayability/replayability-review-4-asterion.png",
+      "bytes": 650210,
+      "sha256": "cd4060935b0e9d286c24554cd777ed6addb276cd2f5bdec66476da71a2d4b7a9"
+    },
+    {
+      "path": "replayability/replayability-review-4-initial.png",
+      "bytes": 572822,
+      "sha256": "8e5f89799c7b05b2757ae4d5ea075ef7853b807c346fabb2c3df2c4605f43c31"
+    },
+    {
+      "path": "replayability/replayability-review-4-sundrift.png",
+      "bytes": 573007,
+      "sha256": "4ae8c6f12a71034b2593ebf14b4ff6b6c265451d101abb0c09f7e67ac99dc582"
+    },
+    {
+      "path": "replayability/replayability-review-9-asterion.png",
+      "bytes": 640371,
+      "sha256": "2274795aff59ece34a88b07115083aa2c3ebf59ec2cfed2e19bb9bd2ef632172"
+    },
+    {
+      "path": "replayability/replayability-review-9-initial.png",
+      "bytes": 565039,
+      "sha256": "cbb39ca1f4766bd541a65d9f0c7241d7b9b14f669a154ee75f74202f62e4e8f1"
+    },
+    {
+      "path": "replayability/replayability-review-9-sundrift.png",
+      "bytes": 562590,
+      "sha256": "08e0ea829c4dc9863ee6235db62eefcdc5976368270816548c55e398a83a538b"
+    },
+    {
+      "path": "replayability/review.txt",
+      "bytes": 16318,
+      "sha256": "39f91da13b7a9db0dcb66e5ce5e8d97222bc95869df5350e3fd04b4dc29b1c04"
+    },
+    {
+      "path": "replayability/served-build-info.json",
+      "bytes": 122,
+      "sha256": "852eaf56cb1d3f7fcfd38f30fb7ca48672d31a9603af74102044eff64d4a37cc"
+    },
+    {
+      "path": "replayability/ui-openings.json",
+      "bytes": 10367,
+      "sha256": "8d5a857aaf3e222633ffb51b210158ad921e7afa674e4a075827d15ae2da64c1"
+    },
+    {
+      "path": "replayability/ui-openings.mjs",
+      "bytes": 2463,
+      "sha256": "aa4a1582f0261e874270e9b9c5068e03d2f69d753b3f16cb6d23c157b57239bd"
+    },
+    {
+      "path": "replayability/watch-text.txt",
+      "bytes": 13648,
+      "sha256": "ef4eaff357f4c6afe573f4cd222c2c905e24f0c8b53daf940742bfda71a07da4"
+    },
+    {
+      "path": "reproduce.mjs",
+      "bytes": 5097,
+      "sha256": "323581efe6808b48f4999b1c8b91f472cd836fef87cd5e8ea3cf26b756ce9313"
+    },
+    {
+      "path": "source-inventory.json",
+      "bytes": 64666,
+      "sha256": "b63a8c1d016c5cf5d8b20d5f4e9cb45687d3eb05c6a66b50735dd9b31902e774"
+    },
+    {
+      "path": "strategy/compare-implementation.mjs",
+      "bytes": 4466,
+      "sha256": "3f88670434ec398f9cbba13b63aadfa6543fd26130cae35e3b597351adfbd406"
+    },
+    {
+      "path": "strategy/implementation/browser-inspections.json",
+      "bytes": 3621,
+      "sha256": "32136fc85c2567aff060d2976bd74280f4afbd00e658dfe48ae67909d07aafd9"
+    },
+    {
+      "path": "strategy/implementation/build.txt",
+      "bytes": 814,
+      "sha256": "cf6591b2d777a3fc5d008d6c26adffe678a681fe9a005727e0d480fcf48e9ad7"
+    },
+    {
+      "path": "strategy/implementation/cycle53-choir-1440.png",
+      "bytes": 49988,
+      "sha256": "bbf184138ca077c904bac0ab5c9d099a59ba7b0ecb5fe309fc16952c5e3c06d0"
+    },
+    {
+      "path": "strategy/implementation/cycle53-choir-390.png",
+      "bytes": 45695,
+      "sha256": "b546cc4a18d61d8abe8bb2486021bd1cece6863df05dc3a3ea99c3db4679efbc"
+    },
+    {
+      "path": "strategy/implementation/cycle55-choir-1440.png",
+      "bytes": 49336,
+      "sha256": "c6055e69e668a82c5f79b81da8553fc345fe90c5d3aedf7abd4ab5de9b03537d"
+    },
+    {
+      "path": "strategy/implementation/cycle55-choir-390.png",
+      "bytes": 44876,
+      "sha256": "9c6be2dc2475b4f6d988b50bf307bb48c2186fbbf485a3aa9f65e71528eaaf27"
+    },
+    {
+      "path": "strategy/implementation/handoff.json",
+      "bytes": 2281,
+      "sha256": "ccd13c18dae3ffb519f8d8f17a5b044a72940517a2c116f8b608b2bfd37b1aa4"
+    },
+    {
+      "path": "strategy/implementation/index.html",
+      "bytes": 2761,
+      "sha256": "f129578da6d018bc7398f55b55584efc2e71a5ed8c27cf200e5740f021c13cbb"
+    },
+    {
+      "path": "strategy/implementation/mechanical-comparison.json",
+      "bytes": 2335,
+      "sha256": "f033e995f7cc46934fa7d087cd7d925c6712b5e4bd1db63436fb65e73494c8ed"
+    },
+    {
+      "path": "strategy/implementation/replay-derived-cycle53.json",
+      "bytes": 93779,
+      "sha256": "0693dd43fafa3548bd088cc268933bbed040b5c6f976d126922d11786891d234"
+    },
+    {
+      "path": "strategy/implementation/replay-derived-cycle55.json",
+      "bytes": 100036,
+      "sha256": "bf55e2b7ba43dcbcc6e9f067121c0f963b0d00a4a864f3c942067b84d1125012"
+    },
+    {
+      "path": "strategy/imported-actual55-choir.png",
+      "bytes": 43772,
+      "sha256": "57f0e53cc3025bf342a160999f1236a56abec845026885145acce9f88db7f3cf"
+    },
+    {
+      "path": "strategy/imported-actual55-diplomacy.png",
+      "bytes": 374713,
+      "sha256": "6729244172b86851fdef83bd5c89be45566d34ad18852969cf235b656050acb1"
+    },
+    {
+      "path": "strategy/imported-actual55-diplomacy.txt",
+      "bytes": 2959,
+      "sha256": "338ba858a2e6d76f63f5a7ae86a5d567782bfee02602d5b263924c24bcce31a0"
+    },
+    {
+      "path": "strategy/imported-actual55-khar.png",
+      "bytes": 47682,
+      "sha256": "de39c45fad66e5d3cea6e08ce7864834c80de628471ac97019bce17419784855"
+    },
+    {
+      "path": "strategy/index.html",
+      "bytes": 12957,
+      "sha256": "2e255606fb95fd17cdab35832da86d2f5b438763e76ce92302eeb444489373c0"
+    },
+    {
+      "path": "strategy/probe-results.json",
+      "bytes": 32668,
+      "sha256": "8a52e3b33a93ae1ed7caf8fef79c3b161087ca3d07d043d8eab5d398e406e3c3"
+    },
+    {
+      "path": "strategy/probe.mjs",
+      "bytes": 6842,
+      "sha256": "09687a7cf09caa19091c8123bc0aba087abaa57d09854b5d9aebbeb3e1362d21"
+    },
+    {
+      "path": "strategy/replay-derived-before-final-peace.json",
+      "bytes": 121880,
+      "sha256": "ae4b1b522785222fbd81accef7f2440cd9fd1c92caf9bda9d138171f1cc5469a"
+    },
+    {
+      "path": "strategy/review.json",
+      "bytes": 11354,
+      "sha256": "30ae585831895a96ca8ba65b931167b7039ce7b8548b8e3988fea88753547963"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 5043,
+      "sha256": "645ac49a30accf53eca2d07d59664821aab52a082e26d229158b1e9bb22ef8a3"
+    }
+  ]
+}

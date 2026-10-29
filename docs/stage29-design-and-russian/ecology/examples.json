@@ -1,0 +1,1142 @@
+{
+  "candidateCommit": "bfd36d76a74762463ec2c0880dea20c5c27a1240",
+  "examples": [
+    {
+      "seed": "stage4-audit-4",
+      "factionId": "khar",
+      "decisionTurn": 30,
+      "resultingTurn": 31,
+      "plan": {
+        "systemId": "s11",
+        "habitability": 40,
+        "path": [
+          "s14",
+          "s6",
+          "s11"
+        ],
+        "fleetId": "f16",
+        "shipyardId": null,
+        "researchCycles": 3,
+        "readyCycles": 0,
+        "earliestReadyCycles": 0,
+        "jumps": 2,
+        "arrivalCycles": 5,
+        "ordinaryAlternative": null
+      },
+      "target": {
+        "id": "s11",
+        "name": "Carina",
+        "habitability": 40,
+        "knownByFaction": true,
+        "surveyedByFaction": true
+      },
+      "source": {
+        "id": "f16",
+        "name": "Colony Ark 16",
+        "owner": "khar",
+        "systemId": "s14",
+        "type": "colony",
+        "ships": 1,
+        "hp": 24,
+        "movesLeft": 1
+      },
+      "ownBudget": {
+        "credits": 369,
+        "minerals": 540,
+        "science": 2,
+        "creditIncome": 30,
+        "mineralIncome": 29,
+        "scienceIncome": 23,
+        "production": 24,
+        "upkeep": 8,
+        "colonies": 2,
+        "population": 16,
+        "ships": 5,
+        "military": 56.1,
+        "orders": 7,
+        "maxOrders": 7,
+        "uncappedOrders": 7,
+        "orderLimit": 18,
+        "score": 122,
+        "beacons": 0,
+        "explored": 22
+      },
+      "rngAtFirstDifference": {
+        "baseline": 3417196608,
+        "candidate": 3417196608
+      },
+      "milestones": {
+        "baseline": [
+          {
+            "observedTurn": 3,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s24",
+                "previousOwner": null,
+                "habitability": 75
+              }
+            ]
+          },
+          {
+            "observedTurn": 53,
+            "events": [
+              {
+                "type": "research",
+                "techId": "ecology"
+              }
+            ]
+          },
+          {
+            "observedTurn": 66,
+            "events": [
+              {
+                "type": "research",
+                "techId": "computing"
+              },
+              {
+                "type": "colony",
+                "systemId": "s11",
+                "previousOwner": "choir",
+                "habitability": 40
+              }
+            ]
+          },
+          {
+            "observedTurn": 67,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s25",
+                "previousOwner": null,
+                "habitability": 76
+              }
+            ]
+          },
+          {
+            "observedTurn": 70,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s22",
+                "previousOwner": "choir",
+                "habitability": 89
+              }
+            ]
+          },
+          {
+            "observedTurn": 71,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s14",
+                "previousOwner": "choir",
+                "habitability": 10
+              }
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "observedTurn": 3,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s24",
+                "previousOwner": null,
+                "habitability": 75
+              }
+            ]
+          },
+          {
+            "observedTurn": 33,
+            "events": [
+              {
+                "type": "research",
+                "techId": "ecology"
+              }
+            ]
+          },
+          {
+            "observedTurn": 35,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s11",
+                "previousOwner": null,
+                "habitability": 40
+              }
+            ]
+          },
+          {
+            "observedTurn": 64,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s14",
+                "previousOwner": "choir",
+                "habitability": 10
+              }
+            ]
+          },
+          {
+            "observedTurn": 65,
+            "events": [
+              {
+                "type": "ark",
+                "fleetId": "f53",
+                "systemId": "s11"
+              }
+            ]
+          },
+          {
+            "observedTurn": 67,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s20",
+                "previousOwner": null,
+                "habitability": 52
+              },
+              {
+                "type": "colony",
+                "systemId": "s22",
+                "previousOwner": "choir",
+                "habitability": 89
+              }
+            ]
+          },
+          {
+            "observedTurn": 69,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s3",
+                "previousOwner": "choir",
+                "habitability": 90
+              }
+            ]
+          },
+          {
+            "observedTurn": 72,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s16",
+                "previousOwner": "veyr",
+                "habitability": 39
+              },
+              {
+                "type": "colony",
+                "systemId": "s33",
+                "previousOwner": null,
+                "habitability": 38
+              }
+            ]
+          }
+        ]
+      },
+      "final": {
+        "baseline": {
+          "turn": 72,
+          "winner": "veyr",
+          "victoryType": "Transcendence",
+          "hash": "de39f759ad4fee11aa7a590349c79cd1006bb2239dc82b8041ad18428525a2b4",
+          "factions": [
+            {
+              "id": "player",
+              "stats": {
+                "credits": 1153,
+                "minerals": 815,
+                "science": 411,
+                "creditIncome": 15,
+                "mineralIncome": 10,
+                "scienceIncome": 6,
+                "production": 12,
+                "upkeep": 4,
+                "colonies": 1,
+                "population": 8,
+                "ships": 3,
+                "military": 15,
+                "orders": 6,
+                "maxOrders": 6,
+                "uncappedOrders": 6,
+                "orderLimit": 18,
+                "score": 39,
+                "beacons": 0,
+                "explored": 1
+              },
+              "techs": []
+            },
+            {
+              "id": "veyr",
+              "stats": {
+                "credits": 5504,
+                "minerals": 829,
+                "science": 1253,
+                "creditIncome": 320,
+                "mineralIncome": 142,
+                "scienceIncome": 149,
+                "production": 194,
+                "upkeep": 17,
+                "colonies": 11,
+                "population": 108,
+                "ships": 7,
+                "military": 141.3,
+                "orders": 18,
+                "maxOrders": 18,
+                "uncappedOrders": 22,
+                "orderLimit": 18,
+                "score": 855,
+                "beacons": 3,
+                "explored": 36
+              },
+              "techs": [
+                "logistics",
+                "ecology",
+                "diplomacy",
+                "industry",
+                "physics",
+                "computing",
+                "weapons",
+                "singularity",
+                "command",
+                "shields",
+                "cruisers",
+                "terraforming"
+              ]
+            },
+            {
+              "id": "khar",
+              "stats": {
+                "credits": 1116,
+                "minerals": 1251,
+                "science": 0,
+                "creditIncome": 86,
+                "mineralIncome": 53,
+                "scienceIncome": 72,
+                "production": 78,
+                "upkeep": 16,
+                "colonies": 6,
+                "population": 42,
+                "ships": 6,
+                "military": 158.1,
+                "orders": 11,
+                "maxOrders": 11,
+                "uncappedOrders": 11,
+                "orderLimit": 18,
+                "score": 419,
+                "beacons": 1,
+                "explored": 23
+              },
+              "techs": [
+                "weapons",
+                "logistics",
+                "cruisers",
+                "industry",
+                "physics",
+                "shields",
+                "ecology",
+                "computing"
+              ]
+            },
+            {
+              "id": "choir",
+              "stats": {
+                "credits": 1758,
+                "minerals": 141,
+                "science": 2551,
+                "creditIncome": 190,
+                "mineralIncome": 132,
+                "scienceIncome": 122,
+                "production": 133,
+                "upkeep": 11,
+                "colonies": 8,
+                "population": 83,
+                "ships": 4,
+                "military": 96.3,
+                "orders": 17,
+                "maxOrders": 17,
+                "uncappedOrders": 17,
+                "orderLimit": 18,
+                "score": 654,
+                "beacons": 2,
+                "explored": 36
+              },
+              "techs": [
+                "physics",
+                "logistics",
+                "computing",
+                "industry",
+                "singularity",
+                "ecology",
+                "weapons",
+                "diplomacy",
+                "shields",
+                "command",
+                "cruisers",
+                "terraforming"
+              ]
+            }
+          ]
+        },
+        "candidate": {
+          "turn": 72,
+          "winner": "veyr",
+          "victoryType": "Transcendence",
+          "hash": "b82f40f1d88ba208433dfdedd247252ee8e45370a00f5e126cf00bac61f237ae",
+          "factions": [
+            {
+              "id": "player",
+              "stats": {
+                "credits": 1153,
+                "minerals": 815,
+                "science": 411,
+                "creditIncome": 15,
+                "mineralIncome": 10,
+                "scienceIncome": 6,
+                "production": 12,
+                "upkeep": 4,
+                "colonies": 1,
+                "population": 8,
+                "ships": 3,
+                "military": 15,
+                "orders": 6,
+                "maxOrders": 6,
+                "uncappedOrders": 6,
+                "orderLimit": 18,
+                "score": 39,
+                "beacons": 0,
+                "explored": 1
+              },
+              "techs": []
+            },
+            {
+              "id": "veyr",
+              "stats": {
+                "credits": 5322,
+                "minerals": 898,
+                "science": 1198,
+                "creditIncome": 309,
+                "mineralIncome": 131,
+                "scienceIncome": 144,
+                "production": 179,
+                "upkeep": 12,
+                "colonies": 10,
+                "population": 103,
+                "ships": 5,
+                "military": 98.8,
+                "orders": 18,
+                "maxOrders": 18,
+                "uncappedOrders": 21,
+                "orderLimit": 18,
+                "score": 814,
+                "beacons": 3,
+                "explored": 36
+              },
+              "techs": [
+                "logistics",
+                "ecology",
+                "diplomacy",
+                "industry",
+                "physics",
+                "computing",
+                "weapons",
+                "singularity",
+                "command",
+                "shields",
+                "cruisers",
+                "terraforming"
+              ]
+            },
+            {
+              "id": "khar",
+              "stats": {
+                "credits": 1192,
+                "minerals": 995,
+                "science": 0,
+                "creditIncome": 116,
+                "mineralIncome": 85,
+                "scienceIncome": 99,
+                "production": 120,
+                "upkeep": 21,
+                "colonies": 9,
+                "population": 55,
+                "ships": 6,
+                "military": 227.1,
+                "orders": 14,
+                "maxOrders": 14,
+                "uncappedOrders": 14,
+                "orderLimit": 18,
+                "score": 602,
+                "beacons": 2,
+                "explored": 29
+              },
+              "techs": [
+                "weapons",
+                "logistics",
+                "cruisers",
+                "ecology",
+                "industry",
+                "physics",
+                "shields",
+                "computing"
+              ]
+            },
+            {
+              "id": "choir",
+              "stats": {
+                "credits": 2419,
+                "minerals": 448,
+                "science": 2678,
+                "creditIncome": 211,
+                "mineralIncome": 114,
+                "scienceIncome": 141,
+                "production": 140,
+                "upkeep": 4,
+                "colonies": 8,
+                "population": 90,
+                "ships": 2,
+                "military": 30,
+                "orders": 17,
+                "maxOrders": 17,
+                "uncappedOrders": 17,
+                "orderLimit": 18,
+                "score": 571,
+                "beacons": 1,
+                "explored": 36
+              },
+              "techs": [
+                "physics",
+                "logistics",
+                "computing",
+                "industry",
+                "singularity",
+                "ecology",
+                "weapons",
+                "diplomacy",
+                "shields",
+                "command",
+                "cruisers",
+                "terraforming"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "seed": "stage4-audit-15",
+      "factionId": "choir",
+      "decisionTurn": 5,
+      "resultingTurn": 6,
+      "plan": {
+        "systemId": "s14",
+        "habitability": 30,
+        "path": [
+          "s3",
+          "s14"
+        ],
+        "fleetId": null,
+        "shipyardId": "s3",
+        "researchCycles": 3,
+        "readyCycles": 3,
+        "earliestReadyCycles": 3,
+        "jumps": 1,
+        "arrivalCycles": 4,
+        "ordinaryAlternative": {
+          "systemId": "s24",
+          "jumps": 4
+        }
+      },
+      "target": {
+        "id": "s14",
+        "name": "Ilyra",
+        "habitability": 30,
+        "knownByFaction": true,
+        "surveyedByFaction": true
+      },
+      "source": {
+        "id": "s3",
+        "name": "Lumen",
+        "x": 29,
+        "y": -29,
+        "type": "terran",
+        "habitability": 90,
+        "richness": 3,
+        "science": 2,
+        "owner": "choir",
+        "originalOwner": "choir",
+        "population": 5,
+        "growth": 0.6,
+        "buildings": [
+          "mine",
+          "shipyard"
+        ],
+        "queue": {
+          "itemId": "colony",
+          "kind": "ship",
+          "progress": 17,
+          "work": 38,
+          "cost": {
+            "credits": 45,
+            "minerals": 55
+          }
+        },
+        "defenseDamage": 0,
+        "anomaly": null,
+        "knownBy": [
+          "choir"
+        ],
+        "exploredBy": [
+          "choir"
+        ]
+      },
+      "ownBudget": {
+        "credits": 77,
+        "minerals": 77,
+        "science": 15,
+        "creditIncome": 15,
+        "mineralIncome": 12,
+        "scienceIncome": 15,
+        "production": 14,
+        "upkeep": 3,
+        "colonies": 2,
+        "population": 6,
+        "ships": 2,
+        "military": 15,
+        "orders": 6,
+        "maxOrders": 6,
+        "uncappedOrders": 6,
+        "orderLimit": 18,
+        "score": 67,
+        "beacons": 0,
+        "explored": 8
+      },
+      "rngAtFirstDifference": {
+        "baseline": 1655370214,
+        "candidate": 1655370214
+      },
+      "milestones": {
+        "baseline": [
+          {
+            "observedTurn": 4,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s6",
+                "previousOwner": null,
+                "habitability": 58
+              }
+            ]
+          },
+          {
+            "observedTurn": 10,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s22",
+                "previousOwner": null,
+                "habitability": 75
+              }
+            ]
+          },
+          {
+            "observedTurn": 17,
+            "events": [
+              {
+                "type": "research",
+                "techId": "computing"
+              },
+              {
+                "type": "colony",
+                "systemId": "s9",
+                "previousOwner": null,
+                "habitability": 63
+              }
+            ]
+          },
+          {
+            "observedTurn": 25,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s4",
+                "previousOwner": null,
+                "habitability": 87
+              }
+            ]
+          },
+          {
+            "observedTurn": 29,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s40",
+                "previousOwner": null,
+                "habitability": 80
+              }
+            ]
+          },
+          {
+            "observedTurn": 34,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s12",
+                "previousOwner": null,
+                "habitability": 78
+              },
+              {
+                "type": "ark",
+                "fleetId": "f35",
+                "systemId": "s3"
+              }
+            ]
+          },
+          {
+            "observedTurn": 35,
+            "events": [
+              {
+                "type": "research",
+                "techId": "singularity"
+              }
+            ]
+          },
+          {
+            "observedTurn": 36,
+            "events": [
+              {
+                "type": "research",
+                "techId": "ecology"
+              }
+            ]
+          },
+          {
+            "observedTurn": 39,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s17",
+                "previousOwner": null,
+                "habitability": 45
+              }
+            ]
+          },
+          {
+            "observedTurn": 59,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s14",
+                "previousOwner": null,
+                "habitability": 30
+              }
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "observedTurn": 4,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s6",
+                "previousOwner": null,
+                "habitability": 58
+              }
+            ]
+          },
+          {
+            "observedTurn": 8,
+            "events": [
+              {
+                "type": "research",
+                "techId": "ecology"
+              },
+              {
+                "type": "ark",
+                "fleetId": "f16",
+                "systemId": "s3"
+              }
+            ]
+          },
+          {
+            "observedTurn": 9,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s14",
+                "previousOwner": null,
+                "habitability": 30
+              }
+            ]
+          },
+          {
+            "observedTurn": 13,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s22",
+                "previousOwner": null,
+                "habitability": 75
+              }
+            ]
+          },
+          {
+            "observedTurn": 28,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s9",
+                "previousOwner": null,
+                "habitability": 63
+              }
+            ]
+          },
+          {
+            "observedTurn": 33,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s4",
+                "previousOwner": null,
+                "habitability": 87
+              }
+            ]
+          },
+          {
+            "observedTurn": 37,
+            "events": [
+              {
+                "type": "research",
+                "techId": "singularity"
+              },
+              {
+                "type": "colony",
+                "systemId": "s40",
+                "previousOwner": null,
+                "habitability": 80
+              }
+            ]
+          },
+          {
+            "observedTurn": 59,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s35",
+                "previousOwner": null,
+                "habitability": 10
+              }
+            ]
+          },
+          {
+            "observedTurn": 63,
+            "events": [
+              {
+                "type": "colony",
+                "systemId": "s27",
+                "previousOwner": null,
+                "habitability": 11
+              }
+            ]
+          }
+        ]
+      },
+      "final": {
+        "baseline": {
+          "turn": 70,
+          "winner": "veyr",
+          "victoryType": "Transcendence",
+          "hash": "5d53abf0b7e71e048ca0c67c24c030eeafe14b3e501191e8960eb7d96deb5f34",
+          "factions": [
+            {
+              "id": "player",
+              "stats": {
+                "credits": 1123,
+                "minerals": 795,
+                "science": 399,
+                "creditIncome": 15,
+                "mineralIncome": 10,
+                "scienceIncome": 6,
+                "production": 12,
+                "upkeep": 4,
+                "colonies": 1,
+                "population": 8,
+                "ships": 3,
+                "military": 15,
+                "orders": 6,
+                "maxOrders": 6,
+                "uncappedOrders": 6,
+                "orderLimit": 18,
+                "score": 39,
+                "beacons": 0,
+                "explored": 1
+              },
+              "techs": []
+            },
+            {
+              "id": "veyr",
+              "stats": {
+                "credits": 4181,
+                "minerals": 695,
+                "science": 1381,
+                "creditIncome": 286,
+                "mineralIncome": 122,
+                "scienceIncome": 136,
+                "production": 164,
+                "upkeep": 6,
+                "colonies": 10,
+                "population": 92,
+                "ships": 2,
+                "military": 53.8,
+                "orders": 18,
+                "maxOrders": 18,
+                "uncappedOrders": 21,
+                "orderLimit": 18,
+                "score": 781,
+                "beacons": 3,
+                "explored": 16
+              },
+              "techs": [
+                "logistics",
+                "ecology",
+                "diplomacy",
+                "industry",
+                "physics",
+                "computing",
+                "weapons",
+                "singularity",
+                "command",
+                "shields",
+                "cruisers",
+                "terraforming"
+              ]
+            },
+            {
+              "id": "khar",
+              "stats": {
+                "credits": 1028,
+                "minerals": 512,
+                "science": 0,
+                "creditIncome": 159,
+                "mineralIncome": 118,
+                "scienceIncome": 101,
+                "production": 137,
+                "upkeep": 14,
+                "colonies": 9,
+                "population": 73,
+                "ships": 7,
+                "military": 113.6,
+                "orders": 14,
+                "maxOrders": 14,
+                "uncappedOrders": 14,
+                "orderLimit": 18,
+                "score": 554,
+                "beacons": 1,
+                "explored": 17
+              },
+              "techs": [
+                "weapons",
+                "logistics",
+                "cruisers",
+                "industry",
+                "physics",
+                "shields",
+                "ecology",
+                "computing",
+                "singularity",
+                "diplomacy"
+              ]
+            },
+            {
+              "id": "choir",
+              "stats": {
+                "credits": 2257,
+                "minerals": 488,
+                "science": 2014,
+                "creditIncome": 183,
+                "mineralIncome": 80,
+                "scienceIncome": 122,
+                "production": 114,
+                "upkeep": 7,
+                "colonies": 7,
+                "population": 74,
+                "ships": 4,
+                "military": 45,
+                "orders": 18,
+                "maxOrders": 18,
+                "uncappedOrders": 18,
+                "orderLimit": 18,
+                "score": 683,
+                "beacons": 3,
+                "explored": 23
+              },
+              "techs": [
+                "physics",
+                "logistics",
+                "computing",
+                "industry",
+                "singularity",
+                "ecology",
+                "weapons",
+                "diplomacy",
+                "shields",
+                "command",
+                "cruisers",
+                "terraforming"
+              ]
+            }
+          ]
+        },
+        "candidate": {
+          "turn": 70,
+          "winner": "veyr",
+          "victoryType": "Transcendence",
+          "hash": "1a739b2361014bd801c0ac73d0b2d3a3e107f8323a5009291f4fb78a10706d73",
+          "factions": [
+            {
+              "id": "player",
+              "stats": {
+                "credits": 1123,
+                "minerals": 795,
+                "science": 399,
+                "creditIncome": 15,
+                "mineralIncome": 10,
+                "scienceIncome": 6,
+                "production": 12,
+                "upkeep": 4,
+                "colonies": 1,
+                "population": 8,
+                "ships": 3,
+                "military": 15,
+                "orders": 6,
+                "maxOrders": 6,
+                "uncappedOrders": 6,
+                "orderLimit": 18,
+                "score": 39,
+                "beacons": 0,
+                "explored": 1
+              },
+              "techs": []
+            },
+            {
+              "id": "veyr",
+              "stats": {
+                "credits": 4065,
+                "minerals": 630,
+                "science": 1398,
+                "creditIncome": 283,
+                "mineralIncome": 137,
+                "scienceIncome": 142,
+                "production": 171,
+                "upkeep": 20,
+                "colonies": 11,
+                "population": 95,
+                "ships": 8,
+                "military": 167.5,
+                "orders": 18,
+                "maxOrders": 18,
+                "uncappedOrders": 22,
+                "orderLimit": 18,
+                "score": 835,
+                "beacons": 3,
+                "explored": 16
+              },
+              "techs": [
+                "logistics",
+                "ecology",
+                "diplomacy",
+                "industry",
+                "physics",
+                "computing",
+                "weapons",
+                "singularity",
+                "command",
+                "shields",
+                "cruisers",
+                "terraforming"
+              ]
+            },
+            {
+              "id": "khar",
+              "stats": {
+                "credits": 1326,
+                "minerals": 725,
+                "science": 0,
+                "creditIncome": 157,
+                "mineralIncome": 101,
+                "scienceIncome": 123,
+                "production": 136,
+                "upkeep": 19,
+                "colonies": 8,
+                "population": 76,
+                "ships": 7,
+                "military": 185.4,
+                "orders": 15,
+                "maxOrders": 15,
+                "uncappedOrders": 15,
+                "orderLimit": 18,
+                "score": 570,
+                "beacons": 1,
+                "explored": 18
+              },
+              "techs": [
+                "weapons",
+                "logistics",
+                "cruisers",
+                "industry",
+                "physics",
+                "shields",
+                "ecology",
+                "computing",
+                "singularity",
+                "diplomacy",
+                "command"
+              ]
+            },
+            {
+              "id": "choir",
+              "stats": {
+                "credits": 2158,
+                "minerals": 242,
+                "science": 2030,
+                "creditIncome": 145,
+                "mineralIncome": 65,
+                "scienceIncome": 100,
+                "production": 82,
+                "upkeep": 6,
+                "colonies": 7,
+                "population": 54,
+                "ships": 3,
+                "military": 45,
+                "orders": 18,
+                "maxOrders": 18,
+                "uncappedOrders": 18,
+                "orderLimit": 18,
+                "score": 563,
+                "beacons": 2,
+                "explored": 23
+              },
+              "techs": [
+                "physics",
+                "ecology",
+                "logistics",
+                "computing",
+                "industry",
+                "singularity",
+                "weapons",
+                "diplomacy",
+                "shields",
+                "command",
+                "cruisers",
+                "terraforming"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

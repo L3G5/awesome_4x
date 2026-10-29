@@ -1,0 +1,27 @@
+{
+  "commit": "450f6d73caf27f169618b1308d370506ec1cca9a",
+  "branch": "critique/strategy-public-motives",
+  "worktree": "/tmp/asterion-strategy-implementation",
+  "baseline": "93a62961e994994d30c05240b17c39a418020473",
+  "change": "Explain a possible public alignment incentive before war; preserve a validated authored cause after real intervention declarations. No rule, choice, timing, cost or RNG changes.",
+  "checks": {
+    "unitTests": 412,
+    "browserTests": 7,
+    "productionBuild": true,
+    "pairedRecordedCommands": 457,
+    "pairedPostCommandMechanicalEquality": true,
+    "reloadNextCommandChecks": 457,
+    "desktopAnd390Screens": 4,
+    "browserPageErrors": 0,
+    "browserResponses400Plus": 0
+  },
+  "comparisonLimits": "Mechanical equality removes only optional relation.warCause and the exact authored appended declaration sentence. Baseline independently matches the actual final exports. Existing recorded player commands are replayed; this is not new play or a balance cohort.",
+  "privacy": "Warning is independent of rival fleet capability, budgets, technology and intent. Explicit AI cause marker is accepted only when contacted public race facts support it. Raw private reason strings are never saved or rendered.",
+  "compatibility": "Metadata is optional, typed, war-only and mirrored across the pair; peace and ordinary later war clear it. Existing wars without metadata retain their exact recorded cause rather than being relabeled.",
+  "englishStrings": [
+    "Your public Asterion alignment can create a reason to oppose your network, even with high trust or low grievances. This signal alone does not establish their ability or intent to attack.",
+    "This war began over public Asterion alignment. Victory competition can outweigh trust and frontier grievances.",
+    "Competition over public Asterion alignment prompted this declaration."
+  ],
+  "earlierFailedChecks": "Initial Node test attempted a CSS-importing renderer; corrected by keeping model checks in Node and rendered checks in Playwright. First browser run used a guessed Chronicle selector; corrected to existing data-page=journal. Symlinked development fonts were denied by Vite; all final browser checks used the built production preview with zero failed resource responses."
+}

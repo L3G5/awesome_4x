@@ -1,0 +1,70 @@
+Bounded early Ecology research experiment
+Baseline: 93a62961e994994d30c05240b17c39a418020473 (v0.21.2)
+Candidate: bfd36d76a74762463ec2c0880dea20c5c27a1240
+Branch/worktree: critique/ecology-priority, /tmp/asterion-ecology-priority
+
+Implemented behavior
+At an idle research boundary, an AI can move Ecology ahead of its normal faction priorities when a surveyed settlement opportunity justifies it. No map generation, civilian routing, research prices, order rules, persistent save fields, or UI strings changed.
+
+The conservative conditions were sent to the coordinating agent and approved before coding:
+- Cycle <=30; one or two colonies; at least one completed technology. Each faction retains its first research identity.
+- No active research, existing Ecology/Worldshaping, war, or observed colony threat.
+- Current funds cover ordinary founding (30 credits/20 minerals); own science/mineral income is positive and credit income exceeds an Ark's upkeep.
+- A live owned Ark, or an already-paid queued Ark estimated to finish within four cycles.
+- A charted and surveyed, unowned 30-49% world, no more than three peaceful charted jumps away. Observable blockades and closed access are respected. Announced transit cancellation must occur after the estimated arrival.
+- The full research/production/travel estimate is at most twelve cycles.
+- If an ordinary >=50% world is reachable, Ecology must be estimated ready before the Ark can launch, and its newly enabled route must save at least two jumps. Otherwise the current civilian controller could depart toward the ordinary world while researching; this experiment leaves that controller alone.
+
+A code review tightened the queued-Ark condition: current production can underestimate how soon normal population growth launches it. The comparison now also bounds the earliest launch by allowing up to one population increase per completed cycle and recalculating own production. A regression demonstrates an Ark finishing after three cycles with Ecology still at 59/60; that case keeps the ordinary research priority.
+
+getEarlyEcologyPlan(state, factionId) is a read-only diagnostic returning the qualifying surveyed world's ID/habitability, known path, live fleet or queued source, research/production/travel estimates, and the ordinary alternative. It does not reserve resources or issue actions. runAI only prepends Ecology when this diagnostic qualifies; the shared command API performs research and all later actions normally.
+
+Validation
+- Focused rules: 10/10 pass (focused-tests.txt).
+- Full rules: 416/416 pass (rules-tests.txt).
+- git diff --check passes; committed worktree is clean.
+- No browser suite was run for this isolated engine-only change; there are no new UI controls or strings.
+
+The positive constructed integration case is more than a selected technology:
+- Normal Ark commission pays 45 credits, 55 minerals, and one order.
+- Four actual completed production/research cycles create the Ark and spend exactly 60 science on Ecology.
+- Normal movement plus founding spends two orders, 30 credits, and 20 minerals, and consumes the Ark.
+- Query and peaceful selection/settlement introduce no RNG advancement.
+
+Counterexamples include comparable ordinary settlement; research finishing after launch; normal growth accelerating launch; first-tech identity; ongoing research with its progress retained; a genuinely qualifying Khar expansion displaced by a visible wartime threat, preserving Weapons; inadequate funding or Ark; late development; uncharted/unsurveyed/<30%/distant targets; and closed/expiring transit. Privacy checks mutate unseen native values and foreign fleets without changing the diagnostic or research choice, and use throwing getters to verify that unsurveyed and uncharted native values are not read.
+
+Fixed paired cohort: observed whole-campaign effects
+Before execution, declared exactly twenty seeds: ASTERION plus stage4-audit-1 through stage4-audit-19. Ran passive-player baseline/candidate pairs to their ordinary conclusion, checking valid saves and finite nonnegative budgets every cycle. No sample expansion occurred.
+
+Final candidate result: two research interventions, eighteen byte-identical final state pairs, and no winner/victory-type changes. Both qualifying worlds were used. These are automated policy results, not human play or proof of replayability/fun.
+
+stage4-audit-15, Choir:
+- Decision during cycle 5->6. Ilyra was already charted/surveyed at 30%, one known jump from Lumen. The paid Ark queue had three cycles remaining, matching the Ecology estimate. The nearest ordinary surveyed alternative at that decision was four jumps away.
+- Ecology and the Ark are first observed complete at cycle 8; Ilyra's founding is observed at cycle 9. Normal priority instead completes Logistics at 8 and its third world is observed at 10.
+- This is a tradeoff, not an established improvement in overall strength: baseline Quantum Archives completes at 17 versus candidate 20, and Protocol at 35 versus 37. New scouting also exposes a nearer ordinary world before the baseline Ark arrives, so the four-jump comparison describes decision-time knowledge, not a claim that the baseline actually follows that route.
+- Both finish at 70 with Veyr Transcendence.
+
+stage4-audit-4, Khar:
+- Decision during cycle 30->31. The live Ark is at Ilyra; charted path Ilyra->Aurelia->Carina reaches the surveyed 40% world in two jumps. No safe ordinary surveyed alternative exists. Current budget is 369 credits/540 minerals; science is 2, income 23, giving a three-cycle Ecology estimate.
+- Candidate Ecology completes at 33, and Carina founding is observed at 35. Baseline instead researches Industry, completes Ecology at 53, and eventually captures Choir-owned Carina at 66. The new choice uses an already built Ark and does not require a new grant or routing rule.
+- Both finish at 72 with Veyr Transcendence.
+
+The RNG value is identical between baseline and candidate at each first divergence. Later whole-campaign randomness can differ after changed actions; no claim is made that later combats are isolated experiments.
+
+Observed cycle numbers above are post-resolution states. A founding reported at 9 occurs during the previous AI operation phase and is first visible in the cycle-9 state. Exact decision turns, full first-divergence states, milestones, own budgets, source hashes, and compact examples are retained.
+
+Evidence and reproduction
+paired-cohort.mjs imports the frozen baseline archive at /tmp/asterion-ecology-baseline and the committed candidate worktree. It checks source hashes before and after. Recreate the baseline from the repository with:
+  mkdir -p /tmp/asterion-ecology-baseline
+  git archive 93a62961e994994d30c05240b17c39a418020473 src package.json | tar -x -C /tmp/asterion-ecology-baseline
+Then:
+  node /tmp/asterion-ecology-evidence/paired-cohort.mjs
+  node --test tests/ai-ecology.test.js
+  npm test
+The last two commands run in the candidate worktree. examples.json is derived from paired-cohort.json and its immediate before/after snapshots.
+
+Measurement correction retained
+The initial measurement script accidentally retained references to evolving tech arrays/research objects in summary projections. It did not alter game state, hashes, or the immediately serialized first-divergence snapshots. That original output is clearly retained as paired-cohort-initial-mutable-projection.json and is not used for claims about earlier research state. The projection was corrected to copy values, and the exact same twenty seeds were rerun. A second retained output, paired-cohort-before-growth-bound.json, identifies the earlier candidate source before the timing safeguard. paired-cohort.json is the final committed candidate. These repeated checks are not additional independent cohorts.
+
+Limits
+The conditions deliberately miss speculative plans that require building an Ark later, taking an unknown route, bargaining for future access, winning a war, waiting beyond the bounded horizon, or interrupting current research. Two observed cases demonstrate that existing geography can change this AI's research and settlement behavior. They do not establish net balance improvement, optimal play, or human enjoyment. No new geographic scaffold or civilian commitment system was introduced.

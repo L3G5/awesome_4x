@@ -1,0 +1,44 @@
+{
+  "commit": "14177d4bf4c6d5afaaf97f42c2d41cfe6b877143",
+  "branch": "fix/keyboard-commit-focus",
+  "worktree": "/tmp/asterion-keyboard-commit-focus",
+  "files": [
+    "src/main.js",
+    "tests/commit-focus-ui.spec.js"
+  ],
+  "scope": "Task-specific keyboard focus restoration and hidden importer Tab exclusion; no rules, automation or workspace-scroll changes.",
+  "baseline": {
+    "selectedRegressionCases": 5,
+    "failed": 5
+  },
+  "checks": [
+    {
+      "command": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:5227 npx playwright test tests/commit-focus-ui.spec.js --reporter=line",
+      "passed": 12
+    },
+    {
+      "command": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:5227 npx playwright test tests/keyboard-flow-ui.spec.js tests/workspace-ui.spec.js --reporter=line",
+      "passed": 5,
+      "note": "These five existing cases passed in the combined17-case run; only the new test assertions were subsequently corrected."
+    },
+    {
+      "command": "npm run build",
+      "result": "pass",
+      "note": "Existing Vite large-chunk warning remains."
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "pass"
+    }
+  ],
+  "newEnglishStrings": [],
+  "screenshots": [
+    "inspect-1440.png",
+    "inspect-390.png",
+    "build-1440.png",
+    "build-390.png",
+    "research-1440.png",
+    "research-390.png"
+  ],
+  "mergeNote": "Root localization changes nearby shell/openModal. Retain tabindex=-1 on #import-save, new focusCommandResult helper, selectSystem restoration, and action-handler additions while preserving localization."
+}

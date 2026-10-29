@@ -1,0 +1,75 @@
+{
+  "scope": "Documentation assembly only. Not combined game, Russian QA, final guide acceptance, human usability or accessibility certification.",
+  "assemblyBaseCommit": "c3bc8c48860bf036c46e601ba3198b0a689ddd4a",
+  "sourceArtifacts": 155,
+  "originalManifestEntriesVerified": 118,
+  "sourceBytes": 33006276,
+  "storedSourceBytes": 21911076,
+  "originalReportsModified": false,
+  "pendingDelegatedTargets": [
+    "russian/index.html",
+    "acceptance/index.html"
+  ],
+  "indexBrowserMethod": "Rendered this package index through a file URL in isolated Chromium at1280 and390. Checked geometry, keyboard-visible focus and review navigation. No game/browser cohort rerun.",
+  "indexBrowserResults": [
+    {
+      "width": 1280,
+      "geometry": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "bodyFont": "17px",
+        "links": 39,
+        "tableViewport": 1064,
+        "tableWidth": 1064
+      },
+      "focus": {
+        "width": "3px",
+        "style": "solid"
+      },
+      "anchor": "#reproduce",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "bodyFont": "17px",
+        "links": 39,
+        "tableViewport": 354,
+        "tableWidth": 650
+      },
+      "focus": {
+        "width": "3px",
+        "style": "solid"
+      },
+      "anchor": "#reproduce",
+      "errors": []
+    }
+  ],
+  "portableEngineReproduction": {
+    "mode": "strategy",
+    "baseline": "93a62961e994994d30c05240b17c39a418020473",
+    "changed": "450f6d73caf27f169618b1308d370506ec1cca9a",
+    "files": [
+      {
+        "archived": "strategy/probe-results.json",
+        "archivedSha256": "8a52e3b33a93ae1ed7caf8fef79c3b161087ca3d07d043d8eab5d398e406e3c3",
+        "rerunSha256": "8a52e3b33a93ae1ed7caf8fef79c3b161087ca3d07d043d8eab5d398e406e3c3",
+        "byteEqual": true,
+        "mainlineRerunSha256": "8a52e3b33a93ae1ed7caf8fef79c3b161087ca3d07d043d8eab5d398e406e3c3"
+      },
+      {
+        "archived": "strategy/implementation/mechanical-comparison.json",
+        "archivedSha256": "f033e995f7cc46934fa7d087cd7d925c6712b5e4bd1db63436fb65e73494c8ed",
+        "rerunSha256": "f033e995f7cc46934fa7d087cd7d925c6712b5e4bd1db63436fb65e73494c8ed",
+        "byteEqual": true,
+        "mainlineRerunSha256": "f033e995f7cc46934fa7d087cd7d925c6712b5e4bd1db63436fb65e73494c8ed"
+      }
+    ],
+    "largeCohortsRerunDuringPackaging": false,
+    "reconstructedEcologyEngineHashes": 9,
+    "strategyMainlineEngineCommit": "46ffa85ba0438cf2d4ec0134431dfa32bb80a947"
+  },
+  "indexSha256": "4dda8be93d0f5133cce3c4cdd26fcb477ebe6e47bef81fcd18849964542144db"
+}

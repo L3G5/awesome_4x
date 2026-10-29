@@ -1,0 +1,31 @@
+{
+  "baseline": "93a62961e994994d30c05240b17c39a418020473",
+  "version": "0.21.2",
+  "report": "report.txt",
+  "findings": [
+    {
+      "id": "F1",
+      "title": "Keyboard commands lose task focus",
+      "severity": "high for keyboard use; medium overall",
+      "confidence": "high",
+      "priority": 1
+    },
+    {
+      "id": "F2",
+      "title": "Colony execution requires leaving Empire comparison",
+      "severity": "medium",
+      "confidence": "high behavior, medium fatigue implication",
+      "priority": 2
+    },
+    {
+      "id": "F3",
+      "title": "Narrow colony table separates identity, status and action",
+      "severity": "medium on narrow screens",
+      "confidence": "high geometry, medium user difficulty",
+      "priority": 3
+    }
+  ],
+  "counterevidence": "Held garrisons and intentional idle colonies permit quiet end cycles; important wars and rival alignment interrupt the continued default50 branch. No general automation recommendation.",
+  "sourceEdited": false,
+  "subjectiveEngagementMeasured": false
+}

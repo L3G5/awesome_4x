@@ -1,0 +1,227 @@
+WATCH 14 — A fortified network under pressure
+Asterion Reach · sustained UI playtest · frozen 0.14.0
+A fortified network
+under pressure
+Concord achieved transcendence on cycle 60. A peaceful opening became a tied public race, a limited beacon seizure, and a defense of the home network against two Veyr raids.
+Seed
+ASTERION-WATCH-14
+· Actual UI session, 28–29 October 2026 · Immutable preview 5196 · No grants, save edits, imports, rollback, or build upgrades during play.
+The campaign
+What mattered
+Next priorities
+Replay proof
+60
+cycle of actual transcendence
+5 worlds
+four settled, one captured
+3 losses
+frigates lost in three fleet battles
+265 / 265
+commands pass exact reload replay
+This is one played campaign, not a cohort or a claim of general balance. Full hidden state was opened only after the game ended, for reproducibility. Strategic decisions used rendered UI and a recorded read-only projection of own assets, charted geography, public signals, and fleets under current local sensors.
+The campaign
+The original plan was compact and peaceful: develop Solace, Sundrift, Haven and Kepler; fund three beacons; keep useful trade partners; defend the network with a few strong formations. This remained the plan until a simultaneous alignment race made a passive finish uncertain.
+Cycle
+Decision
+Consequence actually observed
+1–10
+Preserve Sundrift’s Garden; settle nearby productive worlds. Accept Veyr’s explicit offer 7. Pay 35C for a Khar gift and 30C for trade 10.
+The Garden raised an adjacent ice world from 40% to 65% habitability. Khar’s new claim at Sable had closed the scout’s return corridor; the treaty purchased useful access rather than abstract goodwill.
+12–18
+Decline Choir’s first proposal 12, then accept its later proposal 18. Salvage the distant Patient Reef at Iona 14.
+Three thinly defended colonies were a reason to keep borders closed initially. After a fourth settlement and factory investment, access and income became worthwhile. Remote geography made 85 M more useful than a restoration on an unplanned colony.
+19–32
+Build factories before charters. Upgrade Solace to Forge II for 300 C / 100 M and five cycles.
+Solace crossed 24→30 production, turning a 26-work frigate into a one-cycle build. Sundrift’s Extraction charter fit its native ore; Haven’s Academy supported research. Veyr’s Peregrine settlement created a frontier requiring a garrison.
+33–44
+Assemble 12 frigates, hold deliberate garrisons, fund beacons, and observe public Choir sites. Give Veyr trade notice 44.
+Veyr had used open transit to settle Halcyon beside Solace and Sundrift. Ending trade imposed a real income/access tradeoff while preserving peace until 47. The public Khar–Veyr war was visible; Concord stayed neutral.
+50–52
+Replace Sundrift’s lab with a shipyard. Both networks begin at 1/10 on 51. Read the public guide’s simultaneous-finish rule.
+The extra yard sacrificed 9 science for a reinforcement queue and 8 rather than 4 shared repair. The guide said higher Legacy breaks an alignment tie. Own score 557 was visible; foreign exact score was not. Choir’s larger observed territory made waiting a credible losing risk.
+52–55
+Give Choir three-cycle notice; assemble six frigates, scout, and stage on neutral Orison. Veyr declares war. After Choir notice expires, declare a limited war 55.
+Command’s two moves let the expedition arrive and let detached home ships reinforce threatened sites. No treaty was broken during notice. On actual arrival, Caelum had no fleet and 36 defenses; the 81–99 damage /8.1 retaliation preview justified taking that single beacon.
+55–60
+Hold Caelum, reinforce Haven, preserve home beacons, and repair. Avoid further conquest.
+Three enemy attacks failed. Choir’s alignment fell 5→0 after losing Caelum. Concord’s original three sites advanced unbroken to 10/10. A quiet final cycle was deliberate; no new project could improve the immediate outcome.
+Cycle 7: an explicit trade offer. Borders remained closed until actual acceptance; the receiving player paid no signing fee.
+The race changed the strategy
+The simultaneous-finish rule was available in the frozen field guide, but absent from the Empire race panel that prompted the decision. I initially intended to honor Choir trade and simply fortify. Reading that public rule changed the assessment: a compact four-world empire could plausibly lose a tied finish to the visibly larger Choir. The foreign Legacy score was not inspected. Normal notice, scouting and staging created a three-cycle window before the limited war.
+0
+5
+10
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+Concord
+Choir
+Caelum seized during cycle 55
+Public alignment values observed during the actual UI run. Capturing Caelum during 55 did not rewrite the previous completed-cycle signal; Choir’s first interrupted-cycle result appeared at 56.
+Cycle 51: both civilizations announce alignment 1/10. This was the consequential strategic decision point.
+Cycle 55: the actual invasion result matches the visible forecast—Caelum captured, no ships lost, 8.1 hull retaliation.
+Three defensive engagements
+Observed at
+Attack and defense
+Actual result
+56 · Haven
+Veyr 2 frigates versus Concord 4
+Veyr destroyed; Concord loses 1 ship and 40.4 hull. Four hull of normal repair explains the inspector’s95.6→99.6 difference from the battle report.
+57 · Caelum
+Choir 2 frigates versus Concord 6
+Choir destroyed; Concord loses 1 ship and 32.8 hull. The colony’s ordinary repair restores the surviving five to 170 hull.
+58 · Haven
+Veyr 3 frigates versus reinforced Concord 5
+Veyr destroyed; Concord loses 1 ship and 60.5 hull. Remaining damage justifies one 10 M paid repair.
+Reports retain combat cycle 55/56/57; the resulting briefings are seen at 56/57/58. The invasion at 55 is a fourth combat report, separate from these three fleet battles.
+Cycle 56: the fleet report identifies each formation and explains that nearby formations do not combine their fire.
+What mattered in play
+Consent had strategic value
+Accept, decline, reaccept, and cancel all had reasons. The western treaty opened a scout corridor. Choir’s first offer was declined during a weak military opening; the later offer was accepted after development. Veyr’s backyard settlement exposed the cost of reciprocal access. Normal notice gave a predictable withdrawal deadline.
+Production timing mattered
+Minerals and slots constrained the opening. Factory-first timing halved Sundrift’s contemplated charter duration. Forge II crossed a useful production threshold. Beacon replacements preserved old mines until completion. Sundrift’s late lab-to-yard conversion produced reinforcements that actually reached Haven.
+Hold and division were useful
+Eighteen Hold commands kept deliberate garrisons and observation posts quiet. Combat cleared Hold and prompted a useful review. Two splits moved existing ships without creating free ships or movement. Command allowed a Sundrift reinforcement to reach Haven in the same cycle.
+No forced Lead usage
+Each threatened world had one consolidated frigate formation. Choosing a defensive lead would not improve those engagements, so none was assigned merely to exercise the feature. Foreign lead badges were observed locally. This run supports the visibility and low distraction of the control, not a claim about its combat effectiveness.
+Research still produced consequential choices: Protocol enabled the network; choosing Command before cruisers enabled timely redeployment. Cruisers completed 57 but a new cruiser would arrive too late for the imminent raid, so a one-cycle frigate was preferred. Worldshaping was queued only as a free contingency using otherwise idle science, and remained 311/600 at the finish. There was no reason to buy more late laboratories or charters.
+Final visible holdings were 897 credits, 387 minerals, 13 orders, 11 completed technologies, 43 population and 698 Legacy. Sixteen frigates and one scout survived. A reserve treasury was useful insurance against trade cancellation and alignment funding; the run does not justify adding arbitrary resource sinks because some resources remained.
+The actual final Empire view: five worlds, 16 frigates plus a scout, 698 Legacy and completed transcendence.
+The next two improvements I would prioritize
+1 · Put the tied-race rule where the race is shown
+When contacted civilizations share imminent alignment progress, show the existing higher-Legacy tie rule beside the public network. Link the explanation and own score. Do not reveal hidden foreign research, fleets, population or an exact remote score merely to answer this question. Acceptance: an equal 1/10 or 9/10 public race explains the rule without requiring a guide search, and unknown rival information remains unknown.
+2 · Reduce repeated ship commissioning
+The longest repetitive stretch was cycles 33–40: merge the new frigate, open construction, choose Ships, commission another, end cycle. A one-click “repeat last ship commission” for an idle eligible shipyard would preserve the ordinary payment, one order, queue, and completion timing while removing repeated menu navigation. Stop at a small UI convenience; this evidence does not require a new production system or automatic spending.
+The failed enemy raids deserve a separate bounded AI review, not an immediate damage buff. Veyr sent two then three frigates into defenses I reinforced to four then five; Choir tried to recover its lost beacon with two. These attacks created actual losses and forced allocation. The run alone does not establish that delayed concentration would have been feasible or better before the victory deadline. Any future policy change should use the attacker’s observed defenses and real route/time constraints.
+Exact replay and provenance
+Original played build verified
+The game ran on 5196 for the entire session. The starting metadata identifies 0.14.0 /6dbf0b0; all 14 engine source files are hash-identical to the pinned a9c61ff release used by the portable runner. Original compiled JS/CSS bytes are preserved compressed with their SHA 256 hashes.
+node replay/replay.mjs
+node comparison/same-trace.mjs
+The first command reproduces 265 ordinary commands, including 59 full end turns, from the original seed. All 15 export events match the 14 distinct downloaded checkpoint files in every serialized field. Every command also matches after a JSON reload, with valid saves and finite nonnegative resources throughout. The final player win and random state are exact, not inferred from a screenshot.
+All actual downloaded checkpoints
+Cycle 1 is after opening actions; 7 precedes acceptance; 10 precedes the gift/treaty; 44 precedes cancellation; 50 precedes the yard replacement; 55 precedes war and invasion. Other intermediate exports are at the recorded decision boundary. Cycle 60 was exported twice with identical bytes. None of these files is a fabricated or replay-derived save.
+Cycle / download
+Credits
+Minerals
+Orders
+Techs
+Alignment
+1
+80
+60
+0
+0
+0/10
+7
+106
+61
+7
+1
+0/10
+10
+118
+50
+9
+2
+0/10
+20
+197
+71
+10
+3
+0/10
+30
+214
+88
+10
+7
+0/10
+40
+777
+289
+10
+7
+0/10
+41
+827
+310
+10
+7
+0/10
+44
+686
+97
+10
+8
+0/10
+50
+964
+211
+10
+9
+0/10
+51
+954
+225
+10
+9
+1/10
+54
+893
+223
+12
+10
+4/10
+55
+840
+199
+12
+10
+5/10
+56
+854
+244
+13
+10
+6/10
+60
+897
+387
+13
+11
+10/10
+Corrections, errors and non-actions retained
+One command annotation was corrected: event 571 said moving fleet f43, but the actual selected survivor of the preceding merge was f47. The UI receipt says “Vanguard 47 arrived at Eidolon”; the correction was recorded immediately in event 572. The portable runner derives the entire transcript from raw receipts and permits only this explicit field correction.
+Five driver-selector errors remain in the raw log: an incorrect new-game selector, an incorrect trade-review selector, a missing fleet-selection control, a collision-hidden map label, and the guessed item name “fortress” instead of “bastion.” None mutated the game. A separate shell-quoting failure before the cycle 3 action batch left the discovery unresolved; the following normal End Cycle did execute. This was documented at 4 and played forward without rollback. There were zero recorded page errors or crashes.
+The cycle 47 trade-income concern was a player memory error, not a UI defect: Stellar Accords had raised each treaty from 6 to 10 credits. The later UI correctly showed 10 and the research text explained the extra 4. Missing future value from a late cruiser was a planning decision, not a construction bug.
+Separate postgame same-trace comparison
+The second command applies the same 265 recorded commands to 13b0392. This is not another played campaign, a balance sample, or a policy fork. After removing only
+combatReports[*].rounds
+, all state fields after every command, all command results, and the final actual downloaded save match the original. Three fleet reports gain two recorded rounds each. The original screenshots and results remain evidence for 0.14.0, not later UI.
+Original exact replay results
+·
+Normalized 265-command transcript
+·
+Export boundaries and explicit correction
+·
+Separate same-trace comparison
+Original UI receipts, compressed
+·
+Full safe observations and requests, compressed
+·
+Read-only projection and UI driver
+·
+Frozen public field guide
+·
+Compiled/source hashes
+Prepared after the actual campaign ended. Raw checkpoint data was not used for strategic decisions. Final serialized state SHA 256:
+d9cdd751b9a6af62aca35ed7fc631d4967679339e13a230add40ff8d58f0fda9
+. This report’s screenshots are embedded for standalone reading; linked evidence travels with this folder.

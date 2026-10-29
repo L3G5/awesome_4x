@@ -1,0 +1,516 @@
+{"completed":20,"mode":"passive","elapsedSeconds":12}
+{"completed":40,"mode":"science","elapsedSeconds":22}
+{"completed":60,"mode":"military","elapsedSeconds":28}
+{"completed":80,"mode":"balanced","elapsedSeconds":39}
+{
+  "outputPath": "/tmp/asterion-critique-replayability/policy-benchmark.json",
+  "elapsedSeconds": 38.788,
+  "summary": {
+    "passive": {
+      "games": 20,
+      "outcomes": {
+        "choir:Transcendence": 5,
+        "veyr:Transcendence": 4,
+        "khar:Transcendence": 11
+      },
+      "finish": {
+        "count": 20,
+        "min": 63,
+        "median": 70.5,
+        "max": 85
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 46,
+        "max": 61
+      },
+      "firstTech": {
+        "count": 60,
+        "min": 2,
+        "median": 7,
+        "max": 11
+      },
+      "protocol": {
+        "count": 56,
+        "min": 32,
+        "median": 48,
+        "max": 69
+      },
+      "allTechs": {
+        "count": 51,
+        "min": 45,
+        "median": 60,
+        "max": 79
+      },
+      "firstCharter": {
+        "count": 60,
+        "min": 16,
+        "median": 23,
+        "max": 31
+      },
+      "firstBeacon": {
+        "count": 56,
+        "min": 41,
+        "median": 55.5,
+        "max": 70
+      },
+      "alignmentStart": {
+        "count": 49,
+        "min": 47,
+        "median": 60,
+        "max": 78
+      },
+      "totalInterruptions": 31,
+      "finalCharters": {
+        "count": 60,
+        "min": 0,
+        "median": 5,
+        "max": 9
+      },
+      "invalid": [],
+      "negativeResource": [],
+      "discoveries": {
+        "byFaction": {
+          "player": {
+            "preserve": 0,
+            "restore": 0,
+            "harvest": 0,
+            "salvage": 0,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "veyr": {
+            "preserve": 1,
+            "restore": 0,
+            "harvest": 1,
+            "salvage": 8,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "khar": {
+            "preserve": 9,
+            "restore": 2,
+            "harvest": 8,
+            "salvage": 10,
+            "completedAncientSites": 2,
+            "activeAtFinish": 1
+          },
+          "choir": {
+            "preserve": 2,
+            "restore": 0,
+            "harvest": 1,
+            "salvage": 9,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          }
+        },
+        "preservedAt": {
+          "count": 12,
+          "min": 10,
+          "median": 38,
+          "max": 45
+        },
+        "restoredAt": {
+          "count": 2,
+          "min": 47,
+          "median": 48.5,
+          "max": 50
+        },
+        "harvestedAt": {
+          "count": 10,
+          "min": 38,
+          "median": 42,
+          "max": 49
+        },
+        "completedAt": {
+          "count": 2,
+          "min": 51,
+          "median": 53,
+          "max": 55
+        }
+      }
+    },
+    "science": {
+      "games": 20,
+      "outcomes": {
+        "choir:Transcendence": 4,
+        "player:Transcendence": 2,
+        "veyr:Transcendence": 9,
+        "khar:Transcendence": 5
+      },
+      "finish": {
+        "count": 20,
+        "min": 63,
+        "median": 72,
+        "max": 80
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 47,
+        "max": 62
+      },
+      "firstTech": {
+        "count": 20,
+        "min": 3,
+        "median": 4,
+        "max": 9
+      },
+      "protocol": {
+        "count": 20,
+        "min": 34,
+        "median": 37,
+        "max": 44
+      },
+      "allTechs": {
+        "count": 20,
+        "min": 50,
+        "median": 56.5,
+        "max": 70
+      },
+      "firstCharter": {
+        "count": 20,
+        "min": 15,
+        "median": 15,
+        "max": 22
+      },
+      "firstBeacon": {
+        "count": 20,
+        "min": 45,
+        "median": 50.5,
+        "max": 58
+      },
+      "alignmentStart": {
+        "count": 19,
+        "min": 56,
+        "median": 60,
+        "max": 74
+      },
+      "totalInterruptions": 14,
+      "finalCharters": {
+        "count": 20,
+        "min": 3,
+        "median": 5.5,
+        "max": 7
+      },
+      "invalid": [],
+      "negativeResource": [],
+      "discoveries": {
+        "byFaction": {
+          "player": {
+            "preserve": 7,
+            "restore": 3,
+            "harvest": 4,
+            "salvage": 7,
+            "completedAncientSites": 3,
+            "activeAtFinish": 2
+          },
+          "veyr": {
+            "preserve": 0,
+            "restore": 0,
+            "harvest": 0,
+            "salvage": 7,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "khar": {
+            "preserve": 7,
+            "restore": 3,
+            "harvest": 5,
+            "salvage": 7,
+            "completedAncientSites": 3,
+            "activeAtFinish": 3
+          },
+          "choir": {
+            "preserve": 3,
+            "restore": 0,
+            "harvest": 2,
+            "salvage": 2,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          }
+        },
+        "preservedAt": {
+          "count": 17,
+          "min": 6,
+          "median": 40,
+          "max": 52
+        },
+        "restoredAt": {
+          "count": 6,
+          "min": 25,
+          "median": 33.5,
+          "max": 55
+        },
+        "harvestedAt": {
+          "count": 11,
+          "min": 38,
+          "median": 45,
+          "max": 70
+        },
+        "completedAt": {
+          "count": 6,
+          "min": 31,
+          "median": 38.5,
+          "max": 59
+        }
+      }
+    },
+    "military": {
+      "games": 20,
+      "outcomes": {
+        "choir:Concord defeated": 2,
+        "khar:Concord defeated": 6,
+        "player:Transcendence": 1,
+        "player:Domination": 1,
+        "khar:Transcendence": 2,
+        "veyr:Concord defeated": 7,
+        "veyr:Transcendence": 1
+      },
+      "finish": {
+        "count": 20,
+        "min": 31,
+        "median": 43,
+        "max": 103
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 14,
+        "median": 20,
+        "max": 22
+      },
+      "firstTech": {
+        "count": 20,
+        "min": 3,
+        "median": 5,
+        "max": 12
+      },
+      "protocol": {
+        "count": 4,
+        "min": 63,
+        "median": 69,
+        "max": 80
+      },
+      "allTechs": {
+        "count": 4,
+        "min": 66,
+        "median": 74,
+        "max": 85
+      },
+      "firstCharter": {
+        "count": 20,
+        "min": 19,
+        "median": 21.5,
+        "max": 27
+      },
+      "firstBeacon": {
+        "count": 4,
+        "min": 56,
+        "median": 68.5,
+        "max": 81
+      },
+      "alignmentStart": {
+        "count": 2,
+        "min": 86,
+        "median": 87,
+        "max": 88
+      },
+      "totalInterruptions": 1,
+      "finalCharters": {
+        "count": 20,
+        "min": 0,
+        "median": 0,
+        "max": 9
+      },
+      "invalid": [],
+      "negativeResource": [],
+      "discoveries": {
+        "byFaction": {
+          "player": {
+            "preserve": 3,
+            "restore": 0,
+            "harvest": 1,
+            "salvage": 8,
+            "completedAncientSites": 0,
+            "activeAtFinish": 1
+          },
+          "veyr": {
+            "preserve": 1,
+            "restore": 2,
+            "harvest": 0,
+            "salvage": 6,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "khar": {
+            "preserve": 5,
+            "restore": 2,
+            "harvest": 5,
+            "salvage": 7,
+            "completedAncientSites": 2,
+            "activeAtFinish": 1
+          },
+          "choir": {
+            "preserve": 2,
+            "restore": 0,
+            "harvest": 1,
+            "salvage": 2,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          }
+        },
+        "preservedAt": {
+          "count": 11,
+          "min": 10,
+          "median": 32,
+          "max": 53
+        },
+        "restoredAt": {
+          "count": 4,
+          "min": 32,
+          "median": 41.5,
+          "max": 49
+        },
+        "harvestedAt": {
+          "count": 7,
+          "min": 36,
+          "median": 44,
+          "max": 57
+        },
+        "completedAt": {
+          "count": 2,
+          "min": 44,
+          "median": 49,
+          "max": 54
+        }
+      }
+    },
+    "balanced": {
+      "games": 20,
+      "outcomes": {
+        "choir:Transcendence": 3,
+        "veyr:Transcendence": 9,
+        "player:Transcendence": 2,
+        "khar:Transcendence": 6
+      },
+      "finish": {
+        "count": 20,
+        "min": 63,
+        "median": 71,
+        "max": 78
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 44.5,
+        "max": 61
+      },
+      "firstTech": {
+        "count": 20,
+        "min": 3,
+        "median": 3.5,
+        "max": 10
+      },
+      "protocol": {
+        "count": 20,
+        "min": 42,
+        "median": 47,
+        "max": 66
+      },
+      "allTechs": {
+        "count": 17,
+        "min": 52,
+        "median": 58,
+        "max": 64
+      },
+      "firstCharter": {
+        "count": 20,
+        "min": 20,
+        "median": 24.5,
+        "max": 43
+      },
+      "firstBeacon": {
+        "count": 20,
+        "min": 49,
+        "median": 54.5,
+        "max": 66
+      },
+      "alignmentStart": {
+        "count": 18,
+        "min": 54,
+        "median": 59,
+        "max": 71
+      },
+      "totalInterruptions": 15,
+      "finalCharters": {
+        "count": 20,
+        "min": 3,
+        "median": 5,
+        "max": 7
+      },
+      "invalid": [],
+      "negativeResource": [],
+      "discoveries": {
+        "byFaction": {
+          "player": {
+            "preserve": 7,
+            "restore": 5,
+            "harvest": 2,
+            "salvage": 6,
+            "completedAncientSites": 5,
+            "activeAtFinish": 3
+          },
+          "veyr": {
+            "preserve": 0,
+            "restore": 0,
+            "harvest": 0,
+            "salvage": 6,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          },
+          "khar": {
+            "preserve": 9,
+            "restore": 1,
+            "harvest": 9,
+            "salvage": 7,
+            "completedAncientSites": 1,
+            "activeAtFinish": 1
+          },
+          "choir": {
+            "preserve": 2,
+            "restore": 0,
+            "harvest": 1,
+            "salvage": 2,
+            "completedAncientSites": 0,
+            "activeAtFinish": 0
+          }
+        },
+        "preservedAt": {
+          "count": 18,
+          "min": 9,
+          "median": 32,
+          "max": 55
+        },
+        "restoredAt": {
+          "count": 6,
+          "min": 23,
+          "median": 35,
+          "max": 52
+        },
+        "harvestedAt": {
+          "count": 12,
+          "min": 35,
+          "median": 41.5,
+          "max": 59
+        },
+        "completedAt": {
+          "count": 6,
+          "min": 28,
+          "median": 38.5,
+          "max": 57
+        }
+      }
+    }
+  }
+}

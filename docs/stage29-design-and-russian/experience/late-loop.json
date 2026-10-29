@@ -1,0 +1,419 @@
+[
+  {
+    "before": 50,
+    "after": 51,
+    "confirm": "",
+    "automaticModal": null,
+    "briefing": {
+      "turn": 51,
+      "entries": [
+        {
+          "id": 110,
+          "turn": 51,
+          "type": "alignment",
+          "text": "The Concord begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.",
+          "systemId": "s20"
+        },
+        {
+          "id": 109,
+          "turn": 51,
+          "type": "alignment",
+          "text": "The Concord has restored an Asterion Beacon at Halcyon (3 owned).",
+          "systemId": "s33"
+        },
+        {
+          "id": 108,
+          "turn": 51,
+          "type": "construction",
+          "text": "Halcyon completed Asterion Beacon.",
+          "systemId": "s33",
+          "itemId": "beacon"
+        },
+        {
+          "id": 107,
+          "turn": 51,
+          "type": "construction",
+          "text": "Solace completed Sovereign.",
+          "systemId": "s0",
+          "itemId": "cruiser"
+        },
+        {
+          "id": 106,
+          "turn": 51,
+          "type": "research",
+          "text": "Research complete: Distributed Command. +2 orders each turn. Warships gain one additional move per turn.",
+          "techId": "command"
+        }
+      ],
+      "reportIds": []
+    },
+    "player": {
+      "credits": 1897,
+      "orders": 13,
+      "research": null,
+      "alignment": {
+        "progress": 1,
+        "sites": [
+          "s20",
+          "s28",
+          "s33"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s20",
+          "s28",
+          "s33"
+        ]
+      }
+    },
+    "fleets": [
+      {
+        "id": "f1",
+        "name": "Pathfinder 1",
+        "systemId": "s7",
+        "ships": 1,
+        "hp": 18
+      },
+      {
+        "id": "f3",
+        "name": "Vanguard 3",
+        "systemId": "s20",
+        "ships": 3,
+        "hp": 102
+      },
+      {
+        "id": "f53",
+        "name": "Sovereign 53",
+        "systemId": "s33",
+        "ships": 1,
+        "hp": 85
+      },
+      {
+        "id": "f57",
+        "name": "Sovereign 57",
+        "systemId": "s0",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "winner": null
+  },
+  {
+    "manual": "Assigned Worldshaping and held the newly completed cruiser at Solace",
+    "fleet": "f57"
+  },
+  {
+    "before": 51,
+    "after": 52,
+    "confirm": "",
+    "automaticModal": null,
+    "briefing": {
+      "turn": 52,
+      "entries": [
+        {
+          "id": 111,
+          "turn": 52,
+          "type": "alignment",
+          "text": "The Luminous Choir has restored an Asterion Beacon at Lumen (2 owned).",
+          "systemId": "s3"
+        }
+      ],
+      "reportIds": []
+    },
+    "player": {
+      "credits": 1945,
+      "orders": 13,
+      "research": {
+        "techId": "terraforming",
+        "progress": 135
+      },
+      "alignment": {
+        "progress": 2,
+        "sites": [
+          "s20",
+          "s28",
+          "s33"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s20",
+          "s28",
+          "s33"
+        ]
+      }
+    },
+    "fleets": [
+      {
+        "id": "f1",
+        "name": "Pathfinder 1",
+        "systemId": "s7",
+        "ships": 1,
+        "hp": 18
+      },
+      {
+        "id": "f3",
+        "name": "Vanguard 3",
+        "systemId": "s20",
+        "ships": 3,
+        "hp": 102
+      },
+      {
+        "id": "f53",
+        "name": "Sovereign 53",
+        "systemId": "s33",
+        "ships": 1,
+        "hp": 85
+      },
+      {
+        "id": "f57",
+        "name": "Sovereign 57",
+        "systemId": "s0",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "winner": null
+  },
+  {
+    "before": 52,
+    "after": 53,
+    "confirm": "",
+    "automaticModal": null,
+    "briefing": {
+      "turn": 53,
+      "entries": [],
+      "reportIds": []
+    },
+    "player": {
+      "credits": 1993,
+      "orders": 13,
+      "research": {
+        "techId": "terraforming",
+        "progress": 233
+      },
+      "alignment": {
+        "progress": 3,
+        "sites": [
+          "s20",
+          "s28",
+          "s33"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s20",
+          "s28",
+          "s33"
+        ]
+      }
+    },
+    "fleets": [
+      {
+        "id": "f1",
+        "name": "Pathfinder 1",
+        "systemId": "s7",
+        "ships": 1,
+        "hp": 18
+      },
+      {
+        "id": "f3",
+        "name": "Vanguard 3",
+        "systemId": "s20",
+        "ships": 3,
+        "hp": 102
+      },
+      {
+        "id": "f53",
+        "name": "Sovereign 53",
+        "systemId": "s33",
+        "ships": 1,
+        "hp": 85
+      },
+      {
+        "id": "f57",
+        "name": "Sovereign 57",
+        "systemId": "s0",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "winner": null
+  },
+  {
+    "before": 53,
+    "after": 54,
+    "confirm": "",
+    "automaticModal": "×\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 54 · 2 dispatches from the latest turn. This report remains available from the top bar.\n\nTHREATS & DIPLOMACY 2\nWAR\n\nThe Luminous Choir declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance.\n\nOpen diplomacy →\nDIPLOMACY\n\nPeace agreed between Veyr Consortium and Khar Dominion. Their truce forbids war until cycle 58.\n\nOpen diplomacy →\nFull chronicle\nContinue planning →",
+    "briefing": {
+      "turn": 54,
+      "entries": [
+        {
+          "id": 113,
+          "turn": 53,
+          "type": "war",
+          "text": "The Luminous Choir declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance.",
+          "targetId": "choir"
+        },
+        {
+          "id": 112,
+          "turn": 53,
+          "type": "diplomacy",
+          "text": "Peace agreed between Veyr Consortium and Khar Dominion. Their truce forbids war until cycle 58.",
+          "publicAffairId": 6,
+          "targetId": "veyr"
+        }
+      ],
+      "reportIds": []
+    },
+    "player": {
+      "credits": 2031,
+      "orders": 13,
+      "research": {
+        "techId": "terraforming",
+        "progress": 331
+      },
+      "alignment": {
+        "progress": 4,
+        "sites": [
+          "s20",
+          "s28",
+          "s33"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s20",
+          "s28",
+          "s33"
+        ]
+      }
+    },
+    "fleets": [
+      {
+        "id": "f1",
+        "name": "Pathfinder 1",
+        "systemId": "s7",
+        "ships": 1,
+        "hp": 18
+      },
+      {
+        "id": "f3",
+        "name": "Vanguard 3",
+        "systemId": "s20",
+        "ships": 3,
+        "hp": 102
+      },
+      {
+        "id": "f53",
+        "name": "Sovereign 53",
+        "systemId": "s33",
+        "ships": 1,
+        "hp": 85
+      },
+      {
+        "id": "f57",
+        "name": "Sovereign 57",
+        "systemId": "s0",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "winner": null
+  },
+  {
+    "before": 54,
+    "after": 55,
+    "confirm": "",
+    "automaticModal": "×\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 55 · 4 dispatches from the latest turn. This report remains available from the top bar.\n\nTHREATS & DIPLOMACY 4\nALIGNMENT\n\nThe Luminous Choir begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.\n\nInspect Ophion\nALIGNMENT\n\nThe Luminous Choir has restored an Asterion Beacon at Velorum (3 owned).\n\nInspect Velorum\nALIGNMENT\n\nThe Concord reaches 5/10 Asterion alignment.\n\nInspect Sundrift\nWAR\n\nKhar Dominion declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance.\n\nOpen diplomacy →\nFull chronicle\nContinue planning →",
+    "briefing": {
+      "turn": 55,
+      "entries": [
+        {
+          "id": 117,
+          "turn": 55,
+          "type": "alignment",
+          "text": "The Luminous Choir begins Asterion alignment (1/10). Three beacon worlds must remain operational; each advancing cycle costs 60 credits.",
+          "systemId": "s22"
+        },
+        {
+          "id": 116,
+          "turn": 55,
+          "type": "alignment",
+          "text": "The Luminous Choir has restored an Asterion Beacon at Velorum (3 owned).",
+          "systemId": "s9"
+        },
+        {
+          "id": 115,
+          "turn": 55,
+          "type": "alignment",
+          "text": "The Concord reaches 5/10 Asterion alignment.",
+          "systemId": "s20"
+        },
+        {
+          "id": 114,
+          "turn": 54,
+          "type": "war",
+          "text": "Khar Dominion declared war on The Concord. The active trade treaty was broken; the betrayal deepens their grievance.",
+          "targetId": "khar"
+        }
+      ],
+      "reportIds": []
+    },
+    "player": {
+      "credits": 2059,
+      "orders": 13,
+      "research": {
+        "techId": "terraforming",
+        "progress": 429
+      },
+      "alignment": {
+        "progress": 5,
+        "sites": [
+          "s20",
+          "s28",
+          "s33"
+        ],
+        "active": true,
+        "started": true,
+        "reportedBeacons": [
+          "s20",
+          "s28",
+          "s33"
+        ]
+      }
+    },
+    "fleets": [
+      {
+        "id": "f1",
+        "name": "Pathfinder 1",
+        "systemId": "s7",
+        "ships": 1,
+        "hp": 18
+      },
+      {
+        "id": "f3",
+        "name": "Vanguard 3",
+        "systemId": "s20",
+        "ships": 3,
+        "hp": 102
+      },
+      {
+        "id": "f53",
+        "name": "Sovereign 53",
+        "systemId": "s33",
+        "ships": 1,
+        "hp": 85
+      },
+      {
+        "id": "f57",
+        "name": "Sovereign 57",
+        "systemId": "s0",
+        "ships": 1,
+        "hp": 85
+      }
+    ],
+    "winner": null
+  }
+]

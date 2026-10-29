@@ -1,0 +1,187 @@
+{
+  "runtime": "v22.23.1",
+  "elapsedSeconds": 38.788,
+  "sourceHashes": {
+    "src/ai.js": "91a8115f7d47b3816089ea049f3dd8b4b921ba510694a351440c57f4da0b0088",
+    "src/game.js": "635c8193ecdaa592b4b42de3f502baaeb23e63aedde725187124f0b5279887c0",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/diplomacy.js": "26189addaf2cb7196afbe11f022e115271b53566da5029fbeb39d42c7ea1f89a",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "scripts/campaign-benchmark.mjs": "a7d34c7e904e217007284e4285a269a5c07e8d3eaedde898cb6cfbb44978e5ec"
+  },
+  "method": "20 fixed seeds per mode; no resource grants or hidden-fleet queries. All policies issue actions through the shared command API and retain ordinary faction traits. Every completed cycle checks save validity and nonnegative credits, minerals, science and orders. Timing medians include only empires reaching the milestone before the campaign ends; counts are reported alongside them. An even sample uses the mean of its middle pair. Passive timings describe 60 AI empires; other policy timings describe 20 player empires. Outcomes describe these automated policies, not human win rates. Alignment interruptions count transitions from active to inactive; this measure does not distinguish blockade, lost sites and funding shortfalls.",
+  "summary": {
+    "passive": {
+      "outcomes": {
+        "choir:Transcendence": 5,
+        "veyr:Transcendence": 4,
+        "khar:Transcendence": 11
+      },
+      "finish": {
+        "count": 20,
+        "min": 63,
+        "median": 70.5,
+        "max": 85
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 46,
+        "max": 61
+      },
+      "protocol": {
+        "count": 56,
+        "min": 32,
+        "median": 48,
+        "max": 69
+      },
+      "allTechs": {
+        "count": 51,
+        "min": 45,
+        "median": 60,
+        "max": 79
+      },
+      "alignmentStart": {
+        "count": 49,
+        "min": 47,
+        "median": 60,
+        "max": 78
+      },
+      "interruptions": 31,
+      "negativeResource": [],
+      "invalid": []
+    },
+    "science": {
+      "outcomes": {
+        "choir:Transcendence": 4,
+        "player:Transcendence": 2,
+        "veyr:Transcendence": 9,
+        "khar:Transcendence": 5
+      },
+      "finish": {
+        "count": 20,
+        "min": 63,
+        "median": 72,
+        "max": 80
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 47,
+        "max": 62
+      },
+      "protocol": {
+        "count": 20,
+        "min": 34,
+        "median": 37,
+        "max": 44
+      },
+      "allTechs": {
+        "count": 20,
+        "min": 50,
+        "median": 56.5,
+        "max": 70
+      },
+      "alignmentStart": {
+        "count": 19,
+        "min": 56,
+        "median": 60,
+        "max": 74
+      },
+      "interruptions": 14,
+      "negativeResource": [],
+      "invalid": []
+    },
+    "military": {
+      "outcomes": {
+        "choir:Concord defeated": 2,
+        "khar:Concord defeated": 6,
+        "player:Transcendence": 1,
+        "player:Domination": 1,
+        "khar:Transcendence": 2,
+        "veyr:Concord defeated": 7,
+        "veyr:Transcendence": 1
+      },
+      "finish": {
+        "count": 20,
+        "min": 31,
+        "median": 43,
+        "max": 103
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 14,
+        "median": 20,
+        "max": 22
+      },
+      "protocol": {
+        "count": 4,
+        "min": 63,
+        "median": 69,
+        "max": 80
+      },
+      "allTechs": {
+        "count": 4,
+        "min": 66,
+        "median": 74,
+        "max": 85
+      },
+      "alignmentStart": {
+        "count": 2,
+        "min": 86,
+        "median": 87,
+        "max": 88
+      },
+      "interruptions": 1,
+      "negativeResource": [],
+      "invalid": []
+    },
+    "balanced": {
+      "outcomes": {
+        "choir:Transcendence": 3,
+        "veyr:Transcendence": 9,
+        "player:Transcendence": 2,
+        "khar:Transcendence": 6
+      },
+      "finish": {
+        "count": 20,
+        "min": 63,
+        "median": 71,
+        "max": 78
+      },
+      "firstWar": {
+        "count": 20,
+        "min": 24,
+        "median": 44.5,
+        "max": 61
+      },
+      "protocol": {
+        "count": 20,
+        "min": 42,
+        "median": 47,
+        "max": 66
+      },
+      "allTechs": {
+        "count": 17,
+        "min": 52,
+        "median": 58,
+        "max": 64
+      },
+      "alignmentStart": {
+        "count": 18,
+        "min": 54,
+        "median": 59,
+        "max": 71
+      },
+      "interruptions": 15,
+      "negativeResource": [],
+      "invalid": []
+    }
+  }
+}

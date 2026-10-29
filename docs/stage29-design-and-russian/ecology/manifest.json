@@ -1,0 +1,91 @@
+{
+  "baseline": "93a62961e994994d30c05240b17c39a418020473",
+  "candidate": "bfd36d76a74762463ec2c0880dea20c5c27a1240",
+  "files": [
+    {
+      "file": "README.txt",
+      "bytes": 1314,
+      "sha256": "cef2152e926e8c6f19ddff37a97c1458784319d1d2ac67f9cbd27ab08c6f3e44"
+    },
+    {
+      "file": "ecology-priority.patch",
+      "bytes": 18467,
+      "sha256": "895d0cdccfbbd3877e1b1c8ab7e66b378a7a28ac7c25986d86e9e6bf9b586889"
+    },
+    {
+      "file": "examples.json",
+      "bytes": 30288,
+      "sha256": "f38b04e15071213bfd6a968371ec7e6b093af10b21d9003fc1ad7ba64962bbce"
+    },
+    {
+      "file": "focused-tests.txt",
+      "bytes": 2477,
+      "sha256": "928a9bc7ecc0d77d6e3ebad363fcad5ca26f0fa07e1da38f59af344677ec3d4a"
+    },
+    {
+      "file": "implementation-report.txt",
+      "bytes": 8308,
+      "sha256": "45299f978c31997ce3a6dff48a6787e0b6900fb8cb64bec151ca61962db4fc59"
+    },
+    {
+      "file": "paired-cohort-before-growth-bound-stdout.txt",
+      "bytes": 300,
+      "sha256": "be994477fe4f45ce77123dfd6c5c0e15517f8e1b1c27a1b35ee8382bf4ccbf3e"
+    },
+    {
+      "file": "paired-cohort-before-growth-bound.json",
+      "bytes": 3475711,
+      "sha256": "5cf9f3012b3551b67e75461297dafe262267bb78ae1056c517bf2863f90f54d8"
+    },
+    {
+      "file": "paired-cohort-initial-mutable-projection.json",
+      "bytes": 725141,
+      "sha256": "ceb5097b924fc1b4c45f2b552cf292b41e3d84bfccfaa66b1b0635be6a57550f"
+    },
+    {
+      "file": "paired-cohort-initial-stdout.txt",
+      "bytes": 300,
+      "sha256": "be994477fe4f45ce77123dfd6c5c0e15517f8e1b1c27a1b35ee8382bf4ccbf3e"
+    },
+    {
+      "file": "paired-cohort-stdout.txt",
+      "bytes": 300,
+      "sha256": "be994477fe4f45ce77123dfd6c5c0e15517f8e1b1c27a1b35ee8382bf4ccbf3e"
+    },
+    {
+      "file": "paired-cohort.json",
+      "bytes": 3476031,
+      "sha256": "1d6e2f37a09c7f472e2394aa4ef468aa0a9efd817b19f90544b36a1dabd22e1c"
+    },
+    {
+      "file": "paired-cohort.mjs",
+      "bytes": 6536,
+      "sha256": "1ebe9c8af378fa3c4c3dc33c49906dc3487548f1a30094f9a72b456173680e4c"
+    },
+    {
+      "file": "rules-tests.txt",
+      "bytes": 102109,
+      "sha256": "c526830c679714463223296c61b1a53d87ebabdef6939384b0e39453a09da011"
+    },
+    {
+      "file": "stage4-audit-15-first-difference-after.json",
+      "bytes": 72236,
+      "sha256": "32ef8f6a4af18c7ec68945a5f9012a317126d2616aadc816ae431318cf61b7bf"
+    },
+    {
+      "file": "stage4-audit-15-first-difference-before.json",
+      "bytes": 72094,
+      "sha256": "a8e9cc398b43fcfb20c7eb890d9ab575deb7a04a9c2e285a5a40193bab13da03"
+    },
+    {
+      "file": "stage4-audit-4-first-difference-after.json",
+      "bytes": 112429,
+      "sha256": "be3deda24084250d9ff0acf6e47bf302899bd4e684beae950065b58fb7e74198"
+    },
+    {
+      "file": "stage4-audit-4-first-difference-before.json",
+      "bytes": 112668,
+      "sha256": "77dbc4f63015837d338ba91af542edd4ee213103047a6e46cae3afb8ac553a2e"
+    }
+  ]
+}
