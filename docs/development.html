@@ -129,6 +129,7 @@
 
   <section id="validation" aria-labelledby="validation-title">
     <h2 id="validation-title">Compatibility & validation</h2>
+    <p class="intro"><a href="firefox-review/index.html">Firefox desktop acceptance · v0.21.1</a> — selected gameplay, keyboard, WebGL, import/export and guide flows in Firefox 146.0.1. A bounded opening fixture and an imported completed save, not another played campaign.</p>
     <div class="cards">
       <article><span class="kind">Historical imports · v0.20 engine</span><h3><a href="stage20-expedition-review/save-compatibility/index.html">Save continuity refresh</a></h3><p>Existing original-to-v0.14 artifacts resumed under a pinned v0.20 engine. Actual downloads, generated historical inputs and replay-derived checkpoints retain separate provenance.</p></article>
       <article><span class="kind">Historical imports · v0.10 engine</span><h3><a href="save-compatibility/index.html">Original cross-version audit</a></h3><p>Paid queues, legacy slot capacity, historical records, routes and exact reload behavior across earlier v1 saves.</p></article>
@@ -159,9 +160,9 @@ npm run dev</pre><p class="intro">Browse <code>/docs/development.html</code> on 
   --repo . --out /tmp/asterion-save-review</pre><p>Engine-only audit pinned to <code>47e0373</code>. Its report gives the separate browser-import procedure.</p></div>
       </div>
     </div>
-    <p class="reading-note">Older benchmark scripts may default to the working tree or <code>HEAD</code>. That measures a new engine. To reproduce a historical result, use the revision and runner instructions recorded in its report, including <code>--engine-ref</code> where supported.</p>
+    <p class="reading-note">Older benchmark scripts may default to the working tree or <code>HEAD</code>. That measures a new engine. To reproduce a historical result, use the revision and runner instructions recorded in its report, including <code>--engine-ref</code> where supported. Some archived runners write beside themselves: if they lack a documented output override, copy the required frozen bundle to scratch first. The three commands above direct generated evidence to <code>/tmp</code>.</p>
   </section>
-  <footer>Catalog assembled from <code>3c6e822</code> and checked against Stage 23 integration <code>648c1f5</code>. Bundle indexes lead to their screenshots, raw results, fixtures, scripts and hashes. Captured views and frozen builds remain inside those bundles rather than being counted as separate campaigns. No metrics on this page claim to describe an unverified later release.</footer>
+  <footer>Catalog assembled from <code>3c6e822</code> and checked against Stage 23 integration <code>648c1f5</code>, with the frozen Firefox acceptance bundle supplied for handoff. Bundle indexes lead to their screenshots, raw results, fixtures, scripts and hashes. Captured views and frozen builds remain inside those bundles rather than being counted as separate campaigns. No metrics on this page claim to describe an unverified later release.</footer>
 </main>
 </body>
 </html>
