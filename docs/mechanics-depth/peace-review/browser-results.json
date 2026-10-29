@@ -1,0 +1,694 @@
+{
+  "candidate": {
+    "baseURL": "http://127.0.0.1:41577",
+    "requestedCommit": "94f41df",
+    "currentRepositoryCommit": "a1c2eb7c19be794ee167acc03fa1df3a5954d78b",
+    "sourceDiffAgainstRequestedCommit": "",
+    "htmlSha256": "f1f39875fe495a1bfc8a6681b10a81ef97a17b35242d173f19028c68a7895f50",
+    "servedAssets": [
+      {
+        "path": "./assets/index-grrzVhaE.js",
+        "sha256": "d33438d3ede5fdf16d567f49e62e41c2242533a0b95874767dbd6e5c2d6c0765"
+      },
+      {
+        "path": "./assets/index-D_whonTk.css",
+        "sha256": "b3da1c22c2a894486e48f457a92562a9ef7b21c9e977631429c76e9efb8496aa"
+      }
+    ],
+    "sourceSha256": {
+      "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+      "src/diplomacy-ui.js": "cb0ca80c020ea298834cbabfd07e7fbacd20b3a1d5982f8626208bf69f3a3d43",
+      "src/locales/ru.js": "ec5fb392d06be2a7c686a49bd34b49fc221a3529f8135192176a33798ae06078",
+      "src/main.js": "f3fb8c0dad830cdf74e20c1d0f4fd10090ac0035fd3522999fd0c90d62636223",
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/localization.js": "6d232eaeb3f31a7587574d939869152675ff8baba34c1caacb8aacfe9225e766"
+    }
+  },
+  "inputs": {
+    "denial": {
+      "path": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "sha256": "797255968de20aee4688d3d93f9b6600dde70cb875964c4a947b0fed2c41a7f2"
+    },
+    "ordinary": {
+      "path": "docs/military-playtest/replay/actual-exports/cycle40.json",
+      "sha256": "e464c5515503c60c883c8c4cb2e2dd792c98caf98ef15603ee703318863a326f"
+    },
+    "funded": {
+      "path": "docs/diplomacy-audit/verified-before-accept29.json",
+      "sha256": "a7be80db74ea94238e9fea651b7fe3ed7ea2aade73f66a96398e90e561ab78a6"
+    }
+  },
+  "historicalBlockadePublicFacts": {
+    "race": {
+      "factionId": "player",
+      "name": "The Concord",
+      "color": "#68d9cd",
+      "progress": 5,
+      "target": 10,
+      "beacons": 3,
+      "sites": [
+        {
+          "id": "s0",
+          "name": "Solace",
+          "x": 29,
+          "y": 29,
+          "owner": "player"
+        },
+        {
+          "id": "s7",
+          "name": "Nacre",
+          "x": 14,
+          "y": 16.2,
+          "owner": "player"
+        },
+        {
+          "id": "s20",
+          "name": "Sundrift",
+          "x": 25.7,
+          "y": 23.5,
+          "owner": "player"
+        }
+      ],
+      "participatingSites": [
+        "s7",
+        "s20",
+        "s0"
+      ],
+      "active": false
+    },
+    "directlyObservedBlocker": [
+      {
+        "id": "f56",
+        "name": "Vanguard 56",
+        "owner": "choir",
+        "systemId": "s7",
+        "type": "frigate",
+        "ships": 2,
+        "hp": 68,
+        "movesLeft": 2
+      }
+    ]
+  },
+  "browserCases": 18,
+  "pageErrors": [],
+  "results": [
+    {
+      "id": "actual-odyssey61-blockade",
+      "kind": "Unmodified actual historical export",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "cardText": "✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nThey refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "disabledPeaceTitle": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 38.5,
+        "text": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up."
+      },
+      "cardScreenshot": "actual-odyssey61-blockade-en-1280-card.png"
+    },
+    {
+      "id": "actual-odyssey61-blockade",
+      "kind": "Unmodified actual historical export",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 390,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "cardText": "RELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nThey refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "disabledPeaceTitle": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 260,
+        "scrollWidth": 260,
+        "height": 96.25,
+        "text": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up."
+      },
+      "cardScreenshot": "actual-odyssey61-blockade-en-390-card.png"
+    },
+    {
+      "id": "actual-odyssey61-blockade",
+      "kind": "Unmodified actual historical export",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "cardText": "✧\nОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nОни пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "disabledPeaceTitle": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 57.75,
+        "text": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
+      },
+      "cardScreenshot": "actual-odyssey61-blockade-ru-1280-card.png"
+    },
+    {
+      "id": "actual-odyssey61-blockade",
+      "kind": "Unmodified actual historical export",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 390,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "cardText": "ОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nОни пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "disabledPeaceTitle": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 260,
+        "scrollWidth": 260,
+        "height": 134.75,
+        "text": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
+      },
+      "cardScreenshot": "actual-odyssey61-blockade-ru-390-card.png"
+    },
+    {
+      "id": "constructed-odyssey61-final-step",
+      "kind": "Constructed fork: public Concord progress changed to 9/10 and both bilateral treatyTurn counters moved to twelve war cycles; same directly observed actual blockade, not a played continuation",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 12,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "cardText": "✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nThey refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "disabledPeaceTitle": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 38.5,
+        "text": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up."
+      },
+      "cardScreenshot": "constructed-odyssey61-final-step-en-1280-card.png"
+    },
+    {
+      "id": "constructed-odyssey61-final-step",
+      "kind": "Constructed fork: public Concord progress changed to 9/10 and both bilateral treatyTurn counters moved to twelve war cycles; same directly observed actual blockade, not a played continuation",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 12,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "cardText": "✧\nОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nОни пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "disabledPeaceTitle": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 57.75,
+        "text": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
+      },
+      "cardScreenshot": "constructed-odyssey61-final-step-ru-1280-card.png"
+    },
+    {
+      "id": "actual-military40-ordinary",
+      "kind": "Unmodified actual historical export",
+      "source": "docs/military-playtest/replay/actual-exports/cycle40.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 40,
+      "target": "veyr",
+      "forecast": {
+        "accepted": true,
+        "enabled": true,
+        "warAge": 5,
+        "lostColonies": 1,
+        "blockadeLeverage": false,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "Veyr Consortium has lost 1 colony since the war began.",
+      "cardText": "◈\nRELATIONS WITH THE CONCORD\nVeyr ConsortiumWAR\nDirector Cassian Rook\n\nTrade leagues that turn the frontier into opportunity. Earns 25% more credits.\n“Every star has its price.”\n\nCivilization dossier ↗\nTrust 21\nOur grievance 22\nTheir grievance 59\nShared borders 2\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nVeyr Consortium has lost 1 colony since the war began.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "Veyr Consortium has lost 1 colony since the war began."
+      },
+      "dialogText": "×\nРусский\nCONCORD FOREIGN AFFAIRS\nPropose a peace settlement\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\nVeyr Consortium has lost 1 colony since the war began.\n\nKeep current policy\nOffer 60 credits · 1 order",
+      "submitText": "Offer 60 credits · 1 order",
+      "dialogScreenshot": "actual-military40-ordinary-en-1280-terms.png",
+      "executedSettlement": {
+        "creditChange": -60,
+        "ordersUsed": 1,
+        "truceUntil": 45,
+        "movedVisibleBlocker": null,
+        "newOfferStatus": null
+      }
+    },
+    {
+      "id": "actual-military40-ordinary",
+      "kind": "Unmodified actual historical export",
+      "source": "docs/military-playtest/replay/actual-exports/cycle40.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 40,
+      "target": "veyr",
+      "forecast": {
+        "accepted": true,
+        "enabled": true,
+        "warAge": 5,
+        "lostColonies": 1,
+        "blockadeLeverage": false,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "«Консорциум Вейр»: потеряно колоний с начала войны — 1.",
+      "cardText": "◈\nОТНОШЕНИЯ С КОНКОРДОМ\nКонсорциум ВейрВОЙНА\nДиректор Кассиан Рук\n\nТорговые лиги, превращающие пограничье в источник возможностей. Получают на 25% больше кредитов.\n«У каждой звезды своя цена.»\n\nДосье цивилизации ↗\nДоверие 21\nНаши претензии 22\nИх претензии 59\nОбщие границы 2\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\n«Консорциум Вейр»: потеряно колоний с начала войны — 1.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "«Консорциум Вейр»: потеряно колоний с начала войны — 1."
+      },
+      "dialogText": "×\nEnglish\nВНЕШНЯЯ ПОЛИТИКА КОНКОРДА\nПредложить условия мира\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\n«Консорциум Вейр»: потеряно колоний с начала войны — 1.\n\nСохранить текущую политику\nПредложить 60 Кредитов · 1 приказ",
+      "submitText": "Предложить 60 Кредитов · 1 приказ",
+      "dialogScreenshot": "actual-military40-ordinary-ru-1280-terms.png",
+      "executedSettlement": {
+        "creditChange": -60,
+        "ordersUsed": 1,
+        "truceUntil": 45,
+        "movedVisibleBlocker": null,
+        "newOfferStatus": null
+      }
+    },
+    {
+      "id": "actual-verified29-funded",
+      "kind": "Historical command-reconstructed pre-acceptance checkpoint, already verified against the actual post-settlement export by the existing diplomacy audit",
+      "source": "docs/diplomacy-audit/verified-before-accept29.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 29,
+      "target": "khar",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 10,
+        "lostColonies": 0,
+        "blockadeLeverage": false,
+        "incomingFundedOffer": true
+      },
+      "willingnessText": "Their funded offer remains open until cycle 31. Receive 60 credits on acceptance.",
+      "cardText": "⛨\nRELATIONS WITH THE CONCORD\nKhar DominionWAR\nHigh Marshal Sera Kade\n\nA martial society forged on hostile worlds. Warships deal 15% more damage.\n“The void respects strength.”\n\nCivilization dossier ↗\nTrust -50\nOur grievance 0\nTheir grievance 20\nShared borders 0\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nTheir funded offer remains open until cycle 31. Receive 60 credits on acceptance.\n\nReview their peace offer\n\nKhar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "Their funded offer remains open until cycle 31. Receive 60 credits on acceptance."
+      },
+      "dialogText": "×\nРусский\nAN ENVOY FROM KHAR\nAn offer to end the war\n\nKhar Dominion proposes a settlement. The war continues until you agree.\n\nReceive 60 credits. Their payment is already reserved for this agreement.\nA 5-cycle mutual truce. Neither side may declare war during the truce.\nMilitary withdrawal. Fleets inside each other's territory return to their nearest owned colony and lose remaining movement.\nExpires on cycle 31. Responding uses one order.\nDecline proposal\nAccept settlement →",
+      "submitText": "Accept settlement →",
+      "dialogScreenshot": "actual-verified29-funded-en-1280-terms.png",
+      "executedSettlement": {
+        "creditChange": 60,
+        "ordersUsed": 1,
+        "truceUntil": 34,
+        "movedVisibleBlocker": null,
+        "newOfferStatus": "accepted"
+      }
+    },
+    {
+      "id": "actual-verified29-funded",
+      "kind": "Historical command-reconstructed pre-acceptance checkpoint, already verified against the actual post-settlement export by the existing diplomacy audit",
+      "source": "docs/diplomacy-audit/verified-before-accept29.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 29,
+      "target": "khar",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 10,
+        "lostColonies": 0,
+        "blockadeLeverage": false,
+        "incomingFundedOffer": true
+      },
+      "willingnessText": "Их обеспеченное средствами предложение действует до цикла 31. При принятии вы получите кредиты: 60.",
+      "cardText": "⛨\nОТНОШЕНИЯ С КОНКОРДОМ\nДоминион КхарВОЙНА\nВерховный маршал Сера Кейд\n\nВоинственное общество, закалённое на суровых мирах. Боевые корабли наносят на 15% больше урона.\n«Пустота уважает силу.»\n\nДосье цивилизации ↗\nДоверие -50\nНаши претензии 0\nИх претензии 20\nОбщие границы 0\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nИх обеспеченное средствами предложение действует до цикла 31. При принятии вы получите кредиты: 60.\n\nРассмотреть их предложение мира\n\nПограничное соперничество Кхар: общая граница увеличивает их претензии на 1 за каждый мирный цикл. При 24 претензиях достаточно сильный флот Кхар может объявить о прекращении торговли и начать подготовку к войне.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "Их обеспеченное средствами предложение действует до цикла 31. При принятии вы получите кредиты: 60."
+      },
+      "dialogText": "×\nEnglish\nПОСЛАННИК: КХАР\nПредложение завершить войну\n\nДоминион Кхар предлагает мирное урегулирование. Война продолжается до вашего согласия.\n\nПолучить кредиты: 60. Их платёж по этому соглашению уже зарезервирован.\nВзаимное перемирие. Срок в циклах: 5. Ни одна из сторон не может объявить войну во время перемирия.\nВывод военных сил. Флоты на территории друг друга отходят к ближайшей своей колонии и теряют оставшееся перемещение.\nСрок истекает в цикле 31. Ответ стоит один приказ.\nОтклонить предложение\nПринять условия →",
+      "submitText": "Принять условия →",
+      "dialogScreenshot": "actual-verified29-funded-ru-1280-terms.png",
+      "executedSettlement": {
+        "creditChange": 60,
+        "ordersUsed": 1,
+        "truceUntil": 34,
+        "movedVisibleBlocker": null,
+        "newOfferStatus": "accepted"
+      }
+    },
+    {
+      "id": "constructed-odyssey61-losses",
+      "kind": "Constructed fork: only Choir warStartColonies changed to current colonies + 2; not a played loss history",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": true,
+        "enabled": true,
+        "warAge": 8,
+        "lostColonies": 2,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "The Luminous Choir has lost 2 colonies since the war began.",
+      "cardText": "✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nThe Luminous Choir has lost 2 colonies since the war began.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "The Luminous Choir has lost 2 colonies since the war began."
+      },
+      "dialogText": "×\nРусский\nCONCORD FOREIGN AFFAIRS\nPropose a peace settlement\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\nThe Luminous Choir has lost 2 colonies since the war began.\n\nKeep current policy\nOffer 60 credits · 1 order",
+      "submitText": "Offer 60 credits · 1 order",
+      "executedSettlement": {
+        "creditChange": -60,
+        "ordersUsed": 1,
+        "truceUntil": 66,
+        "movedVisibleBlocker": "s9",
+        "newOfferStatus": null
+      }
+    },
+    {
+      "id": "constructed-odyssey61-losses",
+      "kind": "Constructed fork: only Choir warStartColonies changed to current colonies + 2; not a played loss history",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": true,
+        "enabled": true,
+        "warAge": 8,
+        "lostColonies": 2,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "«Светозарный хор»: потеряно колоний с начала войны — 2.",
+      "cardText": "✧\nОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\n«Светозарный хор»: потеряно колоний с начала войны — 2.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "«Светозарный хор»: потеряно колоний с начала войны — 2."
+      },
+      "cardScreenshot": "constructed-odyssey61-losses-ru-1280-card.png",
+      "dialogText": "×\nEnglish\nВНЕШНЯЯ ПОЛИТИКА КОНКОРДА\nПредложить условия мира\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\n«Светозарный хор»: потеряно колоний с начала войны — 2.\n\nСохранить текущую политику\nПредложить 60 Кредитов · 1 приказ",
+      "submitText": "Предложить 60 Кредитов · 1 приказ",
+      "executedSettlement": {
+        "creditChange": -60,
+        "ordersUsed": 1,
+        "truceUntil": 66,
+        "movedVisibleBlocker": "s9",
+        "newOfferStatus": null
+      }
+    },
+    {
+      "id": "constructed-odyssey61-exhaustion",
+      "kind": "Constructed fork: both bilateral treatyTurn counters moved to twenty war cycles; not a played continuation",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": true,
+        "enabled": true,
+        "warAge": 20,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "The prolonged war increases their willingness to settle.",
+      "cardText": "✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nThe prolonged war increases their willingness to settle.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "The prolonged war increases their willingness to settle."
+      },
+      "cardScreenshot": "constructed-odyssey61-exhaustion-en-1280-card.png",
+      "dialogText": "×\nРусский\nCONCORD FOREIGN AFFAIRS\nPropose a peace settlement\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\nThe prolonged war increases their willingness to settle.\n\nKeep current policy\nOffer 60 credits · 1 order",
+      "submitText": "Offer 60 credits · 1 order",
+      "executedSettlement": {
+        "creditChange": -60,
+        "ordersUsed": 1,
+        "truceUntil": 66,
+        "movedVisibleBlocker": "s9",
+        "newOfferStatus": null
+      }
+    },
+    {
+      "id": "constructed-odyssey61-exhaustion",
+      "kind": "Constructed fork: both bilateral treatyTurn counters moved to twenty war cycles; not a played continuation",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": true,
+        "enabled": true,
+        "warAge": 20,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "Затяжная война усиливает их готовность к миру.",
+      "cardText": "✧\nОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nЗатяжная война усиливает их готовность к миру.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "Затяжная война усиливает их готовность к миру."
+      },
+      "dialogText": "×\nEnglish\nВНЕШНЯЯ ПОЛИТИКА КОНКОРДА\nПредложить условия мира\n\nPay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.\n\nЗатяжная война усиливает их готовность к миру.\n\nСохранить текущую политику\nПредложить 60 Кредитов · 1 приказ",
+      "submitText": "Предложить 60 Кредитов · 1 приказ",
+      "executedSettlement": {
+        "creditChange": -60,
+        "ordersUsed": 1,
+        "truceUntil": 66,
+        "movedVisibleBlocker": "s9",
+        "newOfferStatus": null
+      }
+    },
+    {
+      "id": "constructed-odyssey61-funded-blockade",
+      "kind": "Constructed ordinary-command fork: explicitly commanded Choir to fund a peace offer while blockading. This is a legal offer fixture, not an observed AI choice",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": true
+      },
+      "willingnessText": "Their funded offer remains open until cycle 64. Receive 60 credits on acceptance.",
+      "cardText": "✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nTheir funded offer remains open until cycle 64. Receive 60 credits on acceptance.\n\nReview their peace offer\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "Their funded offer remains open until cycle 64. Receive 60 credits on acceptance."
+      },
+      "dialogText": "×\nРусский\nAN ENVOY FROM CHOIR\nAn offer to end the war\n\nThe Luminous Choir proposes a settlement. The war continues until you agree.\n\nReceive 60 credits. Their payment is already reserved for this agreement.\nA 5-cycle mutual truce. Neither side may declare war during the truce.\nMilitary withdrawal. Fleets inside each other's territory return to their nearest owned colony and lose remaining movement.\nExpires on cycle 64. Responding uses one order.\nDecline proposal\nAccept settlement →",
+      "submitText": "Accept settlement →",
+      "dialogScreenshot": "constructed-odyssey61-funded-blockade-en-1280-terms.png",
+      "executedSettlement": {
+        "creditChange": 60,
+        "ordersUsed": 1,
+        "truceUntil": 66,
+        "movedVisibleBlocker": "s9",
+        "newOfferStatus": "accepted"
+      }
+    },
+    {
+      "id": "constructed-odyssey61-funded-blockade",
+      "kind": "Constructed ordinary-command fork: explicitly commanded Choir to fund a peace offer while blockading. This is a legal offer fixture, not an observed AI choice",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": true
+      },
+      "willingnessText": "Их обеспеченное средствами предложение действует до цикла 64. При принятии вы получите кредиты: 60.",
+      "cardText": "✧\nОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nИх обеспеченное средствами предложение действует до цикла 64. При принятии вы получите кредиты: 60.\n\nРассмотреть их предложение мира\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 19.25,
+        "text": "Их обеспеченное средствами предложение действует до цикла 64. При принятии вы получите кредиты: 60."
+      },
+      "dialogText": "×\nEnglish\nПОСЛАННИК: ХОР\nПредложение завершить войну\n\nСветозарный хор предлагает мирное урегулирование. Война продолжается до вашего согласия.\n\nПолучить кредиты: 60. Их платёж по этому соглашению уже зарезервирован.\nВзаимное перемирие. Срок в циклах: 5. Ни одна из сторон не может объявить войну во время перемирия.\nВывод военных сил. Флоты на территории друг друга отходят к ближайшей своей колонии и теряют оставшееся перемещение.\nСрок истекает в цикле 64. Ответ стоит один приказ.\nОтклонить предложение\nПринять условия →",
+      "submitText": "Принять условия →",
+      "dialogScreenshot": "constructed-odyssey61-funded-blockade-ru-1280-terms.png",
+      "executedSettlement": {
+        "creditChange": 60,
+        "ordersUsed": 1,
+        "truceUntil": 66,
+        "movedVisibleBlocker": "s9",
+        "newOfferStatus": "accepted"
+      }
+    },
+    {
+      "id": "constructed-hidden-data-mutation",
+      "kind": "Constructed privacy fork: unrelated hidden Choir treasury/science and one unseen scout changed to a remote twelve-cruiser formation",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "en",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "cardText": "✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirWAR\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust -4\nOur grievance 35\nTheir grievance 0\nShared borders 1\n\nMilitary access · Hostile fleets engage on arrival · Proposals use 1 order\n\nThey refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.\n\nPropose peace ◈60\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.",
+      "disabledPeaceTitle": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 38.5,
+        "text": "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up."
+      }
+    },
+    {
+      "id": "constructed-hidden-data-mutation",
+      "kind": "Constructed privacy fork: unrelated hidden Choir treasury/science and one unseen scout changed to a remote twelve-cruiser formation",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle61.json",
+      "language": "ru",
+      "width": 1280,
+      "turn": 61,
+      "target": "choir",
+      "forecast": {
+        "accepted": false,
+        "enabled": false,
+        "warAge": 8,
+        "lostColonies": 0,
+        "blockadeLeverage": true,
+        "incomingFundedOffer": false
+      },
+      "willingnessText": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "cardText": "✧\nОТНОШЕНИЯ С КОНКОРДОМ\nСветозарный хорВОЙНА\nДевятый голос\n\nСообщество, ищущее разум, стоящий за древними вратами. Производит на 25% больше науки.\n«Вселенная помнит.»\n\nДосье цивилизации ↗\nДоверие -4\nНаши претензии 35\nИх претензии 0\nОбщие границы 1\n\nВоенный доступ · При входе в систему вражеские флоты вступают в бой · Приказов на предложение: 1\n\nОни пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.\n\nПредложить мир ◈60\n\nНовые притязания соседей и обнаруженное военное давление усиливают претензии. Спокойствие на границе позволяет им ослабнуть.",
+      "disabledPeaceTitle": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+      "willingnessGeometry": {
+        "fontSize": "11px",
+        "lineHeight": "19.25px",
+        "clientWidth": 637,
+        "scrollWidth": 637,
+        "height": 57.75,
+        "text": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за время перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "candidate": {
+    "baseURL": "http://127.0.0.1:44459",
+    "requestedCommit": "a1c2eb7",
+    "htmlSha256": "faf6eb7377a9bc494a1a0bcdb6faec60b945131a2c025e6e094575d0ab9a7b83",
+    "servedAssets": [
+      {
+        "path": "./assets/index-Dm8sPiCT.js",
+        "sha256": "74fdae5ff6da4cfb1091b62ff48e3f006aa67af43b44aa0b2c272c5f236f8899"
+      },
+      {
+        "path": "./assets/index-D_whonTk.css",
+        "sha256": "b3da1c22c2a894486e48f457a92562a9ef7b21c9e977631429c76e9efb8496aa"
+      }
+    ],
+    "sourceSha256": {
+      "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+      "src/diplomacy-ui.js": "cb0ca80c020ea298834cbabfd07e7fbacd20b3a1d5982f8626208bf69f3a3d43",
+      "src/locales/ru.js": "ec5fb392d06be2a7c686a49bd34b49fc221a3529f8135192176a33798ae06078",
+      "src/locales/bindings.js": "285fabb9f7f3c1a54c780159a7b1608534cb682eaa2658b07eaf67141fdb24d6",
+      "src/main.js": "f3fb8c0dad830cdf74e20c1d0f4fd10090ac0035fd3522999fd0c90d62636223",
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/localization.js": "6d232eaeb3f31a7587574d939869152675ff8baba34c1caacb8aacfe9225e766"
+    }
+  },
+  "inputSha256": "e464c5515503c60c883c8c4cb2e2dd792c98caf98ef15603ee703318863a326f",
+  "browserCases": 2,
+  "pageErrors": [],
+  "results": [
+    {
+      "width": 1280,
+      "inputKind": "Unmodified actual historical military campaign cycle40 export",
+      "inputPath": "docs/military-playtest/replay/actual-exports/cycle40.json",
+      "englishTerms": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+      "russianTerms": "Заплатить 60 кредитов, чтобы завершить войну. Война запрещена на 5 циклов. Флоты на чужой территории отходят к ближайшей своей колонии. Если колоний нет — в известную нейтральную систему. Если нет ни одного подходящего пункта, флот остаётся на месте без возможности перемещения.",
+      "geometry": {
+        "clientWidth": 558,
+        "scrollWidth": 558,
+        "height": 96.1875
+      },
+      "screenshot": "correction-a1c2eb7-ru-1280-terms.png",
+      "languageRoundTripPure": true,
+      "ordinaryCommandExactMatch": true,
+      "reloadExactMatch": true,
+      "creditsPaid": 60,
+      "ordersUsed": 1,
+      "truceUntil": 45
+    },
+    {
+      "width": 390,
+      "inputKind": "Unmodified actual historical military campaign cycle40 export",
+      "inputPath": "docs/military-playtest/replay/actual-exports/cycle40.json",
+      "englishTerms": "Pay 60 credits to end the war. War is forbidden for 5 cycles. Fleets in each other’s territory withdraw to their nearest owned colony, or a charted neutral system if they have no colony. A fleet with neither destination remains in place with no moves.",
+      "russianTerms": "Заплатить 60 кредитов, чтобы завершить войну. Война запрещена на 5 циклов. Флоты на чужой территории отходят к ближайшей своей колонии. Если колоний нет — в известную нейтральную систему. Если нет ни одного подходящего пункта, флот остаётся на месте без возможности перемещения.",
+      "geometry": {
+        "clientWidth": 326,
+        "scrollWidth": 326,
+        "height": 168.328125
+      },
+      "screenshot": "correction-a1c2eb7-ru-390-terms.png",
+      "languageRoundTripPure": true,
+      "ordinaryCommandExactMatch": true,
+      "reloadExactMatch": true,
+      "creditsPaid": 60,
+      "ordersUsed": 1,
+      "truceUntil": 45
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "verdict": "Blockade-aware player peace terms are coherent and privacy-preserving in the exercised UI states. One actionable Russian terms defect was found on frozen94f41df and independently verified corrected on a1c2eb7. No remaining blocking finding in this bounded review.",
+  "originalCandidate": {
+    "baseURL": "http://127.0.0.1:41577",
+    "requestedCommit": "94f41df",
+    "currentRepositoryCommit": "a1c2eb7c19be794ee167acc03fa1df3a5954d78b",
+    "sourceDiffAgainstRequestedCommit": "",
+    "htmlSha256": "f1f39875fe495a1bfc8a6681b10a81ef97a17b35242d173f19028c68a7895f50",
+    "servedAssets": [
+      {
+        "path": "./assets/index-grrzVhaE.js",
+        "sha256": "d33438d3ede5fdf16d567f49e62e41c2242533a0b95874767dbd6e5c2d6c0765"
+      },
+      {
+        "path": "./assets/index-D_whonTk.css",
+        "sha256": "b3da1c22c2a894486e48f457a92562a9ef7b21c9e977631429c76e9efb8496aa"
+      }
+    ],
+    "sourceSha256": {
+      "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+      "src/diplomacy-ui.js": "cb0ca80c020ea298834cbabfd07e7fbacd20b3a1d5982f8626208bf69f3a3d43",
+      "src/locales/ru.js": "ec5fb392d06be2a7c686a49bd34b49fc221a3529f8135192176a33798ae06078",
+      "src/main.js": "f3fb8c0dad830cdf74e20c1d0f4fd10090ac0035fd3522999fd0c90d62636223",
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/localization.js": "6d232eaeb3f31a7587574d939869152675ff8baba34c1caacb8aacfe9225e766"
+    }
+  },
+  "originalBindingSha256": "4fac5884cd8407d811c933e5495e3f0285e33fd53b5d68d6e1f4e5e60941411d",
+  "correctedCandidate": {
+    "baseURL": "http://127.0.0.1:44459",
+    "requestedCommit": "a1c2eb7",
+    "htmlSha256": "faf6eb7377a9bc494a1a0bcdb6faec60b945131a2c025e6e094575d0ab9a7b83",
+    "servedAssets": [
+      {
+        "path": "./assets/index-Dm8sPiCT.js",
+        "sha256": "74fdae5ff6da4cfb1091b62ff48e3f006aa67af43b44aa0b2c272c5f236f8899"
+      },
+      {
+        "path": "./assets/index-D_whonTk.css",
+        "sha256": "b3da1c22c2a894486e48f457a92562a9ef7b21c9e977631429c76e9efb8496aa"
+      }
+    ],
+    "sourceSha256": {
+      "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+      "src/diplomacy-ui.js": "cb0ca80c020ea298834cbabfd07e7fbacd20b3a1d5982f8626208bf69f3a3d43",
+      "src/locales/ru.js": "ec5fb392d06be2a7c686a49bd34b49fc221a3529f8135192176a33798ae06078",
+      "src/locales/bindings.js": "285fabb9f7f3c1a54c780159a7b1608534cb682eaa2658b07eaf67141fdb24d6",
+      "src/main.js": "f3fb8c0dad830cdf74e20c1d0f4fd10090ac0035fd3522999fd0c90d62636223",
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/localization.js": "6d232eaeb3f31a7587574d939869152675ff8baba34c1caacb8aacfe9225e766"
+    }
+  },
+  "evidence": {
+    "originalBrowserCases": 18,
+    "correctionBrowserCases": 2,
+    "pageErrors": 0,
+    "sourceEditsByReviewer": 0,
+    "ruleSuitesRepeated": 0
+  },
+  "findings": [
+    {
+      "id": "P2-RU-PEACE-TERMS",
+      "severity": "P2",
+      "confidence": "high",
+      "status": "corrected and independently rechecked",
+      "trigger": "Russian player-initiated ordinary peace confirmation on the actual military campaign cycle40 Veyr war",
+      "observed": "The entire payment, five-cycle prohibition and withdrawal paragraph remained English despite catalog coverage. The final withdrawal wrapper slot was constrained as a punctuation-free fragment, so the multi-sentence payload could not match.",
+      "before": "actual-military40-ordinary-ru-1280-terms.png",
+      "after": [
+        "correction-a1c2eb7-ru-1280-terms.png",
+        "correction-a1c2eb7-ru-390-terms.png"
+      ],
+      "recheck": "Full Russian prose, pure EN→RU→EN round trip, exact ordinary command effects and exact reload at both widths."
+    },
+    {
+      "id": "P3-TRUCE-DURATION",
+      "severity": "P3",
+      "confidence": "high",
+      "status": "optional clarity improvement",
+      "observed": "The refusal explains the danger during the truce but omits the five-cycle duration. The disabled proposal cannot open the ordinary terms dialog, so that timing premise requires prior rule knowledge.",
+      "suggestion": "Consider saying five-cycle truce in the denial itself. Current explanation remains understandable and factually qualified; this is not a mechanical blocker."
+    }
+  ],
+  "historyLimits": [
+    "The unchanged actual ODYSSEY cycle61 checkpoint has a directly observed live Choir blockade at participating Nacre. Public Concord progress is5/10 and inactive because it was interrupted. Five steps remain, exactly the truce window. It is a current blockade, not a currently advancing network.",
+    "That historical war is only eight cycles old, so ordinary age alone also would not force peace. It demonstrates the new public explanation and compatibility, not an observed causal improvement in campaign challenge.",
+    "The9/10, twelve-cycle war, two-loss and twenty-cycle exhaustion cases are explicitly constructed forks; they are not natural continuations or observed player outcomes.",
+    "The funded-after-blockade fork is an explicitly commanded legal proposal fixture, not evidence that the AI would choose to originate it.",
+    "The Khar pre-acceptance29 input is a command-reconstructed historical checkpoint already verified against the actual post-settlement export by the existing audit, not another unmodified actual export.",
+    "This bounded review does not establish long-run balance, fun, default-campaign outcomes, or universal information-flow safety."
+  ]
+}
