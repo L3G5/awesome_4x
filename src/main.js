@@ -80,7 +80,7 @@ $('#app').innerHTML = `<div class="app-shell">
   <nav class="rail" aria-label="Command views">${[['galaxy','Galaxy'],['research','Research'],['diplomacy','Diplomacy'],['empire','Empire'],['journal','Chronicle']].map(([id,label],i)=>`<button data-page="${id}" class="${id==='galaxy'?'active':''}" title="${label} (${i+1})">${icon(id)}<span>${label}</span></button>`).join('')}<div class="rail-bottom"><button data-action="home" title="Focus homeworld (H)">${icon('home')}<span>Home</span></button></div></nav>
   <main class="main-stage"><div class="galaxy-page" id="galaxy-page"><div class="map-canvas" id="galaxy" aria-label="Interactive galaxy map"></div><div class="map-heading"><div class="eyebrow">CONCORD EXPLORATION AUTHORITY</div><h2>The Asterion Reach</h2><p id="map-meta"></p></div><div class="map-tools"><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="zoom-out" aria-label="Zoom out">−</button><button data-action="reset-view" title="Fit galaxy" aria-label="Fit galaxy">⌖</button></div><div class="map-message" id="mandate"></div><div class="map-caption">PER ASPERA, AD ASTRA</div><div class="map-legend"><span><i></i>CONCORD</span><span><i style="background:#d9bd7c"></i>CHARTED</span><span><i style="background:#596a82"></i>UNKNOWN</span><span class="founding-legend">⌂ FOUNDING WORLD</span></div><div class="fleet-bar" id="fleet-bar"></div></div><div class="workspace-page" id="workspace-page" hidden></div></main>
   <aside class="inspector" aria-label="System inspector"><div class="inspector-content" id="inspector"></div><div class="turn-panel"><div class="turn-meta"><b id="turn-number"></b><span id="turn-year"></span></div><button class="primary end-turn" data-action="end-turn" id="end-turn"><span>End cycle →</span><kbd>SPACE</kbd></button><div class="turn-hint" id="turn-hint"></div></div></aside>
-  <footer class="statusbar"><span class="status-message" id="status-message">Your mandate begins among the stars.</span><span class="version">ASTERION REACH <span class="green">/</span> EARLY ACCESS ${__APP_VERSION__}</span><span id="save-status">LOCAL CAMPAIGN</span></footer></div><div id="modal-root"></div><div class="toast-stack" id="toasts" role="status" aria-live="polite"></div><input class="sr-only" type="file" id="import-save" accept="application/json,.json" aria-label="Import campaign save" />`;
+  <footer class="statusbar"><span class="status-message" id="status-message">Your mandate begins among the stars.</span><span class="version">ASTERION REACH <span class="green">/</span> EARLY ACCESS ${__APP_VERSION__}</span><span id="save-status">LOCAL CAMPAIGN</span></footer></div><div id="modal-root"></div><div class="toast-stack" id="toasts" role="status" aria-live="polite"></div><input class="sr-only" type="file" id="import-save" accept="application/json,.json" aria-label="Import campaign save" tabindex="-1" />`;
 
 const galaxy = new GalaxyView($('#galaxy'), { onSelect: selectSystem, onFleetSelect: selectFleet });
 function save() {
@@ -93,7 +93,12 @@ function toast(message, error = false) {
   $('#toasts').appendChild(el); while($('#toasts').children.length>3)$('#toasts').firstElementChild.remove(); setTimeout(() => el.remove(), error ? 6500 : 4200);
   $('#status-message').textContent = message;
 }
-function selectSystem(id) { const system=systemById(id); if (!system || !(system.knownBy.includes('player') || system.exploredBy.includes('player') || system.owner==='player')) return; selectedSystemId = id; if (page !== 'galaxy') setPage('galaxy'); render(); }
+function selectSystem(id) {
+  const system=systemById(id); if (!system || !(system.knownBy.includes('player') || system.exploredBy.includes('player') || system.owner==='player')) return;
+  const keepLabelFocus = document.activeElement?.matches('.galaxy-system-label:focus-visible') && document.activeElement.dataset.systemId === id;
+  selectedSystemId = id; if (page !== 'galaxy') setPage('galaxy'); render();
+  if (keepLabelFocus) document.querySelector(`.galaxy-system-label[data-system-id="${id}"]`)?.focus({preventScroll:true});
+}
 function selectFleet(id) { const fleet = fleetById(id); if (!fleet || fleet.owner !== 'player') return; selectedFleetId = id; selectedSystemId = fleet.systemId; if (page !== 'galaxy') setPage('galaxy'); render(); galaxy.focus(fleet.systemId); }
 function setPage(value) { const changed=page!==value;page = value; galaxy.setPaused?.(Boolean(modalType) || page !== 'galaxy'); $('#galaxy-page').hidden = page !== 'galaxy'; $('#workspace-page').hidden = page === 'galaxy'; document.querySelectorAll('[data-page]').forEach(el => { el.classList.toggle('active',el.dataset.page === page); el.setAttribute('aria-current',el.dataset.page === page ? 'page' : 'false'); }); renderPage(); renderInspector(); $('#inspector').scrollTop=0; if(changed)$('#workspace-page').scrollTop=0; }
 function dispatch(action) {
@@ -229,6 +234,10 @@ function openModal(type,html,wide=false) {
   const focusTarget=type==='combat-report'||type==='conclusion'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'||type==='conclusion'});
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
+function focusCommandResult(selector) {
+  const target=$(selector); if (!target) return;
+  target.setAttribute('tabindex','-1'); target.focus();
+}
 function buildMenu(systemId,tab='building',replaceBuildingId=null) {
   openModal('build',renderConstructionMenu(state,systemId,tab,replaceBuildingId),true);
 }
@@ -383,14 +392,14 @@ document.addEventListener('click',event=>{
     case 'zoom-in':galaxy.zoom(1);break;
     case 'zoom-out':galaxy.zoom(-1);break;
     case 'reset-view':galaxy.reset();break;
-    case 'inspect':selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);break;
+    case 'inspect':selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);if(event.detail===0)focusCommandResult('#inspector .system-header h2');break;
     case 'build-menu':buildMenu(el.dataset.system);break;
     case 'development-menu':buildMenu(el.dataset.system,'charter');break;
     case 'construction-tab':buildMenu(el.dataset.system,el.dataset.tab);$('.modal .construction-tabs .active')?.focus();break;
-    case 'develop':if(dispatch({type:'develop',systemId:el.dataset.system,charterType:el.dataset.charter}))closeModal();break;
-    case 'build':if(dispatch({type:'build',systemId:el.dataset.system,itemId:el.dataset.item,replaceBuildingId:el.dataset.replace||null}))closeModal();break;
+    case 'develop':if(dispatch({type:'develop',systemId:el.dataset.system,charterType:el.dataset.charter})){closeModal();if(event.detail===0)focusCommandResult('#inspector .production-row');}break;
+    case 'build':if(dispatch({type:'build',systemId:el.dataset.system,itemId:el.dataset.item,replaceBuildingId:el.dataset.replace||null})){closeModal();if(event.detail===0)focusCommandResult('#inspector .production-row');}break;
     case 'cancel-build':dispatch({type:'cancelBuild',systemId:el.dataset.system});break;
-    case 'research':dispatch({type:'research',techId:el.dataset.tech});break;
+    case 'research':if(dispatch({type:'research',techId:el.dataset.tech})&&event.detail===0)focusCommandResult('#workspace-page .callout');break;
     case 'plan-route':if(dispatch({type:'planRoute',fleetId:selectedFleetId,destinationId:el.dataset.destination}))galaxy.focusRoute?.(fleetById(selectedFleetId)?.route?.path);break;
     case 'fit-route':galaxy.focusRoute?.(fleetById(selectedFleetId)?.route?.path);break;
     case 'continue-route':dispatch({type:'continueRoute',fleetId:selectedFleetId});break;
