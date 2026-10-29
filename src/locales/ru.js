@@ -1,5 +1,6 @@
 // Russian presentation strings. Canonical save data remains English.
 export const russian = {
+  "Close fleet controls": "Закрыть панель флота",
   "Pathfinder {0}": "Следопыт {0}",
   "Colony Ark {0}": "Колониальный ковчег {0}",
   "Vanguard {0}": "Авангард {0}",

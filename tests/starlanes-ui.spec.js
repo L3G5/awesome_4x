@@ -39,6 +39,8 @@ for (const width of [1440, 390]) for (const language of ['en', 'ru']) {
     const errors = []; page.on('pageerror', error => errors.push(error.message));
     const { state, lane, a, scout } = fixture(true);
     await load(page, state, language);
+    await page.locator('[data-action="fleet-roster"]').click();
+    await page.locator(`.modal [data-fleet="${scout.id}"]`).click();
     await page.locator('[data-page="empire"]').click();
     await page.locator('[data-action="colony-sort"][data-sort="production"]').click();
     const row = page.locator(`[data-colony-row="${a.id}"]`), commission = row.locator('[data-action="empire-build-menu"]');
@@ -149,7 +151,8 @@ for (const width of [1440, 390]) for (const language of ['en', 'ru']) {
     expect(await snapshot(page)).toEqual(state);
     await expect(page.locator('#inspector h2')).toHaveText(b.name);
     await expect(page.locator('#inspector .production-row')).toBeFocused();
-    await expect(page.locator(`.fleet-switch [data-fleet="${scout.id}"]`)).toHaveClass(/selected/);
+    if (width <= 660) await expect(page.locator('#fleet-bar')).toHaveClass(/is-inspecting/);
+    else await expect(page.locator(`.fleet-switch [data-fleet="${scout.id}"]`)).toHaveClass(/selected/);
     expect(state.fleets.find(fleet => fleet.id === scout.id).hold).toBe(true);
     expect(state.fleets.find(fleet => fleet.id === scout.id).systemId).toBe('s0');
   });

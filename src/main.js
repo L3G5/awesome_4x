@@ -12,6 +12,7 @@ import './reinforcement.css';
 import './conclusion.css';
 import './planning-feedback.css';
 import './localization.css';
+import './mobile-inspection.css';
 import { localizeInterface } from './localization.js';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
@@ -74,7 +75,8 @@ const isNew = !state;
 state ||= createGame('ASTERION');
 revealPublicBeacons(state);
 let selectedSystemId = state.factions.find(f => f.id === 'player').capitalId;
-let selectedFleetId = state.fleets.find(f => f.owner === 'player' && f.type === 'scout')?.id || null;
+const mobileViewport = matchMedia('(max-width:660px)');
+let selectedFleetId = mobileViewport.matches ? null : state.fleets.find(f => f.owner === 'player' && f.type === 'scout')?.id || null;
 if(state.fleets.find(f=>f.id===selectedFleetId)?.route)selectedSystemId=state.fleets.find(f=>f.id===selectedFleetId).systemId;
 let constructionOrigin = null;
 let colonySort = 'name', colonySortDirection = 'asc';
@@ -104,13 +106,20 @@ function toast(message, error = false) {
   $('#toasts').appendChild(el); while($('#toasts').children.length>3)$('#toasts').firstElementChild.remove(); setTimeout(() => el.remove(), error ? 6500 : 4200);
   $('#status-message').textContent = message;
 }
-function selectSystem(id) {
+function selectSystem(id, { inspect = false } = {}) {
   const system=systemById(id); if (!system || !(system.knownBy.includes('player') || system.exploredBy.includes('player') || system.owner==='player')) return;
   const keepLabelFocus = document.activeElement?.matches('.galaxy-system-label:focus-visible') && document.activeElement.dataset.systemId === id;
+  if (inspect && mobileViewport.matches) selectedFleetId = null;
   selectedSystemId = id; if (page !== 'galaxy') setPage('galaxy'); render();
   if (keepLabelFocus) document.querySelector(`.galaxy-system-label[data-system-id="${id}"]`)?.focus({preventScroll:true});
 }
 function selectFleet(id) { const fleet = fleetById(id); if (!fleet || fleet.owner !== 'player') return; selectedFleetId = id; selectedSystemId = fleet.systemId; if (page !== 'galaxy') setPage('galaxy'); render(); galaxy.focus(fleet.systemId); }
+function deselectFleet({ focus = false } = {}) {
+  selectedFleetId = null;
+  render();
+  if (focus) $('#fleet-bar [data-action="fleet-roster"]')?.focus({ preventScroll: true });
+}
+mobileViewport.addEventListener('change', event => { if (event.matches) deselectFleet(); });
 function setPage(value) { const changed=page!==value;page = value; galaxy.setPaused?.(Boolean(modalType) || page !== 'galaxy'); $('#galaxy-page').hidden = page !== 'galaxy'; $('#workspace-page').hidden = page === 'galaxy'; document.querySelectorAll('[data-page]').forEach(el => { el.classList.toggle('active',el.dataset.page === page); el.setAttribute('aria-current',el.dataset.page === page ? 'page' : 'false'); }); renderPage(); renderInspector(); $('#inspector').scrollTop=0; if(changed)$('#workspace-page').scrollTop=0; }
 function dispatch(action) {
   const result = command(state, action);
@@ -190,6 +199,7 @@ function movementReason(fleet, target) {
 }
 function renderFleet() {
   const fleet = fleetById(selectedFleetId), target = systemById(selectedSystemId), ownFleets = state.fleets.filter(f=>f.owner==='player');
+  $('#fleet-bar').classList.toggle('is-inspecting', !fleet);
   if (!fleet) { $('#fleet-bar').classList.remove('has-route'); $('#fleet-bar').innerHTML = `<div class="fleet-title"><div class="empty-fleet">A galaxy of possibilities.</div><p>Select a fleet in orbit to explore the frontier.</p></div>${ownFleets.length?'<button data-action="fleet-roster">Fleet roster →</button>':''}`; return; }
   const home = systemById(fleet.systemId), ship = SHIPS[fleet.type], different = target.id!==home.id;
   const readiness=getFleetReadiness(state,fleet.id);
@@ -219,7 +229,7 @@ function renderFleet() {
   if(!different&&fleet.ships>1&&fleet.type!=='colony')actions+=`<button data-action="split-menu" data-fleet-target="${fleet.id}" title="Detach ships into a separate formation; 1 order">Split fleet</button>`;
   if(fleet.heritage?.length)actions+=`<button class="small-button ghost" data-action="fleet-heritage" data-fleet-target="${fleet.id}">Heritage ✦</button>`;
   $('#fleet-bar').classList.toggle('has-route',Boolean(navigation.display));
-  $('#fleet-bar').innerHTML = `${renderShipPortrait(fleet.type,fleet.owner,Boolean(fleet.heritage?.length))}<div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<button class="small-button ghost" data-action="fleet-roster" title="All fleets">⌁ ${ownFleets.length}</button><button class="small-button ghost" data-action="next-fleet" title="Next fleet (N)">⇥</button><div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>${renderRouteStrip(state,fleet,navigation)}`;
+  $('#fleet-bar').innerHTML = `<button class="close-fleet-controls ghost" data-action="close-fleet-controls" title="Close fleet controls" aria-label="Close fleet controls">×</button>${renderShipPortrait(fleet.type,fleet.owner,Boolean(fleet.heritage?.length))}<div class="fleet-title"><h3>${escape(fleet.name)} <span style="font-weight:400;color:#7f9aa9">/ ${escape(home.name)}</span></h3><p>${escape(detail)}</p></div>${actions}<button class="small-button ghost" data-action="fleet-roster" title="All fleets">⌁ ${ownFleets.length}</button><button class="small-button ghost" data-action="next-fleet" title="Next fleet (N)">⇥</button><div class="fleet-switch">${ownFleets.slice(0,4).map(f=>`<button data-fleet="${f.id}" class="${f.id===fleet.id?'selected':''}" title="${escape(f.name)} at ${escape(systemById(f.systemId).name)}">${SHIPS[f.type].icon}</button>`).join('')}</div>${renderRouteStrip(state,fleet,navigation)}`;
 }
 function renderPage() {
   if (page==='galaxy') return;
@@ -384,7 +394,7 @@ $('#import-save').addEventListener('change',async event=>{
   const file=event.target.files[0]; event.target.value=''; if (!file) return;
   try { if (file.size>3_000_000) throw new Error('Save file is too large.'); const candidate=JSON.parse(await file.text()); if (!validateSave(candidate)) throw new Error('This file is not a valid Asterion Reach campaign.');
     openModal('confirm-import',`<div class="eyebrow">RESTORE A CAMPAIGN</div><h2 id="modal-title">Return to cycle ${candidate.turn}?</h2><p class="modal-lead">This will replace the current autosave. Export your current campaign first if you want to keep it.</p><div class="modal-actions"><button data-action="export">Export current</button><button id="confirm-import" class="primary">Restore campaign</button></div>`);
-    $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
+    $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=mobileViewport.matches?null:state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
   } catch(error){toast(error.message,true);}
 });
 document.addEventListener('change',event=>{if(event.target.id==='merge-partner'){showMerge(event.target.dataset.fleetTarget,event.target.value);$('#merge-partner')?.focus();}if(event.target.id==='split-ships'){showSplit(event.target.dataset.fleetTarget,Number(event.target.value));$('#split-ships')?.focus();}if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
@@ -412,7 +422,7 @@ document.addEventListener('click',event=>{
     case 'review-alignment':setPage('empire');($('.alignment-outlook') || $('.alignment-card'))?.scrollIntoView({block:'start'});break;
     case 'combat-report':showReports([Number(el.dataset.report)]);break;
     case 'colony-sort':colonySortDirection=colonySort===el.dataset.sort?(colonySortDirection==='asc'?'desc':'asc'):el.dataset.sort==='name'?'asc':'desc';colonySort=el.dataset.sort;renderPage();document.querySelector(`[data-action="colony-sort"][data-sort="${colonySort}"]`)?.focus();break;
-    case 'report-inspect':closeModal();selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);break;
+    case 'report-inspect':closeModal();selectSystem(el.dataset.system,{inspect:true});galaxy.focus(el.dataset.system);break;
     case 'report-select-fleet':closeModal();selectFleet(el.dataset.fleetTarget);break;
     case 'report-diplomacy':selectedRivalId=el.dataset.target;closeModal();setPage('diplomacy');document.querySelector(`[data-rival="${el.dataset.target}"]`)?.scrollIntoView({block:'nearest'});break;
     case 'rival-dossier':selectedRivalId=el.dataset.target;renderInspector();$('#inspector').scrollTop=0;document.querySelectorAll('[data-action="rival-dossier"]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.target===selectedRivalId)));if(matchMedia('(max-width:660px)').matches)$('#inspector').scrollIntoView({block:'start'});break;
@@ -421,15 +431,16 @@ document.addEventListener('click',event=>{
     case 'report-chronicle':closeModal();setPage('journal');break;
     case 'close-modal':closeModal();break;
     case 'begin':closeModal();save();break;
-    case 'home':selectSystem(player().capitalId);galaxy.focus(player().capitalId);break;
+    case 'home':selectSystem(player().capitalId,{inspect:true});galaxy.focus(player().capitalId);break;
     case 'fleet-roster':showFleetRoster();break;
     case 'next-fleet':nextFleet();break;
+    case 'close-fleet-controls':deselectFleet({focus:true});break;
     case 'fleet-hold':if(dispatch({type:getFleetReadiness(state,el.dataset.fleetTarget).held?'resume':'hold',fleetId:el.dataset.fleetTarget}))$('[data-action="fleet-hold"]')?.focus();break;
     case 'defense-lead-toggle':if(dispatch({type:fleetById(el.dataset.fleetTarget)?.defenseLead?'clearDefenseLead':'leadDefense',fleetId:el.dataset.fleetTarget})){const control=$('[data-action="defense-lead-toggle"]');(control&&!control.disabled?control:$('#inspector [data-fleet="'+el.dataset.fleetTarget+'"]'))?.focus();}break;
     case 'zoom-in':galaxy.zoom(1);break;
     case 'zoom-out':galaxy.zoom(-1);break;
     case 'reset-view':galaxy.reset();break;
-    case 'inspect':selectSystem(el.dataset.system);galaxy.focus(el.dataset.system);if(event.detail===0)focusCommandResult('#inspector .system-header h2');break;
+    case 'inspect':selectSystem(el.dataset.system,{inspect:true});galaxy.focus(el.dataset.system);if(event.detail===0)focusCommandResult('#inspector .system-header h2');break;
     case 'empire-build-menu':
     case 'build-menu':buildMenu(el.dataset.system);break;
     case 'starlane-menu':buildMenu(el.dataset.system,'starlane');break;
@@ -481,7 +492,7 @@ document.addEventListener('click',event=>{
     case 'export':exportSave();break;
     case 'import':$('#import-save').click();break;
     case 'new-game-menu':openModal('new-game',`<div class="eyebrow">ANOTHER POSSIBLE FUTURE</div><h2 id="modal-title">Begin a new age</h2><p class="modal-lead">A new campaign replaces your autosave. Export this campaign from the menu if you want to return to it.</p><label class="form-label" for="galaxy-seed">Galaxy seed · the same seed creates the same frontier</label><input id="galaxy-seed" maxlength="48" value="${escape(`REACH-${Math.floor(Math.random()*90000+10000)}`)}"><div class="modal-actions"><button data-action="export">Export current</button><button class="primary" data-action="new-game-confirm">Begin campaign →</button></div>`);break;
-    case 'new-game-confirm':state=createGame($('#galaxy-seed').value.trim()||'ASTERION');selectedSystemId='s0';selectedFleetId=state.fleets.find(f=>f.owner==='player'&&f.type==='scout').id;closeModal();setPage('galaxy');save();render();galaxy.reset();showWelcome();break;
+    case 'new-game-confirm':state=createGame($('#galaxy-seed').value.trim()||'ASTERION');selectedSystemId='s0';selectedFleetId=mobileViewport.matches?null:state.fleets.find(f=>f.owner==='player'&&f.type==='scout').id;closeModal();setPage('galaxy');save();render();galaxy.reset();showWelcome();break;
   }
 });
 document.addEventListener('change',event=>{if(event.target.id==='starlane-builder'){buildMenu(event.target.value,'starlane');$('#starlane-builder')?.focus();}});
@@ -495,8 +506,8 @@ document.addEventListener('keydown',event=>{
   if(event.code==='Space'&&!event.repeat&&!event.target.matches('button,a')){event.preventDefault();advanceTurn();}
   if (['1','2','3','4','5'].includes(event.key)) setPage(['galaxy','research','diplomacy','empire','journal'][Number(event.key)-1]);
   if(event.code==='KeyN'||event.key.toLowerCase()==='n')nextFleet();
-  if(event.code==='KeyH'||event.key.toLowerCase()==='h'){selectSystem(player().capitalId);galaxy.focus(player().capitalId);}
-  if(event.key==='Escape'){selectedFleetId=null;render();}
+  if(event.code==='KeyH'||event.key.toLowerCase()==='h'){selectSystem(player().capitalId,{inspect:true});galaxy.focus(player().capitalId);}
+  if(event.key==='Escape')deselectFleet();
   if(event.key==='?')window.open('./guide.html','_blank','noopener');
 });
 render();

@@ -1,0 +1,11 @@
+.close-fleet-controls{display:none}
+@media(max-width:660px){
+  .fleet-bar.is-inspecting{min-height:0;width:max-content;max-width:calc(100% - 20px);right:auto;padding:5px}
+  .fleet-bar.is-inspecting .fleet-title{display:none}
+  .fleet-bar.is-inspecting button{min-height:40px}
+  .fleet-bar.is-inspecting:not(:has(button)){display:none}
+  .fleet-bar .close-fleet-controls{display:inline-flex;position:absolute;right:4px;top:4px;align-items:center;justify-content:center;width:40px;height:40px;padding:0;font-size:22px}
+  .fleet-bar:not(.is-inspecting) .fleet-title{padding-right:30px}
+  .galaxy-page:has(.fleet-bar.is-inspecting) .map-tools{bottom:78px}
+  .galaxy-page:has(.fleet-bar.is-inspecting) .map-legend{bottom:75px}
+}
