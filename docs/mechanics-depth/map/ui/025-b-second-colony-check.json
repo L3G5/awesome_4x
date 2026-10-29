@@ -1,0 +1,164 @@
+{
+  "request": 25,
+  "seed": "stage30-map-12",
+  "url": "http://127.0.0.1:33775/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n145+22\nCREDITS\n◇\n176+21\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n7 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nCaldera\nCONCORD\nCarina\nUNSURVEYED\nIlyra\nUNSURVEYED\nOrison\nUNSURVEYED\nBellatrix\nVOLCANIC\nHalcyon\nARID\nEos\nUNSURVEYED\n△\n▴\n⬡\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n8 charted systems · 4 surveyed · seed stage30-map-12\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nVanguard 3 / Solace\n\nSolace → Halcyon · 1 order · Fleet presence unknown · Holding position\n\nMove →\n↶\nResume\n⌁ 3\n⇥\n△\n▴\n⬡\nUNCLAIMED FRONTIER\nHalcyon\n\nArid world · Frontier system\n\nMineral deserts beneath an amber sky.\n\n64%\nHABITABILITY\n1\nORE RICHNESS\n3\nSCIENCE\nORBITAL APPROACH\nVanguard 3\n1 ship · 34 / 34 hull\n\nOnly this formation attacks. Nearby friendly fleets do not combine their fire.\n\nFleet presence unknown. Arrival can trigger combat.\n\nEnter orbit · 1 order + 1 move\nCONNECTED SYSTEMS\nSolace ↗\nEos ↗\nCycle 09\n2408 CE\nEND CYCLE →\nSPACE\n7 orders remaining · 2 colonies\nCycle 9: 1 dispatches available in your briefing.\nASTERION REACH / EARLY ACCESS 0.22.0\n● AUTOSAVED\nTurn 9: a new mandate begins.",
+  "inspector": "UNCLAIMED FRONTIER\nHalcyon\n\nArid world · Frontier system\n\nMineral deserts beneath an amber sky.\n\n64%\nHABITABILITY\n1\nORE RICHNESS\n3\nSCIENCE\nORBITAL APPROACH\nVanguard 3\n1 ship · 34 / 34 hull\n\nOnly this formation attacks. Nearby friendly fleets do not combine their fire.\n\nFleet presence unknown. Arrival can trigger combat.\n\nEnter orbit · 1 order + 1 move\nCONNECTED SYSTEMS\nSolace ↗\nEos ↗",
+  "resources": "◈\n145+22\nCREDITS\n◇\n176+21\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n7 / 7\nORDERS",
+  "buttons": [
+    {
+      "text": "Русский",
+      "action": "language",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "briefing",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "menu",
+      "disabled": false
+    },
+    {
+      "text": "Galaxy",
+      "disabled": false
+    },
+    {
+      "text": "Research",
+      "disabled": false
+    },
+    {
+      "text": "Diplomacy",
+      "disabled": false
+    },
+    {
+      "text": "Empire",
+      "disabled": false
+    },
+    {
+      "text": "Chronicle",
+      "disabled": false
+    },
+    {
+      "text": "Home",
+      "action": "home",
+      "disabled": false
+    },
+    {
+      "text": "⌂Solace\nCONCORD",
+      "disabled": false
+    },
+    {
+      "text": "Caldera\nCONCORD",
+      "disabled": false
+    },
+    {
+      "text": "Carina\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Ilyra\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Orison\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Bellatrix\nVOLCANIC",
+      "disabled": false
+    },
+    {
+      "text": "Halcyon\nARID",
+      "disabled": false
+    },
+    {
+      "text": "Eos\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "△",
+      "disabled": false
+    },
+    {
+      "text": "▴",
+      "disabled": false
+    },
+    {
+      "text": "⬡",
+      "disabled": false
+    },
+    {
+      "text": "+",
+      "action": "zoom-in",
+      "disabled": false
+    },
+    {
+      "text": "−",
+      "action": "zoom-out",
+      "disabled": false
+    },
+    {
+      "text": "⌖",
+      "action": "reset-view",
+      "disabled": false
+    },
+    {
+      "text": "Move →",
+      "action": "move",
+      "disabled": false
+    },
+    {
+      "text": "↶",
+      "select": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Resume",
+      "action": "fleet-hold",
+      "disabled": false
+    },
+    {
+      "text": "⌁ 3",
+      "action": "fleet-roster",
+      "disabled": false
+    },
+    {
+      "text": "⇥",
+      "action": "next-fleet",
+      "disabled": false
+    },
+    {
+      "text": "△",
+      "fleet": "f1",
+      "disabled": false
+    },
+    {
+      "text": "▴",
+      "fleet": "f3",
+      "disabled": false
+    },
+    {
+      "text": "⬡",
+      "fleet": "f16",
+      "disabled": false
+    },
+    {
+      "text": "Solace ↗",
+      "select": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Eos ↗",
+      "select": "s39",
+      "disabled": false
+    },
+    {
+      "text": "END CYCLE →\nSPACE",
+      "action": "end-turn",
+      "disabled": false
+    }
+  ]
+}

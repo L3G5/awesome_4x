@@ -1,0 +1,550 @@
+{
+  "pin": "a7c955dd83e35ee98346f7877c11339d52de9ba5",
+  "method": "Derived from successful actual UI receipts only. Failed batch tails are excluded. Optional opaque offerId is omitted for the unique Veyr incoming trade decline, using the normal target lookup; the actual UI receipt identifies Veyr. Fleet f16 is present in the actual cycle9 visible roster observation.",
+  "cases": [
+    {
+      "seed": "stage30-map-16",
+      "checkpoint": "a-actual-cycle6.json",
+      "commands": [
+        {
+          "uiRequest": 4,
+          "turnBefore": 1,
+          "action": {
+            "type": "move",
+            "fleetId": "f1",
+            "targetId": "s38"
+          },
+          "result": {
+            "ok": true,
+            "message": "Pathfinder 1 arrived at Zenith."
+          }
+        },
+        {
+          "uiRequest": 4,
+          "turnBefore": 1,
+          "action": {
+            "type": "move",
+            "fleetId": "f1",
+            "targetId": "s18"
+          },
+          "result": {
+            "ok": true,
+            "message": "Pathfinder 1 arrived at Cinder."
+          }
+        },
+        {
+          "uiRequest": 5,
+          "turnBefore": 1,
+          "action": {
+            "type": "research",
+            "techId": "ecology"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research directed toward Adaptive Biospheres."
+          }
+        },
+        {
+          "uiRequest": 6,
+          "turnBefore": 1,
+          "action": {
+            "type": "anomaly",
+            "systemId": "s18",
+            "choiceId": "reactor"
+          },
+          "result": {
+            "ok": true,
+            "message": "Expedition resolved."
+          }
+        },
+        {
+          "uiRequest": 6,
+          "turnBefore": 1,
+          "action": {
+            "type": "move",
+            "fleetId": "f2",
+            "targetId": "s38"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony Ark 2 arrived at Zenith."
+          }
+        },
+        {
+          "uiRequest": 6,
+          "turnBefore": 1,
+          "action": {
+            "type": "colonize",
+            "fleetId": "f2"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony founded at Zenith."
+          }
+        },
+        {
+          "uiRequest": 8,
+          "turnBefore": 1,
+          "action": {
+            "type": "build",
+            "systemId": "s0",
+            "itemId": "colony"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony Ark commissioned at Solace."
+          }
+        },
+        {
+          "uiRequest": 8,
+          "turnBefore": 1,
+          "action": {
+            "type": "hold",
+            "fleetId": "f3"
+          },
+          "result": {
+            "ok": true,
+            "message": "Vanguard 3 is holding position."
+          }
+        },
+        {
+          "uiRequest": 8,
+          "turnBefore": 1,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 2: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 9,
+          "turnBefore": 2,
+          "action": {
+            "type": "hold",
+            "fleetId": "f1"
+          },
+          "result": {
+            "ok": true,
+            "message": "Pathfinder 1 is holding position."
+          }
+        },
+        {
+          "uiRequest": 9,
+          "turnBefore": 2,
+          "action": {
+            "type": "build",
+            "systemId": "s38",
+            "itemId": "lab"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research Enclave commissioned at Zenith."
+          }
+        },
+        {
+          "uiRequest": 9,
+          "turnBefore": 2,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 3: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 10,
+          "turnBefore": 3,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 4: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 11,
+          "turnBefore": 4,
+          "action": {
+            "type": "research",
+            "techId": "physics"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research directed toward Resonance Theory."
+          }
+        },
+        {
+          "uiRequest": 11,
+          "turnBefore": 4,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 5: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 11,
+          "turnBefore": 5,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 6: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 12,
+          "turnBefore": 6,
+          "action": {
+            "type": "move",
+            "fleetId": "f13",
+            "targetId": "s28"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony Ark 13 arrived at Haven."
+          }
+        },
+        {
+          "uiRequest": 12,
+          "turnBefore": 6,
+          "action": {
+            "type": "colonize",
+            "fleetId": "f13"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony founded at Haven."
+          }
+        },
+        {
+          "uiRequest": 12,
+          "turnBefore": 6,
+          "action": {
+            "type": "build",
+            "systemId": "s28",
+            "itemId": "mine"
+          },
+          "result": {
+            "ok": true,
+            "message": "Orbital Extractor commissioned at Haven."
+          }
+        },
+        {
+          "uiRequest": 12,
+          "turnBefore": 6,
+          "action": {
+            "type": "build",
+            "systemId": "s0",
+            "itemId": "lab"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research Enclave commissioned at Solace."
+          }
+        }
+      ]
+    },
+    {
+      "seed": "stage30-map-12",
+      "checkpoint": "b-actual-cycle9.json",
+      "commands": [
+        {
+          "uiRequest": 16,
+          "turnBefore": 1,
+          "action": {
+            "type": "move",
+            "fleetId": "f1",
+            "targetId": "s19"
+          },
+          "result": {
+            "ok": true,
+            "message": "Pathfinder 1 arrived at Bellatrix."
+          }
+        },
+        {
+          "uiRequest": 17,
+          "turnBefore": 1,
+          "action": {
+            "type": "research",
+            "techId": "physics"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research directed toward Resonance Theory."
+          }
+        },
+        {
+          "uiRequest": 18,
+          "turnBefore": 1,
+          "action": {
+            "type": "anomaly",
+            "systemId": "s19",
+            "choiceId": "salvage"
+          },
+          "result": {
+            "ok": true,
+            "message": "Expedition resolved."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "hold",
+            "fleetId": "f1"
+          },
+          "result": {
+            "ok": true,
+            "message": "Pathfinder 1 is holding position."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "move",
+            "fleetId": "f2",
+            "targetId": "s8"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony Ark 2 arrived at Caldera."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "colonize",
+            "fleetId": "f2"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony founded at Caldera."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "build",
+            "systemId": "s8",
+            "itemId": "mine"
+          },
+          "result": {
+            "ok": true,
+            "message": "Orbital Extractor commissioned at Caldera."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "build",
+            "systemId": "s0",
+            "itemId": "lab"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research Enclave commissioned at Solace."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "hold",
+            "fleetId": "f3"
+          },
+          "result": {
+            "ok": true,
+            "message": "Vanguard 3 is holding position."
+          }
+        },
+        {
+          "uiRequest": 19,
+          "turnBefore": 1,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 2: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 20,
+          "turnBefore": 2,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 3: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 20,
+          "turnBefore": 3,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 4: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 21,
+          "turnBefore": 4,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 5: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 22,
+          "turnBefore": 5,
+          "action": {
+            "type": "build",
+            "systemId": "s0",
+            "itemId": "colony"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony Ark commissioned at Solace."
+          }
+        },
+        {
+          "uiRequest": 22,
+          "turnBefore": 5,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 6: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 23,
+          "turnBefore": 6,
+          "action": {
+            "type": "diplomacy",
+            "targetId": "veyr",
+            "stance": "declineTrade"
+          },
+          "result": {
+            "ok": true,
+            "message": "The Concord declined Veyr Consortium’s trade offer. Borders remain closed.",
+            "outcome": "tradeDeclined",
+            "offer": {
+              "id": "trade-1",
+              "kind": "trade",
+              "from": "veyr",
+              "to": "player",
+              "createdTurn": 5,
+              "expiresTurn": 8,
+              "credits": 30,
+              "status": "declined"
+            }
+          }
+        },
+        {
+          "uiRequest": 23,
+          "turnBefore": 6,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 7: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 24,
+          "turnBefore": 7,
+          "action": {
+            "type": "research",
+            "techId": "logistics"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research directed toward Deep-space Logistics."
+          }
+        },
+        {
+          "uiRequest": 24,
+          "turnBefore": 7,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 8: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 25,
+          "turnBefore": 8,
+          "action": {
+            "type": "endTurn"
+          },
+          "result": {
+            "ok": true,
+            "message": "Turn 9: a new mandate begins."
+          }
+        },
+        {
+          "uiRequest": 26,
+          "turnBefore": 9,
+          "action": {
+            "type": "move",
+            "fleetId": "f16",
+            "targetId": "s33"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony Ark 16 arrived at Halcyon."
+          }
+        },
+        {
+          "uiRequest": 26,
+          "turnBefore": 9,
+          "action": {
+            "type": "colonize",
+            "fleetId": "f16"
+          },
+          "result": {
+            "ok": true,
+            "message": "Colony founded at Halcyon."
+          }
+        },
+        {
+          "uiRequest": 26,
+          "turnBefore": 9,
+          "action": {
+            "type": "build",
+            "systemId": "s33",
+            "itemId": "lab"
+          },
+          "result": {
+            "ok": true,
+            "message": "Research Enclave commissioned at Halcyon."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3442 @@
+{
+  "candidateCommit": "a7c955dd83e35ee98346f7877c11339d52de9ba5",
+  "baselineCommit": "810194596a0fa7d02efa418749bb3e27f547229e",
+  "method": "512 fixed seeds: ASTERION then stage30-map-1..511. Independent adjacency/BFS/bridge/cut/refinement calculations inspect actual serialized states. Coordinate-independent signatures are diagnostics, not a fun score or a proof of graph isomorphism. No end turns, played campaigns or new win-rate sample. Paid founding and knowledge mutations are separately labeled controlled command drills.",
+  "summary": {
+    "candidate": {
+      "maps": 512,
+      "edgeCount": {
+        "count": 512,
+        "min": 52,
+        "p10": 54,
+        "median": 57,
+        "p90": 59,
+        "max": 64,
+        "mean": 56.759765625
+      },
+      "diameter": {
+        "count": 512,
+        "min": 10,
+        "p10": 12,
+        "median": 13,
+        "p90": 15,
+        "max": 18,
+        "mean": 13.31640625
+      },
+      "capitalTravel": {
+        "count": 3072,
+        "min": 5,
+        "p10": 5,
+        "median": 8,
+        "p90": 11,
+        "max": 13,
+        "mean": 8.150065104166666
+      },
+      "separation": {
+        "count": 512,
+        "min": 6.3007936008093415,
+        "p10": 6.3245553203367555,
+        "median": 6.5,
+        "p90": 6.911584478250987,
+        "max": 7.553806987208503,
+        "mean": 6.571210802317434
+      },
+      "bridges": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 2,
+        "p90": 6,
+        "max": 16,
+        "mean": 2.4140625
+      },
+      "articulationPoints": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 4,
+        "p90": 11,
+        "max": 19,
+        "mean": 5.09765625
+      },
+      "maxDegree": {
+        "count": 512,
+        "min": 4,
+        "p10": 4,
+        "median": 4,
+        "p90": 5,
+        "max": 6,
+        "mean": 4.4921875
+      },
+      "uniqueCapitalColoredRefinementSignatures": 512,
+      "uniqueConcordNeighborSets": 467,
+      "uniqueHomeDegreeTuples": 61,
+      "homeDegreeCounts": {
+        "2": 1011,
+        "3": 820,
+        "4": 217
+      },
+      "capitalDistanceVectors": 504,
+      "edgeJaccardAgainstFirstMap": {
+        "count": 511,
+        "min": 0,
+        "p10": 0.017391304347826087,
+        "median": 0.036036036036036036,
+        "p90": 0.056074766355140186,
+        "max": 0.10679611650485436,
+        "mean": 0.03521416152585955
+      },
+      "initialKnown": {
+        "count": 2048,
+        "min": 4,
+        "p10": 5,
+        "median": 6,
+        "p90": 8,
+        "max": 10,
+        "mean": 6.333984375
+      },
+      "initialSurveyed": {
+        "count": 2048,
+        "min": 3,
+        "p10": 3,
+        "median": 3,
+        "p90": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "ordinaryWithin2": {
+        "count": 2048,
+        "min": 1,
+        "p10": 2,
+        "median": 3,
+        "p90": 5,
+        "max": 9,
+        "mean": 3.412109375
+      },
+      "ordinaryWithin3": {
+        "count": 2048,
+        "min": 2,
+        "p10": 3,
+        "median": 5,
+        "p90": 7,
+        "max": 10,
+        "mean": 4.96142578125
+      },
+      "nearestDiscovery": {
+        "count": 2048,
+        "min": 1,
+        "p10": 1,
+        "median": 2,
+        "p90": 3,
+        "max": 8,
+        "mean": 2.11669921875
+      },
+      "discoveriesWithin2": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 1,
+        "p90": 2,
+        "max": 5,
+        "mean": 1.26220703125
+      },
+      "portableWithin1": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 0,
+        "p90": 1,
+        "max": 2,
+        "mean": 0.1513671875
+      },
+      "discoveryPositionSets": 512,
+      "distinctDiscoveryWorlds": 38,
+      "discoveryTypeCounts": {
+        "pilgrims": 692,
+        "garden": 685,
+        "echo": 683,
+        "wreck": 670,
+        "archive": 675,
+        "reef": 512,
+        "forge": 691,
+        "observatory": 512
+      },
+      "prospectResources": {
+        "count": 2048,
+        "min": 8,
+        "p10": 9,
+        "median": 11,
+        "p90": 13,
+        "max": 14,
+        "mean": 11.14013671875
+      },
+      "prospectClimateCounts": {
+        "ecology,ordinary": 1048,
+        "ordinary,ordinary": 1000
+      }
+    },
+    "baseline": {
+      "maps": 512,
+      "edgeCount": {
+        "count": 512,
+        "min": 51,
+        "p10": 54,
+        "median": 56,
+        "p90": 59,
+        "max": 62,
+        "mean": 56.248046875
+      },
+      "diameter": {
+        "count": 512,
+        "min": 10,
+        "p10": 12,
+        "median": 15,
+        "p90": 21,
+        "max": 27,
+        "mean": 16.078125
+      },
+      "capitalTravel": {
+        "count": 3072,
+        "min": 5,
+        "p10": 6,
+        "median": 7,
+        "p90": 13,
+        "max": 23,
+        "mean": 8.725260416666666
+      },
+      "separation": {
+        "count": 512,
+        "min": 0.10000000000000142,
+        "p10": 1.7888543819998335,
+        "median": 3.324154027718933,
+        "p90": 4.742362280551752,
+        "max": 6.389053137985315,
+        "mean": 3.2673246866542875
+      },
+      "bridges": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 3,
+        "p90": 10,
+        "max": 18,
+        "mean": 3.931640625
+      },
+      "articulationPoints": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 6,
+        "p90": 16,
+        "max": 22,
+        "mean": 7.322265625
+      },
+      "maxDegree": {
+        "count": 512,
+        "min": 3,
+        "p10": 4,
+        "median": 5,
+        "p90": 5,
+        "max": 6,
+        "mean": 4.541015625
+      },
+      "uniqueCapitalColoredRefinementSignatures": 512,
+      "uniqueConcordNeighborSets": 7,
+      "uniqueHomeDegreeTuples": 53,
+      "homeDegreeCounts": {
+        "2": 373,
+        "3": 1167,
+        "4": 502,
+        "5": 6
+      },
+      "capitalDistanceVectors": 466,
+      "edgeJaccardAgainstFirstMap": {
+        "count": 511,
+        "min": 0.4125,
+        "p10": 0.47368421052631576,
+        "median": 0.5324675324675324,
+        "p90": 0.5915492957746479,
+        "max": 0.6865671641791045,
+        "mean": 0.5314218572039002
+      },
+      "initialKnown": {
+        "count": 2048,
+        "min": 3,
+        "p10": 3,
+        "median": 4,
+        "p90": 5,
+        "max": 6,
+        "mean": 4.06884765625
+      },
+      "initialSurveyed": {
+        "count": 2048,
+        "min": 1,
+        "p10": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1,
+        "mean": 1
+      },
+      "ordinaryWithin2": {
+        "count": 2048,
+        "min": 1,
+        "p10": 2,
+        "median": 3,
+        "p90": 5,
+        "max": 7,
+        "mean": 3.41650390625
+      },
+      "ordinaryWithin3": {
+        "count": 2048,
+        "min": 1,
+        "p10": 3,
+        "median": 5,
+        "p90": 7,
+        "max": 10,
+        "mean": 5.08056640625
+      },
+      "nearestDiscovery": {
+        "count": 2048,
+        "min": 1,
+        "p10": 1,
+        "median": 1.5,
+        "p90": 4,
+        "max": 7,
+        "mean": 2.2744140625
+      },
+      "discoveriesWithin2": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 1,
+        "p90": 4,
+        "max": 5,
+        "mean": 1.52734375
+      },
+      "portableWithin1": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 0,
+        "p90": 2,
+        "max": 3,
+        "mean": 0.74365234375
+      },
+      "discoveryPositionSets": 1,
+      "distinctDiscoveryWorlds": 10,
+      "discoveryTypeCounts": {
+        "archive": 681,
+        "observatory": 512,
+        "wreck": 667,
+        "forge": 722,
+        "reef": 512,
+        "pilgrims": 638,
+        "garden": 694,
+        "echo": 694
+      },
+      "prospectResources": null,
+      "prospectClimateCounts": {}
+    },
+    "attempts": {
+      "count": 512,
+      "min": 1,
+      "p10": 1,
+      "median": 1,
+      "p90": 4,
+      "max": 8,
+      "mean": 1.955078125
+    },
+    "attemptHistogram": {
+      "1": 271,
+      "2": 117,
+      "3": 56,
+      "4": 36,
+      "5": 16,
+      "6": 9,
+      "7": 6,
+      "8": 1
+    },
+    "fallbackSeeds": [],
+    "failures": [],
+    "pairedEdgeJaccard": {
+      "count": 512,
+      "min": 0,
+      "p10": 0.017391304347826087,
+      "median": 0.036036036036036036,
+      "p90": 0.05660377358490566,
+      "max": 0.11538461538461539,
+      "mean": 0.03499717135728785
+    },
+    "neutralIdDisplacement": {
+      "count": 512,
+      "min": 38.46740814049728,
+      "p10": 42.243393941629435,
+      "median": 46.7635886462932,
+      "p90": 50.532343556676416,
+      "max": 55.43359569391158,
+      "mean": 46.59644876856278
+    },
+    "unlabeledPointDistance": {
+      "count": 512,
+      "min": 5.791680177018776,
+      "p10": 6.329561379705692,
+      "median": 6.767485021593144,
+      "p90": 7.24300061040637,
+      "max": 8.007519564546687,
+      "mean": 6.778174798777487
+    },
+    "paidFoundingDrills": 128,
+    "privacyDrills": 16
+  },
+  "worstStarts": {
+    "fewestOrdinaryWithin3": [
+      {
+        "seed": "stage30-map-1",
+        "factionId": "khar",
+        "capitalId": "s2",
+        "degree": 3,
+        "neighbors": [
+          "s36",
+          "s39",
+          "s6"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s2",
+          "s6",
+          "s39"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s6",
+            "name": "Aurelia",
+            "type": "ice",
+            "habitability": 44,
+            "richness": 1,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 3,
+            "nearestRival": 6
+          },
+          {
+            "id": "s39",
+            "name": "Eos",
+            "type": "ocean",
+            "habitability": 79,
+            "richness": 5,
+            "science": 1,
+            "degree": 4,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s36",
+          "s39"
+        ],
+        "recovery": [
+          {
+            "id": "s36",
+            "jumps": 1,
+            "habitability": 62
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 5
+          },
+          {
+            "factionId": "choir",
+            "jumps": 11
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s21",
+            "type": "archive",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-101",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s18",
+          "s21"
+        ],
+        "known": 4,
+        "surveyed": [
+          "s1",
+          "s18",
+          "s21"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s18",
+            "name": "Cinder",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 3,
+            "science": 3,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          },
+          {
+            "id": "s21",
+            "name": "Thalassa",
+            "type": "ice",
+            "habitability": 35,
+            "richness": 4,
+            "science": 1,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s9",
+          "s18"
+        ],
+        "recovery": [
+          {
+            "id": "s9",
+            "jumps": 3,
+            "habitability": 88
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 11
+          },
+          {
+            "factionId": "khar",
+            "jumps": 6
+          },
+          {
+            "factionId": "choir",
+            "jumps": 8
+          }
+        ],
+        "nearestDiscovery": 4,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-107",
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 2,
+        "neighbors": [
+          "s23",
+          "s29"
+        ],
+        "known": 7,
+        "surveyed": [
+          "s0",
+          "s23",
+          "s29"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s23",
+            "name": "Tethys",
+            "type": "ice",
+            "habitability": 37,
+            "richness": 3,
+            "science": 4,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 6
+          },
+          {
+            "id": "s29",
+            "name": "Aldebaran",
+            "type": "terran",
+            "habitability": 80,
+            "richness": 5,
+            "science": 2,
+            "degree": 4,
+            "outwardReach2": 5,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 14,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s6",
+          "s29"
+        ],
+        "recovery": [
+          {
+            "id": "s6",
+            "jumps": 2,
+            "habitability": 90
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 7
+          },
+          {
+            "factionId": "khar",
+            "jumps": 8
+          },
+          {
+            "factionId": "choir",
+            "jumps": 7
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s14",
+            "type": "reef",
+            "jumps": 2
+          },
+          {
+            "id": "s40",
+            "type": "wreck",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-111",
+        "factionId": "khar",
+        "capitalId": "s2",
+        "degree": 3,
+        "neighbors": [
+          "s20",
+          "s30",
+          "s35"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s2",
+          "s20",
+          "s30"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s20",
+            "name": "Sundrift",
+            "type": "ice",
+            "habitability": 36,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 3,
+            "nearestRival": 6
+          },
+          {
+            "id": "s30",
+            "name": "Caelum",
+            "type": "terran",
+            "habitability": 82,
+            "richness": 4,
+            "science": 2,
+            "degree": 4,
+            "outwardReach2": 5,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s30",
+          "s35"
+        ],
+        "recovery": [
+          {
+            "id": "s35",
+            "jumps": 1,
+            "habitability": 60
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 6
+          },
+          {
+            "factionId": "choir",
+            "jumps": 13
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s18",
+            "type": "wreck",
+            "jumps": 2
+          },
+          {
+            "id": "s34",
+            "type": "garden",
+            "jumps": 2
+          },
+          {
+            "id": "s35",
+            "type": "reef",
+            "jumps": 1
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-120",
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 2,
+        "neighbors": [
+          "s21",
+          "s24"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s0",
+          "s21",
+          "s24"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s21",
+            "name": "Thalassa",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 3,
+            "science": 4,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 5
+          },
+          {
+            "id": "s24",
+            "name": "Corvus",
+            "type": "ice",
+            "habitability": 38,
+            "richness": 5,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 4
+          }
+        ],
+        "prospectTotal": 13,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s21",
+          "s27"
+        ],
+        "recovery": [
+          {
+            "id": "s27",
+            "jumps": 3,
+            "habitability": 78
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 5
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          },
+          {
+            "factionId": "choir",
+            "jumps": 10
+          }
+        ],
+        "nearestDiscovery": 3,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-123",
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 3,
+        "neighbors": [
+          "s32",
+          "s37",
+          "s40"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s0",
+          "s37",
+          "s40"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s37",
+            "name": "Morrow",
+            "type": "ice",
+            "habitability": 38,
+            "richness": 4,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 7
+          },
+          {
+            "id": "s40",
+            "name": "Terminus",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 1,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 9
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s26",
+          "s40"
+        ],
+        "recovery": [
+          {
+            "id": "s26",
+            "jumps": 3,
+            "habitability": 59
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 8
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          },
+          {
+            "factionId": "choir",
+            "jumps": 11
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s8",
+            "type": "pilgrims",
+            "jumps": 2
+          },
+          {
+            "id": "s32",
+            "type": "reef",
+            "jumps": 1
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-123",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 4,
+        "neighbors": [
+          "s12",
+          "s14",
+          "s21",
+          "s38"
+        ],
+        "known": 7,
+        "surveyed": [
+          "s1",
+          "s14",
+          "s38"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s14",
+            "name": "Ilyra",
+            "type": "ice",
+            "habitability": 36,
+            "richness": 3,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 9
+          },
+          {
+            "id": "s38",
+            "name": "Zenith",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 4,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 7
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s12",
+          "s38"
+        ],
+        "recovery": [
+          {
+            "id": "s12",
+            "jumps": 1,
+            "habitability": 64
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 8
+          },
+          {
+            "factionId": "khar",
+            "jumps": 9
+          },
+          {
+            "factionId": "choir",
+            "jumps": 9
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s21",
+            "type": "echo",
+            "jumps": 1
+          }
+        ],
+        "portableWithin1": 1
+      },
+      {
+        "seed": "stage30-map-124",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s13",
+          "s27"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s1",
+          "s13",
+          "s27"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s13",
+            "name": "Sable",
+            "type": "ice",
+            "habitability": 42,
+            "richness": 5,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 8
+          },
+          {
+            "id": "s27",
+            "name": "Nyx",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 10
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s18",
+          "s27"
+        ],
+        "recovery": [
+          {
+            "id": "s18",
+            "jumps": 2,
+            "habitability": 60
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 11
+          },
+          {
+            "factionId": "khar",
+            "jumps": 9
+          },
+          {
+            "factionId": "choir",
+            "jumps": 12
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s18",
+            "type": "garden",
+            "jumps": 2
+          },
+          {
+            "id": "s37",
+            "type": "reef",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      }
+    ],
+    "longestFirstDiscovery": [
+      {
+        "seed": "stage30-map-458",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 2,
+        "neighbors": [
+          "s27",
+          "s4"
+        ],
+        "known": 4,
+        "surveyed": [
+          "s3",
+          "s4",
+          "s27"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s4",
+            "name": "Meridian",
+            "type": "ice",
+            "habitability": 43,
+            "richness": 5,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          },
+          {
+            "id": "s27",
+            "name": "Nyx",
+            "type": "arid",
+            "habitability": 62,
+            "richness": 1,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 3,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s26",
+          "s27"
+        ],
+        "recovery": [
+          {
+            "id": "s26",
+            "jumps": 3,
+            "habitability": 60
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 6
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 11
+          },
+          {
+            "factionId": "khar",
+            "jumps": 13
+          }
+        ],
+        "nearestDiscovery": 8,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-12",
+        "factionId": "khar",
+        "capitalId": "s2",
+        "degree": 2,
+        "neighbors": [
+          "s20",
+          "s36"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s2",
+          "s20",
+          "s36"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s20",
+            "name": "Sundrift",
+            "type": "arid",
+            "habitability": 58,
+            "richness": 2,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          },
+          {
+            "id": "s36",
+            "name": "Peregrine",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 5,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s5",
+          "s20",
+          "s23",
+          "s36"
+        ],
+        "recovery": [
+          {
+            "id": "s5",
+            "jumps": 2,
+            "habitability": 86
+          },
+          {
+            "id": "s23",
+            "jumps": 3,
+            "habitability": 63
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 6,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-134",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s17",
+          "s22"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s1",
+          "s17",
+          "s22"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s17",
+            "name": "Orison",
+            "type": "terran",
+            "habitability": 84,
+            "richness": 2,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 7
+          },
+          {
+            "id": "s22",
+            "name": "Ophion",
+            "type": "terran",
+            "habitability": 90,
+            "richness": 4,
+            "science": 1,
+            "degree": 4,
+            "outwardReach2": 7,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s17",
+          "s22",
+          "s23",
+          "s27",
+          "s28"
+        ],
+        "recovery": [
+          {
+            "id": "s23",
+            "jumps": 2,
+            "habitability": 86
+          },
+          {
+            "id": "s27",
+            "jumps": 3,
+            "habitability": 74
+          },
+          {
+            "id": "s28",
+            "jumps": 2,
+            "habitability": 87
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 9
+          },
+          {
+            "factionId": "khar",
+            "jumps": 6
+          },
+          {
+            "factionId": "choir",
+            "jumps": 10
+          }
+        ],
+        "nearestDiscovery": 6,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-151",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s6",
+          "s8"
+        ],
+        "known": 4,
+        "surveyed": [
+          "s1",
+          "s6",
+          "s8"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s6",
+            "name": "Aurelia",
+            "type": "arid",
+            "habitability": 56,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 7
+          },
+          {
+            "id": "s8",
+            "name": "Caldera",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 3,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 10,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s6",
+          "s8",
+          "s26",
+          "s37"
+        ],
+        "recovery": [
+          {
+            "id": "s26",
+            "jumps": 2,
+            "habitability": 90
+          },
+          {
+            "id": "s37",
+            "jumps": 3,
+            "habitability": 73
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 7
+          },
+          {
+            "factionId": "khar",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 12
+          }
+        ],
+        "nearestDiscovery": 6,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-175",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 3,
+        "neighbors": [
+          "s23",
+          "s28",
+          "s34"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s1",
+          "s23",
+          "s34"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s23",
+            "name": "Tethys",
+            "type": "terran",
+            "habitability": 89,
+            "richness": 4,
+            "science": 2,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 7
+          },
+          {
+            "id": "s34",
+            "name": "Antares",
+            "type": "arid",
+            "habitability": 64,
+            "richness": 3,
+            "science": 3,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 3,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s23",
+          "s28",
+          "s34"
+        ],
+        "recovery": [
+          {
+            "id": "s28",
+            "jumps": 1,
+            "habitability": 60
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 7
+          },
+          {
+            "factionId": "khar",
+            "jumps": 13
+          },
+          {
+            "factionId": "choir",
+            "jumps": 12
+          }
+        ],
+        "nearestDiscovery": 6,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-201",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s18",
+          "s41"
+        ],
+        "known": 4,
+        "surveyed": [
+          "s1",
+          "s18",
+          "s41"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s18",
+            "name": "Cinder",
+            "type": "ocean",
+            "habitability": 79,
+            "richness": 3,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          },
+          {
+            "id": "s41",
+            "name": "Asterion",
+            "type": "terran",
+            "habitability": 80,
+            "richness": 4,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s18",
+          "s26",
+          "s36",
+          "s41"
+        ],
+        "recovery": [
+          {
+            "id": "s26",
+            "jumps": 2,
+            "habitability": 62
+          },
+          {
+            "id": "s36",
+            "jumps": 3,
+            "habitability": 55
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 6
+          },
+          {
+            "factionId": "khar",
+            "jumps": 9
+          },
+          {
+            "factionId": "choir",
+            "jumps": 13
+          }
+        ],
+        "nearestDiscovery": 6,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-43",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s38",
+          "s4"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s1",
+          "s4",
+          "s38"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s4",
+            "name": "Meridian",
+            "type": "ice",
+            "habitability": 41,
+            "richness": 3,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 4
+          },
+          {
+            "id": "s38",
+            "name": "Zenith",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 2,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 3,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 10,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s13",
+          "s38"
+        ],
+        "recovery": [
+          {
+            "id": "s13",
+            "jumps": 3,
+            "habitability": 84
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 5
+          },
+          {
+            "factionId": "khar",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 9
+          }
+        ],
+        "nearestDiscovery": 6,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-120",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 3,
+        "neighbors": [
+          "s17",
+          "s38",
+          "s9"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s3",
+          "s17",
+          "s38"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s17",
+            "name": "Orison",
+            "type": "ocean",
+            "habitability": 73,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 3,
+            "nearestRival": 6
+          },
+          {
+            "id": "s38",
+            "name": "Zenith",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 5,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 7
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s7",
+          "s9",
+          "s17",
+          "s18",
+          "s38"
+        ],
+        "recovery": [
+          {
+            "id": "s7",
+            "jumps": 2,
+            "habitability": 59
+          },
+          {
+            "id": "s9",
+            "jumps": 1,
+            "habitability": 58
+          },
+          {
+            "id": "s18",
+            "jumps": 3,
+            "habitability": 58
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 10
+          },
+          {
+            "factionId": "khar",
+            "jumps": 7
+          }
+        ],
+        "nearestDiscovery": 5,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      }
+    ],
+    "richestDiscoveryCluster": [
+      {
+        "seed": "stage30-map-22",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 4,
+        "neighbors": [
+          "s12",
+          "s28",
+          "s38",
+          "s39"
+        ],
+        "known": 8,
+        "surveyed": [
+          "s3",
+          "s38",
+          "s39"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s38",
+            "name": "Zenith",
+            "type": "terran",
+            "habitability": 89,
+            "richness": 4,
+            "science": 2,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          },
+          {
+            "id": "s39",
+            "name": "Eos",
+            "type": "ocean",
+            "habitability": 79,
+            "richness": 3,
+            "science": 4,
+            "degree": 4,
+            "outwardReach2": 7,
+            "nearestRival": 4
+          }
+        ],
+        "prospectTotal": 13,
+        "ordinaryWithin2": 6,
+        "ordinaryWithin3": 7,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s4",
+          "s8",
+          "s10",
+          "s12",
+          "s37",
+          "s38",
+          "s39"
+        ],
+        "recovery": [
+          {
+            "id": "s4",
+            "jumps": 2,
+            "habitability": 80
+          },
+          {
+            "id": "s8",
+            "jumps": 2,
+            "habitability": 87
+          },
+          {
+            "id": "s10",
+            "jumps": 3,
+            "habitability": 62
+          },
+          {
+            "id": "s12",
+            "jumps": 1,
+            "habitability": 56
+          },
+          {
+            "id": "s37",
+            "jumps": 2,
+            "habitability": 89
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 5
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 8
+          },
+          {
+            "factionId": "khar",
+            "jumps": 5
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s4",
+            "type": "reef",
+            "jumps": 2
+          },
+          {
+            "id": "s8",
+            "type": "archive",
+            "jumps": 2
+          },
+          {
+            "id": "s20",
+            "type": "echo",
+            "jumps": 2
+          },
+          {
+            "id": "s37",
+            "type": "observatory",
+            "jumps": 2
+          },
+          {
+            "id": "s40",
+            "type": "forge",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-266",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 3,
+        "neighbors": [
+          "s27",
+          "s33",
+          "s4"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s3",
+          "s4",
+          "s33"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s4",
+            "name": "Meridian",
+            "type": "ice",
+            "habitability": 39,
+            "richness": 2,
+            "science": 3,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          },
+          {
+            "id": "s33",
+            "name": "Halcyon",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 5,
+            "science": 2,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 6,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s5",
+          "s19",
+          "s25",
+          "s33"
+        ],
+        "recovery": [
+          {
+            "id": "s5",
+            "jumps": 2,
+            "habitability": 78
+          },
+          {
+            "id": "s19",
+            "jumps": 3,
+            "habitability": 77
+          },
+          {
+            "id": "s25",
+            "jumps": 2,
+            "habitability": 80
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 6
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 9
+          },
+          {
+            "factionId": "khar",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s5",
+            "type": "echo",
+            "jumps": 2
+          },
+          {
+            "id": "s23",
+            "type": "reef",
+            "jumps": 2
+          },
+          {
+            "id": "s25",
+            "type": "echo",
+            "jumps": 2
+          },
+          {
+            "id": "s27",
+            "type": "observatory",
+            "jumps": 1
+          },
+          {
+            "id": "s30",
+            "type": "garden",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-341",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 3,
+        "neighbors": [
+          "s15",
+          "s31",
+          "s9"
+        ],
+        "known": 8,
+        "surveyed": [
+          "s3",
+          "s15",
+          "s31"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s15",
+            "name": "Kepler",
+            "type": "ocean",
+            "habitability": 80,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 9
+          },
+          {
+            "id": "s31",
+            "name": "Vesper",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 4,
+            "science": 2,
+            "degree": 5,
+            "outwardReach2": 6,
+            "nearestRival": 7
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 5,
+        "ordinaryWithin3": 6,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s4",
+          "s7",
+          "s9",
+          "s15",
+          "s27",
+          "s31"
+        ],
+        "recovery": [
+          {
+            "id": "s4",
+            "jumps": 2,
+            "habitability": 78
+          },
+          {
+            "id": "s7",
+            "jumps": 2,
+            "habitability": 73
+          },
+          {
+            "id": "s9",
+            "jumps": 1,
+            "habitability": 80
+          },
+          {
+            "id": "s27",
+            "jumps": 3,
+            "habitability": 75
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 10
+          },
+          {
+            "factionId": "khar",
+            "jumps": 8
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s4",
+            "type": "archive",
+            "jumps": 2
+          },
+          {
+            "id": "s7",
+            "type": "garden",
+            "jumps": 2
+          },
+          {
+            "id": "s9",
+            "type": "wreck",
+            "jumps": 1
+          },
+          {
+            "id": "s28",
+            "type": "observatory",
+            "jumps": 2
+          },
+          {
+            "id": "s30",
+            "type": "echo",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 1
+      },
+      {
+        "seed": "stage30-map-101",
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 3,
+        "neighbors": [
+          "s15",
+          "s24",
+          "s25"
+        ],
+        "known": 7,
+        "surveyed": [
+          "s0",
+          "s24",
+          "s25"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s24",
+            "name": "Corvus",
+            "type": "ice",
+            "habitability": 44,
+            "richness": 1,
+            "science": 4,
+            "degree": 4,
+            "outwardReach2": 6,
+            "nearestRival": 7
+          },
+          {
+            "id": "s25",
+            "name": "Elysian",
+            "type": "terran",
+            "habitability": 88,
+            "richness": 4,
+            "science": 2,
+            "degree": 2,
+            "outwardReach2": 3,
+            "nearestRival": 9
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s7",
+          "s10",
+          "s15",
+          "s25"
+        ],
+        "recovery": [
+          {
+            "id": "s7",
+            "jumps": 3,
+            "habitability": 87
+          },
+          {
+            "id": "s10",
+            "jumps": 2,
+            "habitability": 80
+          },
+          {
+            "id": "s15",
+            "jumps": 1,
+            "habitability": 78
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 11
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          },
+          {
+            "factionId": "choir",
+            "jumps": 8
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s10",
+            "type": "forge",
+            "jumps": 2
+          },
+          {
+            "id": "s15",
+            "type": "garden",
+            "jumps": 1
+          },
+          {
+            "id": "s19",
+            "type": "archive",
+            "jumps": 2
+          },
+          {
+            "id": "s32",
+            "type": "wreck",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 1
+      },
+      {
+        "seed": "stage30-map-103",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 4,
+        "neighbors": [
+          "s19",
+          "s22",
+          "s28",
+          "s34"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s3",
+          "s19",
+          "s34"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s19",
+            "name": "Bellatrix",
+            "type": "ocean",
+            "habitability": 75,
+            "richness": 5,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 5
+          },
+          {
+            "id": "s34",
+            "name": "Antares",
+            "type": "ocean",
+            "habitability": 74,
+            "richness": 1,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 10,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s14",
+          "s19",
+          "s34",
+          "s41"
+        ],
+        "recovery": [
+          {
+            "id": "s14",
+            "jumps": 2,
+            "habitability": 79
+          },
+          {
+            "id": "s41",
+            "jumps": 2,
+            "habitability": 55
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 5
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 10
+          },
+          {
+            "factionId": "khar",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s14",
+            "type": "archive",
+            "jumps": 2
+          },
+          {
+            "id": "s22",
+            "type": "echo",
+            "jumps": 1
+          },
+          {
+            "id": "s26",
+            "type": "pilgrims",
+            "jumps": 2
+          },
+          {
+            "id": "s28",
+            "type": "reef",
+            "jumps": 1
+          }
+        ],
+        "portableWithin1": 1
+      },
+      {
+        "seed": "stage30-map-130",
+        "factionId": "khar",
+        "capitalId": "s2",
+        "degree": 3,
+        "neighbors": [
+          "s13",
+          "s19",
+          "s37"
+        ],
+        "known": 7,
+        "surveyed": [
+          "s2",
+          "s13",
+          "s19"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s13",
+            "name": "Sable",
+            "type": "ocean",
+            "habitability": 75,
+            "richness": 1,
+            "science": 3,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 8
+          },
+          {
+            "id": "s19",
+            "name": "Bellatrix",
+            "type": "ocean",
+            "habitability": 79,
+            "richness": 4,
+            "science": 1,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 9,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s9",
+          "s13",
+          "s19",
+          "s41"
+        ],
+        "recovery": [
+          {
+            "id": "s9",
+            "jumps": 3,
+            "habitability": 82
+          },
+          {
+            "id": "s41",
+            "jumps": 3,
+            "habitability": 61
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 9
+          },
+          {
+            "factionId": "choir",
+            "jumps": 7
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s6",
+            "type": "archive",
+            "jumps": 2
+          },
+          {
+            "id": "s16",
+            "type": "wreck",
+            "jumps": 2
+          },
+          {
+            "id": "s27",
+            "type": "pilgrims",
+            "jumps": 2
+          },
+          {
+            "id": "s37",
+            "type": "echo",
+            "jumps": 1
+          }
+        ],
+        "portableWithin1": 1
+      },
+      {
+        "seed": "stage30-map-139",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 3,
+        "neighbors": [
+          "s18",
+          "s30",
+          "s33"
+        ],
+        "known": 7,
+        "surveyed": [
+          "s1",
+          "s30",
+          "s33"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s30",
+            "name": "Caelum",
+            "type": "ice",
+            "habitability": 40,
+            "richness": 4,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 6,
+            "nearestRival": 5
+          },
+          {
+            "id": "s33",
+            "name": "Halcyon",
+            "type": "terran",
+            "habitability": 86,
+            "richness": 3,
+            "science": 4,
+            "degree": 4,
+            "outwardReach2": 6,
+            "nearestRival": 4
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s10",
+          "s11",
+          "s17",
+          "s18",
+          "s33"
+        ],
+        "recovery": [
+          {
+            "id": "s10",
+            "jumps": 3,
+            "habitability": 82
+          },
+          {
+            "id": "s11",
+            "jumps": 2,
+            "habitability": 74
+          },
+          {
+            "id": "s17",
+            "jumps": 3,
+            "habitability": 57
+          },
+          {
+            "id": "s18",
+            "jumps": 1,
+            "habitability": 74
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 5
+          },
+          {
+            "factionId": "khar",
+            "jumps": 8
+          },
+          {
+            "factionId": "choir",
+            "jumps": 9
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s4",
+            "type": "forge",
+            "jumps": 2
+          },
+          {
+            "id": "s11",
+            "type": "observatory",
+            "jumps": 2
+          },
+          {
+            "id": "s18",
+            "type": "echo",
+            "jumps": 1
+          },
+          {
+            "id": "s22",
+            "type": "pilgrims",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 1
+      },
+      {
+        "seed": "stage30-map-147",
+        "factionId": "khar",
+        "capitalId": "s2",
+        "degree": 3,
+        "neighbors": [
+          "s12",
+          "s20",
+          "s37"
+        ],
+        "known": 8,
+        "surveyed": [
+          "s2",
+          "s12",
+          "s37"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s12",
+            "name": "Eidolon",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 5,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 4
+          },
+          {
+            "id": "s37",
+            "name": "Morrow",
+            "type": "ice",
+            "habitability": 38,
+            "richness": 1,
+            "science": 4,
+            "degree": 4,
+            "outwardReach2": 7,
+            "nearestRival": 6
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 3,
+        "ordinaryWithin3": 6,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s6",
+          "s12",
+          "s13",
+          "s27",
+          "s29"
+        ],
+        "recovery": [
+          {
+            "id": "s6",
+            "jumps": 3,
+            "habitability": 84
+          },
+          {
+            "id": "s13",
+            "jumps": 2,
+            "habitability": 82
+          },
+          {
+            "id": "s27",
+            "jumps": 2,
+            "habitability": 63
+          },
+          {
+            "id": "s29",
+            "jumps": 3,
+            "habitability": 81
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 5
+          },
+          {
+            "factionId": "choir",
+            "jumps": 7
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s4",
+            "type": "garden",
+            "jumps": 2
+          },
+          {
+            "id": "s13",
+            "type": "echo",
+            "jumps": 2
+          },
+          {
+            "id": "s20",
+            "type": "reef",
+            "jumps": 1
+          },
+          {
+            "id": "s33",
+            "type": "pilgrims",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      }
+    ],
+    "mostIsolated": [
+      {
+        "seed": "stage30-map-382",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s32",
+          "s35"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s1",
+          "s32",
+          "s35"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s32",
+            "name": "Iona",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 2,
+            "science": 3,
+            "degree": 4,
+            "outwardReach2": 4,
+            "nearestRival": 10
+          },
+          {
+            "id": "s35",
+            "name": "Seraph",
+            "type": "ice",
+            "habitability": 38,
+            "richness": 5,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 3,
+            "nearestRival": 11
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s32",
+          "s39"
+        ],
+        "recovery": [
+          {
+            "id": "s39",
+            "jumps": 3,
+            "habitability": 81
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 12
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          },
+          {
+            "factionId": "choir",
+            "jumps": 13
+          }
+        ],
+        "nearestDiscovery": 3,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-470",
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 2,
+        "neighbors": [
+          "s17",
+          "s35"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s0",
+          "s17",
+          "s35"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s17",
+            "name": "Orison",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 4,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 6,
+            "nearestRival": 10
+          },
+          {
+            "id": "s35",
+            "name": "Seraph",
+            "type": "ice",
+            "habitability": 38,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 4,
+            "nearestRival": 10
+          }
+        ],
+        "prospectTotal": 10,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 3,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s17",
+          "s25",
+          "s33"
+        ],
+        "recovery": [
+          {
+            "id": "s25",
+            "jumps": 2,
+            "habitability": 88
+          },
+          {
+            "id": "s33",
+            "jumps": 3,
+            "habitability": 71
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 13
+          },
+          {
+            "factionId": "khar",
+            "jumps": 13
+          },
+          {
+            "factionId": "choir",
+            "jumps": 11
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s19",
+            "type": "echo",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-126",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 2,
+        "neighbors": [
+          "s21",
+          "s6"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s3",
+          "s6",
+          "s21"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s6",
+            "name": "Aurelia",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 4,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 3,
+            "nearestRival": 10
+          },
+          {
+            "id": "s21",
+            "name": "Thalassa",
+            "type": "ice",
+            "habitability": 42,
+            "richness": 2,
+            "science": 4,
+            "degree": 4,
+            "outwardReach2": 5,
+            "nearestRival": 9
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 3,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s6",
+          "s10",
+          "s26"
+        ],
+        "recovery": [
+          {
+            "id": "s10",
+            "jumps": 3,
+            "habitability": 62
+          },
+          {
+            "id": "s26",
+            "jumps": 3,
+            "habitability": 77
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 12
+          },
+          {
+            "factionId": "khar",
+            "jumps": 10
+          }
+        ],
+        "nearestDiscovery": 5,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-14",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 3,
+        "neighbors": [
+          "s13",
+          "s17",
+          "s23"
+        ],
+        "known": 4,
+        "surveyed": [
+          "s3",
+          "s13",
+          "s17"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s13",
+            "name": "Sable",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 2,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 1,
+            "nearestRival": 11
+          },
+          {
+            "id": "s17",
+            "name": "Orison",
+            "type": "arid",
+            "habitability": 58,
+            "richness": 3,
+            "science": 1,
+            "degree": 2,
+            "outwardReach2": 1,
+            "nearestRival": 11
+          }
+        ],
+        "prospectTotal": 9,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s13",
+          "s16",
+          "s17",
+          "s23"
+        ],
+        "recovery": [
+          {
+            "id": "s16",
+            "jumps": 2,
+            "habitability": 70
+          },
+          {
+            "id": "s23",
+            "jumps": 1,
+            "habitability": 63
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 11
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s16",
+            "type": "garden",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-199",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s24",
+          "s30"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s1",
+          "s24",
+          "s30"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s24",
+            "name": "Corvus",
+            "type": "ocean",
+            "habitability": 75,
+            "richness": 5,
+            "science": 1,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 11
+          },
+          {
+            "id": "s30",
+            "name": "Caelum",
+            "type": "ice",
+            "habitability": 43,
+            "richness": 2,
+            "science": 3,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 9
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s8",
+          "s13",
+          "s24",
+          "s33"
+        ],
+        "recovery": [
+          {
+            "id": "s8",
+            "jumps": 2,
+            "habitability": 74
+          },
+          {
+            "id": "s13",
+            "jumps": 2,
+            "habitability": 64
+          },
+          {
+            "id": "s33",
+            "jumps": 2,
+            "habitability": 62
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 11
+          },
+          {
+            "factionId": "khar",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 11
+          }
+        ],
+        "nearestDiscovery": 5,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-199",
+        "factionId": "khar",
+        "capitalId": "s2",
+        "degree": 2,
+        "neighbors": [
+          "s26",
+          "s29"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s2",
+          "s26",
+          "s29"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s26",
+            "name": "Aster",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 4,
+            "science": 1,
+            "degree": 3,
+            "outwardReach2": 3,
+            "nearestRival": 9
+          },
+          {
+            "id": "s29",
+            "name": "Aldebaran",
+            "type": "ice",
+            "habitability": 36,
+            "richness": 3,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 11
+          }
+        ],
+        "prospectTotal": 12,
+        "ordinaryWithin2": 1,
+        "ordinaryWithin3": 2,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s26",
+          "s41"
+        ],
+        "recovery": [
+          {
+            "id": "s41",
+            "jumps": 3,
+            "habitability": 72
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 13
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 13
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s23",
+            "type": "forge",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-201",
+        "factionId": "choir",
+        "capitalId": "s3",
+        "degree": 2,
+        "neighbors": [
+          "s15",
+          "s20"
+        ],
+        "known": 7,
+        "surveyed": [
+          "s3",
+          "s15",
+          "s20"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s15",
+            "name": "Kepler",
+            "type": "ice",
+            "habitability": 44,
+            "richness": 1,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 9
+          },
+          {
+            "id": "s20",
+            "name": "Sundrift",
+            "type": "ocean",
+            "habitability": 75,
+            "richness": 4,
+            "science": 2,
+            "degree": 4,
+            "outwardReach2": 4,
+            "nearestRival": 9
+          }
+        ],
+        "prospectTotal": 10,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 3,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s8",
+          "s20",
+          "s23"
+        ],
+        "recovery": [
+          {
+            "id": "s8",
+            "jumps": 2,
+            "habitability": 71
+          },
+          {
+            "id": "s23",
+            "jumps": 3,
+            "habitability": 58
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 10
+          },
+          {
+            "factionId": "veyr",
+            "jumps": 13
+          },
+          {
+            "factionId": "khar",
+            "jumps": 12
+          }
+        ],
+        "nearestDiscovery": 3,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      },
+      {
+        "seed": "stage30-map-470",
+        "factionId": "veyr",
+        "capitalId": "s1",
+        "degree": 2,
+        "neighbors": [
+          "s24",
+          "s39"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s1",
+          "s24",
+          "s39"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s24",
+            "name": "Corvus",
+            "type": "terran",
+            "habitability": 81,
+            "richness": 1,
+            "science": 4,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 11
+          },
+          {
+            "id": "s39",
+            "name": "Eos",
+            "type": "arid",
+            "habitability": 55,
+            "richness": 4,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 4,
+            "nearestRival": 9
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 4,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s18",
+          "s24",
+          "s30",
+          "s39"
+        ],
+        "recovery": [
+          {
+            "id": "s18",
+            "jumps": 2,
+            "habitability": 63
+          },
+          {
+            "id": "s30",
+            "jumps": 2,
+            "habitability": 78
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "player",
+            "jumps": 13
+          },
+          {
+            "factionId": "khar",
+            "jumps": 12
+          },
+          {
+            "factionId": "choir",
+            "jumps": 10
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s18",
+            "type": "garden",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      }
+    ],
+    "highestRetry": [
+      {
+        "seed": "stage30-map-7",
+        "attempts": 8,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-114",
+        "attempts": 7,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-240",
+        "attempts": 7,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-290",
+        "attempts": 7,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-314",
+        "attempts": 7,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-341",
+        "attempts": 7,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-461",
+        "attempts": 7,
+        "fallback": false
+      },
+      {
+        "seed": "stage30-map-47",
+        "attempts": 6,
+        "fallback": false
+      }
+    ]
+  },
+  "uiSelection": {
+    "ruleA": "First declared seed whose Concord ore prospect requires Ecology, ordinary worlds within2 <=2, and recovery is at least2 jumps away.",
+    "ruleB": "First declared seed with both Concord prospects ordinarily habitable and their capital-avoiding2-hop outward reach differs by at least3.",
+    "A": {
+      "seed": "stage30-map-16",
+      "home": {
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 2,
+        "neighbors": [
+          "s28",
+          "s38"
+        ],
+        "known": 5,
+        "surveyed": [
+          "s0",
+          "s28",
+          "s38"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s28",
+            "name": "Haven",
+            "type": "ice",
+            "habitability": 42,
+            "richness": 5,
+            "science": 2,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          },
+          {
+            "id": "s38",
+            "name": "Zenith",
+            "type": "terran",
+            "habitability": 87,
+            "richness": 1,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 6,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s14",
+          "s22",
+          "s23",
+          "s38"
+        ],
+        "recovery": [
+          {
+            "id": "s14",
+            "jumps": 3,
+            "habitability": 80
+          },
+          {
+            "id": "s22",
+            "jumps": 2,
+            "habitability": 85
+          },
+          {
+            "id": "s23",
+            "jumps": 3,
+            "habitability": 63
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 7
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          },
+          {
+            "factionId": "choir",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s18",
+            "type": "wreck",
+            "jumps": 2
+          },
+          {
+            "id": "s22",
+            "type": "wreck",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      }
+    },
+    "B": {
+      "seed": "stage30-map-12",
+      "home": {
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 3,
+        "neighbors": [
+          "s19",
+          "s33",
+          "s8"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s0",
+          "s8",
+          "s33"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s8",
+            "name": "Caldera",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 5,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 5
+          },
+          {
+            "id": "s33",
+            "name": "Halcyon",
+            "type": "arid",
+            "habitability": 64,
+            "richness": 1,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s8",
+          "s11",
+          "s33",
+          "s39"
+        ],
+        "recovery": [
+          {
+            "id": "s11",
+            "jumps": 2,
+            "habitability": 62
+          },
+          {
+            "id": "s39",
+            "jumps": 2,
+            "habitability": 82
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 6
+          },
+          {
+            "factionId": "khar",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 1,
+        "discoveriesWithin2": [
+          {
+            "id": "s11",
+            "type": "archive",
+            "jumps": 2
+          },
+          {
+            "id": "s17",
+            "type": "pilgrims",
+            "jumps": 2
+          },
+          {
+            "id": "s19",
+            "type": "observatory",
+            "jumps": 1
+          }
+        ],
+        "portableWithin1": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+Two predeclared ordinary UI openings
+Frozen production URL: http://127.0.0.1:33775
+Served source: a7c955dd83e35ee98346f7877c11339d52de9ba5, version0.22.0, built2026-10-29T15:18:04.546Z.
+These openings retain the ORIGINAL discovery distribution. They are not playtests of the later a5077ea access correction or dormant-lane mechanics.
+
+Selection and method
+Before play, the fixed audit selected:
+A stage30-map-16: a surveyed42% ore5/science2 Haven versus87% ore1/science3 Zenith; an Ecology-dependent local ore commitment is possible.
+B stage30-map-12: surveyed Caldera60% ore5/science2 and Halcyon64% ore1/science3 are both ordinarily settleable, with different visible exits.
+
+The same goal was pursued: build a compact economic/science foundation, without early aggression. Each began in a separate fresh Chromium context through the normal New campaign controls. The default ASTERION startup was shown before entering the requested seed; no orders were played there. Decisions used rendered planet, route, queue, research and offer information. Audit classifications selected the contrast; hidden future terrain or reward locations did not select subsequent actions. There were no imports, edited saves, resource grants, engine commands, rollback, policy automation or browser recovery during the UI sessions. The driver executes explicit manually supplied clicks/keys and records receipts; it has no game-state API calls or strategic policy.
+
+A: Ecology and a paid early Ark
+The displayed comparison showed a high-ore world that could not yet be settled, and a safe science world. With no directly adjacent unsurveyed star, the scout followed safe Zenith and its only non-home connection to unknown Cinder, spending two ordinary jumps. Cinder proved21% habitable and held a Wreck. Its visible choices were90 credits versus40 science/30 minerals. The science/minerals supported the actual local Ecology plan; Cinder could not substitute as an ordinary colony.
+
+The first Ark settled Zenith normally during cycle1. Ecology was selected before the generic industrial path. The Wreck accelerated it, but the player still paid for a second Ark at Solace and waited for production. The capital's queue went to that Ark before a laboratory; Zenith's own lab began at2. Ecology completed at4; Physics followed. The new Ark completed at6 and settled42% Haven in the same cycle. Haven's mine and the capital lab were then commissioned normally.
+
+Actual final checkpoint: cycle6, three worlds,10 population,28 credits,10 minerals,11 science income; Ecology complete, Physics17/60. Zenith and Solace laboratories and Haven's mine were still under construction. The prefix stopped here; no victory, defense or long-term efficiency claim is made.
+
+B: ordinary ore access and science-first development
+A third directly adjacent unknown star was visible alongside the two surveyed prospects. The scout visited that one-jump option, Bellatrix, before committing the Ark. Bellatrix proved23% habitable and contained the Observatory. Its permanent route required later settlement and supporting research; its climate would require Worldshaping. Salvage was chosen for65 minerals/20 science rather than buying a restoration commitment outside this opening's plan.
+
+The initial Ark settled Caldera's already-accessible ore. Physics was chosen instead of Ecology. The capital lab and Caldera mine were commissioned first; only after the lab completed at5 was the next Ark paid for. A real funded Veyr trade offer arrived at6 and interrupted a planned second End cycle. With one escort and the third local site still unclaimed, reciprocal access was declined for one order, sacrificing the proposed6-credit income. This was a plausible risk choice, not proof that Veyr would otherwise settle the site.
+
+Physics completed at7, then Logistics was chosen. At9, the new Ark settled still-unclaimed64% Halcyon without Ecology; Halcyon's lab was commissioned. The actual checkpoint has three worlds,11 population,85 credits,126 minerals and22 science income; Physics complete and Logistics43/55. The capital lab and Caldera mine are operating, while Halcyon's lab is queued. The prefix stopped here.
+
+What this does and does not demonstrate
+The changes went beyond world names: first research capability, the role of the first colony, capital queue priority, discovery investment and timing of the second settlement differed. In A, omitting Ecology would make the chosen42% colony illegal; in B it is unnecessary for the two chosen colonies. The two surveyed prospects supplied an informed initial commitment without paying for repeated blind inspection flights. Scouts still had unknown branches and different reachable discovery commitments.
+
+This is not a controlled estimate that one opening is stronger. The rewards differ (40 versus20 early science), and so do planets, geography, choices and stop cycles. Another ordinary world might justify scouting rather than early Ecology in A; the UI prefix did not establish the optimal alternative. Both plans may converge later. Two manually directed openings by the reviewer do not establish human retention, fun, general balance or repeated optimizer diversity. Neither is a complete campaign. No late-game or rival gate response was tested.
+
+One small product wording concern was directly observed: the on-map first-mandate card still says to scout a neighboring star although A's two home neighbors are already surveyed. The new objective log/knowledge state is more specific. This is a wording consistency issue, not a failure to find a viable opening. The inspector correctly labels remote fleet presence unknown despite the free planet surveys.
+
+Provenance and error accounting
+27 requests including final close,127 successful UI interaction receipts,26 observations,7 selected screenshots,2 actual exported checkpoints and 13 completed cycles (5+8). Counts include navigation/inspection and are not game-order counts. No page errors were recorded. No HTTP-status assertion was collected by this driver.
+
+Three driver failures remain in actions.jsonl:
+- Request7 used an ambiguous Ships text selector that also matched a disabled Shipyard card. No action in that request executed. The data-tab selector was used next.
+- Request18 completed the Observatory salvage, then Escape cleared the selected fleet; the assumed Hold control was absent. The scout was explicitly reselected and the unexecuted tail continued in19. Salvage was not repeated.
+- Request22 paid for the Ark and advanced to6, where an actual Veyr offer blocked the next End cycle. The pending request tail never executed. The visible proposal was reviewed/declined in23, then play advanced normally.
+No successful prefix was erased or relabeled as an unexecuted action.
+
+After both browser contexts were closed, a separate engine reconstruction used only successful gameplay receipts.20 A commands and23 B commands reproduce the respective actual exports in every serialized field. All 43 JSON reload-next-command comparisons match and every state validates. This verifies the history; it is not another played prefix. The optional opaque offerId is omitted for B's unique Veyr incoming-trade decline using the ordinary API's target lookup. The actual receipt identifies Veyr, and the cycle9 visible fleet roster records the consumed Ark as f16. No state patch or action-value correction was needed.
+
+Artifacts
+ui/actions.jsonl: unmodified requests, success receipts, observations, three errors and close event.
+ui/*-*.json: visible DOM observations, not hidden-state projections.
+ui/a-actual-cycle6.json and ui/b-actual-cycle9.json: actual UI downloads, preserved unchanged.
+ui/served-build-info.json: exact served source pin.
+ui/normalized-commands.json and ui/replay-results.json: separate post-session derivation and exact comparison.
+ui-driver.mjs: explicit UI receipt driver, environment/port-specific.
+ui-replay.mjs: portable pinned-Git engine reconstruction; temporary sources are removed.

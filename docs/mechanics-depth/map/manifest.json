@@ -1,0 +1,290 @@
+{
+  "scope": "Original a7c955d map audit and UI prefixes; separate corrected a5077ea initial-map recheck. No integrated release or fun certification.",
+  "auditScript": {
+    "file": "scripts/map-generation-audit.mjs",
+    "sha256": "5229d9e42e51b9838799a3673c55c170aef2b946c9f0dfd999f2d18093ca1086"
+  },
+  "localHtmlLinksChecked": 11,
+  "files": [
+    {
+      "file": "README.txt",
+      "bytes": 2694,
+      "sha256": "61e6d035f45431a42b41c9e1c39fb2ca84e56f744091464df76d0a3d21efbd98"
+    },
+    {
+      "file": "audit-results.json.gz",
+      "bytes": 1051863,
+      "sha256": "4fc22b4596c66f8ee7d31874140ce3d0c7f609c3b7fb051965083498ab96505a"
+    },
+    {
+      "file": "audit-stdout.txt",
+      "bytes": 13059,
+      "sha256": "d86f99783da54c6bec2b5e57ea38471a11452bde328648caf87ff64f6a5b809c"
+    },
+    {
+      "file": "corrected-audit-stdout.txt",
+      "bytes": 12954,
+      "sha256": "6ca606d93747b131ca61625f3200b7981c9fe07a9220f9130d472cd9a8ba2341"
+    },
+    {
+      "file": "corrected-map/audit-results.json.gz",
+      "bytes": 1087820,
+      "sha256": "1ea28746e362ef454853cb793abb53be88db0b104055ecabb38147ed8ed48620"
+    },
+    {
+      "file": "corrected-map/comparison.json",
+      "bytes": 1001,
+      "sha256": "17e4787143794ff4f5524fca3ec49a4a181fc24b71ea0c07e46c928cc82e6a77"
+    },
+    {
+      "file": "corrected-map/report.txt",
+      "bytes": 3486,
+      "sha256": "b7ebb7a350f0d0f0c9834f9abcedf35dbef34449b79997ba3f84512fa125c7b9"
+    },
+    {
+      "file": "corrected-map/source-manifest.json",
+      "bytes": 3408,
+      "sha256": "798719bc6d16393ca144fbc05a0df799ec9038986185068dd54d6c419f795e57"
+    },
+    {
+      "file": "corrected-map/summary.json",
+      "bytes": 76018,
+      "sha256": "5fe7e5d9fa1d5d6ea62b43dc75f86fc18b154ff696592586238f0239b9ac8c0d"
+    },
+    {
+      "file": "index.html",
+      "bytes": 4802,
+      "sha256": "846be7d26af1ec20194e7402c36823e4f03c44d0ad1dd3d6662542e04d48a8c6"
+    },
+    {
+      "file": "report.txt",
+      "bytes": 10248,
+      "sha256": "b20f8ee34b093a50318dd5900b9b86a2609af2454da4c004958a1266697d2c8a"
+    },
+    {
+      "file": "source-manifest.json",
+      "bytes": 3314,
+      "sha256": "0f004fa0de97fdc36f150e76c70ee2809a50b60e029adf5b091924c2362e470f"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 75827,
+      "sha256": "409de3cd51f3e38f5d9a4a0cce65d3a329603bdc4e07b54f1f113345a0564ad9"
+    },
+    {
+      "file": "ui-driver.mjs",
+      "bytes": 3638,
+      "sha256": "2836a3a3bcb64047f6e2edd91f36637475fe10d6370639eaf521994838ae0262"
+    },
+    {
+      "file": "ui-replay.mjs",
+      "bytes": 5134,
+      "sha256": "1019fa894d903323155802a8ef9a4a03b5602a68b5c80e8fd392710249fbc9ae"
+    },
+    {
+      "file": "ui-report.txt",
+      "bytes": 7994,
+      "sha256": "099b7a687980b7f2ae309788638a16ee9de9b5c5c87e2e0c25ac4f646648d4c4"
+    },
+    {
+      "file": "ui/001-a-initial.json",
+      "bytes": 6829,
+      "sha256": "0e5c9e4a5e611b9a659fd5ba3e677984904951cf9507c5c368ba01a3649d2538"
+    },
+    {
+      "file": "ui/001-a-initial.png",
+      "bytes": 570639,
+      "sha256": "6d7f94bfe2aee03b51d23393d34690e654caae2fd396d30089a109d9a4d0cdb4"
+    },
+    {
+      "file": "ui/002-a-haven.json",
+      "bytes": 3906,
+      "sha256": "9dc20d72b5d2a665018246c0ff26464447a4e98576aeb56deba96e6880a0f274"
+    },
+    {
+      "file": "ui/003-a-zenith.json",
+      "bytes": 4002,
+      "sha256": "357f31ab246fd2ab2c642340314bd507b4196bcc38a7c7a095971fd77e4913ae"
+    },
+    {
+      "file": "ui/004-a-first-outer.json",
+      "bytes": 4994,
+      "sha256": "871a9242d4abb42120915da01c1b53679f340123748588f2f5c17d0e98baf666"
+    },
+    {
+      "file": "ui/004-a-first-outer.png",
+      "bytes": 618698,
+      "sha256": "213231166d63348652e10f21b5597b34a48dd17fe1ba6d874fca37dce4158204"
+    },
+    {
+      "file": "ui/005-a-ecology-and-wreck-choice.json",
+      "bytes": 6043,
+      "sha256": "105073eef331840626ee277fe0fd29e3c1bc74848205a031e0fd1583471d6e35"
+    },
+    {
+      "file": "ui/006-a-first-colony-and-next-ark.json",
+      "bytes": 10636,
+      "sha256": "5ad628d64111f1e1b2404d923fe51585abadbccb6d3a76cea5fb8f1ebb35b44a"
+    },
+    {
+      "file": "ui/007-after-error.json",
+      "bytes": 10636,
+      "sha256": "c3052def5cd24ce4a34e34508ec94148360875d58ce73baea8680762a25d0c7b"
+    },
+    {
+      "file": "ui/008-a-cycle2.json",
+      "bytes": 7408,
+      "sha256": "cd9b4fd0d3a4dc8cad63dc78e4629dd0c629f83269d4b029d458bda28af6586e"
+    },
+    {
+      "file": "ui/009-a-cycle3.json",
+      "bytes": 5053,
+      "sha256": "6e93d723e01b18c2bf5aef1f5edd2705cd750011a5e023a61981e0a1efdbe84a"
+    },
+    {
+      "file": "ui/010-a-ecology-complete.json",
+      "bytes": 5997,
+      "sha256": "bd568961f8bb50b9248042a8dd3c1e804c3d7b9b614140d624db1cbb903bec01"
+    },
+    {
+      "file": "ui/010-a-ecology-complete.png",
+      "bytes": 334038,
+      "sha256": "8e9405ae875a7ca34e226a28c3d8bbf254704cc5a4502b3ac69e0d7fcf887c65"
+    },
+    {
+      "file": "ui/011-a-ark-ready.json",
+      "bytes": 7721,
+      "sha256": "a99f76526175cd539c285bc090a97f5448c9e2674be3bcb171b8f49e15b51e93"
+    },
+    {
+      "file": "ui/012-a-three-world-commitment.json",
+      "bytes": 6166,
+      "sha256": "a9bcfcb2485cb3b532b4f3ad0f6b8a494c1e37aa7e185fe13e44550445bfb5b1"
+    },
+    {
+      "file": "ui/012-a-three-world-commitment.png",
+      "bytes": 349368,
+      "sha256": "46c333cad029fdc19c238c2ac65952452a3286a1dffe3eab25e9fc07c13f6a33"
+    },
+    {
+      "file": "ui/013-b-initial.json",
+      "bytes": 6951,
+      "sha256": "1dea6af93e509ae167dd710c610004d0c6d393bbf61e8ba7d1908dcc4cb8e416"
+    },
+    {
+      "file": "ui/013-b-initial.png",
+      "bytes": 598079,
+      "sha256": "a0110b1d09a28822b6d21b4a7b1d8ad0ea5ac8bc3af64d0eb891304c58e2f7c6"
+    },
+    {
+      "file": "ui/014-b-caldera.json",
+      "bytes": 4010,
+      "sha256": "b45d91230b752ab057a4d88a2c9e4c0c88693c48593a8751378d55002ee31758"
+    },
+    {
+      "file": "ui/015-b-halcyon.json",
+      "bytes": 4062,
+      "sha256": "348d9dbd68894eec08490922c50f9c136ad402a17868076c3492fd4835b67b57"
+    },
+    {
+      "file": "ui/016-b-direct-unknown-neighbor.json",
+      "bytes": 4961,
+      "sha256": "4feddff4c287350817a89555c4add6432da643c7929aefb95f9f2ca4eeca5e71"
+    },
+    {
+      "file": "ui/016-b-direct-unknown-neighbor.png",
+      "bytes": 638982,
+      "sha256": "a7773491fa6d1d0793e83e3d384d5b0881946cbbf9fa109579b056f643e43501"
+    },
+    {
+      "file": "ui/017-b-physics-observatory-choice.json",
+      "bytes": 7237,
+      "sha256": "25f808fdd0ec1b387c351fadd8d8c693bbc638eaef1cf3797e13d2fb0cf58479"
+    },
+    {
+      "file": "ui/018-after-error.json",
+      "bytes": 4482,
+      "sha256": "1ebb15eba2c0df2c18e710e76c326ed4a9611212dafa95aa29613115e6c05b85"
+    },
+    {
+      "file": "ui/019-b-cycle2.json",
+      "bytes": 7479,
+      "sha256": "e282d19efef43d7fecbc49dc24ef22449176295687ee0c929d09eb0d89485980"
+    },
+    {
+      "file": "ui/020-b-cycle4.json",
+      "bytes": 7593,
+      "sha256": "aaa0921f5d5280569a63ed6c4ab55896bb5189c898ef1e150e4f67b2a01d6549"
+    },
+    {
+      "file": "ui/021-b-lab-complete.json",
+      "bytes": 7550,
+      "sha256": "9690c3938328fa80d243aeb80a1835898fc6c2bb070b844fdc2575affaa138e8"
+    },
+    {
+      "file": "ui/022-after-error.json",
+      "bytes": 8710,
+      "sha256": "cefacc6656e57ece78987545b515e7473be76be96df77d128b7b114dc64215da"
+    },
+    {
+      "file": "ui/023-b-cycle7-decline-access.json",
+      "bytes": 7600,
+      "sha256": "677c4d66614084f9d07956c0d1ad57839be70a5d7cde97a120a2bbcd45c8d0fa"
+    },
+    {
+      "file": "ui/024-b-cycle8.json",
+      "bytes": 7591,
+      "sha256": "cf0025d695c4aaf7d6624ae2d80c94f757bb45ddcee2d251da0d0278004350be"
+    },
+    {
+      "file": "ui/025-b-second-colony-check.json",
+      "bytes": 4778,
+      "sha256": "7a88098a0a31ceb67b73887b0170d04a8407ced4e6ff3bd3f2bb62f4de34d104"
+    },
+    {
+      "file": "ui/026-b-three-world-commitment.json",
+      "bytes": 5692,
+      "sha256": "1b69c2ba590fbb05e750fcd9f876f8f5a324e97d334888d4eb70a109427eeb87"
+    },
+    {
+      "file": "ui/026-b-three-world-commitment.png",
+      "bytes": 340402,
+      "sha256": "0506ef0918b162f6ca698a3f6d90ca832bce84426111a6e57a4603e1a26f690d"
+    },
+    {
+      "file": "ui/a-actual-cycle6.json",
+      "bytes": 38809,
+      "sha256": "db72149f4f9b9b9ebbe3f3926024b638c1bd204bd0ab4b9d1ea4292501c95578"
+    },
+    {
+      "file": "ui/actions.jsonl",
+      "bytes": 41185,
+      "sha256": "1fb866834ff477694b0405e43259bd04281cb15eabf4fc01a9a31748aff2613b"
+    },
+    {
+      "file": "ui/b-actual-cycle9.json",
+      "bytes": 41118,
+      "sha256": "8359a106a15b3bf38a2de8245744557722d26ba2362e1f97ae53d6e39eca14e9"
+    },
+    {
+      "file": "ui/normalized-commands.json",
+      "bytes": 13436,
+      "sha256": "818c0ae4d12b90c6b0c1830f4cbfad2dbe42b25c232cac456baf05a24efb0d47"
+    },
+    {
+      "file": "ui/replay-results.json",
+      "bytes": 3650,
+      "sha256": "cd233136a477fc9f3fe5c102a228709990bdc519c35823141f98f7d7a96f4402"
+    },
+    {
+      "file": "ui/replay-stdout.txt",
+      "bytes": 1790,
+      "sha256": "bd50219ca157f7ddbcee43f1e28e374b8fc82b06c4bee6caf7afb0b213520b5d"
+    },
+    {
+      "file": "ui/served-build-info.json",
+      "bytes": 122,
+      "sha256": "0e6052bb3a3f4d33e5ec9436ce1c5c818ed351a2a3fbf930068c85a25f36561a"
+    }
+  ]
+}

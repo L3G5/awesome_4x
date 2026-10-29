@@ -1,0 +1,125 @@
+{
+  "request": 26,
+  "seed": "stage30-map-12",
+  "url": "http://127.0.0.1:33775/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n85+28\nCREDITS\n◇\n126+22\nMINERALS\n✧\n0+22\nSCIENCE\n⌘\n4 / 8\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nMANY WORLDS. ONE HORIZON.\nThe Concord\n\nMake a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.\n\n⌘\nCOLONIZED WORLDS\n3\n\n11 billion citizens across the Reach\n\nFLEET POWER\n15\n\n2 ships · 3 credits upkeep / cycle\n\nLEGACY SCORE\n97\n\nHighest score at cycle 120 wins\n\nCOLONIAL ADMINISTRATION\n\nOutput per cycle, before fleet upkeep and trade. Select a column to compare your worlds.\n\n3 colonies\nWORLD\n↑\n\tSPECIALTY\t\n◈ CREDITS\n↕\n\t\n◇ MINERALS\n↕\n\t\n✧ SCIENCE\n↕\n\t\n▥ WORK\n↕\n\tCONSTRUCTION\t\nINSPECT WORLD\n\nCaldera\n3 / 7 population\n\t\nUnchartered\n1 / 3 slots\n\t9\t11\t5\t7\tIdle\t↗\nHalcyon\n1 / 7 population\n\t\nUnchartered\n0 / 2 slots\n\t5\t1\t5\t5\t\nResearch Enclave\n6 cycles remaining\n\t↗\nSolace\n7 / 8 population\n\t\nUnchartered\n3 / 4 slots\n\t17\t10\t12\t11\tIdle\t↗\n✦ Transcendence\n0 / 10\n\nResearch the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying 60 credits each advancing cycle.\n\n0 / 3 beacons · Research the Asterion Protocol.\n\nA hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.\n\n⌂ Domination\n1 / 4\n\nHold all four founding worlds at the same time. These objectives stay fixed when an empire moves its administrative capital.\n\n⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗\n\n3 founding worlds remain unidentified. Survey the frontier to locate them.\n\nCONFIRMED FOUNDING-WORLD CONTROL\nChoir\n0 / 4 confirmed\nConcord\n1 / 4\nVeyr\n0 / 4 confirmed\nTHE AWAKENING NETWORK\n✦\n\nNo beacon signals from known civilizations yet. Restored nodes and alignment progress become public after diplomatic contact.\n\nFLEET REGISTRY\nPathfinder 1 ×1\nBellatrix · 18 / 18 hull · 3 combat power\nHolding\n2 jumps\nVanguard 3 ×1\nSolace · 34 / 34 hull · 12 combat power\nHolding\n1 jump\nCONCORD ADMINISTRATION\nThe working empire\n\n3 worlds · 11 billion citizens\n\n23\nconstruction work each cycle\n2 idle colonies\nUPCOMING COMPLETIONS\nHalcyon\nResearch Enclave · 6 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →\nCycle 09\n2408 CE\nEND CYCLE →\nSPACE\n4 orders remaining · 3 colonies\nCampaign exported. Keep this file as your backup.\nASTERION REACH / EARLY ACCESS 0.22.0\n● AUTOSAVED\nCampaign exported. Keep this file as your backup.",
+  "inspector": "CONCORD ADMINISTRATION\nThe working empire\n\n3 worlds · 11 billion citizens\n\n23\nconstruction work each cycle\n2 idle colonies\nUPCOMING COMPLETIONS\nHalcyon\nResearch Enclave · 6 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →",
+  "resources": "◈\n85+28\nCREDITS\n◇\n126+22\nMINERALS\n✧\n0+22\nSCIENCE\n⌘\n4 / 8\nORDERS",
+  "buttons": [
+    {
+      "text": "Русский",
+      "action": "language",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "briefing",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "menu",
+      "disabled": false
+    },
+    {
+      "text": "Galaxy",
+      "disabled": false
+    },
+    {
+      "text": "Research",
+      "disabled": false
+    },
+    {
+      "text": "Diplomacy",
+      "disabled": false
+    },
+    {
+      "text": "Empire",
+      "disabled": false
+    },
+    {
+      "text": "Chronicle",
+      "disabled": false
+    },
+    {
+      "text": "Home",
+      "action": "home",
+      "disabled": false
+    },
+    {
+      "text": "WORLD\n↑",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "◈ CREDITS\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "◇ MINERALS\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "✧ SCIENCE\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "▥ WORK\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "↗",
+      "action": "inspect",
+      "system": "s8",
+      "disabled": false
+    },
+    {
+      "text": "↗",
+      "action": "inspect",
+      "system": "s33",
+      "disabled": false
+    },
+    {
+      "text": "↗",
+      "action": "inspect",
+      "system": "s0",
+      "disabled": false
+    },
+    {
+      "text": "⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗",
+      "action": "inspect",
+      "system": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Pathfinder 1 ×1\nBellatrix · 18 / 18 hull · 3 combat power\nHolding\n2 jumps",
+      "fleet": "f1",
+      "disabled": false
+    },
+    {
+      "text": "Vanguard 3 ×1\nSolace · 34 / 34 hull · 12 combat power\nHolding\n1 jump",
+      "fleet": "f3",
+      "disabled": false
+    },
+    {
+      "text": "Halcyon\nResearch Enclave · 6 cycles\n↗",
+      "action": "inspect",
+      "system": "s33",
+      "disabled": false
+    },
+    {
+      "text": "Review alignment requirements →",
+      "action": "review-alignment",
+      "disabled": false
+    },
+    {
+      "text": "END CYCLE →\nSPACE",
+      "action": "end-turn",
+      "disabled": false
+    }
+  ]
+}

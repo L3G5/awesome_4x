@@ -1,0 +1,167 @@
+{
+  "request": 9,
+  "seed": "stage30-map-16",
+  "url": "http://127.0.0.1:33775/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n61+13\nCREDITS\n◇\n55+10\nMINERALS\n✧\n0+7\nSCIENCE\n⌘\n7 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nAshfall\nUNSURVEYED\nIlyra\nUNSURVEYED\nCinder\nVOLCANIC\nOphion\nUNSURVEYED\nHaven\nGLACIAL\nHalcyon\nUNSURVEYED\nZenith\nCONCORD\n△\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n8 charted systems · 4 surveyed · seed stage30-map-16\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Cinder\n\nCinder → Zenith · 1 order · Holding position\n\nMove →\n↶\nResume\n⌁ 2\n⇥\n△\n▴\nTHE CONCORD\nZenith\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n87%\nHABITABILITY\n1/8\nPOPULATION\n5\nPRODUCTION\nCOLONY PRODUCTION\n5 / CYCLE\n✧\nResearch Enclave\n\n5 cycles to completion\n\n×\nINFRASTRUCTURE\n0 / 2 SLOTS\n\nA new world, waiting to take shape.\n\n2 open slots. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+5 credits · +1 minerals · +3 science\n\nCONNECTED SYSTEMS\nSolace ↗\nCinder ↗\nCycle 03\n2402 CE\nEND CYCLE →\nSPACE\n7 orders remaining · 2 colonies\nTurn 3: a new mandate begins.\nASTERION REACH / EARLY ACCESS 0.22.0\n● AUTOSAVED\nTurn 3: a new mandate begins.",
+  "inspector": "THE CONCORD\nZenith\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n87%\nHABITABILITY\n1/8\nPOPULATION\n5\nPRODUCTION\nCOLONY PRODUCTION\n5 / CYCLE\n✧\nResearch Enclave\n\n5 cycles to completion\n\n×\nINFRASTRUCTURE\n0 / 2 SLOTS\n\nA new world, waiting to take shape.\n\n2 open slots. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+5 credits · +1 minerals · +3 science\n\nCONNECTED SYSTEMS\nSolace ↗\nCinder ↗",
+  "resources": "◈\n61+13\nCREDITS\n◇\n55+10\nMINERALS\n✧\n0+7\nSCIENCE\n⌘\n7 / 7\nORDERS",
+  "buttons": [
+    {
+      "text": "Русский",
+      "action": "language",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "briefing",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "menu",
+      "disabled": false
+    },
+    {
+      "text": "Galaxy",
+      "disabled": false
+    },
+    {
+      "text": "Research",
+      "disabled": false
+    },
+    {
+      "text": "Diplomacy",
+      "disabled": false
+    },
+    {
+      "text": "Empire",
+      "disabled": false
+    },
+    {
+      "text": "Chronicle",
+      "disabled": false
+    },
+    {
+      "text": "Home",
+      "action": "home",
+      "disabled": false
+    },
+    {
+      "text": "⌂Solace\nCONCORD",
+      "disabled": false
+    },
+    {
+      "text": "Ashfall\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Ilyra\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Cinder\nVOLCANIC",
+      "disabled": false
+    },
+    {
+      "text": "Ophion\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Haven\nGLACIAL",
+      "disabled": false
+    },
+    {
+      "text": "Halcyon\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Zenith\nCONCORD",
+      "disabled": false
+    },
+    {
+      "text": "△",
+      "disabled": false
+    },
+    {
+      "text": "▴",
+      "disabled": false
+    },
+    {
+      "text": "+",
+      "action": "zoom-in",
+      "disabled": false
+    },
+    {
+      "text": "−",
+      "action": "zoom-out",
+      "disabled": false
+    },
+    {
+      "text": "⌖",
+      "action": "reset-view",
+      "disabled": false
+    },
+    {
+      "text": "Move →",
+      "action": "move",
+      "disabled": false
+    },
+    {
+      "text": "↶",
+      "select": "s18",
+      "disabled": false
+    },
+    {
+      "text": "Resume",
+      "action": "fleet-hold",
+      "disabled": false
+    },
+    {
+      "text": "⌁ 2",
+      "action": "fleet-roster",
+      "disabled": false
+    },
+    {
+      "text": "⇥",
+      "action": "next-fleet",
+      "disabled": false
+    },
+    {
+      "text": "△",
+      "fleet": "f1",
+      "disabled": false
+    },
+    {
+      "text": "▴",
+      "fleet": "f3",
+      "disabled": false
+    },
+    {
+      "text": "×",
+      "action": "cancel-build",
+      "system": "s38",
+      "disabled": false
+    },
+    {
+      "text": "Develop →",
+      "action": "development-menu",
+      "system": "s38",
+      "disabled": false
+    },
+    {
+      "text": "Solace ↗",
+      "select": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Cinder ↗",
+      "select": "s18",
+      "disabled": false
+    },
+    {
+      "text": "END CYCLE →\nSPACE",
+      "action": "end-turn",
+      "disabled": false
+    }
+  ]
+}

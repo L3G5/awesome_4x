@@ -1,0 +1,581 @@
+{
+  "candidateCommit": "a5077ea9fd3fca2cf5be834bc1715ad1c951135e",
+  "summary": {
+    "candidate": {
+      "maps": 512,
+      "edgeCount": {
+        "count": 512,
+        "min": 52,
+        "p10": 54,
+        "median": 57,
+        "p90": 59,
+        "max": 64,
+        "mean": 56.759765625
+      },
+      "diameter": {
+        "count": 512,
+        "min": 10,
+        "p10": 12,
+        "median": 13,
+        "p90": 15,
+        "max": 18,
+        "mean": 13.31640625
+      },
+      "capitalTravel": {
+        "count": 3072,
+        "min": 5,
+        "p10": 5,
+        "median": 8,
+        "p90": 11,
+        "max": 13,
+        "mean": 8.150065104166666
+      },
+      "separation": {
+        "count": 512,
+        "min": 6.3007936008093415,
+        "p10": 6.3245553203367555,
+        "median": 6.5,
+        "p90": 6.911584478250987,
+        "max": 7.553806987208503,
+        "mean": 6.571210802317434
+      },
+      "bridges": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 2,
+        "p90": 6,
+        "max": 16,
+        "mean": 2.4140625
+      },
+      "articulationPoints": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 4,
+        "p90": 11,
+        "max": 19,
+        "mean": 5.09765625
+      },
+      "maxDegree": {
+        "count": 512,
+        "min": 4,
+        "p10": 4,
+        "median": 4,
+        "p90": 5,
+        "max": 6,
+        "mean": 4.4921875
+      },
+      "uniqueCapitalColoredRefinementSignatures": 512,
+      "uniqueConcordNeighborSets": 467,
+      "uniqueHomeDegreeTuples": 61,
+      "homeDegreeCounts": {
+        "2": 1011,
+        "3": 820,
+        "4": 217
+      },
+      "capitalDistanceVectors": 504,
+      "edgeJaccardAgainstFirstMap": {
+        "count": 511,
+        "min": 0,
+        "p10": 0.017391304347826087,
+        "median": 0.036036036036036036,
+        "p90": 0.056074766355140186,
+        "max": 0.10679611650485436,
+        "mean": 0.03521416152585955
+      },
+      "initialKnown": {
+        "count": 2048,
+        "min": 4,
+        "p10": 5,
+        "median": 6,
+        "p90": 8,
+        "max": 10,
+        "mean": 6.48046875
+      },
+      "initialSurveyed": {
+        "count": 2048,
+        "min": 3,
+        "p10": 3,
+        "median": 3,
+        "p90": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "ordinaryWithin2": {
+        "count": 2048,
+        "min": 1,
+        "p10": 2,
+        "median": 3,
+        "p90": 5,
+        "max": 9,
+        "mean": 3.412109375
+      },
+      "ordinaryWithin3": {
+        "count": 2048,
+        "min": 2,
+        "p10": 3,
+        "median": 5,
+        "p90": 7,
+        "max": 10,
+        "mean": 4.96142578125
+      },
+      "nearestDiscovery": {
+        "count": 2048,
+        "min": 1,
+        "p10": 1,
+        "median": 2,
+        "p90": 3,
+        "max": 3,
+        "mean": 1.92529296875
+      },
+      "discoveriesWithin2": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 1,
+        "p90": 2,
+        "max": 3,
+        "mean": 1.3515625
+      },
+      "portableWithin1": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 0,
+        "p90": 1,
+        "max": 2,
+        "mean": 0.1728515625
+      },
+      "discoveryPositionSets": 512,
+      "distinctDiscoveryWorlds": 38,
+      "discoveryTypeCounts": {
+        "observatory": 512,
+        "reef": 512,
+        "forge": 691,
+        "wreck": 670,
+        "garden": 685,
+        "archive": 675,
+        "pilgrims": 692,
+        "echo": 683
+      },
+      "prospectResources": {
+        "count": 2048,
+        "min": 8,
+        "p10": 9,
+        "median": 11,
+        "p90": 13,
+        "max": 14,
+        "mean": 11.14013671875
+      },
+      "prospectClimateCounts": {
+        "ecology,ordinary": 1048,
+        "ordinary,ordinary": 1000
+      }
+    },
+    "baseline": {
+      "maps": 512,
+      "edgeCount": {
+        "count": 512,
+        "min": 51,
+        "p10": 54,
+        "median": 56,
+        "p90": 59,
+        "max": 62,
+        "mean": 56.248046875
+      },
+      "diameter": {
+        "count": 512,
+        "min": 10,
+        "p10": 12,
+        "median": 15,
+        "p90": 21,
+        "max": 27,
+        "mean": 16.078125
+      },
+      "capitalTravel": {
+        "count": 3072,
+        "min": 5,
+        "p10": 6,
+        "median": 7,
+        "p90": 13,
+        "max": 23,
+        "mean": 8.725260416666666
+      },
+      "separation": {
+        "count": 512,
+        "min": 0.10000000000000142,
+        "p10": 1.7888543819998335,
+        "median": 3.324154027718933,
+        "p90": 4.742362280551752,
+        "max": 6.389053137985315,
+        "mean": 3.2673246866542875
+      },
+      "bridges": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 3,
+        "p90": 10,
+        "max": 18,
+        "mean": 3.931640625
+      },
+      "articulationPoints": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 6,
+        "p90": 16,
+        "max": 22,
+        "mean": 7.322265625
+      },
+      "maxDegree": {
+        "count": 512,
+        "min": 3,
+        "p10": 4,
+        "median": 5,
+        "p90": 5,
+        "max": 6,
+        "mean": 4.541015625
+      },
+      "uniqueCapitalColoredRefinementSignatures": 512,
+      "uniqueConcordNeighborSets": 7,
+      "uniqueHomeDegreeTuples": 53,
+      "homeDegreeCounts": {
+        "2": 373,
+        "3": 1167,
+        "4": 502,
+        "5": 6
+      },
+      "capitalDistanceVectors": 466,
+      "edgeJaccardAgainstFirstMap": {
+        "count": 511,
+        "min": 0.4125,
+        "p10": 0.47368421052631576,
+        "median": 0.5324675324675324,
+        "p90": 0.5915492957746479,
+        "max": 0.6865671641791045,
+        "mean": 0.5314218572039002
+      },
+      "initialKnown": {
+        "count": 2048,
+        "min": 3,
+        "p10": 3,
+        "median": 4,
+        "p90": 5,
+        "max": 6,
+        "mean": 4.06884765625
+      },
+      "initialSurveyed": {
+        "count": 2048,
+        "min": 1,
+        "p10": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1,
+        "mean": 1
+      },
+      "ordinaryWithin2": {
+        "count": 2048,
+        "min": 1,
+        "p10": 2,
+        "median": 3,
+        "p90": 5,
+        "max": 7,
+        "mean": 3.41650390625
+      },
+      "ordinaryWithin3": {
+        "count": 2048,
+        "min": 1,
+        "p10": 3,
+        "median": 5,
+        "p90": 7,
+        "max": 10,
+        "mean": 5.08056640625
+      },
+      "nearestDiscovery": {
+        "count": 2048,
+        "min": 1,
+        "p10": 1,
+        "median": 1.5,
+        "p90": 4,
+        "max": 7,
+        "mean": 2.2744140625
+      },
+      "discoveriesWithin2": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 1,
+        "p90": 4,
+        "max": 5,
+        "mean": 1.52734375
+      },
+      "portableWithin1": {
+        "count": 2048,
+        "min": 0,
+        "p10": 0,
+        "median": 0,
+        "p90": 2,
+        "max": 3,
+        "mean": 0.74365234375
+      },
+      "discoveryPositionSets": 1,
+      "distinctDiscoveryWorlds": 10,
+      "discoveryTypeCounts": {
+        "archive": 681,
+        "observatory": 512,
+        "wreck": 667,
+        "forge": 722,
+        "reef": 512,
+        "pilgrims": 638,
+        "garden": 694,
+        "echo": 694
+      },
+      "prospectResources": null,
+      "prospectClimateCounts": {}
+    },
+    "attempts": {
+      "count": 512,
+      "min": 1,
+      "p10": 1,
+      "median": 1,
+      "p90": 4,
+      "max": 8,
+      "mean": 1.955078125
+    },
+    "attemptHistogram": {
+      "1": 271,
+      "2": 117,
+      "3": 56,
+      "4": 36,
+      "5": 16,
+      "6": 9,
+      "7": 6,
+      "8": 1
+    },
+    "fallbackSeeds": [],
+    "discoveryPlacementDiagnostics": {
+      "skippedDenseTotal": 26,
+      "skippedDense": {
+        "count": 512,
+        "min": 0,
+        "p10": 0,
+        "median": 0,
+        "p90": 0,
+        "max": 3,
+        "mean": 0.05078125
+      },
+      "startsWithoutSiteWithin3": 0,
+      "startsOver3SitesWithin2": 0
+    },
+    "failures": [],
+    "pairedEdgeJaccard": {
+      "count": 512,
+      "min": 0,
+      "p10": 0.017391304347826087,
+      "median": 0.036036036036036036,
+      "p90": 0.05660377358490566,
+      "max": 0.11538461538461539,
+      "mean": 0.03499717135728785
+    },
+    "neutralIdDisplacement": {
+      "count": 512,
+      "min": 38.46740814049728,
+      "p10": 42.243393941629435,
+      "median": 46.7635886462932,
+      "p90": 50.532343556676416,
+      "max": 55.43359569391158,
+      "mean": 46.59644876856278
+    },
+    "unlabeledPointDistance": {
+      "count": 512,
+      "min": 5.791680177018776,
+      "p10": 6.329561379705692,
+      "median": 6.767485021593144,
+      "p90": 7.24300061040637,
+      "max": 8.007519564546687,
+      "mean": 6.778174798777487
+    },
+    "paidFoundingDrills": 128,
+    "privacyDrills": 16
+  },
+  "uiSelection": {
+    "ruleA": "First declared seed whose Concord ore prospect requires Ecology, ordinary worlds within2 <=2, and recovery is at least2 jumps away.",
+    "ruleB": "First declared seed with both Concord prospects ordinarily habitable and their capital-avoiding2-hop outward reach differs by at least3.",
+    "A": {
+      "seed": "stage30-map-16",
+      "home": {
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 2,
+        "neighbors": [
+          "s28",
+          "s38"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s0",
+          "s28",
+          "s38"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s28",
+            "name": "Haven",
+            "type": "ice",
+            "habitability": 42,
+            "richness": 5,
+            "science": 2,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 6
+          },
+          {
+            "id": "s38",
+            "name": "Zenith",
+            "type": "terran",
+            "habitability": 87,
+            "richness": 1,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 4,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 2,
+        "ordinaryWithin3": 6,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s14",
+          "s22",
+          "s23",
+          "s38"
+        ],
+        "recovery": [
+          {
+            "id": "s14",
+            "jumps": 3,
+            "habitability": 80
+          },
+          {
+            "id": "s22",
+            "jumps": 2,
+            "habitability": 85
+          },
+          {
+            "id": "s23",
+            "jumps": 3,
+            "habitability": 63
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 7
+          },
+          {
+            "factionId": "khar",
+            "jumps": 11
+          },
+          {
+            "factionId": "choir",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 3,
+        "discoveriesWithin2": [],
+        "portableWithin1": 0
+      }
+    },
+    "B": {
+      "seed": "stage30-map-12",
+      "home": {
+        "factionId": "player",
+        "capitalId": "s0",
+        "degree": 3,
+        "neighbors": [
+          "s19",
+          "s33",
+          "s8"
+        ],
+        "known": 6,
+        "surveyed": [
+          "s0",
+          "s8",
+          "s33"
+        ],
+        "contacts": [],
+        "prospects": [
+          {
+            "id": "s8",
+            "name": "Caldera",
+            "type": "arid",
+            "habitability": 60,
+            "richness": 5,
+            "science": 2,
+            "degree": 3,
+            "outwardReach2": 5,
+            "nearestRival": 5
+          },
+          {
+            "id": "s33",
+            "name": "Halcyon",
+            "type": "arid",
+            "habitability": 64,
+            "richness": 1,
+            "science": 3,
+            "degree": 2,
+            "outwardReach2": 2,
+            "nearestRival": 5
+          }
+        ],
+        "prospectTotal": 11,
+        "ordinaryWithin2": 4,
+        "ordinaryWithin3": 5,
+        "ownedCatchmentOrdinaryWithin3": [
+          "s8",
+          "s11",
+          "s33",
+          "s39"
+        ],
+        "recovery": [
+          {
+            "id": "s11",
+            "jumps": 2,
+            "habitability": 62
+          },
+          {
+            "id": "s39",
+            "jumps": 2,
+            "habitability": 82
+          }
+        ],
+        "capitalDistances": [
+          {
+            "factionId": "veyr",
+            "jumps": 6
+          },
+          {
+            "factionId": "khar",
+            "jumps": 10
+          },
+          {
+            "factionId": "choir",
+            "jumps": 6
+          }
+        ],
+        "nearestDiscovery": 2,
+        "discoveriesWithin2": [
+          {
+            "id": "s11",
+            "type": "pilgrims",
+            "jumps": 2
+          }
+        ],
+        "portableWithin1": 0
+      }
+    }
+  }
+}

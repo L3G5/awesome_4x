@@ -1,0 +1,28 @@
+Discovery-access correction: independent fixed-seed recheck
+Candidate a5077ea9fd3fca2cf5be834bc1715ad1c951135e; original frozen audit a7c955dd83e35ee98346f7877c11339d52de9ba5; baseline 810194596a0fa7d02efa418749bb3e27f547229e.
+
+The same 512 predeclared seeds now satisfy both the original geometry/start envelope and the explicit discovery profile: nearest site at most3 ordinary jumps and no more than3 sites within2 ordinary jumps of any capital. There are no failures or map fallbacks. All 128 normal paid founding drills and 16 initial-knowledge drills pass again. These are repeated controlled checks on changed source, not additional independent human play.
+
+The access change is narrow in the measured initial maps. Positions, ordinary active connections, starter prospect attributes/access metrics and per-seed discovery type counts match the original prototype for512/512 seeds. The new commit also contains inactive ancient-lane core metadata; this audit measures the initial active graph and does not validate lane restoration gameplay.
+
+Nearest-discovery distances across 2048 starts:
+Original:1 jump372;2 jumps1221;3 jumps337;4 jumps89;5 jumps22;6 jumps6;8 jumps1.
+Corrected:1 jump428;2 jumps1345;3 jumps275.
+
+Sites within two ordinary jumps:
+Original counts0/1/2/3/4/5 sites:455/830/561/178/21/3 starts.
+Corrected counts0/1/2/3 sites:275/957/637/179 starts.
+
+Thus the correction removes all118 starts with no discovery within3 and all24 starts with4-5 within2. It retains varied access:275 starts still have their first site at3, while others have1-3 nearby. It does not assign a fixed event/reward to each empire. The unchanged deck still has ten sites, eight ordinary and the two staged types; reward amounts were not increased.
+
+The exported placement function's diagnostic was independently rerun on a clone of each exact generated initial state. It reproduced all anomaly placements without advancing combat RNG.26 dense candidate positions were skipped across512 maps, maximum3 in one map. No failed placement or density fallback was observed. These skipped-position counts are separate from geography retries, which retain the original1-8 attempt range and zero fallbacks.
+
+Assessment
+This addresses the demonstrated initial access-starvation/outlier concern with little density pressure. It is preferable to forcing equal types or four identical opening stories. It does not prove balanced reward value or prevent economic snowballing: travel through hostile/closed space, a staged site's settlement cost, and the timing of grants still matter. It also does not establish that players enjoy the new exploration cadence.
+
+The bounds apply at new generation on the initial active graph. Existing saves and player-opened lanes must not cause sites to relocate or constraints to be reapplied. A paid shortcut may intentionally bring a cluster into reach. This audit did not open lanes or certify that lifecycle; the separate lane tests/review must do so.
+
+Original UI plays remain pinned to a7c955d and unchanged. No actual UI opening on this corrected candidate is claimed. Original data/exports remain in the parent map directory. comparison.json supplies the exact paired summary; summary.json and audit-results.json.gz contain this corrected run; source-manifest.json records engine and audit hashes.
+
+Reproduce:
+node scripts/map-generation-audit.mjs --candidate a5077ea --out docs/mechanics-depth/map/corrected-map --max-nearest-discovery 3 --max-sites-within2 3

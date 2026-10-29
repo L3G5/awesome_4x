@@ -1,0 +1,57 @@
+{
+  "before": "a7c955dd83e35ee98346f7877c11339d52de9ba5",
+  "after": "a5077ea9fd3fca2cf5be834bc1715ad1c951135e",
+  "seeds": 512,
+  "identicalBySeed": {
+    "positions": 512,
+    "activeLanes": 512,
+    "starterProspects": 512,
+    "discoveryTypeCounts": 512
+  },
+  "beforeNearest": {
+    "1": 372,
+    "2": 1221,
+    "3": 337,
+    "4": 89,
+    "5": 22,
+    "6": 6,
+    "8": 1
+  },
+  "afterNearest": {
+    "1": 428,
+    "2": 1345,
+    "3": 275
+  },
+  "beforeWithin2": {
+    "0": 455,
+    "1": 830,
+    "2": 561,
+    "3": 178,
+    "4": 21,
+    "5": 3
+  },
+  "afterWithin2": {
+    "0": 275,
+    "1": 957,
+    "2": 637,
+    "3": 179
+  },
+  "diagnostics": {
+    "skippedDenseTotal": 26,
+    "skippedDense": {
+      "count": 512,
+      "min": 0,
+      "p10": 0,
+      "median": 0,
+      "p90": 0,
+      "max": 3,
+      "mean": 0.05078125
+    },
+    "startsWithoutSiteWithin3": 0,
+    "startsOver3SitesWithin2": 0
+  },
+  "failures": [],
+  "fallbacks": 0,
+  "paidFoundingDrills": 128,
+  "privacyDrills": 16
+}

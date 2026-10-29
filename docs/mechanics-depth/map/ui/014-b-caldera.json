@@ -1,0 +1,153 @@
+{
+  "request": 14,
+  "seed": "stage30-map-12",
+  "url": "http://127.0.0.1:33775/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n140+7\nCREDITS\n◇\n110+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n6 / 6\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n⌂Solace\nCONCORD\nCaldera\nARID\nOrison\nUNSURVEYED\nEos\nUNSURVEYED\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n6 charted systems · 3 surveyed · seed stage30-map-12\n\n+\n−\n⌖\nYOUR FIRST MANDATE\nScout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Solace\n\nSolace → Caldera · 1 order · Fleet presence unknown\n\nMove →\n↶\nHold position\n⌁ 3\n⇥\n△\n⬡\n▴\nUNCLAIMED FRONTIER\nCaldera\n\nArid world · Frontier system\n\nMineral deserts beneath an amber sky.\n\n60%\nHABITABILITY\n5\nORE RICHNESS\n2\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nOrison ↗\nBellatrix ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\nASTERION REACH / EARLY ACCESS 0.22.0\n● AUTOSAVED",
+  "inspector": "UNCLAIMED FRONTIER\nCaldera\n\nArid world · Frontier system\n\nMineral deserts beneath an amber sky.\n\n60%\nHABITABILITY\n5\nORE RICHNESS\n2\nSCIENCE\nCONNECTED SYSTEMS\nSolace ↗\nOrison ↗\nBellatrix ↗",
+  "resources": "◈\n140+7\nCREDITS\n◇\n110+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n6 / 6\nORDERS",
+  "buttons": [
+    {
+      "text": "Русский",
+      "action": "language",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "briefing",
+      "disabled": true
+    },
+    {
+      "text": "",
+      "action": "menu",
+      "disabled": false
+    },
+    {
+      "text": "Galaxy",
+      "disabled": false
+    },
+    {
+      "text": "Research",
+      "disabled": false
+    },
+    {
+      "text": "Diplomacy",
+      "disabled": false
+    },
+    {
+      "text": "Empire",
+      "disabled": false
+    },
+    {
+      "text": "Chronicle",
+      "disabled": false
+    },
+    {
+      "text": "Home",
+      "action": "home",
+      "disabled": false
+    },
+    {
+      "text": "⌂Solace\nCONCORD",
+      "disabled": false
+    },
+    {
+      "text": "Caldera\nARID",
+      "disabled": false
+    },
+    {
+      "text": "Orison\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "Eos\nUNSURVEYED",
+      "disabled": false
+    },
+    {
+      "text": "△",
+      "disabled": false
+    },
+    {
+      "text": "⬡",
+      "disabled": false
+    },
+    {
+      "text": "▴",
+      "disabled": false
+    },
+    {
+      "text": "+",
+      "action": "zoom-in",
+      "disabled": false
+    },
+    {
+      "text": "−",
+      "action": "zoom-out",
+      "disabled": false
+    },
+    {
+      "text": "⌖",
+      "action": "reset-view",
+      "disabled": false
+    },
+    {
+      "text": "Move →",
+      "action": "move",
+      "disabled": false
+    },
+    {
+      "text": "↶",
+      "select": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Hold position",
+      "action": "fleet-hold",
+      "disabled": false
+    },
+    {
+      "text": "⌁ 3",
+      "action": "fleet-roster",
+      "disabled": false
+    },
+    {
+      "text": "⇥",
+      "action": "next-fleet",
+      "disabled": false
+    },
+    {
+      "text": "△",
+      "fleet": "f1",
+      "disabled": false
+    },
+    {
+      "text": "⬡",
+      "fleet": "f2",
+      "disabled": false
+    },
+    {
+      "text": "▴",
+      "fleet": "f3",
+      "disabled": false
+    },
+    {
+      "text": "Solace ↗",
+      "select": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Orison ↗",
+      "select": "s17",
+      "disabled": false
+    },
+    {
+      "text": "Bellatrix ↗",
+      "select": "s19",
+      "disabled": false
+    },
+    {
+      "text": "END CYCLE →\nSPACE",
+      "action": "end-turn",
+      "disabled": false
+    }
+  ]
+}

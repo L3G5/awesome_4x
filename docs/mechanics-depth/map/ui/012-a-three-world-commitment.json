@@ -1,0 +1,137 @@
+{
+  "request": 12,
+  "seed": "stage30-map-16",
+  "url": "http://127.0.0.1:33775/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n28+26\nCREDITS\n◇\n10+17\nMINERALS\n✧\n0+11\nSCIENCE\n⌘\n3 / 8\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nMANY WORLDS. ONE HORIZON.\nThe Concord\n\nMake a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.\n\n⌘\nCOLONIZED WORLDS\n3\n\n10 billion citizens across the Reach\n\nFLEET POWER\n15\n\n2 ships · 3 credits upkeep / cycle\n\nLEGACY SCORE\n95\n\nHighest score at cycle 120 wins\n\nCOLONIAL ADMINISTRATION\n\nOutput per cycle, before fleet upkeep and trade. Select a column to compare your worlds.\n\n3 colonies\nWORLD\n↑\n\tSPECIALTY\t\n◈ CREDITS\n↕\n\t\n◇ MINERALS\n↕\n\t\n✧ SCIENCE\n↕\n\t\n▥ WORK\n↕\n\tCONSTRUCTION\t\nINSPECT WORLD\n\nHaven\n1 / 6 population\n\t\nUnchartered\n0 / 2 slots\n\t5\t5\t2\t5\t\nOrbital Extractor\n5 cycles remaining\n\t↗\nSolace\n6 / 8 population\n\t\nUnchartered\n2 / 4 slots\n\t15\t10\t5\t10\t\nResearch Enclave\n3 cycles remaining\n\t↗\nZenith\n3 / 8 population\n\t\nUnchartered\n0 / 3 slots\n\t9\t2\t4\t7\t\nResearch Enclave\n2 cycles remaining\n\t↗\n✦ Transcendence\n0 / 10\n\nResearch the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying 60 credits each advancing cycle.\n\n0 / 3 beacons · Research the Asterion Protocol.\n\nA hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.\n\n⌂ Domination\n1 / 4\n\nHold all four founding worlds at the same time. These objectives stay fixed when an empire moves its administrative capital.\n\n⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗\n\n3 founding worlds remain unidentified. Survey the frontier to locate them.\n\nCONFIRMED FOUNDING-WORLD CONTROL\nConcord\n1 / 4\nTHE AWAKENING NETWORK\n✦\n\nNo beacon signals from known civilizations yet. Restored nodes and alignment progress become public after diplomatic contact.\n\nFLEET REGISTRY\nPathfinder 1 ×1\nCinder · 18 / 18 hull · 3 combat power\nHolding\n2 jumps\nVanguard 3 ×1\nSolace · 34 / 34 hull · 12 combat power\nHolding\n1 jump\nCONCORD ADMINISTRATION\nThe working empire\n\n3 worlds · 10 billion citizens\n\n22\nconstruction work each cycle\n0 idle colonies\nUPCOMING COMPLETIONS\nZenith\nResearch Enclave · 2 cycles\n↗\nSolace\nResearch Enclave · 3 cycles\n↗\nHaven\nOrbital Extractor · 5 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →\nCycle 06\n2405 CE\nEND CYCLE →\nSPACE\n3 orders remaining · 3 colonies\nCampaign exported. Keep this file as your backup.\nASTERION REACH / EARLY ACCESS 0.22.0\n● AUTOSAVED\nCampaign exported. Keep this file as your backup.",
+  "inspector": "CONCORD ADMINISTRATION\nThe working empire\n\n3 worlds · 10 billion citizens\n\n22\nconstruction work each cycle\n0 idle colonies\nUPCOMING COMPLETIONS\nZenith\nResearch Enclave · 2 cycles\n↗\nSolace\nResearch Enclave · 3 cycles\n↗\nHaven\nOrbital Extractor · 5 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →",
+  "resources": "◈\n28+26\nCREDITS\n◇\n10+17\nMINERALS\n✧\n0+11\nSCIENCE\n⌘\n3 / 8\nORDERS",
+  "buttons": [
+    {
+      "text": "Русский",
+      "action": "language",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "briefing",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "action": "menu",
+      "disabled": false
+    },
+    {
+      "text": "Galaxy",
+      "disabled": false
+    },
+    {
+      "text": "Research",
+      "disabled": false
+    },
+    {
+      "text": "Diplomacy",
+      "disabled": false
+    },
+    {
+      "text": "Empire",
+      "disabled": false
+    },
+    {
+      "text": "Chronicle",
+      "disabled": false
+    },
+    {
+      "text": "Home",
+      "action": "home",
+      "disabled": false
+    },
+    {
+      "text": "WORLD\n↑",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "◈ CREDITS\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "◇ MINERALS\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "✧ SCIENCE\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "▥ WORK\n↕",
+      "action": "colony-sort",
+      "disabled": false
+    },
+    {
+      "text": "↗",
+      "action": "inspect",
+      "system": "s28",
+      "disabled": false
+    },
+    {
+      "text": "↗",
+      "action": "inspect",
+      "system": "s0",
+      "disabled": false
+    },
+    {
+      "text": "↗",
+      "action": "inspect",
+      "system": "s38",
+      "disabled": false
+    },
+    {
+      "text": "⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗",
+      "action": "inspect",
+      "system": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Pathfinder 1 ×1\nCinder · 18 / 18 hull · 3 combat power\nHolding\n2 jumps",
+      "fleet": "f1",
+      "disabled": false
+    },
+    {
+      "text": "Vanguard 3 ×1\nSolace · 34 / 34 hull · 12 combat power\nHolding\n1 jump",
+      "fleet": "f3",
+      "disabled": false
+    },
+    {
+      "text": "Zenith\nResearch Enclave · 2 cycles\n↗",
+      "action": "inspect",
+      "system": "s38",
+      "disabled": false
+    },
+    {
+      "text": "Solace\nResearch Enclave · 3 cycles\n↗",
+      "action": "inspect",
+      "system": "s0",
+      "disabled": false
+    },
+    {
+      "text": "Haven\nOrbital Extractor · 5 cycles\n↗",
+      "action": "inspect",
+      "system": "s28",
+      "disabled": false
+    },
+    {
+      "text": "Review alignment requirements →",
+      "action": "review-alignment",
+      "disabled": false
+    },
+    {
+      "text": "END CYCLE →\nSPACE",
+      "action": "end-turn",
+      "disabled": false
+    }
+  ]
+}

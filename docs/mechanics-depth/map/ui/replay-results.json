@@ -1,0 +1,95 @@
+{
+  "pin": "a7c955dd83e35ee98346f7877c11339d52de9ba5",
+  "method": "Post-session exact engine reconstruction of the two existing UI prefixes. No game commands or hidden state reads were used during UI play. This replay is not another playthrough or evidence of optimal strategy.",
+  "engineHashes": {
+    "src/game.js": "4f7b3fd4fc77d8a4c4c90f2580f78db707196cad9b994c4ddf10803e67ca805b",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+    "src/ai.js": "9d103b4e9b42ff3e6cb0e3f30df193a6cb3e2b9c94a72a032904ec29ca60a765",
+    "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+    "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+    "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+    "src/discoveries.js": "c1ebbb89844b1329ee4d3c5a4dc1c20b2efe6e148984c02c3ad7dae7e6efdc9c",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/galaxy-generation.js": "beea8b14db1e9907d211bdc10d06bb05d6d13705ba64582780ee881dc5c3e393",
+    "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+    "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+    "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe"
+  },
+  "reports": [
+    {
+      "seed": "stage30-map-16",
+      "commands": 20,
+      "endTurns": 5,
+      "reloadChecks": 20,
+      "allStatesValid": true,
+      "fullActualCheckpointEqual": true,
+      "actualFile": "a-actual-cycle6.json",
+      "actualFileSha256": "db72149f4f9b9b9ebbe3f3926024b638c1bd204bd0ab4b9d1ea4292501c95578",
+      "canonicalStateSha256": "ce7c705084492b03e5f72482173647f4bfd7606900456f15229009d0469de8d7",
+      "turn": 6,
+      "own": {
+        "credits": 28,
+        "minerals": 10,
+        "science": 0,
+        "creditIncome": 26,
+        "mineralIncome": 17,
+        "scienceIncome": 11,
+        "production": 22,
+        "upkeep": 3,
+        "colonies": 3,
+        "population": 10,
+        "ships": 2,
+        "military": 15,
+        "orders": 3,
+        "maxOrders": 8,
+        "uncappedOrders": 8,
+        "orderLimit": 18,
+        "score": 95,
+        "beacons": 0,
+        "explored": 4
+      },
+      "techs": [
+        "ecology"
+      ]
+    },
+    {
+      "seed": "stage30-map-12",
+      "commands": 23,
+      "endTurns": 8,
+      "reloadChecks": 23,
+      "allStatesValid": true,
+      "fullActualCheckpointEqual": true,
+      "actualFile": "b-actual-cycle9.json",
+      "actualFileSha256": "8359a106a15b3bf38a2de8245744557722d26ba2362e1f97ae53d6e39eca14e9",
+      "canonicalStateSha256": "5a7c347c7b27ebe774a117a16cd1caea95116ebee7bcdb5ab41e210138fc92c5",
+      "turn": 9,
+      "own": {
+        "credits": 85,
+        "minerals": 126,
+        "science": 0,
+        "creditIncome": 28,
+        "mineralIncome": 22,
+        "scienceIncome": 22,
+        "production": 23,
+        "upkeep": 3,
+        "colonies": 3,
+        "population": 11,
+        "ships": 2,
+        "military": 15,
+        "orders": 4,
+        "maxOrders": 8,
+        "uncappedOrders": 8,
+        "orderLimit": 18,
+        "score": 97,
+        "beacons": 0,
+        "explored": 4
+      },
+      "techs": [
+        "physics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "candidateCommit": "a5077ea9fd3fca2cf5be834bc1715ad1c951135e",
+  "baselineCommit": "810194596a0fa7d02efa418749bb3e27f547229e",
+  "files": {
+    "candidate": {
+      "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "src/content.js": "595c832a5eb96f91a3631c22e479fb870d9d32b1c226fb2061ec9de0386268c7",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "f3d014a21349ea09301946c386ac35d4804fee747b7284220c8384fdf179bfed",
+      "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "3fad6d144fe9457e2742f278c49248618f50e24d9cdf024f59de9eeec98fbf9d",
+      "src/development.js": "29fb685645c41d38bcfb29325a178c1c69eb378aa1ab71f5ceded0773eaa944d",
+      "src/galaxy-generation.js": "beea8b14db1e9907d211bdc10d06bb05d6d13705ba64582780ee881dc5c3e393",
+      "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+      "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+      "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+      "src/starlanes.js": "94a7d3697c2a60fc735f4cefaa929988b24cf910e08f269fef28ca127ca0f2be"
+    },
+    "baseline": {
+      "src/game.js": "635c8193ecdaa592b4b42de3f502baaeb23e63aedde725187124f0b5279887c0",
+      "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+      "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+      "src/ai.js": "9d103b4e9b42ff3e6cb0e3f30df193a6cb3e2b9c94a72a032904ec29ca60a765",
+      "src/diplomacy.js": "6557541604e11bbecb9a14f1d686607fdb1ee7c08ec8525c4586269c70c9004f",
+      "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+      "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+      "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a",
+      "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+      "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+      "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+      "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+      "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+      "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe"
+    }
+  },
+  "auditScriptSha256": "5229d9e42e51b9838799a3673c55c170aef2b946c9f0dfd999f2d18093ca1086",
+  "resultsOriginalBytes": 16716955,
+  "resultsOriginalSha256": "eb330476d39d94e2a0ac772fdf015ef10195f8be30b4a3e7414d1f5d9196feab",
+  "method": "Engine import graphs reconstructed from Git in temporary directories and removed after audit. No reviewed source copies are bundled."
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "seed": "stage30-map-16",
+    "commands": 20,
+    "endTurns": 5,
+    "reloadChecks": 20,
+    "allStatesValid": true,
+    "fullActualCheckpointEqual": true,
+    "actualFile": "a-actual-cycle6.json",
+    "actualFileSha256": "db72149f4f9b9b9ebbe3f3926024b638c1bd204bd0ab4b9d1ea4292501c95578",
+    "canonicalStateSha256": "ce7c705084492b03e5f72482173647f4bfd7606900456f15229009d0469de8d7",
+    "turn": 6,
+    "own": {
+      "credits": 28,
+      "minerals": 10,
+      "science": 0,
+      "creditIncome": 26,
+      "mineralIncome": 17,
+      "scienceIncome": 11,
+      "production": 22,
+      "upkeep": 3,
+      "colonies": 3,
+      "population": 10,
+      "ships": 2,
+      "military": 15,
+      "orders": 3,
+      "maxOrders": 8,
+      "uncappedOrders": 8,
+      "orderLimit": 18,
+      "score": 95,
+      "beacons": 0,
+      "explored": 4
+    },
+    "techs": [
+      "ecology"
+    ]
+  },
+  {
+    "seed": "stage30-map-12",
+    "commands": 23,
+    "endTurns": 8,
+    "reloadChecks": 23,
+    "allStatesValid": true,
+    "fullActualCheckpointEqual": true,
+    "actualFile": "b-actual-cycle9.json",
+    "actualFileSha256": "8359a106a15b3bf38a2de8245744557722d26ba2362e1f97ae53d6e39eca14e9",
+    "canonicalStateSha256": "5a7c347c7b27ebe774a117a16cd1caea95116ebee7bcdb5ab41e210138fc92c5",
+    "turn": 9,
+    "own": {
+      "credits": 85,
+      "minerals": 126,
+      "science": 0,
+      "creditIncome": 28,
+      "mineralIncome": 22,
+      "scienceIncome": 22,
+      "production": 23,
+      "upkeep": 3,
+      "colonies": 3,
+      "population": 11,
+      "ships": 2,
+      "military": 15,
+      "orders": 4,
+      "maxOrders": 8,
+      "uncappedOrders": 8,
+      "orderLimit": 18,
+      "score": 97,
+      "beacons": 0,
+      "explored": 4
+    },
+    "techs": [
+      "physics"
+    ]
+  }
+]
