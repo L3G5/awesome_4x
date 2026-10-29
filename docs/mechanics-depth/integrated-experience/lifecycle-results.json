@@ -1,0 +1,529 @@
+[
+  {
+    "tag": "ordinary-en-1440",
+    "actualSave": true,
+    "originalPosition": {
+      "vertical": 0,
+      "horizontal": 0
+    },
+    "cancelExact": true,
+    "commitExactStateFocusScrollFleet": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "ordinary-ru-1440",
+    "actualSave": true,
+    "originalPosition": {
+      "vertical": 0,
+      "horizontal": 0
+    },
+    "cancelExact": true,
+    "commitExactStateFocusScrollFleet": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "ordinary-en-390",
+    "actualSave": true,
+    "originalPosition": {
+      "vertical": 367,
+      "horizontal": 180
+    },
+    "cancelExact": true,
+    "commitExactStateFocusScrollFleet": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "ordinary-ru-390",
+    "actualSave": true,
+    "originalPosition": {
+      "vertical": 383,
+      "horizontal": 180
+    },
+    "cancelExact": true,
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    horizontal: 180,\n+   vertical: 388\n-   vertical: 383\n  }\n",
+    "pageErrors": []
+  },
+  {
+    "tag": "controlled-lifecycle-en-1440",
+    "controlled": true,
+    "directEnabledInitial": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 848,
+        "scrollHeight": 848,
+        "rect": {
+          "x": 295,
+          "y": 54.984375,
+          "width": 850,
+          "height": 850.03125,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 131.984375,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 355.078125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 489.078125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 806.015625,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "restore-lane"
+      }
+    },
+    "directEnabledFocus": "restore-lane",
+    "directAlternateBuilderFocus": {
+      "tag": "BODY",
+      "heading": "Nacre"
+    },
+    "directAlternateBuilderFleet": "f1",
+    "immediateCancelExact": true,
+    "queueReloadExact": true,
+    "beforePartialCancel": {
+      "credits": 913,
+      "minerals": 894,
+      "queue": {
+        "itemId": "starlane",
+        "kind": "starlane",
+        "laneId": "l0",
+        "progress": 7,
+        "work": 48,
+        "cost": {
+          "credits": 60,
+          "minerals": 70
+        }
+      }
+    },
+    "afterPartialCancel": {
+      "credits": 964,
+      "minerals": 953
+    },
+    "partialRefundReloadExact": true,
+    "completionMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 400,
+        "scrollHeight": 400,
+        "rect": {
+          "x": 295,
+          "y": 278.96875,
+          "width": 850,
+          "height": 402.046875,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 355.96875,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": null,
+        "travel": null,
+        "submit": null
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "completionBriefing": "×\nРусский\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 4 · 1 dispatch from the latest turn. This report remains available from the top bar.\n\nACROSS THE FRONTIER 1\nSTARLANE\n\nThe dormant lane between Nacre and Eos is restored. All empires can use it under ordinary border and movement rules.\n\nInspect Eos\nFull chronicle\nContinue planning →",
+    "completionExactlyTwoCyclesAndScoutIntentPreserved": true,
+    "error": "Error: locator.click: Error: strict mode violation: locator('#inspector [data-system-select=\"s39\"]') resolved to 2 elements:\n    1) <button data-system-select=\"s39\" class=\"starlane-destination\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).first()\n    2) <button data-system-select=\"s39\" class=\"small-button ghost\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for locator('#inspector [data-system-select=\"s39\"]')\u001b[22m\n",
+    "pageErrors": []
+  },
+  {
+    "tag": "controlled-lifecycle-ru-1440",
+    "controlled": true,
+    "directEnabledInitial": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 295,
+          "y": 48,
+          "width": 850,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 126,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 348.09375,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 483.09375,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 823.125,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "restore-lane"
+      }
+    },
+    "directEnabledFocus": "restore-lane",
+    "directAlternateBuilderFocus": {
+      "tag": "BODY",
+      "heading": "Nacre"
+    },
+    "directAlternateBuilderFleet": "f1",
+    "immediateCancelExact": true,
+    "queueReloadExact": true,
+    "beforePartialCancel": {
+      "credits": 913,
+      "minerals": 894,
+      "queue": {
+        "itemId": "starlane",
+        "kind": "starlane",
+        "laneId": "l0",
+        "progress": 7,
+        "work": 48,
+        "cost": {
+          "credits": 60,
+          "minerals": 70
+        }
+      }
+    },
+    "afterPartialCancel": {
+      "credits": 964,
+      "minerals": 953
+    },
+    "partialRefundReloadExact": true,
+    "completionMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 423,
+        "scrollHeight": 423,
+        "rect": {
+          "x": 295,
+          "y": 267.46875,
+          "width": 850,
+          "height": 425.046875,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 345.46875,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": null,
+        "travel": null,
+        "submit": null
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "completionBriefing": "×\nEnglish\nСВОДКА ДЛЯ СПИКЕРА\nНовый цикл. Меняющийся Предел.\n\nЦикл 4 · донесений за последний ход: 1. Эту сводку можно снова открыть с верхней панели.\n\nНА ВСЁМ ФРОНТИРЕ 1\nЗВЁЗДНЫЙ ПУТЬ\n\nНеактивный путь между системами Nacre и Eos восстановлен. Все державы могут пользоваться им по обычным правилам доступа через границы и перемещения.\n\nОсмотреть: Eos\nПолная летопись\nПродолжить планирование →",
+    "completionExactlyTwoCyclesAndScoutIntentPreserved": true,
+    "error": "Error: locator.click: Error: strict mode violation: locator('#inspector [data-system-select=\"s39\"]') resolved to 2 elements:\n    1) <button data-system-select=\"s39\" class=\"starlane-destination\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).first()\n    2) <button data-system-select=\"s39\" class=\"small-button ghost\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for locator('#inspector [data-system-select=\"s39\"]')\u001b[22m\n",
+    "pageErrors": []
+  },
+  {
+    "tag": "controlled-lifecycle-en-390",
+    "controlled": true,
+    "directEnabledInitial": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": -11,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 257.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 385.53125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 827.796875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "restore-lane"
+      }
+    },
+    "directEnabledFocus": "restore-lane",
+    "directAlternateBuilderFocus": {
+      "tag": "BODY",
+      "heading": "Nacre"
+    },
+    "directAlternateBuilderFleet": "f1",
+    "immediateCancelExact": true,
+    "queueReloadExact": true,
+    "beforePartialCancel": {
+      "credits": 913,
+      "minerals": 894,
+      "queue": {
+        "itemId": "starlane",
+        "kind": "starlane",
+        "laneId": "l0",
+        "progress": 7,
+        "work": 48,
+        "cost": {
+          "credits": 60,
+          "minerals": 70
+        }
+      }
+    },
+    "afterPartialCancel": {
+      "credits": 964,
+      "minerals": 953
+    },
+    "partialRefundReloadExact": true,
+    "completionMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 483,
+        "scrollHeight": 483,
+        "rect": {
+          "x": 12,
+          "y": 237.453125,
+          "width": 366,
+          "height": 485.09375,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 314.453125,
+          "width": 301,
+          "height": 62,
+          "visible": true
+        },
+        "endpoints": null,
+        "travel": null,
+        "submit": null
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "completionBriefing": "×\nРусский\nTHE SPEAKER'S BRIEFING\nA new cycle. A changing Reach.\n\nCycle 4 · 1 dispatch from the latest turn. This report remains available from the top bar.\n\nACROSS THE FRONTIER 1\nSTARLANE\n\nThe dormant lane between Nacre and Eos is restored. All empires can use it under ordinary border and movement rules.\n\nInspect Eos\nFull chronicle\nContinue planning →",
+    "completionExactlyTwoCyclesAndScoutIntentPreserved": true,
+    "error": "Error: locator.click: Error: strict mode violation: locator('#inspector [data-system-select=\"s39\"]') resolved to 2 elements:\n    1) <button data-system-select=\"s39\" class=\"starlane-destination\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).first()\n    2) <button data-system-select=\"s39\" class=\"small-button ghost\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for locator('#inspector [data-system-select=\"s39\"]')\u001b[22m\n",
+    "pageErrors": []
+  },
+  {
+    "tag": "controlled-lifecycle-ru-390",
+    "controlled": true,
+    "directEnabledInitial": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": -36,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 284.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 413.578125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 961.796875,
+          "width": 270.078125,
+          "height": 44,
+          "visible": false
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "restore-lane"
+      }
+    },
+    "directEnabledFocus": "restore-lane",
+    "directAlternateBuilderFocus": {
+      "tag": "BODY",
+      "heading": "Nacre"
+    },
+    "directAlternateBuilderFleet": "f1",
+    "immediateCancelExact": true,
+    "queueReloadExact": true,
+    "beforePartialCancel": {
+      "credits": 913,
+      "minerals": 894,
+      "queue": {
+        "itemId": "starlane",
+        "kind": "starlane",
+        "laneId": "l0",
+        "progress": 7,
+        "work": 48,
+        "cost": {
+          "credits": 60,
+          "minerals": 70
+        }
+      }
+    },
+    "afterPartialCancel": {
+      "credits": 964,
+      "minerals": 953
+    },
+    "partialRefundReloadExact": true,
+    "completionMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 550,
+        "scrollHeight": 550,
+        "rect": {
+          "x": 12,
+          "y": 203.953125,
+          "width": 366,
+          "height": 552.09375,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 281.953125,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": null,
+        "travel": null,
+        "submit": null
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "completionBriefing": "×\nEnglish\nСВОДКА ДЛЯ СПИКЕРА\nНовый цикл. Меняющийся Предел.\n\nЦикл 4 · донесений за последний ход: 1. Эту сводку можно снова открыть с верхней панели.\n\nНА ВСЁМ ФРОНТИРЕ 1\nЗВЁЗДНЫЙ ПУТЬ\n\nНеактивный путь между системами Nacre и Eos восстановлен. Все державы могут пользоваться им по обычным правилам доступа через границы и перемещения.\n\nОсмотреть: Eos\nПолная летопись\nПродолжить планирование →",
+    "completionExactlyTwoCyclesAndScoutIntentPreserved": true,
+    "error": "Error: locator.click: Error: strict mode violation: locator('#inspector [data-system-select=\"s39\"]') resolved to 2 elements:\n    1) <button data-system-select=\"s39\" class=\"starlane-destination\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).first()\n    2) <button data-system-select=\"s39\" class=\"small-button ghost\">Eos ↗</button> aka getByRole('button', { name: 'Eos ↗' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for locator('#inspector [data-system-select=\"s39\"]')\u001b[22m\n",
+    "pageErrors": []
+  }
+]

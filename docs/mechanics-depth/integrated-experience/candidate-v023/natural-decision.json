@@ -1,0 +1,91 @@
+{
+  "synthetic": false,
+  "seedSelection": "Three seeds inspected only to choose an early naturally surveyed lane endpoint; all recorded play after new-campaign uses visible UI, no save injection or state edits.",
+  "turn": 8,
+  "world": {
+    "id": "s32",
+    "name": "Iona",
+    "x": 20.9,
+    "y": 20.5,
+    "type": "arid",
+    "habitability": 60,
+    "richness": 4,
+    "science": 1,
+    "owner": "player",
+    "originalOwner": null,
+    "population": 3,
+    "growth": 0.1,
+    "buildings": [
+      "mine"
+    ],
+    "queue": null,
+    "defenseDamage": 0,
+    "anomaly": null,
+    "knownBy": [
+      "player",
+      "choir",
+      "veyr"
+    ],
+    "exploredBy": [
+      "player"
+    ]
+  },
+  "modal": "×\nРусский\nCOLONIAL COMMISSION · IONA\nShape this world's future\n\n1 / 3 infrastructure slots · 7 production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.\n\nInfrastructure\nColony charter\nShips\nStarlanes\nSTARLANE RESTORATION\nIona ↔ Aster\nCOMMISSION COST\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production\n\nNo accessible charted route connects these endpoints today.\n\nAfter restoration: one jump between the endpoints.\n\nThe shortcut is permanent and shared. Other empires can use it under normal border rules, including hostile fleets during war.\n\nRestore lane · 1 order\nConstruction and movement rules",
+  "player": {
+    "id": "player",
+    "name": "The Concord",
+    "shortName": "Concord",
+    "color": "#68d9cd",
+    "motto": "Many worlds. One horizon.",
+    "trait": "Civic mandate",
+    "description": "A federation of survivors, united by a fragile promise. Receives one additional order each turn.",
+    "home": "Solace",
+    "leader": "First Speaker Mara Voss",
+    "credits": 169,
+    "minerals": 138,
+    "science": 0,
+    "research": null,
+    "techs": [
+      "logistics"
+    ],
+    "orders": 8,
+    "contacts": [
+      "choir",
+      "veyr"
+    ],
+    "capitalId": "s0",
+    "eliminated": false,
+    "relations": {
+      "veyr": {
+        "status": "peace",
+        "trust": 10,
+        "trade": false,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0
+      },
+      "khar": {
+        "status": "peace",
+        "trust": -10,
+        "trade": false,
+        "treatyTurn": 0
+      },
+      "choir": {
+        "status": "peace",
+        "trust": 10,
+        "trade": false,
+        "treatyTurn": 0,
+        "lastBorderCount": 0,
+        "grievance": 0
+      }
+    },
+    "alignment": {
+      "progress": 0,
+      "sites": [],
+      "active": false,
+      "started": false,
+      "reportedBeacons": []
+    }
+  },
+  "errors": []
+}

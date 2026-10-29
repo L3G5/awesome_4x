@@ -1,0 +1,21 @@
+Independent focused correction acceptance
+
+Target: http://127.0.0.1:41577
+Commit: 94f41dff57c17e8f4881219149a2f0aeb8fc67bd
+Version: 0.23.0. Exact delivered JS/CSS SHA-256 pins are in build-before.json and build-after.json; both observations match.
+
+Verdict: PASS for the bounded correction scope, 8/8 cases; no remaining defect observed in these paths.
+
+Four synthetic direct-inspector cases, English/Russian at 1440×960 and 390×960:
+- Inspect Nacre → Review restoration → choose Eos → keyboard Restore. The dialog opens at its visible title with Close focused. Visible language toggles preserve the same modal and full state.
+- The commit now inspects actual builder Eos and focuses its new production row. The normal engine command's entire paid effect matches exactly. The previously selected unrelated scout, plotted route and Hold remain unchanged. Export/reload preserves the entire committed state.
+- This fixes the BODY focus/idle Nacre result reproduced on both earlier immutable candidates. The original failure logs/screens remain in their own folders.
+
+Four actual default campaign cycle 50 cases, English/Russian at 1440×960 and 390×960:
+- Sort colonies by science, open Haven Commission, compare replacement of the mine by a shipyard, toggle languages, then Escape. Exact state, Commission focus and both scroll axes return.
+- Reopen by keyboard and commission the replacement. The paid effect matches the normal command exactly; the view remains Empire with Haven's row focused and the same selected fleet. Scroll is checked after screenshot/paint rather than only before deferred translation.
+- Desktop remains 0 vertical/0 horizontal. English 390 remains 367/180; Russian 390 remains 383/180. The previous Russian 383→388 vertical drift is resolved. Export/reload passes all 4 cases.
+
+All 8 cases report zero page errors. accept.mjs, results.json, input provenance, exact reviewed source, screenshots/text and exports are retained. No production source edits, staging or commits were performed by the reviewer.
+
+Scope boundary: this follow-up rechecks the corrected result focus and translated Empire geometry. It does not repeat the full lifecycle, private-data pair or natural opening from the prior fbd89a2 candidate; those separately pinned results remain in candidate-v023/. The parent identifies this correction as mechanically unchanged. This report makes no claim about campaign balance, AI policy or long-run enjoyment.

@@ -1,0 +1,266 @@
+[
+  {
+    "tag": "accept-en-1440",
+    "initial": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 789,
+        "scrollHeight": 789,
+        "rect": {
+          "x": 295,
+          "y": 84.71875,
+          "width": 850,
+          "height": 790.5625,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 161.71875,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 384.8125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 613.203125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 725.28125,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "slowQuote": "COMMISSION COST\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production",
+    "fastQuote": "COMMISSION COST\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 2 cycles at current production",
+    "rules": "Construction and movement rules\n\nUses the builder’s construction queue. No infrastructure slot or upkeep.\n\nRequires Deep-space Logistics. Cancelling returns the unspent share of the paid resources; the order is not refunded.\n\nExisting plotted courses stay unchanged until you replot. Restoration neither moves fleets nor restores their movement.",
+    "afterDirectAlternate": {
+      "focusTag": "BODY",
+      "focusClass": "",
+      "heading": "Nacre"
+    },
+    "underway": "STARLANE RESTORATION\nNacre ↔ Eos\n\nRestoration underway at Eos\n\n2 cycles remaining at current production\nInspect construction →\n\n4 → 1Jumps between endpoints\n\n3 fewer movement orders per crossing.\n\nThe shortcut is permanent and shared. Other empires can use it under normal border rules, including hostile fleets during war.\n\nConstruction and movement rules",
+    "inspectConstruction": "Eos",
+    "knownFixesPass": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "accept-ru-1440",
+    "initial": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 792,
+        "scrollHeight": 792,
+        "rect": {
+          "x": 295,
+          "y": 83.21875,
+          "width": 850,
+          "height": 793.5625,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 161.21875,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 383.3125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 613.703125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 725.78125,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "slowQuote": "СТОИМОСТЬ ПРОЕКТА\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 7",
+    "fastQuote": "СТОИМОСТЬ ПРОЕКТА\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 2",
+    "rules": "Правила строительства и перемещения\n\nЗанимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания.\n\nТребуется Глубококосмическая логистика. При отмене возвращается неизрасходованная часть оплаченных ресурсов; приказ не возвращается.\n\nСуществующие курсы сохраняются, пока вы не проложите их заново. Восстановление не перемещает флоты и не возвращает им запас движения.",
+    "afterDirectAlternate": {
+      "focusTag": "BODY",
+      "focusClass": "",
+      "heading": "Nacre"
+    },
+    "underway": "ВОССТАНОВЛЕНИЕ ЗВЁЗДНОГО ПУТИ\nNacre ↔ Eos\n\nВосстановление идёт в системе Eos\n\nОсталось циклов при текущем производстве: 2\nОсмотреть строительство →\n\n4 → 1Прыжки между системами\n\nЭкономия приказов на перемещение за проход: 3.\n\nКороткий путь останется навсегда и будет общим. Им смогут пользоваться другие державы по обычным правилам границ, в том числе вражеские флоты во время войны.\n\nПравила строительства и перемещения",
+    "inspectConstruction": "Eos",
+    "knownFixesPass": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "accept-en-390",
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 125,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 393.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 673.3125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 800.671875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "slowQuote": "COMMISSION COST\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production",
+    "fastQuote": "COMMISSION COST\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 2 cycles at current production",
+    "rules": "Construction and movement rules\n\nUses the builder’s construction queue. No infrastructure slot or upkeep.\n\nRequires Deep-space Logistics. Cancelling returns the unspent share of the paid resources; the order is not refunded.\n\nExisting plotted courses stay unchanged until you replot. Restoration neither moves fleets nor restores their movement.",
+    "afterDirectAlternate": {
+      "focusTag": "BODY",
+      "focusClass": "",
+      "heading": "Nacre"
+    },
+    "underway": "STARLANE RESTORATION\nNacre ↔ Eos\n\nRestoration underway at Eos\n\n2 cycles remaining at current production\nInspect construction →\n\n4 → 1Jumps between endpoints\n\n3 fewer movement orders per crossing.\n\nThe shortcut is permanent and shared. Other empires can use it under normal border rules, including hostile fleets during war.\n\nConstruction and movement rules",
+    "inspectConstruction": "Eos",
+    "knownFixesPass": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "accept-ru-390",
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 126,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 446.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 751.75,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 919.890625,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "slowQuote": "СТОИМОСТЬ ПРОЕКТА\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 7",
+    "fastQuote": "СТОИМОСТЬ ПРОЕКТА\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 2",
+    "rules": "Правила строительства и перемещения\n\nЗанимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания.\n\nТребуется Глубококосмическая логистика. При отмене возвращается неизрасходованная часть оплаченных ресурсов; приказ не возвращается.\n\nСуществующие курсы сохраняются, пока вы не проложите их заново. Восстановление не перемещает флоты и не возвращает им запас движения.",
+    "afterDirectAlternate": {
+      "focusTag": "BODY",
+      "focusClass": "",
+      "heading": "Nacre"
+    },
+    "underway": "ВОССТАНОВЛЕНИЕ ЗВЁЗДНОГО ПУТИ\nNacre ↔ Eos\n\nВосстановление идёт в системе Eos\n\nОсталось циклов при текущем производстве: 2\nОсмотреть строительство →\n\n4 → 1Прыжки между системами\n\nЭкономия приказов на перемещение за проход: 3.\n\nКороткий путь останется навсегда и будет общим. Им смогут пользоваться другие державы по обычным правилам границ, в том числе вражеские флоты во время войны.\n\nПравила строительства и перемещения",
+    "inspectConstruction": "Eos",
+    "knownFixesPass": true,
+    "pageErrors": []
+  }
+]

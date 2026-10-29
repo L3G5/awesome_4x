@@ -1,0 +1,56 @@
+{
+  "purpose": "Choose an early normal-play lane opportunity; subsequent actions will use only the UI.",
+  "seedsTried": 3,
+  "found": [
+    {
+      "seed": "LANE-EXPERIENCE-2",
+      "lane": {
+        "id": "l0",
+        "endpoints": [
+          "s26",
+          "s32"
+        ],
+        "openedTurn": null,
+        "openedBy": null
+      },
+      "knownEndpoint": {
+        "id": "s32",
+        "name": "Iona",
+        "x": 20.9,
+        "y": 20.5,
+        "type": "arid",
+        "habitability": 60,
+        "richness": 4,
+        "science": 1,
+        "owner": null,
+        "originalOwner": null,
+        "population": 0,
+        "growth": 0,
+        "buildings": [],
+        "queue": null,
+        "defenseDamage": 0,
+        "anomaly": null,
+        "knownBy": [
+          "player"
+        ],
+        "exploredBy": [
+          "player"
+        ]
+      },
+      "prospects": [
+        {
+          "id": "s32",
+          "name": "Iona",
+          "type": "arid",
+          "habitability": 60
+        },
+        {
+          "id": "s41",
+          "name": "Asterion",
+          "type": "ocean",
+          "habitability": 76
+        }
+      ]
+    }
+  ]
+}

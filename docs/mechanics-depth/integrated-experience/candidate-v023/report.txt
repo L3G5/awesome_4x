@@ -1,0 +1,27 @@
+Independent 0.23.0 experience acceptance — first corrected candidate
+
+Target: http://127.0.0.1:35515
+Commit: fbd89a2e01f394676241ad6cfe868a0de095784a
+Delivered asset/build pins: build-before.json and build-after.json.
+This target is preserved separately from the earlier a5077ea integration.
+
+Verdict: the active-project estimate and initial reading-position fixes pass. The alternate-builder Galaxy commit still loses focus/context, so this candidate is not a clean acceptance of all experience findings. The subsequent correction is accepted separately in candidate-focus-correction; this frozen candidate retains its observed defect.
+
+Observed matrix, English/Russian at 1440×960 and 390×960:
+- Direct restoration opens with Close focused and the title visible at the beginning. Costs, travel and permanent/shared risk precede optional procedural detail.
+- Unstarted Nacre and Eos quotes correctly differ:48 work/7 cycles versus48 work/2 cycles, both60 credits/70 minerals/1 order. Builder selection and two visible language toggles leave the complete state unchanged.
+- After paying the normal command from Nacre's inspector with Eos chosen, Eos receives the correct queue and the selected held scout stays unchanged, but BODY receives focus and Nacre's idle inspector remains. This reproduces all 4cases; compare accept-results.json afterDirectAlternate.
+- An active Eos project reviewed from Nacre shows only Eos/2 cycles remaining. There is no cost panel, builder selector or Restore action. Inspect construction opens Eos. This resolves the misleading7cycle prospective quote in the earlier build.
+- Foreign-project privacy pairs render identical modal text and relevant attributes when private progress changes 6→43, fleet location changes and unseen treasury/science/infrastructure vary. No player sensors exist at the foreign endpoint. The panel explicitly says completion time is unknown and offers no private ETA or own-builder Inspect button. Four matrix pairs pass. This is a targeted invariance check, not a claim about every hidden field throughout the game.
+- All4controlled lifecycle cases pass immediate/partial cancel, queue export/reload,2 cycle completion and bilingual briefing, unchanged unrelated held scout intent, normal1 order/1 move crossing and final export/reload. Rules and actors are the exact pinned sources. Rivals are inactive in this fixture; this does not measure AI pressure or balance.
+- Actual default50 Russian390 ordinary commissioning preserves exact game effect, chosen colony focus, selected fleet, horizontal 180px and export/reload. Vertical scroll shifts383→388px. This remains a small documented geometry drift; it does not lose the player's row.
+
+Natural opportunity: a deliberate defer is understandable
+
+Seed LANE-EXPERIENCE-2 was selected after examining 3 seeds solely to find an early surveyed dormant endpoint. Thereafter the recorded opening uses the visible UI only: lab at Solace, Logistics research, move ark to surveyed Iona, settle, build mine, hold other fleets, read/dismiss briefings/offers and end cycles. No save injection or game-state edits occur in this natural run. The full initial/decision saves, export and action log are included.
+
+At cycle 8, Iona has 3 population, a mine and7 production; the lane to unsurveyed Aster costs60 credits/70 minerals/1 order and occupies Iona's queue for7 cycles at current production. The treasury is 169 credits/138 minerals. The map visibly shows a dashed dormant lane and an unsurveyed destination. The preview correctly reports no accessible CHARTED route, then one jump after restoration; it does not invent a precise savings value from hidden map connections.
+
+I deferred. The project uses roughly half the mineral reserve and delays Iona's next investment before the value of the far end is surveyed. Scouting or further colony development is a clear alternative. Restoration becomes attractive if that expedition reveals a useful region, a repeated crossing demand or a military need that justifies the shared permanent frontier. This is a real queue/geography commitment rather than a recurring maintenance assignment. It should remain optional when the destination does not justify it.
+
+Limits: this is one selected early opening and controlled lifecycle coverage, not a finished campaign, win-rate sample or proof every generated lane is compelling. It does not assess long-run AI restoration policy or challenge. Documents remain outside this focused mechanic review. No source changes were made by the reviewer.

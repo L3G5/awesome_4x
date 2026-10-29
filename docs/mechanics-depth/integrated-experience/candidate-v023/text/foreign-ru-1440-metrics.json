@@ -1,0 +1,39 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "documentWidth": 1440,
+  "modal": {
+    "scrollTop": 0,
+    "height": 613,
+    "scrollHeight": 613,
+    "rect": {
+      "x": 295,
+      "y": 172.625,
+      "width": 850,
+      "height": 614.75,
+      "visible": true
+    },
+    "title": {
+      "x": 326,
+      "y": 250.625,
+      "width": 763,
+      "height": 36,
+      "visible": true
+    },
+    "endpoints": {
+      "x": 351,
+      "y": 472.71875,
+      "width": 738,
+      "height": 35,
+      "visible": true
+    },
+    "travel": null,
+    "submit": null
+  },
+  "focus": {
+    "tag": "BUTTON",
+    "action": "construction-tab"
+  }
+}

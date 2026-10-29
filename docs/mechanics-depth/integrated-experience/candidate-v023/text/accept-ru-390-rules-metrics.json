@@ -1,0 +1,50 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 960
+  },
+  "documentWidth": 390,
+  "modal": {
+    "scrollTop": 0,
+    "height": 862,
+    "scrollHeight": 862,
+    "rect": {
+      "x": 12,
+      "y": 48,
+      "width": 366,
+      "height": 864,
+      "visible": true
+    },
+    "title": {
+      "x": 32,
+      "y": -18,
+      "width": 301,
+      "height": 56,
+      "visible": true
+    },
+    "endpoints": {
+      "x": 48,
+      "y": 302.1875,
+      "width": 294,
+      "height": 29.390625,
+      "visible": true
+    },
+    "travel": {
+      "x": 48,
+      "y": 607.75,
+      "width": 294,
+      "height": 37.796875,
+      "visible": true
+    },
+    "submit": {
+      "x": 48,
+      "y": 775.890625,
+      "width": 270.078125,
+      "height": 44,
+      "visible": true
+    }
+  },
+  "focus": {
+    "tag": "SUMMARY"
+  }
+}

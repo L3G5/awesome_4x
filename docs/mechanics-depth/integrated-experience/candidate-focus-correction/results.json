@@ -1,0 +1,322 @@
+[
+  {
+    "tag": "direct-en-1440",
+    "synthetic": true,
+    "initial": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 789,
+        "scrollHeight": 789,
+        "rect": {
+          "x": 295,
+          "y": 84.71875,
+          "width": 850,
+          "height": 790.5625,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 161.71875,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 384.8125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 613.203125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 725.28125,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "result": {
+      "focusTag": "DIV",
+      "focusClass": "production-row",
+      "heading": "Eos",
+      "project": "⌁\nStarlane restoration\n\n2 cycles to completion\n\n×"
+    },
+    "exactPaidEffectFleetIntentAndResultFocus": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "direct-ru-1440",
+    "synthetic": true,
+    "initial": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 792,
+        "scrollHeight": 792,
+        "rect": {
+          "x": 295,
+          "y": 83.21875,
+          "width": 850,
+          "height": 793.5625,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 161.21875,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 383.3125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 613.703125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 725.78125,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "result": {
+      "focusTag": "DIV",
+      "focusClass": "production-row",
+      "heading": "Eos",
+      "project": "⌁\nВосстановление звёздного пути\n\nЦиклов до завершения: 2\n\n×"
+    },
+    "exactPaidEffectFleetIntentAndResultFocus": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "direct-en-390",
+    "synthetic": true,
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 125,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 393.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 673.3125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 800.671875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "result": {
+      "focusTag": "DIV",
+      "focusClass": "production-row",
+      "heading": "Eos",
+      "project": "⌁\nStarlane restoration\n\n2 cycles to completion\n\n×"
+    },
+    "exactPaidEffectFleetIntentAndResultFocus": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "direct-ru-390",
+    "synthetic": true,
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 126,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 446.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 751.75,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 919.890625,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "result": {
+      "focusTag": "DIV",
+      "focusClass": "production-row",
+      "heading": "Eos",
+      "project": "⌁\nВосстановление звёздного пути\n\nЦиклов до завершения: 2\n\n×"
+    },
+    "exactPaidEffectFleetIntentAndResultFocus": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "empire-en-1440",
+    "actualSave": true,
+    "origin": {
+      "vertical": 0,
+      "horizontal": 0
+    },
+    "cancelExactStateFocusScroll": true,
+    "afterPaint": {
+      "vertical": 0,
+      "horizontal": 0
+    },
+    "exactPaidEffectRowFleetAndScroll": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "empire-ru-1440",
+    "actualSave": true,
+    "origin": {
+      "vertical": 0,
+      "horizontal": 0
+    },
+    "cancelExactStateFocusScroll": true,
+    "afterPaint": {
+      "vertical": 0,
+      "horizontal": 0
+    },
+    "exactPaidEffectRowFleetAndScroll": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "empire-en-390",
+    "actualSave": true,
+    "origin": {
+      "vertical": 367,
+      "horizontal": 180
+    },
+    "cancelExactStateFocusScroll": true,
+    "afterPaint": {
+      "vertical": 367,
+      "horizontal": 180
+    },
+    "exactPaidEffectRowFleetAndScroll": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  },
+  {
+    "tag": "empire-ru-390",
+    "actualSave": true,
+    "origin": {
+      "vertical": 383,
+      "horizontal": 180
+    },
+    "cancelExactStateFocusScroll": true,
+    "afterPaint": {
+      "vertical": 383,
+      "horizontal": 180
+    },
+    "exactPaidEffectRowFleetAndScroll": true,
+    "exportReloadExact": true,
+    "pageErrors": []
+  }
+]

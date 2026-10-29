@@ -1,0 +1,51 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 960
+  },
+  "documentWidth": 390,
+  "modal": {
+    "scrollTop": 0,
+    "height": 862,
+    "scrollHeight": 862,
+    "rect": {
+      "x": 12,
+      "y": 48,
+      "width": 366,
+      "height": 864,
+      "visible": true
+    },
+    "title": {
+      "x": 32,
+      "y": -11,
+      "width": 301,
+      "height": 31,
+      "visible": true
+    },
+    "endpoints": {
+      "x": 48,
+      "y": 257.140625,
+      "width": 294,
+      "height": 29.390625,
+      "visible": true
+    },
+    "travel": {
+      "x": 48,
+      "y": 385.53125,
+      "width": 294,
+      "height": 37.796875,
+      "visible": true
+    },
+    "submit": {
+      "x": 48,
+      "y": 827.796875,
+      "width": 190.96875,
+      "height": 43,
+      "visible": true
+    }
+  },
+  "focus": {
+    "tag": "BUTTON",
+    "action": "construction-tab"
+  }
+}

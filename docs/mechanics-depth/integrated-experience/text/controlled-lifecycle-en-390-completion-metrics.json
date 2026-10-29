@@ -1,0 +1,33 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 960
+  },
+  "documentWidth": 390,
+  "modal": {
+    "scrollTop": 0,
+    "height": 483,
+    "scrollHeight": 483,
+    "rect": {
+      "x": 12,
+      "y": 237.453125,
+      "width": 366,
+      "height": 485.09375,
+      "visible": true
+    },
+    "title": {
+      "x": 32,
+      "y": 314.453125,
+      "width": 301,
+      "height": 62,
+      "visible": true
+    },
+    "endpoints": null,
+    "travel": null,
+    "submit": null
+  },
+  "focus": {
+    "tag": "BUTTON",
+    "action": "close-modal"
+  }
+}

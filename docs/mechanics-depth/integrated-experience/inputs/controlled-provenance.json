@@ -1,0 +1,81 @@
+{
+  "synthetic": true,
+  "seed": "DEPTH-EXPERIENCE-A507",
+  "laneId": "l0",
+  "slowBuilder": {
+    "id": "s7",
+    "name": "Nacre",
+    "production": 7,
+    "quote": {
+      "id": "l0",
+      "endpoints": [
+        "s7",
+        "s39"
+      ],
+      "opened": false,
+      "openedTurn": null,
+      "openedBy": null,
+      "project": null,
+      "kind": "starlane",
+      "name": "Starlane restoration",
+      "icon": "⌁",
+      "cost": {
+        "credits": 60,
+        "minerals": 70
+      },
+      "work": 48,
+      "systemId": "s7",
+      "destinationId": "s39",
+      "turns": 7,
+      "beforeJumps": 4,
+      "afterJumps": 1,
+      "savings": 3,
+      "borderOpen": true,
+      "enabled": true,
+      "reason": ""
+    }
+  },
+  "fastBuilder": {
+    "id": "s39",
+    "name": "Eos",
+    "production": 25,
+    "quote": {
+      "id": "l0",
+      "endpoints": [
+        "s7",
+        "s39"
+      ],
+      "opened": false,
+      "openedTurn": null,
+      "openedBy": null,
+      "project": null,
+      "kind": "starlane",
+      "name": "Starlane restoration",
+      "icon": "⌁",
+      "cost": {
+        "credits": 60,
+        "minerals": 70
+      },
+      "work": 48,
+      "systemId": "s39",
+      "destinationId": "s7",
+      "turns": 2,
+      "beforeJumps": 4,
+      "afterJumps": 1,
+      "savings": 3,
+      "borderOpen": true,
+      "enabled": true,
+      "reason": ""
+    }
+  },
+  "scoutId": "f1",
+  "guardId": "f3",
+  "changes": [
+    "Both existing dormant endpoints assigned to player; populations/buildings differ to test builder ETA.",
+    "Four additional neutral colonies assigned to player to exercise scrolling.",
+    "All systems charted/surveyed for the UI layout/lifecycle fixture.",
+    "Rivals marked inactive to isolate construction lifecycle; not strategic play evidence.",
+    "Unrelated scout retains an ordinarily plotted route and Hold.",
+    "A frigate starts at the slow endpoint solely for an ordinary crossing after restoration."
+  ]
+}

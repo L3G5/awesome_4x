@@ -1,0 +1,13 @@
+.alignment-outlook{margin-top:17px;padding-top:15px;border-top:1px solid #35464f}
+.alignment-outlook h4{font-size:11px;letter-spacing:.04em;font-weight:500;color:#cfddd9;margin:0 0 12px}
+.alignment-budget{display:grid;gap:8px;margin:0;font-size:11px}
+.alignment-budget>div{display:flex;justify-content:space-between;gap:16px;align-items:start}
+.alignment-budget dt{color:#a7b8c2}.alignment-budget dt small{display:block;font-size:9px;color:#829aa9;margin-top:3px}
+.alignment-budget dd{margin:0;font-variant-numeric:tabular-nums;white-space:nowrap;color:#d7e8df}
+.victory-card .alignment-budget-result{margin:13px 0 8px;color:#a7d8c9;font-size:12px;line-height:1.65}
+.victory-card .alignment-budget-result.funding-short{color:#e4b597}
+.victory-card .alignment-budget-assumption{font-size:10px;line-height:1.7;color:#8da3b1;margin:0}
+.resource .credit-income-scope{display:block;font-size:8px;color:#8da3b1;line-height:1.3;margin-top:3px;white-space:nowrap}
+.invasion-preview .invasion-survival{display:block;margin:9px 0 4px;font-weight:500;color:#a8d6c8}
+.invasion-preview .invasion-survival.lethal{color:#ffb1a5;border-left:2px solid #a85d56;padding-left:9px}
+@media(max-width:900px){.resource .credit-income-scope{display:none}}

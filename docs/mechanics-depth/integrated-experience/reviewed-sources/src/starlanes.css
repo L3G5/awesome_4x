@@ -1,0 +1,19 @@
+.starlane-summary{border-left:2px dashed #bfa369;padding-left:12px;margin-top:12px}
+.starlane-summary p{font-size:11px;line-height:1.65;color:#b5c8ce;margin:7px 0}
+.starlane-destination{background:none;border:0;padding:2px;color:#e2c789;font-family:var(--heading);font-size:15px;text-align:left}
+.starlane-project{padding:24px;border:1px solid #53605d;background:linear-gradient(125deg,#14242d,#182731);border-radius:12px}
+.starlane-project h3{font:400 25px/1.4 var(--heading);margin:9px 0 18px;color:#e5d3aa}
+.starlane-project p{font-size:13px;line-height:1.7;color:#b6c9ce;max-width:64ch}
+.starlane-project .starlane-shared{color:#dccb9c}
+.starlane-project .starlane-warning{color:#f0bd85}
+.starlane-project .starlane-travel b{font:400 27px/1.4 var(--heading);color:var(--accent);margin-right:8px}
+.starlane-cost{display:flex;flex-wrap:wrap;gap:16px 28px;padding:15px 0;margin:10px 0;border-top:1px solid #354850;border-bottom:1px solid #354850}
+.starlane-cost dt{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#91a9ba}
+.starlane-cost dd{font-size:14px;margin:7px 0 0;color:#d3e4e5;line-height:1.6}
+.starlane-project select{max-width:320px;margin-bottom:12px}
+.starlane-project-status{border-left:2px solid var(--accent);padding-left:12px}
+.starlane-project-status small{display:block;margin-top:4px}
+.starlane-project .primary{margin-top:8px;max-width:100%;white-space:normal}
+.map-legend .dormant-legend{color:#d0b77f}
+.map-legend .dormant-legend:before{content:'';width:19px;border-top:1px dashed currentColor}
+@media(max-width:660px){.starlane-project{padding:15px}.starlane-project h3{font-size:21px}.starlane-project p{font-size:12px}.starlane-cost{display:block}.starlane-cost>div+div{margin-top:15px}}

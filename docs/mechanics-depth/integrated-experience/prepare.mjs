@@ -1,0 +1,19 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {createGame,command,validateSave,getNeighbors,getSystemYield} from './reviewed-sources/src/game.js';
+import {getStarlaneOptions} from './reviewed-sources/src/starlanes.js';
+const out=new URL('./',import.meta.url);for(const d of ['inputs','exports','screens','text'])fs.mkdirSync(new URL(d,out),{recursive:true});
+const state=createGame('DEPTH-EXPERIENCE-A507'),lane=state.ancientLanes[0], [a,b]=lane.endpoints.map(id=>state.systems.find(w=>w.id===id));
+Object.assign(a,{owner:'player',population:3,growth:0,buildings:['mine'],queue:null});delete a.charter;
+Object.assign(b,{owner:'player',population:9,growth:0,buildings:['mine','factory','shipyard'],charter:{type:'forge',level:1},queue:null});
+for(const w of state.systems.filter(w=>!w.owner&&!lane.endpoints.includes(w.id)).slice(0,4))Object.assign(w,{owner:'player',population:3,growth:0,buildings:['mine'],queue:null});
+for(const w of state.systems){if(!w.knownBy.includes('player'))w.knownBy.push('player');if(!w.exploredBy.includes('player'))w.exploredBy.push('player');}
+Object.assign(state.factions[0],{techs:['logistics','industry'],credits:900,minerals:900,orders:10});
+for(const f of state.factions.filter(f=>f.id!=='player'))f.eliminated=true;
+const scout=state.fleets.find(f=>f.owner==='player'&&f.type==='scout');const target=state.systems.find(w=>getNeighbors(state,scout.systemId).includes(w.id)&&!w.owner&&w.id!==a.id&&w.id!==b.id)||state.systems.find(w=>getNeighbors(state,scout.systemId).includes(w.id)&&w.owner==='player');assert(target);assert(command(state,{type:'planRoute',fleetId:scout.id,destinationId:target.id}).ok);assert(command(state,{type:'hold',fleetId:scout.id}).ok);
+const guard=state.fleets.find(f=>f.owner==='player'&&f.type==='frigate');guard.systemId=a.id;
+assert(validateSave(state));
+fs.writeFileSync(new URL('inputs/controlled-base.json',out),JSON.stringify(state,null,2));
+fs.writeFileSync(new URL('inputs/controlled-provenance.json',out),JSON.stringify({synthetic:true,seed:state.seed,laneId:lane.id,slowBuilder:{id:a.id,name:a.name,production:getSystemYield(state,a).production,quote:getStarlaneOptions(state,a.id)[0]},fastBuilder:{id:b.id,name:b.name,production:getSystemYield(state,b).production,quote:getStarlaneOptions(state,b.id)[0]},scoutId:scout.id,guardId:guard.id,changes:['Both existing dormant endpoints assigned to player; populations/buildings differ to test builder ETA.','Four additional neutral colonies assigned to player to exercise scrolling.','All systems charted/surveyed for the UI layout/lifecycle fixture.','Rivals marked inactive to isolate construction lifecycle; not strategic play evidence.','Unrelated scout retains an ordinarily plotted route and Hold.','A frigate starts at the slow endpoint solely for an ordinary crossing after restoration.']},null,2));
+const seeds=['ASTERION',...Array.from({length:20},(_,i)=>'LANE-EXPERIENCE-'+(i+1))];const found=[];for(const seed of seeds){const s=createGame(seed);const known=s.systems.filter(w=>w.exploredBy.includes('player')&&!w.owner);const hit=s.ancientLanes.find(l=>l.endpoints.some(id=>known.some(w=>w.id===id)));if(hit){found.push({seed,lane:hit,knownEndpoint:s.systems.find(w=>hit.endpoints.includes(w.id)&&w.exploredBy.includes('player')),prospects:known.map(w=>({id:w.id,name:w.name,type:w.type,habitability:w.habitability}))});break;}}
+fs.writeFileSync(new URL('inputs/natural-seed-selection.json',out),JSON.stringify({purpose:'Choose an early normal-play lane opportunity; subsequent actions will use only the UI.',seedsTried:found.length?seeds.indexOf(found[0].seed)+1:seeds.length,found},null,2));
+console.log(JSON.stringify({lane:lane.id,a:a.name,b:b.name,aProduction:getSystemYield(state,a).production,bProduction:getSystemYield(state,b).production,natural:found.map(x=>({seed:x.seed,world:x.knownEndpoint.name,habitability:x.knownEndpoint.habitability}))}));

@@ -1,0 +1,894 @@
+[
+  {
+    "tag": "preview-en-1440",
+    "originPosition": {
+      "vertical": 726,
+      "horizontal": 0
+    },
+    "selectedFleet": "f1",
+    "slowMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 848,
+        "scrollHeight": 848,
+        "rect": {
+          "x": 295,
+          "y": 54.984375,
+          "width": 850,
+          "height": 850.03125,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 131.984375,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 355.078125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 489.078125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 806.015625,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "slowCost": "PAY NOW\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production",
+    "fastMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 848,
+        "scrollHeight": 848,
+        "rect": {
+          "x": 295,
+          "y": 54.984375,
+          "width": 850,
+          "height": 850.03125,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 131.984375,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 355.078125,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 489.078125,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 806.015625,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "SELECT"
+      }
+    },
+    "fastCost": "PAY NOW\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 2 cycles at current production",
+    "previewCancelPreservesStateFocusScrollFleet": true,
+    "committedPosition": {
+      "vertical": 395,
+      "horizontal": 0
+    },
+    "exactPaidEffectAndChosenRow": true,
+    "underwayMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 834,
+        "scrollHeight": 834,
+        "rect": {
+          "x": 295,
+          "y": 62.046875,
+          "width": 850,
+          "height": 835.90625,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 139.046875,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 362.140625,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 415.140625,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 776.859375,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "underwayCost": "PAY NOW\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production",
+    "actualProjectStatus": "Restoration underway at Eos\n2 cycles remaining at current production",
+    "directInitialMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 834,
+        "scrollHeight": 834,
+        "rect": {
+          "x": 295,
+          "y": 62.046875,
+          "width": 850,
+          "height": 835.90625,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 139.046875,
+          "width": 763,
+          "height": 39,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 362.140625,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 415.140625,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 776.859375,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "directInitialFocus": "close-modal",
+    "pageErrors": []
+  },
+  {
+    "tag": "preview-ru-1440",
+    "originPosition": {
+      "vertical": 881,
+      "horizontal": 0
+    },
+    "selectedFleet": "f1",
+    "slowMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 295,
+          "y": 48,
+          "width": 850,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 126,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 348.09375,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 483.09375,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 823.125,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "slowCost": "ОПЛАТА СЕЙЧАС\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 7",
+    "fastMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 295,
+          "y": 48,
+          "width": 850,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 126,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 348.09375,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 483.09375,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 823.125,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "SELECT"
+      }
+    },
+    "fastCost": "ОПЛАТА СЕЙЧАС\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 2",
+    "previewCancelPreservesStateFocusScrollFleet": true,
+    "committedPosition": {
+      "vertical": 393,
+      "horizontal": 0
+    },
+    "exactPaidEffectAndChosenRow": true,
+    "underwayMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 858,
+        "scrollHeight": 858,
+        "rect": {
+          "x": 295,
+          "y": 50,
+          "width": 850,
+          "height": 860,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 128,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 350.09375,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 403.09375,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 787.90625,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "underwayCost": "ОПЛАТА СЕЙЧАС\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 7",
+    "actualProjectStatus": "Восстановление идёт в системе Eos\nОсталось циклов при текущем производстве: 2",
+    "directInitialMetrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "documentWidth": 1440,
+      "modal": {
+        "scrollTop": 0,
+        "height": 858,
+        "scrollHeight": 858,
+        "rect": {
+          "x": 295,
+          "y": 50,
+          "width": 850,
+          "height": 860,
+          "visible": true
+        },
+        "title": {
+          "x": 326,
+          "y": 128,
+          "width": 763,
+          "height": 36,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 351,
+          "y": 350.09375,
+          "width": 738,
+          "height": 35,
+          "visible": true
+        },
+        "travel": {
+          "x": 351,
+          "y": 403.09375,
+          "width": 569.078125,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 351,
+          "y": 787.90625,
+          "width": 270.078125,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "directInitialFocus": "close-modal",
+    "pageErrors": []
+  },
+  {
+    "tag": "preview-en-390",
+    "originPosition": {
+      "vertical": 1128,
+      "horizontal": 180
+    },
+    "selectedFleet": "f1",
+    "slowMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": -11,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 257.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 385.53125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 827.796875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "slowCost": "PAY NOW\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production",
+    "fastMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": -11,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 257.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 385.53125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 827.796875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "SELECT"
+      }
+    },
+    "fastCost": "PAY NOW\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 2 cycles at current production",
+    "previewCancelPreservesStateFocusScrollFleet": true,
+    "committedPosition": {
+      "vertical": 682,
+      "horizontal": 180
+    },
+    "exactPaidEffectAndChosenRow": true,
+    "underwayMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 125,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 393.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 440.53125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 925.875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "underwayCost": "PAY NOW\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 7 cycles at current production",
+    "actualProjectStatus": "Restoration underway at Eos\n2 cycles remaining at current production",
+    "directInitialMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 125,
+          "width": 301,
+          "height": 31,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 393.140625,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 440.53125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 925.875,
+          "width": 190.96875,
+          "height": 43,
+          "visible": true
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "directInitialFocus": "close-modal",
+    "pageErrors": []
+  },
+  {
+    "tag": "preview-ru-390",
+    "originPosition": {
+      "vertical": 1297,
+      "horizontal": 180
+    },
+    "selectedFleet": "f1",
+    "slowMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": -36,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 284.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 413.578125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 961.796875,
+          "width": 270.078125,
+          "height": 44,
+          "visible": false
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "slowCost": "ОПЛАТА СЕЙЧАС\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 7",
+    "fastMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": -36,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 284.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 413.578125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 961.796875,
+          "width": 270.078125,
+          "height": 44,
+          "visible": false
+        }
+      },
+      "focus": {
+        "tag": "SELECT"
+      }
+    },
+    "fastCost": "ОПЛАТА СЕЙЧАС\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 2",
+    "previewCancelPreservesStateFocusScrollFleet": true,
+    "committedPosition": {
+      "vertical": 694,
+      "horizontal": 180
+    },
+    "exactPaidEffectAndChosenRow": true,
+    "underwayMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 126,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 446.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 493.578125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 1084.875,
+          "width": 270.078125,
+          "height": 44,
+          "visible": false
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "construction-tab"
+      }
+    },
+    "underwayCost": "ОПЛАТА СЕЙЧАС\n◈ 60 · ◇ 70 · 1 приказ\nСТРОИТЕЛЬСТВО\nРабота: 48 · Циклов при текущем производстве: 7",
+    "actualProjectStatus": "Восстановление идёт в системе Eos\nОсталось циклов при текущем производстве: 2",
+    "directInitialMetrics": {
+      "viewport": {
+        "width": 390,
+        "height": 960
+      },
+      "documentWidth": 390,
+      "modal": {
+        "scrollTop": 0,
+        "height": 862,
+        "scrollHeight": 862,
+        "rect": {
+          "x": 12,
+          "y": 48,
+          "width": 366,
+          "height": 864,
+          "visible": true
+        },
+        "title": {
+          "x": 32,
+          "y": 126,
+          "width": 301,
+          "height": 56,
+          "visible": true
+        },
+        "endpoints": {
+          "x": 48,
+          "y": 446.1875,
+          "width": 294,
+          "height": 29.390625,
+          "visible": true
+        },
+        "travel": {
+          "x": 48,
+          "y": 493.578125,
+          "width": 294,
+          "height": 37.796875,
+          "visible": true
+        },
+        "submit": {
+          "x": 48,
+          "y": 1084.875,
+          "width": 270.078125,
+          "height": 44,
+          "visible": false
+        }
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "action": "close-modal"
+      }
+    },
+    "directInitialFocus": "close-modal",
+    "pageErrors": []
+  }
+]

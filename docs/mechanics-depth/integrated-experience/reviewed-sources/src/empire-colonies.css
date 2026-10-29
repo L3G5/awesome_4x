@@ -1,0 +1,31 @@
+/* Keep the colony, its current work and its actions together while comparing yields. */
+.colony-table.empire-colonies{min-width:660px}
+.empire-colonies .colony-world-cell{position:sticky;left:0;z-index:1;width:184px;min-width:184px;max-width:224px;padding:12px;background:#0e1925;border-bottom:1px solid #2d4251;box-shadow:1px 0 #2d4251;vertical-align:top;text-transform:none;letter-spacing:0;font:inherit;color:#d0e1e5}
+.empire-colonies thead th:first-child{position:sticky;left:0;z-index:2;background:#0e1925;box-shadow:1px 0 #2d4251}
+.empire-colonies .colony-world-inspect{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-height:30px;padding:0;border:0;background:transparent;text-align:left;white-space:normal;text-transform:none;letter-spacing:0;color:#d0e1e5}
+.empire-colonies .colony-world-inspect strong{font:400 15px/1.4 var(--heading);overflow-wrap:anywhere}
+.empire-colonies .colony-world-inspect>span{flex:none;font-size:11px;color:var(--accent)}
+.empire-colonies .colony-world-inspect:hover:not(:disabled){background:transparent}
+.empire-colonies .colony-world-inspect:hover strong{text-decoration:underline;text-underline-offset:3px}
+.empire-colonies .colony-population{display:block;margin-top:2px;font-size:10px;line-height:1.5;color:#91a9ba}
+.empire-colonies .colony-construction{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:8px}
+.empire-colonies .colony-construction-status{min-width:0;font-size:11px;line-height:1.5;font-family:inherit}
+.empire-colonies .colony-project{max-width:200px;color:#bed4df;overflow-wrap:anywhere}
+.empire-colonies .colony-construction-status small{display:block;font-size:10px;color:#91a9ba;margin-top:3px}
+.empire-colonies .colony-idle{font-size:11px;color:#91a9ba}
+.empire-colonies .colony-commission{min-height:32px;padding:6px 9px;border-color:#436c6d;background:#142a32;color:#a5e1d4;font-size:11px;line-height:1.35;white-space:normal;text-transform:none;letter-spacing:0}
+.empire-colonies .colony-commission:hover:not(:disabled){background:#1d3b43;border-color:#79b4af}
+.empire-colonies .colony-specialty{min-width:130px;vertical-align:top;padding-top:19px}
+.empire-colonies .colony-output{vertical-align:top;padding-top:22px}
+.empire-colonies tr[data-colony-row]:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.empire-colonies tr[data-colony-row]:focus .colony-world-cell{background:#152b34;box-shadow:inset 3px 0 var(--accent),1px 0 #2d4251}
+.empire-colonies .colony-world-inspect:focus-visible,.empire-colonies .colony-commission:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* The old narrow table hides these comparison columns; scrolling now retains all four. */
+@media(max-width:900px){
+  .colony-table.empire-colonies th:nth-child(3),.colony-table.empire-colonies td:nth-child(3),.colony-table.empire-colonies th:nth-child(4),.colony-table.empire-colonies td:nth-child(4){display:table-cell}
+}
+@media(max-width:660px){
+  .empire-colonies .colony-world-cell{width:174px;min-width:174px;max-width:174px;padding:10px}
+  .empire-colonies .colony-world-inspect{min-height:32px}
+  .empire-colonies .colony-project{max-width:154px}
+}

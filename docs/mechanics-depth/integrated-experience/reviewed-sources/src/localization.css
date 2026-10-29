@@ -1,0 +1,21 @@
+.language-toggle { font-size: 11px; white-space: nowrap; letter-spacing: 0; }
+.modal-language { position: absolute; right: 54px; top: 14px; z-index: 1; padding: 6px 10px; }
+html[lang="ru"] { --heading: Georgia, 'Times New Roman', serif; }
+html[lang="ru"] .rail button { font-size: 9px; letter-spacing: 0; }
+html[lang="ru"] .rail button > span { white-space: nowrap; }
+html[lang="ru"] .resource label { letter-spacing: 0; }
+html[lang="ru"] .brand small { letter-spacing: .12em; }
+@media (max-width: 1180px) {
+  .topbar { gap: 14px; }
+  .top-actions { gap: 3px; }
+  .top-actions .language-toggle { padding: 7px; }
+}
+@media (max-width: 660px) {
+  .topbar { flex-wrap: wrap; height: auto; min-height: 90px; padding-top: 5px; padding-bottom: 5px; }
+  .app-shell { grid-template-rows: minmax(90px, auto) 62dvh auto 32px; }
+  .top-actions { margin-left: auto; }
+  .top-actions .language-toggle { min-width: 64px; }
+  html[lang="ru"] .rail button { font-size: 7px; }
+}
+.modal:has(.modal-language) .modal-content { padding-top: 54px; }
+.tech-footer button { white-space: nowrap; }

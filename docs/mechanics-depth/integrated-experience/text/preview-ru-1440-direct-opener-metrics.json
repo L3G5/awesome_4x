@@ -1,0 +1,51 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "documentWidth": 1440,
+  "modal": {
+    "scrollTop": 0,
+    "height": 858,
+    "scrollHeight": 858,
+    "rect": {
+      "x": 295,
+      "y": 50,
+      "width": 850,
+      "height": 860,
+      "visible": true
+    },
+    "title": {
+      "x": 326,
+      "y": 128,
+      "width": 763,
+      "height": 36,
+      "visible": true
+    },
+    "endpoints": {
+      "x": 351,
+      "y": 350.09375,
+      "width": 738,
+      "height": 35,
+      "visible": true
+    },
+    "travel": {
+      "x": 351,
+      "y": 403.09375,
+      "width": 569.078125,
+      "height": 37.796875,
+      "visible": true
+    },
+    "submit": {
+      "x": 351,
+      "y": 787.90625,
+      "width": 270.078125,
+      "height": 44,
+      "visible": true
+    }
+  },
+  "focus": {
+    "tag": "BUTTON",
+    "action": "close-modal"
+  }
+}
