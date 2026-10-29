@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
+import assert from 'node:assert/strict';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'MANIFEST.sha256.json')));
+for(const [file,expected]of Object.entries(manifest.files))assert.equal(hash(fs.readFileSync(path.join(root,file))),expected,file);
+const build=JSON.parse(fs.readFileSync(path.join(root,'provenance/frozen-build.json')));
+for(const [file,expected]of Object.entries(build.assetHashes))assert.equal(hash(gunzipSync(fs.readFileSync(path.join(root,'provenance',path.basename(file)+'.gz')))),expected,file);
+console.log(JSON.stringify({artifactFiles:Object.keys(manifest.files).length,allHashesMatch:true,frozenCompiledAssetsVerified:Object.keys(build.assetHashes).length,report:'index.html'},null,2));

@@ -20,6 +20,10 @@ The simulation in `src/game.js` is independent of rendering. Authored content, r
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
+The [fortified-network playtest](docs/watch-playtest/index.html) follows a UI-only version-0.14 campaign through Transcendence at cycle 60, including a tied public race, limited beacon seizure and three defensive battles. Its portable replay reproduces all 265 commands and 15 actual export events; a separate postgame comparison verifies the same trace on version 0.16.
+
+The [colony investment review](docs/stage17-investment-review/index.html) verifies current costs, completed output, replacement losses and subsequent construction times without changing quick commissioning.
+
 The [founding-world review](docs/stage16-founding-review/index.html) shows how recognized conquest objectives, anonymous unknown worlds and confirmed rival control preserve exploration.
 
 The [recorded combat exchange review](docs/stage15-combat-review/index.html) explains the optional round viewer, unchanged combat outcomes, old-report compatibility and reproducible baseline comparisons.

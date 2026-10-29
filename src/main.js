@@ -5,6 +5,7 @@ import './command-clarity.css';
 import './defense.css';
 import './combat-rounds.css';
 import './conquest.css';
+import './investment.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';

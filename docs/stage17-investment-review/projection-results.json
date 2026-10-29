@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-10-29T00:07:30.640Z",
+  "method": "Independent bounded synthetic fixture checks and two ordinary-command completion oracles at fixed population/technology. No historical or ongoing campaign state accessed; no campaign cohort. Source rules are unchanged.",
+  "sources": {
+    "src/investment.js": "be9f6d13d43738bf3f71fb503c61639dbbb9dc5806a5f83ab04b98ae3f1cefe0",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385"
+  },
+  "scriptSha256": "5582f592d520af43af9a793d5446fcc585e8296658fa0d76932a5de7ce2036e3",
+  "checks": [
+    {
+      "name": "Forge threshold separates five-cycle investment from two-to-one-cycle frigate throughput",
+      "passed": true
+    },
+    {
+      "name": "Funds, orders and paid queue block commissioning without blocking structural comparison or leaking planning funds",
+      "passed": true
+    },
+    {
+      "name": "Missing technology, absent support and full slots cannot invent completed outcomes",
+      "passed": true
+    },
+    {
+      "name": "Removing Extractor includes the full dependent Extraction charter loss",
+      "passed": true
+    },
+    {
+      "name": "Removing a shipyard yields unavailable ship comparisons and a reduced repair pool",
+      "passed": true
+    },
+    {
+      "name": "Removing Forge support removes factory production, charter production, discount and charter repair together",
+      "passed": true
+    },
+    {
+      "name": "Habitat removal preserves population and infrastructure capacity above the new growth limit",
+      "passed": true
+    },
+    {
+      "name": "Current research, faction rounding, capped orders and damaged-colony defense use actual yield rules",
+      "passed": true
+    },
+    {
+      "name": "Local visible blockade is separate from nominal repair; hidden rival fleets/economies do not affect the projection",
+      "passed": true
+    },
+    {
+      "name": "Ordinary Forge completion consumes five cycles at the old rate and agrees with the fixed-condition projection",
+      "passed": true,
+      "ordinaryCompletion": [
+        {
+          "cycle": 1,
+          "production": 24,
+          "progress": 24
+        },
+        {
+          "cycle": 2,
+          "production": 24,
+          "progress": 48
+        },
+        {
+          "cycle": 3,
+          "production": 24,
+          "progress": 72
+        },
+        {
+          "cycle": 4,
+          "production": 24,
+          "progress": 96
+        },
+        {
+          "cycle": 5,
+          "production": 30,
+          "progress": null
+        }
+      ]
+    },
+    {
+      "name": "Ordinary replacement retains old income through completion and applies new income on the next cycle",
+      "passed": true,
+      "cycles": 2,
+      "oldIncome": 15,
+      "newIncome": 22
+    },
+    {
+      "name": "Returned nested records are detached and JSON reload reproduces the same comparison",
+      "passed": true
+    }
+  ]
+}

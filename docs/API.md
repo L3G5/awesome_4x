@@ -376,3 +376,21 @@ A world is recognized only if owned by the observer or present in its `exploredB
 `empires` contains only self/contacted identities, extended with `{controlled,exact}`. The count includes recognized worlds only. The observer's own count is exact because owned worlds are recognized; a rival count is exact only when all four objectives are recognized. Otherwise render it as confirmed control, never an omniscient total. `unknownCount` is derived from the constant target minus recognized count. `capitalId` relocation cannot create or move objectives. Current sovereignty on recognized worlds follows the existing public ownership rule without requiring present fleet sensors.
 
 The projection introduces no persisted state, logs, warnings or commands. The interface may show a current control warning from these confirmed values; it never invents historical announcements on import or first contact.
+
+## Colony investment comparison
+
+`getInvestmentComparison(state, systemId, request, factionId = 'player')` in `src/investment.js` returns a detached current-conditions comparison for an owned colony. Missing/foreign colonies and unknown requests return null. Supported requests are `{kind:'building',itemId,replaceBuildingId?}` and `{kind:'charter',charterType}`. It adds no saved state and executes no commands.
+
+The result contains:
+
+- `project`: `{kind,id,name,level,work,cost:{credits,minerals},orderCost:1,command,commission:{enabled,reason}}`. Prices are today's ordinary quote; winner, elimination and order guards retain command precedence. An existing queue's paid receipt is never repriced.
+- `comparable, reason`: structural eligibility is checked independently of temporary funds, orders and queue gates. A structurally invalid request has no completed snapshot; `after` and `delta` are null. Structural requirements still include technology, population, support, slots, replacement identity and discovery restrictions.
+- `construction`: `{production,cyclesAtCurrentRate,queueBusy}`. Duration is the ceiling of project work divided by current production, with no waiting time for the existing queue included.
+- `before, after`: `colony` contains credits/minerals/science/production/defense/population/capacity plus nominal `growthPotential` and `growthPaused`; `infrastructure` contains used/capacity/available/overCapacity; `empire` contains ordinary credit/mineral/science income, production, maxOrders/uncappedOrders/orderLimit and owned beacons; `repair` contains nominal shared capacity and current blocked status; `militaryDiscount` is the fraction saved on military mineral costs.
+- `delta`: numeric differences with the same nested shape, excluding boolean flags.
+- `removed`: optional building `{id,name}` and prior charter `{type,name,level}`. A charter upgrade also replaces the old level; this is not a claim that all its benefits disappear.
+- `throughput`: up to five rows for technology-unlocked ships plus the Beacon. Each row has `{id,kind,name,before,after}`; each side has `{available,reason,cycles,cost}`. Structural unavailability, such as a lost shipyard or full infrastructure, sets cycles to null. Affordability is not a throughput prerequisite. The Beacon can remain listed with its missing-technology reason.
+
+Completion substitutes only the proposed infrastructure or charter. Replacing a supporting building removes its charter; switching replaces the prior charter instead of stacking it. Population, technology, defense damage, other colonies and existing projects remain fixed. Population is never deleted when capacity falls. The planning copies used to remove temporary eligibility gates are never used as returned stockpiles or to grant resources.
+
+Actual end-turn phase order collects old income, computes old colony output, applies growth, spends that already-computed production and then completes construction. New recurring income is collected next cycle; new repair and refreshed order capacity may apply later in the completion cycle. A factory or Forge never accelerates itself. A same-cycle birth can make actual completed output differ from this explicitly fixed-population comparison. `growthPotential` is not a promised birth rate, repair capacity is not guaranteed repaired hull, and Beacon count is not a promise of alignment advancement. No payback or multicycle empire simulation is inferred.

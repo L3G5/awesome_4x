@@ -1,0 +1,97 @@
+{
+  "frozenAt": "2026-10-29T00:22:44.019Z",
+  "base": "13b0392",
+  "projectionRevision": "077578f995b9e5fb4a1eead8f9ded6e38108c4f1",
+  "finalReviewedSources": {
+    "src/investment.js": "be9f6d13d43738bf3f71fb503c61639dbbb9dc5806a5f83ab04b98ae3f1cefe0",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/investment-ui.js": "9148fb9852fcb211b319a09ad1b900a2f7a92d3043e238a2d4a178aa78723f35",
+    "src/investment.css": "2927d524fe2c626a29f06c123864c2269247c550fd962af031ed80bf8269d657",
+    "src/development-ui.js": "29b57e0dcdc073e9b277c88c24edf62875a34d63ec63df8a9409e9a30e013a4e",
+    "src/main.js": "4c2b9f788e1f544e20ab162dc83e6f348ec5417cb6da96e74fbec07f6d1961be"
+  },
+  "phaseAttribution": "12 projection cases;5 initial UI cases;2 final layout/keyboard cases. Earlier UI results retain their original source hashes. No campaign cohort.",
+  "artifacts": {
+    "README.md": {
+      "bytes": 4866,
+      "sha256": "40686a4e62be30c4cfa82909455ffa8ba81dedf61266649f57a2ae1101138aeb"
+    },
+    "final-forge-1280.png": {
+      "bytes": 215898,
+      "sha256": "e34b1a749e562b05c0adfeecbedfc1de66e97fbe168cb5ab1cc85bb3a0f67431"
+    },
+    "final-habitat-390-effects.png": {
+      "bytes": 69213,
+      "sha256": "2c2b9460876441468273ed20d102a83a18e9d19b7a2093d7ac91a3823923a003"
+    },
+    "final-habitat-390-throughput.png": {
+      "bytes": 66528,
+      "sha256": "3d426387f42370f4ae712ab2c939b125d84ff99e3c304e2b85193fd74267b989"
+    },
+    "final-ui-results.json": {
+      "bytes": 1655,
+      "sha256": "0eca9a6c567414d43161cd1f2dc838be2fc8a59fb9096d53231222bea020e34c"
+    },
+    "final-ui-review.mjs": {
+      "bytes": 6195,
+      "sha256": "b00edfb545141da77caee441e21957b52a0e179e6822a3dd9f195bc990321ea9"
+    },
+    "forge-1280-effects.png": {
+      "bytes": 296624,
+      "sha256": "8b6fb365867faab22fb38a6d89c00346eb8787368183c117f96b1b4b8903ff8a"
+    },
+    "forge-1280-throughput.png": {
+      "bytes": 295907,
+      "sha256": "586169d2c20d123e4b014c11c07a25b96f21476d22c7ca378d971714d30ad57c"
+    },
+    "habitat-390-effects.png": {
+      "bytes": 73042,
+      "sha256": "099bb44043f9cb3e6ebacb091414120b392656f7820b9f0005d965cc53e29241"
+    },
+    "habitat-390-throughput.png": {
+      "bytes": 70059,
+      "sha256": "5ebec1c4cd00c0b929e76c144d52063ae7764003ae4c29387d29deaf1ac281b3"
+    },
+    "index.html": {
+      "bytes": 4870,
+      "sha256": "5b5fa858e49e1248fe53b3bfa4443413217f4c3b01d300730bf115a72b1e09fb"
+    },
+    "projection-results.json": {
+      "bytes": 3213,
+      "sha256": "6c8added550f1d19fbb896811923a6782f785359e6b83c27600f569668d832d1"
+    },
+    "projection-review.mjs": {
+      "bytes": 10497,
+      "sha256": "5582f592d520af43af9a793d5446fcc585e8296658fa0d76932a5de7ce2036e3"
+    },
+    "replacement-1280.png": {
+      "bytes": 291629,
+      "sha256": "f3800e6b9ba7ecf53417ceb4dcc66b947c2b2123a206ba9a79041da14b90d992"
+    },
+    "ui-results.json": {
+      "bytes": 2103,
+      "sha256": "b97218d7a81c422a4137c310a6b089d467426ce168d9b38a7afdf81e2b3931b4"
+    },
+    "ui-review.mjs": {
+      "bytes": 9038,
+      "sha256": "33514e04ff5aa644696fa240166c40eb13e2ac7f0f8ec2df129897a6460a7047"
+    }
+  },
+  "rootAcceptance": {
+    "production-validation.json": {
+      "bytes": 2082,
+      "sha256": "59c3f006b21ac32375068d6c3643d02d8d10c2f705173b4bb49d80cca859fcc7"
+    },
+    "production-browser.txt": {
+      "bytes": 7855,
+      "sha256": "53c674893dc7d2a69ec3804786f8496750fc441e3fe93cef3e411f00626e8028"
+    },
+    "rules.txt": {
+      "bytes": 85293,
+      "sha256": "fe697df97ea3bd4b36cb0f6d4b440bd7475b5b0f9021de181b80278a146a428b"
+    }
+  }
+}

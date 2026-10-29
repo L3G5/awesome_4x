@@ -1,0 +1,162 @@
+{
+  "seed": "ASTERION-WATCH-14",
+  "initialization": {
+    "eventIndex": 8,
+    "seed": "ASTERION-WATCH-14"
+  },
+  "enginePin": "a9c61ff",
+  "frozenBuildCommit": "6dbf0b0af92267ae9220a89a36e17ebbb567e698",
+  "checkpointEvents": [
+    {
+      "eventIndex": 32,
+      "file": "../checkpoints/cycle1.json",
+      "sha256": "0dcba4a3d596087574dd74776a996716805fa641b588c8683e9caeb64ec87e08",
+      "turn": 1
+    },
+    {
+      "eventIndex": 80,
+      "file": "../checkpoints/cycle7.json",
+      "sha256": "715ceb0a0dd878ba3cb12e1f5a38dac6bdde9fb19892385d403b59bf9c1a2c9f",
+      "turn": 7
+    },
+    {
+      "eventIndex": 122,
+      "file": "../checkpoints/cycle10.json",
+      "sha256": "b84d1f03705de1b7eb59c7da580c1f930587a8313822486c1c13be9ff7ff6526",
+      "turn": 10
+    },
+    {
+      "eventIndex": 230,
+      "file": "../checkpoints/cycle20.json",
+      "sha256": "eebbce607528e199689f296ef3021cea6052cf31c77251694696cdf3dbfc8aae",
+      "turn": 20
+    },
+    {
+      "eventIndex": 346,
+      "file": "../checkpoints/cycle30.json",
+      "sha256": "1a1c49b7ea355440aed75bd1bbfa1198a5f996ff0961a5888f64a6b952077d06",
+      "turn": 30
+    },
+    {
+      "eventIndex": 456,
+      "file": "../checkpoints/cycle40.json",
+      "sha256": "bc336a1f56fa49d494914eb249756af9dc3f41a4f260c279064ab8e62393f715",
+      "turn": 40
+    },
+    {
+      "eventIndex": 465,
+      "file": "../checkpoints/cycle41.json",
+      "sha256": "9a4fd2b40fe55df444d0fdbe1415f4f232cac75e428d7a5d831abec033ffe10d",
+      "turn": 41
+    },
+    {
+      "eventIndex": 497,
+      "file": "../checkpoints/cycle44.json",
+      "sha256": "558e8f57be8f8c4548f193c33de45246f6b4e2146a48e47125b8369aa9b65145",
+      "turn": 44
+    },
+    {
+      "eventIndex": 529,
+      "file": "../checkpoints/cycle50.json",
+      "sha256": "a74766ebff8712d15821b133a7e8e6c56d8ff0647e4a24e89e01195e0f75c0e8",
+      "turn": 50
+    },
+    {
+      "eventIndex": 540,
+      "file": "../checkpoints/cycle51.json",
+      "sha256": "0d92ec11ee00ee474d99c852ba222f25588c019b18e1ac04d5aac2794d127698",
+      "turn": 51
+    },
+    {
+      "eventIndex": 615,
+      "file": "../checkpoints/cycle54.json",
+      "sha256": "277602c7a109132648582a2fc3181ef4fda9b15ac21f840d024728450408ceb9",
+      "turn": 54
+    },
+    {
+      "eventIndex": 643,
+      "file": "../checkpoints/cycle55.json",
+      "sha256": "5deb7e3b724994134ad5d1829d23c4a687ae1b213cedb2df689b3246bcef811b",
+      "turn": 55
+    },
+    {
+      "eventIndex": 668,
+      "file": "../checkpoints/cycle56.json",
+      "sha256": "8dbe53b4cbbf205bd50a1edf55496e7ce4a407a4973828673318578ad9210333",
+      "turn": 56
+    },
+    {
+      "eventIndex": 722,
+      "file": "../checkpoints/cycle60.json",
+      "sha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "turn": 60
+    },
+    {
+      "eventIndex": 727,
+      "file": "../checkpoints/cycle60.json",
+      "sha256": "56f15cb50cfaeebbe323af3ad65f7036d3f3d25bc9b5ceea896eb6ab9b2098ec",
+      "turn": 60
+    }
+  ],
+  "normalizations": [
+    {
+      "eventIndex": 571,
+      "field": "fleetId",
+      "recorded": "f43",
+      "actual": "f47",
+      "evidence": "Immediately preceding merge event569 selected f47 and targeted f43; surviving fleet is f47. Actual UI status event571 says Vanguard 47 arrived at Eidolon. Decision event572 documents the correction immediately. No game state was edited."
+    }
+  ],
+  "recordSha256": "43ba49500ca4cd26565d6e692b41cb0f9c1f844be24cd68b357d38009346ef6a",
+  "observationsSha256": "000912e9b415ed5d6fdb5fe010da3fc9a3994512993b2003eea2350c5c2ca3c9",
+  "eventKinds": {
+    "opened": 1,
+    "observation": 4,
+    "interaction": 586,
+    "driver-error": 5,
+    "decision": 43,
+    "export": 15,
+    "command": 59,
+    "image": 15,
+    "finished": 1,
+    "context-closed": 1
+  },
+  "pageErrors": [],
+  "driverErrors": [
+    {
+      "eventIndex": 6,
+      "time": "2026-10-28T23:20:10.687Z",
+      "cycle": "Cycle 01",
+      "kind": "driver-error",
+      "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=new-game]').first()\u001b[22m\n"
+    },
+    {
+      "eventIndex": 82,
+      "time": "2026-10-28T23:24:31.590Z",
+      "cycle": "Cycle 07",
+      "kind": "driver-error",
+      "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=review-trade][data-target=veyr]').first()\u001b[22m\n"
+    },
+    {
+      "eventIndex": 114,
+      "time": "2026-10-28T23:26:40.531Z",
+      "cycle": "Cycle 09",
+      "kind": "driver-error",
+      "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-fleet=f1]').first()\u001b[22m\n"
+    },
+    {
+      "eventIndex": 322,
+      "time": "2026-10-28T23:39:53.730Z",
+      "cycle": "Cycle 27",
+      "kind": "driver-error",
+      "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-system-id=s13]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-system-id=\"s13\" aria-pressed=\"false\" aria-label=\"Sable, khar\" class=\"galaxy-system-label\">\u2026</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 \u00d7 waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  2 \u00d7 retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m  6 \u00d7 retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "eventIndex": 342,
+      "time": "2026-10-28T23:40:52.871Z",
+      "cycle": "Cycle 29",
+      "kind": "driver-error",
+      "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=build][data-item=fortress]').first()\u001b[22m\n"
+    }
+  ]
+}

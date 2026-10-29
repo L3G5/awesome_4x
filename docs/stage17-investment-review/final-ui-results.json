@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-10-29T00:20:50.771Z",
+  "url": "http://127.0.0.1:5201/",
+  "method": "Two targeted final layout/keyboard cases after changes only to investment-ui.js and investment.css. Previous five UI cases retain original phase hashes and are not represented as rerun. Synthetic valid fixtures only; zero game commands; no WATCH files or profile accessed.",
+  "sources": {
+    "src/investment.js": "be9f6d13d43738bf3f71fb503c61639dbbb9dc5806a5f83ab04b98ae3f1cefe0",
+    "src/investment-ui.js": "9148fb9852fcb211b319a09ad1b900a2f7a92d3043e238a2d4a178aa78723f35",
+    "src/investment.css": "2927d524fe2c626a29f06c123864c2269247c550fd962af031ed80bf8269d657",
+    "src/development-ui.js": "29b57e0dcdc073e9b277c88c24edf62875a34d63ec63df8a9409e9a30e013a4e",
+    "src/main.js": "4c2b9f788e1f544e20ab162dc83e6f348ec5417cb6da96e74fbec07f6d1961be"
+  },
+  "changedSinceOriginalFive": [
+    "src/investment-ui.js",
+    "src/investment.css"
+  ],
+  "scriptSha256": "b00edfb545141da77caee441e21957b52a0e179e6822a3dd9f195bc990321ea9",
+  "checks": [
+    {
+      "name": "Final 1280px expanded comparison: named/priced project, full-width side-by-side layout, disabled purchase with active native disclosure, keyboard/purity/close boundaries",
+      "passed": true,
+      "screenshots": [
+        "final-forge-1280.png"
+      ]
+    },
+    {
+      "name": "Final 390px expanded comparison: named/priced project, stacked layout, disabled purchase with active native disclosure, keyboard/purity/close boundaries",
+      "passed": true,
+      "screenshots": [
+        "final-habitat-390-effects.png",
+        "final-habitat-390-throughput.png"
+      ]
+    }
+  ]
+}

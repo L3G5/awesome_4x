@@ -1,0 +1,49 @@
+{
+  "sourceRevision": "077578f995b9e5fb4a1eead8f9ded6e38108c4f1",
+  "uncommittedFinalUISources": {
+    "src/investment.js": "be9f6d13d43738bf3f71fb503c61639dbbb9dc5806a5f83ab04b98ae3f1cefe0",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/development.js": "cde8609865419ca1786af22f820756f3db7bb365ff3ec4fe0f6ef367d99b51fa",
+    "src/content.js": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/investment-ui.js": "9148fb9852fcb211b319a09ad1b900a2f7a92d3043e238a2d4a178aa78723f35",
+    "src/investment.css": "2927d524fe2c626a29f06c123864c2269247c550fd962af031ed80bf8269d657",
+    "src/development-ui.js": "29b57e0dcdc073e9b277c88c24edf62875a34d63ec63df8a9409e9a30e013a4e",
+    "src/main.js": "4c2b9f788e1f544e20ab162dc83e6f348ec5417cb6da96e74fbec07f6d1961be"
+  },
+  "build": {
+    "version": "0.17.0",
+    "commit": "077578f995b9e5fb4a1eead8f9ded6e38108c4f1",
+    "builtAt": "2026-10-29T00:20:13.582Z"
+  },
+  "assets": {
+    "assets/index-Bx5DwITQ.js": {
+      "bytes": 860380,
+      "gzipBytes": 238614,
+      "sha256": "afadc52f868da626a43a7b05a39c224a8175cb16fb3d5f610e4aab1eeec9082c"
+    },
+    "assets/index-MXjEZxnD.css": {
+      "bytes": 66357,
+      "gzipBytes": 15326,
+      "sha256": "d3ccc61473cb1669e3306cf69b30588cf639b999f50524f6b014f48b3e650876"
+    }
+  },
+  "verifiedArtifacts": 16,
+  "verifiedHtmlReferences": 8,
+  "rootInspectedFinalScreenshots": [
+    "final-forge-1280.png",
+    "final-habitat-390-effects.png",
+    "final-habitat-390-throughput.png"
+  ],
+  "rules": {
+    "passed": 350,
+    "log": "rules.txt"
+  },
+  "browser": {
+    "passed": 52,
+    "duration": "3.1 minutes",
+    "target": "frozen production build",
+    "log": "production-browser.txt"
+  },
+  "interruptedBrowserAttempt": "Local preview server stopped; observed failures were net::ERR_CONNECTION_REFUSED. Restarted frozen server and reran full suite; interrupted attempt is not counted as successful acceptance."
+}
