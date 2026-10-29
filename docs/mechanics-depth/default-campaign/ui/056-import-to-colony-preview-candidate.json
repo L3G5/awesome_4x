@@ -1,0 +1,480 @@
+{
+  "request": 56,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:33147/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n191+48\nCREDITS\n◇\n112+16\nMINERALS\n✧\n0+30\nSCIENCE\n⌘\n5 / 9\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n2\n3\n4\n5\n6\n7\n⌂Solace\nCONCORD\n⌂Lumen\nCHOIR\nMeridian\nVOLCANIC\nHesper\nBARREN\nSable\nGLACIAL\nStillwater\nTERRAN\nOrison\nGLACIAL\nCinder\nOCEAN\nSundrift\nGLACIAL\nThalassa\nCHOIR\nTethys\nUNSURVEYED\nAster\nVEYR\nHaven\nTERRAN\nAldebaran\nARID\nAntares\nCONCORD\nMorrow\nTERRAN\nEos\nVOLCANIC\nAsterion\nCONCORD\n△\n▴\n△\n▴\n⬡\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n30 charted systems · 25 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n3 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Aurelia\n\nAurelia → Solace · 7 charted jumps\n\n↶\nHold position\n⌁ 4\n⇥\n△\n▴\n▴\n⬡\nCOURSE PREVIEW\nSolace · 7 jumps · 7 orders total\nPlot course · free\n●\nAurelia\n›\n1\nMeridian\n›\n2\nAster\n›\n3\nHesper\n›\n4\nAsterion\n›\n5\nOrison\n›\n6\nSundrift\n›\n7\nSolace\n\nPlanning spends no orders. Opposition unknown at 4 stops.\n\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n8/8\nPOPULATION\n12\nPRODUCTION\nCOLONY PRODUCTION\n12 / CYCLE\n◎\nHabitation Domes\n\n3 cycles to completion\n\n×\nINFRASTRUCTURE\n3 / 4 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n✧ Research Enclave\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+19 credits · +10 minerals · +13 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n1 FLEET\nPathfinder 10\nChoir · 18 / 18 hull\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 13\n2412 CE\nEND CYCLE →\nSPACE\n5 orders remaining · 3 colonies\nCampaign exported. Keep this file as your backup.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nCampaign exported. Keep this file as your backup.",
+  "inspector": "THE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n8/8\nPOPULATION\n12\nPRODUCTION\nCOLONY PRODUCTION\n12 / CYCLE\n◎\nHabitation Domes\n\n3 cycles to completion\n\n×\nINFRASTRUCTURE\n3 / 4 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n✧ Research Enclave\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+19 credits · +10 minerals · +13 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n1 FLEET\nPathfinder 10\nChoir · 18 / 18 hull\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗",
+  "resources": "◈\n191+48\nCREDITS\n◇\n112+16\nMINERALS\n✧\n0+30\nSCIENCE\n⌘\n5 / 9\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Lumen\nCHOIR",
+      "attributes": {
+        "data-system-id": "s3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Meridian\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nBARREN",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sable\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Stillwater\nTERRAN",
+      "attributes": {
+        "data-system-id": "s16"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder\nOCEAN",
+      "attributes": {
+        "data-system-id": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Thalassa\nCHOIR",
+      "attributes": {
+        "data-system-id": "s21"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Tethys\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s23"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aster\nVEYR",
+      "attributes": {
+        "data-system-id": "s26"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aldebaran\nARID",
+      "attributes": {
+        "data-system-id": "s29"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Morrow\nTERRAN",
+      "attributes": {
+        "data-system-id": "s37"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eos\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s39"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f10"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⬡",
+      "attributes": {
+        "data-fleet-id": "f22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "↶",
+      "attributes": {
+        "data-system-select": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 4",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⬡",
+      "attributes": {
+        "data-fleet": "f22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Plot course · free",
+      "attributes": {
+        "data-action": "plan-route",
+        "data-destination": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "●\nAurelia",
+      "attributes": {
+        "data-system-select": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "1\nMeridian",
+      "attributes": {
+        "data-system-select": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "2\nAster",
+      "attributes": {
+        "data-system-select": "s26"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "3\nHesper",
+      "attributes": {
+        "data-system-select": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "4\nAsterion",
+      "attributes": {
+        "data-system-select": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "5\nOrison",
+      "attributes": {
+        "data-system-select": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "6\nSundrift",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "7\nSolace",
+      "attributes": {
+        "data-system-select": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "cancel-build",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Develop →",
+      "attributes": {
+        "data-action": "development-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 10\nChoir · 18 / 18 hull",
+      "attributes": {
+        "data-fleet": "f10"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift ↗",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares ↗",
+      "attributes": {
+        "data-system-select": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

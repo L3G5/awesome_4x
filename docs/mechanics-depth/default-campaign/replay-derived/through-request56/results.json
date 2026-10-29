@@ -1,0 +1,795 @@
+{
+  "method": "Derived replay from successful UI receipts and visible observations only. No checkpoint initializes or repairs replay. Engine sources are reconstructed from pinned Git commits in temporary directories and removed. No private foreign state is written to this audit.",
+  "limitations": "This checks command continuity, exact checkpoint equality, save validity and JSON reload determinism. It is not additional ordinary play, a human enjoyment result, strategy advice, or proof of optimality. The live log may continue beyond this frozen prefix.",
+  "seed": "ASTERION",
+  "throughRequest": 56,
+  "lastObservationRequest": 56,
+  "counts": {
+    "successfulUiReceipts": 183,
+    "gameCommands": 70,
+    "endTurns": 12,
+    "driverErrors": 1,
+    "pageErrors": 0,
+    "checkpointComparisons": 4,
+    "sourceTransitions": 1,
+    "observations": 55,
+    "visibleResourceChecks": 220,
+    "validStateChecks": 72,
+    "reloadChecks": 70
+  },
+  "allCommandsAccepted": true,
+  "allReplayedStatesValid": true,
+  "allReloadChecksEqual": true,
+  "allObservedCyclesAndResourcesEqual": true,
+  "allCheckpointComparisonsEqual": true,
+  "cycle13NormalUiImportReexportByteIdentical": true,
+  "finalReplayedTurn": 13,
+  "finalReplayedStateSha256": "632a5246a539bcec472e4d2770a855cd07832c67d4d7e4393d8b75538c8d0558",
+  "checkpoints": [
+    {
+      "request": 43,
+      "receipt": 121,
+      "file": "ui/actual-cycle9.json",
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "kind": "normal-ui-export",
+      "commandsApplied": 48,
+      "turn": 9,
+      "fullStateEqual": true,
+      "actualFileSha256": "dcfc8f358a6db093622b4a9ed02e90643383bdccb1b447d33535fe0f61e328b6",
+      "actualBytes": 52483,
+      "canonicalReplaySha256": "abfd0f8b3c50e4d4cebc75ab0b94e33a7b8ffcc4669db63d54304af718976ffb",
+      "uiExportBytesEqual": true
+    },
+    {
+      "request": 54,
+      "receipt": 176,
+      "file": "ui/actual-cycle13.json",
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "kind": "normal-ui-export",
+      "commandsApplied": 70,
+      "turn": 13,
+      "fullStateEqual": true,
+      "actualFileSha256": "94ab06c93f68780fb2027cdeac973f3fc0892f8f85e8d6a91d37318e501a172f",
+      "actualBytes": 57924,
+      "canonicalReplaySha256": "632a5246a539bcec472e4d2770a855cd07832c67d4d7e4393d8b75538c8d0558",
+      "uiExportBytesEqual": true
+    },
+    {
+      "request": 56,
+      "receipt": 180,
+      "file": "ui/actual-cycle13.json",
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "kind": "normal-ui-import-source-equals-continuous-replay",
+      "commandsApplied": 70,
+      "turn": 13,
+      "fullStateEqual": true,
+      "actualFileSha256": "94ab06c93f68780fb2027cdeac973f3fc0892f8f85e8d6a91d37318e501a172f",
+      "actualBytes": 57924,
+      "canonicalReplaySha256": "632a5246a539bcec472e4d2770a855cd07832c67d4d7e4393d8b75538c8d0558",
+      "uiExportBytesEqual": true
+    },
+    {
+      "request": 56,
+      "receipt": 182,
+      "file": "ui/actual-cycle13-after-import.json",
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "kind": "normal-ui-export",
+      "commandsApplied": 70,
+      "turn": 13,
+      "fullStateEqual": true,
+      "actualFileSha256": "94ab06c93f68780fb2027cdeac973f3fc0892f8f85e8d6a91d37318e501a172f",
+      "actualBytes": 57924,
+      "canonicalReplaySha256": "632a5246a539bcec472e4d2770a855cd07832c67d4d7e4393d8b75538c8d0558",
+      "uiExportBytesEqual": true
+    }
+  ],
+  "sourceTransitions": [
+    {
+      "request": 56,
+      "receipt": 180,
+      "from": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "to": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "importFile": "ui/actual-cycle13.json",
+      "continuousReplayVerifiedBeforeTransition": true,
+      "importedCheckpointUsedToResetReplay": false,
+      "importPublicBeaconReconciliationNoop": true
+    }
+  ],
+  "retainedDriverErrors": [
+    {
+      "request": 7,
+      "reason": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.fleet-switch [data-fleet=\"f1\"]')\n"
+    }
+  ],
+  "failedBatchPolicy": "Only action-complete records are projected. Request 7 lab commission is included; the failed fleet selector and all unexecuted tail actions are excluded. Request payloads and decision notes never supply missing game commands.",
+  "observations": [
+    {
+      "request": 1,
+      "file": "ui/001-initial-default.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 2,
+      "file": "ui/002-surveyed-ore-prospect.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 3,
+      "file": "ui/003-surveyed-antares.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 4,
+      "file": "ui/004-research-choice.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 5,
+      "file": "ui/005-first-settlement.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 6,
+      "file": "ui/006-capital-construction.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 7,
+      "file": "ui/007-after-error.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 8,
+      "file": "ui/008-scout-velorum.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 9,
+      "file": "ui/009-observatory-choice.json",
+      "turn": 1,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 10,
+      "file": "ui/010-salvage-and-cycle2.json",
+      "turn": 2,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 11,
+      "file": "ui/011-halcyon-frontier.json",
+      "turn": 2,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 12,
+      "file": "ui/012-sleeping-voices.json",
+      "turn": 2,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 13,
+      "file": "ui/013-haven-survey.json",
+      "turn": 2,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 14,
+      "file": "ui/014-hollow-sun.json",
+      "turn": 2,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 15,
+      "file": "ui/015-first-empire-commission.json",
+      "turn": 2,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 16,
+      "file": "ui/016-cycle3.json",
+      "turn": 3,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 17,
+      "file": "ui/017-zenith-survey.json",
+      "turn": 3,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 18,
+      "file": "ui/018-gate-echo.json",
+      "turn": 3,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 19,
+      "file": "ui/019-physics-complete.json",
+      "turn": 3,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 20,
+      "file": "ui/020-seraph-route.json",
+      "turn": 3,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 21,
+      "file": "ui/021-charted-galaxy.json",
+      "turn": 3,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 22,
+      "file": "ui/022-western-survey-party.json",
+      "turn": 4,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 23,
+      "file": "ui/023-orison-survey.json",
+      "turn": 4,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 24,
+      "file": "ui/024-stillwater-survey.json",
+      "turn": 4,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 25,
+      "file": "ui/025-second-foundry-choice.json",
+      "turn": 4,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 26,
+      "file": "ui/026-elysian-survey.json",
+      "turn": 4,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 27,
+      "file": "ui/027-banner-choice.json",
+      "turn": 4,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 28,
+      "file": "ui/028-lab-complete-and-ark-options.json",
+      "turn": 5,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 29,
+      "file": "ui/029-asterion-survey.json",
+      "turn": 5,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 30,
+      "file": "ui/030-sable-survey.json",
+      "turn": 5,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 31,
+      "file": "ui/031-choir-first-contact.json",
+      "turn": 5,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 32,
+      "file": "ui/032-choir-trade-and-capital.json",
+      "turn": 5,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 33,
+      "file": "ui/033-thalassa-survey.json",
+      "turn": 6,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 34,
+      "file": "ui/034-peregrine-survey.json",
+      "turn": 6,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 35,
+      "file": "ui/035-cycle7-administration.json",
+      "turn": 7,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 36,
+      "file": "ui/036-aldebaran-survey.json",
+      "turn": 7,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 37,
+      "file": "ui/037-cinder-survey.json",
+      "turn": 7,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 38,
+      "file": "ui/038-cycle8-research.json",
+      "turn": 8,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 39,
+      "file": "ui/039-morrow-survey.json",
+      "turn": 8,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 40,
+      "file": "ui/040-iona-survey.json",
+      "turn": 8,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 41,
+      "file": "ui/041-cycle9-expansion-options.json",
+      "turn": 9,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 42,
+      "file": "ui/042-second-ark-and-western-course.json",
+      "turn": 9,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 43,
+      "file": "ui/043-cycle9-save.json",
+      "turn": 9,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 44,
+      "file": "ui/044-scout-return-west.json",
+      "turn": 10,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 45,
+      "file": "ui/045-western-transit-cycle10.json",
+      "turn": 11,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 46,
+      "file": "ui/046-third-colony-and-lane-quote.json",
+      "turn": 11,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 47,
+      "file": "ui/047-defer-lane-fund-lab.json",
+      "turn": 11,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 48,
+      "file": "ui/048-cycle12-ophion-survey.json",
+      "turn": 12,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 49,
+      "file": "ui/049-eos-survey-and-mining.json",
+      "turn": 12,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 50,
+      "file": "ui/050-eos-inspection.json",
+      "turn": 12,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 51,
+      "file": "ui/051-cycle13-empire.json",
+      "turn": 13,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 52,
+      "file": "ui/052-fourth-colony-preparation.json",
+      "turn": 13,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 53,
+      "file": "ui/053-aurelia-survey.json",
+      "turn": 13,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 54,
+      "file": "ui/054-cycle13-save.json",
+      "turn": 13,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    },
+    {
+      "request": 56,
+      "file": "ui/056-import-to-colony-preview-candidate.json",
+      "turn": 13,
+      "visibleCycleEqual": true,
+      "visibleResourceAndIncomeEqual": true
+    }
+  ],
+  "provenance": {
+    "inputLog": "ui/actions.jsonl",
+    "inputPrefixLines": 316,
+    "inputPrefixBytes": 61442,
+    "inputPrefixSha256": "41579f85ce60033f0dd802f0971ff4cc222c7b54aef21fdb81ea0c31ccaa00ed",
+    "completedReceiptIdsContiguous": true,
+    "replayScriptSha256": "7f3252f678ab6f6b46417d1b5b1250b1583f6f8e24909b122d01094bce92d045",
+    "driverFileSha256": {
+      "driver.mjs": "1fc4e3ef0dd829c21196f22f10c652137b3ce09179280e1edc05e8827a117ddd",
+      "continuation-driver.mjs": "3a5dff184b64ac21df5bacaf15cb9ca2f7e9937f9da323d28b8a2f6ca1379079"
+    },
+    "originalSourceThroughRequest": 54,
+    "closeRequest": 55,
+    "importSourceTransitionRequest": 56,
+    "evidenceFiles": {
+      "ui/served-build-info.json": {
+        "bytes": 122,
+        "sha256": "f8e9313827a95e658f5c050e05b863add561bb2f2ed796ec896b6557763cb28b"
+      },
+      "ui/001-initial-default.json": {
+        "bytes": 9055,
+        "sha256": "abe309740682ae9abcfd98051d7442ef6e914405bbc830fb4000fc5ee372d1d3"
+      },
+      "ui/002-surveyed-ore-prospect.json": {
+        "bytes": 6335,
+        "sha256": "f7a55eca73a05717e38e7e63b05094f15124bfd68e4667db75df5d77f90645fa"
+      },
+      "ui/003-surveyed-antares.json": {
+        "bytes": 5968,
+        "sha256": "a2c09bb0d0260fb9f70fa8dd7c3026205f240d83e0cba6b9a2f5f84ff46a94b6"
+      },
+      "ui/004-research-choice.json": {
+        "bytes": 8239,
+        "sha256": "b8a9ace5a88b7df7e50385d6fe3261c7ea384e095abf5a26d20b0ed7034b90b4"
+      },
+      "ui/005-first-settlement.json": {
+        "bytes": 7942,
+        "sha256": "c6e2b78a63510d6f67f0c3ba84caa8545d2fefb5aa1e38509c323196293f4430"
+      },
+      "ui/006-capital-construction.json": {
+        "bytes": 14501,
+        "sha256": "240b623e477e5dd0469efc0c38d319e964be23804e9e0d396933a714c3a4c00c"
+      },
+      "ui/007-after-error.json": {
+        "bytes": 8480,
+        "sha256": "772f0da66c214c6aa57e933c6ec21fe0038324b0a7525ecbe3dbfb64b3738f7d"
+      },
+      "ui/008-scout-velorum.json": {
+        "bytes": 7683,
+        "sha256": "917e9fe6a0b4f0062c237f68d54bab6ba7f80eadd384d02bb9e202514585fe2b"
+      },
+      "ui/009-observatory-choice.json": {
+        "bytes": 10237,
+        "sha256": "f71799a834096d130867e0ddcf3be698660ed346b9acdb4505df2bcea329816e"
+      },
+      "ui/010-salvage-and-cycle2.json": {
+        "bytes": 7710,
+        "sha256": "12ac92babaaaf41d60137bbc5f5e645bbd4ebf4c3f2945321cfc2447b560a59b"
+      },
+      "ui/011-halcyon-frontier.json": {
+        "bytes": 7814,
+        "sha256": "41650a69aebcc7597fd727830039ddb52d82b322b05e1511ea7695773ea204fb"
+      },
+      "ui/012-sleeping-voices.json": {
+        "bytes": 9553,
+        "sha256": "f6dc2e2a09ee45295043ffb52ee5956359f7147d82f9ca8cb434c1ce07ec3285"
+      },
+      "ui/013-haven-survey.json": {
+        "bytes": 7397,
+        "sha256": "f5e20409eb050a274d260ff251975ae5f7f0802a8ea8afc9ad0751db32d28844"
+      },
+      "ui/014-hollow-sun.json": {
+        "bytes": 8751,
+        "sha256": "b8049976a7c11b5a345bb08f26d89cc059278c7b553701219885c0a96240972b"
+      },
+      "ui/015-first-empire-commission.json": {
+        "bytes": 7763,
+        "sha256": "136b4d4fe43cf0d197918eb4823a45a1224b5a5e88bb44b0ea49a301f1a46cc9"
+      },
+      "ui/016-cycle3.json": {
+        "bytes": 8578,
+        "sha256": "d6868f1184c29c8b4051f6038f65c4a9425722cbb7a2938b3e189ac4cdc30960"
+      },
+      "ui/017-zenith-survey.json": {
+        "bytes": 7702,
+        "sha256": "ad470b2a25e9f699d628484d4fc8f175985dbd93c44e78305afa38353d434e9f"
+      },
+      "ui/018-gate-echo.json": {
+        "bytes": 9234,
+        "sha256": "8bf68c8b6f4156274de487be87d00c3183f8a1f71c576074f436874d668367db"
+      },
+      "ui/019-physics-complete.json": {
+        "bytes": 8529,
+        "sha256": "b6647c57940b4b9712a5af128d95625836b1df02adb5e5a97690e9a2c627168f"
+      },
+      "ui/020-seraph-route.json": {
+        "bytes": 8078,
+        "sha256": "fff2149c2574c1567bd01e3205b83d722b3325b2347691e99b62a44e51483b6a"
+      },
+      "ui/021-charted-galaxy.json": {
+        "bytes": 7997,
+        "sha256": "6a25092d2c8815d9f90706e7855d0c67e0a4a382f6ed5f43a7410a947a69c566"
+      },
+      "ui/022-western-survey-party.json": {
+        "bytes": 9477,
+        "sha256": "8f3467c35dbf916144aa9b2f997803a97bda36ea659b7029f422cc23b0dc85d2"
+      },
+      "ui/023-orison-survey.json": {
+        "bytes": 8393,
+        "sha256": "f6ec354ba54c7e62bd811b233c69d2d22ef80d9f6b2f58994bd646659b6f8363"
+      },
+      "ui/024-stillwater-survey.json": {
+        "bytes": 8038,
+        "sha256": "fff6f3e4d8535491d27a1aec81727d0ab091fdb20fdfc21bbe2e5cdc62370831"
+      },
+      "ui/025-second-foundry-choice.json": {
+        "bytes": 9414,
+        "sha256": "d910b26c88a8bdee9d6b98447366f50b4d3f936b0bb5258e9295c49bad19e6ac"
+      },
+      "ui/026-elysian-survey.json": {
+        "bytes": 8404,
+        "sha256": "fbca5e7a1a6bb11ece5f1c159255f3fb501bc842ec653be5892e30666d9545ba"
+      },
+      "ui/027-banner-choice.json": {
+        "bytes": 9771,
+        "sha256": "a7d4a8daf85a0dd41dc80e0bea3d0508af624bbc548098d687c8acc28495e5c6"
+      },
+      "ui/028-lab-complete-and-ark-options.json": {
+        "bytes": 13661,
+        "sha256": "22be8e6a2fcb8b6b0c2af0963025329cc6d83d6bf356dd791ca40d4fc829ac2d"
+      },
+      "ui/029-asterion-survey.json": {
+        "bytes": 8616,
+        "sha256": "2e27c6894e2f57cbebeec86ddc2c9e701fc8ee8b2e22e7537faab783dd08636c"
+      },
+      "ui/030-sable-survey.json": {
+        "bytes": 7120,
+        "sha256": "9d467a4a33f7591c7f7f00a8c97a7fb08f49968583d6362c5e71be8bc5a85354"
+      },
+      "ui/031-choir-first-contact.json": {
+        "bytes": 5394,
+        "sha256": "c37addbbdcdd4222bc8d32d27adc063890a47d3bd3a46191ff60ffb5395092b5"
+      },
+      "ui/032-choir-trade-and-capital.json": {
+        "bytes": 8228,
+        "sha256": "7b406bc3cbb0e96f0da3fc26b35859336377a3bac7984a9a27b865b9feaf5d4b"
+      },
+      "ui/033-thalassa-survey.json": {
+        "bytes": 7363,
+        "sha256": "a92db157d10dd62ea5c8e6a5850c6821099ba025454110b1470077530c5e3418"
+      },
+      "ui/034-peregrine-survey.json": {
+        "bytes": 7320,
+        "sha256": "5e4f475dfa293873de555cf5537742cfdf09e5de4c61a42b5f463bbf43036155"
+      },
+      "ui/035-cycle7-administration.json": {
+        "bytes": 8002,
+        "sha256": "ad47539db5eae76eae5c7fff83b5fb18e8224aeacfbfa4ae1397353978263b1a"
+      },
+      "ui/036-aldebaran-survey.json": {
+        "bytes": 7521,
+        "sha256": "96984d813524291f2e103a29c600941640a1d5f9ee477f368f00ea4cf51031a5"
+      },
+      "ui/037-cinder-survey.json": {
+        "bytes": 7649,
+        "sha256": "8c45cdfe904b13215951dd4a8a64d0ad286cbb1623b823c04ae94719995f991a"
+      },
+      "ui/038-cycle8-research.json": {
+        "bytes": 8568,
+        "sha256": "fd1b8a128ec9f4aa0243caebcf6740e49c9f68249775b39424f5e7224f2e4135"
+      },
+      "ui/039-morrow-survey.json": {
+        "bytes": 7680,
+        "sha256": "3cb07c27b08d298571e8a1be510efffa1737f29d8a99943539297b7aa2026c2f"
+      },
+      "ui/040-iona-survey.json": {
+        "bytes": 8154,
+        "sha256": "31ec6306e07a81b09e9136ab57b3cc0ada099cb8be3f9f4394f3d360524c417a"
+      },
+      "ui/041-cycle9-expansion-options.json": {
+        "bytes": 8310,
+        "sha256": "10df9544714c7b56abbfa57bb10c77d04dcd3ac70e169cc025df2ee5d4a1f700"
+      },
+      "ui/042-second-ark-and-western-course.json": {
+        "bytes": 8650,
+        "sha256": "b87dd2df4e2893a659cbec9fbcf598ca81d8a992032d2859b0e1417a65338e5b"
+      },
+      "ui/actual-cycle9.json": {
+        "bytes": 52483,
+        "sha256": "dcfc8f358a6db093622b4a9ed02e90643383bdccb1b447d33535fe0f61e328b6"
+      },
+      "ui/043-cycle9-save.json": {
+        "bytes": 8644,
+        "sha256": "26ab9e8287528c9d9357801ae8488db798f72e35c2cb4d603f2f80852cff60a1"
+      },
+      "ui/044-scout-return-west.json": {
+        "bytes": 10916,
+        "sha256": "fb900f73a09e0be789d2828e411333b4a60a5038c952735f6cae97a10b9357cd"
+      },
+      "ui/045-western-transit-cycle10.json": {
+        "bytes": 10370,
+        "sha256": "1dfa9629f2d8062ed10606538a4b2d5f2e8948209c57d546496b7ffee55259ce"
+      },
+      "ui/046-third-colony-and-lane-quote.json": {
+        "bytes": 11891,
+        "sha256": "a726dae7bb5e338ac56e2100d1852de81a41e833b3b4a48e754e74e17ad6974e"
+      },
+      "ui/047-defer-lane-fund-lab.json": {
+        "bytes": 8539,
+        "sha256": "5b2e23126e0e801a368f98b61bd8bb37688b6e73e5bcd466fdb6c055ff1f957d"
+      },
+      "ui/048-cycle12-ophion-survey.json": {
+        "bytes": 8805,
+        "sha256": "073c6b7cc0b34bb34fdc398349fb37a250a9f56a3240e6341619e351bf717fd7"
+      },
+      "ui/049-eos-survey-and-mining.json": {
+        "bytes": 8796,
+        "sha256": "739b456d38db2fd521df7d4f43fb35bd30f5829fbd7b2999faed9096cbc54568"
+      },
+      "ui/050-eos-inspection.json": {
+        "bytes": 10732,
+        "sha256": "b81887e48e76ef372273d3c45653e04c9d22d4a86e7c64c0bd5b3c214e035210"
+      },
+      "ui/051-cycle13-empire.json": {
+        "bytes": 8959,
+        "sha256": "dea128b25572de36161b675abf95b753292691d342412f9147bbe54d9b68d824"
+      },
+      "ui/052-fourth-colony-preparation.json": {
+        "bytes": 9009,
+        "sha256": "23fb72e0e7b0d283936735ea2e97b6cc96f19a1b9fa89654cbfaf42aca87fdd1"
+      },
+      "ui/053-aurelia-survey.json": {
+        "bytes": 8767,
+        "sha256": "6836075e8e056a83ab726a09cdcfd6c6ca0afd75651806927586c46665cdb531"
+      },
+      "ui/actual-cycle13.json": {
+        "bytes": 57924,
+        "sha256": "94ab06c93f68780fb2027cdeac973f3fc0892f8f85e8d6a91d37318e501a172f"
+      },
+      "ui/054-cycle13-save.json": {
+        "bytes": 8801,
+        "sha256": "6ed831c05c77d359fda44753b67f2da527c9417f2fad179c6e37cd451a0f7bd9"
+      },
+      "ui/served-build-56.json": {
+        "bytes": 122,
+        "sha256": "4d36e088aada5baff1e483f584936da70bbd7c54f080527d9642aa98c824b9ac"
+      },
+      "ui/actual-cycle13-after-import.json": {
+        "bytes": 57924,
+        "sha256": "94ab06c93f68780fb2027cdeac973f3fc0892f8f85e8d6a91d37318e501a172f"
+      },
+      "ui/056-import-to-colony-preview-candidate.json": {
+        "bytes": 12469,
+        "sha256": "bf2f3eb8131a9f88d025a5ba98035091c1a614f6fdbd04ebbaf1101c9572fedb"
+      }
+    },
+    "engines": [
+      {
+        "commit": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+        "sourceFileSha256": {
+          "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+          "src/content.js": "598c2cfcd370924b1d06a19e647f14fa37937aafac4b05cdbbd50c67cdb6d00c",
+          "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+          "src/ai.js": "0b5a8d0bc19178d9c6ef48fc897e4a5cfeb14d1ec4f7f49f71678dff8a67e027",
+          "src/diplomacy.js": "52cdddfbc2ecf7e7339907f337c42b009e7497d70aff5cbcb487005b193562c3",
+          "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+          "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+          "src/discoveries.js": "3fad6d144fe9457e2742f278c49248618f50e24d9cdf024f59de9eeec98fbf9d",
+          "src/development.js": "29fb685645c41d38bcfb29325a178c1c69eb378aa1ab71f5ceded0773eaa944d",
+          "src/galaxy-generation.js": "beea8b14db1e9907d211bdc10d06bb05d6d13705ba64582780ee881dc5c3e393",
+          "src/starlanes.js": "94a7d3697c2a60fc735f4cefaa929988b24cf910e08f269fef28ca127ca0f2be",
+          "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+          "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+          "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+          "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+          "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+          "src/main.js": "f3fb8c0dad830cdf74e20c1d0f4fd10090ac0035fd3522999fd0c90d62636223"
+        }
+      },
+      {
+        "commit": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+        "sourceFileSha256": {
+          "src/game.js": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+          "src/content.js": "598c2cfcd370924b1d06a19e647f14fa37937aafac4b05cdbbd50c67cdb6d00c",
+          "src/intelligence.js": "9351aa5037023a065b25ddb4285007f9f3eadcb186f6596ad344dc100b674119",
+          "src/ai.js": "0b5a8d0bc19178d9c6ef48fc897e4a5cfeb14d1ec4f7f49f71678dff8a67e027",
+          "src/diplomacy.js": "c5c3f613a983e7d1c32b6f4d142cb0a55f3eba497418c4e42ec0c4fa686492a8",
+          "src/public-affairs.js": "ef47637f3116c971c94b83a582ce34a75a56ed4128e0a48efbbf0d2ee3c4426a",
+          "src/victory.js": "8f8d52d4643873844da8983c6893160b8978cb5968382de3b2ef0305f3decd24",
+          "src/discoveries.js": "3fad6d144fe9457e2742f278c49248618f50e24d9cdf024f59de9eeec98fbf9d",
+          "src/development.js": "29fb685645c41d38bcfb29325a178c1c69eb378aa1ab71f5ceded0773eaa944d",
+          "src/galaxy-generation.js": "beea8b14db1e9907d211bdc10d06bb05d6d13705ba64582780ee881dc5c3e393",
+          "src/starlanes.js": "387f988fae4023f550de3e15c0a46c034f05cf0f0edda29570db7fbdc3c5bed6",
+          "src/reports.js": "8d5fc274cc9b596c875f5b76eaa0ca032a762038e949688e40277337e0965821",
+          "src/navigation.js": "dd836dff42912a57ffafd162cb66e9844da724d9539cd2f25779335c9c1bda3e",
+          "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+          "src/fleet-readiness.js": "db82559aea2a8c669fb7416afea5ed94a0cbfac9998ccae5657164c93a61116c",
+          "src/defense.js": "a01cf50a2f378a7cca4b0be10286416dee2b0c65c66eea8d6f4665717f4c7ebe",
+          "src/main.js": "f3fb8c0dad830cdf74e20c1d0f4fd10090ac0035fd3522999fd0c90d62636223"
+        }
+      }
+    ]
+  }
+}

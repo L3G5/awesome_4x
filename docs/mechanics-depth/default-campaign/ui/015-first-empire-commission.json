@@ -1,0 +1,215 @@
+{
+  "request": 15,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n48+13\nCREDITS\n◇\n118+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n2 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nMANY WORLDS. ONE HORIZON.\nThe Concord\n\nMake a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.\n\n⌘\nCOLONIZED WORLDS\n2\n\n6 billion citizens across the Reach\n\nFLEET POWER\n27\n\n3 ships · 5 credits upkeep / cycle\n\nLEGACY SCORE\n58\n\nHighest score at cycle 120 wins\n\nCOLONIAL ADMINISTRATION\n\nOutput per cycle, before fleet upkeep and trade. Select a column to compare your worlds.\n\n2 colonies\nWORLD\n↑\n\tSPECIALTY\t\n◈ CREDITS\n↕\n\t\n◇ MINERALS\n↕\n\t\n✧ SCIENCE\n↕\n\t\n▥ WORK\n↕\n\n\nAntares\n↗\n1 / 8 population\nConstruction\nExchange Port\n5 cycles remaining\n\t\nUnchartered\n0 / 2 slots\n\t5\t4\t2\t5\n\nSolace\n↗\n5 / 8 population\nConstruction\nResearch Enclave\n3 cycles remaining\n\t\nUnchartered\n2 / 3 slots\n\t13\t9\t4\t9\n✦ Transcendence\n0 / 10\n\nResearch the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying 60 credits each advancing cycle.\n\n0 / 3 beacons · Research the Asterion Protocol.\n\nA hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.\n\n⌂ Domination\n1 / 4\n\nHold all four founding worlds at the same time. These objectives stay fixed when an empire moves its administrative capital.\n\n⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗\n\n3 founding worlds remain unidentified. Survey the frontier to locate them.\n\nCONFIRMED FOUNDING-WORLD CONTROL\nConcord\n1 / 4\nTHE AWAKENING NETWORK\n✦\n\nNo beacon signals from known civilizations yet. Restored nodes and alignment progress become public after diplomatic contact.\n\nFLEET REGISTRY\nPathfinder 1 ×1\nHaven · 18 / 18 hull · 3 combat power\nSpent\n0 jumps\nVanguard 3 ×1\nSolace · 34 / 34 hull · 12 combat power\nReady\n1 jump\nLast Light of Haven ×1\nHaven · 34 / 34 hull · 12 combat power\nReady\n1 jump\nCONCORD ADMINISTRATION\nThe working empire\n\n2 worlds · 6 billion citizens\n\n14\nconstruction work each cycle\n0 idle colonies\nUPCOMING COMPLETIONS\nSolace\nResearch Enclave · 3 cycles\n↗\nAntares\nExchange Port · 5 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →\nCycle 02\n2401 CE\nEND CYCLE →\nSPACE\n2 orders remaining · 2 colonies\nExchange Port commissioned at Antares.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nExchange Port commissioned at Antares.",
+  "inspector": "CONCORD ADMINISTRATION\nThe working empire\n\n2 worlds · 6 billion citizens\n\n14\nconstruction work each cycle\n0 idle colonies\nUPCOMING COMPLETIONS\nSolace\nResearch Enclave · 3 cycles\n↗\nAntares\nExchange Port · 5 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →",
+  "resources": "◈\n48+13\nCREDITS\n◇\n118+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n2 / 7\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "WORLD\n↑",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "name"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "◈ CREDITS\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "credits"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "◇ MINERALS\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "minerals"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "✧ SCIENCE\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "science"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▥ WORK\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "production"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Solace\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s0",
+        "data-founding-world": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1 ×1\nHaven · 18 / 18 hull · 3 combat power\nSpent\n0 jumps",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard 3 ×1\nSolace · 34 / 34 hull · 12 combat power\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Last Light of Haven ×1\nHaven · 34 / 34 hull · 12 combat power\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Solace\nResearch Enclave · 3 cycles\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nExchange Port · 5 cycles\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Review alignment requirements →",
+      "attributes": {
+        "data-action": "review-alignment"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

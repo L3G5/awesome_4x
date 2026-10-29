@@ -1,0 +1,140 @@
+{
+  "request": 31,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n134+17\nCREDITS\n◇\n188+14\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n5 / 8\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE INTERSTELLAR ASSEMBLY\nVoices in the void\n\nRivals have ambitions of their own. Trade opens borders only by agreement; frontier claims create tension, and peace binds both empires.\n\n⛨\nGOVERNMENT BROADCASTS\nAcross the Reach\nFOREIGN RELATIONS\n\nThe commitments of other civilizations. These agreements do not change their relations with the Concord.\n\nNo foreign commitments received. Establish contact to hear a government’s public announcements.\n\nBroadcasts report commitments and charted sovereignty. Distant fleets still require local sensors.\n\n?\nRELATIONS WITH THE CONCORD\nUnidentified civilizationNO CONTACT\nA signal beyond our charted stars\n\nExplore connected systems to establish first contact. Our envoys cannot negotiate with a civilization we have not encountered.\n\n?\nRELATIONS WITH THE CONCORD\nUnidentified civilizationNO CONTACT\nA signal beyond our charted stars\n\nExplore connected systems to establish first contact. Our envoys cannot negotiate with a civilization we have not encountered.\n\n✧\nRELATIONS WITH THE CONCORD\nThe Luminous ChoirPEACE\nThe Ninth Voice\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n“The universe remembers.”\n\nCivilization dossier ↗\nTrust 10\nOur grievance 0\nTheir grievance 0\nShared borders 0\n\nClosed borders · Proposals use 1 order\n\nTrade treaty ◈30\nSend gift ◈35\nDeclare war\n\nNew neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.\n\nCIVILIZATION DOSSIER\nThe Luminous Choir\n\nThe Ninth Voice\n\n“The universe remembers.”\nTHEIR CIVILIZATION\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n\nRELATIONS WITH THE CONCORD\n\nAt peace. Borders remain closed without a trade treaty.\n\nView diplomatic actions →\nCycle 05\n2404 CE\nEND CYCLE →\nSPACE\n5 orders remaining · 2 colonies\nPathfinder 1 arrived at Sable.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED",
+  "inspector": "CIVILIZATION DOSSIER\nThe Luminous Choir\n\nThe Ninth Voice\n\n“The universe remembers.”\nTHEIR CIVILIZATION\n\nA communion seeking the intelligence behind the ancient gates. Produces 25% more science.\n\nRELATIONS WITH THE CONCORD\n\nAt peace. Borders remain closed without a trade treaty.\n\nView diplomatic actions →",
+  "resources": "◈\n134+17\nCREDITS\n◇\n188+14\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n5 / 8\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Civilization dossier ↗",
+      "attributes": {
+        "data-action": "rival-dossier",
+        "data-target": "choir"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Trade treaty ◈30",
+      "attributes": {
+        "data-action": "diplomacy",
+        "data-stance": "trade",
+        "data-target": "choir"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Send gift ◈35",
+      "attributes": {
+        "data-action": "diplomacy",
+        "data-stance": "gift",
+        "data-target": "choir"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Declare war",
+      "attributes": {
+        "data-action": "declare-war",
+        "data-stance": "war",
+        "data-target": "choir"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "View diplomatic actions →",
+      "attributes": {
+        "data-action": "rival-channel",
+        "data-target": "choir"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

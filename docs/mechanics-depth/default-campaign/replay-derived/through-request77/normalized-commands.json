@@ -1,0 +1,1322 @@
+{
+  "method": "Derived replay from successful UI receipts and visible observations only. No checkpoint initializes or repairs replay. Engine sources are reconstructed from pinned Git commits in temporary directories and removed. No private foreign state is written to this audit.",
+  "throughRequest": 77,
+  "commands": [
+    {
+      "request": 5,
+      "receipt": 11,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "research",
+        "techId": "physics"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 5,
+      "receipt": 15,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "move",
+        "fleetId": "f2",
+        "targetId": "s34"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 6,
+      "receipt": 17,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "colonize",
+        "fleetId": "f2"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 7,
+      "receipt": 20,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "lab",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 8,
+      "receipt": 23,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s20"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 8,
+      "receipt": 25,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s9"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 10,
+      "receipt": 27,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s9",
+        "choiceId": "salvage",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 10,
+      "receipt": 28,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 1,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 11,
+      "receipt": 30,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 2,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s33"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 13,
+      "receipt": 32,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 2,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s33",
+        "choiceId": "welcome",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 13,
+      "receipt": 34,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 2,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s28"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 15,
+      "receipt": 36,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 2,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s28",
+        "choiceId": "ship",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 15,
+      "receipt": 39,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 2,
+      "action": {
+        "type": "build",
+        "systemId": "s34",
+        "itemId": "market",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 16,
+      "receipt": 40,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 2,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 17,
+      "receipt": 43,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s38"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 19,
+      "receipt": 45,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s38",
+        "choiceId": "listen",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 20,
+      "receipt": 47,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "research",
+        "techId": "logistics"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 20,
+      "receipt": 50,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s35"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 22,
+      "receipt": 54,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "move",
+        "fleetId": "f3",
+        "targetId": "s20"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 22,
+      "receipt": 56,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "hold",
+        "fleetId": "f13"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context. Hold/resume follows normal own-fleet readiness, as the UI dispatch does.",
+      "ok": true
+    },
+    {
+      "request": 22,
+      "receipt": 57,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 3,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 23,
+      "receipt": 59,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "research",
+        "techId": "ecology"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 23,
+      "receipt": 63,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "move",
+        "fleetId": "f3",
+        "targetId": "s17"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 24,
+      "receipt": 66,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s16"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 26,
+      "receipt": 68,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s16",
+        "choiceId": "ore",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 26,
+      "receipt": 70,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s25"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 28,
+      "receipt": 72,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s25",
+        "choiceId": "credit",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 28,
+      "receipt": 73,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 4,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 29,
+      "receipt": 77,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "colony",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 29,
+      "receipt": 80,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "move",
+        "fleetId": "f3",
+        "targetId": "s41"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 30,
+      "receipt": 81,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "hold",
+        "fleetId": "f3"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context. Hold/resume follows normal own-fleet readiness, as the UI dispatch does.",
+      "ok": true
+    },
+    {
+      "request": 30,
+      "receipt": 84,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s13"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 32,
+      "receipt": 86,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "diplomacy",
+        "targetId": "choir",
+        "stance": "trade"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context. Visible control: ui/031-choir-first-contact.json",
+      "ok": true
+    },
+    {
+      "request": 32,
+      "receipt": 89,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s3"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 33,
+      "receipt": 90,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 5,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 33,
+      "receipt": 92,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 6,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s21"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 34,
+      "receipt": 94,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 6,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s36"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 35,
+      "receipt": 95,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 6,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 36,
+      "receipt": 98,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 7,
+      "action": {
+        "type": "build",
+        "systemId": "s34",
+        "itemId": "lab",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 36,
+      "receipt": 101,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 7,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s29"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 37,
+      "receipt": 103,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 7,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s18"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 38,
+      "receipt": 104,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 7,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 39,
+      "receipt": 106,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 8,
+      "action": {
+        "type": "research",
+        "techId": "industry"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 39,
+      "receipt": 109,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 8,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s37"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 40,
+      "receipt": 111,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 8,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s32"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 41,
+      "receipt": 112,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 8,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 42,
+      "receipt": 116,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 9,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "colony",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 42,
+      "receipt": 119,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 9,
+      "action": {
+        "type": "move",
+        "fleetId": "f17",
+        "targetId": "s20"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 44,
+      "receipt": 125,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 9,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s34"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 44,
+      "receipt": 127,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 9,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s0"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 44,
+      "receipt": 128,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 9,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 45,
+      "receipt": 131,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 10,
+      "action": {
+        "type": "move",
+        "fleetId": "f17",
+        "targetId": "s17"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 45,
+      "receipt": 134,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 10,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s20"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 45,
+      "receipt": 136,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 10,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s17"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 45,
+      "receipt": 137,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 10,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 46,
+      "receipt": 138,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "diplomacy",
+        "targetId": "veyr",
+        "stance": "acceptTrade",
+        "offerId": "trade-1"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context. Visible control: ui/045-western-transit-cycle10.json",
+      "ok": true
+    },
+    {
+      "request": 46,
+      "receipt": 141,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "move",
+        "fleetId": "f17",
+        "targetId": "s41"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 46,
+      "receipt": 143,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "colonize",
+        "fleetId": "f17"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 47,
+      "receipt": 147,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "build",
+        "systemId": "s41",
+        "itemId": "lab",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 47,
+      "receipt": 151,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s41"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 47,
+      "receipt": 153,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s5"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 48,
+      "receipt": 154,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 11,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 48,
+      "receipt": 156,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 12,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s22"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 49,
+      "receipt": 158,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 12,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s39"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 49,
+      "receipt": 161,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 12,
+      "action": {
+        "type": "build",
+        "systemId": "s34",
+        "itemId": "mine",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 51,
+      "receipt": 163,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 12,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 52,
+      "receipt": 166,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 13,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "habitat",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 52,
+      "receipt": 169,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 13,
+      "action": {
+        "type": "move",
+        "fleetId": "f22",
+        "targetId": "s20"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 52,
+      "receipt": 172,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 13,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s4"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 53,
+      "receipt": 174,
+      "source": "94f41dff57c17e8f4881219149a2f0aeb8fc67bd",
+      "turnBefore": 13,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s6"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 58,
+      "receipt": 189,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 13,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 58,
+      "receipt": 192,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "move",
+        "fleetId": "f22",
+        "targetId": "s33"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 58,
+      "receipt": 194,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "colonize",
+        "fleetId": "f22"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 58,
+      "receipt": 196,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "build",
+        "systemId": "s33",
+        "itemId": "mine",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 59,
+      "receipt": 200,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "move",
+        "fleetId": "f13",
+        "targetId": "s33"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 59,
+      "receipt": 203,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s1"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 60,
+      "receipt": 205,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s15"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 61,
+      "receipt": 206,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 14,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 62,
+      "receipt": 213,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 15,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s19"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 63,
+      "receipt": 215,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 15,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s27"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 64,
+      "receipt": 216,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 15,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 64,
+      "receipt": 218,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 16,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s12"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 66,
+      "receipt": 220,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 16,
+      "action": {
+        "type": "anomaly",
+        "systemId": "s12",
+        "choiceId": "salvage",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 66,
+      "receipt": 222,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 16,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s19"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 66,
+      "receipt": 223,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 16,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 67,
+      "receipt": 225,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 17,
+      "action": {
+        "type": "research",
+        "techId": "computing"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 68,
+      "receipt": 228,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 17,
+      "action": {
+        "type": "build",
+        "systemId": "s41",
+        "itemId": "factory",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 68,
+      "receipt": 230,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 17,
+      "action": {
+        "type": "hold",
+        "fleetId": "f13"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context. Hold/resume follows normal own-fleet readiness, as the UI dispatch does.",
+      "ok": true
+    },
+    {
+      "request": 68,
+      "receipt": 233,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 17,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s8"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 69,
+      "receipt": 235,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 17,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s11"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 69,
+      "receipt": 236,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 17,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 70,
+      "receipt": 239,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 18,
+      "action": {
+        "type": "build",
+        "systemId": "s0",
+        "itemId": "factory",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 70,
+      "receipt": 241,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 18,
+      "action": {
+        "type": "build",
+        "systemId": "s34",
+        "itemId": "factory",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 71,
+      "receipt": 244,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 18,
+      "action": {
+        "type": "move",
+        "fleetId": "f1",
+        "targetId": "s26"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 73,
+      "receipt": 247,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 18,
+      "action": {
+        "type": "planRoute",
+        "fleetId": "f1",
+        "destinationId": "s23"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context. Visible control: ui/072-remaining-frontier-course.json",
+      "ok": true
+    },
+    {
+      "request": 74,
+      "receipt": 248,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 18,
+      "action": {
+        "type": "continueRoute",
+        "fleetId": "f1"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 74,
+      "receipt": 249,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 18,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 74,
+      "receipt": 252,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 19,
+      "action": {
+        "type": "build",
+        "systemId": "s33",
+        "itemId": "factory",
+        "replaceBuildingId": null
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 75,
+      "receipt": 254,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 19,
+      "action": {
+        "type": "continueRoute",
+        "fleetId": "f1"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 75,
+      "receipt": 255,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 19,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 76,
+      "receipt": 259,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 20,
+      "action": {
+        "type": "continueRoute",
+        "fleetId": "f1"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 76,
+      "receipt": 260,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 20,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    },
+    {
+      "request": 77,
+      "receipt": 261,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 21,
+      "action": {
+        "type": "continueRoute",
+        "fleetId": "f1"
+      },
+      "basis": "Completed UI selector attributes and previously completed UI selection/menu context.",
+      "ok": true
+    },
+    {
+      "request": 77,
+      "receipt": 262,
+      "source": "ccb786af8d6ca83fa2a59c05f665d7a60a062f91",
+      "turnBefore": 21,
+      "action": {
+        "type": "endTurn"
+      },
+      "basis": "Successful end action includes normal UI confirmation; checked against next visible cycle.",
+      "ok": true
+    }
+  ]
+}

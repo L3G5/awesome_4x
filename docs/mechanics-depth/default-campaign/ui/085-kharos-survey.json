@@ -1,0 +1,461 @@
+{
+  "request": 85,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:33147/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n202+80\nCREDITS\n◇\n72+34\nMINERALS\n✧\n0+43\nSCIENCE\n⌘\n8 / 10\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\n⌂Veyr Prime\nVEYR\n⌂Kharos\nKHAR\n⌂Lumen\nCHOIR\nMeridian\nVOLCANIC\nHesper\nBARREN\nAurelia\nVOLCANIC\nCaldera\nGLACIAL\nEidolon\nOCEAN\nIlyra\nKHAR\nStillwater\nTERRAN\nOrison\nGLACIAL\nCinder\nOCEAN\nSundrift\nGLACIAL\nThalassa\nCHOIR\nOphion\nARID\nTethys\nKHAR\nHaven\nTERRAN\nAldebaran\nARID\nVesper\nKHAR\nIona\nVOLCANIC\nHalcyon\nCONCORD\nAntares\nCONCORD\nSeraph\nBARREN\nPeregrine\nARID\nMorrow\nTERRAN\nZenith\nVOLCANIC\nEos\nVOLCANIC\nTerminus\nUNSURVEYED\nAsterion\nCONCORD\n▴\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n39 charted systems · 36 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n4 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Kharos\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\n△\n▴\n▴\nKHAR DOMINION\nKharos\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n3\nORE RICHNESS\n2\nSCIENCE\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nKhar\nCurrent control\nKhar\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n2 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nVanguard 9 ×2\nKhar · 68 / 68 hull\nCONNECTED SYSTEMS\nIlyra ↗\nVesper ↗\nTerminus ↗\nCycle 23\n2422 CE\nEND CYCLE →\nSPACE\n8 orders remaining · 4 colonies\nPathfinder 1 arrived at Kharos.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nPathfinder 1 arrived at Kharos.",
+  "inspector": "KHAR DOMINION\nKharos\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n3\nORE RICHNESS\n2\nSCIENCE\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nKhar\nCurrent control\nKhar\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n2 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nVanguard 9 ×2\nKhar · 68 / 68 hull\nCONNECTED SYSTEMS\nIlyra ↗\nVesper ↗\nTerminus ↗",
+  "resources": "◈\n202+80\nCREDITS\n◇\n72+34\nMINERALS\n✧\n0+43\nSCIENCE\n⌘\n8 / 10\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Veyr Prime\nVEYR",
+      "attributes": {
+        "data-system-id": "s1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Kharos\nKHAR",
+      "attributes": {
+        "data-system-id": "s2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Lumen\nCHOIR",
+      "attributes": {
+        "data-system-id": "s3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Meridian\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nBARREN",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aurelia\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Caldera\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s8"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eidolon\nOCEAN",
+      "attributes": {
+        "data-system-id": "s12"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ilyra\nKHAR",
+      "attributes": {
+        "data-system-id": "s14"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Stillwater\nTERRAN",
+      "attributes": {
+        "data-system-id": "s16"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder\nOCEAN",
+      "attributes": {
+        "data-system-id": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Thalassa\nCHOIR",
+      "attributes": {
+        "data-system-id": "s21"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ophion\nARID",
+      "attributes": {
+        "data-system-id": "s22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Tethys\nKHAR",
+      "attributes": {
+        "data-system-id": "s23"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aldebaran\nARID",
+      "attributes": {
+        "data-system-id": "s29"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vesper\nKHAR",
+      "attributes": {
+        "data-system-id": "s31"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nCONCORD",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Seraph\nBARREN",
+      "attributes": {
+        "data-system-id": "s35"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Peregrine\nARID",
+      "attributes": {
+        "data-system-id": "s36"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Morrow\nTERRAN",
+      "attributes": {
+        "data-system-id": "s37"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eos\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s39"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Terminus\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s40"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard 9 ×2\nKhar · 68 / 68 hull",
+      "attributes": {
+        "data-fleet": "f9"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ilyra ↗",
+      "attributes": {
+        "data-system-select": "s14"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vesper ↗",
+      "attributes": {
+        "data-system-select": "s31"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Terminus ↗",
+      "attributes": {
+        "data-system-select": "s40"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "request": 39,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n154+34\nCREDITS\n◇\n200+15\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n7 / 8\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Lumen\nCHOIR\nSable\nGLACIAL\nStillwater\nTERRAN\nCinder\nOCEAN\nThalassa\nCHOIR\nTethys\nUNSURVEYED\nElysian\nOCEAN\nHaven\nTERRAN\nAldebaran\nARID\nSeraph\nBARREN\nPeregrine\nARID\nMorrow\nTERRAN\nZenith\nVOLCANIC\n△\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n23 charted systems · 19 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Morrow\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\n△\n▴\n▴\nUNCLAIMED FRONTIER\nMorrow\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n86%\nHABITABILITY\n2\nORE RICHNESS\n2\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nCinder ↗\nIona ↗\nCycle 08\n2407 CE\nEND CYCLE →\nSPACE\n7 orders remaining · 2 colonies\nPathfinder 1 arrived at Morrow.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nResearch directed toward Autonomous Industry.\nPathfinder 1 arrived at Morrow.",
+  "inspector": "UNCLAIMED FRONTIER\nMorrow\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n86%\nHABITABILITY\n2\nORE RICHNESS\n2\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nCinder ↗\nIona ↗",
+  "resources": "◈\n154+34\nCREDITS\n◇\n200+15\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n7 / 8\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Lumen\nCHOIR",
+      "attributes": {
+        "data-system-id": "s3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sable\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Stillwater\nTERRAN",
+      "attributes": {
+        "data-system-id": "s16"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder\nOCEAN",
+      "attributes": {
+        "data-system-id": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Thalassa\nCHOIR",
+      "attributes": {
+        "data-system-id": "s21"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Tethys\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s23"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Elysian\nOCEAN",
+      "attributes": {
+        "data-system-id": "s25"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aldebaran\nARID",
+      "attributes": {
+        "data-system-id": "s29"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Seraph\nBARREN",
+      "attributes": {
+        "data-system-id": "s35"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Peregrine\nARID",
+      "attributes": {
+        "data-system-id": "s36"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Morrow\nTERRAN",
+      "attributes": {
+        "data-system-id": "s37"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder ↗",
+      "attributes": {
+        "data-system-select": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona ↗",
+      "attributes": {
+        "data-system-select": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

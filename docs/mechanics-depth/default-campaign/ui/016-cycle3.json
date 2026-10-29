@@ -1,0 +1,310 @@
+{
+  "request": 16,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n61+13\nCREDITS\n◇\n131+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n7 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nGLACIAL\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nHaven\nTERRAN\nIona\nUNSURVEYED\nHalcyon\nGLACIAL\nAntares\nCONCORD\nZenith\nUNSURVEYED\nAsterion\nUNSURVEYED\n△\n▴\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n10 charted systems · 6 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Haven\n\nScout · 1 ship · 2 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\n△\n▴\n▴\nUNCLAIMED FRONTIER\nHaven\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n88%\nHABITABILITY\n1\nORE RICHNESS\n1\nSCIENCE\nEXPEDITION RECORD\n✦\nThe Hollow Sun\n\nFinish the ancient escort · cycle 2\n\nRead expedition record →\nIN ORBIT\n2 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nLast Light of Haven\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nCONNECTED SYSTEMS\nHalcyon ↗\nZenith ↗\nCycle 03\n2402 CE\nEND CYCLE →\nSPACE\n7 orders remaining · 2 colonies\nTurn 3: a new mandate begins.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nTurn 3: a new mandate begins.",
+  "inspector": "UNCLAIMED FRONTIER\nHaven\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n88%\nHABITABILITY\n1\nORE RICHNESS\n1\nSCIENCE\nEXPEDITION RECORD\n✦\nThe Hollow Sun\n\nFinish the ancient escort · cycle 2\n\nRead expedition record →\nIN ORBIT\n2 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nLast Light of Haven\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nCONNECTED SYSTEMS\nHalcyon ↗\nZenith ↗",
+  "resources": "◈\n61+13\nCREDITS\n◇\n131+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n7 / 7\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Read expedition record →",
+      "attributes": {
+        "data-action": "anomaly",
+        "data-system": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Last Light of Haven\nFrigate · 34 / 34 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon ↗",
+      "attributes": {
+        "data-system-select": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith ↗",
+      "attributes": {
+        "data-system-select": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

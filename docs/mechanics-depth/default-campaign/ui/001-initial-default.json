@@ -1,0 +1,271 @@
+{
+  "request": 1,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n140+7\nCREDITS\n◇\n110+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n6 / 6\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nSundrift\nGLACIAL\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nYOUR FIRST MANDATE\nCompare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nPathfinder 1 / Solace\n\nScout · 1 ship · 2 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\n△\n⬡\n▴\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n3 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nColony Ark 2\nColony ship · 24 / 24 hull\nReady\n1 jump\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n6 orders remaining · 1 colony\nYour mandate begins among the stars.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED",
+  "inspector": "THE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n3 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nColony Ark 2\nColony ship · 24 / 24 hull\nReady\n1 jump\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗",
+  "resources": "◈\n140+7\nCREDITS\n◇\n110+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n6 / 6\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⬡",
+      "attributes": {
+        "data-fleet-id": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⬡",
+      "attributes": {
+        "data-fleet": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+ Commission a project",
+      "attributes": {
+        "data-action": "build-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Develop →",
+      "attributes": {
+        "data-action": "development-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Colony Ark 2\nColony ship · 24 / 24 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift ↗",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares ↗",
+      "attributes": {
+        "data-system-select": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

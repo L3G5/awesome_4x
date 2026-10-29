@@ -1,0 +1,470 @@
+{
+  "request": 28,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n179+17\nCREDITS\n◇\n243+14\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n8 / 8\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n1\n2\n3\n4\n5\n6\n7\n⌂Solace\nCONCORD\nVelorum\nGLACIAL\nOrison\nGLACIAL\nSundrift\nGLACIAL\nHaven\nTERRAN\nIona\nUNSURVEYED\nHalcyon\nGLACIAL\nAntares\nCONCORD\nZenith\nVOLCANIC\nAsterion\nUNSURVEYED\n▴\n△\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n16 charted systems · 11 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Elysian\n\nElysian → Solace · 7 charted jumps\n\n↶\nHold position\n⌁ 3\n⇥\n△\n▴\n▴\nCOURSE PREVIEW\nSolace · 7 jumps · 7 orders total\nPlot course · free\n●\nElysian\n›\n1\nStillwater\n›\n2\nSeraph\n›\n3\nZenith\n›\n4\nHaven\n›\n5\nHalcyon\n›\n6\nSundrift\n›\n7\nSolace\n\nPlanning spends no orders. Opposition unknown at 5 stops.\n\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n6/8\nPOPULATION\n10\nPRODUCTION\nCOLONY PRODUCTION\n10 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n3 / 4 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n✧ Research Enclave\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+15 credits · +10 minerals · +12 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 05\n2404 CE\nEND CYCLE →\nSPACE\n8 orders remaining · 2 colonies\nCycle 5: 1 dispatches available in your briefing.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\n×\nРусский\nCOLONIAL COMMISSION · SOLACE\nShape this world's future\n\n3 / 4 infrastructure slots · 10 production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.\n\nInfrastructure\nColony charter\nShips\n\nShips need an Orbital Shipyard and do not occupy infrastructure slots. Forge charter discounts are included in the prices below.\n\nPathfinder\n\nFast exploration vessel. Two jumps per turn; best kept away from combat.\n\n◈ 20   ◇ 20 · 2 cycles · 1 upkeep\nColony Ark\n\nFound a new colony on a surveyed, habitable world. Consumed when settling.\n\n◈ 45   ◇ 55 · 4 cycles · 1 upkeep\nVanguard\n\nVersatile escort and invasion vessel. Combine frigates into task forces.\n\n◈ 25   ◇ 35 · 3 cycles · 2 upkeep\nSovereign\n\nHeavy capital ship designed to break fortified systems.\n\n◈ 65   ◇ 85 · 7 cycles · 4 upkeep\n\nRequires Capital Ship Architecture",
+  "inspector": "THE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n6/8\nPOPULATION\n10\nPRODUCTION\nCOLONY PRODUCTION\n10 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n3 / 4 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n✧ Research Enclave\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+15 credits · +10 minerals · +12 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗",
+  "resources": "◈\n179+17\nCREDITS\n◇\n243+14\nMINERALS\n✧\n0+17\nSCIENCE\n⌘\n8 / 8\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f10"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "↶",
+      "attributes": {
+        "data-system-select": "s25"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Plot course · free",
+      "attributes": {
+        "data-action": "plan-route",
+        "data-destination": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "●\nElysian",
+      "attributes": {
+        "data-system-select": "s25"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "1\nStillwater",
+      "attributes": {
+        "data-system-select": "s16"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "2\nSeraph",
+      "attributes": {
+        "data-system-select": "s35"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "3\nZenith",
+      "attributes": {
+        "data-system-select": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "4\nHaven",
+      "attributes": {
+        "data-system-select": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "5\nHalcyon",
+      "attributes": {
+        "data-system-select": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "6\nSundrift",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "7\nSolace",
+      "attributes": {
+        "data-system-select": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+ Commission a project",
+      "attributes": {
+        "data-action": "build-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Develop →",
+      "attributes": {
+        "data-action": "development-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift ↗",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares ↗",
+      "attributes": {
+        "data-system-select": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "close-modal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Infrastructure",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "building"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Colony charter",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "charter"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ships",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s0",
+        "data-tab": "ship"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder\n\nFast exploration vessel. Two jumps per turn; best kept away from combat.\n\n◈ 20   ◇ 20 · 2 cycles · 1 upkeep",
+      "attributes": {
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "scout"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Colony Ark\n\nFound a new colony on a surveyed, habitable world. Consumed when settling.\n\n◈ 45   ◇ 55 · 4 cycles · 1 upkeep",
+      "attributes": {
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "colony"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard\n\nVersatile escort and invasion vessel. Combine frigates into task forces.\n\n◈ 25   ◇ 35 · 3 cycles · 2 upkeep",
+      "attributes": {
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "frigate"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sovereign\n\nHeavy capital ship designed to break fortified systems.\n\n◈ 65   ◇ 85 · 7 cycles · 4 upkeep\n\nRequires Capital Ship Architecture",
+      "attributes": {
+        "data-action": "build",
+        "data-system": "s0",
+        "data-item": "cruiser"
+      },
+      "disabled": true
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "request": 67,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:33147/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n359+58\nCREDITS\n◇\n241+26\nMINERALS\n✧\n0+39\nSCIENCE\n⌘\n10 / 10\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nMANY WORLDS. ONE HORIZON.\nThe Concord\n\nMake a civilization worth inheriting. Prosperity, knowledge, and the strength to protect them are all part of your legacy.\n\n⌘\nCOLONIZED WORLDS\n4\n\n16 billion citizens across the Reach\n\nFLEET POWER\n27\n\n3 ships · 5 credits upkeep / cycle\n\nLEGACY SCORE\n166\n\nHighest score at cycle 120 wins\n\nCOLONIAL ADMINISTRATION\n\nOutput per cycle, before fleet upkeep and trade. Select a column to compare your worlds.\n\n4 colonies\nWORLD\n↑\n\tSPECIALTY\t\n◈ CREDITS\n↕\n\t\n◇ MINERALS\n↕\n\t\n✧ SCIENCE\n↕\n\t\n▥ WORK\n↕\n\n\nAntares\n↗\n5 / 8 population\nIdle\nCommission\n\t\nUnchartered\n3 / 3 slots\n\t20\t10\t11\t9\n\nAsterion\n↗\n2 / 7 population\nIdle\nCommission\n\t\nUnchartered\n1 / 2 slots\n\t7\t1\t12\t6\n\nHalcyon\n↗\n1 / 6 population\nConstruction\nOrbital Extractor\n2 cycles remaining\n\t\nUnchartered\n0 / 2 slots\n\t5\t5\t3\t5\n\nSolace\n↗\n8 / 12 population\nIdle\nCommission\n\t\nUnchartered\n4 / 4 slots\n\t19\t10\t13\t12\n✦ Transcendence\n0 / 10\n\nResearch the Asterion Protocol and hold three Beacon worlds. Maintain their alignment for ten cycles, paying 60 credits each advancing cycle.\n\n0 / 3 beacons · Research the Asterion Protocol.\n\nA hostile warship over a participating beacon, fewer than three owned beacons, or insufficient funds interrupts alignment. Each interrupted cycle loses one step.\n\n⌂ Domination\n1 / 4\n\nHold all four founding worlds at the same time. These objectives stay fixed when an empire moves its administrative capital.\n\n⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗\n⌂\nVeyr Prime\nFounded by Veyr\nVeyr\nCurrent control ↗\n⌂\nLumen\nFounded by Choir\nChoir\nCurrent control ↗\n\n1 founding world remains unidentified. Survey the frontier to locate it.\n\nCONFIRMED FOUNDING-WORLD CONTROL\nChoir\n1 / 4 confirmed\nKhar\n0 / 4 confirmed\nConcord\n1 / 4\nVeyr\n1 / 4 confirmed\nTHE AWAKENING NETWORK\n✦\n\nNo beacon signals from known civilizations yet. Restored nodes and alignment progress become public after diplomatic contact.\n\nFLEET REGISTRY\nPathfinder 1 ×1\nBellatrix · 18 / 18 hull · 3 combat power\nReady\n2 jumps\nVanguard 3 ×1\nAsterion · 34 / 34 hull · 12 combat power\nHolding\n1 jump\nLast Light of Haven ×1\nHalcyon · 34 / 34 hull · 12 combat power\nReady\n1 jump\nCONCORD ADMINISTRATION\nThe working empire\n\n4 worlds · 16 billion citizens\n\n32\nconstruction work each cycle\n3 idle colonies\nUPCOMING COMPLETIONS\nHalcyon\nOrbital Extractor · 2 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →\nCycle 17\n2416 CE\nEND CYCLE →\nSPACE\n10 orders remaining · 4 colonies\nResearch directed toward Quantum Archives.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nResearch directed toward Quantum Archives.",
+  "inspector": "CONCORD ADMINISTRATION\nThe working empire\n\n4 worlds · 16 billion citizens\n\n32\nconstruction work each cycle\n3 idle colonies\nUPCOMING COMPLETIONS\nHalcyon\nOrbital Extractor · 2 cycles\n↗\nYOUR BEACON NETWORK\n\n0 / 10 alignment · 60 credits per advancing cycle\n\nResearch the Asterion Protocol.\n\nReview alignment requirements →",
+  "resources": "◈\n359+58\nCREDITS\n◇\n241+26\nMINERALS\n✧\n0+39\nSCIENCE\n⌘\n10 / 10\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "WORLD\n↑",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "name"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "◈ CREDITS\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "credits"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "◇ MINERALS\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "minerals"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "✧ SCIENCE\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "science"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▥ WORK\n↕",
+      "attributes": {
+        "data-action": "colony-sort",
+        "data-sort": "production"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Commission",
+      "attributes": {
+        "data-action": "empire-build-menu",
+        "data-system": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Commission",
+      "attributes": {
+        "data-action": "empire-build-menu",
+        "data-system": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Solace\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Commission",
+      "attributes": {
+        "data-action": "empire-build-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂\nSolace\nFounded by Concord\nConcord\nCurrent control ↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s0",
+        "data-founding-world": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂\nVeyr Prime\nFounded by Veyr\nVeyr\nCurrent control ↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s1",
+        "data-founding-world": "s1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂\nLumen\nFounded by Choir\nChoir\nCurrent control ↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s3",
+        "data-founding-world": "s3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1 ×1\nBellatrix · 18 / 18 hull · 3 combat power\nReady\n2 jumps",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard 3 ×1\nAsterion · 34 / 34 hull · 12 combat power\nHolding\n1 jump",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Last Light of Haven ×1\nHalcyon · 34 / 34 hull · 12 combat power\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nOrbital Extractor · 2 cycles\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Review alignment requirements →",
+      "attributes": {
+        "data-action": "review-alignment"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

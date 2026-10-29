@@ -1,0 +1,258 @@
+{
+  "request": 19,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n61+13\nCREDITS\n◇\n131+13\nMINERALS\n✧\n47+10\nSCIENCE\n⌘\n5 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\nTHE CONCORD ARCHIVES\nBeyond the known\n\nRediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.\n\n✧\nChoose a research direction. Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.\nAll\nEngineering\nSociety\nPhysics\nMilitary\nENGINEERING\n✧ 55\nDeep-space Logistics\n\n+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.\n\nFoundational science\nResearch →\nSOCIETY\n✧ 60\nAdaptive Biospheres\n\nColonize harsh worlds with 30% habitability. Unlocks Habitation Domes.\n\nFoundational science\nResearch →\nMILITARY\n✧ 70\nCoherent Lances\n\nAll warships deal 25% more damage.\n\nFoundational science\nResearch →\nMILITARY\n✧ 220\nDeflector Fields\n\nIncoming fleet damage is reduced by 20%. Unlocks Orbital Bastions.\n\nRequires Resonance Theory\nResearch →\nPHYSICS\n✧ 360\nQuantum Archives\n\nLaboratories produce +4 science. Unlocks the final gate technology.\n\nRequires Resonance Theory\nResearch →\nENGINEERING\n✧ 220\nAutonomous Industry\n\nUnlocks Manufactories, which add 6 production per turn.\n\nRequires Deep-space Logistics\nResearch →\nSOCIETY\n✧ 180\nStellar Accords\n\nTrade treaties earn +4 additional credits each turn. Unlocks Civic Forums.\n\nRequires Adaptive Biospheres\nResearch →\nMILITARY\n✧ 360\nCapital Ship Architecture\n\nUnlocks heavily armed cruisers.\n\nRequires Deep-space Logistics + Coherent Lances\nResearch →\nSOCIETY\n✧ 600\nWorldshaping\n\nColonize any world. All colonies grow 50% faster.\n\nRequires Adaptive Biospheres + Autonomous Industry\nResearch →\nENGINEERING\n✧ 500\nDistributed Command\n\n+2 orders each turn. Warships gain one additional move per turn.\n\nRequires Deep-space Logistics + Stellar Accords\nResearch →\nPHYSICS\n✧ 1000\nThe Asterion Protocol\n\nUnlocks Asterion Beacons. Align three owned, unblocked beacon worlds for 10 cycles at 60 credits per cycle to achieve transcendence.\n\nRequires Quantum Archives + Autonomous Industry\nResearch →\nPHYSICS\n✓ DISCOVERED\nResonance Theory\n\n+2 science per colony. The first step toward understanding the gates.\n\nFoundational science\nComplete\nCONCORD RESEARCH COUNCIL\nYour archives\n\n1 of 12 sciences recovered\n\n+10\nscience each cycle\n47 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n6 science / cycle\n↗\nAntares\n4 science / cycle\n↗\nCycle 03\n2402 CE\nEND CYCLE →\nSPACE\n5 orders remaining · 2 colonies\nExpedition resolved.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nExpedition resolved.",
+  "inspector": "CONCORD RESEARCH COUNCIL\nYour archives\n\n1 of 12 sciences recovered\n\n+10\nscience each cycle\n47 in reserve\nRESEARCH DIRECTION\n\nChoose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.\n\nRESEARCH WORLDS\nSolace\n6 science / cycle\n↗\nAntares\n4 science / cycle\n↗",
+  "resources": "◈\n61+13\nCREDITS\n◇\n131+13\nMINERALS\n✧\n47+10\nSCIENCE\n⌘\n5 / 7\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "All",
+      "attributes": {
+        "data-research-filter": "All"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Engineering",
+      "attributes": {
+        "data-research-filter": "Engineering"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Society",
+      "attributes": {
+        "data-research-filter": "Society"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Physics",
+      "attributes": {
+        "data-research-filter": "Physics"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Military",
+      "attributes": {
+        "data-research-filter": "Military"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "logistics"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "ecology"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "weapons"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "shields"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "computing"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "industry"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "diplomacy"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "cruisers"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "terraforming"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "command"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research →",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "singularity"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Complete",
+      "attributes": {
+        "data-action": "research",
+        "data-tech": "physics"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Solace\n6 science / cycle\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\n4 science / cycle\n↗",
+      "attributes": {
+        "data-action": "inspect",
+        "data-system": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

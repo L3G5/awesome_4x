@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASTERION: ordinary play through cycle 24</title>
+<style>
+  :root{color-scheme:dark;background:#101a25;color:#e4ebf1;font:17px/1.6 system-ui,sans-serif}
+  body{max-width:920px;margin:3rem auto;padding:0 1.25rem 3rem}h1,h2{line-height:1.2;color:#fff}
+  a{color:#9bd9f4}code{font-size:.85em;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:.93rem}
+  th,td{padding:.6rem .7rem;text-align:left;border-bottom:1px solid #3d4c5d;vertical-align:top}.scope{padding:1rem;background:#1a2c3e;border-left:4px solid #9bd9f4}
+  li{margin:.65rem 0}.muted{color:#b9c6d4}
+</style>
+<main>
+<h1>ASTERION: ordinary play through cycle 24</h1>
+<p class="scope">This is a paused prefix, starting at cycle 1 and ending at cycle 24 after 23 end turns. It is not a campaign conclusion. Play paused for the user's Undo and mobile-inspection requests; no starlane restoration was forced for coverage. Browser close is recorded at request 88.</p>
+
+<h2>Replay result</h2>
+<p>The <a href="replay-derived/through-request88/results.json">final derived audit</a> accepts all 115 reconstructed game commands, checks all 115 against JSON reloads, and agrees with 86 visible observations (344 resource/income checks). All six checkpoint comparisons match the complete state and exact normal UI export bytes. There are zero replay rejections and zero page errors.</p>
+<p>Only completed UI receipts supply game commands. The <a href="ui/actions.jsonl">unaltered action log</a> retains one driver failure: at request 7 the lab commission succeeded, then a missing <code>.fleet-switch</code> selector timed out. The successful lab command is included; the failed selector and unexecuted batch tail are excluded. Its <a href="ui/007-after-error.json">visible observation</a> is retained. Decision notes never fill missing commands.</p>
+
+<table>
+<caption>Exact checkpoint boundaries in the continuous replay</caption>
+<thead><tr><th>Checkpoint</th><th>Receipt</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><a href="ui/actual-cycle9.json">Cycle 9 export</a></td><td>Request 43, #121</td><td>Exact state and bytes</td></tr>
+<tr><td><a href="ui/actual-cycle13.json">Cycle 13 export</a></td><td>Request 54, #176</td><td>Exact state and bytes</td></tr>
+<tr><td><a href="ui/actual-cycle13.json">Cycle 13 import source</a></td><td>Request 56, #180</td><td>Already equals continuous replay; no replay reset</td></tr>
+<tr><td><a href="ui/actual-cycle13-after-import.json">Immediate re-export</a></td><td>Request 56, #182</td><td>Exact state and bytes; identical to pre-import export</td></tr>
+<tr><td><a href="ui/actual-cycle20.json">Cycle 20 export</a></td><td>Request 76, #257</td><td>Checked before #259 route continuation and #260 end turn</td></tr>
+<tr><td><a href="ui/actual-cycle24.json">Cycle 24 final prefix export</a></td><td>Request 87, #291</td><td>Exact state and bytes</td></tr>
+</tbody></table>
+
+<h2>Recorded visible decisions</h2>
+<ul>
+<li><strong>The same foundry choice received different answers.</strong> At Haven, the player chose the ancient frigate to obtain a forward escort without using Solace's queue. At Stillwater, the player chose 85 minerals because two frigates already covered the nearby frontier and another remote hull would add upkeep. The choices and rationale are recorded at requests 15 and 26; both dialogs offered the same alternatives (<a href="ui/014-hollow-sun.json">Haven</a>, <a href="ui/025-second-foundry-choice.json">Stillwater</a>).</li>
+<li><strong>The first lane quote did not justify its queue cost.</strong> The <a href="ui/046-third-colony-and-lane-quote.json">Asterion–Velorum quote</a> showed 60 credits, 70 minerals, one order and 48 work: ten cycles at the young colony's production. The endpoint route improved from three jumps to one, but the player deferred it for a lab. The recorded rationale distinguished Asterion–Antares (four to two jumps) from the capital shipyard route, which stayed at three.</li>
+<li><strong>That distinction prompted a colony-route display.</strong> After normal export/import into the revised UI, the <a href="ui/057-actual-colony-route-preview.json">actual campaign preview</a> explicitly showed Solace three→three and Antares four→two, with current borders and the warning that jumps are not travel time. The save remained byte-identical across the source transition.</li>
+<li><strong>Production changed the later tradeoff.</strong> After factory completion and colony growth, the <a href="ui/083-ilyra-survey-and-cycle23.json">visible empire table</a> showed Asterion producing 14 work per cycle. For the already quoted 48-work lane, the derived estimate is <code>ceil(48 / 14) = 4 cycles</code>. Request 84's decision note explicitly records the ten→four estimate, then chooses an Academy charter first. A fresh four-cycle lane dialog was not captured, and no lane was commissioned in this prefix.</li>
+<li><strong>A plotted route encountered closed borders.</strong> The <a href="ui/079-charters-and-closed-frontier.json">Tethys course paused at Zenith</a> instead of crossing Khar territory. The <a href="ui/080-khar-border-diplomacy.json">visible diplomacy panel</a> showed trust −10. A normal 35-credit <a href="ui/081-gift-for-frontier-access.json">gift raised it to 10</a>; a paid 30-credit trade treaty then opened access, and the player <a href="ui/082-open-border-survey.json">continued the existing course into Tethys</a>. The replay records the ordinary gift, treaty and movement costs.</li>
+</ul>
+
+<h2>Source and reproduction</h2>
+<p>The original UI used <a href="ui/served-build-info.json">build <code>94f41dff57c17e8f4881219149a2f0aeb8fc67bd</code></a> through request 54; request 55 closed it. Request 56 resumed the exact cycle 13 export by normal UI import into <a href="ui/served-build-56.json">build <code>ccb786af8d6ca83fa2a59c05f665d7a60a062f91</code></a>, adding colony-route display and copy fixes. The continuous replay switches pinned engines without initializing from the imported checkpoint.</p>
+<p><a href="replay.mjs">replay.mjs</a> reconstructs the pinned engine import graphs with Git into temporary directories and removes them afterward. It needs Node 22+ and the pinned commits locally; no npm install, browser, network, or current working tree engine is used. <a href="replay-derived/through-request88/README.txt">Reproduction command and limits</a>, <a href="replay-derived/through-request88/normalized-commands.json">receipt-grounded commands</a>, source hashes and evidence hashes are included. The earlier <a href="replay-derived/through-request56/results.json">request 56</a> and <a href="replay-derived/through-request77/results.json">request 77</a> audit outputs are preserved.</p>
+<p class="muted">This replay verifies evidence continuity, checkpoint equality and reload behavior. It is not another playthrough, a measurement of enjoyment, proof of optimal play, or evidence about unobserved future events. This report uses only recorded visible decisions and emits no private foreign-state findings.</p>
+</main>
+</html>

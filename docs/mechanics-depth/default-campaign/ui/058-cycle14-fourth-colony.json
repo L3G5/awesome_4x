@@ -1,0 +1,392 @@
+{
+  "request": 58,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:33147/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n189+54\nCREDITS\n◇\n83+21\nMINERALS\n✧\n0+33\nSCIENCE\n⌘\n6 / 10\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nMeridian\nVOLCANIC\nHesper\nBARREN\nAurelia\nVOLCANIC\nVelorum\nGLACIAL\nCarina\nVEYR\nOrison\nGLACIAL\nCinder\nOCEAN\nSundrift\nGLACIAL\nOphion\nARID\nTethys\nUNSURVEYED\nAster\nVEYR\nHaven\nTERRAN\nAldebaran\nARID\nIona\nVOLCANIC\nHalcyon\nCONCORD\nAntares\nCONCORD\nSeraph\nBARREN\nMorrow\nTERRAN\nZenith\nVOLCANIC\nEos\nVOLCANIC\nAsterion\nCONCORD\n△\n▴\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n30 charted systems · 25 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n4 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nA galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nFleet roster →\nTHE CONCORD\nHalcyon\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n45%\nHABITABILITY\n1/6\nPOPULATION\n5\nPRODUCTION\nCOLONY PRODUCTION\n5 / CYCLE\n◇\nOrbital Extractor\n\n5 cycles to completion\n\n×\nINFRASTRUCTURE\n0 / 2 SLOTS\n\nA new world, waiting to take shape.\n\n2 open slots. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+5 credits · +5 minerals · +3 science\n\nEXPEDITION RECORD\n✦\nA Thousand Sleeping Voices\n\nBring them home · cycle 2\n\nRead expedition record →\nANCIENT STARLANES\n⌁ Iona ↗\n\nDormant · Not traversable\n\nRestore a permanent shortcut shared by all empires.\n\nReview restoration →\nCONNECTED SYSTEMS\nVelorum ↗\nSundrift ↗\nHaven ↗\nCycle 14\n2413 CE\nEND CYCLE →\nSPACE\n6 orders remaining · 4 colonies\nOrbital Extractor commissioned at Halcyon.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nOrbital Extractor commissioned at Halcyon.",
+  "inspector": "THE CONCORD\nHalcyon\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n45%\nHABITABILITY\n1/6\nPOPULATION\n5\nPRODUCTION\nCOLONY PRODUCTION\n5 / CYCLE\n◇\nOrbital Extractor\n\n5 cycles to completion\n\n×\nINFRASTRUCTURE\n0 / 2 SLOTS\n\nA new world, waiting to take shape.\n\n2 open slots. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+5 credits · +5 minerals · +3 science\n\nEXPEDITION RECORD\n✦\nA Thousand Sleeping Voices\n\nBring them home · cycle 2\n\nRead expedition record →\nANCIENT STARLANES\n⌁ Iona ↗\n\nDormant · Not traversable\n\nRestore a permanent shortcut shared by all empires.\n\nReview restoration →\nCONNECTED SYSTEMS\nVelorum ↗\nSundrift ↗\nHaven ↗",
+  "resources": "◈\n189+54\nCREDITS\n◇\n83+21\nMINERALS\n✧\n0+33\nSCIENCE\n⌘\n6 / 10\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Meridian\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nBARREN",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aurelia\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Carina\nVEYR",
+      "attributes": {
+        "data-system-id": "s11"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder\nOCEAN",
+      "attributes": {
+        "data-system-id": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ophion\nARID",
+      "attributes": {
+        "data-system-id": "s22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Tethys\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s23"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aster\nVEYR",
+      "attributes": {
+        "data-system-id": "s26"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aldebaran\nARID",
+      "attributes": {
+        "data-system-id": "s29"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nCONCORD",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Seraph\nBARREN",
+      "attributes": {
+        "data-system-id": "s35"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Morrow\nTERRAN",
+      "attributes": {
+        "data-system-id": "s37"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eos\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s39"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Fleet roster →",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "cancel-build",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Develop →",
+      "attributes": {
+        "data-action": "development-menu",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Read expedition record →",
+      "attributes": {
+        "data-action": "anomaly",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona ↗",
+      "attributes": {
+        "data-system-select": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Review restoration →",
+      "attributes": {
+        "data-action": "starlane-menu",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum ↗",
+      "attributes": {
+        "data-system-select": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift ↗",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven ↗",
+      "attributes": {
+        "data-system-select": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

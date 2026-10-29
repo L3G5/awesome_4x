@@ -1,0 +1,341 @@
+{
+  "request": 63,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:33147/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n243+58\nCREDITS\n◇\n104+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n8 / 10\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Veyr Prime\nVEYR\nMeridian\nVOLCANIC\nHesper\nBARREN\nAurelia\nVOLCANIC\nCaldera\nUNSURVEYED\nCarina\nVEYR\nKepler\nGLACIAL\nOrison\nGLACIAL\nSundrift\nGLACIAL\nOphion\nARID\nAster\nVEYR\nNyx\nGLACIAL\nHaven\nTERRAN\nHalcyon\nCONCORD\nEos\nVOLCANIC\nAsterion\nCONCORD\n△\n▴\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n35 charted systems · 29 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n4 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Nyx\n\nScout · 1 ship · 0 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\n△\n▴\n▴\nUNCLAIMED FRONTIER\nNyx\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n39%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nSpent\n0 jumps\nCONNECTED SYSTEMS\nEidolon ↗\nBellatrix ↗\nCycle 15\n2414 CE\nEND CYCLE →\nSPACE\n8 orders remaining · 4 colonies\nPathfinder 1 arrived at Nyx.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nPathfinder 1 arrived at Nyx.",
+  "inspector": "UNCLAIMED FRONTIER\nNyx\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n39%\nHABITABILITY\n2\nORE RICHNESS\n3\nSCIENCE\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nSpent\n0 jumps\nCONNECTED SYSTEMS\nEidolon ↗\nBellatrix ↗",
+  "resources": "◈\n243+58\nCREDITS\n◇\n104+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n8 / 10\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Veyr Prime\nVEYR",
+      "attributes": {
+        "data-system-id": "s1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Meridian\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nBARREN",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aurelia\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Caldera\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s8"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Carina\nVEYR",
+      "attributes": {
+        "data-system-id": "s11"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Kepler\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s15"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ophion\nARID",
+      "attributes": {
+        "data-system-id": "s22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aster\nVEYR",
+      "attributes": {
+        "data-system-id": "s26"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Nyx\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s27"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nCONCORD",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eos\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s39"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nSpent\n0 jumps",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eidolon ↗",
+      "attributes": {
+        "data-system-select": "s12"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Bellatrix ↗",
+      "attributes": {
+        "data-system-select": "s19"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

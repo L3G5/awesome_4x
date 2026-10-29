@@ -1,0 +1,386 @@
+{
+  "request": 65,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:33147/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n301+58\nCREDITS\n◇\n130+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n9 / 10\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Veyr Prime\nVEYR\nMeridian\nVOLCANIC\nHesper\nBARREN\nAurelia\nVOLCANIC\nCaldera\nUNSURVEYED\nCarina\nVEYR\nEidolon\n◇ ANOMALY\nKepler\nGLACIAL\nOrison\nGLACIAL\nSundrift\nGLACIAL\nOphion\nARID\nAster\nVEYR\nHaven\nTERRAN\nHalcyon\nCONCORD\nEos\nVOLCANIC\nAsterion\nCONCORD\n△\n▴\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n35 charted systems · 30 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n4 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Eidolon\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 3\n⇥\n△\n▴\n▴\nUNCLAIMED FRONTIER\nEidolon\n\nOcean world · Frontier system\n\nAn unbroken sea, rich with unfamiliar life.\n\n76%\nHABITABILITY\n5\nORE RICHNESS\n4\nSCIENCE\nUNUSUAL SIGNAL\n◇\nThe Patient Reef\nInvestigate discovery · 1 order →\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nBellatrix ↗\nNyx ↗\nCycle 16\n2415 CE\nEND CYCLE →\nSPACE\n9 orders remaining · 4 colonies\nPathfinder 1 arrived at Eidolon.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\n×\nРусский\nFIELD EXPEDITION · EIDOLON\n◇\nThe Patient Reef\n\nA pale lattice grows through the planet’s crust. Each branch encloses a tool. None contains a weapon. Far below, something waits for permission to continue.\n\nQuarry the lattice →\n\nGain 85 minerals. Exhaust the reef permanently.\n\n1 order\nFeed the root →\n\nSpend 35 credits and 20 minerals to preserve the living structure.\n\nSettle this world and operate an Orbital Extractor for three completed cycles without hostile warships in orbit. Then choose 120 minerals and 20 science, or grow Lattice Works for 80 credits, 40 minerals and 60 work. Restoration requires Autonomous Industry and one infrastructure slot (or explicit replacement), producing +4 minerals and +4 production. The opportunity stays with the world if another empire takes it; progress never expires.\n\n◈ 35 credits · ◇ 20 minerals · 1 order\n\nEach choice leaves a permanent record. Restorations use ordinary construction; cancelling keeps the plan but never reopens the salvage choice.\n\nTHE STORY OF THIS WORLD\n\nYour expedition has yet to leave its mark here.",
+  "inspector": "UNCLAIMED FRONTIER\nEidolon\n\nOcean world · Frontier system\n\nAn unbroken sea, rich with unfamiliar life.\n\n76%\nHABITABILITY\n5\nORE RICHNESS\n4\nSCIENCE\nUNUSUAL SIGNAL\n◇\nThe Patient Reef\nInvestigate discovery · 1 order →\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nBellatrix ↗\nNyx ↗",
+  "resources": "◈\n301+58\nCREDITS\n◇\n130+26\nMINERALS\n✧\n0+34\nSCIENCE\n⌘\n9 / 10\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Veyr Prime\nVEYR",
+      "attributes": {
+        "data-system-id": "s1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Meridian\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s4"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nBARREN",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aurelia\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s6"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Caldera\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s8"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Carina\nVEYR",
+      "attributes": {
+        "data-system-id": "s11"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eidolon\n◇ ANOMALY",
+      "attributes": {
+        "data-system-id": "s12"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Kepler\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s15"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ophion\nARID",
+      "attributes": {
+        "data-system-id": "s22"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aster\nVEYR",
+      "attributes": {
+        "data-system-id": "s26"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nCONCORD",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Eos\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s39"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Investigate discovery · 1 order →",
+      "attributes": {
+        "data-action": "anomaly",
+        "data-system": "s12"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Bellatrix ↗",
+      "attributes": {
+        "data-system-select": "s19"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Nyx ↗",
+      "attributes": {
+        "data-system-select": "s27"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "close-modal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Quarry the lattice →\n\nGain 85 minerals. Exhaust the reef permanently.\n\n1 order",
+      "attributes": {
+        "data-action": "anomaly-choice",
+        "data-system": "s12",
+        "data-choice": "salvage"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Feed the root →\n\nSpend 35 credits and 20 minerals to preserve the living structure.\n\nSettle this world and operate an Orbital Extractor for three completed cycles without hostile warships in orbit. Then choose 120 minerals and 20 science, or grow Lattice Works for 80 credits, 40 minerals and 60 work. Restoration requires Autonomous Industry and one infrastructure slot (or explicit replacement), producing +4 minerals and +4 production. The opportunity stays with the world if another empire takes it; progress never expires.\n\n◈ 35 credits · ◇ 20 minerals · 1 order",
+      "attributes": {
+        "data-action": "anomaly-choice",
+        "data-system": "s12",
+        "data-choice": "preserve"
+      },
+      "disabled": false
+    }
+  ]
+}

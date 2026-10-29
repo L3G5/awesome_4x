@@ -1,0 +1,317 @@
+{
+  "request": 5,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n140+7\nCREDITS\n◇\n110+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n5 / 6\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\nHalcyon\nUNSURVEYED\nAntares\nTERRAN\n△\n⬡\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nYOUR FIRST MANDATE\nCompare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nColony Ark 2 / Antares\n\nColony ship · 1 ship · 0 jumps · 24 / 24 hull\n\nSettle world\nHold position\n⌁ 3\n⇥\n△\n⬡\n▴\nUNCLAIMED FRONTIER\nAntares\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n83%\nHABITABILITY\n4\nORE RICHNESS\n2\nSCIENCE\nIN ORBIT\n1 FLEET\nColony Ark 2\nColony ship · 24 / 24 hull\nSpent\n0 jumps\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nIona ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n5 orders remaining · 1 colony\nColony Ark 2 arrived at Antares.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\n×\nРусский\nA NEW WORLD\nSettle Antares?\n\nYour Colony Ark will become the foundation of a new settlement. Establishing the colony consumes the ark, 30 credits, 20 minerals, and 1 order.\n\nWorlds need at least 50% habitability with your current technology.\n\nWait\nFound colony →",
+  "inspector": "UNCLAIMED FRONTIER\nAntares\n\nTerran world · Frontier system\n\nTemperate oceans and broad continental shelves.\n\n83%\nHABITABILITY\n4\nORE RICHNESS\n2\nSCIENCE\nIN ORBIT\n1 FLEET\nColony Ark 2\nColony ship · 24 / 24 hull\nSpent\n0 jumps\nCONNECTED SYSTEMS\nSolace ↗\nVelorum ↗\nIona ↗",
+  "resources": "◈\n140+7\nCREDITS\n◇\n110+9\nMINERALS\n✧\n0+4\nSCIENCE\n⌘\n5 / 6\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nTERRAN",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⬡",
+      "attributes": {
+        "data-fleet-id": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Settle world",
+      "attributes": {
+        "data-action": "colonize"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 3",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⬡",
+      "attributes": {
+        "data-fleet": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Colony Ark 2\nColony ship · 24 / 24 hull\nSpent\n0 jumps",
+      "attributes": {
+        "data-fleet": "f2"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Solace ↗",
+      "attributes": {
+        "data-system-select": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum ↗",
+      "attributes": {
+        "data-system-select": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona ↗",
+      "attributes": {
+        "data-system-select": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "close-modal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Wait",
+      "attributes": {
+        "data-action": "close-modal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Found colony →",
+      "attributes": {
+        "data-action": "colonize-confirm"
+      },
+      "disabled": false
+    }
+  ]
+}

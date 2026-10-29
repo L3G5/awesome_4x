@@ -1,0 +1,246 @@
+{
+  "request": 7,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n80+13\nCREDITS\n◇\n60+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n3 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nUNSURVEYED\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nIona\nUNSURVEYED\nHalcyon\nUNSURVEYED\nAntares\nCONCORD\n△\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n7 charted systems · 3 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nA galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nFleet roster →\nTHE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n✧\nResearch Enclave\n\n4 cycles to completion\n\n×\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n2 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗\nCycle 01\n2400 CE\nEND CYCLE →\nSPACE\n3 orders remaining · 2 colonies\nResearch Enclave commissioned at Solace.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED",
+  "inspector": "THE CONCORD\nSolace\n\nTerran world · Founding system\n\nTemperate oceans and broad continental shelves.\n\n90%\nHABITABILITY\n4/8\nPOPULATION\n8\nPRODUCTION\nCOLONY PRODUCTION\n8 / CYCLE\n✧\nResearch Enclave\n\n4 cycles to completion\n\n×\nINFRASTRUCTURE\n2 / 3 SLOTS\n◇ Orbital Extractor\n⌁ Orbital Shipyard\n\n1 open slot. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+11 credits · +9 minerals · +4 science\n\nFOUNDING WORLD\n⌂\n\nA permanent Domination objective. Holding all four founding worlds wins the campaign.\n\nFounded by\nConcord\nCurrent control\nConcord\n\nMoving an administrative capital does not move this objective.\n\nIN ORBIT\n2 FLEETS\nPathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps\nVanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n8 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nSundrift ↗\nAntares ↗",
+  "resources": "◈\n80+13\nCREDITS\n◇\n60+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n3 / 7\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Fleet roster →",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "cancel-build",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Develop →",
+      "attributes": {
+        "data-action": "development-menu",
+        "data-system": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n2 jumps",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard 3\nFrigate · 34 / 34 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift ↗",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares ↗",
+      "attributes": {
+        "data-system-select": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

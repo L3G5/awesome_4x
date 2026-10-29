@@ -1,0 +1,294 @@
+{
+  "request": 11,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n93+13\nCREDITS\n◇\n138+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n6 / 7\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nVelorum\nGLACIAL\nOrison\nUNSURVEYED\nSundrift\nGLACIAL\nHaven\nUNSURVEYED\nIona\nUNSURVEYED\nHalcyon\n◇ ANOMALY\nAntares\nCONCORD\nAsterion\nUNSURVEYED\n△\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n9 charted systems · 5 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n2 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nPathfinder 1 / Halcyon\n\nScout · 1 ship · 1 jumps · 18 / 18 hull · Select a star to plot a jump or a course.\n\nHold position\n⌁ 2\n⇥\n△\n▴\nUNCLAIMED FRONTIER\nHalcyon\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n45%\nHABITABILITY\n5\nORE RICHNESS\n1\nSCIENCE\nUNUSUAL SIGNAL\n✦\nA Thousand Sleeping Voices\nInvestigate discovery · 1 order →\nANCIENT STARLANES\n⌁ Iona ↗\n\nDormant · Not traversable\n\nEstablish a colony at either endpoint to restore this lane.\n\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nVelorum ↗\nSundrift ↗\nHaven ↗\nCycle 02\n2401 CE\nEND CYCLE →\nSPACE\n6 orders remaining · 2 colonies\nPathfinder 1 arrived at Halcyon.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\nPathfinder 1 arrived at Halcyon.",
+  "inspector": "UNCLAIMED FRONTIER\nHalcyon\n\nGlacial world · Frontier system\n\nAncient ice hides a warm subsurface ocean.\n\n45%\nHABITABILITY\n5\nORE RICHNESS\n1\nSCIENCE\nUNUSUAL SIGNAL\n✦\nA Thousand Sleeping Voices\nInvestigate discovery · 1 order →\nANCIENT STARLANES\n⌁ Iona ↗\n\nDormant · Not traversable\n\nEstablish a colony at either endpoint to restore this lane.\n\nIN ORBIT\n1 FLEET\nPathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump\nCONNECTED SYSTEMS\nVelorum ↗\nSundrift ↗\nHaven ↗",
+  "resources": "◈\n93+13\nCREDITS\n◇\n138+13\nMINERALS\n✧\n0+6\nSCIENCE\n⌘\n6 / 7\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\n◇ ANOMALY",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hold position",
+      "attributes": {
+        "data-action": "fleet-hold",
+        "data-fleet-target": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌁ 2",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⇥",
+      "attributes": {
+        "data-action": "next-fleet"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Investigate discovery · 1 order →",
+      "attributes": {
+        "data-action": "anomaly",
+        "data-system": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona ↗",
+      "attributes": {
+        "data-system-select": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pathfinder 1\nScout · 18 / 18 hull\nReady\n1 jump",
+      "attributes": {
+        "data-fleet": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum ↗",
+      "attributes": {
+        "data-system-select": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift ↗",
+      "attributes": {
+        "data-system-select": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven ↗",
+      "attributes": {
+        "data-system-select": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    }
+  ]
+}

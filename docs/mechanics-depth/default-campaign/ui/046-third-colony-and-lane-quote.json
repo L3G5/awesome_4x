@@ -1,0 +1,385 @@
+{
+  "request": 46,
+  "seed": "ASTERION",
+  "url": "http://127.0.0.1:41577/",
+  "body": "ASTERION REACH\nTHE STARS REMEMBER\n◈\n183+49\nCREDITS\n◇\n170+16\nMINERALS\n✧\n0+25\nSCIENCE\n⌘\n5 / 9\nORDERS\nРусский\nGalaxy\nResearch\nDiplomacy\nEmpire\nChronicle\nHome\n⌂Solace\nCONCORD\nHesper\nUNSURVEYED\nVelorum\nGLACIAL\nOrison\nGLACIAL\nCinder\nOCEAN\nSundrift\nGLACIAL\nHaven\nTERRAN\nAldebaran\nARID\nIona\nVOLCANIC\nHalcyon\nGLACIAL\nAntares\nCONCORD\nMorrow\nTERRAN\nZenith\nVOLCANIC\nAsterion\nCONCORD\n△\n▴\n▴\nTHE ASTERION REACH\nTHE UNCHARTED EXPANSE\nCONCORD EXPLORATION AUTHORITY\nThe Asterion Reach\n\n23 charted systems · 20 surveyed · seed ASTERION\n\n+\n−\n⌖\nA CIVILIZATION TAKES SHAPE\n3 worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.\nPER ASPERA, AD ASTRA\nCONCORD\nCHARTED\nUNKNOWN\n⌂ FOUNDING WORLD\nDORMANT LANE\nA galaxy of possibilities.\n\nSelect a fleet in orbit to explore the frontier.\n\nFleet roster →\nTHE CONCORD\nAsterion\n\nOcean world · Frontier system\n\nAn unbroken sea, rich with unfamiliar life.\n\n72%\nHABITABILITY\n1/7\nPOPULATION\n5\nPRODUCTION\nCOLONY PRODUCTION\n5 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n0 / 2 SLOTS\n\nA new world, waiting to take shape.\n\n2 open slots. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+5 credits · +1 minerals · +6 science\n\nANCIENT STARLANES\n⌁ Velorum ↗\n\nDormant · Not traversable\n\nRestore a permanent shortcut shared by all empires.\n\nReview restoration →\nIN ORBIT\n1 FLEET\nVanguard 3\nFrigate · 34 / 34 hull\nHolding\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n4 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nHesper ↗\nOrison ↗\nCycle 11\n2410 CE\nEND CYCLE →\nSPACE\n5 orders remaining · 3 colonies\nColony founded at Asterion.\nASTERION REACH / EARLY ACCESS 0.23.0\n● AUTOSAVED\n×\nРусский\nCOLONIAL COMMISSION · ASTERION\nShape this world's future\n\n0 / 2 infrastructure slots · 5 production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.\n\nInfrastructure\nColony charter\nShips\nStarlanes\nSTARLANE RESTORATION\nAsterion ↔ Velorum\nCOMMISSION COST\n◈ 60 · ◇ 70 · 1 order\nCONSTRUCTION\n48 work · 10 cycles at current production\n\n3 → 1Jumps between endpoints\n\n2 fewer movement orders per crossing.\n\nThe shortcut is permanent and shared. Other empires can use it under normal border rules, including hostile fleets during war.\n\nRestore lane · 1 order\nConstruction and movement rules",
+  "inspector": "THE CONCORD\nAsterion\n\nOcean world · Frontier system\n\nAn unbroken sea, rich with unfamiliar life.\n\n72%\nHABITABILITY\n1/7\nPOPULATION\n5\nPRODUCTION\nCOLONY PRODUCTION\n5 / CYCLE\n\nYour construction teams await a new project.\n\n+ Commission a project\nINFRASTRUCTURE\n0 / 2 SLOTS\n\nA new world, waiting to take shape.\n\n2 open slots. More population opens slots, up to five.\n\n⌂\nUnchartered\n\nGive this world a lasting specialty.\n\nDevelop →\n\n+5 credits · +1 minerals · +6 science\n\nANCIENT STARLANES\n⌁ Velorum ↗\n\nDormant · Not traversable\n\nRestore a permanent shortcut shared by all empires.\n\nReview restoration →\nIN ORBIT\n1 FLEET\nVanguard 3\nFrigate · 34 / 34 hull\nHolding\n1 jump\nDEFENSIVE LEAD\n\nDefault formation order\n\nYour formations defend separately in the order listed above. A surviving attacker can still reach later defenders.\n\nSelect one of your military formations above to assign or clear its lead. Either change costs one order.\n\nORBITAL MAINTENANCE\n4 HULL / CYCLE\n\nAll your fleets here are fully repaired.\n\nShips at one colony share its repair capacity. Splitting or merging does not increase the total.\nCONNECTED SYSTEMS\nHesper ↗\nOrison ↗",
+  "resources": "◈\n183+49\nCREDITS\n◇\n170+16\nMINERALS\n✧\n0+25\nSCIENCE\n⌘\n5 / 9\nORDERS",
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "briefing",
+        "id": "briefing-button"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "attributes": {
+        "data-action": "menu"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Galaxy",
+      "attributes": {
+        "data-page": "galaxy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Research",
+      "attributes": {
+        "data-page": "research"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Diplomacy",
+      "attributes": {
+        "data-page": "diplomacy"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Empire",
+      "attributes": {
+        "data-page": "empire"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Chronicle",
+      "attributes": {
+        "data-page": "journal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Home",
+      "attributes": {
+        "data-action": "home"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌂Solace\nCONCORD",
+      "attributes": {
+        "data-system-id": "s0"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper\nUNSURVEYED",
+      "attributes": {
+        "data-system-id": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cinder\nOCEAN",
+      "attributes": {
+        "data-system-id": "s18"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Sundrift\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s20"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Haven\nTERRAN",
+      "attributes": {
+        "data-system-id": "s28"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Aldebaran\nARID",
+      "attributes": {
+        "data-system-id": "s29"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Iona\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s32"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Halcyon\nGLACIAL",
+      "attributes": {
+        "data-system-id": "s33"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Antares\nCONCORD",
+      "attributes": {
+        "data-system-id": "s34"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Morrow\nTERRAN",
+      "attributes": {
+        "data-system-id": "s37"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Zenith\nVOLCANIC",
+      "attributes": {
+        "data-system-id": "s38"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Asterion\nCONCORD",
+      "attributes": {
+        "data-system-id": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "△",
+      "attributes": {
+        "data-fleet-id": "f1"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "▴",
+      "attributes": {
+        "data-fleet-id": "f13"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+",
+      "attributes": {
+        "data-action": "zoom-in"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "−",
+      "attributes": {
+        "data-action": "zoom-out"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "⌖",
+      "attributes": {
+        "data-action": "reset-view"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Fleet roster →",
+      "attributes": {
+        "data-action": "fleet-roster"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "+ Commission a project",
+      "attributes": {
+        "data-action": "build-menu",
+        "data-system": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Develop →",
+      "attributes": {
+        "data-action": "development-menu",
+        "data-system": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Velorum ↗",
+      "attributes": {
+        "data-system-select": "s9"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Review restoration →",
+      "attributes": {
+        "data-action": "starlane-menu",
+        "data-system": "s41"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vanguard 3\nFrigate · 34 / 34 hull\nHolding\n1 jump",
+      "attributes": {
+        "data-fleet": "f3"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Hesper ↗",
+      "attributes": {
+        "data-system-select": "s5"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Orison ↗",
+      "attributes": {
+        "data-system-select": "s17"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "END CYCLE →\nSPACE",
+      "attributes": {
+        "data-action": "end-turn",
+        "id": "end-turn"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "×",
+      "attributes": {
+        "data-action": "close-modal"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Русский",
+      "attributes": {
+        "data-action": "language"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Infrastructure",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s41",
+        "data-tab": "building"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Colony charter",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s41",
+        "data-tab": "charter"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ships",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s41",
+        "data-tab": "ship"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Starlanes",
+      "attributes": {
+        "data-action": "construction-tab",
+        "data-system": "s41",
+        "data-tab": "starlane"
+      },
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Restore lane · 1 order",
+      "attributes": {
+        "data-action": "restore-lane",
+        "data-system": "s41",
+        "data-lane": "l0"
+      },
+      "disabled": false
+    }
+  ]
+}
