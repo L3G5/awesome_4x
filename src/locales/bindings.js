@@ -4787,5 +4787,26 @@ export const bindings = {
         "kind": "name"
       }
     }
+  ],
+  "{0}Up to {1} order{2} now; stops for new contacts, discoveries or combat.": [
+    {
+      "0": {
+        "kind": "enum",
+        "options": [
+          "Continuing resumes this held fleet. ",
+          ""
+        ]
+      },
+      "1": {
+        "kind": "number"
+      },
+      "2": {
+        "kind": "enum",
+        "options": [
+          "",
+          "s"
+        ]
+      }
+    }
   ]
 };

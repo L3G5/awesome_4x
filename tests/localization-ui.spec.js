@@ -3,6 +3,22 @@ import fs from 'node:fs/promises';
 import { createGame, command, endTurn } from '../src/game.js';
 
 const LANGUAGE='asterion-reach-language-v1', SAVE='asterion-reach-save-v1';
+test('Russian held-route limits and uncertainty remain fully translated after movement', async ({ page }) => {
+  const state = createGame('ASTERION');
+  expect(command(state, { type: 'planRoute', fleetId: 'f1', destinationId: 's9' }).ok).toBe(true);
+  expect(command(state, { type: 'move', fleetId: 'f1', targetId: 's20' }).ok).toBe(true);
+  expect(command(state, { type: 'hold', fleetId: 'f1' }).ok).toBe(true);
+  await page.addInitScript(({ state, SAVE, LANGUAGE }) => {
+    localStorage.setItem(SAVE, JSON.stringify(state));
+    localStorage.setItem(LANGUAGE, 'ru');
+  }, { state, SAVE, LANGUAGE });
+  await page.goto('./');
+  await expect(page.locator('.route-explanation')).toContainText('Лимит приказов сейчас: 1; остановка при новом контакте, открытии или бое.');
+  await expect(page.locator('.route-explanation')).toContainText('Неизвестная вражеская обстановка в точках маршрута: 1.');
+  await expect(page.locator('.route-explanation')).not.toContainText('Up to');
+  await expect(page.locator('#fleet-bar')).toContainText('Удерживает позицию');
+  expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
+});
 const actual50=new URL('../docs/default-campaign/actual/083-asterion-reach-cycle-50.json',import.meta.url);
 const actual60=new URL('../docs/default-campaign/actual/109-asterion-reach-cycle-60.json',import.meta.url);
 async function exportCampaign(page){
