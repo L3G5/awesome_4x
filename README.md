@@ -20,6 +20,8 @@ The simulation in `src/game.js` is independent of rendering. Authored content, r
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
+The [fleet reinforcement review](docs/stage18-reinforcement-review/index.html) verifies explicit ship commissions, legal merge choices and the exact two-action flow from the completed WATCH campaign.
+
 The [fortified-network playtest](docs/watch-playtest/index.html) follows a UI-only version-0.14 campaign through Transcendence at cycle 60, including a tied public race, limited beacon seizure and three defensive battles. Its portable replay reproduces all 265 commands and 15 actual export events; a separate postgame comparison verifies the same trace on version 0.16.
 
 The [colony investment review](docs/stage17-investment-review/index.html) verifies current costs, completed output, replacement losses and subsequent construction times without changing quick commissioning.

@@ -1,0 +1,95 @@
+{
+  "url": "http://127.0.0.1:5203/",
+  "sources": {
+    "src/main.js": "f2207c3daf86e1f9845b8f318a8a9833f382d5a4a43f1b407baca750cc924912",
+    "src/reinforcement.js": "a6d7307e21c21de4ab452909c1c58d649355d840bd5a503033e9efc671231bf1",
+    "src/reinforcement-ui.js": "3702f77ca3e6815d324d03e4b6394b449fb320eabce9eea8ddfaf859fa843c74",
+    "src/reinforcement.css": "9966b1970d56b1037882a1172e7637079495166d897390a2197886ed3679b87e",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a"
+  },
+  "changedSinceInitialEight": [
+    "src/main.js"
+  ],
+  "inputSha256": "bc336a1f56fa49d494914eb249756af9dc3f41a4f260c279064ab8e62393f715",
+  "method": "Only the post-merge focus/scroll follow-up at three widths. Earlier eight cases and initial modal checks retain their original phase hashes. Two actual commands per width; no save/production source edits.",
+  "checks": [
+    {
+      "width": 1440,
+      "passed": true,
+      "geometry": {
+        "panelFocused": true,
+        "panel": {
+          "top": 264.375,
+          "bottom": 533.375
+        },
+        "button": {
+          "top": 429.125,
+          "bottom": 470.375
+        },
+        "inspector": {
+          "top": 76,
+          "bottom": 721
+        },
+        "commissionVisible": true,
+        "overflow": false
+      },
+      "ordinaryCommands": 2,
+      "keyboard": "After merge, focus on existing panel; Tab then Enter commissions exactly one ship.",
+      "exactAfterEachCommandAndReload": true,
+      "errors": []
+    },
+    {
+      "width": 1280,
+      "passed": true,
+      "geometry": {
+        "panelFocused": true,
+        "panel": {
+          "top": 214.375,
+          "bottom": 483.375
+        },
+        "button": {
+          "top": 379.125,
+          "bottom": 420.375
+        },
+        "inspector": {
+          "top": 76,
+          "bottom": 621
+        },
+        "commissionVisible": true,
+        "overflow": false
+      },
+      "ordinaryCommands": 2,
+      "keyboard": "After merge, focus on existing panel; Tab then Enter commissions exactly one ship.",
+      "exactAfterEachCommandAndReload": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "geometry": {
+        "panelFocused": true,
+        "panel": {
+          "top": 294.953125,
+          "bottom": 549.953125
+        },
+        "button": {
+          "top": 445.703125,
+          "bottom": 486.953125
+        },
+        "inspector": {
+          "top": -125.734375,
+          "bottom": 1630.171875
+        },
+        "commissionVisible": true,
+        "overflow": false
+      },
+      "ordinaryCommands": 2,
+      "keyboard": "After merge, focus on existing panel; Tab then Enter commissions exactly one ship.",
+      "exactAfterEachCommandAndReload": true,
+      "errors": []
+    }
+  ],
+  "scriptSha256": "b8b57a75c4207f7523e62cfbbf4a014ec7a2f6eb356d40d2ec58257749d8ec9a"
+}

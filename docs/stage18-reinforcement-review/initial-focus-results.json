@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:5203/",
+  "mainSha256": "ef4dd8f869fe00ca9de503f3892596c10a057a8afdc76b018bb20af5fd27185d",
+  "scriptSha256": "2eb83977c17c2f88236d6ff7a31a7974671ab0adbe4816be4572a85c7dd905b7",
+  "checks": [
+    {
+      "orders": 10,
+      "geometry": {
+        "title": {
+          "y": 90.203125,
+          "bottom": 118.203125
+        },
+        "clip": {
+          "y": 43.203125,
+          "bottom": 800.796875
+        },
+        "scroll": 0,
+        "focused": "merge-partner"
+      },
+      "passed": true
+    },
+    {
+      "orders": 0,
+      "geometry": {
+        "title": {
+          "y": 90.203125,
+          "bottom": 118.203125
+        },
+        "clip": {
+          "y": 43.203125,
+          "bottom": 800.796875
+        },
+        "scroll": 0,
+        "focused": "merge-partner"
+      },
+      "passed": true
+    }
+  ]
+}

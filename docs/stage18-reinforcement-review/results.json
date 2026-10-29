@@ -1,0 +1,480 @@
+{
+  "url": "http://127.0.0.1:5203/",
+  "sourceHead": "a76c341",
+  "sourcesBefore": {
+    "src/main.js": "ef4dd8f869fe00ca9de503f3892596c10a057a8afdc76b018bb20af5fd27185d",
+    "src/reinforcement.js": "a6d7307e21c21de4ab452909c1c58d649355d840bd5a503033e9efc671231bf1",
+    "src/reinforcement-ui.js": "3702f77ca3e6815d324d03e4b6394b449fb320eabce9eea8ddfaf859fa843c74",
+    "src/reinforcement.css": "9966b1970d56b1037882a1172e7637079495166d897390a2197886ed3679b87e",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a"
+  },
+  "sourcesAfter": {
+    "src/main.js": "ef4dd8f869fe00ca9de503f3892596c10a057a8afdc76b018bb20af5fd27185d",
+    "src/reinforcement.js": "a6d7307e21c21de4ab452909c1c58d649355d840bd5a503033e9efc671231bf1",
+    "src/reinforcement-ui.js": "3702f77ca3e6815d324d03e4b6394b449fb320eabce9eea8ddfaf859fa843c74",
+    "src/reinforcement.css": "9966b1970d56b1037882a1172e7637079495166d897390a2197886ed3679b87e",
+    "src/game.js": "6e2b5ff93e84019253d1c3c3fdf5cdd8b6a06f74986e18b711b88daff9a9fbaa",
+    "src/fleet-management.js": "697da0397f170d5fc4a8c85acbf217818fd8219a27eaeace8f15f5de0b707385",
+    "src/discoveries.js": "71692463b6033c7ee5f935c7f0edc3cf5c59e91649cb6492ee7d7dd301ef1a7a"
+  },
+  "sourceChanges": [],
+  "input": {
+    "path": "/tmp/asterion-stage18-reinforcement/docs/watch-playtest/checkpoints/cycle40.json",
+    "sha256": "bc336a1f56fa49d494914eb249756af9dc3f41a4f260c279064ab8e62393f715"
+  },
+  "method": "Fresh isolated browser contexts. Actual completed WATCH40 input is unedited; synthetic chooser variants explicitly separate. Actual UI clicks/keys invoke ordinary commands; exact state comparison and reload/next-turn replay. No original evidence or source edits.",
+  "checks": [
+    {
+      "name": "Actual WATCH40 1440px two-command UI acceptance",
+      "passed": true,
+      "afterSelection": {
+        "inspector": {
+          "x": 1117,
+          "y": 76,
+          "width": 323,
+          "height": 645,
+          "bottom": 721
+        },
+        "inspectorScroll": 815,
+        "panel": {
+          "x": 1117,
+          "y": -223.625,
+          "width": 323,
+          "height": 269,
+          "bottom": 45.375
+        },
+        "button": {
+          "x": 1140,
+          "y": -58.875,
+          "width": 277,
+          "height": 41.25,
+          "bottom": -17.625
+        },
+        "merge": {
+          "x": 684.265625,
+          "y": 792.5,
+          "width": 79.03125,
+          "height": 37,
+          "bottom": 829.5
+        },
+        "commissionVisible": false,
+        "windowScroll": 0,
+        "horizontalOverflow": false
+      },
+      "afterMerge": {
+        "inspector": {
+          "x": 1117,
+          "y": 76,
+          "width": 323,
+          "height": 645,
+          "bottom": 721
+        },
+        "inspectorScroll": 815,
+        "panel": {
+          "x": 1117,
+          "y": -223.625,
+          "width": 323,
+          "height": 269,
+          "bottom": 45.375
+        },
+        "button": {
+          "x": 1140,
+          "y": -58.875,
+          "width": 277,
+          "height": 41.25,
+          "bottom": -17.625
+        },
+        "merge": null,
+        "commissionVisible": false,
+        "windowScroll": 0,
+        "horizontalOverflow": false
+      },
+      "quote": "SHIPYARD COMMISSION\n1 NEW SHIP\n▴\nVanguard\n\n25 credits · 28 minerals · 1 order\n\n1 cycle at current production · 2 credits upkeep / cycle after completion\n\nCommission Vanguard\n\nCompletes as a separate formation here. You choose whether to merge it later.",
+      "ordinaryCommands": 2,
+      "ordersSpent": 2,
+      "creditsPaid": 25,
+      "mineralsPaid": 28,
+      "exactAfterEachCommand": true,
+      "exactReloadAndNextTurn": true,
+      "errors": []
+    },
+    {
+      "name": "Actual WATCH40 1280px two-command UI acceptance",
+      "passed": true,
+      "afterSelection": {
+        "inspector": {
+          "x": 957,
+          "y": 76,
+          "width": 323,
+          "height": 545,
+          "bottom": 621
+        },
+        "inspectorScroll": 865,
+        "panel": {
+          "x": 957,
+          "y": -273.625,
+          "width": 323,
+          "height": 269,
+          "bottom": -4.625
+        },
+        "button": {
+          "x": 980,
+          "y": -108.875,
+          "width": 277,
+          "height": 41.25,
+          "bottom": -67.625
+        },
+        "merge": {
+          "x": 524.265625,
+          "y": 692.5,
+          "width": 79.03125,
+          "height": 37,
+          "bottom": 729.5
+        },
+        "commissionVisible": false,
+        "windowScroll": 0,
+        "horizontalOverflow": false
+      },
+      "afterMerge": {
+        "inspector": {
+          "x": 957,
+          "y": 76,
+          "width": 323,
+          "height": 545,
+          "bottom": 621
+        },
+        "inspectorScroll": 865,
+        "panel": {
+          "x": 957,
+          "y": -273.625,
+          "width": 323,
+          "height": 269,
+          "bottom": -4.625
+        },
+        "button": {
+          "x": 980,
+          "y": -108.875,
+          "width": 277,
+          "height": 41.25,
+          "bottom": -67.625
+        },
+        "merge": null,
+        "commissionVisible": false,
+        "windowScroll": 0,
+        "horizontalOverflow": false
+      },
+      "quote": "SHIPYARD COMMISSION\n1 NEW SHIP\n▴\nVanguard\n\n25 credits · 28 minerals · 1 order\n\n1 cycle at current production · 2 credits upkeep / cycle after completion\n\nCommission Vanguard\n\nCompletes as a separate formation here. You choose whether to merge it later.",
+      "ordinaryCommands": 2,
+      "ordersSpent": 2,
+      "creditsPaid": 25,
+      "mineralsPaid": 28,
+      "exactAfterEachCommand": true,
+      "exactReloadAndNextTurn": true,
+      "errors": []
+    },
+    {
+      "name": "Actual WATCH40 390px two-command UI acceptance",
+      "passed": true,
+      "afterSelection": {
+        "inspector": {
+          "x": 48,
+          "y": -586.734375,
+          "width": 342,
+          "height": 2045.265625,
+          "bottom": 1458.53125
+        },
+        "inspectorScroll": 0,
+        "panel": {
+          "x": 48,
+          "y": -166.046875,
+          "width": 342,
+          "height": 255,
+          "bottom": 88.953125
+        },
+        "button": {
+          "x": 66,
+          "y": -15.296875,
+          "width": 306,
+          "height": 41.25,
+          "bottom": 25.953125
+        },
+        "merge": {
+          "x": 70,
+          "y": -646.234375,
+          "width": 66.578125,
+          "height": 34,
+          "bottom": -612.234375
+        },
+        "commissionVisible": false,
+        "windowScroll": 1176,
+        "horizontalOverflow": false
+      },
+      "afterMerge": {
+        "inspector": {
+          "x": 48,
+          "y": 464.265625,
+          "width": 342,
+          "height": 1755.90625,
+          "bottom": 2220.171875
+        },
+        "inspectorScroll": 0,
+        "panel": {
+          "x": 48,
+          "y": 884.953125,
+          "width": 342,
+          "height": 255,
+          "bottom": 1139.953125
+        },
+        "button": {
+          "x": 66,
+          "y": 1035.703125,
+          "width": 306,
+          "height": 41.25,
+          "bottom": 1076.953125
+        },
+        "merge": null,
+        "commissionVisible": false,
+        "windowScroll": 125,
+        "horizontalOverflow": false
+      },
+      "quote": "SHIPYARD COMMISSION\n1 NEW SHIP\n▴\nVanguard\n\n25 credits · 28 minerals · 1 order\n\n1 cycle at current production · 2 credits upkeep / cycle after completion\n\nCommission Vanguard\n\nCompletes as a separate formation here. You choose whether to merge it later.",
+      "ordinaryCommands": 2,
+      "ordersSpent": 2,
+      "creditsPaid": 25,
+      "mineralsPaid": 28,
+      "exactAfterEachCommand": true,
+      "exactReloadAndNextTurn": true,
+      "errors": []
+    },
+    {
+      "name": "Chooser 1440px 1 orders",
+      "passed": true,
+      "options": [
+        {
+          "id": "f13",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.",
+          "disabled": true
+        },
+        {
+          "id": "f14",
+          "text": "Ancient escort <one> · 2 ships · 50 / 68 hull",
+          "disabled": false
+        },
+        {
+          "id": "f15",
+          "text": "Fast local escort · 1 ship · 20 / 34 hull",
+          "disabled": false
+        }
+      ],
+      "wording": "×\nCONCORD FLEET COMMAND\nCombine formations\n\nChoose which formation joins Vanguard 3. The selected fleet survives; merging does not repair damage.\n\nFormation to absorb\nOver-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.\nAncient escort <one> · 2 ships · 50 / 68 hull\nFast local escort · 1 ship · 20 / 34 hull\nSELECTED · SURVIVES\nVanguard 3\n\n9 ships · 210 / 306 hull\n\n1 jump remaining · Holding position\n\nJOINS SELECTED FLEET\nAncient escort <one>\n\n2 ships · 50 / 68 hull\n\n0 jumps remaining · Holding position\n\nDefensive lead\nCOMBINED FORMATION\nVanguard 3\nShips\n11 / 12\nHull\n260 / 374\nMovement remaining\n0 jumps\n\nVanguard 3 keeps its name and plotted course; it remains on Hold.\n\nRemaining movement is the lower of the two allowances. Ancient escort <one>’s course is discarded. The defensive lead transfers to the combined fleet. 1 expedition record is retained, with no new discovery rewards.\n\nUpkeep is unchanged. Combining formations grants no extra passive repair.\n\nKeep separate\nMerge 2 ships · 1 order",
+      "focus": [
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Merge 2 ships · 1 order"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Merge 2 ships · 1 order"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        }
+      ],
+      "disabled": false,
+      "exactState": true,
+      "errors": []
+    },
+    {
+      "name": "Chooser 1280px 0 orders",
+      "passed": true,
+      "options": [
+        {
+          "id": "f13",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.",
+          "disabled": true
+        },
+        {
+          "id": "f14",
+          "text": "Ancient escort <one> · 2 ships · 50 / 68 hull",
+          "disabled": false
+        },
+        {
+          "id": "f15",
+          "text": "Fast local escort · 1 ship · 20 / 34 hull",
+          "disabled": false
+        }
+      ],
+      "wording": "×\nCONCORD FLEET COMMAND\nCombine formations\n\nChoose which formation joins Vanguard 3. The selected fleet survives; merging does not repair damage.\n\nFormation to absorb\nOver-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.\nAncient escort <one> · 2 ships · 50 / 68 hull\nFast local escort · 1 ship · 20 / 34 hull\nSELECTED · SURVIVES\nVanguard 3\n\n9 ships · 210 / 306 hull\n\n1 jump remaining · Holding position\n\nJOINS SELECTED FLEET\nAncient escort <one>\n\n2 ships · 50 / 68 hull\n\n0 jumps remaining · Holding position\n\nDefensive lead\nCOMBINED FORMATION\nVanguard 3\nShips\n11 / 12\nHull\n260 / 374\nMovement remaining\n0 jumps\n\nVanguard 3 keeps its name and plotted course; it remains on Hold.\n\nRemaining movement is the lower of the two allowances. Ancient escort <one>’s course is discarded. The defensive lead transfers to the combined fleet. 1 expedition record is retained, with no new discovery rewards.\n\nUpkeep is unchanged. Combining formations grants no extra passive repair.\n\nNo orders remaining. End the turn to receive a new mandate.\n\nKeep separate\nMerge 2 ships · 1 order",
+      "focus": [
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        }
+      ],
+      "disabled": true,
+      "exactState": true,
+      "errors": []
+    },
+    {
+      "name": "Chooser 390px 0 orders",
+      "passed": true,
+      "options": [
+        {
+          "id": "f13",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.",
+          "disabled": true
+        },
+        {
+          "id": "f14",
+          "text": "Ancient escort <one> · 2 ships · 50 / 68 hull",
+          "disabled": false
+        },
+        {
+          "id": "f15",
+          "text": "Fast local escort · 1 ship · 20 / 34 hull",
+          "disabled": false
+        }
+      ],
+      "wording": "×\nCONCORD FLEET COMMAND\nCombine formations\n\nChoose which formation joins Vanguard 3. The selected fleet survives; merging does not repair damage.\n\nFormation to absorb\nOver-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.\nAncient escort <one> · 2 ships · 50 / 68 hull\nFast local escort · 1 ship · 20 / 34 hull\nSELECTED · SURVIVES\nVanguard 3\n\n9 ships · 210 / 306 hull\n\n1 jump remaining · Holding position\n\nJOINS SELECTED FLEET\nAncient escort <one>\n\n2 ships · 50 / 68 hull\n\n0 jumps remaining · Holding position\n\nDefensive lead\nCOMBINED FORMATION\nVanguard 3\nShips\n11 / 12\nHull\n260 / 374\nMovement remaining\n0 jumps\n\nVanguard 3 keeps its name and plotted course; it remains on Hold.\n\nRemaining movement is the lower of the two allowances. Ancient escort <one>’s course is discarded. The defensive lead transfers to the combined fleet. 1 expedition record is retained, with no new discovery rewards.\n\nUpkeep is unchanged. Combining formations grants no extra passive repair.\n\nNo orders remaining. End the turn to receive a new mandate.\n\nKeep separate\nMerge 2 ships · 1 order",
+      "focus": [
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        }
+      ],
+      "disabled": true,
+      "exactState": true,
+      "errors": []
+    },
+    {
+      "name": "Chooser 390px ended",
+      "passed": true,
+      "options": [
+        {
+          "id": "f13",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.",
+          "disabled": true
+        },
+        {
+          "id": "f14",
+          "text": "Ancient escort <one> · 2 ships · 50 / 68 hull",
+          "disabled": false
+        },
+        {
+          "id": "f15",
+          "text": "Fast local escort · 1 ship · 20 / 34 hull",
+          "disabled": false
+        }
+      ],
+      "wording": "×\nCONCORD FLEET COMMAND\nCombine formations\n\nChoose which formation joins Vanguard 3. The selected fleet survives; merging does not repair damage.\n\nFormation to absorb\nOver-cap first guard · 4 ships · 130 / 136 hull · A task force can contain at most 12 ships.\nAncient escort <one> · 2 ships · 50 / 68 hull\nFast local escort · 1 ship · 20 / 34 hull\nSELECTED · SURVIVES\nVanguard 3\n\n9 ships · 210 / 306 hull\n\n1 jump remaining · Holding position\n\nJOINS SELECTED FLEET\nAncient escort <one>\n\n2 ships · 50 / 68 hull\n\n0 jumps remaining · Holding position\n\nDefensive lead\nCOMBINED FORMATION\nVanguard 3\nShips\n11 / 12\nHull\n260 / 374\nMovement remaining\n0 jumps\n\nVanguard 3 keeps its name and plotted course; it remains on Hold.\n\nRemaining movement is the lower of the two allowances. Ancient escort <one>’s course is discarded. The defensive lead transfers to the combined fleet. 1 expedition record is retained, with no new discovery rewards.\n\nUpkeep is unchanged. Combining formations grants no extra passive repair.\n\nThis campaign has ended. Start a new galaxy to continue.\n\nKeep separate\nMerge 2 ships · 1 order",
+      "focus": [
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "SELECT",
+          "text": "Over-cap first guard · 4 ships · 130 / 136 hu"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Keep separate"
+        }
+      ],
+      "disabled": true,
+      "exactState": true,
+      "errors": []
+    },
+    {
+      "name": "Over-cap first partner keeps sole legal merge direct",
+      "passed": true,
+      "directTarget": "f14",
+      "exactState": true,
+      "errors": []
+    }
+  ],
+  "scriptSha256": "bb643c35a69c8ab74253f966b0259e2e8a9c31ca8c74d2390fb5327a1f8bfc3f"
+}

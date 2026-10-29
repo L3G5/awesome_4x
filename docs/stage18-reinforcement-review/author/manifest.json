@@ -1,0 +1,62 @@
+{
+  "frozenAt": "2026-10-29T00:46:11.625Z",
+  "phase": "Author viewport QA before final main.js focus integration; see source-phases.json",
+  "artifacts": {
+    "README.md": {
+      "bytes": 2066,
+      "sha256": "a9a8eb846019252b425ed775de764731d4e7590272eb341acabd2f49c04c6b84"
+    },
+    "commission-1280.png": {
+      "bytes": 515897,
+      "sha256": "eb367dfaf628c93497da212191bac1e4249cef6fed82f98e1268eb6da0bf7492"
+    },
+    "commission-390.png": {
+      "bytes": 119883,
+      "sha256": "b15bfc7314a55926ab768be00473ce93a99ca96daa06a11bd974077b3daeebf7"
+    },
+    "merge-1280.png": {
+      "bytes": 267739,
+      "sha256": "97f1e5f38f380314a1ffcc78c6e31c135105eba41bb77bd9f7ef51a7d82ea8b0"
+    },
+    "merge-390.png": {
+      "bytes": 96317,
+      "sha256": "0f909b4e4b9f41f36fb028967f6cad0f94e690d3ae01d019619368f51138560d"
+    },
+    "results.json": {
+      "bytes": 287,
+      "sha256": "b7ded665b29bb04463ca020afc7f7cc3a4928256e52d13dc712bbacd30219354"
+    },
+    "source-phases.json": {
+      "bytes": 2115,
+      "sha256": "8c3075ba0e09c05ef4ea279e066b3ee17fdf4de878a1a80d3fbd747a36a87b0f"
+    },
+    "sources/content.js": {
+      "bytes": 15102,
+      "sha256": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2"
+    },
+    "sources/hull-format.js": {
+      "bytes": 554,
+      "sha256": "fa0f55e6ba8b2bc3af98e06d305ae05de924e2c19a356b709bd37169cac59c75"
+    },
+    "sources/main-later-integration.js": {
+      "bytes": 61603,
+      "sha256": "f2207c3daf86e1f9845b8f318a8a9833f382d5a4a43f1b407baca750cc924912"
+    },
+    "sources/reinforcement-ui.js": {
+      "bytes": 9191,
+      "sha256": "3702f77ca3e6815d324d03e4b6394b449fb320eabce9eea8ddfaf859fa843c74"
+    },
+    "sources/reinforcement.css": {
+      "bytes": 3065,
+      "sha256": "9966b1970d56b1037882a1172e7637079495166d897390a2197886ed3679b87e"
+    },
+    "sources/reinforcement.js": {
+      "bytes": 5174,
+      "sha256": "a6d7307e21c21de4ab452909c1c58d649355d840bd5a503033e9efc671231bf1"
+    },
+    "visual.mjs": {
+      "bytes": 3246,
+      "sha256": "1f2f64171dd3ecc2b5b3793dafb4ec32db6ae958286d82adb9f051b75ae6a883"
+    }
+  }
+}

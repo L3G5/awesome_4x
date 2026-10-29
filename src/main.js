@@ -6,6 +6,7 @@ import './defense.css';
 import './combat-rounds.css';
 import './conquest.css';
 import './investment.css';
+import './reinforcement.css';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
@@ -17,6 +18,8 @@ import { renderEngagementPreview } from './combat-ui.js';
 import { orderDefenders } from './defense.js';
 import { renderDefenseControls, renderDefenseBadge } from './defense-ui.js';
 import { renderSplitDialog, renderColonyRepairSummary, renderFleetReadiness } from './fleet-ui.js';
+import { getMergePreview, getReinforcementPreview } from './reinforcement.js';
+import { renderReinforcementPanel, renderMergeControls, renderMergeSummary, renderMergeDialog } from './reinforcement-ui.js';
 import { getFleetReadiness, getReadyFleets } from './game.js';
 import { formatHull } from './hull-format.js';
 import { renderPublicDispatchLinks, renderSovereigntyNote } from './public-affairs-ui.js';
@@ -133,7 +136,7 @@ function renderInspector() {
   if (surveyed) html += `<div class="stat-grid"><div class="stat-cell"><b>${system.habitability}%</b><span>Habitability</span></div><div class="stat-cell"><b>${mine?`${system.population}/${output.capacity}`:system.richness}</b><span>${mine?'Population':'Ore richness'}</span></div><div class="stat-cell"><b>${mine?output.production:system.science}</b><span>${mine?'Production':'Science'}</span></div></div>`;
   if (mine) {
     const queue = system.queue, item = getConstructionProject(queue);
-    html += `<section class="panel-section"><div class="section-label">Colony production <span>${output.production} / cycle</span></div>${queue?`<div class="production-row"><span class="big-icon">${item.icon}</span><div><b>${escape(item.name)}</b><p>${Math.ceil((queue.work-queue.progress)/output.production)} cycles to completion</p></div><button class="small-button ghost" data-action="cancel-build" data-system="${system.id}" title="Cancel and refund unspent work">×</button></div><div class="progress-track"><i style="width:${queue.progress/queue.work*100}%"></i></div>`:`<p class="empty-note">Your construction teams await a new project.</p><button class="wide-button" data-action="build-menu" data-system="${system.id}">+ Commission a project</button>`}</section>${renderDevelopmentSummary(state,system)}<section class="panel-section"><p class="empty-note">${signed(output.credits)} credits · ${signed(output.minerals)} minerals · ${signed(output.science)} science</p></section>`;
+    html += `<section class="panel-section"><div class="section-label">Colony production <span>${output.production} / cycle</span></div>${queue?`<div class="production-row"><span class="big-icon">${item.icon}</span><div><b>${escape(item.name)}</b><p>${Math.ceil((queue.work-queue.progress)/output.production)} cycles to completion</p></div><button class="small-button ghost" data-action="cancel-build" data-system="${system.id}" title="Cancel and refund unspent work">×</button></div><div class="progress-track"><i style="width:${queue.progress/queue.work*100}%"></i></div>`:`<p class="empty-note">Your construction teams await a new project.</p><button class="wide-button" data-action="build-menu" data-system="${system.id}">+ Commission a project</button>`}</section>${renderReinforcementPanel(state,selectedFleetId,system.id)}${renderDevelopmentSummary(state,system)}<section class="panel-section"><p class="empty-note">${signed(output.credits)} credits · ${signed(output.minerals)} minerals · ${signed(output.science)} science</p></section>`;
   }
   html += renderFoundingInspector(state,system.id);
   html += renderBeaconInspector(state,system);
@@ -141,6 +144,7 @@ function renderInspector() {
   html += renderDiscoverySummary(state,system);
   if (orbit.length) html += `<section class="panel-section"><div class="section-label">In orbit <span>${orbit.length} ${orbit.length===1?'fleet':'fleets'}</span></div><div class="fleet-list">${orbit.map(f=>`<button class="fleet-row ${f.id===selectedFleetId?'selected':''}" data-fleet="${f.id}" ${f.owner!=='player'?'disabled':''}>${renderShipPortrait(f.type,f.owner,Boolean(f.heritage?.length))}<span class="fleet-name">${escape(f.name)}${f.ships>1?` ×${f.ships}`:''}${renderDefenseBadge(f)}<small>${f.owner==='player'?SHIPS[f.type].role:FACTIONS[f.owner].shortName} · ${escape(formatHull(f.hp, f.ships * SHIPS[f.type].hp))} hull</small></span>${f.owner==='player'?renderFleetReadiness(state,f):''}</button>`).join('')}</div></section>`;
   const selectedFleet=fleetById(selectedFleetId);
+  html+=renderMergeSummary(state,selectedFleetId,system.id);
   html+=renderDefenseControls(state,system.id,selectedFleetId);
   if(selectedFleet)html+=renderEngagementPreview(state,selectedFleet.id,system.id);
   html += renderColonyRepairSummary(state,system);
@@ -181,8 +185,7 @@ function renderFleet() {
     if (enemiesHere && ship.attack>3) actions += `<button class="danger" data-action="attack" ${!fleet.movesLeft||!player().orders?'disabled':''}>Engage</button>`;
     else if (home.owner && home.owner!=='player' && player().relations[home.owner].status==='war' && ship.attack>3) actions += `<button class="danger" data-action="attack" ${!fleet.movesLeft||!player().orders?'disabled':''}>Invade</button>`;
     if (home.owner==='player' && fleet.hp<fleet.ships*ship.hp) actions += '<button data-action="repair">Repair ◇10</button>';
-    const merge = ownFleets.find(f=>f.id!==fleet.id && f.systemId===home.id && f.type===fleet.type && fleet.type!=='colony');
-    if (merge) actions += `<button data-action="merge" data-target="${merge.id}" title="Merge ${escape(merge.name)} into this fleet; 1 order">Merge +${merge.ships}</button>`;
+    actions += renderMergeControls(state,fleet.id);
     if (!actions) detail += ' · Select a star to plot a jump or a course.';
   }
   if(readiness.held)detail+=' · Holding position';
@@ -215,7 +218,7 @@ function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
   $('#toasts').replaceChildren();
   modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><div class="modal-content">${html}</div></section></div>`;
-  const focusTarget=type==='combat-report'?$('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'});
+  const focusTarget=type==='combat-report'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'});
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
 function buildMenu(systemId,tab='building',replaceBuildingId=null) {
@@ -226,6 +229,22 @@ function showAnomaly(systemId,replaceBuildingId=null) {
 }
 function showSplit(fleetId,ships=1) {
   openModal('split',renderSplitDialog(state,fleetId,ships));
+}
+function showMerge(fleetId,targetFleetId=null) {
+  const html=renderMergeDialog(state,fleetId,targetFleetId);
+  if(!html)return;
+  openModal('merge',html);
+  $('#merge-partner')?.focus({preventScroll:true});
+}
+function mergeFleets(fleetId,targetFleetId,close=false) {
+  const preview=getMergePreview(state,fleetId,targetFleetId);
+  if(!preview?.enabled){if(preview?.reason)toast(preview.reason,true);return;}
+  if(dispatch(preview.command)){
+    if(close)closeModal();
+    const reinforcement=getReinforcementPreview(state,fleetId);
+    if(reinforcement?.enabled&&reinforcement.systemId===selectedSystemId)$('.reinforcement-panel')?.focus();
+    else document.querySelector(`#inspector [data-fleet="${fleetId}"]`)?.focus({preventScroll:true});
+  }
 }
 function showFleetHeritage(fleetId) {
   const fleet=fleetById(fleetId);if(!fleet || fleet.owner!=='player')return;
@@ -319,7 +338,7 @@ $('#import-save').addEventListener('change',async event=>{
     $('#confirm-import').addEventListener('click',()=>{state=candidate;revealPublicBeacons(state);selectedSystemId=player().capitalId;selectedFleetId=state.fleets.find(f=>f.owner==='player')?.id||null;if(fleetById(selectedFleetId)?.route)selectedSystemId=fleetById(selectedFleetId).systemId;closeModal();setPage('galaxy');save();render();galaxy.reset();toast('Campaign restored.');});
   } catch(error){toast(error.message,true);}
 });
-document.addEventListener('change',event=>{if(event.target.id==='split-ships'){showSplit(event.target.dataset.fleetTarget,Number(event.target.value));$('#split-ships')?.focus();}if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
+document.addEventListener('change',event=>{if(event.target.id==='merge-partner'){showMerge(event.target.dataset.fleetTarget,event.target.value);$('#merge-partner')?.focus();}if(event.target.id==='split-ships'){showSplit(event.target.dataset.fleetTarget,Number(event.target.value));$('#split-ships')?.focus();}if(event.target.id==='discovery-replacement'){showAnomaly(event.target.dataset.system,event.target.value||null);$('#discovery-replacement')?.focus();}if(event.target.id==='replace-building'){buildMenu(event.target.dataset.system,'building',event.target.value||null);$('#replace-building')?.focus();}if(event.target.id==='warn-unspent'){settings.warnUnspent=event.target.checked;saveSettings();}});
 document.addEventListener('toggle',event=>{if(event.target.matches?.('.public-dispatches') && event.target.isConnected && settings.publicDispatchesOpen!==event.target.open){settings.publicDispatchesOpen=event.target.open;saveSettings();}},true);
 document.addEventListener('click',event=>{
   const el=event.target.closest('button,a'); if (!el||el.disabled) return;
@@ -370,7 +389,16 @@ document.addEventListener('click',event=>{
     case 'colonize-confirm':if(dispatch({type:'colonize',fleetId:selectedFleetId}))closeModal();break;
     case 'attack':dispatch({type:'attack',fleetId:selectedFleetId});break;
     case 'repair':dispatch({type:'repair',fleetId:selectedFleetId});break;
-    case 'merge':dispatch({type:'merge',fleetId:selectedFleetId,targetFleetId:el.dataset.target});break;
+    case 'merge':mergeFleets(el.dataset.fleetTarget||selectedFleetId,el.dataset.target);break;
+    case 'merge-menu':showMerge(el.dataset.fleetTarget);break;
+    case 'merge-confirm':mergeFleets(el.dataset.fleetTarget,el.dataset.target,true);break;
+    case 'reinforce': {
+      const preview=getReinforcementPreview(state,el.dataset.fleetTarget);
+      if(!preview||preview.fleetId!==selectedFleetId||preview.systemId!==selectedSystemId)break;
+      if(!preview.enabled){toast(preview.reason,true);break;}
+      if(dispatch(preview.command))$('.reinforcement-panel')?.focus({preventScroll:true});
+      break;
+    }
     case 'split-menu':showSplit(el.dataset.fleetTarget);break;
     case 'split-confirm':if(dispatch({type:'split',fleetId:el.dataset.fleetTarget,ships:Number(el.dataset.ships)}))closeModal();break;
     case 'fleet-heritage':showFleetHeritage(el.dataset.fleetTarget);break;

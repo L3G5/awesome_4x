@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-10-29T00:46:11.537Z",
+  "role": "Author QA, not independent review",
+  "reviewedSources": {
+    "src/reinforcement-ui.js": {
+      "revision": "44c2591d9b9ced6cd91ffd12a0e9c6ded3b24213",
+      "sha256": "3702f77ca3e6815d324d03e4b6394b449fb320eabce9eea8ddfaf859fa843c74"
+    },
+    "src/reinforcement.css": {
+      "revision": "44c2591d9b9ced6cd91ffd12a0e9c6ded3b24213",
+      "sha256": "9966b1970d56b1037882a1172e7637079495166d897390a2197886ed3679b87e"
+    },
+    "src/reinforcement.js": {
+      "revision": "a76c341ba4202b03240f5da1ae932bda40f0f1f9",
+      "sha256": "a6d7307e21c21de4ab452909c1c58d649355d840bd5a503033e9efc671231bf1"
+    },
+    "src/hull-format.js": {
+      "revision": "a76c341ba4202b03240f5da1ae932bda40f0f1f9",
+      "sha256": "fa0f55e6ba8b2bc3af98e06d305ae05de924e2c19a356b709bd37169cac59c75"
+    },
+    "src/content.js": {
+      "revision": "a76c341ba4202b03240f5da1ae932bda40f0f1f9",
+      "sha256": "031c9782ea885e8585d5ab5215cbe652ed876afe3dc71562f22e13adc3eb35b2"
+    }
+  },
+  "integration": {
+    "reviewPhaseMainSha256": null,
+    "reason": "No contemporaneous main.js hash was captured during the author screenshots. The screenshots already show placement after colony production; root subsequently reports final placement/focus changes. No earlier main hash is inferred.",
+    "laterSnapshot": {
+      "file": "sources/main-later-integration.js",
+      "sha256": "f2207c3daf86e1f9845b8f318a8a9833f382d5a4a43f1b407baca750cc924912",
+      "scope": "Later integration snapshot; includes preventScroll on initial merge selector focus. Not attributed to the author screenshots."
+    }
+  },
+  "screenshots": [
+    "commission-1280.png",
+    "commission-390.png",
+    "merge-1280.png",
+    "merge-390.png"
+  ],
+  "checks": {
+    "widths": [
+      1280,
+      390
+    ],
+    "inspectionPure": true,
+    "overCapOptionDisabled": true,
+    "noHorizontalOverflow": true,
+    "pageErrors": 0
+  },
+  "limitations": "Synthetic valid fixture only. No gameplay commands or completed campaign modifications. Independent final integration review belongs to campaign_review."
+}

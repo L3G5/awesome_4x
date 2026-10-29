@@ -294,6 +294,21 @@ Actual peaceful and military decisions show why production thresholds and replac
 
 - Final independent acceptance passed twelve projection checks, five initial UI cases and two separately attributed final layout/keyboard cases. Root inspected the three final screenshots and verified all sixteen review artifacts, nine final source fingerprints and eight local HTML references. The first full browser attempt was interrupted when its local preview server stopped; after restarting the identical frozen build, all 52 browser scenarios passed (3.1 minutes). All 350 rules tests pass. Version 0.17.0 produces 238.61 KB gzip JavaScript. Publication includes the investment review and completed WATCH campaign evidence.
 
+- Workflow 40794553931 succeeded at commit `710fcbe`. Live build metadata matches version 0.17.0 and the exact release commit. All four investment scenarios passed against GitHub Pages (17.6 seconds) from the isolated release export. CI passed all 350 rules tests and all 52 browser scenarios.
+
+## Stage 18 — deliberate fleet reinforcement (started 2026-10-29 00:33 UTC)
+
+Two independent reviews of the completed WATCH campaign identified repeated ship assembly: eighteen frigate commissions and seventeen merges, including a four-click merge/open-construction/Ships/commission loop at cycles 37 and 40. The selected scope is a contextual same-class commission shortcut and deliberate legal merge choices. Both use existing ordinary commands, costs, queues and independent new formations; no production automation, new standing instruction or AI change is required.
+
+- Pure projections expose current ship price, old-rate duration and eligibility, plus exact merge outcomes for hull, minimum movement, selected identity/course/Hold, defensive lead and deduplicated heritage. Local own partners remain distinct from foreign or remote formations. A synthetic source-boundary review also confirmed that the previous first-match merge could offer an oversized partner while hiding a legal second partner.
+- Root is integrating the controls and browser acceptance while independent implementation covers projection/ordinary-command equality. The unchanged actual cycle-40 export anchors a two-action acceptance: merge `f47 ← f49`, then commission a Vanguard at Solace for 25 credits, 28 minerals and two total orders. The held survivor has two ships and 68 hull; the construction queue remains an ordinary independent ship project.
+
+- All 363 rules tests pass, including thirteen new projection/ordinary-command regressions. Twelve new and adjacent browser scenarios passed (45.6 seconds). The quick commission now sits immediately after colony production; a narrow-screen review found that initial primary-button focus scrolled the merge heading out of view. Merge dialogs now initially focus their selector without scrolling. All six affected cases passed again (18.3 seconds). Independent final UI review and frozen production validation are underway.
+
+- Independent testing reproduced the exact two-command loop at 1440, 1280 and 390 pixels, but found the existing shortcut could be offscreen after merging. A successful merge now focuses/reveals the same panel only when commissioning is currently available at the inspected yard; otherwise focus returns to the survivor. The purchase remains separate. All six focused cases passed after this correction (23.1 seconds). The superseded full-browser run was deliberately stopped after 29 passes, with one interrupted case and 28 not run; final validation uses a new immutable production build.
+
+- Final independent acceptance retains eight original interface cases, two immediate-open focus checks and three separately attributed final viewport follow-ups. Root inspected final desktop/mobile screenshots and verified 32 independent artifacts, 14 author-review artifacts, seven final source hashes, the exact actual cycle-40 input and sixteen HTML references. All 58 browser scenarios passed on the final frozen production build (3.3 minutes); all 363 rules tests pass. Version 0.18.0 builds at 243.38 KB gzip JavaScript. Evidence is preserved in `docs/stage18-reinforcement-review/`.
+
 ## Subsequent stages
 
 1. Playtest the complete opening and midgame, fix usability and rules inconsistencies.
