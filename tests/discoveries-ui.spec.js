@@ -88,6 +88,8 @@ test('an exhausted expedition can reach the restoration selector by keyboard',as
   await expect(page.locator('.discovery-choice:enabled')).toHaveCount(0);
   await expect(page.locator('.close-modal')).toBeFocused();
   await page.keyboard.press('Tab');
+  await expect(page.locator('.modal [data-action="language"]')).toBeFocused();
+  await page.keyboard.press('Tab');
   await expect(page.locator('#discovery-replacement')).toBeFocused();
   await page.keyboard.press('Tab');
   await expect(page.locator('.close-modal')).toBeFocused();

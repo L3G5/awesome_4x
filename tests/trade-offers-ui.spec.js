@@ -106,7 +106,11 @@ test('zero-order trade terms keep keyboard focus inside the readable dialog', as
   await expect(page.locator('.modal')).toContainText('No orders remaining');
   await expect(page.locator('.modal .close-modal')).toBeFocused();
   await page.keyboard.press('Tab');
+  await expect(page.locator('.modal [data-action="language"]')).toBeFocused();
+  await page.keyboard.press('Tab');
   await expect(page.locator('.modal .close-modal')).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(page.locator('.modal [data-action="language"]')).toBeFocused();
   await page.keyboard.press('Shift+Tab');
   await expect(page.locator('.modal .close-modal')).toBeFocused();
   await page.keyboard.press('Escape');

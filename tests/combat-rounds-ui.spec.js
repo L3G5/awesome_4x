@@ -52,6 +52,8 @@ test('actual four-round exchanges are keyboard-readable and preserve a sequentia
   const report = page.locator('.combat-report').first(), details = report.locator('.combat-exchanges');
   expect(await details.evaluate(el => el.open)).toBe(false);
   await page.keyboard.press('Tab');
+  await expect(page.locator('.modal [data-action="language"]')).toBeFocused();
+  await page.keyboard.press('Tab');
   await expect(details.locator('summary')).toBeFocused();
   await page.keyboard.press('Enter');
   expect(await details.evaluate(el => el.open)).toBe(true);
