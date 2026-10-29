@@ -7,5 +7,5 @@
   .fleet-bar .close-fleet-controls{display:inline-flex;position:absolute;right:4px;top:4px;align-items:center;justify-content:center;width:40px;height:40px;padding:0;font-size:22px}
   .fleet-bar:not(.is-inspecting) .fleet-title{padding-right:30px}
   .galaxy-page:has(.fleet-bar.is-inspecting) .map-tools{bottom:78px}
-  .galaxy-page:has(.fleet-bar.is-inspecting) .map-legend{bottom:75px}
+  .galaxy-page:has(.fleet-bar.is-inspecting) .map-legend{bottom:126px}
 }
