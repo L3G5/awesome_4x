@@ -79,8 +79,8 @@ test('accessible map statuses and protected-seed surrounding fragments translate
 
 test('composed peace terms translate every withdrawal fallback and retain all quantities', () => {
   const state = JSON.parse(readFileSync(new URL('../docs/military-playtest/replay/actual-exports/cycle40.json', import.meta.url)));
-  const outgoing = getDiplomacyForecast(state, 'player', 'khar');
-  const incoming = getDiplomacyForecast(state, 'khar', 'player');
+  const outgoing = getDiplomacyForecast(state, 'player', 'veyr');
+  const incoming = getDiplomacyForecast(state, 'veyr', 'player');
   for (const terms of [outgoing.actions.peace.effect, outgoing.actions.acceptPeace.effect, incoming.actions.peace.effect]) {
     const translated = translateText(terms, 'ru');
     assert.doesNotMatch(translated, /[a-z]/i);

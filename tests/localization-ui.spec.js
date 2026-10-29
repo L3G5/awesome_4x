@@ -100,7 +100,7 @@ test('Russian ordinary peace explains all binding terms and keeps its exact paid
     localStorage.setItem('peace-localization-loaded', 'true');
   }, { state, SAVE, LANGUAGE });
   await page.goto('./'); await page.locator('[data-page="diplomacy"]').click();
-  await page.locator('[data-rival="khar"] [data-action="peace-confirmation"]').click();
+  await page.locator('[data-rival="veyr"] [data-action="peace-confirmation"]').click();
   const terms = page.locator('.modal .modal-lead');
   await expect(terms).toContainText('Заплатить 60 кредитов');
   await expect(terms).toContainText('Война запрещена на 5 циклов');
@@ -112,7 +112,7 @@ test('Russian ordinary peace explains all binding terms and keeps its exact paid
   await toggle.click(); await expect(terms).toContainText('Pay 60 credits');
   await toggle.click(); await expect(terms).toContainText('Заплатить 60 кредитов');
   await page.locator('[data-action="diplomatic-confirm"]').click();
-  expect(command(state, { type: 'diplomacy', targetId: 'khar', stance: 'peace' }).ok).toBe(true);
+  expect(command(state, { type: 'diplomacy', targetId: 'veyr', stance: 'peace' }).ok).toBe(true);
   expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
   await page.reload(); expect(await page.evaluate(() => window.__asterion.getState())).toEqual(state);
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
