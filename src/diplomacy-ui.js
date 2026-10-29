@@ -26,6 +26,8 @@ export function renderDiplomacyPage(state, options = {}) {
       html += `<div class="diplomatic-stats"><span>Trust <b>${relation.trust}</b></span><span>Our grievance <b>${forecast.ourGrievance}</b></span><span>Their grievance <b>${forecast.theirGrievance}</b></span><span>Shared borders <b>${forecast.borderCount}</b></span></div><p class="empty-note">${relation.trade ? `Trade income +${player.techs.includes('diplomacy') ? 10 : 6} credits / cycle · Open borders` : relation.status === 'war' ? 'Military access · Hostile fleets engage on arrival' : 'Closed borders'} · Proposals use 1 order</p>`;
       if (forecast.tradeEndingIn > 0) html += `<div class="diplomatic-notice">Trade and border access end on cycle ${forecast.tradeEndsAt}. Foreign fleets will withdraw from each other's territory.</div>`;
       if (forecast.truceRemaining > 0) html += `<div class="diplomatic-notice">Neither empire can declare war before cycle ${forecast.truceUntil}. The signed settlement binds both sides.</div>`;
+      if (forecast.alignmentWarning) html += `<p class="diplomatic-policy alignment-competition">${escape(forecast.alignmentWarning)}</p>`;
+      if (forecast.warCause) html += `<p class="diplomatic-policy alignment-war-cause">${escape(forecast.warCause)}</p>`;
       if (relation.status === 'war') html += `<p class="diplomatic-willingness">${escape(forecast.incomingOffer?`Their funded offer remains open until cycle ${forecast.incomingOffer.expiresTurn}. Receive ${forecast.incomingOffer.credits} credits on acceptance.`:forecast.actions.peace.reason || forecast.actions.peace.willingness?.reason || '')}</p>`;
       html += '<div class="rival-actions">';
       if (relation.status === 'war') {

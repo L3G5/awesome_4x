@@ -1,6 +1,7 @@
 import { FACTIONS } from './content.js';
 import { getVisibleFleets } from './intelligence.js';
 import { recordPublicDiplomacy } from './public-affairs.js';
+import { getPublicRaces } from './victory.js';
 
 export const DIPLOMACY_RULES = Object.freeze({ peaceCost: 60, tradeCost: 30, giftCost: 35, minimumWarTurns: 5, truceTurns: 5, offerTurns: 3, tradeNoticeTurns: 3, tradeOfferQuietTurns: 5 });
 const STANCES = ['war', 'peace', 'trade', 'gift', 'endTrade', 'acceptPeace', 'declinePeace', 'acceptTrade', 'declineTrade'];
@@ -78,6 +79,19 @@ function option(enabled, reason, effect, credits = 0) {
   return { enabled, reason: enabled ? '' : reason, effect, cost: { credits, orders: 1 } };
 }
 
+/** A public incentive only: never consult fleets, routes or private readiness. */
+function alignmentCompetition(state, challengerId, leaderId) {
+  const races = getPublicRaces(state, challengerId);
+  const challenger = races.find(race => race.factionId === challengerId);
+  const leader = races.find(race => race.factionId === leaderId);
+  return Boolean(challenger && leader && leader.progress >= 3
+    && leader.progress > (challenger.active ? challenger.progress : -1));
+}
+
+const ALIGNMENT_DECLARATION = 'Competition over public Asterion alignment prompted this declaration.';
+const ALIGNMENT_WAR_CAUSE = 'This war began over public Asterion alignment. Victory competition can outweigh trust and frontier grievances.';
+const ALIGNMENT_WARNING = 'Your public Asterion alignment can create a reason to oppose your network, even with high trust or low grievances. This signal alone does not establish their ability or intent to attack.';
+
 /** Pure UI forecast. Every action includes its real cost and denial reason. */
 export function getDiplomacyForecast(state, factionId = 'player', targetId) {
   const faction = factionOf(state, factionId), target = factionOf(state, targetId);
@@ -121,7 +135,11 @@ export function getDiplomacyForecast(state, factionId = 'player', targetId) {
     declineTrade: option(!tradeAnswerReason, tradeAnswerReason, 'Keep borders closed. The proposer receives its reserved treaty fee back.'),
   };
   const pressure = pressureFor(state, factionId, targetId);
-  return { factionId, targetId, status: relation.status, trust: relation.trust, grievance: relation.grievance || 0, ourGrievance: relation.grievance || 0, theirGrievance: target.relations[factionId].grievance || 0, truceUntil, truceRemaining, tradeEndsAt, tradeEndingIn, tradeOfferAfter, borderCount: pressure.borderCount, policy: targetId === 'khar' ? 'Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.' : 'New neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.', actions, ...actions, pendingOffers, incomingOffer, outgoingOffer, incomingTradeOffer, outgoingTradeOffer };
+  const alignmentWarning = !state.winner && !faction.eliminated && !target.eliminated
+    && faction.contacts.includes(targetId) && relation.status === 'peace' && !truceRemaining
+    && alignmentCompetition(state, targetId, factionId) ? ALIGNMENT_WARNING : '';
+  const warCause = relation.status === 'war' && relation.warCause === 'alignment' ? ALIGNMENT_WAR_CAUSE : '';
+  return { factionId, targetId, status: relation.status, trust: relation.trust, grievance: relation.grievance || 0, ourGrievance: relation.grievance || 0, theirGrievance: target.relations[factionId].grievance || 0, truceUntil, truceRemaining, tradeEndsAt, tradeEndingIn, tradeOfferAfter, borderCount: pressure.borderCount, alignmentWarning, warCause, policy: targetId === 'khar' ? 'Khar frontier rivalry: a shared border increases its grievances by 1 each peaceful cycle. At 24 grievances, a sufficiently strong Khar force may cancel trade with notice and prepare for war.' : 'New neighboring claims and observed military pressure create grievances. A quiet frontier lets grievances ease.', actions, ...actions, pendingOffers, incomingOffer, outgoingOffer, incomingTradeOffer, outgoingTradeOffer };
 }
 
 function withdrawFleets(state, first, second) {
@@ -186,6 +204,7 @@ function settlePeace(state, first, second) {
   const a = factionOf(state, first), b = factionOf(state, second);
   for (const relation of [a.relations[second], b.relations[first]]) {
     relation.status = 'peace'; relation.trade = false; relation.tradeEndsAt = 0;
+    delete relation.warCause;
     relation.trust = -5; relation.treatyTurn = state.turn; relation.truceUntil = state.turn + DIPLOMACY_RULES.truceTurns;
     relation.grievance = Math.max(0, (relation.grievance || 0) - 15);
   }
@@ -217,11 +236,18 @@ export function executeDiplomacy(state, action = {}) {
   let outcome = stance, message = '', extra = {};
   if (stance === 'war') {
     const betrayal = relation.trade;
-    for (const r of [relation, reverse]) { r.status = 'war'; r.trade = false; r.tradeEndsAt = 0; r.trust = trust(r.trust - (betrayal ? 65 : 40)); r.treatyTurn = state.turn; r.truceUntil = 0; }
+    // The AI supplies a cause tag, not its private planning text. Public race
+    // facts must support that tag before it becomes a saved explanation.
+    const alignmentCause = action.cause === 'alignment' && alignmentCompetition(state, factionId, targetId);
+    for (const r of [relation, reverse]) {
+      r.status = 'war'; r.trade = false; r.tradeEndsAt = 0; r.trust = trust(r.trust - (betrayal ? 65 : 40)); r.treatyTurn = state.turn; r.truceUntil = 0;
+      delete r.warCause;
+      if (alignmentCause) r.warCause = 'alignment';
+    }
     relation.warStartColonies = coloniesOf(state, factionId).length;
     reverse.warStartColonies = coloniesOf(state, targetId).length;
     reverse.grievance = clamp((reverse.grievance || 0) + (betrayal ? 35 : 20));
-    message = `${faction.name} declared war on ${target.name}.${betrayal ? ' The active trade treaty was broken; the betrayal deepens their grievance.' : ''}`;
+    message = `${faction.name} declared war on ${target.name}.${betrayal ? ' The active trade treaty was broken; the betrayal deepens their grievance.' : ''}${alignmentCause ? ` ${ALIGNMENT_DECLARATION}` : ''}`;
     record(state, factionId, targetId, message, 'war');
     recordPublicDiplomacy(state, { kind: 'war', firstId: factionId, secondId: targetId });
   } else if (stance === 'peace' && forecast.peace.mode === 'offer') {
@@ -368,6 +394,7 @@ export function validateDiplomacyState(state) {
       if (relation.warStartColonies > state.systems?.length || relation.lastBorderCount > state.systems?.length || relation.peaceOfferTurn > state.turn) return false;
       const reverse = factionOf(state, targetId)?.relations?.[faction.id];
       if (!reverse || (relation.truceUntil || 0) !== (reverse.truceUntil || 0) || (relation.tradeEndsAt || 0) !== (reverse.tradeEndsAt || 0)) return false;
+      if (relation.warCause !== undefined && (relation.warCause !== 'alignment' || relation.status !== 'war' || reverse.warCause !== relation.warCause)) return false;
       if (relation.tradeEndsAt && !relation.trade) return false;
       if (relation.status === 'war' && relation.truceUntil > state.turn) return false;
     }

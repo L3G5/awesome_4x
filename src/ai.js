@@ -898,7 +898,7 @@ export function runAI(state, faction) {
   }
   const intervention = threatsToColonies(state, faction).length ? null : raceIntervention(state, faction, true);
   if (intervention && !war(faction, intervention.race.factionId)) {
-    act({ type: 'diplomacy', targetId: intervention.race.factionId, stance: 'war', reason: `An expedition can reach ${intervention.site.name} before its public Asterion alignment completes.` });
+    act({ type: 'diplomacy', targetId: intervention.race.factionId, stance: 'war', cause: 'alignment', reason: `An expedition can reach ${intervention.site.name} before its public Asterion alignment completes.` });
   }
   for (const proposal of getDiplomaticIntent(state, id)) {
     if (faction.orders < 2) break;
