@@ -1,20 +1,17 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
-import { command, endTurn } from '../src/game.js';
+import { validateSave } from '../src/game.js';
 
-function replayedCycle(cycle) {
-  const state = JSON.parse(fs.readFileSync(new URL('../docs/default-campaign/actual/input-actual-cycle12-v0.21.0.json', import.meta.url)));
-  const commands = JSON.parse(fs.readFileSync(new URL('../docs/default-campaign/replay/final/commands.json', import.meta.url)));
-  for (const row of commands) {
-    if (row.turnBefore >= cycle) break;
-    const result = row.action.type === 'endTurn' ? endTurn(state) : command(state, row.action);
-    if (!result.ok) throw new Error(result.message);
-  }
+// These archived0.22 states preserve the historical replay being inspected.
+// Re-running its old fleet orders with a changed AI would create another history.
+function recordedCycle(cycle) {
+  const state = JSON.parse(fs.readFileSync(new URL(`../docs/stage29-design-and-russian/strategy/implementation/replay-derived-cycle${cycle}.json`, import.meta.url)));
+  expect(validateSave(state)).toBe(true);
   return state;
 }
 
-test('the actual friendly cycle53 exposes only a possible alignment incentive', async ({ page }) => {
-  const state = replayedCycle(53);
+test('the recorded friendly cycle53 exposes only a possible alignment incentive', async ({ page }) => {
+  const state = recordedCycle(53);
   await page.addInitScript(saved => localStorage.setItem('asterion-reach-save-v1', JSON.stringify(saved)), state);
   await page.goto('./');
   await page.locator('[data-page="diplomacy"]').click();
@@ -27,7 +24,7 @@ test('the actual friendly cycle53 exposes only a possible alignment incentive', 
 });
 
 test('new declarations retain their public cause after reload without relabeling legacy wars', async ({ page }) => {
-  const state = replayedCycle(55);
+  const state = recordedCycle(55);
   await page.addInitScript(saved => localStorage.setItem('asterion-reach-save-v1', JSON.stringify(saved)), state);
   await page.goto('./');
   await page.locator('[data-page="diplomacy"]').click();

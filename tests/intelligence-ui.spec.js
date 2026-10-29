@@ -1,11 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { createGame } from '../src/game.js';
 
-test('the command interface conceals remote fleets and charges for a blind interception', async ({ page }) => {
+for (const surveyed of [false, true]) test(`the command interface conceals remote fleets and charges for a blind interception with prior survey ${surveyed}`, async ({ page }) => {
   const state = createGame('sensor-ui');
   const home = state.systems.find(s => s.owner === 'player');
   const neighborId = state.lanes.flatMap(([a,b]) => a === home.id ? [b] : b === home.id ? [a] : [])[0];
   const target = state.systems.find(s => s.id === neighborId);
+  target.exploredBy = target.exploredBy.filter(id => id !== 'player');
+  if (surveyed) target.exploredBy.push('player');
+  const priorSurvey = [...target.exploredBy];
   const enemy = state.fleets.find(f => f.owner === 'khar' && f.type === 'frigate');
   enemy.systemId = target.id;
   enemy.name = 'Hidden blockade';
@@ -24,6 +27,6 @@ test('the command interface conceals remote fleets and charges for a blind inter
   expect(after.factions.find(f => f.id === 'player').orders).toBe(5);
   expect(after.fleets.find(f => f.id === scout.id).movesLeft).toBe(1);
   expect(after.fleets.find(f => f.id === scout.id).systemId).toBe(home.id);
-  expect(after.systems.find(s => s.id === target.id).exploredBy).not.toContain('player');
+  expect(after.systems.find(s => s.id === target.id).exploredBy).toEqual(priorSurvey);
   await expect(page.locator('#status-message')).toContainText(/intercept|withdr/i);
 });

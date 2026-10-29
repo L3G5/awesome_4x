@@ -136,7 +136,7 @@ function render() {
   const alignment = getAlignmentStatus(state,'player');
   const rivalRace = getPublicRaces(state).filter(r=>r.factionId!=='player'&&r.progress>0).sort((a,b)=>b.progress-a.progress)[0];
   const rivalMandate = Boolean(rivalRace?.progress>=5 && rivalRace.progress>=alignment.progress);
-  const mandate = state.winner ? ['THE CHRONICLE IS COMPLETE',`${FACTIONS[state.winner]?.name||'The galaxy'} · ${state.victoryType} · Cycle ${state.turn}. Review the conclusion or inspect the final galaxy.`] : rivalMandate ? ['A RIVAL AWAKENS THE NETWORK',`${rivalRace.name} has reached ${rivalRace.progress}/${rivalRace.target} alignment. Review its public beacon signals in Empire.`] : stats.colonies<2 ? ['YOUR FIRST MANDATE','Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Beacons restored · alignment ${alignment.progress}/${alignment.target}. ${alignmentOutlookSummary(outlook) || alignment.reason}`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
+  const mandate = state.winner ? ['THE CHRONICLE IS COMPLETE',`${FACTIONS[state.winner]?.name||'The galaxy'} · ${state.victoryType} · Cycle ${state.turn}. Review the conclusion or inspect the final galaxy.`] : rivalMandate ? ['A RIVAL AWAKENS THE NETWORK',`${rivalRace.name} has reached ${rivalRace.progress}/${rivalRace.target} alignment. Review its public beacon signals in Empire.`] : stats.colonies<2 ? ['YOUR FIRST MANDATE',state.mapVersion>=2?'Compare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.':'Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.'] : !p.research && p.techs.length<12 ? ['THE NEXT HORIZON','Your archives await direction. Choose a research project to turn discoveries into progress.'] : stats.beacons>0 ? ['THE ANCIENT NETWORK',`${stats.beacons} of 3 Beacons restored · alignment ${alignment.progress}/${alignment.target}. ${alignmentOutlookSummary(outlook) || alignment.reason}`] : ['A CIVILIZATION TAKES SHAPE',`${stats.colonies} worlds share your future. Develop your economy, meet the frontier powers, and choose your path to victory.`];
   $('#mandate').innerHTML = `<strong>${escape(mandate[0])}</strong>${escape(mandate[1])}${state.winner?'<button class="small-button ghost" data-action="show-conclusion">Review this age →</button>':rivalMandate?'<button class="small-button ghost" data-action="review-network">Review network →</button>':stats.beacons>0?'<button class="small-button ghost" data-action="review-alignment">Review your funding →</button>':''}`;
   const empireButton=$('[data-page="empire"]');
   empireButton.querySelector('.nav-badge')?.remove();
@@ -259,12 +259,18 @@ function finishConstruction(keyboard,systemId) {
   const origin=constructionOrigin;
   closeModal();
   if(origin?.page==='empire'&&page==='empire'){
+    // Translate the replaced rows before restoring their scroll geometry.
+    localization.setLanguage(language);
     $('#workspace-page').scrollTop=origin.scrollTop;
     const comparison=$('.colony-scroll');if(comparison)comparison.scrollLeft=origin.scrollLeft;
     const row=document.querySelector(`[data-colony-row="${systemId||origin.systemId}"]`);
     row?.focus({preventScroll:true});
     if(systemId&&systemId!==origin.systemId)row?.scrollIntoView({block:'nearest'});
-  }else if(keyboard)focusCommandResult('#inspector .production-row');
+  }else{
+    if(systemId&&selectedSystemId!==systemId)selectSystem(systemId);
+    localization.setLanguage(language);
+    if(keyboard)focusCommandResult('#inspector .production-row');
+  }
   constructionOrigin=null;
 }
 function showAnomaly(systemId,replaceBuildingId=null) {

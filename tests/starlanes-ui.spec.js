@@ -131,3 +131,26 @@ test('completion announces a shared lane and ordinary UI movement spends one ord
   expect(await snapshot(page)).toEqual(state);
   await expect(page.locator('.starlane-inspector')).toContainText('Restored in cycle');
 });
+
+
+for (const width of [1440, 390]) for (const language of ['en', 'ru']) {
+  test(`inspector restoration follows the chosen builder and retains the held scout at ${width} ${language}`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    const { state, lane, a, b, scout } = fixture();
+    await load(page, state, language);
+    await page.locator('[data-page="empire"]').click();
+    await page.locator(`[data-colony-row="${a.id}"] [data-action="inspect"]`).click();
+    await page.locator('[data-action="starlane-menu"]').click();
+    await expect(page.locator('.modal .close-modal')).toBeFocused();
+    await page.locator('#starlane-builder').selectOption(b.id);
+    const restore = page.locator('[data-action="restore-lane"]');
+    await restore.focus(); await page.keyboard.press('Enter');
+    expect(command(state, { type: 'restoreLane', systemId: b.id, laneId: lane.id }).ok).toBe(true);
+    expect(await snapshot(page)).toEqual(state);
+    await expect(page.locator('#inspector h2')).toHaveText(b.name);
+    await expect(page.locator('#inspector .production-row')).toBeFocused();
+    await expect(page.locator(`.fleet-switch [data-fleet="${scout.id}"]`)).toHaveClass(/selected/);
+    expect(state.fleets.find(fleet => fleet.id === scout.id).hold).toBe(true);
+    expect(state.fleets.find(fleet => fleet.id === scout.id).systemId).toBe('s0');
+  });
+}

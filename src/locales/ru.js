@@ -1591,5 +1591,6 @@ export const russian = {
   "The foreign project’s completion time is not known.": "Срок завершения чужого проекта неизвестен.",
   "Construction and movement rules": "Правила строительства и перемещения",
   "+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.": "+1 приказ каждый ход. Позволяет восстанавливать неактивные звёздные пути и открывает автоматизированную промышленность и более крупные корпуса.",
-  "Uses the builder’s construction queue. No infrastructure slot or upkeep.": "Занимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания."
+  "Uses the builder’s construction queue. No infrastructure slot or upkeep.": "Занимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания.",
+  "Compare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.": "Сравните обследованные миры. Основайте вторую колонию и отправьте разведчиков за пределы знакомых звёзд."
 };
