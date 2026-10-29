@@ -179,6 +179,34 @@ function raceIntervention(state, faction, allowDeclaration = false) {
   return candidates.sort((a, b) => b.race.progress - a.race.progress || committed(b) - committed(a) || a.travel.cost - b.travel.cost || a.site.id.localeCompare(b.site.id))[0] || null;
 }
 
+/** One local reinforcement may join without sacrificing this departure's ETA. */
+function reinforceIntervention(state, faction, candidate, act) {
+  // A newly surveyed approach can reveal a home threat between jumps. This
+  // veto applies only to the new absorption, not the existing movement policy.
+  if (faction.orders <= 1 || threatsToColonies(state, faction).length) return false;
+  const fleet = candidate.fleet;
+  const mates = ownFleets(state, faction).filter(other => other.id !== fleet.id && military(other)
+    && other.type === fleet.type && other.systemId === fleet.systemId
+    && other.movesLeft >= fleet.movesLeft && other.ships + fleet.ships <= 12)
+    .sort((a, b) => strength(state, b) - strength(state, a) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  for (const mate of mates) {
+    const merged = { ...fleet, ships: fleet.ships + mate.ships, hp: fleet.hp + mate.hp };
+    const owner = { ...faction, orders: faction.orders - 1 };
+    const projected = {
+      ...state,
+      factions: state.factions.map(other => other.id === faction.id ? owner : other),
+      fleets: state.fleets.filter(other => other.id !== mate.id).map(other => other.id === fleet.id ? merged : other),
+    };
+    // More power can change weighted routing to a longer path. Validate that
+    // path and its paid order budget before issuing an irreversible command.
+    const next = interventionCandidate(projected, owner, candidate.race, candidate.site, merged);
+    if (!next || next.arrivalCycles > candidate.arrivalCycles
+      || owner.orders < Math.min(merged.movesLeft, next.travel.path.length - 1)) continue;
+    return act({ type: 'merge', fleetId: fleet.id, targetFleetId: mate.id }).ok;
+  }
+  return false;
+}
+
 /** One selected expedition transits colonies and spends only ordinary moves. */
 function advanceIntervention(state, faction, expedition, act) {
   let handled = false;
@@ -192,8 +220,12 @@ function advanceIntervention(state, faction, expedition, act) {
     if (fleet.systemId === expedition.site.id && !observedEnemies(state, faction, fleet.systemId).length) return { handled: true, active: true };
     if (observedEnemies(state, faction, fleet.systemId).length) return { handled, active: false };
     if (fleet.movesLeft < 1 || faction.orders < 1) return { handled: true, active: true };
-    const candidate = interventionCandidate(state, faction, race, systemOf(state, expedition.site.id), fleet);
+    let candidate = interventionCandidate(state, faction, race, systemOf(state, expedition.site.id), fleet);
     if (!candidate) return { handled, active: false };
+    if (reinforceIntervention(state, faction, candidate, act)) {
+      candidate = interventionCandidate(state, faction, race, systemOf(state, expedition.site.id), fleetOf(state, fleet.id));
+      if (!candidate || state.winner) return { handled: true, active: false };
+    }
     const result = act({ type: 'move', fleetId: fleet.id, targetId: candidate.travel.path[1] });
     if (!result.ok) return { handled: true, active: false };
     handled = true;
