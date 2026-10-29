@@ -1,7 +1,22 @@
-import { getKnownStarlanes, getStarlaneOptions } from './starlanes.js';
+import { getKnownStarlanes, getStarlaneOptions, getStarlaneColonyRoutes } from './starlanes.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const systemOf = (state, id) => state.systems.find(system => system.id === id);
+
+function renderColonyRoutes(state, systemId, laneId) {
+  const routes = getStarlaneColonyRoutes(state, systemId, laneId);
+  if (!routes.length) return '';
+  const improved = row => row.afterJumps !== null && (row.beforeJumps === null || row.savings > 0);
+  const rank = row => row.beforeJumps === null && row.afterJumps !== null ? Infinity : row.savings || 0;
+  const capital = routes.find(row => row.capital);
+  const benefits = routes.filter(row => !row.capital && improved(row)).sort((a, b) => rank(b) - rank(a) || a.name.localeCompare(b.name)).slice(0, 2);
+  const primary = [capital, ...benefits].filter(Boolean);
+  if (!primary.length) primary.push(...routes.slice(0, 2));
+  const remaining = routes.filter(row => !primary.includes(row)).sort((a, b) => a.name.localeCompare(b.name));
+  const distance = jumps => jumps === null ? '<span class="starlane-no-route">No accessible charted route</span>' : `<span>${jumps}</span>`;
+  const row = route => `<div class="starlane-colony-route" data-route-colony="${route.systemId}"><span>${escape(route.name)}${route.capital ? '<small>Capital</small>' : ''}</span><span class="starlane-route-distance">${distance(route.beforeJumps)}<span aria-hidden="true"> → </span>${distance(route.afterJumps)}${route.savings === 0 ? '<small>Unchanged</small>' : ''}</span></div>`;
+  return `<section class="starlane-colony-routes"><h4>Routes from ${escape(systemOf(state, systemId).name)}</h4><p class="starlane-route-caption">Charted jumps · Before → After restoration</p>${primary.map(row).join('')}${remaining.length ? `<details><summary>All colony routes</summary>${remaining.map(row).join('')}</details>` : ''}<p class="starlane-route-caption">Current borders apply. Jumps are not travel time.</p></section>`;
+}
 
 export function renderStarlaneInspector(state, systemId) {
   const lanes = getKnownStarlanes(state).filter(lane => lane.endpoints.includes(systemId));
@@ -29,6 +44,6 @@ export function renderStarlaneProjects(state, systemId) {
     const border = destination.owner && destination.owner !== 'player' && !option.opened ? '<p class="starlane-warning">This creates a direct frontier with another empire. New neighboring claims can increase diplomatic grievances.</p>' : '';
     const action = !option.opened && !option.project ? `<button class="primary" data-action="restore-lane" data-system="${systemId}" data-lane="${option.id}" ${reason ? 'disabled' : ''}>Restore lane · 1 order</button>${reason ? `<p class="build-reason">${escape(reason)}</p>` : ''}` : '';
     const rules = `<details class="starlane-rules"><summary>Construction and movement rules</summary><p>Uses the builder’s construction queue. No infrastructure slot or upkeep.</p><p>Requires Deep-space Logistics. Cancelling returns the unspent share of the paid resources; the order is not refunded.</p><p>Existing plotted courses stay unchanged until you replot. Restoration neither moves fleets nor restores their movement.</p></details>`;
-    return `<article class="starlane-project" data-starlane="${option.id}"><div class="eyebrow">STARLANE RESTORATION</div><h3>${escape(source.name)} ↔ ${escape(destination.name)}</h3>${builderChoice}${cost}${progress}${travel}<p class="starlane-shared">The shortcut is permanent and shared. Other empires can use it under normal border rules, including hostile fleets during war.</p>${border}${action}${rules}</article>`;
+    return `<article class="starlane-project" data-starlane="${option.id}"><div class="eyebrow">STARLANE RESTORATION</div><h3>${escape(source.name)} ↔ ${escape(destination.name)}</h3>${builderChoice}${cost}${progress}${travel}${renderColonyRoutes(state, systemId, option.id)}<p class="starlane-shared">The shortcut is permanent and shared. Other empires can use it under normal border rules, including hostile fleets during war.</p>${border}${action}${rules}</article>`;
   }).join('')}</div>`;
 }

@@ -91,6 +91,19 @@ export function getStarlaneOptions(state, systemId, factionId = 'player') {
   });
 }
 
+/** Compare only owned destinations through the same known, accessible graph. */
+export function getStarlaneColonyRoutes(state, systemId, laneId, factionId = 'player') {
+  const source = systemOf(state, systemId), faction = factionOf(state, factionId);
+  const lane = getKnownStarlanes(state, factionId).find(candidate => candidate.id === laneId);
+  if (!faction || source?.owner !== factionId || !lane || lane.opened || !lane.endpoints.includes(systemId)) return [];
+  return state.systems.filter(system => system.owner === factionId && system.id !== systemId).map(system => {
+    const beforeJumps = knownTravelDistance(state, factionId, systemId, system.id);
+    const afterJumps = knownTravelDistance(state, factionId, systemId, system.id, lane.endpoints);
+    return { systemId: system.id, name: system.name, capital: system.id === faction.capitalId,
+      beforeJumps, afterJumps, savings: beforeJumps !== null && afterJumps !== null ? beforeJumps - afterJumps : null };
+  });
+}
+
 /** One permanent ordinary edge; fleet positions, orders and saved courses stay put. */
 export function completeStarlane(state, system) {
   const lane = state.ancientLanes.find(candidate => candidate.id === system.queue.laneId);

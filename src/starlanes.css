@@ -19,3 +19,13 @@
 @media(max-width:660px){.starlane-project{padding:15px}.starlane-project h3{font-size:21px}.starlane-project p{font-size:12px}.starlane-cost{display:block}.starlane-cost>div+div{margin-top:15px}}
 
 .starlane-rules{margin-top:18px;padding-top:14px;border-top:1px solid #354850;font-size:12px;color:#a8c3cc}.starlane-rules summary{cursor:pointer;line-height:1.5}.starlane-project-status .small-button{display:block;margin-top:10px}.starlane-travel span{display:inline-block;font-size:11px;color:#b6c9ce}
+.starlane-colony-routes{margin:18px 0;padding:14px 0;border-top:1px solid #354850;border-bottom:1px solid #354850}
+.starlane-colony-routes h4{font-size:14px;color:#d3e4e5;margin:0 0 6px;font-weight:500}
+.starlane-project .starlane-route-caption{font-size:11px;margin:5px 0;color:#91a9ba}
+.starlane-colony-route{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding:9px 0;font-size:13px;line-height:1.5;border-bottom:1px solid #293d47}
+.starlane-colony-route>span{overflow-wrap:anywhere}
+.starlane-colony-route small{display:block;font-size:10px;color:#91a9ba}
+.starlane-route-distance{text-align:right;font-variant-numeric:tabular-nums;color:#bce6dd}
+.starlane-no-route{font-size:11px;color:#a8bdc6}
+.starlane-colony-routes details{margin-top:10px;font-size:12px;color:#b6c9ce}
+.starlane-colony-routes summary{cursor:pointer;line-height:1.6}

@@ -3093,6 +3093,13 @@ export const bindings = {
       }
     }
   ],
+  "Routes from {0}": [
+    {
+      "0": {
+        "kind": "name"
+      }
+    }
+  ],
   "Restored in cycle {0}": [
     {
       "0": {

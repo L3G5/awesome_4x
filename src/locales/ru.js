@@ -1594,5 +1594,12 @@ export const russian = {
   "Uses the builder’s construction queue. No infrastructure slot or upkeep.": "Занимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания.",
   "Compare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.": "Сравните обследованные миры. Основайте вторую колонию и отправьте разведчиков за пределы знакомых звёзд.",
   "Their Beacon blockade delays a rival ahead in public alignment who could finish during the {0}-cycle truce.": "Их блокада Маяка сдерживает соперника, который опережает их в открытой гонке синхронизации и может завершить её за {0} циклов перемирия.",
-  "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the {0}-cycle truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за {0} циклов перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
+  "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the {0}-cycle truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за {0} циклов перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады.",
+  "Routes from {0}": "Маршруты из системы {0}",
+  "Charted jumps · Before → After restoration": "Прыжки по карте · До → После восстановления",
+  "No accessible charted route": "Нет доступного маршрута по карте",
+  "Unchanged": "Без изменений",
+  "All colony routes": "Все маршруты к колониям",
+  "Current borders apply. Jumps are not travel time.": "Учитываются текущие границы. Число прыжков не означает время в пути.",
+  "Capital": "Столица"
 };
