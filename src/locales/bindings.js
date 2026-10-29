@@ -648,10 +648,24 @@ export const bindings = {
       }
     }
   ],
+  "Their Beacon blockade delays a rival ahead in public alignment who could finish during the {0}-cycle truce.": [
+    {
+      "0": {
+        "kind": "number"
+      }
+    }
+  ],
   "Peace negotiations open after {0} cycles of war.": [
     {
       "0": {
         "kind": "fragment"
+      }
+    }
+  ],
+  "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the {0}-cycle truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.": [
+    {
+      "0": {
+        "kind": "number"
       }
     }
   ],

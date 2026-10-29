@@ -1592,5 +1592,7 @@ export const russian = {
   "Construction and movement rules": "Правила строительства и перемещения",
   "+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.": "+1 приказ каждый ход. Позволяет восстанавливать неактивные звёздные пути и открывает автоматизированную промышленность и более крупные корпуса.",
   "Uses the builder’s construction queue. No infrastructure slot or upkeep.": "Занимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания.",
-  "Compare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.": "Сравните обследованные миры. Основайте вторую колонию и отправьте разведчиков за пределы знакомых звёзд."
+  "Compare your surveyed prospects. Settle a second home, and scout beyond the familiar stars.": "Сравните обследованные миры. Основайте вторую колонию и отправьте разведчиков за пределы знакомых звёзд.",
+  "Their Beacon blockade delays a rival ahead in public alignment who could finish during the {0}-cycle truce.": "Их блокада Маяка сдерживает соперника, который опережает их в открытой гонке синхронизации и может завершить её за {0} циклов перемирия.",
+  "They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the {0}-cycle truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.": "Они пока отказываются от мира: без их блокады Маяка соперник, опережающий их в открытой гонке синхронизации, может завершить синхронизацию за {0} циклов перемирия. Потери колоний, наблюдаемое военное давление и усталость от войны пока не оправдывают снятие блокады."
 };

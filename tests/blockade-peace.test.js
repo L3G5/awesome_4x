@@ -74,7 +74,8 @@ test('a healthy recipient will not abandon its decisive Beacon blockade solely a
   assert.equal(terms.willingness.blockadeLeverage, true);
   assert.match(terms.reason, /Beacon blockade/);
   assert.match(terms.reason, /ahead in public alignment/);
-  assert.match(terms.reason, /during the truce/);
+  assert.ok(terms.reason.includes(`${DIPLOMACY_RULES.truceTurns}-cycle truce`));
+  assert.match(terms.reason, /during the 5-cycle truce/);
   assert.match(terms.reason, /colony losses, observed military pressure and war weariness/);
   assert.equal(command(state, { type: 'diplomacy', factionId: proposer, targetId: recipient, stance: 'peace' }).ok, false);
   assert.deepEqual(state, before, 'denial spends nothing, withdraws nobody and changes no history');
@@ -218,5 +219,5 @@ test('public forecasts are pure, reload-stable and invariant to unrelated hidden
   Object.assign(distantEnemy, { ships: 12, hp: SHIPS.frigate.hp * 12 });
   assert.equal(validateSave(hidden), true);
   assert.deepEqual(getDiplomacyForecast(hidden, proposer, recipient).peace, expected);
-  assert.doesNotMatch(expected.reason, /Vanguard|Sovereign|Solace|jump|fleet count|\d/);
+  assert.doesNotMatch(expected.reason.replace(`${DIPLOMACY_RULES.truceTurns}-cycle truce`, 'truce'), /Vanguard|Sovereign|Solace|jump|fleet count|\d/);
 });

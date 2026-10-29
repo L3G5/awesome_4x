@@ -60,8 +60,8 @@ function willingness(state, recipientId, proposerId) {
   if (pressure.threatenedColonies) reasons.push('Their colonies face military pressure they can observe.');
   if (warAge >= 12) reasons.push('The prolonged war increases their willingness to settle.');
   if (recipientId === 'khar') reasons.push('The Khar Dominion is reluctant to concede a war.');
-  if (blockadeLeverage) reasons.push('Their Beacon blockade delays a rival ahead in public alignment who could finish during the truce.');
-  const reason = warAge < DIPLOMACY_RULES.minimumWarTurns ? `Peace negotiations open after ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : accepted ? (reasons[0] || 'They are willing to end the war.') : blockadeLeverage ? 'They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.' : 'They refuse these terms for now: war weariness and their observed losses or military pressure are insufficient.';
+  if (blockadeLeverage) reasons.push(`Their Beacon blockade delays a rival ahead in public alignment who could finish during the ${DIPLOMACY_RULES.truceTurns}-cycle truce.`);
+  const reason = warAge < DIPLOMACY_RULES.minimumWarTurns ? `Peace negotiations open after ${DIPLOMACY_RULES.minimumWarTurns} cycles of war.` : accepted ? (reasons[0] || 'They are willing to end the war.') : blockadeLeverage ? `They refuse for now: lifting their Beacon blockade could let a rival ahead in public alignment finish during the ${DIPLOMACY_RULES.truceTurns}-cycle truce. Their colony losses, observed military pressure and war weariness do not yet justify giving it up.` : 'They refuse these terms for now: war weariness and their observed losses or military pressure are insufficient.';
   return { accepted, reason, reasons, warAge, lostColonies, blockadeLeverage };
 }
 

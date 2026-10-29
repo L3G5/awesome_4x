@@ -88,4 +88,8 @@ test('composed peace terms translate every withdrawal fallback and retain all qu
     assert.match(translated, /известную нейтральную систему/);
     assert.match(translated, /остаётся на месте без возможности перемещения/);
   }
+  const blockaded = JSON.parse(readFileSync(new URL('../docs/odyssey-playtest/actual/checkpoints/cycle61.json', import.meta.url)));
+  const refusal = translateText(getDiplomacyForecast(blockaded, 'player', 'choir').actions.peace.reason, 'ru');
+  assert.match(refusal, /за 5 циклов перемирия/);
+  assert.doesNotMatch(refusal, /[a-z]/i);
 });
