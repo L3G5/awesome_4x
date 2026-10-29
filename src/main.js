@@ -9,6 +9,8 @@ import './investment.css';
 import './reinforcement.css';
 import './conclusion.css';
 import './planning-feedback.css';
+import './localization.css';
+import { localizeInterface } from './localization.js';
 import { GalaxyView } from './galaxy.js';
 import { hasSensors, getVisibleFleets } from './intelligence.js';
 import { getDiplomacyForecast, getActiveDiplomacyOffers } from './diplomacy.js';
@@ -42,6 +44,9 @@ import { FACTIONS, TECHS, BUILDINGS, SHIPS, ANOMALIES, PLANET_TYPES } from './co
 
 const SAVE_KEY = 'asterion-reach-save-v1';
 const SETTINGS_KEY = 'asterion-reach-settings-v1';
+const LANGUAGE_KEY = 'asterion-reach-language-v1';
+let language = 'en';
+try { language = localStorage.getItem(LANGUAGE_KEY) === 'ru' ? 'ru' : 'en'; } catch {}
 const $ = selector => document.querySelector(selector);
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const num = value => Math.round(value).toLocaleString();
@@ -76,12 +81,13 @@ const fleetById = id => state.fleets.find(f => f.id === id);
 const dossierRivalId = () => player().contacts.includes(selectedRivalId) ? selectedRivalId : state.factions.find(f=>f.id!=='player'&&player().contacts.includes(f.id))?.id;
 
 $('#app').innerHTML = `<div class="app-shell">
-  <header class="topbar"><div class="brand"><div class="brand-mark">${icon('mark',34)}</div><div><h1>ASTERION REACH</h1><small>THE STARS REMEMBER</small></div></div><div class="resources" id="resources"></div><div class="top-actions"><button data-action="briefing" id="briefing-button" aria-label="Latest cycle briefing" title="Latest cycle briefing">${icon('journal')}</button><a href="./guide.html" target="_blank" rel="noopener" aria-label="Open field guide" title="Field guide (?)">${icon('help')}</a><button data-action="menu" aria-label="Game menu" title="Game menu">${icon('menu')}</button></div></header>
+  <header class="topbar"><div class="brand"><div class="brand-mark">${icon('mark',34)}</div><div><h1>ASTERION REACH</h1><small>THE STARS REMEMBER</small></div></div><div class="resources" id="resources"></div><div class="top-actions"><button class="language-toggle" data-action="language" translate="no">Русский</button><button data-action="briefing" id="briefing-button" aria-label="Latest cycle briefing" title="Latest cycle briefing">${icon('journal')}</button><a href="./guide.html" target="_blank" rel="noopener" aria-label="Open field guide" title="Field guide (?)">${icon('help')}</a><button data-action="menu" aria-label="Game menu" title="Game menu">${icon('menu')}</button></div></header>
   <nav class="rail" aria-label="Command views">${[['galaxy','Galaxy'],['research','Research'],['diplomacy','Diplomacy'],['empire','Empire'],['journal','Chronicle']].map(([id,label],i)=>`<button data-page="${id}" class="${id==='galaxy'?'active':''}" title="${label} (${i+1})">${icon(id)}<span>${label}</span></button>`).join('')}<div class="rail-bottom"><button data-action="home" title="Focus homeworld (H)">${icon('home')}<span>Home</span></button></div></nav>
   <main class="main-stage"><div class="galaxy-page" id="galaxy-page"><div class="map-canvas" id="galaxy" aria-label="Interactive galaxy map"></div><div class="map-heading"><div class="eyebrow">CONCORD EXPLORATION AUTHORITY</div><h2>The Asterion Reach</h2><p id="map-meta"></p></div><div class="map-tools"><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="zoom-out" aria-label="Zoom out">−</button><button data-action="reset-view" title="Fit galaxy" aria-label="Fit galaxy">⌖</button></div><div class="map-message" id="mandate"></div><div class="map-caption">PER ASPERA, AD ASTRA</div><div class="map-legend"><span><i></i>CONCORD</span><span><i style="background:#d9bd7c"></i>CHARTED</span><span><i style="background:#596a82"></i>UNKNOWN</span><span class="founding-legend">⌂ FOUNDING WORLD</span></div><div class="fleet-bar" id="fleet-bar"></div></div><div class="workspace-page" id="workspace-page" hidden></div></main>
   <aside class="inspector" aria-label="System inspector"><div class="inspector-content" id="inspector"></div><div class="turn-panel"><div class="turn-meta"><b id="turn-number"></b><span id="turn-year"></span></div><button class="primary end-turn" data-action="end-turn" id="end-turn"><span>End cycle →</span><kbd>SPACE</kbd></button><div class="turn-hint" id="turn-hint"></div></div></aside>
   <footer class="statusbar"><span class="status-message" id="status-message">Your mandate begins among the stars.</span><span class="version">ASTERION REACH <span class="green">/</span> EARLY ACCESS ${__APP_VERSION__}</span><span id="save-status">LOCAL CAMPAIGN</span></footer></div><div id="modal-root"></div><div class="toast-stack" id="toasts" role="status" aria-live="polite"></div><input class="sr-only" type="file" id="import-save" accept="application/json,.json" aria-label="Import campaign save" tabindex="-1" />`;
 
+const localization = localizeInterface(document.body, language);
 const galaxy = new GalaxyView($('#galaxy'), { onSelect: selectSystem, onFleetSelect: selectFleet });
 function save() {
   try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); saveError = false; $('#save-status').textContent = '● AUTOSAVED'; }
@@ -121,7 +127,7 @@ function render() {
   $('#briefing-button').disabled=!briefing;
   $('#briefing-button').classList.toggle('briefing-alert', Boolean(briefing?.entries.length && settings.reviewedBriefing!==briefingKey()));
   $('#briefing-button').title=briefing?`Cycle ${briefing.turn} briefing · ${briefing.entries.length} dispatches`:'Complete a cycle to receive a briefing';
-  $('#map-meta').innerHTML = `<span class="live-dot"></span>${getVisibleSystems(state).length} charted systems · ${stats.explored} surveyed · seed ${escape(state.seed)}`;
+  $('#map-meta').innerHTML = `<span class="live-dot"></span>${getVisibleSystems(state).length} charted systems · ${stats.explored} surveyed · seed <span translate="no">${escape(state.seed)}</span>`;
   const alignment = getAlignmentStatus(state,'player');
   const rivalRace = getPublicRaces(state).filter(r=>r.factionId!=='player'&&r.progress>0).sort((a,b)=>b.progress-a.progress)[0];
   const rivalMandate = Boolean(rivalRace?.progress>=5 && rivalRace.progress>=alignment.progress);
@@ -230,7 +236,7 @@ function renderPage() {
 function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
   $('#toasts').replaceChildren();
-  modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><div class="modal-content">${html}</div></section></div>`;
+  modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><button class="language-toggle modal-language" data-action="language" translate="no">Русский</button><div class="modal-content">${html}</div></section></div>`;
   const focusTarget=type==='combat-report'||type==='conclusion'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'||type==='conclusion'});
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
@@ -268,7 +274,7 @@ function showFleetHeritage(fleetId) {
   openModal('heritage',`<div class="eyebrow">CONCORD FLEET HERITAGE</div><h2 id="modal-title">${escape(fleet.name)}</h2><div class="heritage-portrait">${renderShipPortrait(fleet.type,fleet.owner,true)}</div><p class="modal-lead">The discoveries carried forward by this task force. These records survive mergers; they do not imply that every original hull remains.</p><div class="discovery-history">${(fleet.heritage||[]).map(entry=>`<article class="discovery-history-entry"><div class="discovery-history-meta">RECOVERED IN CYCLE ${entry.turn} · ${escape(FACTIONS[entry.factionId].shortName)}</div><h3>${escape(entry.name)}</h3><p>Recovered from ${escape(systemById(entry.systemId).name)}. The expedition's story remains with this fleet.</p><button class="small-button ghost" data-action="heritage-origin" data-system="${entry.systemId}">Read the expedition record →</button></article>`).join('')}</div>`);
 }
 function showMenu() {
-  openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · ${escape(state.seed)} · The Concord</p><div class="menu-grid">${state.winner?'<button data-action="show-conclusion">Review this age</button>':''}<button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
+  openModal('menu',`<div class="eyebrow">CAMPAIGN CONTROL</div><h2 id="modal-title">A moment among the stars</h2><p class="modal-lead">Cycle ${state.turn} · <span translate="no">${escape(state.seed)}</span> · The Concord</p><div class="menu-grid">${state.winner?'<button data-action="show-conclusion">Review this age</button>':''}<button data-action="export">↓ Export campaign</button><button data-action="import">↑ Import campaign</button><a href="./guide.html" target="_blank" rel="noopener">Read the field guide ↗</a><button data-action="new-game-menu">Begin a new campaign</button></div><p class="save-meta">${saveError?'Browser autosave is unavailable. Export a backup to preserve progress.':'Progress is automatically saved in this browser after every action. Export a backup to move your campaign to another device.'}</p><label style="font-size:12px;display:flex;gap:10px;align-items:center"><input type="checkbox" id="warn-unspent" ${settings.warnUnspent?'checked':''} style="width:auto">Warn before ending a cycle with unused orders</label><div class="modal-actions"><button class="primary" data-action="close-modal">Return to the Reach</button></div>`);
 }
 function briefingKey() {
   return state.lastBriefing ? `${state.seed}:${state.lastBriefing.turn}:${state.lastBriefing.entries[0]?.id || 0}` : '';
@@ -366,6 +372,11 @@ document.addEventListener('click',event=>{
   if (el.dataset.logFilter) {logFilter=el.dataset.logFilter;renderPage();$('#workspace-page [data-log-filter].active')?.focus();return;}
   const action=el.dataset.action;
   switch(action){
+    case 'language':
+      language = language === 'ru' ? 'en' : 'ru';
+      try { localStorage.setItem(LANGUAGE_KEY, language); } catch {}
+      localization.setLanguage(language);
+      break;
     case 'menu':showMenu();break;
     case 'show-conclusion':showVictory();break;
     case 'conclusion-chronicle':closeModal();setPage('journal');break;
@@ -453,8 +464,8 @@ document.addEventListener('keydown',event=>{
   if (event.target.matches('input,textarea,select')||event.ctrlKey||event.metaKey||event.altKey) return;
   if(event.code==='Space'&&!event.repeat&&!event.target.matches('button,a')){event.preventDefault();advanceTurn();}
   if (['1','2','3','4','5'].includes(event.key)) setPage(['galaxy','research','diplomacy','empire','journal'][Number(event.key)-1]);
-  if(event.key.toLowerCase()==='n')nextFleet();
-  if(event.key.toLowerCase()==='h'){selectSystem(player().capitalId);galaxy.focus(player().capitalId);}
+  if(event.code==='KeyN'||event.key.toLowerCase()==='n')nextFleet();
+  if(event.code==='KeyH'||event.key.toLowerCase()==='h'){selectSystem(player().capitalId);galaxy.focus(player().capitalId);}
   if(event.key==='Escape'){selectedFleetId=null;render();}
   if(event.key==='?')window.open('./guide.html','_blank','noopener');
 });

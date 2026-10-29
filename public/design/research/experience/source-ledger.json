@@ -1,0 +1,176 @@
+{
+  "research_date": "2026-10-29",
+  "scope": "4X UI/UX, legibility, onboarding, planning, management burden, turn pacing and emotional engagement; no assessment of the workspace game",
+  "method": "Targeted web searches, readable original developer posts, Reddit discussions, creator documentation and one primary research thesis. Summaries are paraphrases. Popularity and upvotes are not treated as representative survey evidence.",
+  "sources": [
+    {
+      "id": "EXP01",
+      "title": "UI/UX Next Steps",
+      "author": "Derek Paxton / Amplitude Studios",
+      "date": "2025-09-25",
+      "url": "https://community.amplitude-studios.com/amplitude-studios/endless-legend-2/blogs/996-ui-ux-next-steps",
+      "type": "Primary developer retrospective and proposed redesign",
+      "access": "Full article and comments readable in search extraction; direct open timed out",
+      "evidence": "Paxton identifies a layout divided according to developer distinctions that players did not share. Proposed changes group empire actions, consolidate city information, choose construction before placement, add filters and allow population and construction panels together.",
+      "limits": "Developer interpretation of community feedback, without sample sizes or measured before/after usability results. Proposal does not establish that every change succeeded.",
+      "use": "Evaluate spatial information grouping, inspection versus action flow, simultaneous comparisons and discoverability. Comments also request source breakdowns and built-improvement visibility."
+    },
+    {
+      "id": "EXP02",
+      "title": "Old World Designer Notes #1: Orders",
+      "author": "Soren Johnson",
+      "date": "2021-07-26",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-1-orders/",
+      "type": "Primary developer design account",
+      "access": "Full original article and comments read",
+      "evidence": "Johnson argues that moving every unit every turn can become repetitive because acting has no competing opportunity cost. Shared Orders made civilian and military attention compete. Internal objections prompted fatigue limits that made the available movement easier to understand. In comments he reports rejecting progressively increasing movement costs because mental arithmetic was too difficult.",
+      "limits": "Designer account of internal multiplayer play, not a controlled player study or proof that action caps suit every 4X.",
+      "use": "Audit actions for alternatives, opportunity cost and comprehensible movement budgets; distinguish reducing clicks from changing strategic scope."
+    },
+    {
+      "id": "EXP03",
+      "title": "Stellaris Dev Diary #310 - Matters of Life and Death",
+      "author": "Eladrin and Stellaris development team",
+      "date": "2023-08-24",
+      "url": "https://steamcommunity.com/games/281990/announcements/detail/3646280646048523752",
+      "readable_mirror_url": "https://store.steampowered.com/news/posts/?appids=281990&enddate=1694505957&feed=steam_community_announcements",
+      "type": "Primary developer explanation of automation redesign",
+      "access": "Full official Steam feed read; direct announcement content was image-only in extraction",
+      "evidence": "Newer-player feedback led the team to remove separate automation stockpiles, use empire resources directly and let players prohibit specific resources from being spent by planetary automation.",
+      "limits": "Reports a design response and its rationale, without outcome metrics. The historical implementation should not be assumed to describe current Stellaris.",
+      "use": "Automation should have an understandable funding model and meaningful constraints that preserve intended reserves and priorities."
+    },
+    {
+      "id": "EXP04",
+      "title": "I am Soren Johnson, designer/programmer of Old World, Offworld Trading Company, and Civilization 4. AMA!",
+      "author": "Soren Johnson and Reddit participants",
+      "date": "2020-05-08",
+      "url": "https://www.reddit.com/r/IAmA/comments/gftr6m/i_am_soren_johnson_designerprogrammer_of_old/",
+      "type": "Primary developer AMA with player reactions",
+      "access": "Original thread read; absolute date corroborated by indexed transcript",
+      "evidence": "Johnson describes complexity that improves expert performance without making success depend on complete rules knowledge. He names nested tooltips and undo as interface strengths. A player in the same discussion praises the tooltips while criticizing insufficient scaling options.",
+      "limits": "Design intent and isolated reactions, not measured onboarding effectiveness. Do not infer all complexity can safely be optional.",
+      "use": "Teach a viable basic loop before optimizations; support in-context explanations, safe experimentation and readable display scaling."
+    },
+    {
+      "id": "EXP05",
+      "title": "Old World Designer Notes #11: The End",
+      "author": "Soren Johnson",
+      "date": "2021-10-14",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+      "type": "Primary developer design account",
+      "access": "Substantial original article text read in search extraction",
+      "evidence": "Johnson connects ambitions to ruler lifetimes and escalating goals, and uses visible victory points as a competing clock. A double-score victory can conclude a decisive lead. He argues that highly specialized victory tracks can predetermine choices, and that surprise endings after long campaigns are unsatisfying.",
+      "limits": "A designer's position on a contested problem, not universal evidence against specialized victories or simulation play.",
+      "use": "Evaluate visible progress, memorable intermediate goals, warning of defeat and the distance between strategic resolution and formal ending."
+    },
+    {
+      "id": "EXP06",
+      "title": "Detailed Map Tacks",
+      "author": "wltk and D / Steam Workshop",
+      "date": "2021-03-18",
+      "updated": "2024-01-16",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2428969051",
+      "type": "Primary creator documentation of a planning tool",
+      "access": "Original description and features read; page also returned generic removal/incompatibility banners, so current compatibility is not assessed",
+      "evidence": "The creator's tool previews potential district yields and adjacency, marks invalid placements, supports configurable placement/deletion shortcuts and removes a plan marker when construction occurs.",
+      "limits": "Feature documentation establishes a concrete pattern, not improvement in performance, fun or accessibility. Subscriber counts are deliberately omitted.",
+      "use": "Separate strategic planning from arithmetic and memory; expose uncertainty and validity before committing."
+    },
+    {
+      "id": "EXP07",
+      "title": "Help me - I love 4x gaming, but I rarely finish a game...",
+      "author": "r/4Xgaming participants",
+      "date": "2024-06-26",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1dp9gbw/help_me_i_love_4x_gaming_but_i_rarely_finish_a/",
+      "type": "Player anecdote and discussion",
+      "access": "Original thread read; absolute date visible in search extraction",
+      "evidence": "The original poster describes accelerating through growing late-game workload and accepts detailed control when its impact is substantive. Replies discuss smaller maps, automation's loss of enjoyable control and abandoning campaigns when only uncontested cleanup remains.",
+      "limits": "Self-selected anecdotes. ADHD references are personal accounts, not clinical evidence or an explanation of the whole audience.",
+      "use": "Test late saves separately from openings; track campaign abandonment, perceived purpose and management load at different empire sizes."
+    },
+    {
+      "id": "EXP08",
+      "title": "Micromanagement vs Hand Holding: Which do you prefer?",
+      "author": "u/KuraNomberin and r/4Xgaming participants",
+      "date": "2026-10-10",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1x21wqs/micromanagement_vs_hand_holding_which_do_you/",
+      "type": "Player and developer discussion with opposing preferences",
+      "access": "Original thread and extensive indexed comments read",
+      "evidence": "The poster finds automatic turn cycling distracting, especially during simultaneous multiplayer. Others value pending-action prompts as memory support. Replies describe optional, viewport-sensitive cycling in Gladius. Other comments request adjustable delegation and report automation that overrides manual fleet orders.",
+      "limits": "Small, self-selected discussion. Reports of specific games are unverified player descriptions, not confirmed current behavior.",
+      "use": "Make assistance discoverable and controllable; inspect camera focus, action ordering, optional reminders, explicit overrides and automation state."
+    },
+    {
+      "id": "EXP09",
+      "title": "Micromanagement is Ruining 4X Games Design | BATTLEMODE's Unpopular Opinions",
+      "author": "u/B4TTLEMODE and r/4Xgaming participants",
+      "date": "2025-04-10",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1jvzps5/micromanagement_is_ruining_4x_games_design/",
+      "type": "Player disagreement about control, repetition and purpose",
+      "access": "Original discussion read; linked video not evaluated",
+      "evidence": "Some participants enjoy fine control and cumulative small gains; others prefer colonies that continue a standing assignment without completion popups. One distinguishes tactical economic choices from obvious maintenance. Discussion also disputes whether automation repairs tedium or merely masks weak victory structure.",
+      "limits": "The discussion disagrees about the meaning of micromanagement. It cannot establish the preferences of most 4X players.",
+      "use": "Specify whether each interaction supplies tactical expression, strategically consequential optimization, routine maintenance or ceremony before proposing automation."
+    },
+    {
+      "id": "EXP10",
+      "title": "PotatoMcWhiskey's video dropped! (Diety, Tecumseh / Mississippian Empire)",
+      "author": "r/civ participants",
+      "date": "2025-01-18",
+      "url": "https://www.reddit.com/r/civ/comments/1i3x2j1/potatomcwhiskeys_video_dropped_diety_tecumseh/",
+      "type": "Player reactions to a prerelease preview",
+      "access": "Original discussion read; source video not evaluated",
+      "evidence": "Some commenters want a more expressive, atmospheric interface; another likes an understated UI against a detailed map. Distinct comments criticize low contrast, small type, inconsistent sizing and large panels that still communicate little.",
+      "limits": "Preview reactions, partly based on video rather than hands-on use; no conclusions about released or current Civ VII. Aesthetic preference is not equivalent to usability.",
+      "use": "Evaluate mood and readability separately. Ask players to recognize information and perform tasks before collecting style preferences."
+    },
+    {
+      "id": "EXP11",
+      "title": "Do you plan out your towns with Map Tacks and if so, how far do you plan them out?",
+      "author": "u/Bes1208 and r/CivVII participants",
+      "date": "2026-07-29",
+      "url": "https://www.reddit.com/r/CivVII/comments/1va5lpv/do_you_plan_out_your_towns_with_map_tacks_and_if/",
+      "type": "Player anecdotes with opposing planning styles",
+      "access": "Original thread read",
+      "evidence": "One player spends hours planning to front-load effort and protect scarce locations. Others find extensive tacking tedious and prefer adapting as they build. A participant prefers a placement heatmap; another uses markers to resume an intended task after saving.",
+      "limits": "Self-selected preferences and descriptions, not proof of balance or a universal need for extensive preplanning.",
+      "use": "Offer optional persistent planning aids and local consequence previews while checking that success does not require exhaustive advance annotation."
+    },
+    {
+      "id": "EXP12",
+      "title": "Investigation of Complex Strategy Games on Console: Evaluating the Potential Possibilities of One User Interface to Rule Them All",
+      "author": "Aron Nisbel / Umea University, in collaboration with Paradox",
+      "date": "2021",
+      "url": "https://www.diva-portal.org/smash/get/diva2:1538474/FULLTEXT01.pdf",
+      "type": "Primary master's thesis: survey and remote task-based playtests",
+      "access": "Original PDF downloaded and text checked, especially sections 7.3 and 8.3",
+      "evidence": "A survey of 864 respondents across eleven console strategy games was followed by single-platform playtests: Stellaris console 10, PC 65; Civilization VI console 2, PC 31. Reported pace encompasses action/navigation effort and game-mechanical progress. Playtest respondents generally rated mechanical factors above UI factors in pace.",
+      "limits": "Early-game tasks, experienced players, self-reported responses, no completed direct cross-platform tests and only two Civ console responses. This is not a controlled causal demonstration of console-first design or a late-game workload study.",
+      "use": "Separate action latency from strategic progress in testing; measure task performance and subjective pace in early and late states."
+    }
+  ],
+  "access_gaps": [
+    {
+      "service": "X / Twitter",
+      "attempted_url": "https://x.com/CivGame/status/1887660049314582941",
+      "result": "403 Forbidden. Twitter alias returned empty content. Targeted X searches did not return readable primary post text.",
+      "policy_for_synthesis": "No X post is quoted, paraphrased or counted as evidence. A Steam discussion linking this URL is only a discovery lead."
+    }
+  ],
+  "unused_leads": [
+    {
+      "title": "Extended Policy Cards",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2266952591",
+      "date": "2020-10-24",
+      "note": "Creator documentation of current empire-yield previews for policy choices; good additional example if needed. Direct English page was rate-limited; indexed Spanish-localized page includes the English description. Not part of the twelve-source synthesis."
+    },
+    {
+      "title": "Making of the User Interface in Endless Legend",
+      "author": "Laurent Herbet / FIGS",
+      "date": "Making Games 06/2015",
+      "url": "https://s3-eu-west-1.amazonaws.com/editor.production.pressmatrix.com/emags/210770/pdfs/original/d87229ab-f70b-4755-80d7-52ffe006423e.pdf",
+      "note": "Primary UI case-study text indexed, but original open exceeded tool size limit. Useful source for icon-family differentiation and style/readability tradeoffs. Not relied upon in synthesis."
+    }
+  ]
+}

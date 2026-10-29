@@ -1,0 +1,295 @@
+{
+  "research_date": "2026-10-29",
+  "scope": "Mechanics, depth, economy, AI, diplomacy, late game; no current implementation inspection or critique.",
+  "evidence_caution": "Designer experience and self-selected player testimony; no controlled study or representative survey. Historical posts concern historical designs.",
+  "core_sources": [
+    {
+      "id": "S01",
+      "title": "Design 101: Complexity vs. Depth",
+      "author": "Dan Felder",
+      "date": "2015-05-21",
+      "url": "https://danfelder.net/2015/05/21/design-101-complexity-vs-depth/",
+      "kind": "Designer argument; general game design, not a 4X study",
+      "access": "Full article read",
+      "topics": [
+        "depth",
+        "breadth",
+        "cognitive load"
+      ],
+      "claims": "Felder separates difficulty understanding rules, difficulty tracking state, and difficulty choosing the best move. He treats the first two as costs and the third as the main strategic reward. A rule should earn its complexity by serving a design goal.",
+      "limits": "Conceptual vocabulary, not a validated measurement instrument; some audiences enjoy intricate simulation.",
+      "review_use": "Separate rules and interface friction from strategic uncertainty when assessing whether a subsystem adds depth."
+    },
+    {
+      "id": "S02",
+      "title": "Old World Designer Notes #1: Orders",
+      "author": "Soren Johnson",
+      "date": "2021-07-26",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-1-orders/",
+      "kind": "Primary designer retrospective",
+      "access": "Full article read",
+      "topics": [
+        "opportunity cost",
+        "meaningful decisions",
+        "action economy"
+      ],
+      "claims": "Johnson argues that free actions for every unit can create activity without tradeoffs. Orders make military movement compete with economic improvement. He reports multiplayer tests where preserving economic action mattered. The team added fatigue limits because unlimited movement confused or alienated testers.",
+      "limits": "One design and developer account, without controlled comparison.",
+      "review_use": "Ask what the player forgoes when acting and whether an action budget creates valuable allocation choices."
+    },
+    {
+      "id": "S03",
+      "title": "Old World Designer Notes #5: Yields",
+      "author": "Soren Johnson",
+      "date": "2021-08-24",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-5-yields/",
+      "kind": "Primary designer retrospective",
+      "access": "Full article read",
+      "topics": [
+        "economy",
+        "resources",
+        "specialization",
+        "snowballing"
+      ],
+      "claims": "Johnson defends thirteen currencies when distinct sources and uses make geography change plans. Costly exchange provides an escape from shortages. Workers remain producible without materials to permit recovery. Discontent and upkeep counter positive feedback, while Discontent is deliberately separated from growth.",
+      "limits": "Counters blanket claims that more currencies always harm a game; value still depends on playtesting.",
+      "review_use": "Identify each resource\u2019s distinct decision, substitutes, sinks, and shortage recovery path."
+    },
+    {
+      "id": "S04",
+      "title": "Old World Designer Notes #10: Diplomacy",
+      "author": "Soren Johnson",
+      "date": "2021-10-08",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-10-diplomacy/",
+      "kind": "Primary designer retrospective",
+      "access": "Full article read",
+      "topics": [
+        "diplomacy",
+        "trade exploitation",
+        "events"
+      ],
+      "claims": "Johnson describes technology trading externalities and repeated bargaining-table extraction as rules problems. Old World uses state-sensitive events, paid missions, an ambassador, and elapsed time. Costs and delays prevent repeatedly rerolling for a favorable response.",
+      "limits": "Event-heavy negotiation depends on authored content and may frustrate direct-control preferences. Bargaining interfaces are not inherently bad.",
+      "review_use": "Test repeated-contact extraction, loan-and-war exploits, and the strategic reason for diplomatic friction."
+    },
+    {
+      "id": "S05",
+      "title": "Old World Designer Notes #11: The End",
+      "author": "Soren Johnson",
+      "date": "2021-10-14",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+      "kind": "Primary designer retrospective and argument",
+      "access": "Full article read",
+      "topics": [
+        "victory",
+        "late game",
+        "asymmetry",
+        "AI"
+      ],
+      "claims": "Johnson favors victory points that end dominant games sooner and ambitions that adapt to a dynasty\u2019s course over predetermined specialized victory paths. He warns about surprising AI wins. He distinguishes personality-led single-player opponents from ruthless human-style competition, offered as an option.",
+      "limits": "Claims about most players and universally difficult endings are designer judgments, not population evidence.",
+      "review_use": "Expose enemy victory progress, support pivots, and define whether allies are characters, competitors, or a configurable mixture."
+    },
+    {
+      "id": "S06",
+      "title": "Revisiting the Design of Civ 5",
+      "author": "Jon Shafer",
+      "date": "2013-02-18",
+      "url": "https://www.gamedeveloper.com/design/revisiting-the-design-of-civ-5",
+      "kind": "Primary designer retrospective; also upcoming-game promotion",
+      "access": "Full article read, especially diplomacy, AI, resources",
+      "topics": [
+        "diplomacy",
+        "AI coherence",
+        "trade scarcity"
+      ],
+      "claims": "Shafer says unclear motives and late betrayal undermined relationship investment. His AI critique targets randomness that changed strategies without cohesion and architecture whose parts failed to deliver results. He argues near self-sufficiency weakened resource trade and acknowledges stockpiles add management.",
+      "limits": "Base Civ V experience and proposed At the Gates systems; does not establish later versions or the proposed systems succeeded.",
+      "review_use": "Explain opponent decisions and test whether research, production, diplomacy, and war support one workable plan."
+    },
+    {
+      "id": "S07",
+      "title": "AtG Update: Progress, Pacing & People",
+      "author": "Jon Shafer",
+      "date": "2014-09-15",
+      "url": "https://jonshaferondesign.com/2014/09/15/atg-update-progress-pacing-people/",
+      "kind": "Primary prototype report",
+      "access": "Full article read",
+      "topics": [
+        "progression",
+        "prerequisites",
+        "adaptation",
+        "breadth"
+      ],
+      "claims": "Shafer recounts prerequisite professions becoming repeated speed bumps, resource gates eliminating choices, and skill tracks becoming tracking overload. He retained profession breadth but simplified tracking and restored separate research to regulate pacing and adaptation.",
+      "limits": "He explicitly says prerequisites work elsewhere. Prototype observations, not a successful-release postmortem.",
+      "review_use": "Trace desire to useful capability; count meaningful intermediates, mandatory repetitions, and branches made unavailable by geography."
+    },
+    {
+      "id": "S08",
+      "title": "Designing Games In A Vacuum, Part 1: Terrain & Positionality",
+      "author": "Chris McElligott Park",
+      "date": "2009-05-11",
+      "url": "https://arcengames.com/designing-games-in-a-vacuum-part-1-terrain-positionality/",
+      "kind": "Primary explanation; adjacent RTS/grand strategy example",
+      "access": "Full article read",
+      "topics": [
+        "map meaning",
+        "asymmetry",
+        "expansion",
+        "pacing"
+      ],
+      "claims": "Park gives space positional meaning through defended objectives and unevenly difficult planets. AI Progress raises enemy strength after taking targets, so expansion must justify its escalating threat. The aim is scouting and selective operations rather than indiscriminate conquest or pure booming.",
+      "limits": "AI War is deliberately asymmetric; transplanting its solution changes a conventional 4X\u2019s promise.",
+      "review_use": "Check whether target value, reach, and threat make expansion selective."
+    },
+    {
+      "id": "S09",
+      "title": "Deep Dive: The frothy design and diplomacy of Humankind",
+      "author": "William Dyce, lead designer at Amplitude Studios",
+      "date": "2021-12-01",
+      "url": "https://www.gamedeveloper.com/design/the-frothy-design-and-diplomacy-of-humankind",
+      "kind": "Primary designer case study",
+      "access": "Full article read",
+      "topics": [
+        "diplomacy",
+        "foreshadowing",
+        "war goals",
+        "iteration"
+      ],
+      "claims": "Dyce frames diplomacy as making intentions legible enough for anticipation and stories. Prototype grievance rules made wars readable but created arbitrary waiting, passivity, and rigid spoils; the team loosened them and allowed negotiated surrender. Formal elegance failed when it prevented reasonable actions.",
+      "limits": "Reports intent and iteration, not universal release satisfaction.",
+      "review_use": "Defenders should foresee danger while aggressors retain useful options; outcomes should reflect the war fought."
+    },
+    {
+      "id": "S10",
+      "title": "Galactic Civilizations IV AMA \u2014 July 15th, 2026",
+      "author": "Brad Wardell (draginol), RammaStardock, participating players",
+      "date": "2026-07-15",
+      "url": "https://www.reddit.com/r/GalCiv/comments/1uwexck/galactic_civilizations_iv_ama_july_15th_2026/",
+      "kind": "Primary developer answers plus anecdotal player questions",
+      "access": "Relevant fleet, research, automation and UI answers read",
+      "topics": [
+        "AI",
+        "personality",
+        "automation",
+        "friction"
+      ],
+      "claims": "Wardell acknowledges faction ship preferences can produce ineffective fleets and points to research choices as a foundational fix. He links improved planet AI to governments delegating control, and identifies fewer clicks and clearer explanations as UI priorities.",
+      "limits": "Version 4.0 promises are intentions, not verified outcomes; player questions report individual experiences.",
+      "review_use": "Personality should remain strategically viable; automation must competently perform delegated choices."
+    },
+    {
+      "id": "S11",
+      "title": "4X games largely have not figured out late game",
+      "author": "r/4Xgaming discussion; Pirat6662001 opening post",
+      "date": "2023-12-12",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/18gs97z/4x_games_largely_have_not_figured_out_late_game/",
+      "kind": "Anecdotal discussion with disagreement",
+      "access": "Post and substantive threads read",
+      "topics": [
+        "late game",
+        "scale",
+        "snowballing",
+        "coalitions"
+      ],
+      "claims": "Participants separately criticize increasing management work and declining threat. Suggestions include changing management scale, frontiers, coalitions, and crises. One participant values outgrowing the world. Crises are disputed because they can replace the original political contest.",
+      "limits": "Self-selected; votes are not a representative poll or causal evidence.",
+      "review_use": "Test management burden and competitive tension independently; ask the intended audience what it values."
+    },
+    {
+      "id": "S12",
+      "title": "Best feature to prevent snow-balling",
+      "author": "r/4Xgaming discussion; GJDriessen opening post",
+      "date": "2024-09-05",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1f9vx9e/best_feature_to_prevent_snowballing/",
+      "kind": "Anecdotal discussion with disagreement",
+      "access": "Post and substantive threads read",
+      "topics": [
+        "snowballing",
+        "victory",
+        "growth fantasy",
+        "tradeoffs"
+      ],
+      "claims": "Participants distinguish an earned lead from a feedback loop, propose earlier endings, and warn strong expansion penalties can make tall play compulsory. One calls snowballing the principal reward and dislikes premature victory; others want climactic opposition.",
+      "limits": "Demonstrates conflicting tastes, not their prevalence. Game-specific claims remain player reports.",
+      "review_use": "Choose contested race, earned domination, or sandbox growth before combining remedies."
+    }
+  ],
+  "supplementary_sources": [
+    {
+      "id": "A01",
+      "title": "Designing Emergent AI, Part 1: An Introduction",
+      "author": "Chris McElligott Park",
+      "date": "2009-06-02",
+      "url": "https://arcengames.com/designing-emergent-ai-part-1-an-introduction/",
+      "kind": "Primary developer argument",
+      "access": "Full article read",
+      "note": "AI War substitutes a different enemy economy and visible escalation for human-like economic competition. Park describes choosing among good actions rather than one predictable optimum. Quality claims are self-reports."
+    },
+    {
+      "id": "A02",
+      "title": "GEM WIZARDS: a new generation of Keith Burgun Games!",
+      "author": "Keith Burgun",
+      "date": "2019-05-27",
+      "url": "https://keithburgun.net/gem-wizards-a-new-generation-of-keith-burgun-games/",
+      "kind": "Designer polemic and project proposal",
+      "access": "Relevant 4X section read",
+      "note": "Burgun treats inherited match length as a design variable, proposing 30\u201360 minutes with mastery. Useful dissent, not proof longer games are bad or a completed-4X report."
+    },
+    {
+      "id": "A03",
+      "title": "Games that have some solutions to prevent snowball?",
+      "author": "r/4Xgaming discussion",
+      "date": "2024-07-15",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1e42wei/games_that_have_some_solutions_to_prevent_snowball/",
+      "kind": "Anecdotal discussion",
+      "access": "Substantive threads read",
+      "note": "First conquest is described as doubling resources and deciding the game. Others say expansion penalties ruin conquest or early wins leave late systems unused. No prevalence estimate."
+    },
+    {
+      "id": "A04",
+      "title": "Interesting Decisions",
+      "author": "Sid Meier",
+      "date": "2012",
+      "url": "https://www.gdcvault.com/play/1015756/Do-Say-The-Right-Thing",
+      "kind": "GDC catalog metadata only",
+      "access": "Abstract read; video not watched",
+      "note": "Official abstract identifies decision categories, pacing, information, and feedback. Do not attribute a detailed framework from the abstract."
+    },
+    {
+      "id": "A05",
+      "title": "My Elephant in the Room: An Old World Postmortem",
+      "author": "Soren Johnson",
+      "date": "2022",
+      "url": "https://www.gdcvault.com/play/1027656/AI-for-Character-Art-Pipeline",
+      "kind": "GDC catalog metadata only",
+      "access": "Abstract read; video not watched",
+      "note": "Abstract describes scope reduction and removing rote conventions. URL slug is misleading but session metadata matches."
+    }
+  ],
+  "access_log": [
+    {
+      "url": "https://x.com/SorenJohnson",
+      "result": "Direct open returned HTTP 403; no X content read or cited."
+    },
+    {
+      "queries": [
+        "site.x.com SorenJohnson 4X",
+        "site.x.com SorenJohnson Orders",
+        "site.x.com 4X snowballing",
+        "site.x.com 4X diplomacy design",
+        "site.twitter.com 4X Soren"
+      ],
+      "result": "No useful readable X discussion returned. Explicit coverage gap; do not fabricate an X consensus."
+    },
+    {
+      "url": "https://civilization.2k.com/civ-vii/game-guide/dev-diary/ages/",
+      "result": "HTTP 403. Steam mirror exposed only an image. Not substantive support."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1vlmAHiuH-DQAaKkeOM7N5tpnYve63ACV/view",
+      "result": "Designer-linked Civ IV manual text inaccessible in this pass; no claims attributed."
+    }
+  ]
+}

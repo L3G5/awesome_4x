@@ -1,0 +1,211 @@
+{
+  "research_topic": "Randomness, replayability, exploration, faction asymmetry, viable strategies, and repetition in 4X design",
+  "researched_on": "2026-10-29",
+  "scope": "Design research only; no review or modification of the current game",
+  "evidence_policy": "Developer accounts establish intentions, mechanics, and reported observations, not controlled proof of player enjoyment. Reddit establishes that a viewpoint exists, not its prevalence. No measured retention or causal comparison was found in this focused corpus. Proposed evaluation measures are research recommendations, not published benchmarks.",
+  "sources": [
+    {
+      "id": "RP01",
+      "title": "GD Column 9: Playing the Odds",
+      "url": "https://www.designer-notes.com/game-developer-column-9-playing-the-odds-3/",
+      "author": "Soren Johnson",
+      "date": "2010-03-03",
+      "date_note": "Author says originally published in Game Developer magazine, October 2009",
+      "type": "primary_designer_essay",
+      "access": "full article read",
+      "topics": ["constrained randomness", "procedural resources", "agency", "odds transparency"],
+      "grounded_paraphrase": "Johnson describes Civ III strategic-resource clustering that could leave a continent dependent on one iron owner. Civ IV spaced key resources apart while deliberately clustering luxuries to encourage trade. He argues that randomness should create an intelligible challenge, with disclosed odds and time to respond, rather than noise or rare devastating surprises.",
+      "concrete_example": "Distribute militarily essential iron differently from tradable luxuries: equal randomness rules need not suit resources with different strategic roles.",
+      "caveat": "Designer account, not a randomized study. Do not repeat this older article's unrelated hot-hand claim as settled contemporary science. More time after a random event does not guarantee recovery in an economy with compounding advantages.",
+      "evaluation_inference": "Audit generated worlds for playable strategic alternatives, not merely geometric variation. Record missing-essential-resource cases and whether trade, substitution, conquest, or another route remains credible."
+    },
+    {
+      "id": "RP02",
+      "title": "Randomness, and Random Value Absorption Thresholds",
+      "url": "https://keithburgun.net/good-randomness/",
+      "author": "Keith Burgun",
+      "date": "2021-12-08",
+      "type": "primary_designer_theory",
+      "access": "full article read",
+      "topics": ["input randomness", "output randomness", "impact", "replacement", "accumulating luck"],
+      "grounded_paraphrase": "Burgun separates when randomness arrives, whether outcomes repeat with replacement, and how strongly they affect the state. He warns that safe-looking weak input randomness can be too trivial, while random advantages can accumulate beyond player control. His absorption-threshold idea concerns rules that prevent excess random value from carrying forward.",
+      "concrete_example": "A revealed tech offer and a post-commitment combat roll differ in timing; a shuffled deck and repeated independent dice differ in distribution even when both are random.",
+      "caveat": "A designer's conceptual framework using mostly non-4X examples, with a preference for competitive decision games. It is not empirical proof that output randomness is always inferior, or that all players want the same uncertainty.",
+      "evaluation_inference": "Classify each random mechanic on all three axes and test its accumulated consequences. A lucky opening reward may have a larger long-run effect than its immediate numerical value suggests."
+    },
+    {
+      "id": "RP03",
+      "title": "Old World Designer Notes #4: The Technology Deck",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-4-the-technology-deck/",
+      "author": "Soren Johnson",
+      "date": "2021-08-18",
+      "type": "primary_designer_case_study",
+      "access": "full article read",
+      "topics": ["solved research paths", "input randomness", "opportunity cost", "planning"],
+      "grounded_paraphrase": "Johnson identifies a tradeoff between a clear fixed technology tree and a repeatable optimal research sequence. Old World presents four drawn tech cards, discards unchosen alternatives, and exposes the piles. Temporary bonus cards create choices between immediate assistance and permanent capabilities.",
+      "concrete_example": "Forestry versus Labor Force changes because the unchosen option may not return for several researches; an immediate archer can compete with unlocking productive infrastructure.",
+      "caveat": "This explains the mechanism and design rationale; it does not demonstrate that every draw is interesting or eliminate higher-level dominant strategies. Availability restrictions can frustrate players when an indispensable answer fails to arrive.",
+      "evaluation_inference": "Look for context-sensitive rankings of available choices. Check whether alternatives are genuinely competitive and whether the player can understand why an option is unavailable and influence its return."
+    },
+    {
+      "id": "RP04",
+      "title": "Old World Designer Notes #9: Events",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-9-events/",
+      "author": "Soren Johnson",
+      "date": "2021-09-30",
+      "type": "primary_designer_case_study",
+      "access": "full article read",
+      "topics": ["emergent narrative", "stateful events", "combinatorial variation"],
+      "grounded_paraphrase": "Old World's events use triggers, eligibility tests, subjects, and persistent traits rather than one brittle story tree. A trait introduced by one event can matter in another. Johnson contrasts this stateful narrative variation with scripted scenarios and with simply accelerating resource accumulation.",
+      "concrete_example": "A leader's acquired trait can unlock or constrain later choices; a combat injury can redirect the ruler's career.",
+      "caveat": "Thousands of authored events do not themselves prove replayability. Repeated presentation, weak choices, or negligible consequences can still make a large event library feel routine.",
+      "evaluation_inference": "Ask what an event changes in future decisions and which prior decisions it remembers. Track meaningful state connections and repeated situations, not only unique text seen."
+    },
+    {
+      "id": "RP05",
+      "title": "Old World Designer Notes #11: The End",
+      "url": "https://www.designer-notes.com/old-world-designer-notes-11-the-end/",
+      "author": "Soren Johnson",
+      "date": "2021-10-14",
+      "type": "primary_designer_case_study",
+      "access": "article read, including ambition design and ending tradeoffs",
+      "topics": ["predetermined victory routes", "adaptive goals", "late-game pacing"],
+      "grounded_paraphrase": "Johnson argues that highly specialized victories can predetermine choices from the opening. Old World uses dynamically offered ambitions alongside victory points, allowing goals to follow a campaign's circumstances. He also describes abandoning a ten-ruler ending because variable lifespans made session length unreliable.",
+      "concrete_example": "An ambition to build shrines may invite a religious detour without requiring a religion-only campaign chosen on turn one.",
+      "caveat": "His dislike of specialized victories is a design position, not consensus. Some players value committing to a long plan. Dynamic objectives can also become chores if they reward irrelevant activity or feel arbitrary.",
+      "evaluation_inference": "Test both long-term coherence and opportunities to pivot. Measure the interval between perceived decisive advantage and formal victory rather than assuming more turns add value."
+    },
+    {
+      "id": "RP06",
+      "title": "How the Endless series reimagined the 4X strategy genre",
+      "url": "https://www.pcgamer.com/how-the-endless-series-reimagined-the-4x-strategy-genre/",
+      "author": "Robert Zak interviewing Romain de Waubert and Jeff Spock",
+      "date": "2018-01-04",
+      "type": "primary_developer_interview",
+      "access": "substantive interview passages read",
+      "topics": ["asymmetric factions", "systemic narrative", "branching quests", "balance tradeoffs"],
+      "grounded_paraphrase": "Amplitude's designers describe factions that alter a major rule: resource-depleting Cravers must keep consuming; Riftborn manufacture population; Roving Clans cannot declare war. They describe moving from linear faction quests toward branches that redirect production according to current circumstances, while accepting balance difficulties from strong asymmetry.",
+      "concrete_example": "An Unfallen quest can demand investment in influence or in military strength, tying narrative choice to competing economic commitments.",
+      "caveat": "The interview states developer intent and gives examples; its celebration of imbalance is not a universal prescription. A faction's defining restriction can narrow its own repeat-game options, and competitive multiplayer may require a different balance standard.",
+      "evaluation_inference": "Evaluate whether faction choice changes resource valuation, expansion, diplomacy, or goals, then separately evaluate whether each faction supports more than one responsive plan."
+    },
+    {
+      "id": "RP07",
+      "title": "How Endless Legend 2 Raises the Tide on Turn-Based Strategy Games",
+      "url": "https://news.xbox.com/en-us/2025/09/11/how-endless-legend-2-raises-the-tide-on-turn-based-strategy-games/",
+      "author": "Joe Robinson, Hooded Horse, with direct explanation from game director Derek Paxton",
+      "date": "2025-09-11",
+      "type": "publisher_article_with_primary_designer_account",
+      "access": "full design discussion read",
+      "topics": ["renewed exploration", "dynamic topology", "pacing", "player investment"],
+      "grounded_paraphrase": "Paxton describes Tidefall revealing land and changing access, safety, and expansion opportunities after initial exploration. Playtesting reduced eight small events to three larger ones. The team rejected a version that reclaimed developed territory, preferring fresh opportunities and manageable consequences over destroying investments outside player control.",
+      "concrete_example": "An old chokepoint can lose its value when a new land bridge opens; a safe rear city can become a frontier.",
+      "caveat": "A promotional, pre-release article with developer-reported testing, no sample sizes, and no controlled outcomes. Treat counts and timings as the 2025 design snapshot, not guaranteed current specifications.",
+      "evaluation_inference": "A later discovery should reconsider existing commitments, not merely append more territory. Test legible warnings, preparation options, useful responses, and whether disruption preserves a sense of earned progress."
+    },
+    {
+      "id": "RP08",
+      "title": "Weekly Update #1 - The Map",
+      "url": "https://www.atthegatesgame.com/news/weekly-update-1-the-map",
+      "author": "Jon Shafer",
+      "date": "2018-12-16",
+      "type": "primary_designer_development_blog",
+      "access": "full article read",
+      "topics": ["procedural maps", "starting information", "seasonal geography", "exploration tradeoffs"],
+      "grounded_paraphrase": "Shafer links terrain generation to climate and rivers, then makes seasons affect food, supply, and crossings. Resource identification provides partial information. Starting hints reveal selected distant points so an opening can respond to nearby opportunities and threats rather than choosing before useful evidence exists.",
+      "concrete_example": "Hints of huts favor an explorer while nearby bandit camps favor warriors; frozen large rivers permit routes unavailable in summer.",
+      "caveat": "Pre-release description establishes intended mechanics rather than overall game quality. The author explicitly recognizes that checking every tile with a surveyor can become tedious; adding an identification stage requires an actual decision.",
+      "evaluation_inference": "At the first consequential commitment, give enough information to distinguish plausible openings. Generate strategically different terrain relationships, not only plausible-looking scenery."
+    },
+    {
+      "id": "RP09",
+      "title": "Stellaris Dev Diary #30 - Late Game Crises",
+      "url": "https://store.steampowered.com/news/app/281990/view/2874941632495236027",
+      "accessible_text_url": "https://store.steampowered.com/news/posts/?appids=281990&enddate=1461592335&feed=steam_community_announcements",
+      "original_forum_url": "https://forum.paradoxplaza.com/forum/threads/stellaris-dev-diary-30-late-game-crises.921629/",
+      "author": "Henrik Fåhraeus",
+      "date": "2016-04-18",
+      "type": "primary_developer_diary",
+      "access": "full text read in official Steam announcement feed; direct Steam event page rendered only image; Paradox forum fetch restricted",
+      "topics": ["late-game uncertainty", "crises", "risk signalling", "strategic opportunities"],
+      "grounded_paraphrase": "Fåhraeus frames crises as a response to long cleanup after a player feels victorious. Risky technology use can invite danger; a crisis may threaten rivals and create an intervention-timing decision, technology opportunity, or geographic change, not only a stronger enemy to defeat.",
+      "concrete_example": "Intervening too early may rescue a rival; waiting may allow the new threat to become overwhelming.",
+      "caveat": "This is a 2016 launch-era design intention, not documentation of present Stellaris mechanics or proof that crises solve the ending problem. Repeated scripted threats can themselves become predictable.",
+      "evaluation_inference": "A crisis should introduce different choices, alliances, timing, or terrain concerns. Scaling an enemy's hit points alone can extend a foregone conclusion rather than restore strategic uncertainty."
+    },
+    {
+      "id": "RP10",
+      "title": "What makes eXploration in 4X games great",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/",
+      "date": "2024-12-13",
+      "author": "u/Giratakel and r/4Xgaming commenters",
+      "type": "player_discussion_anecdotal",
+      "access": "thread and opposing comments read",
+      "comment_urls": [
+        "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/comment/m2apr3t/",
+        "https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/comment/m2bzly6/"
+      ],
+      "topics": ["discovery payoff", "rare rewards", "terrain discovery", "different player tastes"],
+      "grounded_paraphrase": "Some commenters value rare discoveries that redirect a campaign, including unusual technology or units, rather than routine resource grants. Others dislike large random loot effects and prefer discovering good city sites or defensible chokepoints. Another view emphasizes that too many exceptional finds dilute their excitement.",
+      "concrete_example": "A valuable city location changes a settlement plan without relying on a jackpot reward.",
+      "caveat": "Self-selected small discussion, not representative evidence or a ranking of games. Individual claims about named games were not independently validated here.",
+      "evaluation_inference": "Separate curiosity, information value, narrative novelty, and power rewards in testing. Ask which kind of discovery changes plans and which kind makes the result feel unfair."
+    },
+    {
+      "id": "RP11",
+      "title": "4X games with the least routine decisions?",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/",
+      "date": "2023-05-23",
+      "author": "u/sidav94 and r/4Xgaming commenters",
+      "type": "player_discussion_anecdotal",
+      "access": "original post, automation discussion, and event disagreement read",
+      "comment_urls": [
+        "https://www.reddit.com/r/4Xgaming/comments/13q48t6/comment/jlcxddc/",
+        "https://www.reddit.com/r/4Xgaming/comments/13q48t6/comment/jld3ywc/"
+      ],
+      "topics": ["mid-game routine", "automation", "event fatigue", "decision density"],
+      "grounded_paraphrase": "The poster describes colony queues, unit movement, and updating ships becoming routine. Replies propose inspectable automation and fewer consequential actions, but also disagree about difficulty and preferred management depth. One player sees Stellaris events as lively mid-game decisions while another experiences notification spam.",
+      "concrete_example": "Automatic slider changes with immediate manual override are proposed as a way to preserve control while removing repetitive adjustments.",
+      "caveat": "Preference evidence only. Claimed exponential growth in routine is the poster's wording, not measured complexity. More events and more automation are both disputed, so neither should become a universal rule.",
+      "evaluation_inference": "Measure time spent making consequential choices separately from time spent acknowledging or maintaining an already chosen plan. Inspect whether automation can express intent and recover from exceptions."
+    },
+    {
+      "id": "RP12",
+      "title": "I love 4x games but they all start to feel the same",
+      "url": "https://www.reddit.com/r/4Xgaming/comments/1oauo5u/i_love_4x_games_but_they_all_start_to_feel_the/",
+      "date": "2025-10-19",
+      "author": "u/LosMosquitos and r/4Xgaming commenters",
+      "type": "player_discussion_anecdotal",
+      "access": "original post, clarification, and direct disagreement read",
+      "comment_urls": ["https://www.reddit.com/r/4Xgaming/comments/1oauo5u/comment/nkc6loj/"],
+      "topics": ["nominal variety", "optimization", "roleplay", "within-game replayability"],
+      "grounded_paraphrase": "The poster clarifies that different factions within a game still seem to lead to similar optimized decisions. A respondent reports strong differences among Stellaris empire types and recommends roleplay; the poster says they naturally optimize rather than roleplay. This exposes an audience difference rather than resolving the dispute.",
+      "concrete_example": "Different religious or cultural labels may still feel identical if the player's useful choices repeatedly converge on the same economic and military priorities.",
+      "caveat": "This is neither a controlled analysis of those games nor evidence that faction differences are objectively superficial. DLC, difficulty, personal habits, and willingness to self-impose goals differ between participants.",
+      "evaluation_inference": "Test replayability with optimizers as well as roleplayers. Distinguish a game's capacity for expressive stories from its capacity for several competitively credible plans."
+    }
+  ],
+  "excluded_or_context_only": [
+    {
+      "title": "Soren Johnson X profile",
+      "url": "https://x.com/SorenJohnson",
+      "status": "403 Forbidden on direct fetch; several X/Twitter-focused searches yielded no usable relevant post",
+      "usage": "No post or snippet used as evidence. Do not describe this as X discussion that was read."
+    },
+    {
+      "title": "My Elephant in the Room: An Old World Postmortem",
+      "url": "https://www.gdcvault.com/play/1027656/contactUs",
+      "date": "2022",
+      "status": "GDC session metadata and synopsis inspected; full talk not watched",
+      "usage": "Optional primary-talk pointer only. Do not attribute details from the full talk to this research pass."
+    },
+    {
+      "title": "One Civ, Many Worlds",
+      "url": "https://civfanatics.com/misc/one-civ-many-worlds/",
+      "author": "Soren Johnson",
+      "date": "2006-11-02",
+      "status": "Read as context; not used among the 12 core sources",
+      "usage": "Supports community diversity and modding context; less directly relevant to this focused randomness/replayability brief."
+    }
+  ]
+}

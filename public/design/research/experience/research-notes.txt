@@ -1,0 +1,124 @@
+4X PLAYER EXPERIENCE RESEARCH — 29 OCTOBER 2026
+
+Scope and evidence discipline
+
+This is research for later guides and a later game critique. No workspace implementation was examined or scored. The accompanying JSON records twelve core sources with original URLs, dates, access status and limits. Source IDs below refer to that ledger.
+
+Developer posts reveal intended tradeoffs and historical changes. Player discussions reveal concrete friction, vocabulary and disagreement; they do not measure prevalence. EXP12 supplies measured/self-reported usability research, but its late-game and console conclusions have substantial limits. Most recommendations below are design hypotheses to test in the actual game. X was searched but no primary post content was readable; there are no X-derived claims.
+
+Central synthesis
+
+1. A visible number is insufficient when a player cannot connect it to an action. Group information around the decision: relevant costs, prerequisites, current state, expected change and where to act. EL2's developer account specifically identifies designer-defined screen divisions that frustrated players. [EXP01]
+
+2. Count strategic choices separately from input and recall. Routine orders can feel like work when the player sees no meaningful alternative, while fine control can itself be enjoyable. A shared action budget is one possible mechanical response, with comprehension costs of its own; it is not a universal UI fix. [EXP02, EXP09]
+
+3. Assistance should preserve the player's attention and declared intent. Pending-action reminders can prevent forgetting; forced camera jumps can break a battle plan. Let players visit, defer or suppress appropriate items, and communicate what truly blocks turn completion. [EXP08]
+
+4. Delegation needs a legible contract: objective, scope, resource budget, excluded resources, active state, pending action and how a manual override behaves. Removing an extra stockpile reduced one confusing automation prerequisite in historical Stellaris. [EXP03]
+
+5. Planning tools should externalize arithmetic and intention while supporting different planning appetites. Validate placement, preview outcomes and keep notes through saves; do not assume every player enjoys annotating an entire empire. [EXP06, EXP11]
+
+6. Onboarding should produce a viable basic play loop and a reason to care before teaching every optimization. Contextual help and reversible mistakes can support learning, but the interface still needs readable sizing. [EXP04]
+
+7. Late-game pacing needs its own design and testing. Extra units and cities can multiply effort after their individual effect shrinks. A clearer UI cannot alone repair an ending whose strategic contest is already resolved. [EXP05, EXP07]
+
+8. Functional readability and evocative presentation are different evaluation axes. Players disagree about ornate versus understated styling; contrast, text size, consistency and discoverable information can be tested independently. [EXP10]
+
+Important disagreements and constraints
+
+Automation versus ownership: some players want a commander role; others enjoy cumulative small efficiencies and feel detached when details disappear. First reduce repeated execution, navigation and memory burdens. Consider standing policies, batch commands or templates before delegating the actual tradeoff. Measure whether the player still feels responsible for results. [EXP08, EXP09]
+
+Guidance versus interruption: a prompt can act as a useful safety net or an intrusive itinerary. Single-player contemplation, simultaneous multiplayer, novice play and expert play create different needs. Optional cycling and stable local context are hypotheses, not confirmed universal solutions. [EXP08]
+
+Advance planning versus improvisation: long planning sessions can be pleasurable investment, unpleasant homework or both for different people. Instant local previews and optional persistent markers serve different purposes. Protect the ability to revise plans when scouting, opponents or immediate needs change. [EXP06, EXP11]
+
+Fast interface versus fast game: an action can take few clicks while progress remains slow. Conversely, taking time over a consequential decision can be engaging. EXP12 is a useful reminder to separate these dimensions, with limited causal force. [EXP12]
+
+Evaluation criteria for the later critique
+
+Use a 0–3 score only after observation: 0 blocks reliable play; 1 works through recall, hidden knowledge or repeated searching; 2 understandable with minor friction; 3 clear, efficient and supports intentional expert control. Mark unobserved rather than inventing a score. These scoring anchors are proposed evaluation tools, not published benchmarks.
+
+Criterion A — Strategic orientation
+Question: Can the player state their present objective, immediate threat and plausible next milestone from the current view?
+Good pattern: visible goals, progress and contextual warning; inspectable rivals and constraints.
+Anti-pattern: nominally rich dashboard without a reason to choose an action.
+Test: pause after an unfamiliar turn start, ask for the next two priorities and why; inspect whether subsequent play supports those explanations. [EXP01, EXP05]
+
+Criterion B — Action discoverability
+Question: Can players find the legal action they intend and explain a disabled one?
+Good pattern: consistent verbs, predictable placement, explicit prerequisites, clear active selection.
+Anti-pattern: actionable locations indistinguishable from scenery, unexplained disabled controls, incompatible interaction order across similar tasks.
+Test: first-time tasks to build, research, move, inspect an enemy and recover from an invalid action. Log completion, assistance and wrong-target actions. [EXP01, EXP04]
+
+Criterion C — Consequence legibility
+Question: Before committing, can players predict cost, net gain, timing and relevant losses?
+Good pattern: current-to-projected deltas, validity checks and understandable attribution.
+Anti-pattern: generic modifier descriptions requiring off-screen arithmetic; a gain shown without upkeep or displacement.
+Test: ask for a prediction, perform the action, compare prediction with actual state; record surprise and its cause. [EXP06]
+
+Criterion D — Information hierarchy and comparison
+Question: Are overview, detail and action connected without repeated scanning or losing the compared option?
+Good pattern: totals with drill-down, related panels together, persistent selection, useful sorting/filtering.
+Anti-pattern: visual uniformity for urgent and routine data; decision inputs dispersed across mutually exclusive windows.
+Test: compare two candidate builds and identify why a resource changed; log panel switches and lost context. [EXP01]
+
+Criterion E — Map and text legibility
+Question: Can players identify ownership, terrain, units, selection, threat and action availability at actual play scale?
+Good pattern: distinguishable symbols and state treatments, adequate text sizing, usable overlay and zoom states.
+Anti-pattern: decorative detail obscures state; subtle text/icons on similar backgrounds; large empty panels with tiny information.
+Test: timed recognition tasks at supported screen sizes, zoom levels and settings; distinguish correctness from aesthetic ratings. [EXP10, EXP04]
+
+Criterion F — Turn agency and recovery
+Question: Can the player maintain their chosen focus, find unfinished work and recover from a mistaken input?
+Good pattern: explicit pending-work list, stable selection, intentional next-item control, safe undo where rules permit.
+Anti-pattern: camera steals, action prompts that reorder thought, unexpected commitment, unclear skip semantics.
+Test: manage a local front while several distant items await orders; count interruptions and attempted recovery. [EXP08, EXP04]
+
+Criterion G — Sustainable management
+Question: Does empire growth create new strategic problems or mostly multiply repeated chores?
+Good pattern: durable assignments, queues/templates, batch execution, exceptions surfaced prominently.
+Anti-pattern: every settlement requires the same obvious response each turn; efficient play depends on repeatedly reopening unchanged panels.
+Test: compare opening, medium and large saves; log actions by purpose and the share the player calls routine. [EXP07, EXP09]
+
+Criterion H — Trustworthy automation
+Question: Can the player tell what is delegated, why it acted and how to intervene?
+Good pattern: explicit budget/reserves and exclusions; observable decisions; manual priority with a clear release condition.
+Anti-pattern: hidden extra funding requirement; automation silently changes role or reverses an explicit order.
+Test: delegate a constrained task, reserve a scarce resource, issue a manual exception and inspect the result after several turns. [EXP03, EXP08]
+
+Criterion I — Learnable strategic depth
+Question: Can a newcomer complete a coherent opening without mastering every subsystem, then discover a useful improvement?
+Good pattern: contextual explanation, staged goals, optional details and feedback after experimentation.
+Anti-pattern: comprehensive information dump, unexplained terminology, failure caused by a hidden mandatory optimization.
+Test: observe a first session without coaching; later ask the player to explain one choice and one lesson they would apply next time. [EXP04]
+
+Criterion J — Momentum and emotional payoff
+Question: Is progress visible, do intermediate achievements feel earned, and does the contest end near its meaningful resolution?
+Good pattern: milestones tied to player intent, sustained uncertainty, sufficient warning of rival victory, concise resolution.
+Anti-pattern: invisible progress, abrupt unexplained loss, long uncontested cleanup, narrative events detached from consequences.
+Test: ask for memorable decisions and anticipated payoffs; review the interval from perceived inevitability to formal ending. [EXP05, EXP07]
+
+Suggested observation protocol
+
+Use at least a newcomer and an experienced 4X player initially, then expand only if it resolves important uncertainty. Test a fresh game plus prepared middle/late saves; do not infer scaling quality from a polished first ten minutes. Keep seeds/state comparable when comparing revisions.
+
+Record task success, unsolicited help, navigation steps, incorrect predictions, unintended actions, interruption/recovery, turn duration and turn duration by activity: deliberation, navigation, execution, animation/system wait. Separate progress-per-turn from input-time-per-turn. Collect confidence and perceived control after tasks, with workload and desire to continue after the session. Ask what a player was trying to do before prescribing a fix.
+
+Proposed indicators, not genre standards: meaningful decision versus routine execution ratio; repeated actions per city; time finding information; consequence-prediction accuracy; minutes to resume a saved plan; automation overrides that fail; turns of uncontested cleanup. Raw click count alone is inadequate: previews may increase exploration while improving decisions, and a deliberate long turn may be enjoyable.
+
+Questions to carry into implementation critique
+
+- What strategic question does each primary panel help answer?
+- Which frequent actions have more than one defensible option in the current situation?
+- Which decisions require remembering facts already known to the game?
+- What can be predicted before commitment, and what must be learned by accidental loss?
+- Where does a display report gross output while the relevant choice depends on net output?
+- Does ending a turn communicate unfinished priorities without commandeering focus?
+- At what empire size does management effort grow faster than perceived strategic payoff?
+- Can a player delegate routine execution while preserving a chosen strategy and reserved resources?
+- Can a returning player reconstruct the intended plan from the save itself?
+- What is the next emotionally meaningful payoff, and how long is the player asked to work after victory feels certain?
+
+Source access note
+
+The source ledger contains exact URLs and access limitations. The downloaded thesis was checked directly to avoid repeating its broad abstract claims without caveats: there were no completed direct PC-versus-console comparison tests, Civ VI console had only two responses, and late-game pace was outside its task scope. No current-game feature claim should be inferred from a historical source.

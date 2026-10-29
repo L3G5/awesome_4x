@@ -118,9 +118,9 @@ test('the hidden importer is skipped by Tab and still opens from the menu', asyn
   for (let step = 0; step < 2; step++) {
     await page.keyboard.press('Tab');
     await expect(page.locator('#import-save')).not.toBeFocused();
-    if (await page.locator('#briefing-button').evaluate(element => element === document.activeElement)) break;
+    if (await page.locator('.top-actions [data-action="language"]').evaluate(element => element === document.activeElement)) break;
   }
-  await expect(page.locator('#briefing-button')).toBeFocused();
+  await expect(page.locator('.top-actions [data-action="language"]')).toBeFocused();
   await page.getByRole('button', { name: 'Game menu' }).click();
   const fileChooser = page.waitForEvent('filechooser');
   await page.locator('[data-action="import"]').click();

@@ -24,7 +24,7 @@ for (const width of [1280, 390]) test(`construction categories retain keyboard f
   await opener.click();
   await expect(page.locator('.modal .close-modal')).toBeFocused();
   const tab = kind => page.locator(`.modal [data-action="construction-tab"][data-tab="${kind}"]`);
-  for (let i = 0; i < 3; i++) await page.keyboard.press('Tab');
+  await tabTo(page, tab('ship'));
   await expect(tab('ship')).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(tab('ship')).toBeFocused();

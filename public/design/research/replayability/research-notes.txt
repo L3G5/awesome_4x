@@ -1,0 +1,84 @@
+RESEARCH NOTES: VARIATION THAT PRODUCES NEW 4X DECISIONS
+Research date: 2026-10-29
+Scope: general design research; no current-game implementation review.
+Companion: source-ledger.json contains 12 core sources, exact URLs, dates, source types, access limits, caveats, and supporting comment permalinks.
+
+Working synthesis
+
+Replayability is the capacity for another campaign to ask worthwhile questions whose useful answers depend on its circumstances. Procedural layouts, faction count, event count, and random outcomes are possible ingredients, not measures of success. Separate at least four kinds of replay value: strategic adaptation, discovery and surprise, role expression and narrative, and growing mastery. A design can succeed at one and disappoint players seeking another. The optimizer/roleplayer disagreement in RP12 makes that distinction concrete.
+
+The strongest common thread is a chain: information or uncertainty creates a changed situation; that situation supports competing responses; a response changes later possibilities; the interface lets the player understand why. Randomness contributes little when it only perturbs a number beneath an unchanged best response. Conversely, a large surprise may be memorable while undermining the value of hours of prior decisions.
+
+Evidence quality
+
+This corpus supplies design arguments, described mechanisms, developer-reported iteration, and player anecdotes. It does not establish a measured causal relationship between any mechanic and retention, enjoyment, or completion rate. Treat the following criteria as hypotheses for playtesting. Do not present the sources as a consensus or claim that most 4X players share the sampled Reddit preferences. No X post was successfully read; direct access returned 403. GDC session metadata was read, but the full postmortem was not watched.
+
+Key distinctions to retain in both guides
+
+1. Input randomness occurs before the relevant decision: the player sees a generated map, research offer, or event and chooses a response. Output randomness resolves something after commitment, such as a hit roll. This is timing relative to a particular decision, not a moral ranking. An anomaly choice may be an informed response to a random offer while its unknown payout is output randomness relative to committing the expedition. RP02: https://keithburgun.net/good-randomness/
+
+2. Timing, distribution, and consequence are separate design variables. A small shuffled offer can be predictable enough to solve; a pre-game random starting advantage can still dominate an entire campaign. Ask what the player knows, can influence, can insure against, can substitute for, and can recover from. RP01: https://www.designer-notes.com/game-developer-column-9-playing-the-odds-3/ and RP02 above.
+
+3. Between-faction diversity differs from within-faction strategic diversity. A faction can change a core rule yet prescribe essentially one opening and one victory route. Compare what players value, build, claim, negotiate, and sacrifice; then test how those choices vary across maps, opponents, and discoveries for the same faction. RP06: https://www.pcgamer.com/how-the-endless-series-reimagined-the-4x-strategy-genre/
+
+4. Surprises, choices, and chores are different. A new paragraph can be a surprise with a rote button; an old terrain type can create a new strategic dilemma. Track changed plans and persistent consequences, not pop-up volume. RP04: https://www.designer-notes.com/old-world-designer-notes-9-events/ and RP11: https://www.reddit.com/r/4Xgaming/comments/13q48t6/4x_games_with_the_least_routine_decisions/
+
+Actionable evaluation criteria
+
+A. Opening decisions depend on information.
+Ask a player what facts justified their first consequential build and research choices. If the same order is chosen before any useful information arrives, determine whether that is a deliberately short onboarding scaffold or a long rote opening. Test starts with different nearby threats, resources, routes, and expansion pressure. Jon Shafer's starting hints are a concrete example of supplying enough evidence for an explorer/warrior opening decision, rather than withholding everything behind fog. RP08: https://www.atthegatesgame.com/news/weekly-update-1-the-map
+
+B. Repeated games change priorities, not just locations.
+Across selected seeds, annotate the first several real commitments: early expansion, economy, defense, research, diplomacy, and discovery pursuit. Compare the reasons, not just the clicked labels. A recurring action can still be meaningful when its timing, target, and opportunity cost change. Conversely, different icons can implement the same repeated maximization. This is an evaluation inference from RP03, RP08, and RP12, not a published benchmark.
+
+C. Several plans are credible under identifiable conditions.
+For each claimed strategy, state where it is attractive, what it sacrifices, what can counter it, and what evidence causes a pivot. Test a faction across hostile and favorable contexts; test different players on the same map. Distinguish diverse successful strategies from cosmetic variants of one economy, and distinguish a strategy that is hard to execute from one that is simply inferior. Do not demand equal win rates in every matchup or seed. RP03: https://www.designer-notes.com/old-world-designer-notes-4-the-technology-deck/ and RP06 above.
+
+D. Random restrictions produce interesting adaptation with legible recourse.
+A research draw should make the best available choice debatable while retaining enough predictability to plan. Check whether a missing option creates a new route or merely postpones an essential button. Check for visible pool/discard state, meaningful redraw costs, substitutes, trade, or another way to pursue intent. Old World's tech deck makes delay and non-selection part of opportunity cost; it does not prove every randomized tree is better. RP03 above.
+
+E. Generated maps retain viable alternatives.
+Sample resource access, travel barriers, expansion room, defensible positions, and contact timing together. Inspect outliers manually: an average-looking map statistic can hide a start with no credible route forward. Constrained generation can preserve variety while preventing critical resource lockout. Deterministic fairness is not required; constraints should match the intended experience and resource role. RP01 above. Climate-shaped terrain and seasonal crossings illustrate how topology can affect choices instead of remaining scenery. RP08 above.
+
+F. Exploration changes a plan or reveals a valued possibility.
+For a discovery, ask what the player now wants to do, what it will cost, and what might prevent it. A landmark might create a settlement race, a diplomatic bargaining asset, a dangerous detour, a unique capability, or a narrative commitment. Distinguish information value from a raw power prize. Reddit players explicitly disagree about large loot swings, while some value a newly found chokepoint with no jackpot. RP10: https://www.reddit.com/r/4Xgaming/comments/1hdj6x0/what_makes_exploration_in_4x_games_great/
+
+G. Later discoveries reopen meaningful uncertainty.
+Once initial geography is known, remaining unknowns can involve capability, relationships, ownership, access, hidden resources, or changing terrain. Avoid preserving exploration solely by inflating empty map area. Tidefall is a concrete example that changes existing defensive and expansion relationships while revealing new land. Its reduction from many small changes to fewer larger changes is reported iteration, not a universal frequency rule. RP07: https://news.xbox.com/en-us/2025/09/11/how-endless-legend-2-raises-the-tide-on-turn-based-strategy-games/
+
+H. Mid-game engagement is measured per real minute.
+Observe both consequential decision frequency and the time available to think. A continuously interrupted player is not necessarily engaged. Log time spent planning, executing a plan, maintaining queues, reading repeated events, waiting, and resolving exceptions; pair this with player reports. Automation should make intent expressible, expose important exceptions, and support manual correction. RP11 above contains disagreement over whether events alleviate boredom or add spam; preserve both views.
+
+I. The late game changes the strategic question or ends promptly.
+Ask when the player believes the result is settled and why. If the only remaining action is processing a known answer across many units, shortening resolution may help more than adding another feature. If adding a crisis, test intervention timing, negotiations, changed routes, new objectives, and preparation. RP09: https://store.steampowered.com/news/app/281990/view/2874941632495236027 (full accessible official text: https://store.steampowered.com/news/posts/?appids=281990&enddate=1461592335&feed=steam_community_announcements). An enemy with larger numbers can recreate the same military optimization.
+
+J. Goals support commitment and reconsideration.
+Players need enough continuity to experience earned progress and enough flexibility to use discoveries. Dynamic ambitions illustrate goals selected during play, but fixed long-term victories can provide a satisfying plan for other audiences. Test whether a pivot is strategically motivated and feasible, rather than the consequence of a random instruction that ignores the campaign. RP05: https://www.designer-notes.com/old-world-designer-notes-11-the-end/
+
+Harmful patterns and diagnostic examples
+
+- Variety measured by content count: twenty extra anomalies all grant interchangeable small resource rewards. Check whether the new content changes choices or merely increases reading. RP04, RP10.
+- A global best opening: every map and faction uses the same long build/research sequence because early uncertainty is irrelevant or because one return dominates. Supply useful early context and investigate underlying incentives before randomizing the menu. RP03, RP08, RP12.
+- Jackpot exploration: a rare opening gift compounds into an unanswerable lead; losing players experience the rest as cleanup. Bound or contextualize consequences and evaluate whole-campaign effects, not just immediate payout. RP01, RP02, RP10.
+- Critical-resource roulette: one essential military resource is inaccessible and alternatives do not exist. This can erase agency while leaving the player technically alive. RP01's Civ III/Civ IV contrast is the direct case.
+- Fake faction asymmetry: names and percentage bonuses vary, but the same assets and priorities remain optimal. Conversely, extreme asymmetry with one mandatory route creates novelty once and repetition thereafter. RP06, RP12; the latter sentence is inference.
+- Repeated event work: the player learns the preferred answer once and then repeatedly acknowledges it. Persistent traits, branching consequences, and contextual costs can help, but only if they matter at the moment. RP04, RP11.
+- Surveyor busywork: every tile must be clicked in a known sequence with no opportunity cost, changing priorities, or risk. RP08 explicitly discusses this problem in its inspiration.
+- Late-game postponement: another huge hostile force appears, but the player already knows the answer is more of the same fleet. A crisis needs a different strategic problem; otherwise consider ending sooner. RP09; this criticism is inference, not a measured conclusion about current Stellaris.
+- Surprise destruction of investment: the world removes established progress without understandable warning or counterplay. RP07 reports rejecting destructive water returns; predictable, chosen, or preventable loss may suit other designs and audiences.
+- Forced single-track victory: an early declared goal makes every later choice automatic. Also watch the opposite failure, random objectives that destroy coherent intent. RP05 provides one developer's position rather than consensus.
+
+Disagreements worth preserving
+
+- High-impact discoveries versus reliably rewarding geographic information: both appear in RP10. Do not turn one taste into a universal mandate for more randomness.
+- Strong faction imbalance versus competitive fairness: RP06 deliberately embraces extremes. Different audiences and multiplayer formats can require different standards.
+- More events versus notification fatigue: directly opposed views coexist in RP11. Presentation options can reduce interruption, but do not turn shallow choices into deep ones.
+- Roleplay versus optimization: RP12's participants differ in whether self-imposed behavior creates sufficient variety. Test both rather than treating optimizing players as playing incorrectly.
+- Stable long plans versus adaptive goals: RP05 criticizes predetermined victory specialization, but that criticism does not invalidate the appeal of planning toward a clear destination.
+- Early randomness versus compounding: RP01 favors time to react; RP02 warns accumulated random value can still dominate. More elapsed turns only help if the system permits useful responses.
+
+Suggested study protocol (original recommendations, no empirical thresholds claimed)
+
+Use a small purposive matrix before a large playtest: several distinct map types, contrasting resource access and contact timings, multiple factions, repeat runs of the same faction, and players who prefer optimization or expression. Keep some matched seeds to distinguish player decisions from map luck. For each run, record opening rationale, major pivots and causes, discovery consequences, manual maintenance time, uncertainty about victory, and the moment the player wants to stop or restart. Pair telemetry with brief post-session questions; success and action diversity alone do not identify enjoyment.
+
+Useful observables include choice concentration by context, recurring policy sequences, alternative-plan success under suitable conditions, resets caused by starting position, number and durability of discovery-driven pivots, fraction of player time spent maintaining settled decisions, and the gap between perceived result and formal ending. These are diagnostics, not metrics to maximize blindly. Different decisions can still be bad decisions; a meaningful common choice can appear repeatedly for good reasons.

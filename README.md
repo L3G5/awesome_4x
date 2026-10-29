@@ -18,6 +18,8 @@ The seeded galaxy contains 42 systems and four civilizations. Orders limit what 
 - Split, merge, repair and hold fleets; inspect invasion forecasts and recorded combat exchanges.
 - Win by holding all four founding worlds, maintaining a funded Beacon network, or leading in Legacy at the final cycle.
 
+Use **Русский** in the top bar or any dialog to switch the interface to Russian; **English** switches back. The preference stays in this browser and leaves saves unchanged. The Field Guide and design documentation remain in English.
+
 The game autosaves in your browser. Export a JSON campaign from the menu to keep a backup or move it to another browser. The in-game Field Guide explains the rules and controls.
 
 ## Run locally
@@ -37,6 +39,10 @@ npm run preview
 ```
 
 The simulation in `src/game.js` is independent of rendering. Separate modules handle rival strategy, diplomacy, sensors, colony development, navigation, discoveries, victory and historical reports. `src/galaxy.js` renders the Three.js map; `src/main.js` coordinates player interaction.
+
+## Design research
+
+The [good 4X guide](https://l3g5.github.io/awesome_4x/design/good-4x.html) and [bad 4X guide](https://l3g5.github.io/awesome_4x/design/bad-4x.html) examine meaningful choices, randomness, replayability, pacing, UI and player control. They preserve source disagreements and provide concrete review tasks, based on 33 distinct sources.
 
 ## Validate and investigate
 
