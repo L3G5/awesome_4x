@@ -1,0 +1,186 @@
+{
+  "url": "http://127.0.0.1:33231",
+  "source": "14b36d1a14c54264ac8e9b37aec2260ccbb461cb",
+  "browser": "146.0.1",
+  "hasTouch": true,
+  "isMobile": false,
+  "selectors": [
+    ".modal [data-action=\"language\"]",
+    "[data-action=\"begin\"]",
+    ".galaxy-fleet[data-fleet-id=\"f1\"]",
+    "#inspector .building-pills [data-system-select=\"s20\"]",
+    "#inspector .building-pills [data-system-select=\"s9\"]",
+    "[data-action=\"plan-route\"]",
+    "[data-action=\"fleet-hold\"]",
+    ".route-stop[data-system-select=\"s20\"]",
+    "[data-action=\"move\"]"
+  ],
+  "values": [
+    {
+      "language": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "main": {
+        "bounds": {
+          "x": 48,
+          "y": 95,
+          "width": 342,
+          "height": 523.2666625976562,
+          "right": 390,
+          "bottom": 618.2666625976562
+        },
+        "overflow": "hidden"
+      },
+      "actions": {
+        "bounds": {
+          "x": -1.383331298828125,
+          "y": 478.26666259765625,
+          "width": 369.3833312988281,
+          "height": 29,
+          "right": 368,
+          "bottom": 507.26666259765625
+        },
+        "overflowX": "visible",
+        "scrollWidth": 369,
+        "clientWidth": 369,
+        "flexWrap": "nowrap"
+      },
+      "buttons": [
+        {
+          "text": "Продолжить · не более Прыжков: 1",
+          "action": "continue-route",
+          "bounds": {
+            "x": -1.383331298828125,
+            "y": 478.26666259765625,
+            "width": 181.98333740234375,
+            "height": 29,
+            "right": 180.60000610351562,
+            "bottom": 507.26666259765625
+          }
+        },
+        {
+          "text": "⌖",
+          "action": "fit-route",
+          "bounds": {
+            "x": 186.60000610351562,
+            "y": 478.76666259765625,
+            "width": 25.066665649414062,
+            "height": 28,
+            "right": 211.6666717529297,
+            "bottom": 506.76666259765625
+          }
+        },
+        {
+          "text": "Перестроить маршрут",
+          "action": "replot-route",
+          "bounds": {
+            "x": 217.6666717529297,
+            "y": 478.26666259765625,
+            "width": 119.38333129882812,
+            "height": 29,
+            "right": 337.0500030517578,
+            "bottom": 507.26666259765625
+          }
+        },
+        {
+          "text": "×",
+          "action": "clear-route",
+          "bounds": {
+            "x": 343.04998779296875,
+            "y": 478.76666259765625,
+            "width": 24.949996948242188,
+            "height": 28,
+            "right": 367.99998474121094,
+            "bottom": 506.76666259765625
+          }
+        }
+      ],
+      "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778"
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "main": {
+        "bounds": {
+          "x": 48,
+          "y": 95,
+          "width": 342,
+          "height": 523.2666625976562,
+          "right": 390,
+          "bottom": 618.2666625976562
+        },
+        "overflow": "hidden"
+      },
+      "actions": {
+        "bounds": {
+          "x": 133.68333435058594,
+          "y": 494.26666259765625,
+          "width": 234.31666564941406,
+          "height": 28,
+          "right": 368,
+          "bottom": 522.2666625976562
+        },
+        "overflowX": "visible",
+        "scrollWidth": 234,
+        "clientWidth": 234,
+        "flexWrap": "nowrap"
+      },
+      "buttons": [
+        {
+          "text": "Continue · up to 1 jump",
+          "action": "continue-route",
+          "bounds": {
+            "x": 133.68333435058594,
+            "y": 494.26666259765625,
+            "width": 119.7833251953125,
+            "height": 28,
+            "right": 253.46665954589844,
+            "bottom": 522.2666625976562
+          }
+        },
+        {
+          "text": "⌖",
+          "action": "fit-route",
+          "bounds": {
+            "x": 259.4666748046875,
+            "y": 494.26666259765625,
+            "width": 25.066680908203125,
+            "height": 28,
+            "right": 284.5333557128906,
+            "bottom": 522.2666625976562
+          }
+        },
+        {
+          "text": "Replot",
+          "action": "replot-route",
+          "bounds": {
+            "x": 290.5333251953125,
+            "y": 494.26666259765625,
+            "width": 46.51666259765625,
+            "height": 28,
+            "right": 337.04998779296875,
+            "bottom": 522.2666625976562
+          }
+        },
+        {
+          "text": "×",
+          "action": "clear-route",
+          "bounds": {
+            "x": 343.04998779296875,
+            "y": 494.26666259765625,
+            "width": 24.949996948242188,
+            "height": 28,
+            "right": 367.99998474121094,
+            "bottom": 522.2666625976562
+          }
+        }
+      ],
+      "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778"
+    }
+  ]
+}

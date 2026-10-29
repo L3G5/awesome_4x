@@ -1,0 +1,102 @@
+[
+  {
+    "type": "tap",
+    "selector": ".modal [data-action=\"language\"]",
+    "at": "2026-10-29T18:10:38.058Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:10:38.154Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".galaxy-fleet[data-fleet-id=\"f1\"]",
+    "at": "2026-10-29T18:10:38.261Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#inspector .building-pills [data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:10:38.520Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#inspector .building-pills [data-system-select=\"s9\"]",
+    "at": "2026-10-29T18:10:38.626Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"plan-route\"]",
+    "at": "2026-10-29T18:10:38.700Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"fleet-hold\"]",
+    "at": "2026-10-29T18:10:38.801Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".route-stop[data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:10:38.889Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"move\"]",
+    "at": "2026-10-29T18:10:39.159Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:10:39.385Z"
+  },
+  {
+    "type": "state-equal",
+    "label": "RU to EN moved state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:10:39.407Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:10:39.549Z"
+  },
+  {
+    "type": "state-equal",
+    "label": "EN to RU moved state",
+    "sha256": "55ea76b9466ac40f297fc89f240f07501ced08cd306760ee4278e3d977085778",
+    "at": "2026-10-29T18:10:39.565Z"
+  },
+  {
+    "type": "key",
+    "key": "Control+z",
+    "at": "2026-10-29T18:10:39.647Z"
+  },
+  {
+    "type": "state-equal",
+    "label": "movement Undo restores original held-route state",
+    "sha256": "61b6f9e5b96669fcdb56c5b1f4132c0356ac6a07b83c48c054944d12c269f6f0",
+    "at": "2026-10-29T18:10:39.665Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:10:39.772Z"
+  },
+  {
+    "type": "state-equal",
+    "label": "RU to EN held state",
+    "sha256": "61b6f9e5b96669fcdb56c5b1f4132c0356ac6a07b83c48c054944d12c269f6f0",
+    "at": "2026-10-29T18:10:39.791Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".top-actions [data-action=\"language\"]",
+    "at": "2026-10-29T18:10:39.899Z"
+  },
+  {
+    "type": "state-equal",
+    "label": "EN to RU held state",
+    "sha256": "61b6f9e5b96669fcdb56c5b1f4132c0356ac6a07b83c48c054944d12c269f6f0",
+    "at": "2026-10-29T18:10:39.925Z"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "type": "tap",
+    "selector": ".modal [data-action=\"language\"]",
+    "at": "2026-10-29T18:10:05.567Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"begin\"]",
+    "at": "2026-10-29T18:10:05.620Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".galaxy-fleet[data-fleet-id=\"f1\"]",
+    "at": "2026-10-29T18:10:05.697Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#inspector .building-pills [data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:10:05.864Z"
+  },
+  {
+    "type": "tap",
+    "selector": "#inspector .building-pills [data-system-select=\"s9\"]",
+    "at": "2026-10-29T18:10:05.944Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"plan-route\"]",
+    "at": "2026-10-29T18:10:06.008Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"fleet-hold\"]",
+    "at": "2026-10-29T18:10:06.072Z"
+  },
+  {
+    "type": "tap",
+    "selector": ".route-stop[data-system-select=\"s20\"]",
+    "at": "2026-10-29T18:10:06.139Z"
+  },
+  {
+    "type": "tap",
+    "selector": "[data-action=\"move\"]",
+    "at": "2026-10-29T18:10:06.289Z"
+  }
+]

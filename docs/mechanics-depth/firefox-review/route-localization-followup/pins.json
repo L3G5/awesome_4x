@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "14b36d1a14c54264ac8e9b37aec2260ccbb461cb",
+  "originalSourceCommit": "635e8256af87327aa8a4eab92bb6d95baede5fe5",
+  "buildInfo": {
+    "version": "0.23.0",
+    "commit": "14b36d1a14c54264ac8e9b37aec2260ccbb461cb",
+    "builtAt": "2026-10-29T18:08:41.015Z"
+  },
+  "sourceSHA256": {
+    "src/game.js": {
+      "original": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1",
+      "corrected": "815c12e5dd6a12d83b5d9a8b89b4c653a8b0955f880b2d93910af76b8bd482e1"
+    },
+    "src/turn-history.js": {
+      "original": "a4a9d99083441c9174e9d03be7c543912e0787d7a47b888f7c9cba47b7d644e2",
+      "corrected": "a4a9d99083441c9174e9d03be7c543912e0787d7a47b888f7c9cba47b7d644e2"
+    },
+    "src/main.js": {
+      "original": "a068862f2a7d18c21e248ea7b5b36bd3d80b9b8ed034ec4e19fb5a44fe063b78",
+      "corrected": "a068862f2a7d18c21e248ea7b5b36bd3d80b9b8ed034ec4e19fb5a44fe063b78"
+    },
+    "src/undo.css": {
+      "original": "6e07e3a160a7f2c38715bc64f35726d5873b7dd8057ce691fd3bbcbd26cd704e",
+      "corrected": "6e07e3a160a7f2c38715bc64f35726d5873b7dd8057ce691fd3bbcbd26cd704e"
+    },
+    "src/mobile-inspection.css": {
+      "original": "d58d35d9e70107f8f956fa679b4ebd6f5545621fa92e2d59f5875b16b30fdd01",
+      "corrected": "d58d35d9e70107f8f956fa679b4ebd6f5545621fa92e2d59f5875b16b30fdd01"
+    },
+    "src/navigation-ui.js": {
+      "original": "63ffb2ac8dcec7cbc432db2de94d19c9bfc21ed4d37ab1d6fd06fe367bdeef92",
+      "corrected": "314a5ae1276a0412b58094aa66a7400f7c6ddb40fd5b7965de47c6de2c8add2f"
+    },
+    "src/locales/bindings.js": {
+      "original": "21031141ae10f23256b6349d5444949c5c9ef4921cd59c594d7ff10fd28c7d8e",
+      "corrected": "e0463d8bc3d4897c659a86ccd562b6f1d503bed9e0e2d09e8e78c23b2653e1e5"
+    },
+    "src/locales/ru.js": {
+      "original": "121557b041bc1a787b3bbbdec0909dcf341874f9144dc6658442c8602986eae3",
+      "corrected": "84640601f19fedf228c8a5575558da5e9a01f62173456b3a6433ea4fc9c56975"
+    }
+  },
+  "builtSHA256": {
+    "assets/index-BJfk59cn.js": "47d3eba4736af187fae9e5f0d3e287535d683e1ab797016a04c4e1d8b21203c8",
+    "assets/index-nkioJQR0.css": "319148a0324a50d165d5f3c01eed746bb5ce3b3d4e9c00f2e62b293a1203a0de"
+  },
+  "original48EntryManifestUnchanged": true,
+  "originalManifestSHA256": "4c9dcc3a267b4c45b4fdbd7126ba75f01c7849924c65681e22b15b7b76c5bd6d"
+}
