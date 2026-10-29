@@ -1,0 +1,82 @@
+{
+  "kind": "Generated passive-player integration cohort; no authored player actions. Endpoint comparisons can miss two-jump transits. Not engagement or balance evidence.",
+  "aiSourceSha256": "0b5a8d0bc19178d9c6ef48fc897e4a5cfeb14d1ec4f7f49f71678dff8a67e027",
+  "seeds": 32,
+  "validCycles": 2263,
+  "commissioned": 2,
+  "opened": 2,
+  "transits": 2,
+  "positives": [
+    {
+      "seed": "starlane-ai-cohort-5",
+      "cycles": 66,
+      "winner": "choir",
+      "events": [
+        {
+          "type": "commission-observed-after-construction-tick",
+          "turn": 55,
+          "by": "choir",
+          "at": "s9",
+          "lane": "l0",
+          "progress": 12
+        },
+        {
+          "type": "opened",
+          "turn": 58,
+          "by": "choir",
+          "lane": "l0",
+          "endpoints": [
+            "s9",
+            "s11"
+          ]
+        },
+        {
+          "type": "ordinary-endpoint-transit-observed",
+          "turn": 60,
+          "by": "choir",
+          "fleetId": "f50",
+          "hull": "colony",
+          "from": "s9",
+          "to": "s11",
+          "lane": "l0"
+        }
+      ]
+    },
+    {
+      "seed": "starlane-ai-cohort-30",
+      "cycles": 71,
+      "winner": "veyr",
+      "events": [
+        {
+          "type": "commission-observed-after-construction-tick",
+          "turn": 66,
+          "by": "choir",
+          "at": "s25",
+          "lane": "l0",
+          "progress": 16
+        },
+        {
+          "type": "opened",
+          "turn": 68,
+          "by": "choir",
+          "lane": "l0",
+          "endpoints": [
+            "s25",
+            "s31"
+          ]
+        },
+        {
+          "type": "ordinary-endpoint-transit-observed",
+          "turn": 70,
+          "by": "choir",
+          "fleetId": "f51",
+          "hull": "frigate",
+          "from": "s31",
+          "to": "s25",
+          "lane": "l0"
+        }
+      ]
+    }
+  ],
+  "none": 30
+}

@@ -16,7 +16,7 @@ export const PLANET_TYPES = {
 };
 
 export const TECHS = {
-  logistics: { id: 'logistics', name: 'Deep-space Logistics', category: 'Engineering', cost: 55, requires: [], description: '+1 order each turn. Opens automated industry and larger hulls.' },
+  logistics: { id: 'logistics', name: 'Deep-space Logistics', category: 'Engineering', cost: 55, requires: [], description: '+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.' },
   ecology: { id: 'ecology', name: 'Adaptive Biospheres', category: 'Society', cost: 60, requires: [], description: 'Colonize harsh worlds with 30% habitability. Unlocks Habitation Domes.' },
   physics: { id: 'physics', name: 'Resonance Theory', category: 'Physics', cost: 60, requires: [], description: '+2 science per colony. The first step toward understanding the gates.' },
   weapons: { id: 'weapons', name: 'Coherent Lances', category: 'Military', cost: 70, requires: [], description: 'All warships deal 25% more damage.' },

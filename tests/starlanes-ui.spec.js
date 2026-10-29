@@ -41,7 +41,6 @@ for (const width of [1440, 390]) for (const language of ['en', 'ru']) {
     await load(page, state, language);
     await page.locator('[data-page="empire"]').click();
     await page.locator('[data-action="colony-sort"][data-sort="production"]').click();
-    await page.locator('[data-action="colony-sort"][data-sort="production"]').click();
     const row = page.locator(`[data-colony-row="${a.id}"]`), commission = row.locator('[data-action="empire-build-menu"]');
     await commission.scrollIntoViewIfNeeded();
     await page.locator('.colony-scroll').evaluate(element => { element.scrollLeft = 180; });
@@ -52,7 +51,7 @@ for (const width of [1440, 390]) for (const language of ['en', 'ru']) {
     expect(await page.evaluate(() => window.__asterion.getPage())).toBe('empire');
     await page.locator('[data-action="construction-tab"][data-tab="starlane"]').click();
     const project = page.locator(`[data-starlane="${lane.id}"]`);
-    await expect(project).toContainText(language === 'ru' ? 'короткий путь' : 'shortcut');
+    await expect(project).toContainText(language === 'ru' ? 'Короткий путь' : 'shortcut');
     await expect(project).toContainText('60'); await expect(project).toContainText('70'); await expect(project).toContainText('48');
     await expect(project.locator('[data-action="restore-lane"]')).toBeEnabled();
     expect(await snapshot(page)).toEqual(state);

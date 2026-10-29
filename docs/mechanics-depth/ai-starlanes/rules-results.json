@@ -1,0 +1,57 @@
+{
+  "fullSuiteBeforeOvercapacityCorrection": {
+    "command": "npm test",
+    "aiSourceSha256": "1b1ba8fb1cfe45434a580f77283cc798ecfc6cf4a46987222868b55b91c982c9",
+    "logAtAudit": "/tmp/asterion-starlane-ai-tests.log",
+    "exitCode": 0,
+    "tests": 475,
+    "passed": 475,
+    "failed": 0,
+    "skipped": 0
+  },
+  "latestFocusedRun": {
+    "command": "node --test tests/starlane-ai.test.js tests/starlanes.test.js",
+    "aiSourceSha256": "0b5a8d0bc19178d9c6ef48fc897e4a5cfeb14d1ec4f7f49f71678dff8a67e027",
+    "logAtAudit": "/tmp/asterion-starlane-ai-overcapacity-after.log",
+    "exitCode": 0,
+    "tests": 24,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "aiPolicyScenarios": 13
+  },
+  "controlledFixture": {
+    "source": "tests/starlane-ai.test.js",
+    "test": "runAI commissions, pays, completes normally, and its paid Ark uses the ordinary new edge",
+    "setup": "Controlled valid geography, mature owned endpoint, normally paid queued Ark; distinct from the generated passive-player cohort.",
+    "payment": {
+      "credits": 60,
+      "minerals": 70,
+      "orders": 1
+    },
+    "work": 48,
+    "ordinaryProductionPerCycle": 36,
+    "openedTurn": 22,
+    "transit": [
+      "s4",
+      "s12"
+    ],
+    "settlement": "s13",
+    "verifiedByAssertions": true
+  },
+  "overcapacityRegression": {
+    "test": "retained over-capacity population releases a paid Ark before a late lane can help",
+    "beforeCorrection": "Fails with a non-null 5-cycle lane plan and three apparent saved jumps: projection incorrectly reduces population 8 to capacity 5.",
+    "afterCorrection": "Passes: the paid Ark launches normally at cycle four using retained population 8 and 12 production, then moves to s8 before the hypothetical fifth-tick lane. A faster road remains eligible.",
+    "ordinaryQueueCost": {
+      "credits": 45,
+      "minerals": 55
+    },
+    "yardPopulation": 8,
+    "yardCapacity": 5,
+    "ordinaryProduction": 12,
+    "normalHullReleaseTicks": 4,
+    "hypotheticalLateLaneTicks": 5,
+    "mechanicalCohortResultUnchanged": true
+  }
+}

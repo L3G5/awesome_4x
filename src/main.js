@@ -244,7 +244,7 @@ function openModal(type,html,wide=false) {
   if (!modalType) lastFocus=document.activeElement;
   $('#toasts').replaceChildren();
   modalType=type; galaxy.setPaused?.(true); $('#modal-root').innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'wide':''} ${type==='welcome'?'welcome':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" data-action="close-modal" aria-label="Close dialog">×</button><button class="language-toggle modal-language" data-action="language" translate="no">Русский</button><div class="modal-content">${html}</div></section></div>`;
-  const focusTarget=type==='combat-report'||type==='conclusion'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'||type==='conclusion'});
+  const focusTarget=type==='combat-report'||type==='conclusion'||type==='build'?$('.modal .close-modal'):type==='merge'?$('.modal select') || $('.modal .close-modal'):$('.modal .primary:not(:disabled)') || $('.modal button:not(:disabled)'); focusTarget?.focus({preventScroll:type==='combat-report'||type==='merge'||type==='conclusion'});
 }
 function closeModal() { modalType=null; galaxy.setPaused?.(page !== 'galaxy'); $('#modal-root').innerHTML=''; lastFocus?.isConnected && lastFocus.focus(); }
 function focusCommandResult(selector) {

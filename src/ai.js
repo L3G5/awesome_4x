@@ -9,6 +9,7 @@ import { ANOMALIES, SHIPS, BUILDINGS, TECHS } from './content.js';
 import { getDiplomaticIntent, getDiplomacyForecast } from './diplomacy.js';
 import { ALIGNMENT_RULES, getPublicRaces, getAlignmentStatus } from './victory.js';
 import { getDiscoveryView, getDiscoveryOptions } from './discoveries.js';
+import { getStarlaneOptions } from './starlanes.js';
 
 const factionOf = (state, id) => state.factions.find(f => f.id === id);
 const systemOf = (state, id) => state.systems.find(s => s.id === id);
@@ -54,7 +55,7 @@ function knownDistances(state, faction, from) {
  * Unknown fleets stay unknown: hostile sovereignty adds a risk premium, not
  * an inspection of the hidden fleet array.
  */
-function route(state, faction, fleet, targetId, { peaceful = false, interventionOwner = null } = {}) {
+function route(state, faction, fleet, targetId, { peaceful = false, interventionOwner = null, extraEdge = null } = {}) {
   if (fleet.systemId === targetId) return { path: [targetId], cost: 0 };
   const known = new Set(getVisibleSystems(state, faction.id).map(s => s.id));
   if (!known.has(targetId)) return null;
@@ -68,7 +69,9 @@ function route(state, faction, fleet, targetId, { peaceful = false, intervention
       while (previous.has(path[0])) path.unshift(previous.get(path[0]));
       return { path, cost: costs.get(current) };
     }
-    for (const next of getNeighbors(state, current)) {
+    const neighbors = getNeighbors(state, current);
+    if (extraEdge?.includes(current)) neighbors.push(extraEdge.find(id => id !== current));
+    for (const next of neighbors) {
       if (!known.has(next)) continue;
       const system = systemOf(state, next);
       if (!enterable(faction, system) && system.owner !== interventionOwner) continue;
@@ -449,6 +452,13 @@ function anomalyTurn(state, faction, act) {
   }
 }
 
+/** Shared by execution and optional route investments; no hypothetical colonies. */
+function settlementDestination(state, faction, fleet, reserved = new Set()) {
+  const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
+  const candidates = getVisibleSystems(state, faction.id).filter(s => !s.owner && surveyed(s, faction) && s.habitability >= minimum && !reserved.has(s.id) && !observedEnemies(state, faction, s.id).length && !ownFleets(state, faction).some(f => f.type === 'colony' && f.id !== fleet.id && f.systemId === s.id));
+  return candidates.map(target => ({ target, route: route(state, faction, fleet, target.id, { peaceful: true }) })).filter(item => item.route).sort((a, b) => (a.route.cost - discoverySettlementPriority(state, faction, a.target)) - (b.route.cost - discoverySettlementPriority(state, faction, b.target)) || (b.target.habitability + b.target.richness * 5) - (a.target.habitability + a.target.richness * 5))[0] || null;
+}
+
 function civilianTurn(state, faction, act) {
   const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
   const reserved = new Set();
@@ -460,9 +470,7 @@ function civilianTurn(state, faction, act) {
     if (fleet.type === 'colony') {
       if (!system.owner && system.habitability >= minimum) { act({ type: 'colonize', fleetId: fleet.id }); continue; }
       if (fleet.movesLeft < 1) continue;
-      const candidates = getVisibleSystems(state, faction.id).filter(s => !s.owner && surveyed(s, faction) && s.habitability >= minimum && !reserved.has(s.id) && !observedEnemies(state, faction, s.id).length && !ownFleets(state, faction).some(f => f.type === 'colony' && f.id !== fleet.id && f.systemId === s.id));
-      const destinations = candidates.map(target => ({ target, route: route(state, faction, fleet, target.id, { peaceful: true }) })).filter(item => item.route).sort((a, b) => (a.route.cost - discoverySettlementPriority(state, faction, a.target)) - (b.route.cost - discoverySettlementPriority(state, faction, b.target)) || (b.target.habitability + b.target.richness * 5) - (a.target.habitability + a.target.richness * 5));
-      const destination = destinations[0];
+      const destination = settlementDestination(state, faction, fleet, reserved);
       if (!destination) continue;
       reserved.add(destination.target.id);
       const result = act({ type: 'move', fleetId: fleet.id, targetId: destination.route.path[1] });
@@ -499,6 +507,132 @@ function needsAlignmentIncome(state, faction) {
 function canSpend(state, faction, cost = {}) {
   const reserve = resourceReserve(state, faction);
   return canPay(faction, cost) && ['credits', 'minerals'].every(key => !(cost[key] > 0) || faction[key] - cost[key] >= reserve[key]);
+}
+
+function starlaneJobs(state, faction) {
+  const jobs = [], reserved = new Set(), colonies = state.systems.filter(system => system.owner === faction.id);
+  const ships = ownFleets(state, faction).map(fleet => ({ fleet, readyCycles: 0, earliestReadyCycles: 0, shipyardId: null }));
+  for (const colony of colonies.filter(system => system.queue?.kind === 'ship')) {
+    const type = colony.queue.itemId;
+    if (type !== 'colony' && SHIPS[type].attack <= 3) continue;
+    // Growth can launch a paid hull earlier than today's displayed ETA.
+    // One population gain per cycle is an optimistic departure bound; use
+    // it when deciding whether the hull will already have passed the lane.
+    let work = colony.queue.work - colony.queue.progress, earliestReadyCycles = 0;
+    // Capacity stops growth; it never removes retained refugee population
+    // or residents left above capacity after housing is replaced.
+    const capacity = Math.max(colony.population, getSystemYield(state, colony).capacity);
+    while (work > 0) {
+      work -= getSystemYield(state, { ...colony, population: Math.min(capacity, colony.population + earliestReadyCycles) }).production;
+      earliestReadyCycles++;
+    }
+    ships.push({ fleet: { id: `queued:${colony.id}`, owner: faction.id, systemId: colony.id, type, ships: 1, hp: SHIPS[type].hp, movesLeft: SHIPS[type].moves },
+      readyCycles: Math.ceil((colony.queue.work - colony.queue.progress) / getSystemYield(state, colony).production), earliestReadyCycles, shipyardId: colony.id });
+  }
+  // Movement has already run this cycle. Reassess the next ordinary phase
+  // with refreshed moves, so a newly selected fast expedition cannot be
+  // mispriced as a one-jump reinforcement merely because it is tired now.
+  const nextFaction = { ...faction, orders: getEmpireStats(state, faction.id).maxOrders };
+  const nextState = { ...state, factions: state.factions.map(other => other.id === faction.id ? nextFaction : other),
+    fleets: state.fleets.map(fleet => fleet.owner === faction.id ? { ...fleet, movesLeft: SHIPS[fleet.type].moves + (military(fleet) && faction.techs.includes('command') ? 1 : 0) } : fleet) };
+  const objective = selectObjective(nextState, nextFaction, []), rally = selectRally(nextState, nextFaction, objective, []);
+  const raceTarget = raceIntervention(nextState, nextFaction);
+  for (const ship of ships.sort((a, b) => Number(b.fleet.type === 'colony') - Number(a.fleet.type === 'colony') || Number(Boolean(a.shipyardId)) - Number(Boolean(b.shipyardId)) || a.fleet.id.localeCompare(b.fleet.id))) {
+    const { fleet } = ship;
+    // Queries for a paid hull use the same combat/routing code as a live hull.
+    const view = ship.shipyardId ? { ...state, fleets: [...state.fleets, fleet] } : state;
+    let targetId, options = {}, jumpsPerCycle = 1;
+    if (fleet.type === 'colony') {
+      const destination = settlementDestination(state, faction, fleet, reserved);
+      if (!destination) continue;
+      targetId = destination.target.id; options = { peaceful: true }; reserved.add(targetId);
+    } else if (military(fleet)) {
+      const local = systemOf(state, fleet.systemId);
+      // Battles, repairs and invasions are not promised future departures.
+      if (observedEnemies(state, faction, local.id).length || war(faction, local.owner) || fleet.hp < SHIPS[fleet.type].hp * fleet.ships * .7) continue;
+      if (fleet.id === raceTarget?.fleet.id) {
+        targetId = raceTarget.site.id; options = { interventionOwner: raceTarget.race.factionId };
+        jumpsPerCycle = Math.min(getEmpireStats(state, faction.id).maxOrders, SHIPS[fleet.type].moves + (faction.techs.includes('command') ? 1 : 0));
+      } else if (faction.alignment?.active && !raceTarget) {
+        const choices = getAlignmentStatus(state, faction.id).sites.map(id => systemOf(state, id)).map(site => ({ site, travel: route(view, faction, fleet, site.id, { peaceful: true }), stationed: friendlyStrength(state, faction, site.id, fleet.id) }))
+          .filter(item => item.travel).sort((a, b) => a.stationed - b.stationed || a.travel.cost - b.travel.cost || a.site.id.localeCompare(b.site.id));
+        targetId = choices[0]?.site.id; options = { peaceful: true };
+      } else if (objective && canAssault(view, faction, fleet, objective) && route(view, faction, fleet, objective.id)) targetId = objective.id;
+      else { targetId = rally?.id; options = { peaceful: true }; }
+    }
+    if (!targetId) continue;
+    const travel = route(view, faction, fleet, targetId, options);
+    if (travel?.path.length > 1) jobs.push({ ...ship, targetId, options, jumpsPerCycle, travel });
+  }
+  return jobs;
+}
+
+/** Potential shared use uses our chart, never a rival's private map or orders. */
+function exposesColony(state, faction, endpoints) {
+  const known = new Set(getVisibleSystems(state, faction.id).map(system => system.id));
+  const distance = (originId, destinationId, extra) => {
+    const queue = [originId], distances = new Map([[originId, 0]]);
+    for (let index = 0; index < queue.length; index++) {
+      const current = queue[index];
+      if (current === destinationId) return distances.get(current);
+      const neighbors = getNeighbors(state, current);
+      if (extra && endpoints.includes(current)) neighbors.push(endpoints.find(id => id !== current));
+      for (const next of neighbors) if (known.has(next) && !distances.has(next)) { distances.set(next, distances.get(current) + 1); queue.push(next); }
+    }
+    return Infinity;
+  };
+  for (const hostile of getVisibleFleets(state, faction.id).filter(fleet => war(faction, fleet.owner) && military(fleet))) {
+    // Visible hulls are enough to identify exposure. Foreign weapon research
+    // and hidden reinforcements are deliberately absent from this allowance.
+    const nominalPower = SHIPS[hostile.type].attack * hostile.ships;
+    for (const colony of state.systems.filter(system => system.owner === faction.id && friendlyStrength(state, faction, system.id) < nominalPower * 1.18)) {
+      const after = distance(hostile.systemId, colony.id, true), before = distance(hostile.systemId, colony.id, false);
+      if (after <= 3 && before - after >= 2) return true;
+    }
+  }
+  return false;
+}
+
+/** A paid shortcut must still help concrete jobs after its construction delay. */
+export function getStarlanePlan(state, factionId) {
+  const faction = factionOf(state, factionId);
+  if (!faction || faction.eliminated || state.winner || faction.orders < 1 || !faction.techs.includes('logistics') || !state.ancientLanes?.length || threatsToColonies(state, faction).length || needsAlignmentIncome(state, faction)) return null;
+  const colonies = state.systems.filter(system => system.owner === factionId), stats = getEmpireStats(state, factionId);
+  const queuedUpkeep = colonies.reduce((total, system) => total + (system.queue?.kind === 'ship' ? SHIPS[system.queue.itemId].upkeep : 0), 0);
+  if (stats.creditIncome - queuedUpkeep < (faction.alignment?.active || stats.beacons >= 3 ? ALIGNMENT_RULES.cost : 4)) return null;
+  // No grace period is assumed beyond an active public race or the last cycle.
+  const alignment = getAlignmentStatus(state, factionId);
+  const horizon = Math.min(LAST_TURN - state.turn, alignment.ready ? alignment.target - alignment.progress : Infinity,
+    ...getPublicRaces(state, factionId).filter(race => race.active).map(race => race.target - race.progress));
+  const jobs = starlaneJobs(state, faction), reserve = resourceReserve(state, faction);
+  const arks = jobs.filter(job => job.fleet.type === 'colony').length;
+  const plans = [];
+  for (const colony of colonies) for (const option of getStarlaneOptions(state, colony.id, factionId)) {
+    if (!option.enabled || !canSpend(state, faction, option.cost) || option.turns >= horizon
+      || faction.credits - option.cost.credits < Math.max(45, reserve.credits + arks * 30)
+      || faction.minerals - option.cost.minerals < reserve.minerals + arks * 20
+      || exposesColony(state, faction, option.endpoints)) continue;
+    const benefits = [];
+    for (const job of jobs) {
+      // Economics follows this cycle's movement. Existing ships can make
+      // T-1 further departures; a paid hull launches after its own queue ETA.
+      const departures = Math.max(0, option.turns - Math.max(1, job.earliestReadyCycles));
+      const position = job.travel.path[Math.min(job.travel.path.length - 1, departures * job.jumpsPerCycle)];
+      const projected = { ...job.fleet, systemId: position };
+      const before = route(state, faction, projected, job.targetId, job.options);
+      const after = route(state, faction, projected, job.targetId, { ...job.options, extraEdge: option.endpoints });
+      if (!before || !after) continue;
+      const gain = before.path.length - after.path.length;
+      const arrivalCycles = Math.max(option.turns, job.readyCycles) + Math.ceil((after.path.length - 1) / job.jumpsPerCycle);
+      if (gain < 2 || arrivalCycles >= horizon || !after.path.some((id, index) => index && option.endpoints.includes(id) && option.endpoints.includes(after.path[index - 1]))) continue;
+      if (after.path.some(id => { const owner = systemOf(state, id).owner, relation = faction.relations[owner]; return owner && owner !== factionId && !war(faction, owner) && relation?.tradeEndsAt && relation.tradeEndsAt <= state.turn + arrivalCycles; })) continue;
+      benefits.push({ fleetId: job.shipyardId ? null : job.fleet.id, shipyardId: job.shipyardId, targetId: job.targetId, readyCycles: job.readyCycles, projectedSystemId: position,
+        beforePath: [...before.path], afterPath: [...after.path], jumpsSaved: gain, arrivalCycles });
+    }
+    const totalJumpsSaved = benefits.reduce((total, benefit) => total + benefit.jumpsSaved, 0);
+    if (totalJumpsSaved >= 3) plans.push({ laneId: option.id, systemId: colony.id, endpoints: [...option.endpoints], turns: option.turns, horizon, cost: { ...option.cost }, totalJumpsSaved, benefits });
+  }
+  return plans.sort((a, b) => b.totalJumpsSaved - a.totalJumpsSaved || a.turns - b.turns || a.laneId.localeCompare(b.laneId) || a.systemId.localeCompare(b.systemId))[0] || null;
 }
 
 function actionCost(state, faction, action) {
@@ -818,10 +952,13 @@ function economicTurn(state, faction, act) {
   const minimum = faction.techs.includes('terraforming') ? 0 : faction.techs.includes('ecology') ? 30 : 50;
   const expansion = getVisibleSystems(state, faction.id).some(system => !system.owner && surveyed(system, faction) && system.habitability >= minimum);
   const atAnyWar = Object.values(faction.relations).some(relation => relation.status === 'war');
-  for (const system of colonies.filter(s => !s.queue).sort((a, b) => getSystemYield(state, b).production - getSystemYield(state, a).production || a.id.localeCompare(b.id))) {
+  const ordered = colonies.sort((a, b) => getSystemYield(state, b).production - getSystemYield(state, a).production || a.id.localeCompare(b.id));
+  // Fund current income, hull and settlement needs throughout the empire
+  // before one optional shared shortcut can occupy an otherwise idle queue.
+  for (const system of ordered.filter(s => !s.queue)) {
     if (faction.orders < 1 || state.winner) break;
     const stats = getEmpireStats(state, faction.id), fleets = ownFleets(state, faction);
-    const role = roles.get(system.id), support = CHARTERS[role].support;
+    const role = roles.get(system.id);
     if (needsAlignmentIncome(state, faction)) {
       recoverAlignmentIncome(state, faction, system, role, act);
       continue;
@@ -841,8 +978,14 @@ function economicTurn(state, faction, act) {
     if (!fleets.some(f => f.type === 'scout') && !colonies.some(s => s.queue?.itemId === 'scout')) priorities.push('scout');
     // New hulls need both construction funding and an affordable future crew.
     if (needsMilitary) priorities.push(hull);
-    if (buildAt(state, faction, system, priorities, act, { role, replace: true })) continue;
-
+    buildAt(state, faction, system, priorities, act, { role, replace: true });
+  }
+  const starlane = getStarlanePlan(state, faction.id);
+  if (starlane) act({ type: 'restoreLane', systemId: starlane.systemId, laneId: starlane.laneId });
+  for (const system of ordered.filter(s => !s.queue)) {
+    if (faction.orders < 1 || state.winner) break;
+    if (needsAlignmentIncome(state, faction)) continue;
+    const stats = getEmpireStats(state, faction.id), role = roles.get(system.id), support = CHARTERS[role].support;
     if (system.buildings.includes(support)) {
       const development = getDevelopmentOptions(state, system.id, faction.id).find(option => option.charterType === role);
       // Level II is a mature investment; cash-poor empires still need working capital.

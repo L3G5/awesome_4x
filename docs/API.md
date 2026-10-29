@@ -18,7 +18,7 @@ The authoritative rules live in `src/game.js`; authored content is in `src/conte
 - `getInfrastructure(state, system)`: `{used,capacity,available,overCapacity}` for infrastructure slots.
 - `getDevelopmentOptions(state, systemId, factionId = 'player')`: charter choices with actual costs, prerequisites, output totals and deltas (contract below).
 - `getCharterBonuses(system, charter = system.charter)`: pure `{credits,minerals,science,production,orders,militaryDiscount,repair}`.
-- `getConstructionProject(queue)`: a displayable building, ship or charter project including its paid `cost`, `work`, `progress`, name and icon; null for no project. Queue item IDs are no longer all in `BUILDINGS`/`SHIPS`.
+- `getConstructionProject(queue)`: a displayable building, ship, charter or starlane project including its paid `cost`, `work`, `progress`, name and icon; null for no project. Queue item IDs are no longer all in `BUILDINGS`/`SHIPS`.
 - `getResearchOptions(state, factionId = 'player')`: tech definitions extended with `{completed,active,enabled,reason}`.
 - `getVictoryProgress(state, factionId = 'player')`: `{transcendence:{current,target,unlocked},domination:{current,target},legacy:{score,turn,finalTurn}}`.
 - `fleetPower(state, fleet)`: modified fleet attack.
@@ -43,6 +43,7 @@ Moves and attacks that produce player-involved combat return `combatReports: Rep
 | `colonize` | `fleetId` | Settle an eligible world; consumes ark, 30 credits and 20 minerals |
 | `build` | `systemId`, `itemId`, optional `replaceBuildingId` | Pay upfront and start the colony's single queue; replace only when complete |
 | `develop` | `systemId`, `charterType` | Establish, promote or switch the colony's charter using the same queue |
+| `restoreLane` | `systemId`, `laneId` | Pay 60 credits, 70 minerals and 1 order; start 48-work shared-lane restoration at an owned endpoint |
 | `cancelBuild` | `systemId` | Refund unused fraction of resource costs |
 | `research` | `techId` | Set research project, preserving prior investment as science |
 | `anomaly` | `systemId`, `choiceId` | Resolve an anomaly with a present expedition or owned colony |
@@ -424,3 +425,14 @@ Formation records contain `{id,name,type,systemId,ships,hp,maxHp,movesLeft,route
 `history` counts and ranges describe only retained Chronicle entries and combat reports, bounded by 160 and 50. `moments` selects at most one retained item in each of six categories, then orders them newest first. War shares diplomacy; a retained captured-invasion report can supply sovereignty. Completed discovery and infrastructure records take precedence over detection or repeated ship construction. Original text/type/turn are copied without inferred motives or lifetime totals. Report links require a retained report, expedition links require an accessible discovery view, and world links require current owned/surveyed/charted access. Stale links disappear while historical text remains intact.
 
 The UI uses the same existing report, expedition, world-selection and exact JSON-export paths. It can reopen a conclusion after import without changing the saved outcome or state. Finished network views preserve actual recorded progress instead of forcing ten steps; absent legacy alignment is shown as unavailable. The live public-race note describes the existing simultaneous-qualification Legacy/seed rule and reads only the player's Legacy score. No new outcome fields, historical records, intelligence or victory mechanics are introduced.
+
+
+## Optional ancient starlanes
+
+New maps include `ancientLanes: [{id:'l0'|'l1',endpoints:[systemId,systemId],openedTurn:null|turn,openedBy:null|factionId}]`. Legacy saves without this field retain their original map and acquire no invented projects. Dormant edges are absent from `state.lanes`; completion appends exactly one ordinary edge and records its builder/turn. The two generated edges have distinct noncapital endpoints, span at most 35 map units, initially replace 3–6 jumps, and each remains a shortcut if the other opens first. Every capital pair remains at least 5 jumps apart after both open. These are new-map generation bounds, not import-time constraints on arbitrary later ownership.
+
+Surveying either endpoint charts its partner through the same `chart` path as ordinary exploration, including public sovereignty/contact. It never surveys the distant world or grants fleet sensors. `getKnownStarlanes(state,factionId='player')` exposes only links with both endpoints charted and at least one surveyed, public restoration identity, and own-project remaining ETA. Unknown builder identity and foreign progress/production remain unavailable. `getStarlaneOptions(state,systemId,factionId='player')` provides actual costs, own-source current-production ETA, validation reasons, and accessible charted travel before/after. Unknown or closed travel is `null`, not zero. Both are re-exported by `game.js`.
+
+`restoreLane` requires an owned endpoint, Logistics, a free colony queue and no competing queue for the same unopened link. Its paid queue is `{itemId:'starlane',kind:'starlane',laneId,progress:0,work:48,cost:{credits:60,minerals:70}}`. The queue itself reserves the shared project; ordinary cancellation refunds the unspent resource fraction, and ordinary conquest clears it. No new building or slot is added. Save validation rejects duplicate reservations, mismatched endpoints, forged work/costs and inconsistent active edges.
+
+Completion leaves fleet positions, orders, movement and stored routes unchanged. All empires subsequently route and move through the edge using existing access, combat and order rules. Existing routes are not silently shortened. A known completion creates one `starlane` Chronicle/briefing entry, without a building `itemId`. Construction forecasts treat restoration as occupied queue time only.

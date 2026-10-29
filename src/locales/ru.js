@@ -1585,5 +1585,11 @@ export const russian = {
   "Requires Deep-space Logistics. Cancelling returns the unspent share of the paid resources; the order is not refunded.": "Требуется Глубококосмическая логистика. При отмене возвращается неизрасходованная часть оплаченных ресурсов; приказ не возвращается.",
   "Restore lane · 1 order": "Восстановить путь · 1 приказ",
   "This creates a direct frontier with another empire. New neighboring claims can increase diplomatic grievances.": "Возникнет общая граница с другой державой. Новые соседние владения могут усилить дипломатические претензии.",
-  "Dormant starlane detected between {0} and {1}. Colonize either endpoint and research Deep-space Logistics to restore it.": "Обнаружен неактивный звёздный путь между системами {0} и {1}. Для восстановления основайте колонию на одном из концов и исследуйте Глубококосмическую логистику."
+  "Dormant starlane detected between {0} and {1}. Colonize either endpoint and research Deep-space Logistics to restore it.": "Обнаружен неактивный звёздный путь между системами {0} и {1}. Для восстановления основайте колонию на одном из концов и исследуйте Глубококосмическую логистику.",
+  "Commission cost": "Стоимость проекта",
+  "Inspect construction →": "Осмотреть строительство →",
+  "The foreign project’s completion time is not known.": "Срок завершения чужого проекта неизвестен.",
+  "Construction and movement rules": "Правила строительства и перемещения",
+  "+1 order each turn. Enables dormant starlane restoration and opens automated industry and larger hulls.": "+1 приказ каждый ход. Позволяет восстанавливать неактивные звёздные пути и открывает автоматизированную промышленность и более крупные корпуса.",
+  "Uses the builder’s construction queue. No infrastructure slot or upkeep.": "Занимает строительную очередь колонии-строителя. Не требует ячейки инфраструктуры или содержания."
 };
