@@ -34,6 +34,11 @@ test('command context follows its workspace without disclosing uncontacted civil
   await expect(page.locator('#inspector h2')).toHaveText('Solace');
   await page.locator('[data-page="empire"]').click();
   await expect(page.locator('#inspector h2')).toHaveText('The working empire');
+  const networkReview = page.locator('#inspector [data-action="review-alignment"]');
+  await expect(networkReview).toHaveText('Review alignment requirements →');
+  await expect(page.locator('.alignment-outlook')).toHaveCount(0);
+  await networkReview.click();
+  await expect(page.locator('.alignment-card h3')).toBeInViewport();
   await page.locator('[data-page="journal"]').click();
   await expect(page.locator('#inspector h2')).toHaveText('Stories of the Reach');
   expect(await page.evaluate(() => window.__asterion.getState())).toEqual(before);

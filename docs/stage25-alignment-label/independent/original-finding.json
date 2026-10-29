@@ -1,0 +1,21 @@
+{
+  "type": "Actual campaign finding; not synthetic",
+  "production": "http://127.0.0.1:5215",
+  "version": "0.21.1",
+  "cycle": 38,
+  "steps": [
+    "Import the attached untouched actual cycle 38 export through Game menu, then confirm Restore.",
+    "Open Empire. In Your beacon network, activate Review your funding.",
+    "Observe that the destination is the Transcendence requirements card with zero completed Beacons. No funding budget is rendered."
+  ],
+  "expected": "The button label accurately names the visible destination.",
+  "actual": "The link promises a funding review while the funding UI is intentionally gated until a completed Beacon or recorded alignment exists.",
+  "severity": "Minor wording mismatch; navigation itself works and play is not blocked.",
+  "proposal": "Use Review alignment or Review requirements while unfinished with zero Beacons and zero alignment progress; retain funding wording when that budget exists and the final-state wording after an ending.",
+  "sources": [
+    "workspace-ui.js:51 unconditional unfinished funding label",
+    "victory-ui.js:21 render condition",
+    "main.js:366 alignment-card fallback"
+  ],
+  "driverCorrection": "Earlier request 66 failed because a real Khar\u2192Veyr war briefing had opened. That is separate from this wording finding; request 68 dismissed it and successfully activated the context action."
+}

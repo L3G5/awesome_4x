@@ -1,0 +1,160 @@
+{
+  "generatedAt": "2026-10-29T03:57:36.853Z",
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 1780,
+      "sha256": "e50b9f6e9196d85fb8f76027ed12a415a7d39e0f76cd1179288609b4ed31f9fc"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 8003,
+      "sha256": "f74ea1d2e6fdb5c5e0554f620c8e0672a2282d3a0db572af7a372ca3887e2271"
+    },
+    {
+      "path": "exports/actual-default38-1440.json",
+      "bytes": 77292,
+      "sha256": "d6d7ddf4c5d59e99cbbde6bfde4c8e6eca042cbede79396acdde406027c2e921"
+    },
+    {
+      "path": "exports/actual-default38-390.json",
+      "bytes": 77292,
+      "sha256": "d6d7ddf4c5d59e99cbbde6bfde4c8e6eca042cbede79396acdde406027c2e921"
+    },
+    {
+      "path": "exports/actual-odyssey50-1440.json",
+      "bytes": 80275,
+      "sha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435"
+    },
+    {
+      "path": "exports/actual-odyssey50-390.json",
+      "bytes": 80275,
+      "sha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435"
+    },
+    {
+      "path": "exports/actual-odyssey66-1440.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "path": "exports/actual-odyssey66-390.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6299,
+      "sha256": "d27c1267d9471916721769be8fa0b6eeb6e905914e2574f7baf1207cfbadab33"
+    },
+    {
+      "path": "inputs/actual-default38.json",
+      "bytes": 77292,
+      "sha256": "d6d7ddf4c5d59e99cbbde6bfde4c8e6eca042cbede79396acdde406027c2e921"
+    },
+    {
+      "path": "inputs/actual-odyssey50.json",
+      "bytes": 80275,
+      "sha256": "c3b9f4161ea70199234a998186e817e7c54384f9b486cfdd13e08ad03d7c5435"
+    },
+    {
+      "path": "inputs/actual-odyssey66.json",
+      "bytes": 124020,
+      "sha256": "98b961e2ea588ee7c6ffadcabdeb1a947515f489101262951916dd851122610b"
+    },
+    {
+      "path": "original-finding.json",
+      "bytes": 1382,
+      "sha256": "73052410c4a486daf9434dae4f874274e4a47abb0dd8adb94fc7050e6f771c7f"
+    },
+    {
+      "path": "package.mjs",
+      "bytes": 11510,
+      "sha256": "47db98524e3eb1a99ea716f0160ae059829e2eeca2bae43f88c6eecac75ace16"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 12439,
+      "sha256": "512787a02c979281a8290d94979433a5678b7768ad80df6e1a504ff2542a13ff"
+    },
+    {
+      "path": "results.json",
+      "bytes": 7086,
+      "sha256": "dc34262e0eb033bd327429cb90abf282cf922d3d42318e2fb5995010d95ed2c2"
+    },
+    {
+      "path": "review.json",
+      "bytes": 2327,
+      "sha256": "6f035445172304fafcd2b83659773bdc8ae2947f1d5dfdcab90c949cbe78489b"
+    },
+    {
+      "path": "screenshots/actual-default38-1440-context.png",
+      "bytes": 336314,
+      "sha256": "93824cd369d7b2a169b23b59e28c26783cbba16dab64e59123902df5ade06e23"
+    },
+    {
+      "path": "screenshots/actual-default38-1440-landing.png",
+      "bytes": 238024,
+      "sha256": "255580d86cdac1f32a389d4bc862992181c1734a6699b2e5cba07f59a3b9d6fa"
+    },
+    {
+      "path": "screenshots/actual-default38-390-context.png",
+      "bytes": 104841,
+      "sha256": "3ca855a37ac8c91c19ebcb28ce547194b133d0e536fc8234d49ee5a3e02fe47e"
+    },
+    {
+      "path": "screenshots/actual-default38-390-landing.png",
+      "bytes": 96941,
+      "sha256": "e1a70de5684e98ddd0ecfd354dc49a7e43e087f9ad1cd1193045f4440d2eacb1"
+    },
+    {
+      "path": "screenshots/actual-odyssey50-1440-context.png",
+      "bytes": 346705,
+      "sha256": "f1bd2b4f30e47d7cbfeeff622867ae38b447f5c3495a7106bfefbf4a02791706"
+    },
+    {
+      "path": "screenshots/actual-odyssey50-1440-landing.png",
+      "bytes": 330836,
+      "sha256": "034259a7e45e3658e53ef99091cee310a2ff6f5eb8e19e80683c90c71161e8c9"
+    },
+    {
+      "path": "screenshots/actual-odyssey50-390-context.png",
+      "bytes": 107377,
+      "sha256": "f7e76fb01f98c236b1750294aa5f3a0ce5647cbfccc5895bdbb84273b67f27fa"
+    },
+    {
+      "path": "screenshots/actual-odyssey50-390-landing.png",
+      "bytes": 99248,
+      "sha256": "a5ff531496a7947a81b345f20291ce30214b48ca214bc9bd4dd8c282307cc79b"
+    },
+    {
+      "path": "screenshots/actual-odyssey66-1440-context.png",
+      "bytes": 327335,
+      "sha256": "aa76bd3912ad1c5f81c10e22939e629e6dd57967a34489ffc2d8529bb17dac03"
+    },
+    {
+      "path": "screenshots/actual-odyssey66-1440-landing.png",
+      "bytes": 290126,
+      "sha256": "e789be0ee63e7a2ce5622e9210500575fb5924eec6013dff97e93975e5c705bc"
+    },
+    {
+      "path": "screenshots/actual-odyssey66-390-context.png",
+      "bytes": 98728,
+      "sha256": "adc426fe9abd2f6506a410c10ae565057bdbaff1d8bf8d3fff8ea513343faf61"
+    },
+    {
+      "path": "screenshots/actual-odyssey66-390-landing.png",
+      "bytes": 91752,
+      "sha256": "983d21b083f177bda959ace427447a96bef91de060666cbf3290c95f2aac68df"
+    },
+    {
+      "path": "source/workspace-ui.js",
+      "bytes": 9115,
+      "sha256": "2cdbf3008e6853d0b147f714940d641c88140860618f4a0b01368e70c8894a9a"
+    },
+    {
+      "path": "workspace-ui.diff",
+      "bytes": 4186,
+      "sha256": "021d32202d1070523cac739addaee3a85b568cf5ff9d38a8f3e8ec82edb3ff94"
+    }
+  ]
+}

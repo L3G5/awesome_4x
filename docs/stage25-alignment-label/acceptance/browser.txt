@@ -1,0 +1,22 @@
+
+Running 13 tests using 1 worker
+
+(node:578063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:578063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/planning-feedback-ui.spec.js:34:1 › after-income funding explains the WATCH50-credit diagnostic and matches an ordinary cycle (2.3s)
+  ✓   2 tests/planning-feedback-ui.spec.js:63:1 › a current treasury above sixty still shows its after-upkeep deficit at a narrow width (927ms)
+  ✓   3 tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with blockade (1.4s)
+  ✓   4 tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with missing Protocol (1.3s)
+  ✓   5 tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with missing site (1.3s)
+  ✓   6 tests/planning-feedback-ui.spec.js:100:37 › a modern finished network has no future funding estimate (1.3s)
+  ✓   7 tests/planning-feedback-ui.spec.js:100:37 › a legacy finished network has no future funding estimate (1.6s)
+  ✓   8 tests/planning-feedback-ui.spec.js:112:1 › private rival economic changes cannot alter the player funding card (2.9s)
+  ✓   9 tests/planning-feedback-ui.spec.js:135:29 › lethal retaliation at 3 hull is explicit and a voluntary ordinary attack remains possible (2.9s)
+  ✓  10 tests/planning-feedback-ui.spec.js:135:29 › lethal retaliation at 4.04 hull is explicit and a voluntary ordinary attack remains possible (3.0s)
+  ✓  11 tests/planning-feedback-ui.spec.js:152:118 › a surviving invasion with 20 defenses keeps the appropriate outcome and projected hull (2.3s)
+  ✓  12 tests/planning-feedback-ui.spec.js:152:118 › a surviving invasion with 8 defenses keeps the appropriate outcome and projected hull (2.3s)
+  ✓  13 tests/workspace-ui.spec.js:4:1 › command context follows its workspace without disclosing uncontacted civilizations or changing the campaign (2.3s)
+
+  13 passed (27.4s)

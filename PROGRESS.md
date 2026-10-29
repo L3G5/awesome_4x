@@ -386,6 +386,15 @@ An independent ordinary opening on the default ASTERION seed reached cycle 12 wi
 - The README preview imports the original ODYSSEY50 save into 0.21.1 through the ordinary picker and Restore confirmation, then only changes the view. Exact full state remains unchanged with no page or resource errors. The initial driver omitted the confirmation and timed out; that setup correction is preserved. All seventeen runtime files in the documentation build are byte-identical to the accepted 0.21.1 build, with only build metadata changing. Evidence is in `docs/handoff-review/`.
 - A separately recorded continuation of the actual default-seed opening is progressing from cycle 12 on immutable 0.21.1. Actual cycle-20 and cycle-30 checkpoints are preserved; play has reached 34 without a game defect. An independent reconstruction starts from the actual cycle-12 input. Any ending or replay result will be reported only after it occurs.
 
+- Workflow 40813739773 succeeded at commit `a59a934`; live metadata matches that exact documentation release and version 0.21.1. CI passed 406 rules tests and all 80 browser scenarios (11.1 minutes). The unchanged runtime is covered by the seventeen-file production comparison.
+
+## Stage 25 — name the information behind the link (started 2026-10-29 03:48 UTC)
+
+The ongoing default campaign exposed a small presentation mismatch at actual cycle 38: Empire said “Review your funding” despite zero completed Beacons and zero alignment progress, when the destination intentionally showed only the requirements card. The action worked and did not block play. Its actual export, screenshot, visible DOM and original source are frozen separately.
+
+- The Empire context now says “Review alignment requirements” when no funding outlook is rendered, “Review your funding” when that budget exists, and “Review final network” after an ending. The action and scrolling behavior are unchanged. The existing workspace browser case now checks the empty-network label and visible destination; all thirteen adjacent planning/workspace cases pass on immutable production (27.4 seconds).
+- No simulation module or saved field changes. Version 0.21.2 builds at 247.56 KB gzip JavaScript. Independent acceptance passes six actual-input cases at 1440/390 pixels: default38 requirements, ODYSSEY50 funding and ODYSSEY66 final network. All 24 full-state comparisons and six byte-identical UI exports pass; Enter opens each appropriate destination with no page/resource error or overflow. Root verifies 31 independent artifacts, 58 source fingerprints, eighteen production files and all three inputs. Complete evidence is in `docs/stage25-alignment-label/`.
+
 ## Subsequent stages
 
 1. Playtest the complete opening and midgame, fix usability and rules inconsistencies.

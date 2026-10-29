@@ -1,0 +1,36 @@
+{
+  "reviewedAt": "2026-10-29T03:57:36.843Z",
+  "reviewer": "experience_review; independent of the Stage25 product correction",
+  "scope": "Label selection, actual import, keyboard link activation and landing, state preservation and export at two widths. No campaign continuation, engine tests or broad browser rerun.",
+  "cases": 6,
+  "fullStateEqualityChecks": 24,
+  "byteIdenticalExports": 6,
+  "sourceChanges": [
+    "src/workspace-ui.js"
+  ],
+  "sourceConclusion": "The only changed tracked src file selects the context label. Its action remains review-alignment; main.js and victory-ui.js match the base source. Finished-first priority is correct, and the unfinished funding label uses the same beacon/progress condition as the rendered funding card.",
+  "visualConclusion": "Reviewed eight representative screenshots, covering the actual38 label at both widths, mobile requirements/funding/final landings, and desktop funding/final landings. Text is readable with no horizontal page overflow; each selected target heading lies fully within the viewport. No issue found.",
+  "inputOrigins": [
+    {
+      "id": "actual-default38",
+      "source": "/tmp/asterion-asterion21-midgame/findings/zero-beacon-link/069-asterion-reach-cycle-38.json",
+      "kind": "Untouched actual ongoing campaign export from v0.21.1; only this checkpoint was inspected."
+    },
+    {
+      "id": "actual-odyssey50",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle50.json",
+      "kind": "Untouched actual completed ODYSSEY campaign checkpoint from frozen v0.20."
+    },
+    {
+      "id": "actual-odyssey66",
+      "source": "docs/odyssey-playtest/actual/checkpoints/cycle66.json",
+      "kind": "Untouched actual ODYSSEY final export from frozen v0.20."
+    }
+  ],
+  "limits": [
+    "Three existing saved situations at two widths are six inspection cases, not new campaigns.",
+    "No additional turn, economic decision, hidden-state decision or synthetic game fixture was used.",
+    "The browser uses reduced motion for deterministic screenshots. This is a focused Chromium check, not cross-browser certification.",
+    "The source HEAD in build-info precedes the working-tree label correction. The preserved patch, source-file fingerprint and served production asset fingerprints identify the tested build precisely."
+  ]
+}
