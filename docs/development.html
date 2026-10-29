@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Navigate Asterion Reach's played campaigns, historical replays, mechanics reviews, controlled comparisons and artwork records.">
+  <title>Development & evidence · Asterion Reach</title>
+  <style>
+    :root { color-scheme: dark; --bg: #09131d; --panel: #10212d; --line: #2a4150; --text: #e4e9e7; --muted: #a9bbc6; --mint: #8bd8c8; --gold: #e2bd76; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: radial-gradient(ellipse at 95% 0, #1d3546 0, transparent 38%), var(--bg); color: var(--text); font: 16px/1.65 system-ui, sans-serif; }
+    main { max-width: 1180px; margin: auto; padding: 56px 28px 64px; }
+    a { color: var(--mint); text-underline-offset: 4px; }
+    a:hover { color: #c8fff0; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+    .skip { position: absolute; left: 20px; top: -80px; background: var(--panel); padding: 10px 16px; z-index: 2; }
+    .skip:focus { top: 14px; }
+    .eyebrow, .kind { text-transform: uppercase; letter-spacing: .12em; font-size: 11px; color: var(--gold); }
+    h1, h2, h3 { font-family: Georgia, serif; font-weight: 400; line-height: 1.16; }
+    h1 { font-size: clamp(40px, 6vw, 68px); margin: 12px 0 18px; }
+    h2 { font-size: 31px; margin: 0 0 12px; }
+    h3 { font-size: 23px; margin: 10px 0 12px; }
+    p { margin: 10px 0; }
+    header > p { max-width: 780px; font-size: 18px; color: var(--muted); }
+    .actions, .jump { display: flex; flex-wrap: wrap; gap: 10px; }
+    .actions { margin: 24px 0 28px; align-items: center; }
+    .button { display: inline-block; padding: 11px 19px; border: 1px solid var(--line); border-radius: 4px; color: var(--text); text-decoration: none; }
+    .button.primary { background: var(--mint); border-color: var(--mint); color: #102b2c; font-weight: 650; }
+    .actions .source { margin-left: 8px; font-size: 14px; }
+    .jump { padding: 17px 0; border-block: 1px solid var(--line); gap: 10px 24px; font-size: 14px; }
+    .reading-note { margin-top: 24px; padding: 16px 20px; border-left: 3px solid var(--gold); background: #142432; font-size: 14px; color: #c5d1d6; }
+    section { margin-top: 42px; }
+    .intro { color: var(--muted); max-width: 880px; margin-bottom: 20px; font-size: 14px; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    article { background: var(--panel); border: 1px solid var(--line); border-radius: 5px; padding: 22px; }
+    article p { color: var(--muted); font-size: 14px; }
+    article h3 a { color: var(--text); }
+    .sub-links { margin-top: 15px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 7px 16px; }
+    .directory { border-top: 1px solid var(--line); }
+    .entry { display: grid; grid-template-columns: 105px minmax(210px, .9fr) minmax(0, 1.25fr); gap: 16px; padding: 13px 5px; border-bottom: 1px solid var(--line); align-items: start; }
+    .entry .version { font-size: 12px; color: var(--gold); padding-top: 2px; }
+    .entry p { margin: 0; font-size: 13px; color: var(--muted); }
+    .entry > a { font-size: 15px; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .compact { margin: 12px 0; padding-left: 20px; }
+    .compact li { margin: 8px 0; font-size: 14px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 17px 19px; border: 1px solid var(--line); border-radius: 4px; background: #07121b; color: #c8e9e1; font: 12px/1.8 ui-monospace, monospace; }
+    code { font-family: ui-monospace, monospace; font-size: .86em; overflow-wrap: anywhere; }
+    .recipe { margin: 19px 0 26px; }
+    .recipe p { font-size: 13px; color: var(--muted); }
+    details { margin-top: 20px; border: 1px solid var(--line); border-radius: 4px; padding: 15px 19px; }
+    summary { color: var(--mint); cursor: pointer; font-size: 15px; }
+    footer { border-top: 1px solid var(--line); margin-top: 42px; padding-top: 20px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 760px) { main { padding: 32px 18px 48px; } .cards, .split { grid-template-columns: 1fr; } .entry { grid-template-columns: 74px minmax(0, 1fr); gap: 4px 12px; } .entry p { grid-column: 2; } .actions .source { margin-left: 0; } h2 { font-size: 27px; } article { padding: 18px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+<a class="skip" href="#campaigns">Skip to the evidence</a>
+<main>
+  <header>
+    <div class="eyebrow">Asterion Reach · Project navigation</div>
+    <h1>Development & evidence</h1>
+    <p>Find a played campaign, understand a design decision, or reproduce a recorded result. Each report keeps its own source pins, methods and limits.</p>
+    <div class="actions">
+      <a class="button primary" href="https://l3g5.github.io/awesome_4x/">Play the live game ↗</a>
+      <a class="button" href="https://l3g5.github.io/awesome_4x/guide.html">Player Field Guide ↗</a>
+      <a class="source" href="https://github.com/L3G5/awesome_4x">Source repository ↗</a>
+    </div>
+    <nav class="jump" aria-label="Evidence categories">
+      <a href="#campaigns">Played campaigns</a><a href="#reviews">Mechanics & interface</a><a href="#comparisons">Automated measurements</a><a href="#validation">Compatibility & validation</a><a href="#art">Artwork</a><a href="#reproduce">Reproduce</a>
+    </nav>
+    <p class="reading-note"><strong>Read the provenance first.</strong> Actual play, replay-derived checkpoints, synthetic cases and automated cohorts answer different questions. Replaying a campaign does not create another sample. Historical measurements describe their pinned release; check the live <a href="https://l3g5.github.io/awesome_4x/build-info.json">build metadata</a> for what is deployed now.</p>
+  </header>
+
+  <section id="campaigns" aria-labelledby="campaigns-title">
+    <h2 id="campaigns-title">Played campaigns</h2>
+    <p class="intro">Decisions made through the game interface, with original exports and interaction receipts. The linked replays verify those histories; later comparisons and hypothetical forks remain separately labeled.</p>
+    <div class="cards">
+      <article><span class="kind">Actual complete play · v0.20</span><h3><a href="odyssey-playtest/index.html">Odyssey: a contested finish</a></h3><p>Exploration, the lost Observatory settlement race, three alignment interruptions and paid peace before victory at cycle 66.</p><div class="sub-links"><a href="odyssey-playtest/replay/index.html">Independent exact replay</a><a href="odyssey-playtest/strategy/index.html">Postgame strategy review</a></div></article>
+      <article><span class="kind">Actual complete play · v0.14</span><h3><a href="watch-playtest/index.html">WATCH: a fortified network</a></h3><p>Compact development, a limited beacon seizure and defensive battles before Transcendence at cycle 60. Includes a distinct same-trace v0.16 comparison.</p></article>
+      <article><span class="kind">Actual complete play · v0.10</span><h3><a href="military-playtest/report.html">IRON: a military campaign</a></h3><p>Expansion, war, negotiated peace and founding-world conquest through Domination at cycle 57, with a pinned portable replay.</p></article>
+      <article><span class="kind">Actual midgame continuation · v0.6</span><h3><a href="stage6-playtest.html">The earlier peaceful finish</a></h3><p>A legitimate cycle-40 checkpoint played through victory at 67. Production constraints and its quiet ending motivated later investigation.</p><div class="sub-links"><a href="intervention-audit/index.html">Reconstruction & intervention forks</a></div></article>
+    </div>
+  </section>
+
+  <section id="reviews" aria-labelledby="reviews-title">
+    <h2 id="reviews-title">Mechanics & interface reviews</h2>
+    <p class="intro">Acceptance reports combine ordinary-command checks, imported campaign situations and clearly marked synthetic boundaries. Version labels identify the feature’s review phase, not a claim that every case was rerun on the latest build.</p>
+    <div class="directory">
+      <div class="entry"><span class="version">v0.21.1</span><a href="stage23-keyboard-review/index.html">Keyboard focus after commands</a><p>Construction categories and Research/Chronicle filters retain focus and expose their selected state.</p></div>
+      <div class="entry"><span class="version">v0.21</span><a href="stage21-planning-review/index.html">Funding & invasion consequences</a><p>Alignment funding after current income, lethal retaliation warnings and consistent planning context.</p></div>
+      <div class="entry"><span class="version">v0.20</span><a href="stage20-expedition-review/index.html">Reinforce a committed expedition</a><p>Replay-derived opportunities, bounded rival policy, independent review and preserved timing constraints.</p></div>
+      <div class="entry"><span class="version">v0.19</span><a href="stage19-conclusion-review/index.html">Reopen the conclusion</a><p>Saved outcomes, own final holdings, retained historical links and truthful public tie-rule wording.</p></div>
+      <div class="entry"><span class="version">v0.18</span><a href="stage18-reinforcement-review/index.html">Commission & combine formations</a><p>Manual shipyard shortcuts, legal merge partners, exact outcomes and keyboard continuity.</p></div>
+      <div class="entry"><span class="version">v0.17</span><a href="stage17-investment-review/index.html">Compare colony investments</a><p>Current prices, completed output, lost support and subsequent construction times under fixed assumptions.</p></div>
+      <div class="entry"><span class="version">v0.16</span><a href="stage16-founding-review/index.html">Recognize founding worlds</a><p>Named objectives and confirmed rival control without turning unexplored geography into intelligence.</p></div>
+      <div class="entry"><span class="version">v0.15</span><a href="stage15-combat-review/index.html">Inspect recorded combat rounds</a><p>Actual simultaneous volleys, immutable modifiers, unchanged combat and compatibility with old reports.</p></div>
+      <div class="entry"><span class="version">v0.14</span><a href="stage14-defense-review/index.html">Choose a defensive lead</a><p>Paid formation ordering, visibility boundaries, historical markers and the zero-fire hull boundary.</p></div>
+      <div class="entry"><span class="version">v0.13</span><a href="stage13-command-review/index.html">Understand a command’s effects</a><p>Observed engagement order, historical ship portraits and attainable discovery benefits.</p></div>
+      <div class="entry"><span class="version">v0.12</span><a href="stage12-treaty-review/index.html">Give explicit treaty consent</a><p>Funded trade offers, binding peace terms, expiry, imports and response focus.</p></div>
+      <div class="entry"><span class="version">v0.11</span><a href="stage11-fleet-review/index.html">Hold a garrison</a><p>Saved readiness, fleet cycling, routes and truthful fractional hull displays.</p></div>
+      <div class="entry"><span class="version">v0.10</span><a href="stage10-fleet-review/index.html">Split fleets & share repairs</a><p>Ordinary division, conserved hull, colony repair pools and import/reload behavior.</p></div>
+    </div>
+    <details><summary>Design investigations behind these changes</summary><ul class="compact">
+      <li><a href="defense-order-audit/index.html">Defensive-order audit</a> — actual military replay boundaries, followed by separately labeled hypothetical and synthetic experiments.</li>
+      <li><a href="diplomacy-audit/index.html">Diplomatic consent audit</a> — reconstructed actual peace-offer history and a distinct trade-cancellation fork. <a href="diplomacy-audit/reconstructed-preaccept-diplomacy.html">Reconstructed pre-accept view</a>.</li>
+      <li><a href="intervention-audit/index.html">Alignment intervention audit</a> — historical command reconstruction and lawful rival journeys; feasible arrival is distinct from a successful raid.</li>
+      <li><a href="SIMULATION_AUDIT.md">Early simulation audit</a> — historical findings that led to shared sensors and later strategy work. Consult the progress log for subsequent fixes.</li>
+    </ul></details>
+  </section>
+
+  <section id="comparisons" aria-labelledby="comparisons-title">
+    <h2 id="comparisons-title">Automated measurements</h2>
+    <p class="intro">These evaluate deterministic policies and implementation changes. They do not estimate human win rates or establish optimal play. Read each report’s denominator, fixed-engine method and instrumentation checks before comparing numbers.</p>
+    <div class="directory">
+      <div class="entry"><span class="version">v0.20<br>AI comparison</span><a href="expedition-reinforcement-comparison/index.html">Expedition absorption</a><p>Only rival AI varies; the balanced player controller stays fixed. Paid absorption events and changed outcomes are reported separately.</p></div>
+      <div class="entry"><span class="version">v0.14<br>AI comparison</span><a href="defense-ai-comparison/index.html">Rival defensive leads</a><p>Distinguishes paid assignments from formations that actually defended, with a fixed baseline player policy.</p></div>
+      <div class="entry"><span class="version">v0.12<br>Lifecycle cohort</span><a href="trade-lifecycle-audit.html">Trade-offer lifecycle</a><p>Ignore, accept and decline policies test consent, retained escrow, expiry and quiet periods.</p></div>
+      <div class="entry"><span class="version">v0.10<br>Repair policy</span><a href="results/stage10-repair.json">Shared passive repair</a><p>Same engine and AI; only the recovery rule changes. Policies do not deliberately split, so fragmentation tests are separate.</p></div>
+      <div class="entry"><span class="version">v0.9<br>AI comparison</span><a href="results/expedition-comparison.json">Feasible alignment interventions</a><p>Declarations, journeys, engagements and confirmed blockade declines have distinct definitions.</p></div>
+      <div class="entry"><span class="version">v0.7<br>AI comparison</span><a href="results/stage7-investment.json">Marginal investment planning</a><p>Economic forecasts, a generated planning fixture and paired policy outcomes under stated assumptions.</p></div>
+      <div class="entry"><span class="version">v0.6<br>AI comparison</span><a href="results/stage6-readiness.json">Wartime rebuilding</a><p>Own military readiness and queued replacements under a fixed engine, including economic limits.</p></div>
+      <div class="entry"><span class="version">v0.5<br>Policy cohort</span><a href="results/stage5-discoveries.json">Discovery decisions</a><p>Preservation, maturation, restoration and harvest under passive and balanced policies.</p></div>
+      <div class="entry"><span class="version">v0.4<br>Policy cohort</span><a href="campaign-benchmark.html">Original campaign benchmark</a><p>Early technology, charter and alignment pacing across four policies, pinned to the historical economy.</p></div>
+    </div>
+  </section>
+
+  <section id="validation" aria-labelledby="validation-title">
+    <h2 id="validation-title">Compatibility & validation</h2>
+    <div class="cards">
+      <article><span class="kind">Historical imports · v0.20 engine</span><h3><a href="stage20-expedition-review/save-compatibility/index.html">Save continuity refresh</a></h3><p>Existing original-to-v0.14 artifacts resumed under a pinned v0.20 engine. Actual downloads, generated historical inputs and replay-derived checkpoints retain separate provenance.</p></article>
+      <article><span class="kind">Historical imports · v0.10 engine</span><h3><a href="save-compatibility/index.html">Original cross-version audit</a></h3><p>Paid queues, legacy slot capacity, historical records, routes and exact reload behavior across earlier v1 saves.</p></article>
+    </div>
+    <p class="intro">Current checkout checks are <code>npm test</code>, <code>npm run test:browser</code> and <code>npm run build</code>. Browser scenarios require Chromium. For release-specific results, interrupted runs and hosted verification, use the <a href="../PROGRESS.md">development log</a> and <a href="https://github.com/L3G5/awesome_4x/actions">CI history</a>; historical pass totals are not a current run.</p>
+  </section>
+
+  <section id="art" aria-labelledby="art-title">
+    <h2 id="art-title">Artwork & rendering</h2>
+    <div class="cards">
+      <article><span class="kind">Original raster illustrations</span><h3><a href="artwork.html">Civilizations & expeditions</a></h3><p>The five narrative plates, exact generation prompts, selected assets, encoding provenance and crop studies.</p></article>
+      <article><span class="kind">Native Three.js geometry</span><h3><a href="ship-art.html">Four recognizable hull classes</a></h3><p>Static ship portraits, faction and heritage treatments, a distinct fallback and bounded cache. The interactive preview needs Vite.</p><div class="sub-links"><a href="results/stage8-ship-art.json">Rendering measurements</a></div></article>
+    </div>
+  </section>
+
+  <section id="reproduce" aria-labelledby="reproduce-title">
+    <h2 id="reproduce-title">Reproduce a result</h2>
+    <p class="intro">Run from the repository root with Node.js 22 or newer. Keep Git history available for scripts that load pinned revisions. Use new output directories to preserve the recorded evidence.</p>
+    <div class="split">
+      <div><h3>Open the project</h3><pre>npm ci
+npm run dev</pre><p class="intro">Browse <code>/docs/development.html</code> on the Vite server. See <a href="../README.md">README</a> for setup and deployment; install browser test support with <code>npx playwright install chromium</code>.</p><ul class="compact"><li><a href="API.md">Simulation API reference</a></li><li><a href="DISCOVERIES_API.md">Discovery interface and history contract</a></li><li><a href="../PROGRESS.md">Milestones, validation phases and open work</a></li></ul></div>
+      <div>
+        <div class="recipe"><strong>Replay the actual Odyssey trace</strong><pre>node docs/odyssey-playtest/replay.mjs \
+  --out /tmp/odyssey-reproduction</pre><p>Pinned v0.20 engine and actual downloads. This verifies a recorded history; it does not play a new strategy.</p></div>
+        <div class="recipe"><strong>Repeat the expedition AI comparison</strong><pre>node scripts/expedition-reinforcement-benchmark.mjs \
+  --out /tmp/expedition-reinforcement-results</pre><p>The runner fixes engine <code>fe09832</code>, baseline AI <code>e749df1</code> and the player policy internally.</p></div>
+        <div class="recipe"><strong>Resume the historical save collection</strong><pre>node docs/stage20-expedition-review/save-compatibility/engine-audit.mjs \
+  --repo . --out /tmp/asterion-save-review</pre><p>Engine-only audit pinned to <code>47e0373</code>. Its report gives the separate browser-import procedure.</p></div>
+      </div>
+    </div>
+    <p class="reading-note">Older benchmark scripts may default to the working tree or <code>HEAD</code>. That measures a new engine. To reproduce a historical result, use the revision and runner instructions recorded in its report, including <code>--engine-ref</code> where supported.</p>
+  </section>
+  <footer>Catalog assembled from <code>3c6e822</code> and checked against Stage 23 integration <code>648c1f5</code>. Bundle indexes lead to their screenshots, raw results, fixtures, scripts and hashes. Captured views and frozen builds remain inside those bundles rather than being counted as separate campaigns. No metrics on this page claim to describe an unverified later release.</footer>
+</main>
+</body>
+</html>
