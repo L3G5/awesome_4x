@@ -1,0 +1,24 @@
+
+Running 15 tests using 1 worker
+
+(node:571674) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:571674) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/development-ui.spec.js:22:1 › a capped civic upgrade discloses zero usable orders while preserving the legal credit investment (4.5s)
+  ✓   2 tests/development-ui.spec.js:51:1 › a full colony replaces infrastructure on completion and establishes a persistent specialty (7.4s)
+  ✓   3 tests/development-ui.spec.js:100:1 › a forge displays and charges the discounted military ship price (2.3s)
+  ✓   4 tests/development-ui.spec.js:117:1 › public beacon signals show an interrupted race without revealing hidden fleets (3.2s)
+  ✓   5 tests/development-ui.spec.js:144:1 › a beacon blockade loses an alignment step and a player fleet can restore the race (4.3s)
+  ✓   6 tests/development-ui.spec.js:177:1 › a rival nearing alignment completion opens a briefing and highlights its public network (1.7s)
+  ✓   7 tests/investment-ui.spec.js:18:1 › an unfunded exhausted mandate can compare Forge throughput by keyboard without committing it (1.8s)
+  ✓   8 tests/investment-ui.spec.js:42:1 › replacement comparison includes the lost Extraction charter and keeps ordinary one-click payment unchanged (3.0s)
+  ✓   9 tests/investment-ui.spec.js:67:1 › narrow replacement details retain above-capacity population and disclose loss of shipbuilding (1.2s)
+  ✓  10 tests/investment-ui.spec.js:96:1 › a capped Civic investment shows unchanged usable orders and remains readable after the campaign ends (1.7s)
+  ✓  11 tests/keyboard-flow-ui.spec.js:19:34 › construction categories retain keyboard focus and preserve the campaign at 1280px (1.5s)
+  ✓  12 tests/keyboard-flow-ui.spec.js:19:34 › construction categories retain keyboard focus and preserve the campaign at 390px (1.2s)
+  ✓  13 tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 1280px (1.2s)
+  ✓  14 tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 390px (1.1s)
+  ✓  15 tests/workspace-ui.spec.js:4:1 › command context follows its workspace without disclosing uncontacted civilizations or changing the campaign (2.3s)
+
+  15 passed (39.7s)

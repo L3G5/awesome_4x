@@ -1,0 +1,51 @@
+
+Running 1 test using 1 worker
+
+(node:570870) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:570870) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/keyboard-flow-ui.spec.js:12:34 › construction categories retain keyboard focus and preserve the campaign at 1280px (6.5s)
+
+
+  1) tests/keyboard-flow-ui.spec.js:12:34 › construction categories retain keyboard focus and preserve the campaign at 1280px 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeFocused[2m([22m[2m)[22m failed
+
+    Locator:  locator('.modal [data-action="construction-tab"][data-tab="ship"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+    [2m  - Expect "toBeFocused" with timeout 5000ms[22m
+    [2m  - waiting for locator('.modal [data-action="construction-tab"][data-tab="ship"]')[22m
+    [2m    9 × locator resolved to <button class="active" data-tab="ship" data-system="s0" aria-pressed="true" data-action="construction-tab">Ships</button>[22m
+    [2m      - unexpected value "inactive"[22m
+
+
+      21 |   await expect(tab('ship')).toBeFocused();
+      22 |   await page.keyboard.press('Enter');
+    > 23 |   await expect(tab('ship')).toBeFocused();
+         |                             ^
+      24 |   await expect(tab('ship')).toHaveAttribute('aria-pressed', 'true');
+      25 |   await page.keyboard.press('Tab');
+      26 |   await expect(page.locator('.modal [data-action="build"][data-item="scout"]')).toBeFocused();
+        at /tmp/asterion-stage23-keyboard/tests/keyboard-flow-ui.spec.js:23:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../asterion-stage23-original-focus-failure/keyboard-flow-ui-construct-22e82-erve-the-campaign-at-1280px/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../asterion-stage23-original-focus-failure/keyboard-flow-ui-construct-22e82-erve-the-campaign-at-1280px/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../asterion-stage23-original-focus-failure/keyboard-flow-ui-construct-22e82-erve-the-campaign-at-1280px/trace.zip
+    Usage:
+
+        npx playwright show-trace ../asterion-stage23-original-focus-failure/keyboard-flow-ui-construct-22e82-erve-the-campaign-at-1280px/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/keyboard-flow-ui.spec.js:12:34 › construction categories retain keyboard focus and preserve the campaign at 1280px 

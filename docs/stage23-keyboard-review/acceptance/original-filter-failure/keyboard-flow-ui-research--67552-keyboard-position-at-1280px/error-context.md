@@ -1,0 +1,143 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e10]:
+          - heading "ASTERION REACH" [level=1] [ref=e11]
+          - generic [ref=e12]: THE STARS REMEMBER
+      - generic [ref=e13]:
+        - 'generic "Credits: 140; +7 per cycle after 4 fleet upkeep, before alignment payments" [ref=e14]':
+          - generic [ref=e15]: ◈
+          - generic [ref=e16]:
+            - strong [ref=e17]: "140"
+            - text: "+7"
+            - generic [ref=e18]: Credits
+        - 'generic "Minerals: 110; +9 per cycle" [ref=e19]':
+          - generic [ref=e20]: ◇
+          - generic [ref=e21]:
+            - strong [ref=e22]: "110"
+            - text: "+9"
+            - generic [ref=e23]: Minerals
+        - 'generic "Science: 0; +4 per cycle" [ref=e24]':
+          - generic [ref=e25]: ✧
+          - generic [ref=e26]:
+            - strong [ref=e27]: "0"
+            - text: "+4"
+            - generic [ref=e28]: Science
+        - 'generic "Orders: 6 of 6 available this cycle" [ref=e29]':
+          - generic [ref=e30]: ⌘
+          - generic [ref=e31]:
+            - strong [ref=e32]: 6 / 6
+            - generic [ref=e33]: Orders
+      - generic [ref=e34]:
+        - button "Latest cycle briefing" [disabled] [ref=e35]:
+          - img [ref=e36]
+        - link "Open field guide" [ref=e38] [cursor=pointer]:
+          - /url: ./guide.html
+          - img [ref=e39]
+        - button "Game menu" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+    - navigation "Command views" [ref=e45]:
+      - button "Galaxy" [ref=e46] [cursor=pointer]:
+        - img [ref=e47]
+        - generic [ref=e51]: Galaxy
+      - button "Research" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Research
+      - button "Diplomacy" [ref=e57] [cursor=pointer]:
+        - img [ref=e58]
+        - generic [ref=e61]: Diplomacy
+      - button "Empire" [ref=e62] [cursor=pointer]:
+        - img [ref=e63]
+        - generic [ref=e65]: Empire
+      - button "Chronicle" [ref=e66] [cursor=pointer]:
+        - img [ref=e67]
+        - generic [ref=e69]: Chronicle
+      - button "Home" [ref=e71] [cursor=pointer]:
+        - img [ref=e72]
+        - generic [ref=e74]: Home
+    - main [ref=e75]:
+      - text: · · · ·
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: THE CONCORD ARCHIVES
+            - heading "Beyond the known" [level=2] [ref=e80]
+            - paragraph [ref=e81]: Rediscover the sciences that once connected the stars. Each breakthrough opens a different future for your civilization.
+          - generic [ref=e82]: ✧
+        - generic [ref=e83]:
+          - strong [ref=e84]: Choose a research direction.
+          - text: Science accumulates in your reserves until assigned. Selecting or changing a project uses no orders.
+        - generic [ref=e85]:
+          - button "All" [ref=e86] [cursor=pointer]
+          - button "Engineering" [ref=e87] [cursor=pointer]
+          - button "Society" [ref=e88] [cursor=pointer]
+          - button "Physics" [ref=e89] [cursor=pointer]
+          - button "Military" [ref=e90] [cursor=pointer]
+        - generic [ref=e91]:
+          - article [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: Engineering
+              - generic [ref=e95]: ✧ 55
+            - heading "Deep-space Logistics" [level=3] [ref=e96]
+            - paragraph [ref=e97]: +1 order each turn. Opens automated industry and larger hulls.
+            - generic [ref=e98]:
+              - generic [ref=e99]: Foundational science
+              - button "Research →" [ref=e100] [cursor=pointer]
+          - article [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]: Engineering
+              - generic [ref=e104]: ✧ 220
+            - heading "Autonomous Industry" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Unlocks Manufactories, which add 6 production per turn.
+            - generic [ref=e107]:
+              - generic [ref=e108]: Requires Deep-space Logistics
+              - button "Research →" [disabled] [ref=e109]
+          - article [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]: Engineering
+              - generic [ref=e113]: ✧ 500
+            - heading "Distributed Command" [level=3] [ref=e114]
+            - paragraph [ref=e115]: +2 orders each turn. Warships gain one additional move per turn.
+            - generic [ref=e116]:
+              - generic [ref=e117]: Requires Deep-space Logistics + Stellar Accords
+              - button "Research →" [disabled] [ref=e118]
+    - complementary "Research context" [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - generic [ref=e122]: CONCORD RESEARCH COUNCIL
+          - heading "Your archives" [level=2] [ref=e123]
+          - paragraph [ref=e124]: 0 of 12 sciences recovered
+        - generic [ref=e125]:
+          - strong [ref=e126]: "+4"
+          - generic [ref=e127]: science each cycle
+          - generic [ref=e128]: 0 in reserve
+        - generic [ref=e129]:
+          - generic [ref=e130]: Research direction
+          - paragraph [ref=e131]: Choose a project in the archives. Stored science is applied when you commission it; changing research uses no orders.
+        - generic [ref=e132]:
+          - generic [ref=e133]: Research worlds
+          - button "Solace 4 science / cycle" [ref=e134] [cursor=pointer]:
+            - generic [ref=e135]:
+              - text: Solace
+              - generic [ref=e136]: 4 science / cycle
+            - generic [ref=e137]: ↗
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: Cycle 01
+          - generic [ref=e141]: 2400 CE
+        - button "End cycle → SPACE" [ref=e142] [cursor=pointer]:
+          - generic [ref=e143]: End cycle →
+          - generic [ref=e144]: SPACE
+        - generic [ref=e145]: 6 orders remaining · 1 colony
+    - contentinfo [ref=e146]:
+      - generic [ref=e147]: Your mandate begins among the stars.
+      - generic [ref=e148]: ASTERION REACH / EARLY ACCESS 0.21.0
+      - generic [ref=e149]: LOCAL CAMPAIGN
+  - status
+  - button "Import campaign save" [ref=e150]
+```

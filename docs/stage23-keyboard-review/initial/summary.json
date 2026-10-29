@@ -1,0 +1,77 @@
+{
+  "playedSeed": "ASTERION",
+  "playedVersion": "0.21.0",
+  "playedURL": "http://127.0.0.1:5213",
+  "startUTC": "2026-10-29T02:48:40.116Z",
+  "endUTC": "2026-10-29T03:07:07.297Z",
+  "cycleReached": 12,
+  "ordinaryEndCycleActions": 11,
+  "successfulUIActionsIncludingNavigationAndAudit": 188,
+  "gamePageErrors": 0,
+  "gameFailedResponses": 0,
+  "campaignDriverErrors": [
+    {
+      "kind": "driver-error",
+      "index": 36,
+      "request": {
+        "actions": [
+          {
+            "click": "#inspector [data-system-select]:has-text(\"Morrow\")"
+          },
+          {
+            "click": "[data-action=\"move\"]"
+          },
+          {
+            "click": "#end-turn"
+          },
+          {
+            "press": "3"
+          },
+          {
+            "click": "[data-rival=\"khar\"] [data-stance=\"trade\"]"
+          },
+          {
+            "press": "1"
+          },
+          {
+            "click": ".fleet-switch button[title=\"Pathfinder 1 at Carina\"]"
+          },
+          {
+            "click": "#inspector [data-system-select]:has-text(\"Corvus\")"
+          },
+          {
+            "click": "[data-action=\"move\"]"
+          }
+        ],
+        "screenshot": "cycle11-open-borders"
+      },
+      "message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-rival=\"khar\"] [data-stance=\"trade\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled data-target=\"khar\" data-stance=\"trade\" data-action=\"diplomacy\" title=\"A trade treaty costs 30 credits.\">Trade treaty \u25c830</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 \u00d7 waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 \u00d7 waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 \u00d7 waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "at": "2026-10-29T02:57:56.789Z"
+    }
+  ],
+  "prePostKeyboardExportEqual": true,
+  "guideAnchorsPassed": 10,
+  "findings": [
+    {
+      "control": "Construction tabs",
+      "before": "observation-041.json",
+      "after": "observation-042.json",
+      "expected": "Selected replacement tab keeps focus",
+      "actual": "Close dialog button receives focus"
+    },
+    {
+      "control": "Research category filter",
+      "before": "observation-053.json",
+      "after": "observation-054.json",
+      "expected": "Engineering replacement filter keeps focus",
+      "actual": "BODY receives focus"
+    },
+    {
+      "control": "Chronicle filter",
+      "before": "observation-055.json",
+      "after": "observation-056.json",
+      "expected": "Discovery replacement filter keeps focus",
+      "actual": "BODY receives focus; followingTab returns toAll"
+    }
+  ]
+}

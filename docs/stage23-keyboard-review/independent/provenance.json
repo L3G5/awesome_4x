@@ -1,0 +1,32 @@
+{
+  "purpose": "Post-play read-only acceptance on corrected0.21.1; original opening remains on0.21.0.",
+  "sourceRoot": "/tmp/asterion-stage23-keyboard",
+  "productionRoot": "/tmp/asterion-stage23-final-vapk8k8e",
+  "url": "http://127.0.0.1:5215",
+  "originalManifestSHA256": "0df91b3f4bbb59a8cc829d3187a0f050d4306bf9d9a03eb4268b1b85397e6a3f",
+  "importedActualExportSHA256": "d8bf73702ea980fd3b3f7079fd7a31fe0e2d09ce4bdaa1704b68355bef14a45c",
+  "source": {
+    "src/main.js": "fcfbc84b590450ba20650a9aa93aa9e476483f3b1df8c31553f1fdd83a780430",
+    "public/guide.html": "aa848fb6a26561d58e6c8474b2cd598996035cd4c8d5e54178099c53dbc77fb8"
+  },
+  "production": {
+    "index.html": "c5fc41c27e717c9c8493934459211f39eb97f0ec0d3d6a44da8ee01df1763d49",
+    "guide.html": "aa848fb6a26561d58e6c8474b2cd598996035cd4c8d5e54178099c53dbc77fb8",
+    "build-info.json": "154c1d50d1296640d97a8568d4a1c424048a119b544e575d73642fd84b26c4e9",
+    "favicon.svg": "7253b4b012a13f1e45abd5a447d19e27cde90ff4fa400f6fa617352d5ef833c7",
+    "licenses/marcellus.txt": "a015677ab0010a8c14729226613516401d56e7c0f929ae54f1549eada2bab12c",
+    "licenses/dm-sans.txt": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7",
+    "licenses/three.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+    "assets/index-CgYxfsai.js": "4fd3cb1146abcffab52202e627fbce345b85542da76aa19a4b67bbe4bdc22b5c",
+    "assets/marcellus-latin-400-normal-AvMY561b.woff": "7083fa63e075a796f4beef9293fbc29a80be738d84bbfd89a20ddcdfc5c82198",
+    "assets/index-C-HciKWK.css": "f7829bf71c0bd4c6666070939a0372ae0b7cae0c7beb7c5d986de8914a55e003",
+    "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+    "assets/marcellus-latin-400-normal-86dSXJnk.woff2": "8a539799d12e3a144273288055490f57e1eee84da7a9145f085bc522e80719c3",
+    "art/luminous-choir.webp": "bc9ea736ef0d86eb7a74f5132f721216e6057127d39f854e103f37e84edcbd38",
+    "art/last-observatory.webp": "f2dcf1801786757f3459594e31a32b29b3449a13b89b8fad34435640cdb1b21e",
+    "art/patient-reef.webp": "f3e44fd2c8dfdad3adb0da12566af5555601d05c2848f574d3e013196e5375c8",
+    "art/khar-dominion.webp": "caa27ef07d09696771a15ea1093275d04b8ff610f36fe321c1d25f311acdea75",
+    "art/veyr-consortium.webp": "c2710657c32834e8741bf8ede0d1e9be604c9507d2dbab6de6a39219c86b46c7"
+  }
+}

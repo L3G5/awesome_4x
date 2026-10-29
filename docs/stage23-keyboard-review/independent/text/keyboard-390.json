@@ -1,0 +1,274 @@
+{
+  "width": 390,
+  "height": 844,
+  "steps": [
+    {
+      "label": "Construction initial focus",
+      "selector": ".close-modal",
+      "text": "×",
+      "pressed": null,
+      "focusVisible": false,
+      "bounds": {
+        "x": 332,
+        "y": 58.203125,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "label": "ForwardTab reaches Infrastructure",
+      "selector": "[data-tab=\"building\"]",
+      "text": "Infrastructure",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 32,
+        "y": 229.34375,
+        "width": 91.203125,
+        "height": 31
+      }
+    },
+    {
+      "label": "Infrastructure Enter retains replacement",
+      "selector": "[data-tab=\"building\"]",
+      "text": "Infrastructure",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 32,
+        "y": 229.34375,
+        "width": 91.203125,
+        "height": 31
+      }
+    },
+    {
+      "label": "NextTab reaches Colony charter",
+      "selector": "[data-tab=\"charter\"]",
+      "text": "Colony charter",
+      "pressed": "false",
+      "focusVisible": true,
+      "bounds": {
+        "x": 130.203125,
+        "y": 229.34375,
+        "width": 96.84375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Charter Space retains replacement",
+      "selector": "[data-tab=\"charter\"]",
+      "text": "Colony charter",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 130.203125,
+        "y": 229.34375,
+        "width": 96.84375,
+        "height": 31
+      }
+    },
+    {
+      "label": "NextTab reaches Ships",
+      "selector": "[data-tab=\"ship\"]",
+      "text": "Ships",
+      "pressed": "false",
+      "focusVisible": true,
+      "bounds": {
+        "x": 234.046875,
+        "y": 229.34375,
+        "width": 53.234375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Ships Enter retains replacement",
+      "selector": "[data-tab=\"ship\"]",
+      "text": "Ships",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 234.046875,
+        "y": 229.34375,
+        "width": 53.234375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Ships with no shipyard wraps only because projects are disabled",
+      "selector": ".close-modal",
+      "text": "×",
+      "pressed": null,
+      "focusVisible": true,
+      "bounds": {
+        "x": 332,
+        "y": 58.203125,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "label": "Charter Enter retains replacement",
+      "selector": "[data-tab=\"charter\"]",
+      "text": "Colony charter",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 130.203125,
+        "y": 229.34375,
+        "width": 96.84375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Infrastructure Space retains replacement",
+      "selector": "[data-tab=\"building\"]",
+      "text": "Infrastructure",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 32,
+        "y": 229.34375,
+        "width": 91.203125,
+        "height": 31
+      }
+    },
+    {
+      "label": "Ships Space retains replacement",
+      "selector": "[data-tab=\"ship\"]",
+      "text": "Ships",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 234.046875,
+        "y": 229.34375,
+        "width": 53.234375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Escape restores commission launcher",
+      "selector": "[data-action=\"build-menu\"]",
+      "text": "+ Commission a project",
+      "pressed": null,
+      "focusVisible": true,
+      "bounds": {
+        "x": 66,
+        "y": 403.953125,
+        "width": 306,
+        "height": 36
+      }
+    },
+    {
+      "label": "Research keyboard reaches Engineering",
+      "selector": "[data-research-filter=\"Engineering\"]",
+      "text": "Engineering",
+      "pressed": "false",
+      "focusVisible": true,
+      "bounds": {
+        "x": 109.109375,
+        "y": 349.953125,
+        "width": 81.890625,
+        "height": 31
+      }
+    },
+    {
+      "label": "Engineering Enter retains replacement",
+      "selector": "[data-research-filter=\"Engineering\"]",
+      "text": "Engineering",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 109.109375,
+        "y": 349.953125,
+        "width": 81.890625,
+        "height": 31
+      }
+    },
+    {
+      "label": "NextTab proceeds to Society",
+      "selector": "[data-research-filter=\"Society\"]",
+      "text": "Society",
+      "pressed": "false",
+      "focusVisible": true,
+      "bounds": {
+        "x": 198,
+        "y": 349.953125,
+        "width": 62.84375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Society Space retains replacement",
+      "selector": "[data-research-filter=\"Society\"]",
+      "text": "Society",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 198,
+        "y": 349.953125,
+        "width": 62.84375,
+        "height": 31
+      }
+    },
+    {
+      "label": "Chronicle keyboard reaches Discovery",
+      "selector": "[data-log-filter=\"discovery\"]",
+      "text": "Discovery",
+      "pressed": "false",
+      "focusVisible": true,
+      "bounds": {
+        "x": 109.109375,
+        "y": 214.78125,
+        "width": 73.671875,
+        "height": 31
+      }
+    },
+    {
+      "label": "Discovery Space retains replacement",
+      "selector": "[data-log-filter=\"discovery\"]",
+      "text": "Discovery",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 109.109375,
+        "y": 214.78125,
+        "width": 73.671875,
+        "height": 31
+      }
+    },
+    {
+      "label": "NextTab proceeds to Construction",
+      "selector": "[data-log-filter=\"construction\"]",
+      "text": "Construction",
+      "pressed": "false",
+      "focusVisible": true,
+      "bounds": {
+        "x": 189.78125,
+        "y": 214.78125,
+        "width": 88.5625,
+        "height": 31
+      }
+    },
+    {
+      "label": "Construction filter Enter retains replacement",
+      "selector": "[data-log-filter=\"construction\"]",
+      "text": "Construction",
+      "pressed": "true",
+      "focusVisible": true,
+      "bounds": {
+        "x": 189.78125,
+        "y": 214.78125,
+        "width": 88.5625,
+        "height": 31
+      }
+    }
+  ],
+  "stateUnchanged": true,
+  "startHash": "b6ef389b33ba205ac0c79ad99209ef4b5e349436e11e694e69e61b7b0c41a00a",
+  "finalHash": "b6ef389b33ba205ac0c79ad99209ef4b5e349436e11e694e69e61b7b0c41a00a",
+  "layout": {
+    "overflow": false,
+    "bodyWidth": 390,
+    "fonts": "loaded"
+  }
+}

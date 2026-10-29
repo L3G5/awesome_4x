@@ -20,6 +20,8 @@ The simulation in `src/game.js` is independent of rendering. Authored content, r
 
 The in-game Field Guide is the player-facing HTML documentation. See [PROGRESS.md](PROGRESS.md) for verified milestones and open development work.
 
+The [keyboard continuity review](docs/stage23-keyboard-review/index.html) connects an actual cycle-12 opening audit to corrected construction, Research and Chronicle focus, preserving both original findings and independent acceptance.
+
 The [planning feedback review](docs/stage21-planning-review/index.html) verifies alignment funding after current income and explicit lethal-retaliation warnings, with unchanged simulation outcomes and independent desktop/narrow checks.
 
 The [Odyssey campaign](docs/odyssey-playtest/index.html) follows actual version-0.20 play through three blockade interruptions and Transcendence at cycle 66, one step ahead of Khar. Its portable replay reproduces all 280 commands and 16 actual exports exactly. Run `node docs/odyssey-playtest/replay.mjs --out /tmp/odyssey-reproduction`.

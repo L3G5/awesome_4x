@@ -1,0 +1,270 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e10]:
+          - heading "ASTERION REACH" [level=1] [ref=e11]
+          - generic [ref=e12]: THE STARS REMEMBER
+      - generic [ref=e13]:
+        - 'generic "Credits: 140; +7 per cycle after 4 fleet upkeep, before alignment payments" [ref=e14]':
+          - generic [ref=e15]: ◈
+          - generic [ref=e16]:
+            - strong [ref=e17]: "140"
+            - text: "+7"
+            - generic [ref=e18]: Credits
+        - 'generic "Minerals: 110; +9 per cycle" [ref=e19]':
+          - generic [ref=e20]: ◇
+          - generic [ref=e21]:
+            - strong [ref=e22]: "110"
+            - text: "+9"
+            - generic [ref=e23]: Minerals
+        - 'generic "Science: 0; +4 per cycle" [ref=e24]':
+          - generic [ref=e25]: ✧
+          - generic [ref=e26]:
+            - strong [ref=e27]: "0"
+            - text: "+4"
+            - generic [ref=e28]: Science
+        - 'generic "Orders: 6 of 6 available this cycle" [ref=e29]':
+          - generic [ref=e30]: ⌘
+          - generic [ref=e31]:
+            - strong [ref=e32]: 6 / 6
+            - generic [ref=e33]: Orders
+      - generic [ref=e34]:
+        - button "Latest cycle briefing" [disabled] [ref=e35]:
+          - img [ref=e36]
+        - link "Open field guide" [ref=e38] [cursor=pointer]:
+          - /url: ./guide.html
+          - img [ref=e39]
+        - button "Game menu" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+    - navigation "Command views" [ref=e45]:
+      - button "Galaxy" [ref=e46] [cursor=pointer]:
+        - img [ref=e47]
+        - generic [ref=e51]: Galaxy
+      - button "Research" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Research
+      - button "Diplomacy" [ref=e57] [cursor=pointer]:
+        - img [ref=e58]
+        - generic [ref=e61]: Diplomacy
+      - button "Empire" [ref=e62] [cursor=pointer]:
+        - img [ref=e63]
+        - generic [ref=e65]: Empire
+      - button "Chronicle" [ref=e66] [cursor=pointer]:
+        - img [ref=e67]
+        - generic [ref=e69]: Chronicle
+      - button "Home" [ref=e71] [cursor=pointer]:
+        - img [ref=e72]
+        - generic [ref=e74]: Home
+    - main [ref=e75]:
+      - generic [ref=e76]:
+        - generic "Interactive galaxy map" [ref=e77]:
+          - img
+          - generic "Galaxy systems and fleets":
+            - button "Solace, founding world, concord" [pressed] [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]: ⌂Solace
+              - generic [ref=e81]: CONCORD
+            - button "Sundrift, unsurveyed, adjacent to selected fleet" [ref=e82] [cursor=pointer]:
+              - generic [ref=e83]: ·Sundrift
+              - generic [ref=e84]: UNSURVEYED
+            - button "Haven, unsurveyed, adjacent to selected fleet" [ref=e85] [cursor=pointer]:
+              - generic [ref=e86]: ·Haven
+              - generic [ref=e87]: UNSURVEYED
+            - button "Halcyon, unsurveyed, adjacent to selected fleet" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]: ·Halcyon
+              - generic [ref=e90]: UNSURVEYED
+            - button "Asterion, unsurveyed, adjacent to selected fleet" [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: ·Asterion
+              - generic [ref=e93]: UNSURVEYED
+            - button "Pathfinder 1, Scout, at Solace" [pressed] [ref=e94] [cursor=pointer]: △
+            - button "Colony Ark 2, Colony ship, at Solace" [ref=e95] [cursor=pointer]: ⬡
+            - button "Vanguard 3, Frigate, at Solace" [ref=e96] [cursor=pointer]: ▴
+          - generic:
+            - generic: THE ASTERION REACH
+            - generic: THE UNCHARTED EXPANSE
+        - generic:
+          - generic: CONCORD EXPLORATION AUTHORITY
+          - heading "The Asterion Reach" [level=2]
+          - paragraph: 5 charted systems · 1 surveyed · seed ASTERION
+        - generic [ref=e97]:
+          - button "Zoom in" [ref=e98] [cursor=pointer]: +
+          - button "Zoom out" [ref=e99] [cursor=pointer]: −
+          - button "Fit galaxy" [ref=e100] [cursor=pointer]: ⌖
+        - generic [ref=e101]:
+          - strong [ref=e102]: YOUR FIRST MANDATE
+          - text: Scout a neighboring star. Send your Colony Ark to a habitable world and establish a second home.
+        - generic: PER ASPERA, AD ASTRA
+        - generic:
+          - generic: CONCORD
+          - generic: CHARTED
+          - generic: UNKNOWN
+          - generic: ⌂ FOUNDING WORLD
+        - generic [ref=e103]:
+          - img "Pathfinder hull" [ref=e104]
+          - generic [ref=e105]:
+            - heading "Pathfinder 1 / Solace" [level=3] [ref=e106]
+            - paragraph [ref=e107]: Scout · 1 ship · 2 jumps · 18 / 18 hull · Select a star to plot a jump or a course.
+          - button "Hold position" [ref=e108] [cursor=pointer]
+          - button "⌁ 3" [ref=e109] [cursor=pointer]
+          - button "⇥" [ref=e110] [cursor=pointer]
+          - generic [ref=e111]:
+            - button "△" [ref=e112] [cursor=pointer]
+            - button "⬡" [ref=e113] [cursor=pointer]
+            - button "▴" [ref=e114] [cursor=pointer]
+    - complementary "System inspector" [ref=e115]:
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]: The Concord
+          - heading "Solace" [level=2] [ref=e120]
+          - paragraph [ref=e121]: Terran world · Founding system
+        - generic [ref=e122]:
+          - img "Terran world"
+        - paragraph [ref=e123]: Temperate oceans and broad continental shelves.
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e126]: 90%
+            - generic [ref=e127]: Habitability
+          - generic [ref=e128]:
+            - generic [ref=e129]: 4/8
+            - generic [ref=e130]: Population
+          - generic [ref=e131]:
+            - generic [ref=e132]: "8"
+            - generic [ref=e133]: Production
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - text: Colony production
+            - generic [ref=e136]: 8 / cycle
+          - paragraph [ref=e137]: Your construction teams await a new project.
+          - button "+ Commission a project" [ref=e138] [cursor=pointer]
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - text: Infrastructure
+            - generic [ref=e141]: 2 / 3 slots
+          - generic "2 of 3 infrastructure slots occupied" [ref=e142]
+          - generic [ref=e146]:
+            - generic "+5 minerals each turn." [ref=e147]: ◇ Orbital Extractor
+            - generic "Build ships here. Adds 4 hull to this colony’s shared repair capacity each cycle." [ref=e148]: ⌁ Orbital Shipyard
+          - paragraph [ref=e149]: 1 open slot. More population opens slots, up to five.
+          - generic [ref=e150]:
+            - generic [ref=e151]: ⌂
+            - generic [ref=e152]:
+              - text: Unchartered
+              - paragraph [ref=e153]: Give this world a lasting specialty.
+            - button "Develop →" [ref=e154] [cursor=pointer]
+        - paragraph [ref=e156]: +11 credits · +9 minerals · +4 science
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - text: Founding world
+            - generic [ref=e159]: ⌂
+          - paragraph [ref=e160]: A permanent Domination objective. Holding all four founding worlds wins the campaign.
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - term [ref=e163]: Founded by
+              - definition [ref=e164]: Concord
+            - generic [ref=e165]:
+              - term [ref=e166]: Current control
+              - definition [ref=e167]: Concord
+          - paragraph [ref=e168]: Moving an administrative capital does not move this objective.
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - text: In orbit
+            - generic [ref=e171]: 3 fleets
+          - generic [ref=e172]:
+            - button "Pathfinder hull Pathfinder 1 Scout · 18 / 18 hull Ready 2 jumps" [ref=e173] [cursor=pointer]:
+              - img "Pathfinder hull" [ref=e174]
+              - generic [ref=e175]:
+                - text: Pathfinder 1
+                - generic [ref=e176]: Scout · 18 / 18 hull
+              - generic [ref=e177]:
+                - generic [ref=e178]: Ready
+                - generic [ref=e179]: 2 jumps
+            - button "Colony Ark hull Colony Ark 2 Colony ship · 24 / 24 hull Ready 1 jump" [ref=e180] [cursor=pointer]:
+              - img "Colony Ark hull" [ref=e181]
+              - generic [ref=e182]:
+                - text: Colony Ark 2
+                - generic [ref=e183]: Colony ship · 24 / 24 hull
+              - generic [ref=e184]:
+                - generic [ref=e185]: Ready
+                - generic [ref=e186]: 1 jump
+            - button "Vanguard hull Vanguard 3 Frigate · 34 / 34 hull Ready 1 jump" [ref=e187] [cursor=pointer]:
+              - img "Vanguard hull" [ref=e188]
+              - generic [ref=e189]:
+                - text: Vanguard 3
+                - generic [ref=e190]: Frigate · 34 / 34 hull
+              - generic [ref=e191]:
+                - generic [ref=e192]: Ready
+                - generic [ref=e193]: 1 jump
+        - generic [ref=e194]:
+          - generic [ref=e195]: Defensive lead
+          - paragraph [ref=e196]: Default formation order
+          - paragraph [ref=e197]: Your formations defend separately in the order listed above. A surviving attacker can still reach later defenders.
+          - paragraph [ref=e198]: Select one of your military formations above to assign or clear its lead. Either change costs one order.
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - text: Orbital maintenance
+            - generic [ref=e201]: 8 hull / cycle
+          - paragraph [ref=e202]: All your fleets here are fully repaired.
+          - generic [ref=e203]: Ships at one colony share its repair capacity. Splitting or merging does not increase the total.
+        - generic [ref=e204]:
+          - generic [ref=e205]: Connected systems
+          - generic [ref=e206]:
+            - button "Sundrift ↗" [ref=e207] [cursor=pointer]
+            - button "Asterion ↗" [ref=e208] [cursor=pointer]
+            - button "Haven ↗" [ref=e209] [cursor=pointer]
+            - button "Halcyon ↗" [ref=e210] [cursor=pointer]
+      - generic [ref=e211]:
+        - generic [ref=e212]:
+          - generic [ref=e213]: Cycle 01
+          - generic [ref=e214]: 2400 CE
+        - button "End cycle → SPACE" [ref=e215] [cursor=pointer]:
+          - generic [ref=e216]: End cycle →
+          - generic [ref=e217]: SPACE
+        - generic [ref=e218]: 6 orders remaining · 1 colony
+    - contentinfo [ref=e219]:
+      - generic [ref=e220]: Your mandate begins among the stars.
+      - generic [ref=e221]: ASTERION REACH / EARLY ACCESS 0.21.0
+      - generic [ref=e222]: LOCAL CAMPAIGN
+  - dialog "Shape this world's future" [ref=e224]:
+    - button "Close dialog" [active] [ref=e225] [cursor=pointer]: ×
+    - generic [ref=e226]:
+      - generic [ref=e227]: COLONIAL COMMISSION · Solace
+      - heading "Shape this world's future" [level=2] [ref=e228]
+      - paragraph [ref=e229]: 2 / 3 infrastructure slots · 8 production per cycle. Each commission costs one order. Payment is made now; the project completes over the following cycles.
+      - generic [ref=e230]:
+        - button "Infrastructure" [ref=e231] [cursor=pointer]
+        - button "Colony charter" [ref=e232] [cursor=pointer]
+        - button "Ships" [pressed] [ref=e233] [cursor=pointer]
+      - paragraph [ref=e234]: Ships need an Orbital Shipyard and do not occupy infrastructure slots. Forge charter discounts are included in the prices below.
+      - generic [ref=e235]:
+        - button "Pathfinder hull Pathfinder Fast exploration vessel. Two jumps per turn; best kept away from combat. ◈ 20 ◇ 20 · 3 cycles · 1 upkeep" [ref=e236] [cursor=pointer]:
+          - img "Pathfinder hull" [ref=e237]
+          - generic [ref=e238]:
+            - generic [ref=e239]: Pathfinder
+            - paragraph [ref=e240]: Fast exploration vessel. Two jumps per turn; best kept away from combat.
+            - generic [ref=e241]: ◈ 20 ◇ 20 · 3 cycles · 1 upkeep
+        - button "Colony Ark hull Colony Ark Found a new colony on a surveyed, habitable world. Consumed when settling. ◈ 45 ◇ 55 · 5 cycles · 1 upkeep" [ref=e242] [cursor=pointer]:
+          - img "Colony Ark hull" [ref=e243]
+          - generic [ref=e244]:
+            - generic [ref=e245]: Colony Ark
+            - paragraph [ref=e246]: Found a new colony on a surveyed, habitable world. Consumed when settling.
+            - generic [ref=e247]: ◈ 45 ◇ 55 · 5 cycles · 1 upkeep
+        - button "Vanguard hull Vanguard Versatile escort and invasion vessel. Combine frigates into task forces. ◈ 25 ◇ 35 · 4 cycles · 2 upkeep" [ref=e248] [cursor=pointer]:
+          - img "Vanguard hull" [ref=e249]
+          - generic [ref=e250]:
+            - generic [ref=e251]: Vanguard
+            - paragraph [ref=e252]: Versatile escort and invasion vessel. Combine frigates into task forces.
+            - generic [ref=e253]: ◈ 25 ◇ 35 · 4 cycles · 2 upkeep
+        - button "Sovereign hull Sovereign Heavy capital ship designed to break fortified systems. ◈ 65 ◇ 85 · 9 cycles · 4 upkeep Requires Capital Ship Architecture" [disabled] [ref=e254]:
+          - img "Sovereign hull" [ref=e255]
+          - generic [ref=e256]:
+            - generic [ref=e257]: Sovereign
+            - paragraph [ref=e258]: Heavy capital ship designed to break fortified systems.
+            - generic [ref=e259]: ◈ 65 ◇ 85 · 9 cycles · 4 upkeep
+            - paragraph [ref=e260]: Requires Capital Ship Architecture
+  - status
+  - button "Import campaign save" [ref=e261]
+```

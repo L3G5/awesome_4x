@@ -1,0 +1,51 @@
+
+Running 1 test using 1 worker
+
+(node:571234) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:571234) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 1280px (6.4s)
+
+
+  1) tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 1280px 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeFocused[2m([22m[2m)[22m failed
+
+    Locator:  locator('[data-research-filter="Engineering"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+    [2m  - Expect "toBeFocused" with timeout 5000ms[22m
+    [2m  - waiting for locator('[data-research-filter="Engineering"]')[22m
+    [2m    9 × locator resolved to <button class="active" data-research-filter="Engineering">Engineering</button>[22m
+    [2m      - unexpected value "inactive"[22m
+
+
+      64 |   await tabTo(page, engineering);
+      65 |   await page.keyboard.press('Enter');
+    > 66 |   await expect(engineering).toBeFocused();
+         |                             ^
+      67 |   await expect(engineering).toHaveAttribute('aria-pressed', 'true');
+      68 |   await page.keyboard.press('Tab');
+      69 |   const society = page.locator('[data-research-filter="Society"]');
+        at /tmp/asterion-stage23-keyboard/tests/keyboard-flow-ui.spec.js:66:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../asterion-stage23-original-filter-failure/keyboard-flow-ui-research--67552-keyboard-position-at-1280px/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../asterion-stage23-original-filter-failure/keyboard-flow-ui-research--67552-keyboard-position-at-1280px/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../asterion-stage23-original-filter-failure/keyboard-flow-ui-research--67552-keyboard-position-at-1280px/trace.zip
+    Usage:
+
+        npx playwright show-trace ../asterion-stage23-original-filter-failure/keyboard-flow-ui-research--67552-keyboard-position-at-1280px/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 1280px 
