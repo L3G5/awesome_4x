@@ -10,9 +10,10 @@ A desktop-first, turn-based space 4X built with Three.js. Guide the Concord thro
 
 ## Play
 
-The seeded galaxy contains 42 systems and four civilizations. Orders limit what your empire can accomplish each cycle; fleet movement has its own allowance. Expansion, infrastructure slots and colony charters make economic choices consequential.
+The seeded galaxy contains 42 systems and four civilizations, with different geography, local resource choices and discovery locations between seeds. Orders limit what your empire can accomplish each cycle; fleet movement has its own allowance. Expansion, infrastructure slots and colony charters make economic choices consequential.
 
 - Explore discoveries with lasting choices, restoration projects and shared historical records.
+- Restore dormant starlanes through paid colony construction; compare the routes they shorten before opening a shortcut every empire can use.
 - Research twelve technologies, develop specialized colonies and assemble military formations.
 - Negotiate funded trade and peace offers, manage treaty notice periods and respond to border disputes.
 - Split, merge, repair and hold fleets; inspect invasion forecasts and recorded combat exchanges.
@@ -21,6 +22,8 @@ The seeded galaxy contains 42 systems and four civilizations. Orders limit what 
 Use **Русский** in the top bar or any dialog to switch the interface to Russian; **English** switches back. The preference stays in this browser and leaves saves unchanged. The Field Guide and design documentation remain in English.
 
 The game autosaves in your browser. Export a JSON campaign from the menu to keep a backup or move it to another browser. The in-game Field Guide explains the rules and controls.
+
+Use **Undo** or **Ctrl/Cmd+Z** to take back actions during the current cycle. Ending the cycle commits your actions. On phones, tapping a world inspects it; select a fleet explicitly to open its controls, and use **Close fleet controls** to return to inspection.
 
 ## Run locally
 
@@ -43,6 +46,8 @@ The simulation in `src/game.js` is independent of rendering. Separate modules ha
 ## Design research
 
 The [good 4X guide](https://l3g5.github.io/awesome_4x/design/good-4x.html) and [bad 4X guide](https://l3g5.github.io/awesome_4x/design/bad-4x.html) examine meaningful choices, randomness, replayability, pacing, UI and player control. They preserve source disagreements and provide concrete review tasks, based on 33 distinct sources. The [critique and iteration record](docs/stage29-design-and-russian/index.html) connects those criteria to the keyboard, public war-motive and early Ecology changes, with independent Russian-interface review.
+
+The [mechanics depth iteration](docs/mechanics-depth/index.html) follows those principles through varied geography, shared starlanes, blockade-aware peace, colony route comparisons, undo and mobile inspection. It includes independent critiques and an exact replay of a normal default campaign through cycle 24.
 
 ## Validate and investigate
 

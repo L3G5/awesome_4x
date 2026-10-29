@@ -1,0 +1,25 @@
+[WebServer] (node:775071) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 10 tests using 1 worker
+
+(node:775091) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:775091) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/10] tests/undo-ui.spec.js:18:3 › a missing main save never attaches orphan undo to a new campaign
+[2/10] tests/undo-ui.spec.js:18:3 › a malformed main save never attaches orphan undo to a new campaign
+[3/10] tests/undo-ui.spec.js:39:3 › undo research and construction survives reload at 1440 en
+[4/10] tests/undo-ui.spec.js:39:3 › undo research and construction survives reload at 1440 ru
+[5/10] tests/undo-ui.spec.js:39:3 › undo research and construction survives reload at 390 en
+[6/10] tests/undo-ui.spec.js:39:3 › undo research and construction survives reload at 390 ru
+[7/10] tests/undo-ui.spec.js:77:1 › undo restores a consumed colony ark and movement, then repeats exactly
+[8/10] tests/undo-ui.spec.js:102:1 › combat report offers undo and repeating combat retains the exact random result
+[9/10] tests/undo-ui.spec.js:130:1 › mobile modal Undo returns focus to the visible restored workspace
+[10/10] tests/undo-ui.spec.js:143:1 › only confirmed End cycle, import and new campaign discard action history
+  10 passed (31.9s)

@@ -1,0 +1,32 @@
+
+Running 20 tests using 1 worker
+
+(node:737783) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:737783) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/20] tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 1440
+[2/20] tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 390
+[3/20] tests/localization-ui.spec.js:42:1 › Russian ordinary research and End Cycle have exact English-engine effects
+[4/20] tests/localization-ui.spec.js:63:1 › actual midgame toggles and exports exactly while the field guide stays English
+[5/20] tests/localization-ui.spec.js:78:1 › Russian import and finished conclusion preserve the original save
+[6/20] tests/localization-ui.spec.js:94:1 › Russian ordinary peace explains all binding terms and keeps its exact paid effect
+[7/20] tests/starlane-routes-ui.spec.js:9:3 › actual colony routes distinguish an unchanged capital connection at 1440 en
+[8/20] tests/starlane-routes-ui.spec.js:9:3 › actual colony routes distinguish an unchanged capital connection at 1440 ru
+[9/20] tests/starlane-routes-ui.spec.js:9:3 › actual colony routes distinguish an unchanged capital connection at 390 en
+[10/20] tests/starlane-routes-ui.spec.js:9:3 › actual colony routes distinguish an unchanged capital connection at 390 ru
+[11/20] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 1440 en
+[12/20] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 1440 ru
+[13/20] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 en
+[14/20] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 ru
+[15/20] tests/starlanes-ui.spec.js:80:1 › changing the construction endpoint, cancelling and reloading preserve the exact campaign
+[16/20] tests/starlanes-ui.spec.js:107:1 › completion announces a shared lane and ordinary UI movement spends one order and jump
+[17/20] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 1440 en
+[18/20] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 1440 ru
+[19/20] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 390 en
+[20/20] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 390 ru
+  20 passed (1.0m)

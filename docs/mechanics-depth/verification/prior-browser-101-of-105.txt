@@ -1,0 +1,276 @@
+
+Running 105 tests using 1 worker
+
+(node:703806) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:703806) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/105] tests/alignment-diplomacy.spec.js:16:1 › the actual friendly cycle53 exposes only a possible alignment incentive
+  1) tests/alignment-diplomacy.spec.js:16:1 › the actual friendly cycle53 exposes only a possible alignment incentive 
+
+    Error: Select one of your own fleets.
+
+       9 |     if (row.turnBefore >= cycle) break;
+      10 |     const result = row.action.type === 'endTurn' ? endTurn(state) : command(state, row.action);
+    > 11 |     if (!result.ok) throw new Error(result.message);
+         |                           ^
+      12 |   }
+      13 |   return state;
+      14 | }
+        at replayedCycle (/tmp/asterion-v023-candidate-3wcxogvp/tests/alignment-diplomacy.spec.js:11:27)
+        at /tmp/asterion-v023-candidate-3wcxogvp/tests/alignment-diplomacy.spec.js:17:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/alignment-diplomacy-the-ac-7f167-ossible-alignment-incentive/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/alignment-diplomacy-the-ac-7f167-ossible-alignment-incentive/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/alignment-diplomacy-the-ac-7f167-ossible-alignment-incentive/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:703944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:703944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/105] tests/alignment-diplomacy.spec.js:29:1 › new declarations retain their public cause after reload without relabeling legacy wars
+  2) tests/alignment-diplomacy.spec.js:29:1 › new declarations retain their public cause after reload without relabeling legacy wars 
+
+    Error: Select one of your own fleets.
+
+       9 |     if (row.turnBefore >= cycle) break;
+      10 |     const result = row.action.type === 'endTurn' ? endTurn(state) : command(state, row.action);
+    > 11 |     if (!result.ok) throw new Error(result.message);
+         |                           ^
+      12 |   }
+      13 |   return state;
+      14 | }
+        at replayedCycle (/tmp/asterion-v023-candidate-3wcxogvp/tests/alignment-diplomacy.spec.js:11:27)
+        at /tmp/asterion-v023-candidate-3wcxogvp/tests/alignment-diplomacy.spec.js:30:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/alignment-diplomacy-new-de-09bb8-hout-relabeling-legacy-wars/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/alignment-diplomacy-new-de-09bb8-hout-relabeling-legacy-wars/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/alignment-diplomacy-new-de-09bb8-hout-relabeling-legacy-wars/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:704093) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:704093) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/105] tests/browser.spec.js:16:1 › a real opening campaign surveys, settles, builds, researches, saves, and advances rival empires
+[4/105] tests/browser.spec.js:57:1 › command views, guide, save export and mobile layout remain usable
+[5/105] tests/combat-rounds-ui.spec.js:29:1 › actual four-round exchanges are keyboard-readable and preserve a sequential attack and reload exactly
+[6/105] tests/combat-rounds-ui.spec.js:81:1 › narrow historical rounds retain battle-time weapons, doctrine and names after later changes
+[7/105] tests/combat-rounds-ui.spec.js:121:1 › older outcome-only reports remain readable without invented rounds
+[8/105] tests/commit-focus-ui.spec.js:18:3 › keyboard map selection retains the selected label at 1440px
+[9/105] tests/commit-focus-ui.spec.js:34:3 › keyboard Empire inspection focuses its resulting world at 1440px
+[10/105] tests/commit-focus-ui.spec.js:47:3 › keyboard research commission focuses the current result at 1440px
+[11/105] tests/commit-focus-ui.spec.js:63:3 › keyboard construction commission focuses the paid project at 1440px
+[12/105] tests/commit-focus-ui.spec.js:95:3 › keyboard charter commission focuses the paid project at 1440px
+[13/105] tests/commit-focus-ui.spec.js:18:3 › keyboard map selection retains the selected label at 390px
+[14/105] tests/commit-focus-ui.spec.js:34:3 › keyboard Empire inspection focuses its resulting world at 390px
+[15/105] tests/commit-focus-ui.spec.js:47:3 › keyboard research commission focuses the current result at 390px
+[16/105] tests/commit-focus-ui.spec.js:63:3 › keyboard construction commission focuses the paid project at 390px
+[17/105] tests/commit-focus-ui.spec.js:95:3 › keyboard charter commission focuses the paid project at 390px
+[18/105] tests/commit-focus-ui.spec.js:114:1 › the hidden importer is skipped by Tab and still opens from the menu
+[19/105] tests/commit-focus-ui.spec.js:131:1 › pointer actions retain their existing focus behavior
+[20/105] tests/conclusion-ui.spec.js:29:1 › the completed WATCH campaign reopens, links retained reports and exports its exact saved outcome
+[21/105] tests/conclusion-ui.spec.js:66:1 › the actual military ending remains usable at 390 pixels and labels its capped retained history
+[22/105] tests/conclusion-ui.spec.js:89:1 › an older recorded Transcendence remains authoritative without inventing missing alignment progress
+[23/105] tests/conclusion-ui.spec.js:110:1 › a loss with no retained history shows the recorded victor and own holdings without a fabricated timeline
+[24/105] tests/conclusion-ui.spec.js:128:1 › the actual tied public race explains Legacy and seeded ties without exposing private rival scores
+[25/105] tests/conclusion-ui.spec.js:153:1 › a normal advancing cycle opens the new conclusion with its exact authoritative win state
+[26/105] tests/conquest-ui.spec.js:18:1 › the actual cycle55 campaign identifies its remaining founding objective and preserves beacon navigation
+[27/105] tests/conquest-ui.spec.js:48:1 › contact and chart hints reveal no founding targets or hidden control totals
+[28/105] tests/conquest-ui.spec.js:81:1 › an ordinary founding-world capture updates control while the relocated frontier capital remains outside the ledger
+[29/105] tests/conquest-ui.spec.js:121:1 › an owned or surveyed legacy world remains inspectable without a redundant chart flag
+[30/105] tests/defense-ui.spec.js:18:1 › a held formation spends its last order leading defense and retains usable keyboard focus after reload
+[31/105] tests/defense-ui.spec.js:44:1 › division explains the retained lead and merging transfers it to the selected survivor before paid clearing
+[32/105] tests/defense-ui.spec.js:70:1 › observed enemy lead order matches actual engagements and its historical defender badge survives reload
+[33/105] tests/development-ui.spec.js:22:1 › a capped civic upgrade discloses zero usable orders while preserving the legal credit investment
+[34/105] tests/development-ui.spec.js:51:1 › a full colony replaces infrastructure on completion and establishes a persistent specialty
+[35/105] tests/development-ui.spec.js:100:1 › a forge displays and charges the discounted military ship price
+[36/105] tests/development-ui.spec.js:117:1 › public beacon signals show an interrupted race without revealing hidden fleets
+[37/105] tests/development-ui.spec.js:144:1 › a beacon blockade loses an alignment step and a player fleet can restore the race
+[38/105] tests/development-ui.spec.js:177:1 › a rival nearing alignment completion opens a briefing and highlights its public network
+[39/105] tests/diplomacy-ui.spec.js:6:3 › a player can accept an AI peace offer without losing agency
+[40/105] tests/diplomacy-ui.spec.js:6:3 › a player can decline an AI peace offer without losing agency
+[41/105] tests/discoveries-ui.spec.js:22:1 › an observatory matures, reserves its restoration after cancellation, and persists its story
+[42/105] tests/discoveries-ui.spec.js:78:1 › an exhausted expedition can reach the restoration selector by keyboard
+[43/105] tests/discoveries-ui.spec.js:102:1 › a recovered escort keeps its name and fleet heritage after merging
+[44/105] tests/discovery-effects-ui.spec.js:17:1 › refugee terms explain arrival above capacity and match the paid command and reload
+[45/105] tests/discovery-effects-ui.spec.js:38:1 › Garden terms retain science while showing the actual habitability increase
+[46/105] tests/discovery-effects-ui.spec.js:54:1 › a lost refugee destination discloses no population gain before charging its unchanged price
+[47/105] tests/expedition-ui.spec.js:4:1 › a rival challenging the Concord alignment opens a war briefing and its expedition survives reload
+[48/105] tests/fleet-controls.spec.js:28:1 › a damaged fleet detaches ships at the disclosed cost while preserving its course and history
+[49/105] tests/fleet-controls.spec.js:62:1 › the colony discloses one repair pool shared by detached formations
+[50/105] tests/fleet-readiness-ui.spec.js:25:1 › acknowledged garrisons stay out of next-fleet cycling and completed-research warnings
+[51/105] tests/fleet-readiness-ui.spec.js:72:1 › holding a fleet preserves research warnings and continuing its course resumes normal paid movement
+[52/105] tests/fleet-readiness-ui.spec.js:103:1 › fractional damage stays visible and a detachment starts active while its original holds
+[53/105] tests/intelligence-ui.spec.js:4:1 › the command interface conceals remote fleets and charges for a blind interception
+  3) tests/intelligence-ui.spec.js:4:1 › the command interface conceals remote fleets and charges for a blind interception 
+
+    Error: expect(received).not.toContain(expected) // indexOf
+
+    Expected value: not "player"
+    Received array:     ["player"]
+
+      25 |   expect(after.fleets.find(f => f.id === scout.id).movesLeft).toBe(1);
+      26 |   expect(after.fleets.find(f => f.id === scout.id).systemId).toBe(home.id);
+    > 27 |   expect(after.systems.find(s => s.id === target.id).exploredBy).not.toContain('player');
+         |                                                                      ^
+      28 |   await expect(page.locator('#status-message')).toContainText(/intercept|withdr/i);
+      29 | });
+      30 |
+        at /tmp/asterion-v023-candidate-3wcxogvp/tests/intelligence-ui.spec.js:27:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/intelligence-ui-the-comman-e00b1-es-for-a-blind-interception/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/intelligence-ui-the-comman-e00b1-es-for-a-blind-interception/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/intelligence-ui-the-comman-e00b1-es-for-a-blind-interception/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/intelligence-ui-the-comman-e00b1-es-for-a-blind-interception/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:707705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:707705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[54/105] tests/investment-ui.spec.js:18:1 › an unfunded exhausted mandate can compare Forge throughput by keyboard without committing it
+[55/105] tests/investment-ui.spec.js:42:1 › replacement comparison includes the lost Extraction charter and keeps ordinary one-click payment unchanged
+[56/105] tests/investment-ui.spec.js:67:1 › narrow replacement details retain above-capacity population and disclose loss of shipbuilding
+[57/105] tests/investment-ui.spec.js:96:1 › a capped Civic investment shows unchanged usable orders and remains readable after the campaign ends
+[58/105] tests/keyboard-flow-ui.spec.js:19:34 › construction categories retain keyboard focus and preserve the campaign at 1280px
+[59/105] tests/keyboard-flow-ui.spec.js:19:34 › construction categories retain keyboard focus and preserve the campaign at 390px
+[60/105] tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 1280px
+[61/105] tests/keyboard-flow-ui.spec.js:58:34 › research and Chronicle filters retain keyboard position at 390px
+[62/105] tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 1440
+[63/105] tests/localization-ui.spec.js:14:2 › language switch preserves campaign, dialog, focus and setting at 390
+[64/105] tests/localization-ui.spec.js:42:1 › Russian ordinary research and End Cycle have exact English-engine effects
+[65/105] tests/localization-ui.spec.js:63:1 › actual midgame toggles and exports exactly while the field guide stays English
+[66/105] tests/localization-ui.spec.js:78:1 › Russian import and finished conclusion preserve the original save
+[67/105] tests/navigation-ui.spec.js:26:1 › a plotted course spends only deliberate movement and survives a cycle and reload
+[68/105] tests/navigation-ui.spec.js:55:1 › route planning conceals a hidden blockade and charges for the intercepted attempt
+[69/105] tests/planning-feedback-ui.spec.js:34:1 › after-income funding explains the WATCH50-credit diagnostic and matches an ordinary cycle
+[70/105] tests/planning-feedback-ui.spec.js:63:1 › a current treasury above sixty still shows its after-upkeep deficit at a narrow width
+[71/105] tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with blockade
+[72/105] tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with missing Protocol
+[73/105] tests/planning-feedback-ui.spec.js:81:70 › covered funding does not imply a payment with missing site
+[74/105] tests/planning-feedback-ui.spec.js:100:37 › a modern finished network has no future funding estimate
+[75/105] tests/planning-feedback-ui.spec.js:100:37 › a legacy finished network has no future funding estimate
+[76/105] tests/planning-feedback-ui.spec.js:112:1 › private rival economic changes cannot alter the player funding card
+[77/105] tests/planning-feedback-ui.spec.js:135:29 › lethal retaliation at 3 hull is explicit and a voluntary ordinary attack remains possible
+[78/105] tests/planning-feedback-ui.spec.js:135:29 › lethal retaliation at 4.04 hull is explicit and a voluntary ordinary attack remains possible
+[79/105] tests/planning-feedback-ui.spec.js:152:118 › a surviving invasion with 20 defenses keeps the appropriate outcome and projected hull
+[80/105] tests/planning-feedback-ui.spec.js:152:118 › a surviving invasion with 8 defenses keeps the appropriate outcome and projected hull
+[81/105] tests/public-affairs-ui.spec.js:57:1 › a public capture explains a closed course and diplomacy restores deliberate passage
+[82/105] tests/public-affairs-ui.spec.js:95:1 › anonymous announcements stay anonymous after importing a later-contact save
+[83/105] tests/public-affairs-ui.spec.js:123:1 › a rival declaration opens the new-cycle public briefing and survives reload
+[84/105] tests/reinforcement-ui.spec.js:25:1 › the actual WATCH40 formation merges and commissions in two explicit actions with exact ordinary results
+[85/105] tests/reinforcement-ui.spec.js:60:1 › a single compatible partner remains one click when the first local partner would exceed the cap
+[86/105] tests/reinforcement-ui.spec.js:79:1 › a narrow keyboard chooser previews the deliberate survivor, course, hold, defensive lead and heritage
+[87/105] tests/reinforcement-ui.spec.js:120:1 › a full task force can commission a separate ship at its inspected yard using its last order
+[88/105] tests/reinforcement-ui.spec.js:139:36 › an exhausted mandate retains read-only merge choices and disables new commissions
+[89/105] tests/reinforcement-ui.spec.js:139:36 › a finished campaign retains read-only merge choices and disables new commissions
+[90/105] tests/reports-ui.spec.js:15:1 › visible opposition at a neutral star previews combat and reports actual losses immediately
+[91/105] tests/reports-ui.spec.js:55:1 › zero enemy fire keeps a fractional-hull formation alive and the report never displays it as zero
+[92/105] tests/reports-ui.spec.js:73:1 › the map roster exposes a fifth remote fleet and selecting it focuses its location
+[93/105] tests/reports-ui.spec.js:94:1 › a persistent cycle briefing includes completions, treaty expiry and shortages without old dispatches
+[94/105] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 1440 en
+[95/105] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 1440 ru
+[96/105] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 en
+[97/105] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 ru
+  4) tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 ru 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "horizontal": 180,
+    -   "vertical": 371,
+    +   "vertical": 375,
+      }
+
+      65 |     expect(await page.evaluate(() => window.__asterion.getPage())).toBe('empire');
+      66 |     await expect(row).toBeFocused();
+    > 67 |     expect(await viewPosition(page)).toEqual(position);
+         |                                      ^
+      68 |     await expect(page.locator('[data-action="colony-sort"][data-sort="production"]').locator('..')).toHaveAttribute('aria-sort', 'descending');
+      69 |     await expect(row.locator('[data-action="empire-build-menu"]')).toHaveCount(0);
+      70 |     await expect(row).toContainText(language === 'ru' ? 'Восстановление звёздного пути' : 'Starlane restoration');
+        at /tmp/asterion-v023-candidate-3wcxogvp/tests/starlanes-ui.spec.js:67:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/starlanes-ui-Empire-commis-eaf66-t-or-fleet-intent-at-390-ru/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/starlanes-ui-Empire-commis-eaf66-t-or-fleet-intent-at-390-ru/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/starlanes-ui-Empire-commis-eaf66-t-or-fleet-intent-at-390-ru/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/starlanes-ui-Empire-commis-eaf66-t-or-fleet-intent-at-390-ru/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:710182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:710182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[98/105] tests/starlanes-ui.spec.js:80:1 › changing the construction endpoint, cancelling and reloading preserve the exact campaign
+[99/105] tests/starlanes-ui.spec.js:107:1 › completion announces a shared lane and ordinary UI movement spends one order and jump
+[100/105] tests/trade-offers-ui.spec.js:33:1 › an incoming trade proposal keeps borders closed until the player accepts the funded terms
+[101/105] tests/trade-offers-ui.spec.js:65:1 › declining refunds the proposer and leaves a later player-initiated treaty available
+[102/105] tests/trade-offers-ui.spec.js:85:1 › an expired imported proposal stays out of badges and cards without changing the save during inspection
+[103/105] tests/trade-offers-ui.spec.js:98:1 › zero-order trade terms keep keyboard focus inside the readable dialog
+[104/105] tests/trade-offers-ui.spec.js:121:1 › the verified military campaign shows binding peace terms and preserves its recorded settlement and garrison split
+[105/105] tests/workspace-ui.spec.js:4:1 › command context follows its workspace without disclosing uncontacted civilizations or changing the campaign
+  4 failed
+    tests/alignment-diplomacy.spec.js:16:1 › the actual friendly cycle53 exposes only a possible alignment incentive 
+    tests/alignment-diplomacy.spec.js:29:1 › new declarations retain their public cause after reload without relabeling legacy wars 
+    tests/intelligence-ui.spec.js:4:1 › the command interface conceals remote fleets and charges for a blind interception 
+    tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 ru 
+  101 passed (5.1m)

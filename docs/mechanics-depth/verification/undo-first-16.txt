@@ -1,0 +1,31 @@
+[WebServer] (node:762670) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 16 tests using 1 worker
+
+(node:762689) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:762689) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/16] tests/combat-rounds-ui.spec.js:29:1 › actual four-round exchanges are keyboard-readable and preserve a sequential attack and reload exactly
+[2/16] tests/combat-rounds-ui.spec.js:81:1 › narrow historical rounds retain battle-time weapons, doctrine and names after later changes
+[3/16] tests/combat-rounds-ui.spec.js:121:1 › older outcome-only reports remain readable without invented rounds
+[4/16] tests/mobile-inspection-ui.spec.js:16:5 › mobile touch inspection › a fresh world tap inspects without an incidental fleet card in en
+[5/16] tests/mobile-inspection-ui.spec.js:37:5 › mobile touch inspection › deliberate targeting pays normally and closing preserves a held course in en
+[6/16] tests/mobile-inspection-ui.spec.js:16:5 › mobile touch inspection › a fresh world tap inspects without an incidental fleet card in ru
+[7/16] tests/mobile-inspection-ui.spec.js:37:5 › mobile touch inspection › deliberate targeting pays normally and closing preserves a held course in ru
+[8/16] tests/mobile-inspection-ui.spec.js:66:1 › entering mobile clears once; explicit keyboard selection and modal Escape retain their meanings
+[9/16] tests/mobile-inspection-ui.spec.js:84:1 › mobile reload, import and new campaign start in inspection
+[10/16] tests/undo-ui.spec.js:17:3 › undo research and construction survives reload at 1440 en
+[11/16] tests/undo-ui.spec.js:17:3 › undo research and construction survives reload at 1440 ru
+[12/16] tests/undo-ui.spec.js:17:3 › undo research and construction survives reload at 390 en
+[13/16] tests/undo-ui.spec.js:17:3 › undo research and construction survives reload at 390 ru
+[14/16] tests/undo-ui.spec.js:55:1 › undo restores a consumed colony ark and movement, then repeats exactly
+[15/16] tests/undo-ui.spec.js:80:1 › combat report offers undo and repeating combat retains the exact random result
+[16/16] tests/undo-ui.spec.js:108:1 › only confirmed End cycle, import and new campaign discard action history
+  16 passed (50.7s)

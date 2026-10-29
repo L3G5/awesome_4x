@@ -1,0 +1,24 @@
+[WebServer] (node:782155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 9 tests using 1 worker
+
+(node:782176) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:782176) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/9] tests/localization-ui.spec.js:6:1 › Russian held-route limits and uncertainty remain fully translated after movement
+[2/9] tests/localization-ui.spec.js:30:2 › language switch preserves campaign, dialog, focus and setting at 1440
+[3/9] tests/localization-ui.spec.js:30:2 › language switch preserves campaign, dialog, focus and setting at 390
+[4/9] tests/localization-ui.spec.js:58:1 › Russian ordinary research and End Cycle have exact English-engine effects
+[5/9] tests/localization-ui.spec.js:79:1 › actual midgame toggles and exports exactly while the field guide stays English
+[6/9] tests/localization-ui.spec.js:94:1 › Russian import and finished conclusion preserve the original save
+[7/9] tests/localization-ui.spec.js:110:1 › Russian ordinary peace explains all binding terms and keeps its exact paid effect
+[8/9] tests/navigation-ui.spec.js:26:1 › a plotted course spends only deliberate movement and survives a cycle and reload
+[9/9] tests/navigation-ui.spec.js:55:1 › route planning conceals a hidden blockade and charges for the intercepted attempt
+  9 passed (32.4s)

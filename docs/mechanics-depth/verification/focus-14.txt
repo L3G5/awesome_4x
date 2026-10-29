@@ -1,0 +1,26 @@
+
+Running 14 tests using 1 worker
+
+(node:717190) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:717190) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/14] tests/alignment-diplomacy.spec.js:13:1 › the recorded friendly cycle53 exposes only a possible alignment incentive
+[2/14] tests/alignment-diplomacy.spec.js:26:1 › new declarations retain their public cause after reload without relabeling legacy wars
+[3/14] tests/intelligence-ui.spec.js:4:39 › the command interface conceals remote fleets and charges for a blind interception with prior survey false
+[4/14] tests/intelligence-ui.spec.js:4:39 › the command interface conceals remote fleets and charges for a blind interception with prior survey true
+[5/14] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 1440 en
+[6/14] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 1440 ru
+[7/14] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 en
+[8/14] tests/starlanes-ui.spec.js:37:3 › Empire commissions a lane without losing comparison context or fleet intent at 390 ru
+[9/14] tests/starlanes-ui.spec.js:80:1 › changing the construction endpoint, cancelling and reloading preserve the exact campaign
+[10/14] tests/starlanes-ui.spec.js:107:1 › completion announces a shared lane and ordinary UI movement spends one order and jump
+[11/14] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 1440 en
+[12/14] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 1440 ru
+[13/14] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 390 en
+[14/14] tests/starlanes-ui.spec.js:137:3 › inspector restoration follows the chosen builder and retains the held scout at 390 ru
+  14 passed (43.4s)
